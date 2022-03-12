@@ -1,0 +1,777 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Bible Timeline</title>
+  <style type="text/css">
+    body {
+      font: 10pt sans;
+    }
+    #mynetwork {
+      height: 600px;
+      border: 1px solid lightgray;
+    }
+	.person[lived]:before {
+	  content: attr(name) " (" attr(lived) ")";
+	}
+	.person[age][lived]:before {
+	  content: attr(name) " (" attr(age) "/" attr(lived) ")";
+	}
+	.person:before {
+	  content: attr(name);
+	}
+	.vis.timeline .item.female {
+       background-color: pink;
+	}
+  </style>
+
+  <script src="vis.js"></script>
+  <script src="jquery-2.0.3.js"></script>
+  <link href="vis.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="mynetwork"></div>
+<div id="visualization"></div>
+
+<script type="text/javascript">
+	var nodes = [];
+    var edges = [];
+    var network = null;
+	
+  // Create a DataSet (allows two way data-binding)
+  function pad(n, width, z) {
+	z = z || '0';
+	n = n + '';
+	return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+  }
+  function yearsBetween(date1, date2) {
+	var one_year=1000*60*60*24*365;
+
+	// Convert both dates to milliseconds
+	var date1_ms = date1.getTime();
+	var date2_ms = date2.getTime();
+
+	// Calculate the difference in milliseconds
+	var difference_ms = date2_ms - date1_ms;
+		
+	return Math.round(difference_ms/one_year); 
+  }
+  function ZeroBasedYear(year) {
+    var zby = 6000 - year;
+    if (zby <= 0) return pad(-zby, 4) + '-00-00';
+    return new Date('-' + pad(zby, 6));
+  }
+  function GeneratePerson(person, current_time) {
+	var dom_person = $("<div></div>");
+	dom_person.addClass("person");
+	dom_person.attr("id", person.id);
+	dom_person.attr("name", person.name);
+	
+	if (person.sex == "female") {
+	    person.className = "female";
+	} else {
+		person.className = "male";
+	}
+	
+	if (person.birth !== undefined) {
+		person.start = ZeroBasedYear(person.birth);
+	}
+	if (person.death !== undefined) {
+		person.end = ZeroBasedYear(person.death);
+	}
+	if (person.birth !== undefined && person.death !== undefined) {
+		person.lived = person.death - person.birth;
+		dom_person.attr("lived", person.lived);
+	}
+	if (current_time && person.start && person.end) {
+		var age = yearsBetween(person.start, current_time);
+		if (age >= 0 && age <= person.lived) {
+			dom_person.attr("age", age);
+		}
+	}
+	
+	person.content = dom_person.get(0).outerHTML;
+	
+	return person;
+  }
+  var events = [];
+  function GetPerson(id) {
+	for (var i = 0; i < events.length; ++i) {
+		var person = events[i];
+		if (person.id == id) {
+		  return person;
+		}
+	}
+	return {};
+  }
+  function GetAverageBirthAge(generation) {
+	return 124 - generation;
+  }
+  var object_count = 0;
+  function AddPerson(person) {
+    var id = ++object_count;
+	person.id = id;
+	if (person.birth !== undefined) {
+		//events.push({id: id, content: person.name, start: person.birth, end: person.death});
+		events.push(GeneratePerson(person));
+	}
+	nodes.push({id: id, label: person.name, color:{background: person.sex == "female" ? 'pink' : 'lightblue'}, level: person.generation || person.father || 0});
+	if (person.father) {
+		edges.push({from: person.father, to: id});
+	}
+	if (person.mother) {
+		edges.push({from: person.mother, to: id});
+	}
+	return id;
+  }
+  
+  // Fill in data
+  var generation = 0;
+  var adam = AddPerson({name:"Adam", birth:0, death:930, generation:generation});
+  var eve = AddPerson({name:"Eve", sex:"female", birth:0, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Abel", father:adam, mother:eve, generation:generation});
+  var seth = AddPerson({name:"Seth", birth:130, death:1042, father:adam, mother:eve, generation:generation});
+  var cain = AddPerson({name:"Cain", father:adam, mother:eve, generation:generation});
+  
+  ++generation;
+  var enosh = AddPerson({name:"Enosh", birth:235, death:1140, father:seth, generation:generation});
+  
+  var enoch = AddPerson({name:"Enoch", father:cain, generation:generation});
+  
+  ++generation;
+  var kenan = AddPerson({name:"Kenan", birth:325, death:1235, father:enosh, generation:generation});
+  
+  var irad = AddPerson({name:"Irad", father:enoch, generation:generation});
+  
+  ++generation;
+  var mahalalel = AddPerson({name:"Mahalalel", birth:395, death:1260, father:kenan, generation:generation});
+  
+  var mehujael = AddPerson({name:"Mehujael", father:irad, generation:generation});
+  
+  ++generation;
+  var jared = AddPerson({name:"Jared", birth:460, death:1422, father:mahalalel, generation:generation});
+  
+  var methushael = AddPerson({name:"Methushael", father:mehujael, generation:generation});
+  
+  ++generation;
+  var enoch_of_jared = AddPerson({name:"Enoch", birth:622, death:987, father:jared, generation:generation});
+  
+  var adah = AddPerson({name:"Adah", sex:"female", generation:generation});
+  var lamech = AddPerson({name:"Lamech", father:methushael, generation:generation});
+  var zillah = AddPerson({name:"Zillah", sex:"female", generation:generation});
+  
+  ++generation;
+  var methuselah = AddPerson({name:"Methuselah", birth:687, death:1656, father:enoch_of_jared, generation:generation});
+  
+  AddPerson({name:"Jabal", father:lamech, mother:adah, generation:generation});
+  AddPerson({name:"Jubal", father:lamech, mother:adah, generation:generation});
+  
+  AddPerson({name:"Tubal-Cain", father:lamech, mother:zillah, generation:generation});
+  AddPerson({name:"Naamah", sex:"female", father:lamech, mother:zillah, generation:generation});
+  
+  ++generation;
+  var lamech_of_methuselah = AddPerson({name:"Lamech", birth:874, death:1651, father:methuselah, generation:generation});
+  
+  ++generation;
+  var noah = AddPerson({name:"Noah", birth:1056, death:2006, father:lamech_of_methuselah, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Japheth", birth:1556, father:noah, generation:generation});
+  var shem = AddPerson({name:"Shem", birth:1556, death:2056, father:noah, generation:generation});
+  AddPerson({name:"Ham", birth:1556, father:noah, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Elam", father:shem, generation:generation});
+  AddPerson({name:"Asshur", father:shem, generation:generation});
+  var arphaxad = AddPerson({name:"Arphaxad", birth:1656, death:2094, father:shem, generation:generation});
+  AddPerson({name:"Lud", father:shem, generation:generation});
+  var aram = AddPerson({name:"Aram", father:shem, generation:generation});
+  
+  ++generation;
+  var shelah = AddPerson({name:"Shelah", birth:1691, death:2124, father:arphaxad, generation:generation});
+  
+  AddPerson({name:"Uz", father:aram, generation:generation});
+  AddPerson({name:"Hul", father:aram, generation:generation});
+  AddPerson({name:"Gether", father:aram, generation:generation});
+  AddPerson({name:"Meshech", father:aram, generation:generation});
+  
+  ++generation;
+  var eber = AddPerson({name:"Eber", birth:1721, death:2185, father:shelah, generation:generation});
+  
+  ++generation;
+  var peleg = AddPerson({name:"Peleg", birth:1755, death:1994, father:eber, generation:generation});
+  var joktan = AddPerson({name:"Joktan", father:eber, generation:generation});
+  
+  ++generation;
+  var reu = AddPerson({name:"Reu", birth:1785, death:2024, father:peleg, generation:generation});
+  
+  AddPerson({name:"Almodad", father:joktan, generation:generation});
+  AddPerson({name:"Sheleph", father:joktan, generation:generation});
+  AddPerson({name:"Hazarmaveth", father:joktan, generation:generation});
+  AddPerson({name:"Jerah", father:joktan, generation:generation});
+  AddPerson({name:"Hadoram", father:joktan, generation:generation});
+  AddPerson({name:"Uzal", father:joktan, generation:generation});
+  AddPerson({name:"Diklah", father:joktan, generation:generation});
+  AddPerson({name:"Obal", father:joktan, generation:generation});
+  AddPerson({name:"Abimael", father:joktan, generation:generation});
+  AddPerson({name:"Sheba", father:joktan, generation:generation});
+  AddPerson({name:"Ophir", father:joktan, generation:generation});
+  AddPerson({name:"Havilah", father:joktan, generation:generation});
+  AddPerson({name:"Jobab", father:joktan, generation:generation});
+  
+  ++generation;
+  var serug = AddPerson({name:"Serug", birth:1817, death:2047, father:reu, generation:generation});
+  
+  ++generation;
+  var nahor = AddPerson({name:"Nahor", birth:1847, death:1995, father:serug, generation:generation});
+  
+  ++generation;
+  var terah = AddPerson({name:"Terah", birth:1876, death:2081, father:nahor, generation:generation});
+  
+  ++generation;
+  var nahor_of_terah = AddPerson({name:"Nahor", birth:1946, father:terah, generation:generation});
+  var haran = AddPerson({name:"Haran", birth:1946, death:2081, father:terah, generation:generation});
+  
+  var sarai = AddPerson({name:"Sarai", sex:"female", birth:1956, death:2083, father:terah, generation:generation});
+  var hagar = AddPerson({name:"Hagar", sex:"female", generation:generation});
+  var abraham = AddPerson({name:"Abraham", birth:1946, death:2121, father:terah, generation:generation});
+  var keturah = AddPerson({name:"Keturah", sex:"female", generation:generation});
+  
+  ++generation;
+  var reumah = AddPerson({name:"Reumah", sex:"female", generation:generation});
+  var milcah = AddPerson({name:"Milcah", sex:"female", father:haran, generation:generation});
+  
+  var first_spouse_of_lot = AddPerson({name:"Spouse 1", sex:"female", generation:generation});
+  var lot = AddPerson({name:"Lot", father:haran, generation:generation});
+  
+  var isaac = AddPerson({name:"Isaac", birth:2046, death:2226, father:abraham, mother:sarai, generation:generation});
+  
+  var ishmael = AddPerson({name:"Ishmael", birth:2032, death:2169, father:abraham, mother:hagar, generation:generation});
+  
+  AddPerson({name:"Zimran", father:abraham, mother:keturah, generation:generation});
+  AddPerson({name:"Jokshan", father:abraham, mother:keturah, generation:generation});
+  AddPerson({name:"Medan", father:abraham, mother:keturah, generation:generation});
+  var midian = AddPerson({name:"Midian", father:abraham, mother:keturah, generation:generation});
+  AddPerson({name:"Ishbak", father:abraham, mother:keturah, generation:generation});
+  AddPerson({name:"Shuah", father:abraham, mother:keturah, generation:generation});
+  
+  var seir = AddPerson({name:"Seir", generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Tebah", father:nahor_of_terah, mother:reumah, generation:generation});
+  AddPerson({name:"Gaham", father:nahor_of_terah, mother:reumah, generation:generation});
+  AddPerson({name:"Tahash", father:nahor_of_terah, mother:reumah, generation:generation});
+  AddPerson({name:"Maacah", father:nahor_of_terah, mother:reumah, generation:generation});
+  
+  AddPerson({name:"Uz", father:nahor_of_terah, mother:milcah, generation:generation});
+  AddPerson({name:"Buz", father:nahor_of_terah, mother:milcah, generation:generation});
+  var kemuel = AddPerson({name:"Kemuel", father:nahor_of_terah, mother:milcah, generation:generation});
+  AddPerson({name:"Kesed", father:nahor_of_terah, mother:milcah, generation:generation});
+  AddPerson({name:"Hazo", father:nahor_of_terah, mother:milcah, generation:generation});
+  AddPerson({name:"Pildash", father:nahor_of_terah, mother:milcah, generation:generation});
+  AddPerson({name:"Jidlaph", father:nahor_of_terah, mother:milcah, generation:generation});
+  var bethuel = AddPerson({name:"Bethuel", father:nahor_of_terah, mother:milcah, generation:generation});
+  
+  var first_daugher_of_lot = AddPerson({name:"daughter 1", sex:"female", father:lot, mother:first_spouse_of_lot, generation:generation});
+  var second_daugher_of_lot = AddPerson({name:"daughter 2", sex:"female", father:lot, mother:first_spouse_of_lot, generation:generation});
+  
+  AddPerson({name:"Nebaioth", father:ishmael, generation:generation});
+  AddPerson({name:"Kedar", father:ishmael, generation:generation});
+  AddPerson({name:"Adbeel", father:ishmael, generation:generation});
+  AddPerson({name:"Mibsam", father:ishmael, generation:generation});
+  AddPerson({name:"Mishma", father:ishmael, generation:generation});
+  AddPerson({name:"Dumah", father:ishmael, generation:generation});
+  AddPerson({name:"Massa", father:ishmael, generation:generation});
+  AddPerson({name:"Hadad", father:ishmael, generation:generation});
+  AddPerson({name:"Tema", father:ishmael, generation:generation});
+  AddPerson({name:"Jetur", father:ishmael, generation:generation});
+  AddPerson({name:"Naphish", father:ishmael, generation:generation});
+  AddPerson({name:"Kedemah", father:ishmael, generation:generation});
+  var mahalath = AddPerson({name:"Mahalath\n(Basemath)", sex:"female", father:ishmael, generation:generation});
+  
+  AddPerson({name:"Ephah", father:midian, generation:generation});
+  AddPerson({name:"Epher", father:midian, generation:generation});
+  AddPerson({name:"Hanoch", father:midian, generation:generation});
+  AddPerson({name:"Abida", father:midian, generation:generation});
+  AddPerson({name:"Eldaah", father:midian, generation:generation});
+  
+  var zibeon = AddPerson({name:"Zibeon", father:seir, generation:generation});
+  var timna = AddPerson({name:"Timna", sex:"female", father:seir, generation:generation});
+  var lotan = AddPerson({name:"Lotan", father:seir, generation:generation});
+  var shobal = AddPerson({name:"Shobal", father:seir, generation:generation});
+  AddPerson({name:"Anah", father:seir, generation:generation});
+  AddPerson({name:"Dishon", father:seir, generation:generation});
+  var ezer = AddPerson({name:"Ezer", father:seir, generation:generation});
+  var dishan = AddPerson({name:"Dishan", father:seir, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Aram", father:kemuel, generation:generation});
+  
+  var laban = AddPerson({name:"Laban", father:bethuel, generation:generation});
+  
+  AddPerson({name:"Moab", father:lot, mother:first_daugher_of_lot, generation:generation});
+  AddPerson({name:"Ben-Ammi", father:lot, mother:second_daugher_of_lot, generation:generation});
+  
+  var rebekah = AddPerson({name:"Rebekah", sex:"female", father:bethuel, generation:generation});
+  
+  var elon = AddPerson({name:"Elon", generation:generation});
+  
+  var anah = AddPerson({name:"Anah", father:zibeon, generation:generation});
+  AddPerson({name:"Aiah", father:zibeon, generation:generation});
+  
+  AddPerson({name:"Hori", father:lotan, generation:generation});
+  AddPerson({name:"Homam\n(Hemam)", father:lotan, generation:generation});
+  
+  AddPerson({name:"Alvan", father:shobal, generation:generation});
+  AddPerson({name:"Manahath", father:shobal, generation:generation});
+  AddPerson({name:"Ebal", father:shobal, generation:generation});
+  AddPerson({name:"Shepho", father:shobal, generation:generation});
+  AddPerson({name:"Onam", father:shobal, generation:generation});  
+  
+  AddPerson({name:"Bilhan", father:ezer, generation:generation});
+  AddPerson({name:"Zaavan", father:ezer, generation:generation});
+  AddPerson({name:"Akan", father:ezer, generation:generation});
+  
+  AddPerson({name:"Uz", father:dishan, generation:generation});
+  AddPerson({name:"Aran", father:dishan, generation:generation});
+  
+  ++generation;
+  var leah = AddPerson({name:"Leah", sex:"female", father:laban, generation:generation});
+  var shua = AddPerson({name:"Shua", generation:generation});
+  var rachel = AddPerson({name:"Rachel", sex:"female", father:laban, generation:generation});
+  
+  var jacob = AddPerson({name:"Jacob", birth:2106, death:2253, father:isaac, mother:rebekah, generation:generation});
+  var potiphera = AddPerson({name:"Potiphera", generation:generation});
+  
+  var bilhah = AddPerson({name:"Bilhah", sex:"female", generation:generation});
+  var zilpah = AddPerson({name:"Zilpah", sex:"female", generation:generation});
+  
+  var esau = AddPerson({name:"Esau", birth:2106, father:isaac, mother:rebekah, generation:generation});
+  var oholibamah = AddPerson({name:"Oholibamah", sex:"female", father:anah, generation:generation});
+  
+  var basemath = AddPerson({name:"Basemath\n(Adah)", sex:"female", father:elon, generation:generation});
+  
+  var dishon = AddPerson({name:"Dishon", father:anah, generation:generation});
+  
+  ++generation;
+  var simeon = AddPerson({name:"Simeon", father:jacob, mother:leah, generation:generation});
+  var levi = AddPerson({name:"Levi", father:jacob, mother:leah, generation:generation});
+  
+  var judah = AddPerson({name:"Judah", birth:GetPerson(jacob).birth + GetAverageBirthAge(generation), father:jacob, mother:leah, generation:generation});
+  var daughter_of_shua = AddPerson({name:"Shua's daughter", sex:"female", father:shua, generation:generation});
+  var tamar = AddPerson({name:"Tamar", sex:"female", generation:generation});
+  
+  var issachar = AddPerson({name:"Issachar", father:jacob, mother:leah, generation:generation});
+  var zebulun = AddPerson({name:"Zebulun", father:jacob, mother:leah, generation:generation});
+  AddPerson({name:"Dinah", sex:"female", father:jacob, mother:leah, generation:generation});
+  var reuben = AddPerson({name:"Reuben", father:jacob, mother:leah, generation:generation});
+  
+  var joseph = AddPerson({name:"Joseph", birth:2195, death:2305, father:jacob, mother:rachel, generation:generation});
+  var asenath = AddPerson({name:"Asenath", sex:"female", father:potiphera, generation:generation});
+  
+  var benjamin = AddPerson({name:"Benjamin", father:jacob, mother:rachel, generation:generation});
+  
+  var dan = AddPerson({name:"Dan", father:jacob, mother:bilhah, generation:generation});
+  var naphtali = AddPerson({name:"Naphtali", father:jacob, mother:bilhah, generation:generation});
+  
+  var gad = AddPerson({name:"Gad", father:jacob, mother:zilpah, generation:generation});
+  var asher = AddPerson({name:"Asher", father:jacob, mother:zilpah, generation:generation});
+  
+  AddPerson({name:"Jeush", father:esau, mother:oholibamah, generation:generation});
+  AddPerson({name:"Jalam", father:esau, mother:oholibamah, generation:generation});
+  AddPerson({name:"Korah", father:esau, mother:oholibamah, generation:generation});
+  
+  var reuel = AddPerson({name:"Reuel", father:esau, mother:mahalath, generation:generation});
+  
+  var eliphaz = AddPerson({name:"Eliphaz", father:esau, mother:basemath, generation:generation});
+  
+  AddPerson({name:"Hemdan", father:dishon, generation:generation});
+  AddPerson({name:"Eshban", father:dishon, generation:generation});
+  AddPerson({name:"Ithran", father:dishon, generation:generation});
+  AddPerson({name:"Keran", father:dishon, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Jemuel", father:simeon, generation:generation});
+  AddPerson({name:"Jamin", father:simeon, generation:generation});
+  AddPerson({name:"Ohad", father:simeon, generation:generation});
+  AddPerson({name:"Jakin", father:simeon, generation:generation});
+  AddPerson({name:"Zohar", father:simeon, generation:generation});
+  AddPerson({name:"Shaul", father:simeon, generation:generation});
+  AddPerson({name:"Zerah", father:simeon, generation:generation});
+  
+  var jochebed = AddPerson({name:"Jochebed", sex:"female", father:levi, generation:generation});
+  var gershon = AddPerson({name:"Gershon", father:levi, generation:generation});
+  var kohath = AddPerson({name:"Kohath", father:levi, generation:generation});
+  var merari = AddPerson({name:"Merari", father:levi, generation:generation});
+  
+  AddPerson({name:"Er", father:judah, mother:daughter_of_shua, generation:generation});
+  AddPerson({name:"Onan", father:judah, mother:daughter_of_shua, generation:generation});
+  AddPerson({name:"Shelah", father:judah, mother:daughter_of_shua, generation:generation});
+  var perez = AddPerson({name:"Perez", birth:GetPerson(judah).birth + GetAverageBirthAge(generation), father:judah, mother:tamar, generation:generation});
+  AddPerson({name:"Zerah", father:judah, mother:tamar, generation:generation});
+  
+  AddPerson({name:"Tola", father:issachar, generation:generation});
+  AddPerson({name:"Puah", father:issachar, generation:generation});
+  AddPerson({name:"Jashub", father:issachar, generation:generation});
+  AddPerson({name:"Shimron", father:issachar, generation:generation});
+  
+  AddPerson({name:"Sered", father:zebulun, generation:generation});
+  AddPerson({name:"Elon", father:zebulun, generation:generation});
+  AddPerson({name:"Jahleel", father:zebulun, generation:generation});
+  
+  AddPerson({name:"Hanoch", father:reuben, generation:generation});
+  var pallu = AddPerson({name:"Pallu", father:reuben, generation:generation});
+  AddPerson({name:"Hezron", father:reuben, generation:generation});
+  AddPerson({name:"Carmi", father:reuben, generation:generation});
+  
+  var manasseh = AddPerson({name:"Manasseh", father:joseph, mother:asenath, generation:generation});
+  var ephraim = AddPerson({name:"Ephraim", father:joseph, mother:asenath, generation:generation});
+  
+  var bela = AddPerson({name:"Bela", father:benjamin, generation:generation});
+  AddPerson({name:"Beker", father:benjamin, generation:generation});
+  AddPerson({name:"Ashbel", father:benjamin, generation:generation});
+  AddPerson({name:"Gera", father:benjamin, generation:generation});
+  AddPerson({name:"Naaman", father:benjamin, generation:generation});
+  AddPerson({name:"Ehi", father:benjamin, generation:generation});
+  AddPerson({name:"Rosh", father:benjamin, generation:generation});
+  AddPerson({name:"Muppim", father:benjamin, generation:generation});
+  AddPerson({name:"Huppim", father:benjamin, generation:generation});
+  AddPerson({name:"Ard", father:benjamin, generation:generation});
+  AddPerson({name:"Ahiram", father:benjamin, generation:generation});
+  AddPerson({name:"Shupham", father:benjamin, generation:generation});
+  AddPerson({name:"Hupham", father:benjamin, generation:generation});
+  
+  AddPerson({name:"Hushim", father:dan, generation:generation});
+  AddPerson({name:"Shuham", father:dan, generation:generation});
+  
+  AddPerson({name:"Jahziel", father:naphtali, generation:generation});
+  AddPerson({name:"Guni", father:naphtali, generation:generation});
+  AddPerson({name:"Jezer", father:naphtali, generation:generation});
+  AddPerson({name:"Shillem", father:naphtali, generation:generation});
+  
+  AddPerson({name:"Zephon", father:gad, generation:generation});
+  AddPerson({name:"Haggi", father:gad, generation:generation});
+  AddPerson({name:"Shuni", father:gad, generation:generation});
+  AddPerson({name:"Ezbon", father:gad, generation:generation});
+  AddPerson({name:"Eri", father:gad, generation:generation});
+  AddPerson({name:"Arodi", father:gad, generation:generation});
+  AddPerson({name:"Areli", father:gad, generation:generation});
+  AddPerson({name:"Ozni", father:gad, generation:generation});
+  
+  AddPerson({name:"Imnah", father:asher, generation:generation});
+  AddPerson({name:"Ishvah", father:asher, generation:generation});
+  AddPerson({name:"Ishvi", father:asher, generation:generation});
+  var beriah = AddPerson({name:"Beriah", father:asher, generation:generation});
+  AddPerson({name:"Serah", sex:"female", father:asher, generation:generation});
+  
+  AddPerson({name:"Nahath", father:reuel, generation:generation});
+  var zerah = AddPerson({name:"Zerah", father:reuel, generation:generation});
+  AddPerson({name:"Shammah", father:reuel, generation:generation});
+  AddPerson({name:"Mizzah", father:reuel, generation:generation});
+  
+  AddPerson({name:"Teman", father:eliphaz, generation:generation});
+  AddPerson({name:"Omar", father:eliphaz, generation:generation});
+  AddPerson({name:"Zepho", father:eliphaz, generation:generation});
+  AddPerson({name:"Gatam", father:eliphaz, generation:generation});
+  AddPerson({name:"Kenaz", father:eliphaz, generation:generation});
+  AddPerson({name:"Amalek", father:eliphaz, mother:timna, generation:generation});
+  
+  ++generation;
+  var amminadab = AddPerson({name:"Amminadab", generation:generation});
+  
+  AddPerson({name:"Libni", father:gershon, generation:generation});
+  AddPerson({name:"Shimei", father:gershon, generation:generation});
+  
+  var amram = AddPerson({name:"Amram", father:kohath, generation:generation});
+  var reuel_of_midian = AddPerson({name:"Reuel", generation:generation});
+  var izhar = AddPerson({name:"Izhar", father:kohath, generation:generation});
+  AddPerson({name:"Hebron", father:kohath, generation:generation});
+  var uzziel = AddPerson({name:"Uzziel", father:kohath, generation:generation});
+  
+  AddPerson({name:"Mahli", father:merari, generation:generation});
+  AddPerson({name:"Mushi", father:merari, generation:generation});
+  
+  var hezron = AddPerson({name:"Hezron", birth:GetPerson(perez).birth + GetAverageBirthAge(generation), father:perez, generation:generation});
+  AddPerson({name:"Hamul", father:perez, generation:generation});
+  
+  var eliab = AddPerson({name:"Eliab", father:pallu, generation:generation});
+  
+  var makir = AddPerson({name:"Makir", father:manasseh, generation:generation});
+  
+  var shuthelah = AddPerson({name:"Shuthelah", father:ephraim, generation:generation});
+  AddPerson({name:"Beker", father:ephraim, generation:generation});
+  AddPerson({name:"Tahan", father:ephraim, generation:generation});
+  
+  AddPerson({name:"Ard", father:bela, generation:generation});
+  AddPerson({name:"Naaman", father:bela, generation:generation});
+  
+  AddPerson({name:"Heber", father:beriah, generation:generation});
+  AddPerson({name:"Malkiel", father:beriah, generation:generation});
+  
+  AddPerson({name:"Jobab", father:zerah, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Nahshon", father:amminadab, generation:generation});
+  var elisheba = AddPerson({name:"Elisheba", sex:"female", father:amminadab, generation:generation});
+  var aaron = AddPerson({name:"Aaron", father:amram, mother:jochebed, generation:generation});
+  var putiel = AddPerson({name:"Putiel", generation:generation});
+  
+  AddPerson({name:"Miriam", sex:"female", father:amram, mother:jochebed, generation:generation});
+  var moses = AddPerson({name:"Moses", birth:2586, death:2706, father:amram, mother:jochebed, generation:generation});
+  var zipporah = AddPerson({name:"Zipporah", sex:"female", father:reuel_of_midian, generation:generation});
+  AddPerson({name:"Hobab", father:reuel_of_midian, generation:generation});
+  
+  var korah = AddPerson({name:"Korah", father:izhar, generation:generation});
+  AddPerson({name:"Nepheg", father:izhar, generation:generation});
+  AddPerson({name:"Zicri", father:izhar, generation:generation});
+  
+  AddPerson({name:"Mishael", father:uzziel, generation:generation});
+  AddPerson({name:"Elizaphan", father:uzziel, generation:generation});
+  AddPerson({name:"Sithri", father:uzziel, generation:generation});
+  
+  var ram = AddPerson({name:"Ram", birth:GetPerson(hezron).birth + GetAverageBirthAge(generation), father:hezron, generation:generation});
+  
+  AddPerson({name:"Nemuel", father:eliab, generation:generation});
+  AddPerson({name:"Dathan", father:eliab, generation:generation});
+  AddPerson({name:"Abiram", father:eliab, generation:generation});
+  
+  var gilead = AddPerson({name:"Gilead", father:makir, generation:generation});
+  
+  AddPerson({name:"Eran", father:shuthelah, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Nadab", father:aaron, mother:elisheba, generation:generation});
+  AddPerson({name:"Abihu", father:aaron, mother:elisheba, generation:generation});
+  var eleazar = AddPerson({name:"Eleazar", father:aaron, mother:elisheba, generation:generation});
+  AddPerson({name:"Ithamar", father:aaron, mother:elisheba, generation:generation});
+  var daughter_of_putiel = AddPerson({name:"Putiel's daughter", sex:"female", father:putiel, generation:generation});
+  
+  AddPerson({name:"Gershom", father:moses, mother:zipporah, generation:generation});
+  AddPerson({name:"Eliezer", father:moses, mother:zipporah, generation:generation});
+  
+  AddPerson({name:"Assir", father:korah, generation:generation});
+  AddPerson({name:"Elkanah", father:korah, generation:generation});
+  AddPerson({name:"Abiasaph", father:korah, generation:generation});
+  
+  var amminadab_of_ram = AddPerson({name:"Amminadab", birth:GetPerson(ram).birth + GetAverageBirthAge(generation), father:ram, generation:generation});
+  
+  AddPerson({name:"Iezer", father:gilead, generation:generation});
+  AddPerson({name:"Helek", father:gilead, generation:generation});
+  AddPerson({name:"Asriel", father:gilead, generation:generation});
+  AddPerson({name:"Shechem", father:gilead, generation:generation});
+  AddPerson({name:"Shemida", father:gilead, generation:generation});
+  var hepher = AddPerson({name:"Hepher", father:gilead, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Phinehas", father:eleazar, mother:daughter_of_putiel, generation:generation});
+  
+  var nahshon = AddPerson({name:"Nahshon", birth:GetPerson(amminadab_of_ram).birth + GetAverageBirthAge(generation), father:amminadab_of_ram, generation:generation});
+  
+  var zelophehad = AddPerson({name:"Zelophehad", father:hepher, generation:generation});
+  
+  ++generation;
+  var salmon = AddPerson({name:"Salmon", birth:GetPerson(nahshon).birth + GetAverageBirthAge(generation), father:nahshon, generation:generation});
+  
+  AddPerson({name:"Mahlah", sex:"female", father:zelophehad, generation:generation});
+  AddPerson({name:"Noah", sex:"female", father:zelophehad, generation:generation});
+  AddPerson({name:"Hoglah", sex:"female", father:zelophehad, generation:generation});
+  AddPerson({name:"Milcah", sex:"female", father:zelophehad, generation:generation});
+  AddPerson({name:"Tirzah", sex:"female", father:zelophehad, generation:generation});
+  
+  ++generation;
+  var boaz = AddPerson({name:"Boaz", birth:GetPerson(salmon).birth + GetAverageBirthAge(generation), father:salmon, generation:generation});
+  
+  ++generation;
+  var obed = AddPerson({name:"Obed", birth:GetPerson(boaz).birth + GetAverageBirthAge(generation), father:boaz, generation:generation});
+  
+  ++generation;
+  var jesse = AddPerson({name:"Jesse", birth:GetPerson(obed).birth + GetAverageBirthAge(generation), father:obed, generation:generation});
+  
+  ++generation;
+  var david = AddPerson({name:"David", birth:GetPerson(jesse).birth + GetAverageBirthAge(generation), father:jesse, generation:generation});
+  
+  ++generation;
+  var nathan = AddPerson({name:"Nathan", birth:GetPerson(david).birth + GetAverageBirthAge(generation), father:david, generation:generation});
+  
+  ++generation;
+  var mattatha = AddPerson({name:"Mattatha", birth:GetPerson(nathan).birth + GetAverageBirthAge(generation), father:nathan, generation:generation});
+  
+  ++generation;
+  var menan = AddPerson({name:"Menan", birth:GetPerson(mattatha).birth + GetAverageBirthAge(generation), father:mattatha, generation:generation});
+  
+  ++generation;
+  var melea = AddPerson({name:"Melea", birth:GetPerson(menan).birth + GetAverageBirthAge(generation), father:menan, generation:generation});
+  
+  ++generation;
+  var eliakim = AddPerson({name:"Eliakim", birth:GetPerson(melea).birth + GetAverageBirthAge(generation), father:melea, generation:generation});
+  
+  ++generation;
+  var jonan = AddPerson({name:"Jonan", birth:GetPerson(eliakim).birth + GetAverageBirthAge(generation), father:eliakim, generation:generation});
+  
+  ++generation;
+  var joseph_of_jonan = AddPerson({name:"Joseph", birth:GetPerson(jonan).birth + GetAverageBirthAge(generation), father:jonan, generation:generation});
+  
+  ++generation;
+  var juda = AddPerson({name:"Juda", birth:GetPerson(joseph_of_jonan).birth + GetAverageBirthAge(generation), father:joseph_of_jonan, generation:generation});
+  
+  ++generation;
+  var simeon_of_juda = AddPerson({name:"Simeon", birth:GetPerson(juda).birth + GetAverageBirthAge(generation), father:juda, generation:generation});
+  
+  ++generation;
+  var levi_of_simeon = AddPerson({name:"Levi", birth:GetPerson(simeon_of_juda).birth + GetAverageBirthAge(generation), father:simeon_of_juda, generation:generation});
+  
+  ++generation;
+  var matthat_of_levi = AddPerson({name:"Matthat", birth:GetPerson(levi_of_simeon).birth + GetAverageBirthAge(generation), father:levi_of_simeon, generation:generation});
+  
+  ++generation;
+  var jorim = AddPerson({name:"Jorim", birth:GetPerson(matthat_of_levi).birth + GetAverageBirthAge(generation), father:matthat_of_levi, generation:generation});
+  
+  ++generation;
+  var eliezer = AddPerson({name:"Eliezer", birth:GetPerson(jorim).birth + GetAverageBirthAge(generation), father:jorim, generation:generation});
+  
+  ++generation;
+  var jose = AddPerson({name:"Jose", birth:GetPerson(eliezer).birth + GetAverageBirthAge(generation), father:eliezer, generation:generation});
+  
+  ++generation;
+  var er = AddPerson({name:"Er", birth:GetPerson(jose).birth + GetAverageBirthAge(generation), father:jose, generation:generation});
+  
+  ++generation;
+  var elmodam = AddPerson({name:"Elmodam", birth:GetPerson(er).birth + GetAverageBirthAge(generation), father:er, generation:generation});
+  
+  ++generation;
+  var cosam = AddPerson({name:"Cosam", birth:GetPerson(elmodam).birth + GetAverageBirthAge(generation), father:elmodam, generation:generation});
+  
+  ++generation;
+  var addi = AddPerson({name:"Addi", birth:GetPerson(cosam).birth + GetAverageBirthAge(generation), father:cosam, generation:generation});
+  
+  ++generation;
+  var melchi = AddPerson({name:"Melchi", birth:GetPerson(addi).birth + GetAverageBirthAge(generation), father:addi, generation:generation});
+  
+  ++generation;
+  var neri = AddPerson({name:"Neri", birth:GetPerson(melchi).birth + GetAverageBirthAge(generation), father:melchi, generation:generation});
+  
+  ++generation;
+  var salathiel = AddPerson({name:"Salathiel", birth:GetPerson(neri).birth + GetAverageBirthAge(generation), father:neri, generation:generation});
+  
+  ++generation;
+  var zorobabel = AddPerson({name:"Zorobabel", birth:GetPerson(salathiel).birth + GetAverageBirthAge(generation), father:salathiel, generation:generation});
+  
+  ++generation;
+  var rhesa = AddPerson({name:"Rhesa", birth:GetPerson(zorobabel).birth + GetAverageBirthAge(generation), father:zorobabel, generation:generation});
+  
+  ++generation;
+  var joanna = AddPerson({name:"Joanna", birth:GetPerson(rhesa).birth + GetAverageBirthAge(generation), father:rhesa, generation:generation});
+  
+  ++generation;
+  var juda_of_joanna = AddPerson({name:"Juda", birth:GetPerson(joanna).birth + GetAverageBirthAge(generation), father:joanna, generation:generation});
+  
+  ++generation;
+  var joseph_of_juda = AddPerson({name:"Joseph", birth:GetPerson(juda_of_joanna).birth + GetAverageBirthAge(generation), father:juda_of_joanna, generation:generation});
+  
+  ++generation;
+  var semei = AddPerson({name:"Semei", birth:GetPerson(joseph_of_juda).birth + GetAverageBirthAge(generation), father:joseph_of_juda, generation:generation});
+  
+  ++generation;
+  var mattathias = AddPerson({name:"Mattathias", birth:GetPerson(semei).birth + GetAverageBirthAge(generation), father:semei, generation:generation});
+  
+  ++generation;
+  var maath = AddPerson({name:"Maath", birth:GetPerson(mattathias).birth + GetAverageBirthAge(generation), father:mattathias, generation:generation});
+  
+  ++generation;
+  var nagge = AddPerson({name:"Nagge", birth:GetPerson(maath).birth + GetAverageBirthAge(generation), father:maath, generation:generation});
+  
+  ++generation;
+  var elsi = AddPerson({name:"Elsi", birth:GetPerson(nagge).birth + GetAverageBirthAge(generation), father:nagge, generation:generation});
+  
+  ++generation;
+  var naum = AddPerson({name:"Naum", birth:GetPerson(elsi).birth + GetAverageBirthAge(generation), father:elsi, generation:generation});
+  
+  ++generation;
+  var amos = AddPerson({name:"Amos", birth:GetPerson(naum).birth + GetAverageBirthAge(generation), father:naum, generation:generation});
+  
+  ++generation;
+  var mattathias_of_amos = AddPerson({name:"Mattathias", birth:GetPerson(amos).birth + GetAverageBirthAge(generation), father:amos, generation:generation});
+  
+  ++generation;
+  var joseph_of_mattathias = AddPerson({name:"Joseph", birth:GetPerson(mattathias_of_amos).birth + GetAverageBirthAge(generation), father:mattathias_of_amos, generation:generation});
+  
+  ++generation;
+  var janna = AddPerson({name:"Janna", birth:GetPerson(joseph_of_mattathias).birth + GetAverageBirthAge(generation), father:joseph_of_mattathias, generation:generation});
+  
+  ++generation;
+  var melchi_of_janna = AddPerson({name:"Melchi", birth:GetPerson(janna).birth + GetAverageBirthAge(generation), father:janna, generation:generation});
+  
+  ++generation;
+  var levi_of_melchi = AddPerson({name:"Levi", birth:GetPerson(melchi_of_janna).birth + GetAverageBirthAge(generation), father:melchi_of_janna, generation:generation});
+  
+  ++generation;
+  var matthat = AddPerson({name:"Matthat", birth:GetPerson(levi_of_melchi).birth + GetAverageBirthAge(generation), father:levi_of_melchi, generation:generation});
+  
+  ++generation;
+  var heli = AddPerson({name:"Heli", birth:GetPerson(matthat).birth + GetAverageBirthAge(generation), father:matthat, generation:generation});
+  
+  ++generation;
+  var mary = AddPerson({name:"Mary", sex:"female", birth:GetPerson(heli).birth + GetAverageBirthAge(generation), father:heli, generation:generation});
+  
+  ++generation;
+  AddPerson({name:"Jesus", birth:5996, mother:mary, generation:generation});
+  
+  var timeline_data = new vis.DataSet(events);
+  // Configuration for the Timeline
+  var timeline_options = {
+	showCustomTime: true
+  };
+
+  // Create a Timeline
+  var timeline = new vis.Timeline(document.getElementById('visualization'), timeline_data, timeline_options);
+  
+  // create a network
+  var network_data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var network_options = {
+    stabilize: false,
+    smoothCurves: true,
+    hierarchicalLayout: {
+        direction: "UD"
+      }
+  };
+  network = new vis.Network(document.getElementById('mynetwork'), network_data, network_options);
+  
+  timeline.addCustomTime(ZeroBasedYear(0), 1);
+  timeline.on('timechange', function (properties) {
+    if (properties.id == 1) {
+		//var focused = false;
+		var focus_on = [];
+		for (var i = events.length - 1; i >= 0; --i) {
+			events[i] = GeneratePerson(events[i], properties.time);
+			
+			// If this become a performance issue simply move to updating individual attributes
+			$("#" + events[i].id).parent().empty().html(events[i].content);
+			
+			/*
+			if (!focused && properties.time > events[i].start && properties.time < events[i].end) {
+				network.focusOnNode(events[i].id);
+				focused = true;
+				focus_on.push(events[i].id);
+			}
+			*/
+			if (properties.time > events[i].start) {
+				focus_on.push(events[i].id);
+			}
+		}
+		
+		if (focus_on.length) {
+			network.focusOnNode(focus_on[0]);
+		}
+	}
+  });
+  
+  network.focusOnNode(1, {scale:1});
+  
+  </script>
+</body>
+</html>
