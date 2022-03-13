@@ -16,3 +16,4 @@ https://aaronalbers.github.io/project-catechism/
 11. Speaker tracking (showing who was being quoted in the written text if applicable)
 12. 3D Models (descriptions of objects in the bible rendered as a 3D model)
 13. Bible Reading (verse by verse audio bible reading that automatically brings up associated content in all other modules)
+14. Chiastic Structure (highlighting of chiastic structure in associated text)
