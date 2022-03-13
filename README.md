@@ -14,4 +14,4 @@ https://aaronalbers.github.io/project-catechism/
 9. Fragment tracking (showing the discovered bible fragments and which verses they represent)
 10. Writer tracking (showing which verses where written by whom)
 11. Speaker tracking (showing who was being quoted in the written text if applicable)
-
+12. 3D Models (descriptions of objects in the bible rendered as a 3D model)
