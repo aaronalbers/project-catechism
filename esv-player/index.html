@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>ESV Player</title>
+<script>
+async function fetchAudio(verse) {
+  const requestOptions = {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Token 8cec30b7af7d5fec00f2f427dd3a246d169367c3',
+    },
+    redirect: "follow"
+  };
+  let url = 'https://api.esv.org/v3/passage/audio/?q=' + verse;
+  return fetch(url, requestOptions)
+    .then(res => {
+      if (!res.ok) throw new Error(`${res.status} = ${res.statusText}`);
+      var reader = res.body.getReader();
+      return reader
+        .read()
+        .then((result) => {
+          return result;
+        });
+    })
+}
+fetchAudio(1001001)
+  .then((response) => {
+    var blob = new Blob([response.value], { type: 'audio/mp3' });
+    var url = window.URL.createObjectURL(blob)
+    window.audio = new Audio();
+    window.audio.src = url;
+    window.audio.play();
+  })
+  .catch((error) => {
+    alert(error.message);
+  });
+</script>
+</head>
+<body>
+</body>
+</html>
