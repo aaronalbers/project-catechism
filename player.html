@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <style>
+         .current {background-color: yellow;}
+      </style>
+   </head>
+   <body>
+      <div id="reader"></div>
+      <audio id="player" autoplay controls></audio> 
+      <script src="jquery-2.0.3.js"></script>
+      <script>
+         const API_BASE = "https://project-catechism-api.herokuapp.com/bible-brain/";
+         function get_bibles() {
+            return $.getJSON(API_BASE + "bibles?v=4&media_exclude=video_stream&audio_timing=true&language_code=eng");
+         }
+         function get_fileset(fileset_id, book, chapter) {
+            return $.getJSON(API_BASE + "bibles/filesets/" + fileset_id + "/" + book + "/" + chapter + "?v=4").then(data => data.data);
+         }
+         function get_verse_timstamps(fileset_id, book, chapter) {
+            return $.getJSON(API_BASE + "timestamps/" + fileset_id + "/" + book + "/" + chapter + "?v=4").then(data => data.data);
+         }
+      </script>
+      <script>
+         const text_fileset_id = "ENGESV";
+         const audio_fileset_id = "ENGESVN1DA";
+         const book_id = "MAT";
+         const chapter_id = "1";
+         //get_bibles().then(data => console.log(data));
+         $.when(get_fileset(text_fileset_id, book_id, chapter_id),
+                get_fileset(audio_fileset_id, book_id, chapter_id),
+                get_verse_timstamps(audio_fileset_id, book_id, chapter_id)
+                ).then((text_data, audio_data, timing_data) => {
+            text_data = text_data.map(data => data.verse_text);
+            var verse_nodes = text_data.map((verse_text, verse_index) => $("<div id='" + verse_index + "'>" + verse_text + "</div>").get(0));
+            
+            var text = document.getElementById('reader');
+            verse_nodes.forEach(verse_node => text.append(verse_node));
+            
+            var audio = document.getElementById('player');
+            audio.src = audio_data[0].path;
+            audio.ontimeupdate = () => {
+               const verse = timing_data.reduce((max, v) => {
+                  if (v.timestamp > audio.currentTime) return max;
+                  return v.timestamp > max.timestamp ? v : max;
+               });
+               
+               console.log(audio.currentTime);
+               console.log(verse.verse_start);
+               
+               verse_nodes.forEach(verse_node => verse_node.classList.remove("current"));
+               if (verse.verse_start > 0) verse_nodes[verse.verse_start-1].classList.add("current");
+            };
+         });
+      </script>
+   </body>
+</html>
+
