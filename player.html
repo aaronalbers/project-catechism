@@ -25,6 +25,10 @@
          const audio_fileset_id = "ENGESVN1DA";
          const book_id = "MAT";
          const chapter_id = "1";
+         
+         var bc = new BroadcastChannel('bible_reader');
+         bc.onmessage = event => { console.log(event); }
+         
          //get_bibles().then(data => console.log(data));
          $.when(get_fileset(text_fileset_id, book_id, chapter_id),
                 get_fileset(audio_fileset_id, book_id, chapter_id),
@@ -44,8 +48,10 @@
                   return v.timestamp > max.timestamp ? v : max;
                });
                
-               console.log(audio.currentTime);
-               console.log(verse.verse_start);
+               verse.fileset_id = audio_fileset_id;
+               verse.current_time = audio.currentTime;
+               console.log(verse);
+               bc.postMessage(verse);
                
                verse_nodes.forEach(verse_node => verse_node.classList.remove("current"));
                if (verse.verse_start > 0) verse_nodes[verse.verse_start-1].classList.add("current");
