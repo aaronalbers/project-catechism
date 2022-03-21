@@ -5,10 +5,10 @@ https://aaronalbers.github.io/project-catechism/
 ## Design Goals
 1. Reference tracking (showing where this interpretation/evidence origin was)
 2. Tradition tracking (showing which belief systems subscribe to this interpretation/evidence)
-3. Location tracking (showing people/objects in relation to each other in space)
-4. Timeline tracking (showing people/objects/writings in relation to each other in time)
+3. Location tracking (showing people/objects/borders in relation to each other in space)
+4. Timeline tracking (showing people/objects/writings in relation to each other in time and what "generation" they are from)
 5. Genealogy tracking (showing relationships between biblical figures)
-6. Royalty tracking (showing the sucession of kings and when they ruled)
+6. Royalty tracking (showing the sucession of kings/judges and when they ruled)
 7. Prophecy tracking (showing when prophecies were made and when they were fulfilled)
 8. Quote tracking (showing when earlier writings were quoted by later writings)
 9. Fragment tracking (showing the discovered bible fragments and which verses they represent)
