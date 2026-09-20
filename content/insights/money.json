@@ -1,0 +1,148 @@
+[
+ {
+  "id": "denarius-days-wage",
+  "title": "A denarius was a day's pay",
+  "kind": "money",
+  "verses": ["Matt.20.1-16", "Matt.22.19-21", "Mark.12.15-17", "Luke.20.24-25"],
+  "summary": "Jesus' own parable prices a day in the vineyard at one denarius, and a soldier under Tiberius earned less than that. It is the yardstick for every other sum in the Gospels.",
+  "body": [
+   "In the parable of the vineyard the landowner agrees with the labourers 'for a denarius a day' (Matthew 20:2) and pays every worker exactly that, so the story itself tells us the going day rate for hired agricultural work.",
+   "Independent evidence agrees. Tacitus records mutinous legionaries in AD 14 complaining that 'ten asses a day is the value set on life and limb' — ten asses is five-eighths of a denarius, so a farm hand in the parable was paid better per day than a Roman soldier (though the soldier was paid year-round).",
+   "The coin itself was a small silver piece about 19 mm across, roughly the size of a modern US penny or a 1-euro-cent coin, weighing about 3.9 g of nearly pure silver. The 'tribute penny' Jesus was handed in Matthew 22 was almost certainly one of these; the most common denarius in circulation in his lifetime carried Tiberius' head and the legend TI CAESAR DIVI AVG F AVGVSTVS — 'Tiberius Caesar, son of the divine Augustus'. That inscription is what makes 'whose image and inscription is this?' such a pointed question."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Emperor_Tiberius_Denarius_-_Tribute_Penny.jpg", "caption": "Silver denarius of Tiberius (struck AD 18–35), the type traditionally called the 'tribute penny'. Obverse: laureate head; reverse: Livia seated as Pax.", "credit": "DrusMAX, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Emperor_Tiberius_Denarius_-_Tribute_Penny.jpg", "license": "CC BY-SA 3.0"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Matt.20.2", "note": "'a denarius for the day'"},
+   {"kind": "primary", "title": "Tacitus, Annals 1.17", "author": "Tacitus", "year": "c. AD 116", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D1%3Achapter%3D17", "note": "legionary pay of ten asses a day (16 asses = 1 denarius)"},
+   {"kind": "archaeology", "title": "Tiberius denarius, RIC I² 26/30 ('tribute penny')", "note": "thousands of surviving specimens; the type shown above is the commonest silver coin of Jesus' adult lifetime"},
+   {"kind": "scholarship", "title": "The Metallurgy of Roman Silver Coinage: From the Reform of Nero to the Reform of Trajan", "author": "Kevin Butcher & Matthew Ponting", "year": 2014, "note": "Julio-Claudian denarii assay at roughly 97–98% silver"}
+  ],
+  "confidence": "evidence",
+  "related": ["nard-300-denarii", "ten-thousand-talents", "widows-two-lepta"]
+ },
+ {
+  "id": "nard-300-denarii",
+  "title": "A year's wages poured out in one act",
+  "kind": "money",
+  "verses": ["Mark.14.3-9", "John.12.1-8", "Matt.26.6-13"],
+  "summary": "The onlookers price the flask of nard at 'more than three hundred denarii'. At a denarius a day that is roughly a year of a labourer's income — and Pliny confirms the top perfumes really did cost that much.",
+  "body": [
+   "Mark and John both put a number on the perfume: over 300 denarii (Mark 14:5; John 12:5). John adds the quantity — a litra, the Roman pound of about 327 g — and the grade, 'pure nard'.",
+   "Set beside Matthew 20:2 (one denarius = one day's work), 300 denarii is about 300 working days. How many days a labourer actually worked in a year is an estimate: a six-day week minus Sabbaths and the pilgrim festivals leaves roughly 300, which is why this is usually described as 'about a year's wages'. The figure is a comparison, not a conversion into modern money.",
+   "Pliny the Elder, writing a generation later, lists prices for luxury unguents that land in exactly this range: raw spikenard at 100 denarii per pound, and the costliest compounded perfume at 'from 35 to 300 denarii' per pound. He also notes that 'unguents keep best in alabaster boxes' — the very container Mark describes (see the Models tab for the flask).",
+   "Nard (Nardostachys jatamansi) grows in the Himalayas; every pound in Judea had crossed the Indian Ocean trade routes, which is where the price came from. Jesus' reply — 'she has done a beautiful thing' — lands harder once the sum is real: the value of a year of someone's labour, spent in a moment."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Slender_Alabastron_LACMA_M.73.5.353.jpg/500px-Slender_Alabastron_LACMA_M.73.5.353.jpg", "caption": "Calcite ('alabaster') alabastron, Egypt, Ptolemaic period (305–31 BC). The long neck and narrow mouth kept perfume from evaporating; the neck was often snapped to open it, matching Mark's 'she broke the jar'.", "credit": "LACMA (M.73.5.353)", "creditUrl": "https://commons.wikimedia.org/wiki/File:Slender_Alabastron_LACMA_M.73.5.353.jpg", "license": "Public domain"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Mark.14.5", "note": "'more than three hundred denarii'"},
+   {"kind": "scripture", "ref": "John.12.3-5", "note": "'a pound of pure nard'"},
+   {"kind": "scripture", "ref": "Matt.20.2", "note": "the day-rate used for the comparison"},
+   {"kind": "primary", "title": "Pliny the Elder, Natural History 12.26 (nard, 100 denarii per pound)", "author": "Pliny the Elder", "year": "AD 77", "url": "http://peterburk.github.io/pliny/ChaptersHtml/12.%20Book%20XII.%20The%20Natural%20History%20Of%20Trees/26.%20Chap.%2026.-Nard.%20The%20Twelve%20Varieties%20Of%20The%20Plant..html"},
+   {"kind": "primary", "title": "Pliny the Elder, Natural History 13.2–3 (unguents priced 35–300 denarii; 'unguents keep best in alabaster')", "author": "Pliny the Elder", "year": "AD 77", "url": "https://en.wikisource.org/wiki/Natural_History_(Rackham,_Jones,_%26_Eichholz)/Book_13"},
+   {"kind": "archaeology", "title": "Alabastra (calcite perfume flasks) from Egypt and the Levant, Hellenistic–Roman", "note": "e.g. LACMA M.73.5.353 pictured above; the form is standard across the eastern Mediterranean"}
+  ],
+  "confidence": "evidence",
+  "related": ["denarius-days-wage", "word-g211-alabastron", "reclining-at-table"]
+ },
+ {
+  "id": "ten-thousand-talents",
+  "title": "Ten thousand talents: a debt bigger than the kingdom's tax income",
+  "kind": "money",
+  "verses": ["Matt.18.21-35"],
+  "summary": "A talent was 6,000 denarii, so the first servant owed 60 million days' wages; Josephus says the whole of Herod's kingdom yielded about 900 talents a year. The second servant owed 100 denarii — about three months.",
+  "body": [
+   "The parable deliberately stacks the two debts against each other. A talent was not a coin but a weight of silver reckoned at 6,000 drachmae/denarii, so 10,000 talents is 60,000,000 denarii. At one denarius a day, that is 60 million days of labour — on the order of 160,000 years for one worker (an estimate that assumes roughly 300 working days a year).",
+   "For scale, Josephus records the annual tax revenue of the territories Herod the Great left to his sons: 600 talents for Archelaus (Judea, Samaria, Idumea), 200 for Antipas (Galilee and Perea) and 100 for Philip — about 900 talents a year for the whole region. The servant's debt is more than eleven years of the entire kingdom's revenue. 'Ten thousand' (myrioi) was also the largest single number-word in Greek, so the hearer would take it as 'the biggest debt imaginable'.",
+   "The fellow servant's 100 denarii was real money — about three to four months' pay — which is the point: it is a genuine debt, dwarfed only by comparison."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Matt.18.24", "note": "ten thousand talents"},
+   {"kind": "scripture", "ref": "Matt.18.28", "note": "a hundred denarii"},
+   {"kind": "scripture", "ref": "Matt.20.2", "note": "denarius as a day's wage"},
+   {"kind": "primary", "title": "Josephus, Antiquities 17.317–320", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/17.317-17.320/wst", "note": "600 + 200 + 100 talents annual revenue"},
+   {"kind": "scholarship", "title": "Talent = 6,000 drachmae (Attic standard); the denarius was tariffed at one drachma in the eastern provinces", "note": "standard metrology; see any lexicon under τάλαντον"}
+  ],
+  "confidence": "estimate",
+  "related": ["denarius-days-wage"]
+ },
+ {
+  "id": "widows-two-lepta",
+  "title": "The widow's two lepta",
+  "kind": "money",
+  "verses": ["Mark.12.41-44", "Luke.21.1-4"],
+  "summary": "Mark translates her gift for Roman readers: two lepta 'make a quadrans' — 1/64 of a denarius, about ten minutes of a labourer's day.",
+  "body": [
+   "The lepton ('thin one') was the smallest bronze coin in circulation in Judea, the Jewish prutah. Most of those found in Jerusalem excavations were struck a century or more earlier under the Hasmonean king Alexander Jannaeus (103–76 BC) and were still in everyday use — worn, crude, and almost worthless individually.",
+   "Mark's aside, 'which make a kodrantēs' (Latin quadrans), fixes the value: a quadrans was a quarter of an as, and sixteen asses made a denarius, so her two coins were 1/64 of a day's wage. The arithmetic is exact; only the 'ten minutes' comparison is an estimate assuming a ten-hour working day.",
+   "Because Mark explains the coin in Roman terms, this verse is also one of the small internal clues that his Gospel was written with a non-Judean, probably Roman, audience in mind."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Mark.12.42", "note": "'two small copper coins, which amount to a kodrantes'"},
+   {"kind": "archaeology", "title": "A Treasury of Jewish Coins from the Persian Period to Bar Kokhba", "author": "Ya'akov Meshorer", "year": 2001, "note": "prutot of Alexander Jannaeus are the commonest coin in Judean excavation strata of the 1st century AD"},
+   {"kind": "primary", "title": "Roman denominations: 4 quadrantes = 1 as; 16 asses = 1 denarius", "note": "the as-to-denarius ratio was fixed at 16:1 from 141 BC"}
+  ],
+  "confidence": "evidence",
+  "related": ["denarius-days-wage"]
+ },
+ {
+  "id": "temple-tax-stater",
+  "title": "The two-drachma tax and the coin in the fish",
+  "kind": "money",
+  "verses": ["Matt.17.24-27"],
+  "summary": "Every adult Jewish male owed a half-shekel a year to the temple (Exodus 30:13). It had to be paid in Tyrian silver, and a Tyrian shekel — a stater of four drachmae — paid for exactly two men.",
+  "body": [
+   "The collectors ask whether Jesus pays 'the two-drachma tax'. That is the annual half-shekel of Exodus 30:13, reinterpreted after the exile as a standing temple levy (Nehemiah 10:32 has a third of a shekel; by the first century it was a half). The Mishnah (Shekalim 1:3) describes money-changers setting up tables in the provinces a month before Passover to collect it.",
+   "The Mishnah also specifies the coinage: temple dues were to be paid in 'Tyrian silver' (Bekhorot 8:7), because Tyre's shekels kept a reliably high silver content even though they bore the image of the god Melqart. A Tyrian shekel was a tetradrachm — four drachmae — so the single stater Peter finds in the fish (Matthew 17:27) covers two half-shekel payments: 'for me and for you'. The detail is precise, and it is why money-changing was necessary in the temple courts at all.",
+   "See the Models tab for the coin's proportions."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Exod.30.13-16", "note": "the half-shekel"},
+   {"kind": "scripture", "ref": "Matt.17.27", "note": "a stater — 'for me and for you'"},
+   {"kind": "primary", "title": "Mishnah Shekalim 1:3", "url": "https://www.sefaria.org/Mishnah_Shekalim.1.3", "note": "tables set up on the 15th of Adar"},
+   {"kind": "primary", "title": "Mishnah Bekhorot 8:7", "url": "https://www.sefaria.org/Mishnah_Bekhorot.8.7", "note": "dues reckoned in Tyrian coinage"},
+   {"kind": "archaeology", "title": "Tyrian shekels and half-shekels, 126 BC – AD 66", "note": "hoards from Judea (e.g. the Isfiya hoard, 1960: c. 4,500 Tyrian coins) show the type circulating in quantity for the tax"}
+  ],
+  "confidence": "evidence",
+  "related": ["thirty-pieces-of-silver"]
+ },
+ {
+  "id": "thirty-pieces-of-silver",
+  "title": "Thirty pieces of silver",
+  "kind": "money",
+  "verses": ["Matt.26.14-16", "Matt.27.3-10"],
+  "summary": "Thirty shekels is the Torah's compensation for a slave killed by an ox. Matthew names no coin, so any modern value is an estimate — if they were Tyrian shekels it was about four months' wages.",
+  "body": [
+   "Matthew is the only Gospel to give the price, and he gives it in a form that echoes two Old Testament texts: Exodus 21:32, where thirty shekels is what an owner receives for a slave gored to death, and Zechariah 11:12–13, where the prophet is paid 'thirty pieces of silver' as a contemptuous wage and throws it into the temple treasury.",
+   "The coin type is not stated. If the priests paid in the temple's own currency, Tyrian shekels (see the temple-tax card), thirty of them would be 120 denarii — roughly four months of a labourer's pay. That conversion is an inference, not a datum; what the text itself supplies is the allusion: the price of a slave."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Exod.21.32", "note": "thirty shekels for a slave"},
+   {"kind": "scripture", "ref": "Zech.11.12-13", "note": "'they weighed out thirty pieces of silver'"},
+   {"kind": "scripture", "ref": "Matt.27.9-10", "note": "Matthew's own citation of the prophecy"},
+   {"kind": "scholarship", "title": "Tyrian shekel = 4 denarii", "note": "standard Levantine tariff; the shekel weighed c. 14 g against the denarius' 3.9 g"}
+  ],
+  "confidence": "estimate",
+  "traditions": ["All major traditions read Exodus 21:32 and Zechariah 11 as the background; the coin identification is scholarly conjecture"],
+  "related": ["temple-tax-stater", "denarius-days-wage"]
+ },
+ {
+  "id": "two-denarii-innkeeper",
+  "title": "Two denarii at the inn",
+  "kind": "money",
+  "verses": ["Luke.10.30-37"],
+  "summary": "The Samaritan leaves two days' wages with the innkeeper and promises to cover any overrun — an open-ended guarantee, not a tip.",
+  "body": [
+   "Two denarii is two days of a labourer's pay (Matthew 20:2). How many nights that bought is an estimate: comparisons with Roman price evidence suggest lodging and basic food ran a fraction of a denarius a day, so two denarii plausibly covered a week or more of care. The decisive detail is the promise that follows — 'whatever more you spend, I will repay you' — which turns a stranger's act into a standing liability for a man he will never see again."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.10.35"},
+   {"kind": "scripture", "ref": "Matt.20.2", "note": "denarius as a day's wage"}
+  ],
+  "confidence": "estimate",
+  "related": ["denarius-days-wage"]
+ }
+]

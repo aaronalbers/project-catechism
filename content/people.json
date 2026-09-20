@@ -1,0 +1,4202 @@
+[
+ {
+  "id": "adam",
+  "name": "Adam",
+  "sex": "male",
+  "generation": 0,
+  "bornAM": 0,
+  "diedAM": 930,
+  "refs": [
+   "Gen.2.7",
+   "Gen.5.1-5",
+   "Luke.3.38"
+  ]
+ },
+ {
+  "id": "eve",
+  "name": "Eve",
+  "sex": "female",
+  "generation": 0,
+  "refs": [
+   "Gen.2.22",
+   "Gen.3.20",
+   "Gen.4.1"
+  ],
+  "notes": "Genesis gives no age for Eve."
+ },
+ {
+  "id": "abel-of-adam",
+  "name": "Abel",
+  "sex": "male",
+  "generation": 1,
+  "father": "adam",
+  "mother": "eve",
+  "refs": [
+   "Gen.4.2"
+  ]
+ },
+ {
+  "id": "seth",
+  "name": "Seth",
+  "sex": "male",
+  "generation": 1,
+  "father": "adam",
+  "mother": "eve",
+  "bornAM": 130,
+  "diedAM": 1042,
+  "refs": [
+   "Gen.4.25",
+   "Gen.5.3-8",
+   "Luke.3.38"
+  ]
+ },
+ {
+  "id": "cain",
+  "name": "Cain",
+  "sex": "male",
+  "generation": 1,
+  "father": "adam",
+  "mother": "eve",
+  "refs": [
+   "Gen.4.1"
+  ]
+ },
+ {
+  "id": "enosh",
+  "name": "Enosh",
+  "sex": "male",
+  "generation": 2,
+  "father": "seth",
+  "bornAM": 235,
+  "diedAM": 1140,
+  "refs": [
+   "Gen.4.26",
+   "Gen.5.6-11",
+   "Luke.3.38"
+  ]
+ },
+ {
+  "id": "enoch",
+  "name": "Enoch",
+  "sex": "male",
+  "generation": 2,
+  "father": "cain",
+  "refs": [
+   "Gen.4.17"
+  ]
+ },
+ {
+  "id": "kenan",
+  "name": "Kenan",
+  "sex": "male",
+  "generation": 3,
+  "father": "enosh",
+  "bornAM": 325,
+  "diedAM": 1235,
+  "refs": [
+   "Gen.5.9-14",
+   "Luke.3.37"
+  ]
+ },
+ {
+  "id": "irad",
+  "name": "Irad",
+  "sex": "male",
+  "generation": 3,
+  "father": "enoch",
+  "refs": [
+   "Gen.4.18"
+  ]
+ },
+ {
+  "id": "mahalalel",
+  "name": "Mahalalel",
+  "sex": "male",
+  "generation": 4,
+  "father": "kenan",
+  "bornAM": 395,
+  "diedAM": 1290,
+  "refs": [
+   "Gen.5.12-17",
+   "Luke.3.37"
+  ]
+ },
+ {
+  "id": "mehujael",
+  "name": "Mehujael",
+  "sex": "male",
+  "generation": 4,
+  "father": "irad",
+  "refs": [
+   "Gen.4.18"
+  ]
+ },
+ {
+  "id": "jared",
+  "name": "Jared",
+  "sex": "male",
+  "generation": 5,
+  "father": "mahalalel",
+  "bornAM": 460,
+  "diedAM": 1422,
+  "refs": [
+   "Gen.5.15-20",
+   "Luke.3.37"
+  ]
+ },
+ {
+  "id": "methushael",
+  "name": "Methushael",
+  "sex": "male",
+  "generation": 5,
+  "father": "mehujael",
+  "refs": [
+   "Gen.4.18"
+  ]
+ },
+ {
+  "id": "enoch-of-jared",
+  "name": "Enoch",
+  "sex": "male",
+  "generation": 6,
+  "father": "jared",
+  "bornAM": 622,
+  "diedAM": 987,
+  "refs": [
+   "Gen.5.18-24",
+   "Luke.3.37",
+   "Heb.11.5",
+   "Jude.1.14"
+  ]
+ },
+ {
+  "id": "adah",
+  "name": "Adah",
+  "sex": "female",
+  "generation": 6,
+  "refs": [
+   "Gen.4.19"
+  ]
+ },
+ {
+  "id": "lamech",
+  "name": "Lamech",
+  "sex": "male",
+  "generation": 6,
+  "father": "methushael",
+  "refs": [
+   "Gen.4.18-24"
+  ]
+ },
+ {
+  "id": "zillah",
+  "name": "Zillah",
+  "sex": "female",
+  "generation": 6,
+  "refs": [
+   "Gen.4.19"
+  ]
+ },
+ {
+  "id": "methuselah",
+  "name": "Methuselah",
+  "sex": "male",
+  "generation": 7,
+  "father": "enoch-of-jared",
+  "bornAM": 687,
+  "diedAM": 1656,
+  "refs": [
+   "Gen.5.21-27",
+   "Luke.3.37"
+  ]
+ },
+ {
+  "id": "jabal-of-lamech",
+  "name": "Jabal",
+  "sex": "male",
+  "generation": 7,
+  "father": "lamech",
+  "mother": "adah",
+  "refs": [
+   "Gen.4.20"
+  ]
+ },
+ {
+  "id": "jubal-of-lamech",
+  "name": "Jubal",
+  "sex": "male",
+  "generation": 7,
+  "father": "lamech",
+  "mother": "adah",
+  "refs": [
+   "Gen.4.21"
+  ]
+ },
+ {
+  "id": "tubal-cain-of-lamech",
+  "name": "Tubal-Cain",
+  "sex": "male",
+  "generation": 7,
+  "father": "lamech",
+  "mother": "zillah",
+  "refs": [
+   "Gen.4.22"
+  ]
+ },
+ {
+  "id": "naamah-of-lamech",
+  "name": "Naamah",
+  "sex": "female",
+  "generation": 7,
+  "father": "lamech",
+  "mother": "zillah",
+  "refs": [
+   "Gen.4.22"
+  ]
+ },
+ {
+  "id": "lamech-of-methuselah",
+  "name": "Lamech",
+  "sex": "male",
+  "generation": 8,
+  "father": "methuselah",
+  "bornAM": 874,
+  "diedAM": 1651,
+  "refs": [
+   "Gen.5.25-31",
+   "Luke.3.36"
+  ]
+ },
+ {
+  "id": "noah",
+  "name": "Noah",
+  "sex": "male",
+  "generation": 9,
+  "father": "lamech-of-methuselah",
+  "bornAM": 1056,
+  "diedAM": 2006,
+  "refs": [
+   "Gen.5.28-32",
+   "Gen.9.28-29",
+   "Luke.3.36"
+  ]
+ },
+ {
+  "id": "japheth-of-noah",
+  "name": "Japheth",
+  "sex": "male",
+  "generation": 10,
+  "father": "noah",
+  "refs": [
+   "Gen.5.32",
+   "Gen.10.1-2"
+  ]
+ },
+ {
+  "id": "shem",
+  "name": "Shem",
+  "sex": "male",
+  "generation": 10,
+  "father": "noah",
+  "bornAM": 1558,
+  "diedAM": 2158,
+  "refs": [
+   "Gen.5.32",
+   "Gen.11.10-11",
+   "Luke.3.36"
+  ],
+  "notes": "Born two years before Noah was 500? Genesis 5:32 groups the three sons at Noah’s 500th year; Genesis 11:10 says Shem was 100 two years after the flood (AM 1656), which gives AM 1558."
+ },
+ {
+  "id": "ham-of-noah",
+  "name": "Ham",
+  "sex": "male",
+  "generation": 10,
+  "father": "noah",
+  "refs": [
+   "Gen.5.32",
+   "Gen.10.6"
+  ]
+ },
+ {
+  "id": "elam-of-shem",
+  "name": "Elam",
+  "sex": "male",
+  "generation": 11,
+  "father": "shem",
+  "refs": [
+   "Gen.10.22"
+  ]
+ },
+ {
+  "id": "asshur-of-shem",
+  "name": "Asshur",
+  "sex": "male",
+  "generation": 11,
+  "father": "shem",
+  "refs": [
+   "Gen.10.22"
+  ]
+ },
+ {
+  "id": "arphaxad",
+  "name": "Arphaxad",
+  "sex": "male",
+  "generation": 11,
+  "father": "shem",
+  "bornAM": 1658,
+  "diedAM": 2096,
+  "refs": [
+   "Gen.10.22",
+   "Gen.11.12-13",
+   "Luke.3.36"
+  ]
+ },
+ {
+  "id": "lud-of-shem",
+  "name": "Lud",
+  "sex": "male",
+  "generation": 11,
+  "father": "shem",
+  "refs": [
+   "Gen.10.22"
+  ]
+ },
+ {
+  "id": "aram",
+  "name": "Aram",
+  "sex": "male",
+  "generation": 11,
+  "father": "shem",
+  "refs": [
+   "Gen.10.22"
+  ]
+ },
+ {
+  "id": "shelah",
+  "name": "Shelah",
+  "sex": "male",
+  "generation": 12,
+  "father": "arphaxad",
+  "bornAM": 1693,
+  "diedAM": 2126,
+  "refs": [
+   "Gen.10.24",
+   "Gen.11.14-15",
+   "Luke.3.35"
+  ]
+ },
+ {
+  "id": "uz-of-aram",
+  "name": "Uz",
+  "sex": "male",
+  "generation": 12,
+  "father": "aram",
+  "refs": [
+   "Gen.10.23"
+  ]
+ },
+ {
+  "id": "hul-of-aram",
+  "name": "Hul",
+  "sex": "male",
+  "generation": 12,
+  "father": "aram",
+  "refs": [
+   "Gen.10.23"
+  ]
+ },
+ {
+  "id": "gether-of-aram",
+  "name": "Gether",
+  "sex": "male",
+  "generation": 12,
+  "father": "aram",
+  "refs": [
+   "Gen.10.23"
+  ]
+ },
+ {
+  "id": "meshech-of-aram",
+  "name": "Meshech",
+  "sex": "male",
+  "generation": 12,
+  "father": "aram",
+  "refs": [
+   "Gen.10.23"
+  ]
+ },
+ {
+  "id": "eber",
+  "name": "Eber",
+  "sex": "male",
+  "generation": 13,
+  "father": "shelah",
+  "bornAM": 1723,
+  "diedAM": 2187,
+  "refs": [
+   "Gen.10.24",
+   "Gen.11.16-17",
+   "Luke.3.35"
+  ]
+ },
+ {
+  "id": "peleg",
+  "name": "Peleg",
+  "sex": "male",
+  "generation": 14,
+  "father": "eber",
+  "bornAM": 1757,
+  "diedAM": 1996,
+  "refs": [
+   "Gen.10.25",
+   "Gen.11.18-19",
+   "Luke.3.35"
+  ]
+ },
+ {
+  "id": "joktan",
+  "name": "Joktan",
+  "sex": "male",
+  "generation": 14,
+  "father": "eber",
+  "refs": [
+   "Gen.10.25-29"
+  ]
+ },
+ {
+  "id": "reu",
+  "name": "Reu",
+  "sex": "male",
+  "generation": 15,
+  "father": "peleg",
+  "bornAM": 1787,
+  "diedAM": 2026,
+  "refs": [
+   "Gen.11.20-21",
+   "Luke.3.35"
+  ]
+ },
+ {
+  "id": "almodad-of-joktan",
+  "name": "Almodad",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "sheleph-of-joktan",
+  "name": "Sheleph",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "hazarmaveth-of-joktan",
+  "name": "Hazarmaveth",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "jerah-of-joktan",
+  "name": "Jerah",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "hadoram-of-joktan",
+  "name": "Hadoram",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "uzal-of-joktan",
+  "name": "Uzal",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "diklah-of-joktan",
+  "name": "Diklah",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "obal-of-joktan",
+  "name": "Obal",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "abimael-of-joktan",
+  "name": "Abimael",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "sheba-of-joktan",
+  "name": "Sheba",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "ophir-of-joktan",
+  "name": "Ophir",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "havilah-of-joktan",
+  "name": "Havilah",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "jobab-of-joktan",
+  "name": "Jobab",
+  "sex": "male",
+  "generation": 15,
+  "father": "joktan",
+  "refs": [
+   "Gen.10.26-29"
+  ]
+ },
+ {
+  "id": "serug",
+  "name": "Serug",
+  "sex": "male",
+  "generation": 16,
+  "father": "reu",
+  "bornAM": 1819,
+  "diedAM": 2049,
+  "refs": [
+   "Gen.11.22-23",
+   "Luke.3.35"
+  ]
+ },
+ {
+  "id": "nahor",
+  "name": "Nahor",
+  "sex": "male",
+  "generation": 17,
+  "father": "serug",
+  "bornAM": 1849,
+  "diedAM": 1997,
+  "refs": [
+   "Gen.11.24-25",
+   "Luke.3.34"
+  ]
+ },
+ {
+  "id": "terah",
+  "name": "Terah",
+  "sex": "male",
+  "generation": 18,
+  "father": "nahor",
+  "bornAM": 1878,
+  "diedAM": 2083,
+  "refs": [
+   "Gen.11.26-32",
+   "Luke.3.34"
+  ]
+ },
+ {
+  "id": "nahor-of-terah",
+  "name": "Nahor",
+  "sex": "male",
+  "generation": 19,
+  "father": "terah",
+  "refs": [
+   "Gen.11.26-29",
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "haran",
+  "name": "Haran",
+  "sex": "male",
+  "generation": 19,
+  "father": "terah",
+  "refs": [
+   "Gen.11.26-28"
+  ]
+ },
+ {
+  "id": "sarai",
+  "name": "Sarai",
+  "sex": "female",
+  "generation": 19,
+  "father": "terah",
+  "bornAM": 2018,
+  "diedAM": 2145,
+  "estimated": true,
+  "refs": [
+   "Gen.11.29",
+   "Gen.17.15",
+   "Gen.23.1-2"
+  ],
+  "notes": "Ten years younger than Abraham (Genesis 17:17); died at 127 (Genesis 23:1)."
+ },
+ {
+  "id": "hagar",
+  "name": "Hagar",
+  "sex": "female",
+  "generation": 19,
+  "refs": [
+   "Gen.16.1-4",
+   "Gen.21.9-21"
+  ]
+ },
+ {
+  "id": "abraham",
+  "name": "Abraham",
+  "sex": "male",
+  "generation": 19,
+  "father": "terah",
+  "bornAM": 2008,
+  "diedAM": 2183,
+  "estimated": true,
+  "refs": [
+   "Gen.11.26-27",
+   "Gen.12.1-4",
+   "Gen.17.5",
+   "Gen.25.7-8",
+   "Matt.1.1-2",
+   "Luke.3.34"
+  ],
+  "notes": "Genesis 11:26 lists Abram first among Terah’s sons at Terah’s 70th year, but Genesis 11:32, 12:4 and Acts 7:4 together imply Abram was born when Terah was 130. Years from here on use that reading and are therefore estimates."
+ },
+ {
+  "id": "keturah",
+  "name": "Keturah",
+  "sex": "female",
+  "generation": 19,
+  "refs": [
+   "Gen.25.1"
+  ]
+ },
+ {
+  "id": "reumah",
+  "name": "Reumah",
+  "sex": "female",
+  "generation": 20,
+  "refs": [
+   "Gen.22.24"
+  ]
+ },
+ {
+  "id": "milcah",
+  "name": "Milcah",
+  "sex": "female",
+  "generation": 20,
+  "father": "haran",
+  "refs": [
+   "Gen.11.29",
+   "Gen.22.20"
+  ]
+ },
+ {
+  "id": "first-spouse-of-lot",
+  "name": "Spouse 1",
+  "sex": "female",
+  "generation": 20,
+  "refs": [
+   "Gen.19.15-26"
+  ]
+ },
+ {
+  "id": "lot",
+  "name": "Lot",
+  "sex": "male",
+  "generation": 20,
+  "father": "haran",
+  "refs": [
+   "Gen.11.27",
+   "Gen.13.1-13",
+   "Gen.19.1-38"
+  ]
+ },
+ {
+  "id": "isaac",
+  "name": "Isaac",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "sarai",
+  "bornAM": 2108,
+  "diedAM": 2288,
+  "estimated": true,
+  "refs": [
+   "Gen.21.1-5",
+   "Gen.35.28-29",
+   "Matt.1.2",
+   "Luke.3.34"
+  ],
+  "notes": "Abraham was 100 (Genesis 21:5); Isaac lived 180 years (Genesis 35:28)."
+ },
+ {
+  "id": "ishmael",
+  "name": "Ishmael",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "hagar",
+  "bornAM": 2094,
+  "diedAM": 2231,
+  "estimated": true,
+  "refs": [
+   "Gen.16.15-16",
+   "Gen.25.12-18"
+  ],
+  "notes": "Abraham was 86 (Genesis 16:16); Ishmael lived 137 years (Genesis 25:17)."
+ },
+ {
+  "id": "zimran-of-abraham",
+  "name": "Zimran",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "keturah",
+  "refs": [
+   "Gen.25.2"
+  ]
+ },
+ {
+  "id": "jokshan-of-abraham",
+  "name": "Jokshan",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "keturah",
+  "refs": [
+   "Gen.25.2"
+  ]
+ },
+ {
+  "id": "medan-of-abraham",
+  "name": "Medan",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "keturah",
+  "refs": [
+   "Gen.25.2"
+  ]
+ },
+ {
+  "id": "midian",
+  "name": "Midian",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "keturah",
+  "refs": [
+   "Gen.25.2",
+   "Gen.25.4"
+  ]
+ },
+ {
+  "id": "ishbak-of-abraham",
+  "name": "Ishbak",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "keturah",
+  "refs": [
+   "Gen.25.2"
+  ]
+ },
+ {
+  "id": "shuah-of-abraham",
+  "name": "Shuah",
+  "sex": "male",
+  "generation": 20,
+  "father": "abraham",
+  "mother": "keturah",
+  "refs": [
+   "Gen.25.2"
+  ]
+ },
+ {
+  "id": "seir",
+  "name": "Seir",
+  "sex": "male",
+  "generation": 20,
+  "refs": [
+   "Gen.36.20"
+  ]
+ },
+ {
+  "id": "tebah-of-nahor-of-terah",
+  "name": "Tebah",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "reumah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "gaham-of-nahor-of-terah",
+  "name": "Gaham",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "reumah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "tahash-of-nahor-of-terah",
+  "name": "Tahash",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "reumah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "maacah-of-nahor-of-terah",
+  "name": "Maacah",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "reumah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "uz-of-nahor-of-terah",
+  "name": "Uz",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "buz-of-nahor-of-terah",
+  "name": "Buz",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "kemuel",
+  "name": "Kemuel",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.21"
+  ]
+ },
+ {
+  "id": "kesed-of-nahor-of-terah",
+  "name": "Kesed",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "hazo-of-nahor-of-terah",
+  "name": "Hazo",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "pildash-of-nahor-of-terah",
+  "name": "Pildash",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "jidlaph-of-nahor-of-terah",
+  "name": "Jidlaph",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.20-24"
+  ]
+ },
+ {
+  "id": "bethuel",
+  "name": "Bethuel",
+  "sex": "male",
+  "generation": 21,
+  "father": "nahor-of-terah",
+  "mother": "milcah",
+  "refs": [
+   "Gen.22.22-23",
+   "Gen.24.15"
+  ]
+ },
+ {
+  "id": "first-daugher-of-lot",
+  "name": "daughter 1",
+  "sex": "female",
+  "generation": 21,
+  "father": "lot",
+  "mother": "first-spouse-of-lot",
+  "refs": [
+   "Gen.19.30-38"
+  ]
+ },
+ {
+  "id": "second-daugher-of-lot",
+  "name": "daughter 2",
+  "sex": "female",
+  "generation": 21,
+  "father": "lot",
+  "mother": "first-spouse-of-lot",
+  "refs": [
+   "Gen.19.30-38"
+  ]
+ },
+ {
+  "id": "nebaioth-of-ishmael",
+  "name": "Nebaioth",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "kedar-of-ishmael",
+  "name": "Kedar",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "adbeel-of-ishmael",
+  "name": "Adbeel",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "mibsam-of-ishmael",
+  "name": "Mibsam",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "mishma-of-ishmael",
+  "name": "Mishma",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "dumah-of-ishmael",
+  "name": "Dumah",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "massa-of-ishmael",
+  "name": "Massa",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "hadad-of-ishmael",
+  "name": "Hadad",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "tema-of-ishmael",
+  "name": "Tema",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "jetur-of-ishmael",
+  "name": "Jetur",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "naphish-of-ishmael",
+  "name": "Naphish",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "kedemah-of-ishmael",
+  "name": "Kedemah",
+  "sex": "male",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.25.13-15"
+  ]
+ },
+ {
+  "id": "mahalath",
+  "name": "Mahalath (Basemath)",
+  "sex": "female",
+  "generation": 21,
+  "father": "ishmael",
+  "refs": [
+   "Gen.28.9",
+   "Gen.36.3"
+  ]
+ },
+ {
+  "id": "ephah-of-midian",
+  "name": "Ephah",
+  "sex": "male",
+  "generation": 21,
+  "father": "midian",
+  "refs": [
+   "Gen.25.4"
+  ]
+ },
+ {
+  "id": "epher-of-midian",
+  "name": "Epher",
+  "sex": "male",
+  "generation": 21,
+  "father": "midian",
+  "refs": [
+   "Gen.25.4"
+  ]
+ },
+ {
+  "id": "hanoch-of-midian",
+  "name": "Hanoch",
+  "sex": "male",
+  "generation": 21,
+  "father": "midian",
+  "refs": [
+   "Gen.25.4"
+  ]
+ },
+ {
+  "id": "abida-of-midian",
+  "name": "Abida",
+  "sex": "male",
+  "generation": 21,
+  "father": "midian",
+  "refs": [
+   "Gen.25.4"
+  ]
+ },
+ {
+  "id": "eldaah-of-midian",
+  "name": "Eldaah",
+  "sex": "male",
+  "generation": 21,
+  "father": "midian",
+  "refs": [
+   "Gen.25.4"
+  ]
+ },
+ {
+  "id": "zibeon",
+  "name": "Zibeon",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.20",
+   "Gen.36.24"
+  ]
+ },
+ {
+  "id": "timna",
+  "name": "Timna",
+  "sex": "female",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.12",
+   "Gen.36.22"
+  ]
+ },
+ {
+  "id": "lotan",
+  "name": "Lotan",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.20",
+   "Gen.36.22"
+  ]
+ },
+ {
+  "id": "shobal",
+  "name": "Shobal",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.20",
+   "Gen.36.23"
+  ]
+ },
+ {
+  "id": "anah-of-seir",
+  "name": "Anah",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.20"
+  ]
+ },
+ {
+  "id": "dishon-of-seir",
+  "name": "Dishon",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.21"
+  ]
+ },
+ {
+  "id": "ezer",
+  "name": "Ezer",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.21",
+   "Gen.36.27"
+  ]
+ },
+ {
+  "id": "dishan",
+  "name": "Dishan",
+  "sex": "male",
+  "generation": 21,
+  "father": "seir",
+  "refs": [
+   "Gen.36.21",
+   "Gen.36.28"
+  ]
+ },
+ {
+  "id": "aram-of-kemuel",
+  "name": "Aram",
+  "sex": "male",
+  "generation": 22,
+  "father": "kemuel",
+  "refs": [
+   "Gen.22.21"
+  ]
+ },
+ {
+  "id": "laban",
+  "name": "Laban",
+  "sex": "male",
+  "generation": 22,
+  "father": "bethuel",
+  "refs": [
+   "Gen.24.29",
+   "Gen.29.16"
+  ]
+ },
+ {
+  "id": "moab-of-lot",
+  "name": "Moab",
+  "sex": "male",
+  "generation": 22,
+  "father": "lot",
+  "mother": "first-daugher-of-lot",
+  "refs": [
+   "Gen.19.37"
+  ]
+ },
+ {
+  "id": "ben-ammi-of-lot",
+  "name": "Ben-Ammi",
+  "sex": "male",
+  "generation": 22,
+  "father": "lot",
+  "mother": "second-daugher-of-lot",
+  "refs": [
+   "Gen.19.38"
+  ]
+ },
+ {
+  "id": "rebekah",
+  "name": "Rebekah",
+  "sex": "female",
+  "generation": 22,
+  "father": "bethuel",
+  "refs": [
+   "Gen.22.23",
+   "Gen.24.15",
+   "Gen.24.67"
+  ]
+ },
+ {
+  "id": "elon",
+  "name": "Elon",
+  "sex": "male",
+  "generation": 22,
+  "refs": [
+   "Gen.26.34",
+   "Gen.36.2"
+  ]
+ },
+ {
+  "id": "anah",
+  "name": "Anah",
+  "sex": "male",
+  "generation": 22,
+  "father": "zibeon",
+  "refs": [
+   "Gen.36.2",
+   "Gen.36.24-25"
+  ]
+ },
+ {
+  "id": "aiah-of-zibeon",
+  "name": "Aiah",
+  "sex": "male",
+  "generation": 22,
+  "father": "zibeon",
+  "refs": [
+   "Gen.36.24"
+  ]
+ },
+ {
+  "id": "hori-of-lotan",
+  "name": "Hori",
+  "sex": "male",
+  "generation": 22,
+  "father": "lotan",
+  "refs": [
+   "Gen.36.22"
+  ]
+ },
+ {
+  "id": "homam-hemam-of-lotan",
+  "name": "Hemam (Homam)",
+  "sex": "male",
+  "generation": 22,
+  "father": "lotan",
+  "refs": [
+   "Gen.36.22"
+  ]
+ },
+ {
+  "id": "alvan-of-shobal",
+  "name": "Alvan",
+  "sex": "male",
+  "generation": 22,
+  "father": "shobal",
+  "refs": [
+   "Gen.36.23"
+  ]
+ },
+ {
+  "id": "manahath-of-shobal",
+  "name": "Manahath",
+  "sex": "male",
+  "generation": 22,
+  "father": "shobal",
+  "refs": [
+   "Gen.36.23"
+  ]
+ },
+ {
+  "id": "ebal-of-shobal",
+  "name": "Ebal",
+  "sex": "male",
+  "generation": 22,
+  "father": "shobal",
+  "refs": [
+   "Gen.36.23"
+  ]
+ },
+ {
+  "id": "shepho-of-shobal",
+  "name": "Shepho",
+  "sex": "male",
+  "generation": 22,
+  "father": "shobal",
+  "refs": [
+   "Gen.36.23"
+  ]
+ },
+ {
+  "id": "onam-of-shobal",
+  "name": "Onam",
+  "sex": "male",
+  "generation": 22,
+  "father": "shobal",
+  "refs": [
+   "Gen.36.23"
+  ]
+ },
+ {
+  "id": "bilhan-of-ezer",
+  "name": "Bilhan",
+  "sex": "male",
+  "generation": 22,
+  "father": "ezer",
+  "refs": [
+   "Gen.36.27"
+  ]
+ },
+ {
+  "id": "zaavan-of-ezer",
+  "name": "Zaavan",
+  "sex": "male",
+  "generation": 22,
+  "father": "ezer",
+  "refs": [
+   "Gen.36.27"
+  ]
+ },
+ {
+  "id": "akan-of-ezer",
+  "name": "Akan",
+  "sex": "male",
+  "generation": 22,
+  "father": "ezer",
+  "refs": [
+   "Gen.36.27"
+  ]
+ },
+ {
+  "id": "uz-of-dishan",
+  "name": "Uz",
+  "sex": "male",
+  "generation": 22,
+  "father": "dishan",
+  "refs": [
+   "Gen.36.28"
+  ]
+ },
+ {
+  "id": "aran-of-dishan",
+  "name": "Aran",
+  "sex": "male",
+  "generation": 22,
+  "father": "dishan",
+  "refs": [
+   "Gen.36.28"
+  ]
+ },
+ {
+  "id": "leah",
+  "name": "Leah",
+  "sex": "female",
+  "generation": 23,
+  "father": "laban",
+  "refs": [
+   "Gen.29.16-31"
+  ]
+ },
+ {
+  "id": "shua",
+  "name": "Shua",
+  "sex": "male",
+  "generation": 23,
+  "refs": [
+   "Gen.38.2"
+  ]
+ },
+ {
+  "id": "rachel",
+  "name": "Rachel",
+  "sex": "female",
+  "generation": 23,
+  "father": "laban",
+  "refs": [
+   "Gen.29.16-30",
+   "Gen.35.16-20"
+  ]
+ },
+ {
+  "id": "jacob",
+  "name": "Jacob",
+  "sex": "male",
+  "generation": 23,
+  "father": "isaac",
+  "mother": "rebekah",
+  "bornAM": 2168,
+  "diedAM": 2315,
+  "estimated": true,
+  "refs": [
+   "Gen.25.24-26",
+   "Gen.32.28",
+   "Gen.47.28",
+   "Matt.1.2",
+   "Luke.3.34"
+  ],
+  "notes": "Isaac was 60 (Genesis 25:26); Jacob lived 147 years (Genesis 47:28)."
+ },
+ {
+  "id": "potiphera",
+  "name": "Potiphera",
+  "sex": "male",
+  "generation": 23,
+  "refs": [
+   "Gen.41.45"
+  ]
+ },
+ {
+  "id": "bilhah",
+  "name": "Bilhah",
+  "sex": "female",
+  "generation": 23,
+  "refs": [
+   "Gen.29.29",
+   "Gen.30.3-8"
+  ]
+ },
+ {
+  "id": "zilpah",
+  "name": "Zilpah",
+  "sex": "female",
+  "generation": 23,
+  "refs": [
+   "Gen.29.24",
+   "Gen.30.9-13"
+  ]
+ },
+ {
+  "id": "esau",
+  "name": "Esau",
+  "sex": "male",
+  "generation": 23,
+  "father": "isaac",
+  "mother": "rebekah",
+  "bornAM": 2168,
+  "estimated": true,
+  "refs": [
+   "Gen.25.24-26",
+   "Gen.36.1-8"
+  ],
+  "notes": "Twin of Jacob (Genesis 25:24-26). No death age is given."
+ },
+ {
+  "id": "oholibamah",
+  "name": "Oholibamah",
+  "sex": "female",
+  "generation": 23,
+  "father": "anah",
+  "refs": [
+   "Gen.36.2",
+   "Gen.36.25"
+  ]
+ },
+ {
+  "id": "basemath",
+  "name": "Basemath (Adah)",
+  "sex": "female",
+  "generation": 23,
+  "father": "elon",
+  "refs": [
+   "Gen.26.34",
+   "Gen.36.2"
+  ]
+ },
+ {
+  "id": "dishon",
+  "name": "Dishon",
+  "sex": "male",
+  "generation": 23,
+  "father": "anah",
+  "refs": [
+   "Gen.36.25-26"
+  ]
+ },
+ {
+  "id": "simeon",
+  "name": "Simeon",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.29.33",
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "levi",
+  "name": "Levi",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.29.34",
+   "Gen.46.11",
+   "Exod.6.16"
+  ]
+ },
+ {
+  "id": "judah",
+  "name": "Judah",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.29.35",
+   "Gen.38.1-30",
+   "Gen.46.12",
+   "Matt.1.2-3",
+   "Luke.3.33"
+  ]
+ },
+ {
+  "id": "daughter-of-shua",
+  "name": "Shua's daughter",
+  "sex": "female",
+  "generation": 24,
+  "father": "shua",
+  "refs": [
+   "Gen.38.2"
+  ]
+ },
+ {
+  "id": "tamar",
+  "name": "Tamar",
+  "sex": "female",
+  "generation": 24,
+  "refs": [
+   "Gen.38.6-30",
+   "Matt.1.3"
+  ]
+ },
+ {
+  "id": "issachar",
+  "name": "Issachar",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.30.18",
+   "Gen.46.13"
+  ]
+ },
+ {
+  "id": "zebulun",
+  "name": "Zebulun",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.30.20",
+   "Gen.46.14"
+  ]
+ },
+ {
+  "id": "dinah-of-jacob",
+  "name": "Dinah",
+  "sex": "female",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.30.21",
+   "Gen.34.1"
+  ]
+ },
+ {
+  "id": "reuben",
+  "name": "Reuben",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "leah",
+  "refs": [
+   "Gen.29.32",
+   "Gen.46.9"
+  ]
+ },
+ {
+  "id": "joseph",
+  "name": "Joseph",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "rachel",
+  "bornAM": 2259,
+  "diedAM": 2369,
+  "estimated": true,
+  "refs": [
+   "Gen.30.24",
+   "Gen.41.46",
+   "Gen.50.26"
+  ],
+  "notes": "Jacob entered Egypt at 130 (Genesis 47:9) when Joseph was about 39 (30 at his appointment, Genesis 41:46, plus seven years of plenty and two of famine, Genesis 45:6). Joseph died at 110 (Genesis 50:26)."
+ },
+ {
+  "id": "asenath",
+  "name": "Asenath",
+  "sex": "female",
+  "generation": 24,
+  "father": "potiphera",
+  "refs": [
+   "Gen.41.45",
+   "Gen.41.50"
+  ]
+ },
+ {
+  "id": "benjamin",
+  "name": "Benjamin",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "rachel",
+  "refs": [
+   "Gen.35.18",
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "dan",
+  "name": "Dan",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "bilhah",
+  "refs": [
+   "Gen.30.6",
+   "Gen.46.23"
+  ]
+ },
+ {
+  "id": "naphtali",
+  "name": "Naphtali",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "bilhah",
+  "refs": [
+   "Gen.30.8",
+   "Gen.46.24"
+  ]
+ },
+ {
+  "id": "gad",
+  "name": "Gad",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "zilpah",
+  "refs": [
+   "Gen.30.11",
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "asher",
+  "name": "Asher",
+  "sex": "male",
+  "generation": 24,
+  "father": "jacob",
+  "mother": "zilpah",
+  "refs": [
+   "Gen.30.13",
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "jeush-of-esau",
+  "name": "Jeush",
+  "sex": "male",
+  "generation": 24,
+  "father": "esau",
+  "mother": "oholibamah",
+  "refs": [
+   "Gen.36.5"
+  ]
+ },
+ {
+  "id": "jalam-of-esau",
+  "name": "Jalam",
+  "sex": "male",
+  "generation": 24,
+  "father": "esau",
+  "mother": "oholibamah",
+  "refs": [
+   "Gen.36.5"
+  ]
+ },
+ {
+  "id": "korah-of-esau",
+  "name": "Korah",
+  "sex": "male",
+  "generation": 24,
+  "father": "esau",
+  "mother": "oholibamah",
+  "refs": [
+   "Gen.36.5"
+  ]
+ },
+ {
+  "id": "reuel",
+  "name": "Reuel",
+  "sex": "male",
+  "generation": 24,
+  "father": "esau",
+  "mother": "mahalath",
+  "refs": [
+   "Gen.36.4",
+   "Gen.36.13"
+  ]
+ },
+ {
+  "id": "eliphaz",
+  "name": "Eliphaz",
+  "sex": "male",
+  "generation": 24,
+  "father": "esau",
+  "mother": "basemath",
+  "refs": [
+   "Gen.36.4",
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "hemdan-of-dishon",
+  "name": "Hemdan",
+  "sex": "male",
+  "generation": 24,
+  "father": "dishon",
+  "refs": [
+   "Gen.36.26"
+  ]
+ },
+ {
+  "id": "eshban-of-dishon",
+  "name": "Eshban",
+  "sex": "male",
+  "generation": 24,
+  "father": "dishon",
+  "refs": [
+   "Gen.36.26"
+  ]
+ },
+ {
+  "id": "ithran-of-dishon",
+  "name": "Ithran",
+  "sex": "male",
+  "generation": 24,
+  "father": "dishon",
+  "refs": [
+   "Gen.36.26"
+  ]
+ },
+ {
+  "id": "keran-of-dishon",
+  "name": "Keran",
+  "sex": "male",
+  "generation": 24,
+  "father": "dishon",
+  "refs": [
+   "Gen.36.26"
+  ]
+ },
+ {
+  "id": "jemuel-of-simeon",
+  "name": "Jemuel",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "jamin-of-simeon",
+  "name": "Jamin",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "ohad-of-simeon",
+  "name": "Ohad",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "jakin-of-simeon",
+  "name": "Jakin",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "zohar-of-simeon",
+  "name": "Zohar",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "shaul-of-simeon",
+  "name": "Shaul",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Gen.46.10"
+  ]
+ },
+ {
+  "id": "zerah-of-simeon",
+  "name": "Zerah",
+  "sex": "male",
+  "generation": 25,
+  "father": "simeon",
+  "refs": [
+   "Num.26.13"
+  ]
+ },
+ {
+  "id": "jochebed",
+  "name": "Jochebed",
+  "sex": "female",
+  "generation": 25,
+  "father": "levi",
+  "refs": [
+   "Exod.6.20",
+   "Num.26.59"
+  ]
+ },
+ {
+  "id": "gershon",
+  "name": "Gershon",
+  "sex": "male",
+  "generation": 25,
+  "father": "levi",
+  "refs": [
+   "Gen.46.11",
+   "Exod.6.16-17"
+  ]
+ },
+ {
+  "id": "kohath",
+  "name": "Kohath",
+  "sex": "male",
+  "generation": 25,
+  "father": "levi",
+  "refs": [
+   "Gen.46.11",
+   "Exod.6.16",
+   "Exod.6.18"
+  ]
+ },
+ {
+  "id": "merari",
+  "name": "Merari",
+  "sex": "male",
+  "generation": 25,
+  "father": "levi",
+  "refs": [
+   "Gen.46.11",
+   "Exod.6.16",
+   "Exod.6.19"
+  ]
+ },
+ {
+  "id": "er-of-judah",
+  "name": "Er",
+  "sex": "male",
+  "generation": 25,
+  "father": "judah",
+  "mother": "daughter-of-shua",
+  "refs": [
+   "Gen.38.3",
+   "Gen.38.7"
+  ]
+ },
+ {
+  "id": "onan-of-judah",
+  "name": "Onan",
+  "sex": "male",
+  "generation": 25,
+  "father": "judah",
+  "mother": "daughter-of-shua",
+  "refs": [
+   "Gen.38.4",
+   "Gen.38.8-10"
+  ]
+ },
+ {
+  "id": "shelah-of-judah",
+  "name": "Shelah",
+  "sex": "male",
+  "generation": 25,
+  "father": "judah",
+  "mother": "daughter-of-shua",
+  "refs": [
+   "Gen.38.5"
+  ]
+ },
+ {
+  "id": "perez",
+  "name": "Perez",
+  "sex": "male",
+  "generation": 25,
+  "father": "judah",
+  "mother": "tamar",
+  "refs": [
+   "Gen.38.29",
+   "Ruth.4.18",
+   "Matt.1.3",
+   "Luke.3.33"
+  ]
+ },
+ {
+  "id": "zerah-of-judah",
+  "name": "Zerah",
+  "sex": "male",
+  "generation": 25,
+  "father": "judah",
+  "mother": "tamar",
+  "refs": [
+   "Gen.38.30",
+   "Matt.1.3"
+  ]
+ },
+ {
+  "id": "tola-of-issachar",
+  "name": "Tola",
+  "sex": "male",
+  "generation": 25,
+  "father": "issachar",
+  "refs": [
+   "Gen.46.13"
+  ]
+ },
+ {
+  "id": "puah-of-issachar",
+  "name": "Puah",
+  "sex": "male",
+  "generation": 25,
+  "father": "issachar",
+  "refs": [
+   "Gen.46.13"
+  ]
+ },
+ {
+  "id": "jashub-of-issachar",
+  "name": "Jashub",
+  "sex": "male",
+  "generation": 25,
+  "father": "issachar",
+  "refs": [
+   "Gen.46.13"
+  ]
+ },
+ {
+  "id": "shimron-of-issachar",
+  "name": "Shimron",
+  "sex": "male",
+  "generation": 25,
+  "father": "issachar",
+  "refs": [
+   "Gen.46.13"
+  ]
+ },
+ {
+  "id": "sered-of-zebulun",
+  "name": "Sered",
+  "sex": "male",
+  "generation": 25,
+  "father": "zebulun",
+  "refs": [
+   "Gen.46.14"
+  ]
+ },
+ {
+  "id": "elon-of-zebulun",
+  "name": "Elon",
+  "sex": "male",
+  "generation": 25,
+  "father": "zebulun",
+  "refs": [
+   "Gen.46.14"
+  ]
+ },
+ {
+  "id": "jahleel-of-zebulun",
+  "name": "Jahleel",
+  "sex": "male",
+  "generation": 25,
+  "father": "zebulun",
+  "refs": [
+   "Gen.46.14"
+  ]
+ },
+ {
+  "id": "hanoch-of-reuben",
+  "name": "Hanoch",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuben",
+  "refs": [
+   "Gen.46.9"
+  ]
+ },
+ {
+  "id": "pallu",
+  "name": "Pallu",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuben",
+  "refs": [
+   "Gen.46.9",
+   "Num.26.5-8"
+  ]
+ },
+ {
+  "id": "hezron-of-reuben",
+  "name": "Hezron",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuben",
+  "refs": [
+   "Gen.46.9"
+  ]
+ },
+ {
+  "id": "carmi-of-reuben",
+  "name": "Carmi",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuben",
+  "refs": [
+   "Gen.46.9"
+  ]
+ },
+ {
+  "id": "manasseh",
+  "name": "Manasseh",
+  "sex": "male",
+  "generation": 25,
+  "father": "joseph",
+  "mother": "asenath",
+  "refs": [
+   "Gen.41.51",
+   "Gen.48.1-20"
+  ]
+ },
+ {
+  "id": "ephraim",
+  "name": "Ephraim",
+  "sex": "male",
+  "generation": 25,
+  "father": "joseph",
+  "mother": "asenath",
+  "refs": [
+   "Gen.41.52",
+   "Gen.48.1-20"
+  ]
+ },
+ {
+  "id": "bela",
+  "name": "Bela",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21",
+   "Num.26.38-40"
+  ]
+ },
+ {
+  "id": "beker-of-benjamin",
+  "name": "Beker",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "ashbel-of-benjamin",
+  "name": "Ashbel",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "gera-of-benjamin",
+  "name": "Gera",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "naaman-of-benjamin",
+  "name": "Naaman",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "ehi-of-benjamin",
+  "name": "Ehi",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "rosh-of-benjamin",
+  "name": "Rosh",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "muppim-of-benjamin",
+  "name": "Muppim",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "huppim-of-benjamin",
+  "name": "Huppim",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "ard-of-benjamin",
+  "name": "Ard",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Gen.46.21"
+  ]
+ },
+ {
+  "id": "ahiram-of-benjamin",
+  "name": "Ahiram",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Num.26.38-39"
+  ]
+ },
+ {
+  "id": "shupham-of-benjamin",
+  "name": "Shupham",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Num.26.38-39"
+  ]
+ },
+ {
+  "id": "hupham-of-benjamin",
+  "name": "Hupham",
+  "sex": "male",
+  "generation": 25,
+  "father": "benjamin",
+  "refs": [
+   "Num.26.38-39"
+  ]
+ },
+ {
+  "id": "hushim-of-dan",
+  "name": "Hushim",
+  "sex": "male",
+  "generation": 25,
+  "father": "dan",
+  "refs": [
+   "Gen.46.23"
+  ]
+ },
+ {
+  "id": "shuham-of-dan",
+  "name": "Shuham",
+  "sex": "male",
+  "generation": 25,
+  "father": "dan",
+  "refs": [
+   "Num.26.42"
+  ]
+ },
+ {
+  "id": "jahziel-of-naphtali",
+  "name": "Jahziel",
+  "sex": "male",
+  "generation": 25,
+  "father": "naphtali",
+  "refs": [
+   "Gen.46.24"
+  ]
+ },
+ {
+  "id": "guni-of-naphtali",
+  "name": "Guni",
+  "sex": "male",
+  "generation": 25,
+  "father": "naphtali",
+  "refs": [
+   "Gen.46.24"
+  ]
+ },
+ {
+  "id": "jezer-of-naphtali",
+  "name": "Jezer",
+  "sex": "male",
+  "generation": 25,
+  "father": "naphtali",
+  "refs": [
+   "Gen.46.24"
+  ]
+ },
+ {
+  "id": "shillem-of-naphtali",
+  "name": "Shillem",
+  "sex": "male",
+  "generation": 25,
+  "father": "naphtali",
+  "refs": [
+   "Gen.46.24"
+  ]
+ },
+ {
+  "id": "zephon-of-gad",
+  "name": "Zephon",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "haggi-of-gad",
+  "name": "Haggi",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "shuni-of-gad",
+  "name": "Shuni",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "ezbon-of-gad",
+  "name": "Ezbon",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "eri-of-gad",
+  "name": "Eri",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "arodi-of-gad",
+  "name": "Arodi",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "areli-of-gad",
+  "name": "Areli",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Gen.46.16"
+  ]
+ },
+ {
+  "id": "ozni-of-gad",
+  "name": "Ozni",
+  "sex": "male",
+  "generation": 25,
+  "father": "gad",
+  "refs": [
+   "Num.26.16"
+  ]
+ },
+ {
+  "id": "imnah-of-asher",
+  "name": "Imnah",
+  "sex": "male",
+  "generation": 25,
+  "father": "asher",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "ishvah-of-asher",
+  "name": "Ishvah",
+  "sex": "male",
+  "generation": 25,
+  "father": "asher",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "ishvi-of-asher",
+  "name": "Ishvi",
+  "sex": "male",
+  "generation": 25,
+  "father": "asher",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "beriah",
+  "name": "Beriah",
+  "sex": "male",
+  "generation": 25,
+  "father": "asher",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "serah-of-asher",
+  "name": "Serah",
+  "sex": "female",
+  "generation": 25,
+  "father": "asher",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "nahath-of-reuel",
+  "name": "Nahath",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuel",
+  "refs": [
+   "Gen.36.13"
+  ]
+ },
+ {
+  "id": "zerah",
+  "name": "Zerah",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuel",
+  "refs": [
+   "Gen.36.13"
+  ]
+ },
+ {
+  "id": "shammah-of-reuel",
+  "name": "Shammah",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuel",
+  "refs": [
+   "Gen.36.13"
+  ]
+ },
+ {
+  "id": "mizzah-of-reuel",
+  "name": "Mizzah",
+  "sex": "male",
+  "generation": 25,
+  "father": "reuel",
+  "refs": [
+   "Gen.36.13"
+  ]
+ },
+ {
+  "id": "teman-of-eliphaz",
+  "name": "Teman",
+  "sex": "male",
+  "generation": 25,
+  "father": "eliphaz",
+  "refs": [
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "omar-of-eliphaz",
+  "name": "Omar",
+  "sex": "male",
+  "generation": 25,
+  "father": "eliphaz",
+  "refs": [
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "zepho-of-eliphaz",
+  "name": "Zepho",
+  "sex": "male",
+  "generation": 25,
+  "father": "eliphaz",
+  "refs": [
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "gatam-of-eliphaz",
+  "name": "Gatam",
+  "sex": "male",
+  "generation": 25,
+  "father": "eliphaz",
+  "refs": [
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "kenaz-of-eliphaz",
+  "name": "Kenaz",
+  "sex": "male",
+  "generation": 25,
+  "father": "eliphaz",
+  "refs": [
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "amalek-of-eliphaz",
+  "name": "Amalek",
+  "sex": "male",
+  "generation": 25,
+  "father": "eliphaz",
+  "mother": "timna",
+  "refs": [
+   "Gen.36.11-12"
+  ]
+ },
+ {
+  "id": "amminadab",
+  "name": "Amminadab",
+  "sex": "male",
+  "generation": 26,
+  "father": "ram",
+  "refs": [
+   "Exod.6.23",
+   "Ruth.4.19-20",
+   "Matt.1.4",
+   "Luke.3.33"
+  ]
+ },
+ {
+  "id": "libni-of-gershon",
+  "name": "Libni",
+  "sex": "male",
+  "generation": 26,
+  "father": "gershon",
+  "refs": [
+   "Exod.6.17"
+  ]
+ },
+ {
+  "id": "shimei-of-gershon",
+  "name": "Shimei",
+  "sex": "male",
+  "generation": 26,
+  "father": "gershon",
+  "refs": [
+   "Exod.6.17"
+  ]
+ },
+ {
+  "id": "amram",
+  "name": "Amram",
+  "sex": "male",
+  "generation": 26,
+  "father": "kohath",
+  "refs": [
+   "Exod.6.18",
+   "Exod.6.20"
+  ]
+ },
+ {
+  "id": "reuel-of-midian",
+  "name": "Reuel",
+  "sex": "male",
+  "generation": 26,
+  "refs": [
+   "Exod.2.18",
+   "Exod.3.1",
+   "Exod.18.1"
+  ]
+ },
+ {
+  "id": "izhar",
+  "name": "Izhar",
+  "sex": "male",
+  "generation": 26,
+  "father": "kohath",
+  "refs": [
+   "Exod.6.18",
+   "Exod.6.21"
+  ]
+ },
+ {
+  "id": "hebron-of-kohath",
+  "name": "Hebron",
+  "sex": "male",
+  "generation": 26,
+  "father": "kohath",
+  "refs": [
+   "Exod.6.18"
+  ]
+ },
+ {
+  "id": "uzziel",
+  "name": "Uzziel",
+  "sex": "male",
+  "generation": 26,
+  "father": "kohath",
+  "refs": [
+   "Exod.6.18",
+   "Exod.6.22"
+  ]
+ },
+ {
+  "id": "mahli-of-merari",
+  "name": "Mahli",
+  "sex": "male",
+  "generation": 26,
+  "father": "merari",
+  "refs": [
+   "Exod.6.19"
+  ]
+ },
+ {
+  "id": "mushi-of-merari",
+  "name": "Mushi",
+  "sex": "male",
+  "generation": 26,
+  "father": "merari",
+  "refs": [
+   "Exod.6.19"
+  ]
+ },
+ {
+  "id": "hezron",
+  "name": "Hezron",
+  "sex": "male",
+  "generation": 26,
+  "father": "perez",
+  "refs": [
+   "Gen.46.12",
+   "Ruth.4.18-19",
+   "Matt.1.3",
+   "Luke.3.33"
+  ]
+ },
+ {
+  "id": "hamul-of-perez",
+  "name": "Hamul",
+  "sex": "male",
+  "generation": 26,
+  "father": "perez",
+  "refs": [
+   "Gen.46.12"
+  ]
+ },
+ {
+  "id": "eliab",
+  "name": "Eliab",
+  "sex": "male",
+  "generation": 26,
+  "father": "pallu",
+  "refs": [
+   "Num.16.1",
+   "Num.26.8-9"
+  ]
+ },
+ {
+  "id": "makir",
+  "name": "Makir",
+  "sex": "male",
+  "generation": 26,
+  "father": "manasseh",
+  "refs": [
+   "Gen.50.23",
+   "Num.26.29"
+  ]
+ },
+ {
+  "id": "shuthelah",
+  "name": "Shuthelah",
+  "sex": "male",
+  "generation": 26,
+  "father": "ephraim",
+  "refs": [
+   "Num.26.35-36"
+  ]
+ },
+ {
+  "id": "beker-of-ephraim",
+  "name": "Beker",
+  "sex": "male",
+  "generation": 26,
+  "father": "ephraim",
+  "refs": [
+   "Num.26.35"
+  ]
+ },
+ {
+  "id": "tahan-of-ephraim",
+  "name": "Tahan",
+  "sex": "male",
+  "generation": 26,
+  "father": "ephraim",
+  "refs": [
+   "Num.26.35"
+  ]
+ },
+ {
+  "id": "ard-of-bela",
+  "name": "Ard",
+  "sex": "male",
+  "generation": 26,
+  "father": "bela",
+  "refs": [
+   "Num.26.40"
+  ]
+ },
+ {
+  "id": "naaman-of-bela",
+  "name": "Naaman",
+  "sex": "male",
+  "generation": 26,
+  "father": "bela",
+  "refs": [
+   "Num.26.40"
+  ]
+ },
+ {
+  "id": "heber-of-beriah",
+  "name": "Heber",
+  "sex": "male",
+  "generation": 26,
+  "father": "beriah",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "malkiel-of-beriah",
+  "name": "Malkiel",
+  "sex": "male",
+  "generation": 26,
+  "father": "beriah",
+  "refs": [
+   "Gen.46.17"
+  ]
+ },
+ {
+  "id": "jobab-of-zerah",
+  "name": "Jobab",
+  "sex": "male",
+  "generation": 26,
+  "father": "zerah",
+  "refs": [
+   "Gen.36.33"
+  ]
+ },
+ {
+  "id": "nahshon-of-amminadab",
+  "name": "Nahshon",
+  "sex": "male",
+  "generation": 27,
+  "father": "amminadab",
+  "refs": [
+   "Exod.6.23",
+   "Num.1.7",
+   "Ruth.4.20",
+   "Matt.1.4",
+   "Luke.3.32"
+  ]
+ },
+ {
+  "id": "elisheba",
+  "name": "Elisheba",
+  "sex": "female",
+  "generation": 27,
+  "father": "amminadab",
+  "refs": [
+   "Exod.6.23"
+  ]
+ },
+ {
+  "id": "aaron",
+  "name": "Aaron",
+  "sex": "male",
+  "generation": 27,
+  "father": "amram",
+  "mother": "jochebed",
+  "refs": [
+   "Exod.6.20",
+   "Exod.6.23",
+   "Num.33.39"
+  ]
+ },
+ {
+  "id": "putiel",
+  "name": "Putiel",
+  "sex": "male",
+  "generation": 27,
+  "refs": [
+   "Exod.6.25"
+  ]
+ },
+ {
+  "id": "miriam-of-amram",
+  "name": "Miriam",
+  "sex": "female",
+  "generation": 27,
+  "father": "amram",
+  "mother": "jochebed",
+  "refs": [
+   "Exod.15.20",
+   "Num.26.59"
+  ]
+ },
+ {
+  "id": "moses",
+  "name": "Moses",
+  "sex": "male",
+  "generation": 27,
+  "father": "amram",
+  "mother": "jochebed",
+  "bornAM": 2648,
+  "diedAM": 2768,
+  "estimated": true,
+  "refs": [
+   "Exod.2.1-10",
+   "Exod.6.20",
+   "Exod.7.7",
+   "Deut.34.7"
+  ],
+  "notes": "Israel entered Egypt about AM 2298; Exodus 12:40 gives 430 years in Egypt (Exodus 12:40), and Moses was 80 at the Exodus (Exodus 7:7) and died at 120 (Deuteronomy 34:7). Galatians 3:17 counts the 430 years from the promise to Abraham instead, which would move these dates by about two centuries."
+ },
+ {
+  "id": "zipporah",
+  "name": "Zipporah",
+  "sex": "female",
+  "generation": 27,
+  "father": "reuel-of-midian",
+  "refs": [
+   "Exod.2.21",
+   "Exod.18.2"
+  ]
+ },
+ {
+  "id": "hobab-of-reuel-of-midian",
+  "name": "Hobab",
+  "sex": "male",
+  "generation": 27,
+  "father": "reuel-of-midian",
+  "refs": [
+   "Num.10.29"
+  ]
+ },
+ {
+  "id": "korah",
+  "name": "Korah",
+  "sex": "male",
+  "generation": 27,
+  "father": "izhar",
+  "refs": [
+   "Exod.6.21",
+   "Num.16.1-35"
+  ]
+ },
+ {
+  "id": "nepheg-of-izhar",
+  "name": "Nepheg",
+  "sex": "male",
+  "generation": 27,
+  "father": "izhar",
+  "refs": [
+   "Exod.6.21"
+  ]
+ },
+ {
+  "id": "zicri-of-izhar",
+  "name": "Zicri",
+  "sex": "male",
+  "generation": 27,
+  "father": "izhar",
+  "refs": [
+   "Exod.6.21"
+  ]
+ },
+ {
+  "id": "mishael-of-uzziel",
+  "name": "Mishael",
+  "sex": "male",
+  "generation": 27,
+  "father": "uzziel",
+  "refs": [
+   "Exod.6.22"
+  ]
+ },
+ {
+  "id": "elizaphan-of-uzziel",
+  "name": "Elizaphan",
+  "sex": "male",
+  "generation": 27,
+  "father": "uzziel",
+  "refs": [
+   "Exod.6.22"
+  ]
+ },
+ {
+  "id": "sithri-of-uzziel",
+  "name": "Sithri",
+  "sex": "male",
+  "generation": 27,
+  "father": "uzziel",
+  "refs": [
+   "Exod.6.22"
+  ]
+ },
+ {
+  "id": "ram",
+  "name": "Ram",
+  "sex": "male",
+  "generation": 27,
+  "father": "hezron",
+  "refs": [
+   "Ruth.4.19",
+   "1Chr.2.9-10",
+   "Matt.1.3-4"
+  ],
+  "notes": "Luke 3:33 reads “Admin, the son of Arni” where Ruth 4:19 and Matthew 1:3-4 have Ram."
+ },
+ {
+  "id": "nemuel-of-eliab",
+  "name": "Nemuel",
+  "sex": "male",
+  "generation": 27,
+  "father": "eliab",
+  "refs": [
+   "Num.16.1",
+   "Num.26.9"
+  ]
+ },
+ {
+  "id": "dathan-of-eliab",
+  "name": "Dathan",
+  "sex": "male",
+  "generation": 27,
+  "father": "eliab",
+  "refs": [
+   "Num.16.1",
+   "Num.26.9"
+  ]
+ },
+ {
+  "id": "abiram-of-eliab",
+  "name": "Abiram",
+  "sex": "male",
+  "generation": 27,
+  "father": "eliab",
+  "refs": [
+   "Num.16.1",
+   "Num.26.9"
+  ]
+ },
+ {
+  "id": "gilead",
+  "name": "Gilead",
+  "sex": "male",
+  "generation": 27,
+  "father": "makir",
+  "refs": [
+   "Num.26.29-30"
+  ]
+ },
+ {
+  "id": "eran-of-shuthelah",
+  "name": "Eran",
+  "sex": "male",
+  "generation": 27,
+  "father": "shuthelah",
+  "refs": [
+   "Num.26.36"
+  ]
+ },
+ {
+  "id": "nadab-of-aaron",
+  "name": "Nadab",
+  "sex": "male",
+  "generation": 28,
+  "father": "aaron",
+  "mother": "elisheba",
+  "refs": [
+   "Exod.6.23",
+   "Lev.10.1-2"
+  ]
+ },
+ {
+  "id": "abihu-of-aaron",
+  "name": "Abihu",
+  "sex": "male",
+  "generation": 28,
+  "father": "aaron",
+  "mother": "elisheba",
+  "refs": [
+   "Exod.6.23",
+   "Lev.10.1-2"
+  ]
+ },
+ {
+  "id": "eleazar",
+  "name": "Eleazar",
+  "sex": "male",
+  "generation": 28,
+  "father": "aaron",
+  "mother": "elisheba",
+  "refs": [
+   "Exod.6.23",
+   "Exod.6.25",
+   "Num.20.25-28"
+  ]
+ },
+ {
+  "id": "ithamar-of-aaron",
+  "name": "Ithamar",
+  "sex": "male",
+  "generation": 28,
+  "father": "aaron",
+  "mother": "elisheba",
+  "refs": [
+   "Exod.6.23"
+  ]
+ },
+ {
+  "id": "daughter-of-putiel",
+  "name": "Putiel's daughter",
+  "sex": "female",
+  "generation": 28,
+  "father": "putiel",
+  "refs": [
+   "Exod.6.25"
+  ]
+ },
+ {
+  "id": "gershom-of-moses",
+  "name": "Gershom",
+  "sex": "male",
+  "generation": 28,
+  "father": "moses",
+  "mother": "zipporah",
+  "refs": [
+   "Exod.2.22",
+   "Exod.18.3-4"
+  ]
+ },
+ {
+  "id": "eliezer-of-moses",
+  "name": "Eliezer",
+  "sex": "male",
+  "generation": 28,
+  "father": "moses",
+  "mother": "zipporah",
+  "refs": [
+   "Exod.2.22",
+   "Exod.18.3-4"
+  ]
+ },
+ {
+  "id": "assir-of-korah",
+  "name": "Assir",
+  "sex": "male",
+  "generation": 28,
+  "father": "korah",
+  "refs": [
+   "Exod.6.24"
+  ]
+ },
+ {
+  "id": "elkanah-of-korah",
+  "name": "Elkanah",
+  "sex": "male",
+  "generation": 28,
+  "father": "korah",
+  "refs": [
+   "Exod.6.24"
+  ]
+ },
+ {
+  "id": "abiasaph-of-korah",
+  "name": "Abiasaph",
+  "sex": "male",
+  "generation": 28,
+  "father": "korah",
+  "refs": [
+   "Exod.6.24"
+  ]
+ },
+ {
+  "id": "iezer-of-gilead",
+  "name": "Iezer",
+  "sex": "male",
+  "generation": 28,
+  "father": "gilead",
+  "refs": [
+   "Num.26.30-32"
+  ]
+ },
+ {
+  "id": "helek-of-gilead",
+  "name": "Helek",
+  "sex": "male",
+  "generation": 28,
+  "father": "gilead",
+  "refs": [
+   "Num.26.30-32"
+  ]
+ },
+ {
+  "id": "asriel-of-gilead",
+  "name": "Asriel",
+  "sex": "male",
+  "generation": 28,
+  "father": "gilead",
+  "refs": [
+   "Num.26.30-32"
+  ]
+ },
+ {
+  "id": "shechem-of-gilead",
+  "name": "Shechem",
+  "sex": "male",
+  "generation": 28,
+  "father": "gilead",
+  "refs": [
+   "Num.26.30-32"
+  ]
+ },
+ {
+  "id": "shemida-of-gilead",
+  "name": "Shemida",
+  "sex": "male",
+  "generation": 28,
+  "father": "gilead",
+  "refs": [
+   "Num.26.30-32"
+  ]
+ },
+ {
+  "id": "hepher",
+  "name": "Hepher",
+  "sex": "male",
+  "generation": 28,
+  "father": "gilead",
+  "refs": [
+   "Num.26.32-33",
+   "Num.27.1"
+  ]
+ },
+ {
+  "id": "phinehas-of-eleazar",
+  "name": "Phinehas",
+  "sex": "male",
+  "generation": 29,
+  "father": "eleazar",
+  "mother": "daughter-of-putiel",
+  "refs": [
+   "Exod.6.25",
+   "Num.25.7-13"
+  ]
+ },
+ {
+  "id": "zelophehad",
+  "name": "Zelophehad",
+  "sex": "male",
+  "generation": 29,
+  "father": "hepher",
+  "refs": [
+   "Num.26.33",
+   "Num.27.1-11"
+  ]
+ },
+ {
+  "id": "salmon",
+  "name": "Salmon",
+  "sex": "male",
+  "generation": 30,
+  "father": "nahshon-of-amminadab",
+  "refs": [
+   "Ruth.4.20-21",
+   "Matt.1.4-5",
+   "Luke.3.32"
+  ]
+ },
+ {
+  "id": "mahlah-of-zelophehad",
+  "name": "Mahlah",
+  "sex": "female",
+  "generation": 30,
+  "father": "zelophehad",
+  "refs": [
+   "Num.26.33",
+   "Num.27.1"
+  ]
+ },
+ {
+  "id": "noah-of-zelophehad",
+  "name": "Noah",
+  "sex": "female",
+  "generation": 30,
+  "father": "zelophehad",
+  "refs": [
+   "Num.26.33",
+   "Num.27.1"
+  ]
+ },
+ {
+  "id": "hoglah-of-zelophehad",
+  "name": "Hoglah",
+  "sex": "female",
+  "generation": 30,
+  "father": "zelophehad",
+  "refs": [
+   "Num.26.33",
+   "Num.27.1"
+  ]
+ },
+ {
+  "id": "milcah-of-zelophehad",
+  "name": "Milcah",
+  "sex": "female",
+  "generation": 30,
+  "father": "zelophehad",
+  "refs": [
+   "Num.26.33",
+   "Num.27.1"
+  ]
+ },
+ {
+  "id": "tirzah-of-zelophehad",
+  "name": "Tirzah",
+  "sex": "female",
+  "generation": 30,
+  "father": "zelophehad",
+  "refs": [
+   "Num.26.33",
+   "Num.27.1"
+  ]
+ },
+ {
+  "id": "boaz",
+  "name": "Boaz",
+  "sex": "male",
+  "generation": 31,
+  "father": "salmon",
+  "mother": "rahab",
+  "refs": [
+   "Ruth.2.1",
+   "Ruth.4.13",
+   "Ruth.4.21",
+   "Matt.1.5",
+   "Luke.3.32"
+  ]
+ },
+ {
+  "id": "obed",
+  "name": "Obed",
+  "sex": "male",
+  "generation": 32,
+  "father": "boaz",
+  "mother": "ruth",
+  "refs": [
+   "Ruth.4.17",
+   "Ruth.4.21-22",
+   "Matt.1.5",
+   "Luke.3.32"
+  ]
+ },
+ {
+  "id": "jesse",
+  "name": "Jesse",
+  "sex": "male",
+  "generation": 33,
+  "father": "obed",
+  "refs": [
+   "Ruth.4.22",
+   "1Sam.16.1",
+   "Matt.1.5-6",
+   "Luke.3.32"
+  ]
+ },
+ {
+  "id": "david",
+  "name": "David",
+  "sex": "male",
+  "generation": 34,
+  "father": "jesse",
+  "refs": [
+   "Ruth.4.22",
+   "1Sam.16.13",
+   "2Sam.5.4-5",
+   "1Kgs.2.10-11",
+   "Matt.1.6",
+   "Luke.3.31"
+  ]
+ },
+ {
+  "id": "nathan",
+  "name": "Nathan",
+  "sex": "male",
+  "generation": 35,
+  "father": "david",
+  "refs": [
+   "2Sam.5.14",
+   "Luke.3.31"
+  ]
+ },
+ {
+  "id": "mattatha",
+  "name": "Mattatha",
+  "sex": "male",
+  "generation": 36,
+  "father": "nathan",
+  "refs": [
+   "Luke.3.31"
+  ]
+ },
+ {
+  "id": "menan",
+  "name": "Menna",
+  "sex": "male",
+  "generation": 37,
+  "father": "mattatha",
+  "refs": [
+   "Luke.3.31"
+  ]
+ },
+ {
+  "id": "melea",
+  "name": "Melea",
+  "sex": "male",
+  "generation": 38,
+  "father": "menan",
+  "refs": [
+   "Luke.3.31"
+  ]
+ },
+ {
+  "id": "eliakim",
+  "name": "Eliakim",
+  "sex": "male",
+  "generation": 39,
+  "father": "melea",
+  "refs": [
+   "Luke.3.30"
+  ]
+ },
+ {
+  "id": "jonan",
+  "name": "Jonam",
+  "sex": "male",
+  "generation": 40,
+  "father": "eliakim",
+  "refs": [
+   "Luke.3.30"
+  ]
+ },
+ {
+  "id": "joseph-of-jonan",
+  "name": "Joseph",
+  "sex": "male",
+  "generation": 41,
+  "father": "jonan",
+  "refs": [
+   "Luke.3.30"
+  ]
+ },
+ {
+  "id": "juda",
+  "name": "Judah",
+  "sex": "male",
+  "generation": 42,
+  "father": "joseph-of-jonan",
+  "refs": [
+   "Luke.3.30"
+  ]
+ },
+ {
+  "id": "simeon-of-juda",
+  "name": "Simeon",
+  "sex": "male",
+  "generation": 43,
+  "father": "juda",
+  "refs": [
+   "Luke.3.30"
+  ]
+ },
+ {
+  "id": "levi-of-simeon",
+  "name": "Levi",
+  "sex": "male",
+  "generation": 44,
+  "father": "simeon-of-juda",
+  "refs": [
+   "Luke.3.29"
+  ]
+ },
+ {
+  "id": "matthat-of-levi",
+  "name": "Matthat",
+  "sex": "male",
+  "generation": 45,
+  "father": "levi-of-simeon",
+  "refs": [
+   "Luke.3.29"
+  ]
+ },
+ {
+  "id": "jorim",
+  "name": "Jorim",
+  "sex": "male",
+  "generation": 46,
+  "father": "matthat-of-levi",
+  "refs": [
+   "Luke.3.29"
+  ]
+ },
+ {
+  "id": "eliezer",
+  "name": "Eliezer",
+  "sex": "male",
+  "generation": 47,
+  "father": "jorim",
+  "refs": [
+   "Luke.3.29"
+  ]
+ },
+ {
+  "id": "jose",
+  "name": "Joshua",
+  "sex": "male",
+  "generation": 48,
+  "father": "eliezer",
+  "refs": [
+   "Luke.3.29"
+  ]
+ },
+ {
+  "id": "er",
+  "name": "Er",
+  "sex": "male",
+  "generation": 49,
+  "father": "jose",
+  "refs": [
+   "Luke.3.28"
+  ]
+ },
+ {
+  "id": "elmodam",
+  "name": "Elmadam",
+  "sex": "male",
+  "generation": 50,
+  "father": "er",
+  "refs": [
+   "Luke.3.28"
+  ]
+ },
+ {
+  "id": "cosam",
+  "name": "Cosam",
+  "sex": "male",
+  "generation": 51,
+  "father": "elmodam",
+  "refs": [
+   "Luke.3.28"
+  ]
+ },
+ {
+  "id": "addi",
+  "name": "Addi",
+  "sex": "male",
+  "generation": 52,
+  "father": "cosam",
+  "refs": [
+   "Luke.3.28"
+  ]
+ },
+ {
+  "id": "melchi",
+  "name": "Melchi",
+  "sex": "male",
+  "generation": 53,
+  "father": "addi",
+  "refs": [
+   "Luke.3.28"
+  ]
+ },
+ {
+  "id": "neri",
+  "name": "Neri",
+  "sex": "male",
+  "generation": 54,
+  "father": "melchi",
+  "refs": [
+   "Luke.3.27"
+  ]
+ },
+ {
+  "id": "salathiel",
+  "name": "Shealtiel",
+  "sex": "male",
+  "generation": 55,
+  "father": "neri",
+  "altParents": [
+   {
+    "id": "jeconiah",
+    "note": "Matthew 1:12; 1 Chronicles 3:17"
+   }
+  ],
+  "refs": [
+   "Luke.3.27",
+   "Matt.1.12",
+   "1Chr.3.17",
+   "Ezra.3.2"
+  ]
+ },
+ {
+  "id": "zorobabel",
+  "name": "Zerubbabel",
+  "sex": "male",
+  "generation": 56,
+  "father": "salathiel",
+  "refs": [
+   "Luke.3.27",
+   "Matt.1.12-13",
+   "Ezra.3.2",
+   "Hag.1.1",
+   "Zech.4.6-10"
+  ]
+ },
+ {
+  "id": "rhesa",
+  "name": "Rhesa",
+  "sex": "male",
+  "generation": 57,
+  "father": "zorobabel",
+  "refs": [
+   "Luke.3.27"
+  ]
+ },
+ {
+  "id": "joanna",
+  "name": "Joanan",
+  "sex": "male",
+  "generation": 58,
+  "father": "rhesa",
+  "refs": [
+   "Luke.3.27"
+  ]
+ },
+ {
+  "id": "juda-of-joanna",
+  "name": "Joda",
+  "sex": "male",
+  "generation": 59,
+  "father": "joanna",
+  "refs": [
+   "Luke.3.26"
+  ]
+ },
+ {
+  "id": "joseph-of-juda",
+  "name": "Josech",
+  "sex": "male",
+  "generation": 60,
+  "father": "juda-of-joanna",
+  "refs": [
+   "Luke.3.26"
+  ]
+ },
+ {
+  "id": "semei",
+  "name": "Semein",
+  "sex": "male",
+  "generation": 61,
+  "father": "joseph-of-juda",
+  "refs": [
+   "Luke.3.26"
+  ]
+ },
+ {
+  "id": "mattathias",
+  "name": "Mattathias",
+  "sex": "male",
+  "generation": 62,
+  "father": "semei",
+  "refs": [
+   "Luke.3.26"
+  ]
+ },
+ {
+  "id": "maath",
+  "name": "Maath",
+  "sex": "male",
+  "generation": 63,
+  "father": "mattathias",
+  "refs": [
+   "Luke.3.26"
+  ]
+ },
+ {
+  "id": "nagge",
+  "name": "Naggai",
+  "sex": "male",
+  "generation": 64,
+  "father": "maath",
+  "refs": [
+   "Luke.3.25"
+  ]
+ },
+ {
+  "id": "elsi",
+  "name": "Esli",
+  "sex": "male",
+  "generation": 65,
+  "father": "nagge",
+  "refs": [
+   "Luke.3.25"
+  ]
+ },
+ {
+  "id": "naum",
+  "name": "Nahum",
+  "sex": "male",
+  "generation": 66,
+  "father": "elsi",
+  "refs": [
+   "Luke.3.25"
+  ]
+ },
+ {
+  "id": "amos",
+  "name": "Amos",
+  "sex": "male",
+  "generation": 67,
+  "father": "naum",
+  "refs": [
+   "Luke.3.25"
+  ]
+ },
+ {
+  "id": "mattathias-of-amos",
+  "name": "Mattathias",
+  "sex": "male",
+  "generation": 68,
+  "father": "amos",
+  "refs": [
+   "Luke.3.25"
+  ]
+ },
+ {
+  "id": "joseph-of-mattathias",
+  "name": "Joseph",
+  "sex": "male",
+  "generation": 69,
+  "father": "mattathias-of-amos",
+  "refs": [
+   "Luke.3.24"
+  ]
+ },
+ {
+  "id": "janna",
+  "name": "Jannai",
+  "sex": "male",
+  "generation": 70,
+  "father": "joseph-of-mattathias",
+  "refs": [
+   "Luke.3.24"
+  ]
+ },
+ {
+  "id": "melchi-of-janna",
+  "name": "Melchi",
+  "sex": "male",
+  "generation": 71,
+  "father": "janna",
+  "refs": [
+   "Luke.3.24"
+  ]
+ },
+ {
+  "id": "levi-of-melchi",
+  "name": "Levi",
+  "sex": "male",
+  "generation": 72,
+  "father": "melchi-of-janna",
+  "refs": [
+   "Luke.3.24"
+  ]
+ },
+ {
+  "id": "matthat",
+  "name": "Matthat",
+  "sex": "male",
+  "generation": 73,
+  "father": "levi-of-melchi",
+  "refs": [
+   "Luke.3.24"
+  ]
+ },
+ {
+  "id": "heli",
+  "name": "Heli",
+  "sex": "male",
+  "generation": 74,
+  "father": "matthat",
+  "refs": [
+   "Luke.3.23"
+  ],
+  "notes": "Named as Joseph’s father in Luke 3:23; Matthew 1:16 names Jacob. Explanations offered since Julius Africanus (3rd c.) include levirate marriage or adoption."
+ },
+ {
+  "id": "mary",
+  "name": "Mary",
+  "sex": "female",
+  "generation": 75,
+  "spouses": [
+   "joseph-of-jacob"
+  ],
+  "refs": [
+   "Matt.1.16",
+   "Matt.1.18-25",
+   "Luke.1.26-38",
+   "Luke.2.1-7"
+  ],
+  "notes": "Luke 3:23 calls Joseph the son of Heli. The idea that Heli was actually Mary’s father (making Luke’s list her line) is a traditional harmonization, not something the text states, so no father is drawn here."
+ },
+ {
+  "id": "jesus",
+  "name": "Jesus",
+  "sex": "male",
+  "generation": 76,
+  "mother": "mary",
+  "born": -5,
+  "estimated": true,
+  "refs": [
+   "Matt.1.1",
+   "Matt.1.16",
+   "Matt.1.18-25",
+   "Luke.2.1-7",
+   "Luke.3.23"
+  ],
+  "notes": "Born before Herod the Great died in spring 4 BC (Matthew 2:1-19); most scholars place the birth c. 6–4 BC. The year is an estimate."
+ },
+ {
+  "id": "rahab",
+  "name": "Rahab",
+  "sex": "female",
+  "generation": 0,
+  "refs": [
+   "Josh.2.1-21",
+   "Josh.6.25",
+   "Matt.1.5",
+   "Heb.11.31"
+  ],
+  "notes": "Mother of Boaz according to Matthew 1:5; the Old Testament does not record the marriage."
+ },
+ {
+  "id": "ruth",
+  "name": "Ruth",
+  "sex": "female",
+  "generation": 0,
+  "refs": [
+   "Ruth.1.4",
+   "Ruth.4.13",
+   "Matt.1.5"
+  ]
+ },
+ {
+  "id": "bathsheba",
+  "name": "Bathsheba (Uriah’s wife)",
+  "sex": "female",
+  "generation": 0,
+  "refs": [
+   "2Sam.11.3",
+   "2Sam.12.24",
+   "1Kgs.1.11",
+   "Matt.1.6"
+  ]
+ },
+ {
+  "id": "solomon",
+  "name": "Solomon",
+  "sex": "male",
+  "generation": 35,
+  "father": "david",
+  "mother": "bathsheba",
+  "refs": [
+   "2Sam.12.24",
+   "1Kgs.1.39",
+   "1Kgs.11.42-43",
+   "Matt.1.6-7"
+  ]
+ },
+ {
+  "id": "rehoboam",
+  "name": "Rehoboam",
+  "sex": "male",
+  "generation": 36,
+  "father": "solomon",
+  "refs": [
+   "1Kgs.11.43",
+   "1Kgs.14.21",
+   "Matt.1.7"
+  ]
+ },
+ {
+  "id": "abijah",
+  "name": "Abijah (Abijam)",
+  "sex": "male",
+  "generation": 37,
+  "father": "rehoboam",
+  "refs": [
+   "1Kgs.14.31",
+   "1Kgs.15.1-8",
+   "2Chr.13.1",
+   "Matt.1.7"
+  ]
+ },
+ {
+  "id": "asa",
+  "name": "Asa",
+  "sex": "male",
+  "generation": 38,
+  "father": "abijah",
+  "refs": [
+   "1Kgs.15.8-24",
+   "Matt.1.7-8"
+  ]
+ },
+ {
+  "id": "jehoshaphat",
+  "name": "Jehoshaphat",
+  "sex": "male",
+  "generation": 39,
+  "father": "asa",
+  "refs": [
+   "1Kgs.15.24",
+   "1Kgs.22.41-50",
+   "Matt.1.8"
+  ]
+ },
+ {
+  "id": "joram",
+  "name": "Joram (Jehoram)",
+  "sex": "male",
+  "generation": 40,
+  "father": "jehoshaphat",
+  "refs": [
+   "1Kgs.22.50",
+   "2Kgs.8.16-24",
+   "Matt.1.8"
+  ]
+ },
+ {
+  "id": "uzziah",
+  "name": "Uzziah (Azariah)",
+  "sex": "male",
+  "generation": 41,
+  "father": "joram",
+  "refs": [
+   "2Kgs.15.1-7",
+   "2Chr.26.1-23",
+   "Matt.1.8-9"
+  ],
+  "notes": "Matthew 1:8 jumps from Joram to Uzziah, omitting Ahaziah, Joash and Amaziah (2 Kings 8:24; 12:21; 14:21). Matthew’s three sets of fourteen (1:17) are a deliberate arrangement, not a complete list."
+ },
+ {
+  "id": "jotham",
+  "name": "Jotham",
+  "sex": "male",
+  "generation": 42,
+  "father": "uzziah",
+  "refs": [
+   "2Kgs.15.7",
+   "2Kgs.15.32-38",
+   "Matt.1.9"
+  ]
+ },
+ {
+  "id": "ahaz",
+  "name": "Ahaz",
+  "sex": "male",
+  "generation": 43,
+  "father": "jotham",
+  "refs": [
+   "2Kgs.15.38",
+   "2Kgs.16.1-20",
+   "Isa.7.1-17",
+   "Matt.1.9"
+  ]
+ },
+ {
+  "id": "hezekiah",
+  "name": "Hezekiah",
+  "sex": "male",
+  "generation": 44,
+  "father": "ahaz",
+  "refs": [
+   "2Kgs.16.20",
+   "2Kgs.18.1-20.21",
+   "Matt.1.9-10"
+  ]
+ },
+ {
+  "id": "manasseh-king",
+  "name": "Manasseh",
+  "sex": "male",
+  "generation": 45,
+  "father": "hezekiah",
+  "refs": [
+   "2Kgs.20.21",
+   "2Kgs.21.1-18",
+   "Matt.1.10"
+  ]
+ },
+ {
+  "id": "amon",
+  "name": "Amon",
+  "sex": "male",
+  "generation": 46,
+  "father": "manasseh-king",
+  "refs": [
+   "2Kgs.21.18-26",
+   "Matt.1.10"
+  ]
+ },
+ {
+  "id": "josiah",
+  "name": "Josiah",
+  "sex": "male",
+  "generation": 47,
+  "father": "amon",
+  "refs": [
+   "2Kgs.21.24",
+   "2Kgs.22.1-23.30",
+   "Matt.1.10-11"
+  ]
+ },
+ {
+  "id": "jeconiah",
+  "name": "Jeconiah (Jehoiachin)",
+  "sex": "male",
+  "generation": 48,
+  "father": "josiah",
+  "refs": [
+   "2Kgs.24.6-17",
+   "1Chr.3.16-17",
+   "Jer.22.24-30",
+   "Matt.1.11-12"
+  ],
+  "notes": "Matthew 1:11 makes Josiah the father of Jeconiah; 2 Kings 24:6 makes Jehoiakim (Josiah’s son) his father. “Father” in Hebrew genealogies can mean ancestor."
+ },
+ {
+  "id": "abiud",
+  "name": "Abiud",
+  "sex": "male",
+  "generation": 57,
+  "father": "zorobabel",
+  "refs": [
+   "Matt.1.13"
+  ]
+ },
+ {
+  "id": "eliakim-of-abiud",
+  "name": "Eliakim",
+  "sex": "male",
+  "generation": 58,
+  "father": "abiud",
+  "refs": [
+   "Matt.1.13"
+  ]
+ },
+ {
+  "id": "azor",
+  "name": "Azor",
+  "sex": "male",
+  "generation": 59,
+  "father": "eliakim-of-abiud",
+  "refs": [
+   "Matt.1.13-14"
+  ]
+ },
+ {
+  "id": "zadok-of-azor",
+  "name": "Zadok",
+  "sex": "male",
+  "generation": 60,
+  "father": "azor",
+  "refs": [
+   "Matt.1.14"
+  ]
+ },
+ {
+  "id": "achim",
+  "name": "Achim",
+  "sex": "male",
+  "generation": 61,
+  "father": "zadok-of-azor",
+  "refs": [
+   "Matt.1.14"
+  ]
+ },
+ {
+  "id": "eliud",
+  "name": "Eliud",
+  "sex": "male",
+  "generation": 62,
+  "father": "achim",
+  "refs": [
+   "Matt.1.14-15"
+  ]
+ },
+ {
+  "id": "eleazar-of-eliud",
+  "name": "Eleazar",
+  "sex": "male",
+  "generation": 63,
+  "father": "eliud",
+  "refs": [
+   "Matt.1.15"
+  ]
+ },
+ {
+  "id": "matthan",
+  "name": "Matthan",
+  "sex": "male",
+  "generation": 64,
+  "father": "eleazar-of-eliud",
+  "refs": [
+   "Matt.1.15"
+  ]
+ },
+ {
+  "id": "jacob-of-matthan",
+  "name": "Jacob",
+  "sex": "male",
+  "generation": 65,
+  "father": "matthan",
+  "refs": [
+   "Matt.1.15-16"
+  ]
+ },
+ {
+  "id": "joseph-of-jacob",
+  "name": "Joseph (husband of Mary)",
+  "sex": "male",
+  "generation": 66,
+  "father": "jacob-of-matthan",
+  "spouses": [
+   "mary"
+  ],
+  "altParents": [
+   {
+    "id": "heli",
+    "note": "Luke 3:23"
+   }
+  ],
+  "refs": [
+   "Matt.1.16",
+   "Matt.1.18-25",
+   "Luke.1.27",
+   "Luke.2.4",
+   "Luke.3.23"
+  ],
+  "notes": "Matthew 1:16 names his father Jacob; Luke 3:23 names Heli. Both are drawn."
+ }
+]

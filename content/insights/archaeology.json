@@ -1,0 +1,204 @@
+[
+ {
+  "id": "pilate-stone",
+  "title": "The Pilate Stone: the governor's name in limestone",
+  "kind": "archaeology",
+  "verses": ["Matt.27.2", "Mark.15.1", "Luke.3.1", "Luke.23.1", "John.18.29", "Acts.4.27", "1Tim.6.13"],
+  "summary": "A dedication found at Caesarea in 1961 reads '[PO]NTIUS PILATUS [PRAEF]ECTUS IUDA[EA]E' — the only inscription naming Pilate, and it corrects his title: prefect, not procurator.",
+  "body": [
+   "Italian excavators led by Antonio Frova found the block reused as a step in the theatre at Caesarea Maritima, Pilate's seat of government. It records his dedication of a building (a 'Tiberieum') to the emperor. Three lines survive well enough to read his name and title.",
+   "Tacitus (Annals 15.44) calls Pilate a procurator; the stone shows that in his day the governor of Judea held the rank of praefectus, the title Josephus and the Gospels' 'governor' (hēgemōn) fit. The original is in the Israel Museum; a replica stands at Caesarea."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Pilate inscription, Caesarea Maritima, discovered 1961 (Israel Museum, AE 1963 no. 104)", "note": "excavated by A. Frova; published in Rendiconti dell'Istituto Lombardo 95 (1961)"},
+   {"kind": "primary", "title": "Tacitus, Annals 15.44", "author": "Tacitus", "year": "c. AD 116", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D15%3Achapter%3D44", "note": "'Christus... suffered the extreme penalty during the reign of Tiberius at the hands of one of our procurators, Pontius Pilatus'"},
+   {"kind": "scripture", "ref": "Luke.3.1"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "caiaphas-ossuary",
+  "title": "The Caiaphas ossuary",
+  "kind": "archaeology",
+  "verses": ["Matt.26.3", "Matt.26.57", "John.11.49", "John.18.13-14", "Acts.4.6"],
+  "summary": "A richly carved limestone bone-box found in 1990 in Jerusalem's Peace Forest is inscribed 'Yehosef bar Qayafa' — Joseph son of Caiaphas — the high priest's full name as Josephus gives it.",
+  "body": [
+   "Construction work south of the Old City broke into a family tomb with twelve ossuaries. The most ornate, decorated with rosettes, carries the name twice, once in the form 'Yehosef bar Qafa' and once 'Yehosef bar Qayafa', and contained the bones of a man of about sixty. Josephus names the high priest 'Joseph who was called Caiaphas', so the match is close.",
+   "Most scholars accept the identification; some have questioned it because the spelling of the name and the tomb's modesty are unexpected for a high-priestly family. The ossuary is in the Israel Museum. In 2011 a second ossuary, naming 'Miriam daughter of Yeshua son of Caiaphas, priest of Maaziah from Beth Imri', surfaced on the antiquities market and was authenticated by the Israel Antiquities Authority, adding a priestly course to the family."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Ossuary of Yehosef bar Qayafa, Jerusalem (Israel Museum), discovered November 1990", "note": "Z. Greenhut, 'The Caiaphas Tomb in North Talpiyot, Jerusalem', 'Atiqot 21 (1992)"},
+   {"kind": "primary", "title": "Josephus, Antiquities 18.35, 18.95", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/18.35/wst", "note": "'Joseph, who was called Caiaphas'"},
+   {"kind": "scholarship", "title": "'The Ossuary of Miriam Daughter of Yeshua Son of Caiaphas, Priest of Ma'aziah from Beth 'Imri'", "author": "Boaz Zissu & Yuval Goren", "year": 2011, "note": "Israel Exploration Journal 61"}
+  ],
+  "traditions": ["Identification accepted by most archaeologists; doubted by a minority (e.g. W. Horbury, on the spelling)"],
+  "confidence": "consensus"
+ },
+ {
+  "id": "crucified-heel-yehohanan",
+  "title": "A crucified man's heel bone",
+  "kind": "archaeology",
+  "verses": ["Matt.27.35", "Mark.15.24", "Luke.23.33", "John.19.18", "John.20.25"],
+  "summary": "In 1968 an ossuary at Giv'at ha-Mivtar in Jerusalem yielded the right heel bone of a man named Yehohanan with an 11.5 cm iron nail still through it — the only physical remains of a Roman crucifixion ever found.",
+  "body": [
+   "The nail had bent on a knot in the olive-wood cross and could not be withdrawn, so the heel was buried with it, along with a wooden plaque that had been used as a washer. The find shows crucifixion victims could receive Jewish burial, that the feet were nailed (here through the sides of the heels, one to each side of the upright), and that nails were used rather than only ropes — which bears on Thomas's 'the mark of the nails' in John 20:25.",
+   "Yehohanan was in his twenties and died in the first century AD, so his execution falls within a few decades of Jesus'. The initial report claimed both heels were pierced by one nail and the shins broken; re-examination in 1985 corrected that to one nail per heel and no certain leg fracture."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Ossuary of Yehohanan ben Hagkol, Giv'at ha-Mivtar, Jerusalem, excavated 1968 (Israel Museum)", "note": "V. Tzaferis, 'Jewish Tombs at and near Giv'at ha-Mivtar', IEJ 20 (1970)"},
+   {"kind": "scholarship", "title": "'The Crucified Man from Giv'at ha-Mivtar: A Reappraisal'", "author": "Joseph Zias & Eliezer Sekeles", "year": 1985, "note": "Israel Exploration Journal 35, pp. 22–27"},
+   {"kind": "scripture", "ref": "John.20.25"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "pool-of-siloam",
+  "title": "The Pool of Siloam, found in 2004",
+  "kind": "archaeology",
+  "verses": ["John.9.1-11", "Luke.13.4", "Neh.3.15", "Isa.8.6"],
+  "summary": "Sewer repairs in 2004 exposed the monumental stepped pool at the southern tip of the City of David where John says the blind man washed. Coins in the plaster date its construction to the reign of Alexander Jannaeus and its use through AD 70.",
+  "body": [
+   "The Byzantine pool by Hezekiah's Tunnel had been taken for Siloam since the fifth century. The real one lies a little south-east: a trapezoidal pool over 70 m across with three flights of five steps, cut from the same first-century paving as the street that climbs to the Temple Mount. Coins of Alexander Jannaeus (103–76 BC) were found in the plaster, and coins of the First Revolt (AD 66–70) in the silt, bracketing its life.",
+   "Its size and steps mark it as a mikveh-style public bath for pilgrims, which fits John's story: Jesus sends the man to wash where Jerusalem washed."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Pool of Siloam, City of David, excavated by Ronny Reich and Eli Shukron from 2004", "note": "R. Reich & E. Shukron, 'The Siloam Pool in the Wake of Recent Discoveries', New Studies on Jerusalem 10 (2004)"},
+   {"kind": "scripture", "ref": "John.9.7", "note": "'Siloam (which means Sent)'"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "pool-of-bethesda",
+  "title": "Bethesda's five colonnades",
+  "kind": "archaeology",
+  "verses": ["John.5.1-9"],
+  "summary": "John's odd detail — a pool 'with five covered colonnades' — puzzled readers until excavations near St Anne's church revealed two adjoining pools with a colonnade on each side and a fifth across the dividing wall.",
+  "body": [
+   "The twin pools north of the Temple Mount were partly exposed by Conrad Schick in 1888 and fully excavated by the White Fathers in the 1950s–60s. Two large reservoirs separated by a rock wall form a rectangle; porticoes ran around all four sides and along the central wall — five in all. The later Roman shrine to Asclepius built over the site suggests the spot kept a reputation for healing.",
+   "The Copper Scroll from Qumran (3Q15) refers to 'Beth Eshdatayin', 'house of the two pools', confirming both the name and the double layout before AD 70."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Pools of Bethesda, St Anne's compound, Jerusalem; excavations 1888 (C. Schick), 1956–62 (J.-M. Rousée, White Fathers)", "note": "J. Jeremias, The Rediscovery of Bethesda (1966)"},
+   {"kind": "primary", "title": "Copper Scroll (3Q15) column 11", "note": "'Beth Eshdatayin' — the pool of the two basins"},
+   {"kind": "scripture", "ref": "John.5.2"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "tel-dan-stele",
+  "title": "'House of David' on a Syrian victory stone",
+  "kind": "archaeology",
+  "verses": ["2Sam.7.11-16", "1Kgs.12.19", "2Kgs.8.28-29", "2Kgs.9.14-27"],
+  "summary": "Fragments of an Aramaic stele found at Tel Dan in 1993–94 boast of killing the kings of Israel and of 'the House of David' (bytdwd) — the earliest reference to David outside the Bible, about a century and a half after his reign.",
+  "body": [
+   "The inscription, probably set up by Hazael of Damascus around 840 BC, claims the deaths of '[Jeho]ram son of [Ahab] king of Israel' and '[Ahaz]iahu son of [Jehoram] king of the House of David'. 2 Kings 9 credits those deaths to Jehu; Hazael may be claiming Jehu's coup as his own doing, as overlords did.",
+   "Before 1993 a few scholars doubted David existed. The stele does not prove any story about him, but it shows that Judah's dynasty was known to its enemies as 'the House of David' by the mid-ninth century BC."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Tel Dan stele, fragments A (1993) and B (1994), Israel Museum", "note": "A. Biran & J. Naveh, 'An Aramaic Stele Fragment from Tel Dan', IEJ 43 (1993); 'The Tel Dan Inscription: A New Fragment', IEJ 45 (1995)"},
+   {"kind": "scripture", "ref": "2Kgs.8.28-29"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "hezekiah-tunnel-siloam-inscription",
+  "title": "Hezekiah's tunnel and the workmen's inscription",
+  "kind": "archaeology",
+  "verses": ["2Kgs.20.20", "2Chr.32.30", "2Chr.32.2-4", "Isa.22.9-11"],
+  "summary": "The 533 m water tunnel under the City of David, cut from both ends to meet in the middle, is still walkable. An inscription carved by the diggers describes the moment the two crews heard each other's picks through the rock.",
+  "body": [
+   "2 Kings 20:20 credits Hezekiah with 'the pool and the conduit' that brought the Gihon spring inside the walls before Sennacherib's siege (701 BC). In 1880 boys wading in the tunnel found a six-line Hebrew inscription near the outlet; its palaeography dates to about 700 BC. The stone is in the Istanbul Archaeology Museum.",
+   "Radiometric dating of the tunnel's plaster and stalactites (2003) gave dates around 700 BC, consistent with the text."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Siloam Inscription (Istanbul Archaeology Museums), found 1880", "note": "KAI 189"},
+   {"kind": "scholarship", "title": "'Radiometric dating of the Siloam Tunnel, Jerusalem'", "author": "A. Frumkin, A. Shimron & J. Rosenbaum", "year": 2003, "note": "Nature 425, pp. 169–171"},
+   {"kind": "scripture", "ref": "2Kgs.20.20"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "sennacherib-prism",
+  "title": "Sennacherib's own account of the siege of Jerusalem",
+  "kind": "archaeology",
+  "verses": ["2Kgs.18.13-19.37", "2Chr.32.1-23", "Isa.36.1-37.38"],
+  "summary": "The Assyrian king's annals, on three clay prisms, say he shut Hezekiah up 'like a bird in a cage' in Jerusalem — and conspicuously do not claim to have taken the city.",
+  "body": [
+   "Sennacherib's third campaign (701 BC) is recorded on the Taylor Prism (British Museum), the Oriental Institute Prism (Chicago) and the Jerusalem Prism (Israel Museum). He lists 46 walled towns of Judah captured, tribute from Hezekiah, and the siege of Jerusalem — but the usual formula 'I conquered' is missing for the capital, matching the Bible's account that the siege was lifted (2 Kings 19:35–36).",
+   "The reliefs from his palace at Nineveh showing the capture of Lachish (2 Kings 18:14, 17) are also in the British Museum."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Taylor Prism, British Museum 91032 (acquired 1830); Lachish reliefs, BM 124904–124915", "note": "translation in J. B. Pritchard, ANET (3rd ed.), pp. 287–288"},
+   {"kind": "scripture", "ref": "2Kgs.18.13"},
+   {"kind": "scripture", "ref": "2Kgs.19.35-36"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "cyrus-cylinder",
+  "title": "The Cyrus Cylinder and the policy behind Ezra 1",
+  "kind": "archaeology",
+  "verses": ["Ezra.1.1-4", "2Chr.36.22-23", "Isa.44.28", "Isa.45.1"],
+  "summary": "Cyrus's foundation deposit from Babylon (539 BC) announces that he returned captive peoples and their gods to their sanctuaries — the same policy Ezra 1 records for Judah.",
+  "body": [
+   "The clay cylinder, found in 1879 and now in the British Museum, does not mention Jews or Jerusalem; it is written for Babylon's god Marduk. But it states the principle: 'I returned the images of the gods... to their places and let them dwell in eternal abodes. I gathered all their inhabitants and returned to them their dwellings.' Ezra's decree of Cyrus is that policy applied to one small province.",
+   "The Nabonidus Chronicle (also British Museum) independently dates the fall of Babylon to Cyrus in October 539 BC."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Cyrus Cylinder, British Museum 90920, found 1879 by Hormuzd Rassam", "url": "https://www.britishmuseum.org/collection/object/W_1880-0617-1941"},
+   {"kind": "scripture", "ref": "Ezra.1.2-4"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "ketef-hinnom-scrolls",
+  "title": "The oldest biblical text: a blessing on silver",
+  "kind": "archaeology",
+  "verses": ["Num.6.24-26", "Deut.7.9"],
+  "summary": "Two tiny rolled silver amulets from a tomb at Ketef Hinnom, Jerusalem (excavated 1979), carry the priestly blessing of Numbers 6 in Hebrew script of about 600 BC — four centuries older than the Dead Sea Scrolls.",
+  "body": [
+   "Unrolled with great difficulty, the strips read a shortened form of 'The LORD bless you and keep you; the LORD make his face shine upon you and be gracious to you...' along with a phrase close to Deuteronomy 7:9. Palaeographic dating places them in the late seventh or early sixth century BC, just before the Babylonian exile; some argue for the Persian period. They are in the Israel Museum.",
+   "They show the blessing was already fixed wording worn on the body, in the way later Jews wore tefillin."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Ketef Hinnom amulets I and II, Israel Museum, excavated 1979 by Gabriel Barkay", "note": "G. Barkay, A. Vaughn, M. Lundberg & B. Zuckerman, 'The Amulets from Ketef Hinnom: A New Edition and Evaluation', BASOR 334 (2004)"},
+   {"kind": "scripture", "ref": "Num.6.24-26"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "herod-death-4bc",
+  "title": "When Herod died — dating the nativity",
+  "kind": "history",
+  "verses": ["Matt.2.1-23", "Luke.1.5"],
+  "summary": "Josephus records a lunar eclipse shortly before Herod's death and his burial before Passover; the eclipse of 13 March 4 BC fits. So Jesus was born before spring 4 BC — 'before Christ', by a few years, thanks to a sixth-century miscalculation.",
+  "body": [
+   "Josephus says Herod died after an eclipse of the moon and before the following Passover, having reigned 37 years from his appointment by Rome (40 BC) and 34 from his capture of Jerusalem (37 BC). All three point to 4 BC; the partial lunar eclipse of 13 March 4 BC was visible from Jericho, where Herod lay dying. A minority of scholars prefer the eclipse of 1 BC, which would move everything three years.",
+   "The monk Dionysius Exiguus, who devised the AD numbering in AD 525, placed the birth a few years too late, which is why the birth of Jesus falls 'BC'. Matthew 2:16 suggests Jesus was up to two years old when Herod acted, so most estimates put the birth c. 6–4 BC. That range is an estimate; the terminus (before Herod's death) is the evidence."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 17.167 (eclipse), 17.191 (length of reign), 17.213 (Passover after the death)", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/17.167/wst"},
+   {"kind": "scholarship", "title": "Handbook of Biblical Chronology (rev. ed.)", "author": "Jack Finegan", "year": 1998, "note": "§§ 471–495 survey the 4 BC and 1 BC options"},
+   {"kind": "scripture", "ref": "Matt.2.16"}
+  ],
+  "traditions": ["4 BC: the great majority of historians; 1 BC: a minority (e.g. Finegan's later view, Steinmann)"],
+  "confidence": "consensus"
+ },
+ {
+  "id": "tiberius-15th-year",
+  "title": "'The fifteenth year of Tiberius' — Luke's anchor date",
+  "kind": "history",
+  "verses": ["Luke.3.1-2", "Luke.3.23"],
+  "summary": "Luke dates John's ministry by six rulers at once. Tiberius succeeded Augustus on 19 August AD 14, so his fifteenth year is AD 28/29 — the firmest date in the Gospels.",
+  "body": [
+   "Augustus died on 19 August AD 14 (Suetonius, Augustus 100; Tacitus, Annals 1.5). Counting from then, Tiberius' fifteenth year runs from August AD 28 to August AD 29; if Luke used the Syrian calendar beginning in autumn, it is October AD 28 to September AD 29. Either way John's preaching begins about AD 28–29, and Jesus, 'about thirty' (3:23), was born around 6–2 BC — consistent with the Herod evidence.",
+   "The other five names Luke gives all check against inscriptions and Josephus: Pilate (prefect AD 26–36), Herod Antipas (tetrarch 4 BC–AD 39), Philip (4 BC–AD 34), Lysanias of Abilene (attested by an inscription from Abila under Tiberius), and the priests Annas and Caiaphas (AD 18–36)."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Suetonius, Life of Augustus 100; Tacitus, Annals 1.5–7", "note": "death of Augustus, 19 August AD 14"},
+   {"kind": "archaeology", "title": "Abila inscription naming 'Lysanias the tetrarch' (CIG 4521)", "note": "dated to the reign of Tiberius; confirms a second Lysanias after the one executed in 36 BC"},
+   {"kind": "scripture", "ref": "Luke.3.1"}
+  ],
+  "confidence": "evidence"
+ }
+]

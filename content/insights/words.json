@@ -1,0 +1,107 @@
+[
+ {
+  "id": "word-g1220-denarion",
+  "title": "δηνάριον (dēnarion) — 'penny' in the KJV, a day's wage in reality",
+  "kind": "word",
+  "verses": ["Matt.20.2", "Matt.22.19", "Mark.6.37", "Mark.14.5", "Luke.10.35", "John.6.7", "John.12.5", "Rev.6.6"],
+  "summary": "A Latin loanword (denarius) used 16 times in the New Testament. Translations that render it 'penny' or 'shilling' shrink the sums; keeping the transliteration preserves the scale — 200 denarii of bread (Mark 6:37) is more than half a year's pay.",
+  "body": [
+   "Strong's G1220. The KJV's 'penny' reflects the abbreviation d. for pence (from denarius), not the coin's value. Every occurrence should be read as 'day's wage': the 200 denarii the disciples reckon it would take to feed the crowd (Mark 6:37; John 6:7), the two denarii at the inn (Luke 10:35), the 300 for the nard (Mark 14:5), the 500 and 50 forgiven (Luke 7:41).",
+   "In Revelation 6:6 'a quart of wheat for a denarius' is a famine price: a whole day's pay for one person's daily grain."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's G1220", "note": "'a denarius (or ten asses)'"},
+   {"kind": "scripture", "ref": "Matt.20.2"}
+  ],
+  "confidence": "evidence",
+  "related": ["denarius-days-wage"]
+ },
+ {
+  "id": "word-g211-alabastron",
+  "title": "ἀλάβαστρον (alabastron) — the jar named for its stone",
+  "kind": "word",
+  "verses": ["Mark.14.3", "Matt.26.7", "Luke.7.37"],
+  "summary": "The word means both the material (Egyptian calcite, 'alabaster') and the long-necked perfume flask carved from it. Pliny says perfume 'keeps best in alabaster' — the neck was sealed and snapped to open, which is Mark's 'she broke the jar'.",
+  "body": [
+   "Strong's G211. Alabastra were carved from banded calcite quarried in Egypt, turned to a thin wall, with a narrow neck and a small mouth to slow evaporation. Cheap versions were made in glass and clay. The Gospel writers do not say 'a jar of alabaster' but simply 'an alabastron', the way we say 'a thermos'."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's G211", "note": "'a vessel of alabaster'"},
+   {"kind": "primary", "title": "Pliny, Natural History 13.3", "url": "https://en.wikisource.org/wiki/Natural_History_(Rackham,_Jones,_%26_Eichholz)/Book_13", "note": "'unguents keep best in alabaster boxes'"}
+  ],
+  "confidence": "evidence",
+  "related": ["nard-300-denarii"]
+ },
+ {
+  "id": "word-g3341-metanoia",
+  "title": "μετάνοια (metanoia) — a change of mind, not a penance",
+  "kind": "word",
+  "verses": ["Matt.3.2", "Matt.4.17", "Mark.1.15", "Luke.24.47", "Acts.2.38"],
+  "summary": "Literally 'after-thought': a change of mind that turns a life around. The Latin Vulgate's 'do penance' (paenitentiam agite) shaped centuries of reading; the Greek says nothing about acts of penance.",
+  "body": [
+   "Strong's G3341 (verb G3340, metanoeō). The word is built from meta ('after, change') and nous ('mind'). In the Septuagint it renders the Hebrew idea of 'turning' (shuv), so the New Testament sense is a reorientation of the whole person toward God rather than either mere regret or a ritual of satisfaction.",
+   "Jerome's Vulgate translated Matthew 3:2 as paenitentiam agite, 'do penance'. Erasmus (1516) argued the Greek meant 'come to your senses' (resipiscite); Luther's discovery of the same point is the subject of the first of his 95 Theses. The difference of traditions is real, but the lexical meaning is not in dispute."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's G3341", "note": "'compunction (for guilt, including reformation); by implication reversal'"},
+   {"kind": "primary", "title": "Erasmus, Annotations on the New Testament (1516), on Matthew 3:2", "author": "Desiderius Erasmus", "year": 1516},
+   {"kind": "primary", "title": "Martin Luther, Ninety-five Theses, Thesis 1", "author": "Martin Luther", "year": 1517, "url": "https://www.projectwittenberg.org/pub/resources/text/wittenberg/luther/web/ninetyfive.html"}
+  ],
+  "traditions": ["Catholic tradition retains 'penance' as the sacramental expression of repentance while accepting the lexical sense; Protestant traditions emphasise the inner turning"],
+  "confidence": "evidence"
+ },
+ {
+  "id": "word-g976-biblos-geneseos",
+  "title": "'The book of the genesis' — Matthew's first words echo Genesis",
+  "kind": "word",
+  "verses": ["Matt.1.1", "Gen.2.4", "Gen.5.1"],
+  "summary": "Matthew opens with biblos geneseōs, the exact phrase the Greek Old Testament uses for 'the record of the origins' of heaven and earth (Genesis 2:4) and of Adam's line (Genesis 5:1). A Greek-reading Jew would hear 'a new Genesis'.",
+  "body": [
+   "Strong's G976 (biblos) + G1078 (genesis). In the Septuagint, Genesis 2:4 reads 'This is the book of the genesis of heaven and earth' and 5:1 'This is the book of the genesis of men'. Matthew 1:1 is word-for-word the same phrase. It can be translated 'genealogy' (it introduces one) or 'birth' (1:18 uses the same word for Jesus' birth), but the allusion is to the beginning of the Bible itself.",
+   "The gospel's closing words, 'I am with you always, to the end of the age', mirror the opening: a new creation framed by God's presence."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Gen.2.4"},
+   {"kind": "scripture", "ref": "Gen.5.1"},
+   {"kind": "scripture", "ref": "Matt.1.18", "note": "γένεσις for 'birth'"},
+   {"kind": "primary", "title": "Septuagint (LXX) Genesis 2:4; 5:1", "note": "Αὕτη ἡ βίβλος γενέσεως…"},
+   {"kind": "scholarship", "title": "The Gospel According to Saint Matthew (ICC), vol. 1", "author": "W. D. Davies & Dale C. Allison", "year": 1988, "note": "on 1:1"}
+  ],
+  "confidence": "consensus"
+ },
+ {
+  "id": "word-fourteen-david",
+  "title": "Why fourteen? The numerical value of 'David'",
+  "kind": "word",
+  "verses": ["Matt.1.17"],
+  "summary": "Matthew arranges the genealogy in three sets of fourteen, skipping four kings to do it. In Hebrew letters David's name (דוד) adds up to 4 + 6 + 4 = 14, and David is the fourteenth name on the list.",
+  "body": [
+   "Hebrew letters double as numerals: dalet = 4, waw = 6. D-W-D = 14. Matthew's list also has David in fourteenth position and names him twice at the hinge of the pattern (1:6). To get fourteen in the middle block he omits Ahaziah, Joash and Amaziah between Joram and Uzziah (compare 1 Chronicles 3:11–12), and Jehoiakim before Jeconiah.",
+   "That the pattern is deliberate is certain — Matthew says so in 1:17. That it encodes David's name (gematria) is the most widely accepted explanation but remains an inference; alternatives include six sevens (Jesus beginning the seventh seven) or simply a memory aid."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Matt.1.17"},
+   {"kind": "scripture", "ref": "1Chr.3.10-16", "note": "the full royal line, showing the omissions"},
+   {"kind": "scholarship", "title": "The Gospel According to Saint Matthew (ICC), vol. 1", "author": "W. D. Davies & Dale C. Allison", "year": 1988, "note": "excursus on the genealogy; the gematria explanation"}
+  ],
+  "traditions": ["Gematria reading: most modern commentators across traditions; alternatives noted above"],
+  "confidence": "interpretation"
+ },
+ {
+  "id": "word-g3107-makarios",
+  "title": "μακάριος (makarios) — 'blessed', or 'how fortunate'",
+  "kind": "word",
+  "verses": ["Matt.5.3-12", "Luke.6.20-23", "Ps.1.1"],
+  "summary": "The Beatitudes open with a word that is not a wish or a prayer but a declaration — the Greek equivalent of the Hebrew ashrei ('O the happiness of…') that opens Psalm 1.",
+  "body": [
+   "Strong's G3107. Makarios describes someone whose situation is enviable; it is the word Greeks used of the gods and of the wealthy. The Septuagint uses it for the Hebrew ashrei, a plural construct meaning something like 'O the blessednesses of…', found in Psalm 1:1 and thirty-odd other places. It is distinct from eulogētos (G2128), 'blessed' in the sense of praised, used of God.",
+   "So 'Blessed are the poor in spirit' is not a benediction pronounced over them but an announcement about them: these, surprisingly, are the ones to be congratulated."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's G3107", "note": "'supremely blest; by extension fortunate, well off'"},
+   {"kind": "scripture", "ref": "Ps.1.1", "note": "אַשְׁרֵי — LXX μακάριος"},
+   {"kind": "scripture", "ref": "Luke.1.68", "note": "εὐλογητός, the other 'blessed'"}
+  ],
+  "confidence": "evidence"
+ }
+]

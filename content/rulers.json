@@ -1,0 +1,1613 @@
+[
+ {
+  "id": "saul",
+  "name": "Saul",
+  "realm": "Israel",
+  "title": "King",
+  "from": -1050,
+  "to": -1010,
+  "refs": [
+   "1Sam.10.1",
+   "1Sam.13.1",
+   "1Sam.31.1-6",
+   "Acts.13.21"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "Acts.13.21",
+    "note": "'forty years'"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "notes": "1 Samuel 13:1 is textually damaged in Hebrew; Acts 13:21 gives forty years. Absolute dates are estimates worked back from Solomon."
+ },
+ {
+  "id": "david",
+  "name": "David",
+  "realm": "Israel and Judah",
+  "title": "King",
+  "from": -1010,
+  "to": -970,
+  "refs": [
+   "2Sam.5.4-5",
+   "1Kgs.2.11"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Sam.5.4-5",
+    "note": "reigned 40 years: 7 in Hebron, 33 in Jerusalem"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "saul"
+ },
+ {
+  "id": "solomon",
+  "name": "Solomon",
+  "realm": "Israel and Judah",
+  "title": "King",
+  "from": -970,
+  "to": -931,
+  "refs": [
+   "1Kgs.11.42"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.11.42",
+    "note": "forty years"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "notes": "931 BC for the division of the kingdom is the anchor of most chronologies, worked back from Assyrian records that date Ahab (853) and Jehu (841).",
+  "predecessor": "david"
+ },
+ {
+  "id": "rehoboam",
+  "name": "Rehoboam",
+  "realm": "Judah",
+  "title": "King",
+  "from": -931,
+  "to": -913,
+  "refs": [
+   "1Kgs.14.21"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.14.21"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "solomon"
+ },
+ {
+  "id": "abijah",
+  "name": "Abijah (Abijam)",
+  "realm": "Judah",
+  "title": "King",
+  "from": -913,
+  "to": -911,
+  "refs": [
+   "1Kgs.15.1-2"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.15.1-2"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "rehoboam"
+ },
+ {
+  "id": "asa",
+  "name": "Asa",
+  "realm": "Judah",
+  "title": "King",
+  "from": -911,
+  "to": -870,
+  "refs": [
+   "1Kgs.15.9-10"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.15.9-10"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "abijah"
+ },
+ {
+  "id": "jehoshaphat",
+  "name": "Jehoshaphat",
+  "realm": "Judah",
+  "title": "King",
+  "from": -872,
+  "to": -848,
+  "refs": [
+   "1Kgs.22.41-42"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.22.41-42"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "asa"
+ },
+ {
+  "id": "jehoram-j",
+  "name": "Jehoram",
+  "realm": "Judah",
+  "title": "King",
+  "from": -853,
+  "to": -841,
+  "refs": [
+   "2Kgs.8.16-17"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.8.16-17"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehoshaphat"
+ },
+ {
+  "id": "ahaziah-j",
+  "name": "Ahaziah",
+  "realm": "Judah",
+  "title": "King",
+  "from": -841,
+  "to": -841,
+  "refs": [
+   "2Kgs.8.25-26"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.8.25-26"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehoram-j"
+ },
+ {
+  "id": "athaliah",
+  "name": "Athaliah (queen regnant)",
+  "realm": "Judah",
+  "title": "Queen",
+  "from": -841,
+  "to": -835,
+  "refs": [
+   "2Kgs.11.1-3"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.11.1-3"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "ahaziah-j"
+ },
+ {
+  "id": "joash-j",
+  "name": "Joash (Jehoash)",
+  "realm": "Judah",
+  "title": "King",
+  "from": -835,
+  "to": -796,
+  "refs": [
+   "2Kgs.12.1"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.12.1"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "athaliah"
+ },
+ {
+  "id": "amaziah",
+  "name": "Amaziah",
+  "realm": "Judah",
+  "title": "King",
+  "from": -796,
+  "to": -767,
+  "refs": [
+   "2Kgs.14.1-2"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.14.1-2"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "joash-j"
+ },
+ {
+  "id": "uzziah",
+  "name": "Uzziah (Azariah)",
+  "realm": "Judah",
+  "title": "King",
+  "from": -792,
+  "to": -740,
+  "refs": [
+   "2Kgs.15.1-2",
+   "2Chr.26.1-3"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.1-2"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "amaziah"
+ },
+ {
+  "id": "jotham",
+  "name": "Jotham",
+  "realm": "Judah",
+  "title": "King",
+  "from": -750,
+  "to": -732,
+  "refs": [
+   "2Kgs.15.32-33"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.32-33"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "uzziah"
+ },
+ {
+  "id": "ahaz",
+  "name": "Ahaz",
+  "realm": "Judah",
+  "title": "King",
+  "from": -735,
+  "to": -715,
+  "refs": [
+   "2Kgs.16.1-2"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.16.1-2"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jotham"
+ },
+ {
+  "id": "hezekiah",
+  "name": "Hezekiah",
+  "realm": "Judah",
+  "title": "King",
+  "from": -715,
+  "to": -686,
+  "refs": [
+   "2Kgs.18.1-2"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.18.1-2"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Taylor Prism (BM 91032)",
+    "note": "Sennacherib's siege of Jerusalem, 701 BC"
+   }
+  ],
+  "estimated": false,
+  "predecessor": "ahaz"
+ },
+ {
+  "id": "manasseh",
+  "name": "Manasseh",
+  "realm": "Judah",
+  "title": "King",
+  "from": -697,
+  "to": -642,
+  "refs": [
+   "2Kgs.21.1"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.21.1"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "hezekiah"
+ },
+ {
+  "id": "amon",
+  "name": "Amon",
+  "realm": "Judah",
+  "title": "King",
+  "from": -642,
+  "to": -640,
+  "refs": [
+   "2Kgs.21.19"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.21.19"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "manasseh"
+ },
+ {
+  "id": "josiah",
+  "name": "Josiah",
+  "realm": "Judah",
+  "title": "King",
+  "from": -640,
+  "to": -609,
+  "refs": [
+   "2Kgs.22.1"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.22.1"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "amon"
+ },
+ {
+  "id": "jehoahaz-j",
+  "name": "Jehoahaz",
+  "realm": "Judah",
+  "title": "King",
+  "from": -609,
+  "to": -609,
+  "refs": [
+   "2Kgs.23.31"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.23.31"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "josiah"
+ },
+ {
+  "id": "jehoiakim",
+  "name": "Jehoiakim",
+  "realm": "Judah",
+  "title": "King",
+  "from": -609,
+  "to": -598,
+  "refs": [
+   "2Kgs.23.36"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.23.36"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehoahaz-j"
+ },
+ {
+  "id": "jehoiachin",
+  "name": "Jehoiachin (Jeconiah)",
+  "realm": "Judah",
+  "title": "King",
+  "from": -598,
+  "to": -597,
+  "refs": [
+   "2Kgs.24.8"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.24.8"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Babylonian ration tablets (Pergamon Museum, Berlin)",
+    "note": "list rations for 'Yaukin king of Judah' in Babylon, c. 592 BC"
+   }
+  ],
+  "estimated": false,
+  "predecessor": "jehoiakim"
+ },
+ {
+  "id": "zedekiah",
+  "name": "Zedekiah",
+  "realm": "Judah",
+  "title": "King",
+  "from": -597,
+  "to": -586,
+  "refs": [
+   "2Kgs.24.18"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.24.18"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Babylonian Chronicle (BM 21946)",
+    "note": "dates the capture of Jerusalem and Jehoiachin's deportation to 2 Adar (16 March) 597 BC"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehoiachin",
+  "notes": "The fall of Jerusalem in 586 (or 587) BC is fixed by the Babylonian Chronicle and 2 Kings 25:8."
+ },
+ {
+  "id": "jeroboam1",
+  "name": "Jeroboam I",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -931,
+  "to": -910,
+  "refs": [
+   "1Kgs.12.20",
+   "1Kgs.14.20"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.12.20"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true
+ },
+ {
+  "id": "nadab",
+  "name": "Nadab",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -910,
+  "to": -909,
+  "refs": [
+   "1Kgs.15.25"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.15.25"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jeroboam1"
+ },
+ {
+  "id": "baasha",
+  "name": "Baasha",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -909,
+  "to": -886,
+  "refs": [
+   "1Kgs.15.33"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.15.33"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "nadab"
+ },
+ {
+  "id": "elah",
+  "name": "Elah",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -886,
+  "to": -885,
+  "refs": [
+   "1Kgs.16.8"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.16.8"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "baasha"
+ },
+ {
+  "id": "zimri",
+  "name": "Zimri",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -885,
+  "to": -885,
+  "refs": [
+   "1Kgs.16.15"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.16.15"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "elah"
+ },
+ {
+  "id": "omri",
+  "name": "Omri",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -885,
+  "to": -874,
+  "refs": [
+   "1Kgs.16.23"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.16.23"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Mesha Stele (Louvre AO 5066)",
+    "note": "'Omri king of Israel' oppressed Moab"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "zimri"
+ },
+ {
+  "id": "ahab",
+  "name": "Ahab",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -874,
+  "to": -853,
+  "refs": [
+   "1Kgs.16.29"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.16.29"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Kurkh Monolith of Shalmaneser III (BM 118884)",
+    "note": "names 'Ahab the Israelite' at the battle of Qarqar, 853 BC"
+   }
+  ],
+  "estimated": false,
+  "predecessor": "omri"
+ },
+ {
+  "id": "ahaziah-i",
+  "name": "Ahaziah",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -853,
+  "to": -852,
+  "refs": [
+   "1Kgs.22.51"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "1Kgs.22.51"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "ahab"
+ },
+ {
+  "id": "joram-i",
+  "name": "Joram (Jehoram)",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -852,
+  "to": -841,
+  "refs": [
+   "2Kgs.3.1"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.3.1"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "ahaziah-i"
+ },
+ {
+  "id": "jehu",
+  "name": "Jehu",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -841,
+  "to": -814,
+  "refs": [
+   "2Kgs.10.36"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.10.36"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Black Obelisk of Shalmaneser III (BM 118885)",
+    "note": "shows 'Jehu son of Omri' bringing tribute, 841 BC"
+   }
+  ],
+  "estimated": false,
+  "predecessor": "joram-i"
+ },
+ {
+  "id": "jehoahaz-i",
+  "name": "Jehoahaz",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -814,
+  "to": -798,
+  "refs": [
+   "2Kgs.13.1"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.13.1"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehu"
+ },
+ {
+  "id": "jehoash-i",
+  "name": "Jehoash",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -798,
+  "to": -782,
+  "refs": [
+   "2Kgs.13.10"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.13.10"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehoahaz-i"
+ },
+ {
+  "id": "jeroboam2",
+  "name": "Jeroboam II",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -793,
+  "to": -753,
+  "refs": [
+   "2Kgs.14.23"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.14.23"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jehoash-i"
+ },
+ {
+  "id": "zechariah-i",
+  "name": "Zechariah",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -753,
+  "to": -752,
+  "refs": [
+   "2Kgs.15.8"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.8"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "jeroboam2"
+ },
+ {
+  "id": "shallum",
+  "name": "Shallum",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -752,
+  "to": -752,
+  "refs": [
+   "2Kgs.15.13"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.13"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "zechariah-i"
+ },
+ {
+  "id": "menahem",
+  "name": "Menahem",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -752,
+  "to": -742,
+  "refs": [
+   "2Kgs.15.17"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.17"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "shallum"
+ },
+ {
+  "id": "pekahiah",
+  "name": "Pekahiah",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -742,
+  "to": -740,
+  "refs": [
+   "2Kgs.15.23"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.23"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "menahem"
+ },
+ {
+  "id": "pekah",
+  "name": "Pekah",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -752,
+  "to": -732,
+  "refs": [
+   "2Kgs.15.27"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.15.27"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   }
+  ],
+  "estimated": true,
+  "predecessor": "pekahiah"
+ },
+ {
+  "id": "hoshea",
+  "name": "Hoshea",
+  "realm": "Israel (northern kingdom)",
+  "title": "King",
+  "from": -732,
+  "to": -722,
+  "refs": [
+   "2Kgs.17.1",
+   "2Kgs.17.6"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "2Kgs.17.1"
+   },
+   {
+    "kind": "scholarship",
+    "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)",
+    "author": "Edwin R. Thiele",
+    "year": 1983,
+    "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Annals of Sargon II",
+    "note": "claims the capture of Samaria, 722/721 BC"
+   }
+  ],
+  "estimated": false,
+  "predecessor": "pekah"
+ },
+ {
+  "id": "nebuchadnezzar",
+  "name": "Nebuchadnezzar II",
+  "realm": "Babylon",
+  "title": "King",
+  "from": -605,
+  "to": -562,
+  "refs": [
+   "2Kgs.24.1",
+   "2Kgs.25.1",
+   "Dan.1.1",
+   "Jer.52.28-30"
+  ],
+  "sources": [
+   {
+    "kind": "archaeology",
+    "title": "Babylonian Chronicles (BM 21946); Uruk King List"
+   },
+   {
+    "kind": "scripture",
+    "ref": "Jer.52.28-30"
+   }
+  ]
+ },
+ {
+  "id": "cyrus",
+  "name": "Cyrus II 'the Great'",
+  "realm": "Persia",
+  "title": "King",
+  "from": -559,
+  "to": -530,
+  "refs": [
+   "Ezra.1.1-4",
+   "Isa.45.1",
+   "Dan.6.28",
+   "2Chr.36.22-23"
+  ],
+  "sources": [
+   {
+    "kind": "archaeology",
+    "title": "Cyrus Cylinder (BM 90920); Nabonidus Chronicle (BM 35382)",
+    "note": "Babylon taken October 539 BC"
+   }
+  ]
+ },
+ {
+  "id": "darius1",
+  "name": "Darius I",
+  "realm": "Persia",
+  "title": "King",
+  "from": -522,
+  "to": -486,
+  "refs": [
+   "Ezra.4.24",
+   "Ezra.6.1-15",
+   "Hag.1.1",
+   "Zech.1.1"
+  ],
+  "sources": [
+   {
+    "kind": "archaeology",
+    "title": "Behistun inscription"
+   },
+   {
+    "kind": "scripture",
+    "ref": "Ezra.6.15",
+    "note": "temple finished in his sixth year, 516 BC"
+   }
+  ]
+ },
+ {
+  "id": "xerxes",
+  "name": "Xerxes I (Ahasuerus)",
+  "realm": "Persia",
+  "title": "King",
+  "from": -486,
+  "to": -465,
+  "refs": [
+   "Esth.1.1",
+   "Ezra.4.6"
+  ],
+  "sources": [
+   {
+    "kind": "archaeology",
+    "title": "Persepolis inscriptions; Herodotus 7"
+   }
+  ],
+  "notes": "Identification of Esther's Ahasuerus with Xerxes is the majority view; the Septuagint calls him Artaxerxes."
+ },
+ {
+  "id": "artaxerxes1",
+  "name": "Artaxerxes I",
+  "realm": "Persia",
+  "title": "King",
+  "from": -465,
+  "to": -424,
+  "refs": [
+   "Ezra.7.1",
+   "Neh.2.1",
+   "Neh.5.14"
+  ],
+  "sources": [
+   {
+    "kind": "scripture",
+    "ref": "Neh.2.1",
+    "note": "Nehemiah sent in his 20th year, 445 BC"
+   }
+  ]
+ },
+ {
+  "id": "antiochus4",
+  "name": "Antiochus IV Epiphanes",
+  "realm": "Seleucid Syria",
+  "title": "King",
+  "from": -175,
+  "to": -164,
+  "refs": [
+   "Dan.11.21-35",
+   "Dan.8.9-14"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "1 Maccabees 1:10–64",
+    "note": "the desecration of the temple, 167 BC"
+   }
+  ],
+  "notes": "Daniel 8 and 11 are read by most scholars as describing his reign; the Bible names him only in 1 Maccabees."
+ },
+ {
+  "id": "herod-great",
+  "name": "Herod the Great",
+  "realm": "Judea",
+  "title": "King (client of Rome)",
+  "from": -37,
+  "to": -4,
+  "refs": [
+   "Matt.2.1-19",
+   "Luke.1.5"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 14.487 (took Jerusalem 37 BC), 17.191 (death, 4 BC)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Herodium, Masada, Caesarea, the Temple Mount platform",
+    "note": "his building programme survives on a vast scale"
+   }
+  ],
+  "notes": "Appointed king by the Roman senate in 40 BC; ruled from 37. See the Insights card on the date of his death."
+ },
+ {
+  "id": "archelaus",
+  "name": "Herod Archelaus",
+  "realm": "Judea, Samaria, Idumea",
+  "title": "Ethnarch",
+  "from": -4,
+  "to": 6,
+  "refs": [
+   "Matt.2.22"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 17.317; 17.342–344 (deposed and banished, AD 6)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   }
+  ],
+  "predecessor": "herod-great"
+ },
+ {
+  "id": "antipas",
+  "name": "Herod Antipas",
+  "realm": "Galilee and Perea",
+  "title": "Tetrarch",
+  "from": -4,
+  "to": 39,
+  "refs": [
+   "Matt.14.1-12",
+   "Mark.6.14-29",
+   "Luke.3.1",
+   "Luke.13.31-32",
+   "Luke.23.7-12"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 17.318; 18.109–119 (John the Baptist); 18.240–256 (exile, AD 39)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Coins of Herod Antipas from Tiberias; Machaerus (site of John's execution per Josephus)"
+   }
+  ],
+  "predecessor": "herod-great"
+ },
+ {
+  "id": "philip",
+  "name": "Philip the Tetrarch",
+  "realm": "Iturea, Trachonitis, Batanea",
+  "title": "Tetrarch",
+  "from": -4,
+  "to": 34,
+  "refs": [
+   "Luke.3.1"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 18.106 (died in the 20th year of Tiberius)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   }
+  ],
+  "predecessor": "herod-great"
+ },
+ {
+  "id": "augustus",
+  "name": "Augustus",
+  "realm": "Rome",
+  "title": "Emperor",
+  "from": -27,
+  "to": 14,
+  "refs": [
+   "Luke.2.1"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Suetonius, Life of Augustus; Res Gestae Divi Augusti"
+   }
+  ]
+ },
+ {
+  "id": "tiberius",
+  "name": "Tiberius",
+  "realm": "Rome",
+  "title": "Emperor",
+  "from": 14,
+  "to": 37,
+  "refs": [
+   "Luke.3.1",
+   "Matt.22.17-21"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Tacitus, Annals 1–6; Suetonius, Life of Tiberius"
+   },
+   {
+    "kind": "archaeology",
+    "title": "The 'tribute penny' denarius"
+   }
+  ],
+  "predecessor": "augustus"
+ },
+ {
+  "id": "pilate",
+  "name": "Pontius Pilate",
+  "realm": "Judea",
+  "title": "Prefect",
+  "from": 26,
+  "to": 36,
+  "refs": [
+   "Matt.27.2",
+   "Luke.3.1",
+   "Luke.23.1-25",
+   "John.18.28-19.22",
+   "Acts.4.27",
+   "1Tim.6.13"
+  ],
+  "sources": [
+   {
+    "kind": "archaeology",
+    "title": "Pilate inscription, Caesarea (1961)"
+   },
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 18.35, 18.55–89",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   },
+   {
+    "kind": "primary",
+    "title": "Philo, Embassy to Gaius 299–305"
+   }
+  ],
+  "estimated": true,
+  "notes": "Josephus places his arrival under Tiberius and his recall before Tiberius' death; 26–36 is the usual reconstruction. Some argue for AD 19 as the start."
+ },
+ {
+  "id": "caiaphas",
+  "name": "Joseph Caiaphas",
+  "realm": "Jerusalem",
+  "title": "High priest",
+  "from": 18,
+  "to": 36,
+  "refs": [
+   "Matt.26.3",
+   "Matt.26.57",
+   "John.11.49",
+   "John.18.13-28",
+   "Acts.4.6"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 18.35 (appointed), 18.95 (removed)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   },
+   {
+    "kind": "archaeology",
+    "title": "Caiaphas ossuary (1990)"
+   }
+  ]
+ },
+ {
+  "id": "annas",
+  "name": "Annas (Ananus son of Seth)",
+  "realm": "Jerusalem",
+  "title": "High priest",
+  "from": 6,
+  "to": 15,
+  "refs": [
+   "Luke.3.2",
+   "John.18.13",
+   "John.18.24",
+   "Acts.4.6"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 18.26 (appointed by Quirinius), 18.34 (removed)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   }
+  ],
+  "notes": "Deposed in AD 15 but still called high priest in the Gospels; five of his sons and his son-in-law Caiaphas held the office after him."
+ },
+ {
+  "id": "claudius",
+  "name": "Claudius",
+  "realm": "Rome",
+  "title": "Emperor",
+  "from": 41,
+  "to": 54,
+  "refs": [
+   "Acts.11.28",
+   "Acts.18.2"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Suetonius, Life of Claudius 25.4",
+    "note": "'expelled the Jews from Rome' — the expulsion Acts 18:2 mentions, usually dated AD 49"
+   }
+  ]
+ },
+ {
+  "id": "agrippa1",
+  "name": "Herod Agrippa I",
+  "realm": "Judea",
+  "title": "King",
+  "from": 41,
+  "to": 44,
+  "refs": [
+   "Acts.12.1-23"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 19.343–352 (his death at Caesarea)",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   }
+  ]
+ },
+ {
+  "id": "agrippa2",
+  "name": "Herod Agrippa II",
+  "realm": "Chalcis, then northern territories",
+  "title": "King",
+  "from": 50,
+  "to": 93,
+  "refs": [
+   "Acts.25.13-26.32"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 20.104, 20.138; Jewish War 2.220–223",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   }
+  ],
+  "estimated": true,
+  "notes": "His death date is uncertain; c. AD 93–100."
+ },
+ {
+  "id": "felix",
+  "name": "Antonius Felix",
+  "realm": "Judea",
+  "title": "Procurator",
+  "from": 52,
+  "to": 60,
+  "refs": [
+   "Acts.23.24-24.27"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 20.137–182",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   },
+   {
+    "kind": "primary",
+    "title": "Tacitus, Histories 5.9; Annals 12.54"
+   }
+  ],
+  "estimated": true,
+  "notes": "Dates of his term vary by two or three years in the sources."
+ },
+ {
+  "id": "festus",
+  "name": "Porcius Festus",
+  "realm": "Judea",
+  "title": "Procurator",
+  "from": 60,
+  "to": 62,
+  "refs": [
+   "Acts.24.27-26.32"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Josephus, Antiquities 20.182–197",
+    "author": "Flavius Josephus",
+    "year": "c. AD 94"
+   }
+  ],
+  "estimated": true
+ },
+ {
+  "id": "nero",
+  "name": "Nero",
+  "realm": "Rome",
+  "title": "Emperor",
+  "from": 54,
+  "to": 68,
+  "refs": [
+   "Acts.25.11-12",
+   "Acts.27.24",
+   "Phil.4.22"
+  ],
+  "sources": [
+   {
+    "kind": "primary",
+    "title": "Tacitus, Annals 15.44",
+    "note": "the persecution of Christians after the fire of AD 64"
+   }
+  ],
+  "notes": "Paul's 'Caesar' in Acts 25–28; not named in the New Testament.",
+  "predecessor": "claudius"
+ }
+]

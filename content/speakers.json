@@ -1,0 +1,21 @@
+[
+ {"id":"s-matt1-20","ref":"Matt.1.20-21","speaker":"An angel of the Lord, in a dream","summary":"The first speech in Matthew's Gospel is an angel's, addressed to Joseph as 'son of David'."},
+ {"id":"s-matt1-22","ref":"Matt.1.22-23","speaker":"The narrator (Matthew), quoting Isaiah","summary":"The first of Matthew's ten 'fulfilment' formulae; the words 'they will call Him Immanuel' are Isaiah's."},
+ {"id":"s-matt3-17","ref":"Matt.3.17","speaker":"A voice from heaven (God the Father)","summary":"Echoing Psalm 2:7 and Isaiah 42:1 together."},
+ {"id":"s-sermon","ref":"Matt.5.3-7.27","speaker":"Jesus — the Sermon on the Mount","summary":"The first of Matthew's five great discourses; the crowd's reaction is reported at 7:28."},
+ {"id":"s-mark14-4","ref":"Mark.14.4-5","speaker":"'Some of those present' — John 12:4 names Judas Iscariot","summary":"Mark keeps the objectors anonymous; John attributes the complaint to Judas and adds a motive."},
+ {"id":"s-mark14-6","ref":"Mark.14.6-9","speaker":"Jesus","summary":"'Wherever the gospel is preached in all the world, what she has done will also be told in memory of her.'"},
+ {"id":"s-magnificat","ref":"Luke.1.46-55","speaker":"Mary — the Magnificat","summary":"Modelled on Hannah's song in 1 Samuel 2:1–10. A few Old Latin manuscripts attribute it to Elizabeth."},
+ {"id":"s-benedictus","ref":"Luke.1.68-79","speaker":"Zechariah, father of John — the Benedictus"},
+ {"id":"s-gloria","ref":"Luke.2.14","speaker":"'A multitude of the heavenly host'"},
+ {"id":"s-nunc","ref":"Luke.2.29-32","speaker":"Simeon — the Nunc Dimittis"},
+ {"id":"s-gen3-1","ref":"Gen.3.1-5","speaker":"The serpent","summary":"Genesis never calls the serpent Satan; that identification is made in Revelation 12:9 and 20:2."},
+ {"id":"s-gen3-9","ref":"Gen.3.9-19","speaker":"The LORD God, in dialogue with the man, the woman and the serpent"},
+ {"id":"s-decalogue","ref":"Exod.20.1-17","speaker":"God, speaking directly to Israel at Sinai","summary":"Deuteronomy 5:4 stresses that the people heard these words 'face to face' before asking Moses to mediate (Exodus 20:19)."},
+ {"id":"s-job-friends","ref":"Job.4.1-5.27","speaker":"Eliphaz the Temanite — first speech","summary":"Job 42:7 says the friends 'have not spoken of Me what is right', so their speeches are recorded as wrong."},
+ {"id":"s-ps22","ref":"Ps.22.1-31","speaker":"David (superscription); quoted by Jesus on the cross (Matthew 27:46)"},
+ {"id":"s-isa53","ref":"Isa.53.1-12","speaker":"An unnamed 'we' — the community confessing what the Servant bore for them","summary":"The speakers shift from 'we' (53:1–6) to God (53:11–12)."},
+ {"id":"s-acts2","ref":"Acts.2.14-36","speaker":"Peter — the Pentecost sermon"},
+ {"id":"s-acts7","ref":"Acts.7.2-53","speaker":"Stephen, before the Sanhedrin","summary":"The longest speech in Acts; Luke's summary of Israel's history from Abraham to Solomon."},
+ {"id":"s-acts17","ref":"Acts.17.22-31","speaker":"Paul, at the Areopagus in Athens","summary":"Quotes the Greek poets Epimenides (17:28a) and Aratus, Phaenomena 5 (17:28b)."}
+]

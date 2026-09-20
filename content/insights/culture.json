@@ -1,0 +1,140 @@
+[
+ {
+  "id": "right-cheek-backhand",
+  "title": "Why 'the right cheek'?",
+  "kind": "culture",
+  "verses": ["Matt.5.38-42", "Luke.6.29"],
+  "summary": "A right-handed blow to someone's right cheek is a backhand — the slap of a superior to an inferior. Jewish law fined a backhanded slap double. Turning the other cheek offers only the left, which can be struck as an equal.",
+  "body": [
+   "Matthew specifies the right cheek. For a right-handed striker to hit the right cheek, the blow is a backhand — and in the ancient Mediterranean that was not a fight but an insult, the way a master struck a slave or a husband a wife. The Mishnah prices the difference: a slap costs 200 zuz in damages; a backhanded slap, 400, 'because of the greater degradation'.",
+   "Read against that background, turning the other cheek is neither retaliation nor submission. Offering the left cheek makes a second backhand impossible; the striker must either stop or hit with an open hand or fist — the way one strikes an equal. The gesture takes the humiliation out of the blow.",
+   "This reading was developed by Walter Wink and is widely used in Anabaptist, Mennonite and mainline Protestant teaching on nonviolence. The older tradition, from Augustine on, read the saying primarily as a disposition of the heart — a readiness to absorb injury without vengeance — and treats the 'right' as incidental. Both agree on what the verse forbids (returning evil for evil, Romans 12:17); they differ on whether Jesus is also describing a tactic. The Mishnah's fine is a fact; the tactic is an interpretation."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Matt.5.39", "note": "'on the right cheek'"},
+   {"kind": "scripture", "ref": "Rom.12.17-21"},
+   {"kind": "primary", "title": "Mishnah Bava Kamma 8:6", "url": "https://www.sefaria.org/Mishnah_Bava_Kamma.8.6", "year": "compiled c. AD 200", "note": "slap 200 zuz; backhand 400 zuz"},
+   {"kind": "scholarship", "title": "Jesus and Nonviolence: A Third Way", "author": "Walter Wink", "year": 2003, "note": "the 'backhand' reading"},
+   {"kind": "primary", "title": "Augustine, Sermon on the Mount 1.19", "author": "Augustine of Hippo", "year": "c. 394", "note": "'the precept concerns the preparation of the heart, not the outward act'"}
+  ],
+  "traditions": ["Backhand/'third way' reading: Anabaptist, Mennonite, much of mainline Protestantism", "Disposition-of-the-heart reading: Augustine, Catholic and Orthodox commentators, Reformed tradition"],
+  "confidence": "interpretation",
+  "related": ["extra-mile-angareia", "cloak-and-tunic"]
+ },
+ {
+  "id": "extra-mile-angareia",
+  "title": "The second mile and the right of requisition",
+  "kind": "culture",
+  "verses": ["Matt.5.41", "Matt.27.32", "Mark.15.21"],
+  "summary": "'Compel' is angareuō, the technical word for a soldier's legal right to requisition a civilian's labour or animal. The same word is used when the soldiers press Simon of Cyrene to carry the cross.",
+  "body": [
+   "The Persian empire ran a relay post (angareion) whose couriers could commandeer horses and men; the word passed into Greek and Latin and by Roman times meant any official requisition of transport or labour. Matthew uses it here and again in 27:32, where Simon of Cyrene is 'compelled' to carry Jesus' cross — the one act of angareia we can actually watch in the Gospels.",
+   "An inscription found at Sagalassos in Pisidia (modern Turkey) preserves an edict of the governor Sextus Sotidius Strabo Libuscidianus, issued under Tiberius, setting out exactly what soldiers and officials could demand of the locals: so many carts and mules, at fixed rates, for so far — and complaining that they abused the right. The edict is contemporary with Jesus and shows both that the practice was legal and that it was resented.",
+   "The distance is a Roman mile (milion, about 1,480 m). The reading that going a second mile turned coercion into a free act — leaving the soldier, who could be punished for exceeding his allowance, oddly in the debtor's position — comes from the same interpretive tradition as the 'right cheek' card, and is marked accordingly."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Matt.5.41", "note": "ἀγγαρεύσει, 'compels'"},
+   {"kind": "scripture", "ref": "Matt.27.32", "note": "ἠγγάρευσαν — Simon of Cyrene"},
+   {"kind": "archaeology", "title": "Edict of Sextus Sotidius Strabo Libuscidianus (Sagalassos inscription), AD 14–19", "note": "published in S. Mitchell, 'Requisitioned Transport in the Roman Empire: A New Inscription from Pisidia', Journal of Roman Studies 66 (1976) 106–131"},
+   {"kind": "primary", "title": "Herodotus, Histories 8.98", "author": "Herodotus", "year": "c. 430 BC", "note": "the Persian courier relay from which the word comes"},
+   {"kind": "scholarship", "title": "Jesus and Nonviolence: A Third Way", "author": "Walter Wink", "year": 2003}
+  ],
+  "traditions": ["The legal background is undisputed; the 'subversive second mile' reading is characteristic of Wink and Anabaptist teaching"],
+  "confidence": "consensus",
+  "related": ["right-cheek-backhand"]
+ },
+ {
+  "id": "cloak-and-tunic",
+  "title": "Tunic, cloak, and the law that protected the poor",
+  "kind": "culture",
+  "verses": ["Matt.5.40", "Luke.6.29", "Exod.22.26-27", "Deut.24.12-13"],
+  "summary": "Torah let a creditor take a debtor's tunic as a pledge but forbade keeping his cloak overnight, because it was his blanket. Jesus tells the person being sued to hand over the one garment the law protected.",
+  "body": [
+   "A first-century Judean man typically owned two garments: the chitōn (tunic, worn next to the skin) and the himation (cloak, the heavy outer wrap). Exodus 22:26–27 and Deuteronomy 24:12–13 allow a lender to take the tunic in pledge but require the cloak to be returned by sunset — 'for it is his only covering... in what else will he sleep?'",
+   "Matthew's version has the opponent suing for the tunic, the pledgeable garment, and Jesus telling the debtor to give up the cloak as well — the one item Torah forbade taking. In Luke the order is reversed (a robbery rather than a lawsuit). Either way the listener is someone poor enough to be sued for their shirt.",
+   "One ostracon from Mesad Hashavyahu (7th century BC) records a field labourer's petition to a governor complaining that an official confiscated his cloak — the exact situation the law envisages, and evidence the rule was live long before Jesus quoted it."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Exod.22.26-27"},
+   {"kind": "scripture", "ref": "Deut.24.12-13"},
+   {"kind": "scripture", "ref": "Amos.2.8", "note": "garments taken in pledge as an abuse"},
+   {"kind": "archaeology", "title": "Mesad Hashavyahu (Yavneh-Yam) ostracon, c. 630 BC", "note": "a reaper's complaint that his garment was seized; Israel Museum. Published J. Naveh, IEJ 10 (1960)"}
+  ],
+  "confidence": "evidence",
+  "related": ["right-cheek-backhand"]
+ },
+ {
+  "id": "betrothal-binding",
+  "title": "Betrothed, yet needing a divorce",
+  "kind": "culture",
+  "verses": ["Matt.1.18-19", "Luke.1.27", "Luke.2.5"],
+  "summary": "Joseph is 'pledged' to Mary but plans to 'divorce' her. Jewish betrothal (erusin) was legally marriage: the couple did not yet live together, but ending it required a bill of divorce, and unfaithfulness counted as adultery.",
+  "body": [
+   "Marriage came in two stages roughly a year apart. At betrothal the man paid the bride-price and the woman was legally his wife; at the wedding (nissuin) she moved into his house. Deuteronomy 22:23–24 already treats a betrothed woman as a 'wife' and her seducer as an adulterer, and the Mishnah's tractate on betrothal (Kiddushin 1:1) opens with the three ways a woman is 'acquired' as a wife — money, a document, or intercourse.",
+   "That is why Matthew can call Joseph Mary's 'husband' (1:19) while saying they had not 'come together' (1:18), and why his options were a public accusation or a quiet bill of divorce — not simply walking away. Choosing the quiet route is what the narrator means by calling him 'righteous'."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Deut.22.23-24", "note": "the betrothed woman called 'wife'"},
+   {"kind": "scripture", "ref": "Matt.1.19", "note": "'her husband... to divorce her quietly'"},
+   {"kind": "primary", "title": "Mishnah Kiddushin 1:1", "url": "https://www.sefaria.org/Mishnah_Kiddushin.1.1", "year": "compiled c. AD 200"},
+   {"kind": "primary", "title": "Mishnah Ketubot 5:2", "url": "https://www.sefaria.org/Mishnah_Ketubot.5.2", "note": "a virgin is given twelve months from betrothal to prepare for the wedding"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "reclining-at-table",
+  "title": "Reclining at table — why her hair could reach his feet",
+  "kind": "culture",
+  "verses": ["Luke.7.36-50", "John.12.1-3", "John.13.23-25", "Mark.14.3", "Matt.26.7"],
+  "summary": "At a formal meal guests lay on couches on their left side, feet pointing away from the table. That is how a woman could anoint Jesus' feet from behind, and how John could lean back against him.",
+  "body": [
+   "Every Gospel dinner scene uses the verb 'recline' (anakeimai, katakeimai), not 'sit'. Diners lay on couches (the Greek triklinion, 'three couches', gives us the room's name) arranged around a low table, propped on the left elbow, heads toward the table and feet stretched out behind.",
+   "The arrangement explains several details that puzzle modern readers: the woman in Luke 7 stands 'behind him at his feet'; Mary in John 12 anoints his feet and wipes them with her hair; in Mark 14 the flask is poured on his head as he reclines; and in John 13 the beloved disciple can lean back on Jesus' chest to whisper a question. Dining rooms of this type have been excavated in Herodian palaces and in ordinary Jerusalem houses of the period."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.7.38", "note": "'standing behind Him at His feet'"},
+   {"kind": "scripture", "ref": "John.13.23", "note": "'reclining at Jesus' side'"},
+   {"kind": "archaeology", "title": "Triclinia at Masada, Herodium and the Jewish Quarter (Herodian Quarter) excavations, Jerusalem", "note": "1st-century BC/AD dining rooms with the U-shaped couch arrangement; see N. Avigad, Discovering Jerusalem (1983)"}
+  ],
+  "confidence": "evidence",
+  "related": ["nard-300-denarii"]
+ },
+ {
+  "id": "kataluma-guest-room",
+  "title": "'No room in the inn' — or in the guest room?",
+  "kind": "culture",
+  "verses": ["Luke.2.6-7", "Luke.22.11", "Luke.10.34"],
+  "summary": "Luke's word in 2:7 is kataluma, which he uses again for the upper 'guest room' of the Last Supper. When he means a commercial inn (Luke 10:34) he uses a different word, pandocheion.",
+  "body": [
+   "The traditional picture of an innkeeper turning the couple away rests on the translation 'inn'. But Luke knows the ordinary word for a paid inn — pandocheion, the place the Good Samaritan pays two denarii — and does not use it here. Kataluma is a lodging place or guest room; in Luke 22:11 (and Mark 14:14) it is the furnished upper room where Jesus eats the Passover.",
+   "Village houses of the period commonly had a single family room, a raised guest space, and a lower area where animals were brought in at night — with mangers cut into the floor or wall between them. On this reading Joseph and Mary were taken in by relatives in Bethlehem, the guest room was already full (a census had brought the whole clan home), and the baby was laid in the manger at the family end of the house. The lexical point is firm; the reconstruction of the house is an interpretation supported by excavated village houses of the period."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.2.7", "note": "κατάλυμα"},
+   {"kind": "scripture", "ref": "Luke.22.11", "note": "same word, 'guest room'"},
+   {"kind": "scripture", "ref": "Luke.10.34", "note": "πανδοχεῖον, a paid inn"},
+   {"kind": "lexicon", "title": "BDAG s.v. κατάλυμα: 'lodging place, guest room'", "note": "Bauer, Danker, Arndt & Gingrich, Greek-English Lexicon (3rd ed., 2000)"},
+   {"kind": "scholarship", "title": "Jesus Through Middle Eastern Eyes", "author": "Kenneth E. Bailey", "year": 2008, "note": "ch. 1, the village-house reading"}
+  ],
+  "traditions": ["'Guest room' reading: increasingly standard in modern commentaries and in the NIV (2011) and other recent translations; the 'inn' reading remains in older translations and popular tradition"],
+  "confidence": "consensus"
+ },
+ {
+  "id": "hebrew-day-evening-morning",
+  "title": "A day begins at sunset",
+  "kind": "culture",
+  "verses": ["Gen.1.5", "Lev.23.32", "Mark.1.32", "Luke.23.54"],
+  "summary": "'There was evening, and there was morning' — the Hebrew day ran from sunset to sunset, which is why the crowds wait until sundown to bring the sick on the Sabbath and why the burial of Jesus was rushed.",
+  "body": [
+   "Genesis 1 counts each day evening-first, and Leviticus 23:32 makes the rule explicit for the Day of Atonement: 'from evening to evening'. Sabbath therefore began at Friday sunset. In Mark 1:32 the townspeople of Capernaum bring their sick 'that evening, after sunset' — the moment the Sabbath ended and carrying became permissible. In Luke 23:54 the burial is hurried because 'the Sabbath was beginning' as the sun went down on Friday.",
+   "The same convention explains why Passover 'day' spans what we would call two calendar dates, and why Jewish holidays today still begin at nightfall."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Gen.1.5"},
+   {"kind": "scripture", "ref": "Lev.23.32"},
+   {"kind": "scripture", "ref": "Mark.1.32"},
+   {"kind": "scripture", "ref": "Luke.23.54"}
+  ],
+  "confidence": "evidence"
+ }
+]
