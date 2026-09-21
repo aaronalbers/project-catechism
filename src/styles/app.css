@@ -202,7 +202,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .place .conf { font-size: 11px; color: var(--muted); }
 
 /* People */
-.graph { height: 320px; border-bottom: 1px solid var(--border); background: var(--surface); }
+.graph { height: 320px; flex: none; border-bottom: 1px solid var(--border); background: var(--surface); }
 .people-list { padding: 10px 16px 30px; }
 .person { padding: 8px 0; border-bottom: 1px solid var(--border); }
 .person .name { font-weight: 600; }
