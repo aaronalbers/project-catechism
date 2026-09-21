@@ -20,6 +20,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "three": "^0.186.0",
+    "vis-data": "^8.0.5",
     "vis-network": "^10.1.2"
   },
   "devDependencies": {

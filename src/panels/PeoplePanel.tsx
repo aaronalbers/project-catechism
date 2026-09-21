@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Network, type Edge, type Node } from 'vis-network';
+import { DataSet } from 'vis-data';
 import { goTo, useStore } from '@/app/store';
 import { PEOPLE, PEOPLE_BY_ID, peopleFor, peopleInChapter } from '@/lib/content';
 import { RefChip, SourceList } from '@/components/SourceList';
@@ -63,38 +64,60 @@ export function PeoplePanel() {
   const loc = useStore((s) => s.loc);
   const here = useMemo(() => peopleFor(loc), [loc]);
   const inChapter = useMemo(() => peopleInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
-  const graphPeople = useMemo(() => neighbourhood(inChapter.length ? inChapter : here, inChapter.length > 12 ? 1 : 2), [inChapter, here]);
+  // Key the graph on the seed ids, not `here`'s identity: moving verse within a chapter keeps the same tree.
+  const seedIds = (inChapter.length ? inChapter : here).map((p) => p.id).join('|');
+  const graphPeople = useMemo(() => {
+    const seed = seedIds ? seedIds.split('|').map((id) => PEOPLE_BY_ID.get(id)!) : [];
+    return neighbourhood(seed, seed.length > 12 ? 1 : 2);
+  }, [seedIds]);
   const el = useRef<HTMLDivElement>(null);
   const net = useRef<Network | null>(null);
+  const nodeSet = useRef<DataSet<Node> | null>(null);
+  const fresh = useRef(true);
   const [selected, setSelected] = useState<Person | null>(null);
 
+  // Build the tree only when its node set changes; verse-to-verse updates restyle and pan it below.
   useEffect(() => {
     if (!el.current) return;
     const ids = new Set(graphPeople.map((p) => p.id));
     const css = getComputedStyle(document.documentElement);
-    const nodes: Node[] = graphPeople.map((p) => ({
+    const nodes = new DataSet<Node>(graphPeople.map((p) => ({
       id: p.id, label: p.name, level: p.generation,
-      color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: here.includes(p) ? css.getPropertyValue('--danger') : css.getPropertyValue('--border') },
-      borderWidth: here.includes(p) ? 3 : 1, font: { color: css.getPropertyValue('--accent-ink'), size: 13 }, shape: 'box', margin: { top: 6, right: 8, bottom: 6, left: 8 },
-    }));
-    const edges: Edge[] = graphPeople.flatMap((p) => [
+      color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: css.getPropertyValue('--border') },
+      borderWidth: 1, font: { color: css.getPropertyValue('--accent-ink'), size: 13 }, shape: 'box', margin: { top: 6, right: 8, bottom: 6, left: 8 },
+    })));
+    const edges = new DataSet<Edge>(graphPeople.flatMap((p) => [
       ...[p.father, p.mother].filter((x): x is string => !!x && ids.has(x)).map((par) => ({ id: `${par}-${p.id}`, from: par, to: p.id, arrows: 'to', color: { color: css.getPropertyValue('--muted'), opacity: 0.6 } })),
       // Alternate parentage (the two NT genealogies disagree) is drawn dashed with its citation on hover.
       ...(p.altParents ?? []).filter((a) => ids.has(a.id)).map((a) => ({ id: `alt-${a.id}-${p.id}`, from: a.id, to: p.id, arrows: 'to', dashes: true, title: `Alternate: ${a.note}`, color: { color: css.getPropertyValue('--estimate'), opacity: 0.9 } })),
       ...(p.spouses ?? []).filter((s) => ids.has(s) && s > p.id).map((s) => ({ id: `sp-${p.id}-${s}`, from: p.id, to: s, dashes: [2, 4], color: { color: css.getPropertyValue('--border'), opacity: 0.9 } })),
-    ]);
+    ]));
     net.current?.destroy();
     net.current = new Network(el.current, { nodes, edges }, {
       layout: { hierarchical: { direction: 'UD', sortMethod: 'directed', levelSeparation: 70, nodeSpacing: 110 } },
       physics: false, interaction: { hover: true, zoomView: true, dragView: true },
       nodes: { shape: 'box' },
     });
+    nodeSet.current = nodes;
+    fresh.current = true;
     net.current.on('click', (params: { nodes: string[] }) => { const id = params.nodes[0]; setSelected(id ? PEOPLE_BY_ID.get(id) ?? null : null); });
-    // Frame the verse's people with their immediate kin; the rest of the neighbourhood is a pan away.
+    return () => { net.current?.destroy(); net.current = null; nodeSet.current = null; };
+  }, [graphPeople]);
+
+  // Highlight the verse's people and glide the viewport to them. Colour/border updates don't trigger a relayout in vis-network.
+  useEffect(() => {
+    const n = net.current, nodes = nodeSet.current;
+    if (!n || !nodes) return;
+    const css = getComputedStyle(document.documentElement);
     const hereIds = new Set(here.map((p) => p.id));
+    nodes.update(graphPeople.map((p) => ({
+      id: p.id, borderWidth: hereIds.has(p.id) ? 3 : 1,
+      color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: hereIds.has(p.id) ? css.getPropertyValue('--danger') : css.getPropertyValue('--border') },
+    })));
+    // Frame the verse's people with their immediate kin; the rest of the neighbourhood is a pan away.
     const frame = graphPeople.filter((p) => hereIds.has(p.id) || (p.father && hereIds.has(p.father)) || (p.mother && hereIds.has(p.mother)) || (p.father && here.some((h) => h.father === p.father))).map((p) => p.id);
-    net.current.fit({ nodes: frame.length ? frame : undefined, animation: false, maxZoomLevel: 1.2 });
-    return () => { net.current?.destroy(); net.current = null; };
+    n.fit({ nodes: frame, maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
+    fresh.current = false;
   }, [graphPeople, here]);
 
   const list = selected ? [selected] : here.length ? here : inChapter;
