@@ -107,10 +107,17 @@ export interface ModelStep { ref: Ref; parts: string[]; basis?: string }
  * shown by the last step.
  */
 export interface ModelBuild { ref: Ref; steps: ModelStep[]; omits?: Record<string, string> }
+/**
+ * How long one of the model's units is, in metres, and whether they are cubits (the scale bar is
+ * then marked in cubits). `at` is where the size figure or hand stands, in model units, on the
+ * ground; without it the figure stands beside the model.
+ */
+export interface ModelScale { metres: number; unit?: 'cubit'; at?: [number, number, number] }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
   kind: 'procedural' | 'gltf'; procedural?: ProceduralKind; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
+  scale?: ModelScale;
   builds?: ModelBuild[];
   /** What each estimated part rests on, keyed by part name; shown with every step that adds the part, and listed under the model. */
   estimates?: Record<string, string>;

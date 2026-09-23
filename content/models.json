@@ -7,6 +7,7 @@
   "kind": "procedural",
   "procedural": "denarius",
   "dimensions": "Ø 19 mm · 3.9 g",
+  "scale": {"metres": 0.02, "at": [0, -0.5, 0]},
   "sources": [
    {"kind": "archaeology", "title": "RIC I² Tiberius 26/30; British Museum R.6195 (BMC 49)", "url": "https://commons.wikimedia.org/wiki/File:Tiberius,_R6195,_BMC_49.jpg", "note": "the Portable Antiquities Scheme photo of BMC 49 shows the type; diameters of recorded specimens cluster at 18–19 mm"},
    {"kind": "scholarship", "title": "The Metallurgy of Roman Silver Coinage", "author": "K. Butcher & M. Ponting", "year": 2014, "note": "weight standard 1/84 lb (≈3.9 g) under Augustus and Tiberius"}
@@ -21,6 +22,7 @@
   "kind": "procedural",
   "procedural": "alabastron",
   "dimensions": "≈ 18 cm tall (typical range 10–25 cm)",
+  "scale": {"metres": 0.02},
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Slender_Alabastron_LACMA_M.73.5.353.jpg/500px-Slender_Alabastron_LACMA_M.73.5.353.jpg", "caption": "Calcite alabastron, Egypt, Ptolemaic period (305–31 BC), LACMA M.73.5.353", "credit": "LACMA", "creditUrl": "https://commons.wikimedia.org/wiki/File:Slender_Alabastron_LACMA_M.73.5.353.jpg", "license": "Public domain"}
   ],
@@ -38,6 +40,7 @@
   "kind": "procedural",
   "procedural": "tetradrachm",
   "dimensions": "Ø 26 mm · 14.2 g",
+  "scale": {"metres": 0.02, "at": [0, -0.67, 0]},
   "sources": [
    {"kind": "archaeology", "title": "Tyrian shekels, 126/5 BC – AD 65/6", "note": "Y. Meshorer, A Treasury of Jewish Coins (2001), ch. on Tyrian coinage; the Isfiya hoard (1960) of c. 4,500 shekels and half-shekels"},
    {"kind": "primary", "title": "Mishnah Bekhorot 8:7", "url": "https://www.sefaria.org/Mishnah_Bekhorot.8.7", "note": "temple dues in Tyrian silver"}
@@ -52,6 +55,7 @@
   "kind": "procedural",
   "procedural": "ark",
   "dimensions": "2½ × 1½ × 1½ cubits · ≈ 111 × 67 × 67 cm",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [-2.6, 0, 0.85]},
   "builds": [
    {"ref": "Exod.25.10-22", "steps": [
     {"ref": "Exod.25.10", "parts": ["ark-chest"]},
@@ -98,6 +102,7 @@
   "kind": "procedural",
   "procedural": "tabernacle",
   "dimensions": "Court 100 × 50 cubits (≈ 44 × 22 m) · tent ≈ 30 × 10 × 10 cubits",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [52, 0, 3]},
   "builds": [
    {"ref": "Exod.25.10-30.21", "steps": [
     {"ref": "Exod.25.10", "parts": ["ark"], "basis": "placed in the Most Holy Place, where 26:33-34 puts it"},
@@ -259,6 +264,7 @@
   "kind": "procedural",
   "procedural": "noahs-ark",
   "dimensions": "300 × 50 × 30 cubits · ≈ 134 × 22 × 13 m",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [5, 0, 27]},
   "builds": [
    {"ref": "Gen.6.14-16", "steps": [
     {"ref": "Gen.6.14", "parts": ["hull", "rooms", "pitch"]},

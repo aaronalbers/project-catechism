@@ -126,6 +126,11 @@ them in CI — read it before adding content.
   part lists it in `omits` with the reason. A test fails the build if a step lies outside its passage,
   runs out of order or names a part the model lacks, if two parts share a name, if a build leaves a
   part out without `omits`, or if two parts share a material (a part fades in by fading its materials).
+- Every model gives its `scale`: how many metres one of its units is (`"unit": "cubit"` marks the scale
+  bar in cubits), and optionally `at`, where the size figure stands, somewhere that says something (the
+  tabernacle's gate, the ark's door). The viewer draws a ≈1.66 m figure beside anything over half a metre
+  and a hand, one handbreadth across the palm, beside smaller things; both are built in
+  `src/lib/models/scale.ts`, outside the model, so they are never build parts.
 - Procedural models live in `src/lib/models/`: one entry in the `BUILDERS` table in `index.ts`
   registers a model (and its `procedural` id). `kit.ts` has the shared pieces; call the material
   helpers (`gold()` …) once per part, and use `instances()` for many copies of one piece.

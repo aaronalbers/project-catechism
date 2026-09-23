@@ -7,6 +7,7 @@ import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, P
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
+import { scaleReference } from '@/lib/models/scale';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import type { BibleBook, Place, Source } from '@/lib/types';
@@ -129,6 +130,35 @@ describe('content integrity', () => {
     }
   });
 
+  // The viewer sizes its figure, hand and scale bar from `scale`, so every model says how long its unit is.
+  it('every model declares its scale', () => {
+    for (const m of MODELS) {
+      expect(m.scale?.metres, `${m.id}: no scale`).toBeGreaterThan(0);
+      if (m.scale?.at) expect(m.scale.at, `${m.id}: scale.at is not [x, y, z]`).toHaveLength(3);
+    }
+  });
+  it('small models get a hand for scale, large ones a figure, with a bar in round units', () => {
+    const at = (x: number, y: number, z: number) => new THREE.Box3(new THREE.Vector3(-x / 2, 0, -z / 2), new THREE.Vector3(x / 2, y, z / 2));
+    const placed = (r: ReturnType<typeof scaleReference>, box: THREE.Box3, where?: [number, number, number], toward?: THREE.Vector3) => r.place(r.spot(box, where, toward), box, toward);
+    const coin = scaleReference({ metres: 0.02 }, at(1, 1, 0.1));
+    expect(coin.kind).toBe('hand');
+    expect(placed(coin, at(1, 1, 0.1), [0, -0.5, 0])).toBe('2 cm, in blocks of 1 cm');
+    const noah = scaleReference({ metres: 0.445, unit: 'cubit' }, at(300, 31, 51));
+    expect(noah.kind).toBe('figure');
+    expect(placed(noah, at(300, 31, 51), [5, 0, 27])).toBe('50 cubits (≈ 22.3 m), in blocks of 10');
+    expect(placed(scaleReference({ metres: 0.445, unit: 'cubit' }, at(2.5, 2.4, 1.7)), at(2.5, 2.4, 1.7))).toBe('1 cubit (≈ 44.5 cm)');
+  });
+  // During a build the figure moves to whatever the camera frames, standing off its nearest corner.
+  it('the size figure stands clear of a framed piece, on the side toward the camera', () => {
+    const tabernacle = scaleReference({ metres: 0.445, unit: 'cubit' }, new THREE.Box3(new THREE.Vector3(-50, 0, -25), new THREE.Vector3(50, 10, 25)));
+    const table = new THREE.Box3(new THREE.Vector3(-11, 0, -3.7), new THREE.Vector3(-9, 1.6, -2.7));
+    const p = tabernacle.spot(table, undefined, new THREE.Vector3(100, 50, 100));
+    expect(p.x).toBeGreaterThan(table.max.x);
+    expect(p.z).toBeGreaterThan(table.max.z);
+    expect(p.y).toBe(0);
+    expect(tabernacle.boundsAt(p).intersectsBox(table)).toBe(false);
+    expect(tabernacle.place(p, table, new THREE.Vector3(100, 50, 100))).toBe('1 cubit (≈ 44.5 cm)');
+  });
   it('procedural models name a builder that exists', () => {
     for (const m of MODELS) if (m.kind === 'procedural') expect(isProceduralKind(m.procedural ?? ''), `${m.id}: no builder '${m.procedural}'`).toBe(true);
   });

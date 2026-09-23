@@ -8,6 +8,7 @@ import { modelBuildAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Model3D } from '@/lib/types';
 import { buildProcedural } from '@/lib/models';
+import { CUBIT_M, FIGURE_M, formatMetres, scaleReference, type ScaleReference } from '@/lib/models/scale';
 import { formatRef, type VerseLoc } from '@/lib/refs';
 
 /** A part fading and dropping into place after its verse is reached. */
@@ -16,6 +17,9 @@ const ARRIVE_MS = 700;
 /** The camera easing to frame the parts shown so far, keeping the angle the viewer chose. */
 interface Framing { from: THREE.Vector3; to: THREE.Vector3; fromDist: number; toDist: number; t0: number }
 const FRAME_MS = 900;
+/** The size reference fading out where it stood and back in beside what the camera now frames. */
+interface Move { t0: number; p: THREE.Vector3; box: THREE.Box3; toward?: THREE.Vector3; placed: boolean }
+const MOVE_OUT_MS = 300, MOVE_IN_MS = 450;
 
 /**
  * Shows the parts of `object` the text has described by `loc` (every part outside a build). A
@@ -59,19 +63,26 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, arrivals: 
  * What the camera should frame at `loc`: during a build, the objects the latest step is working
  * on — each named part's nearest ancestor flagged `userData.focus`, or the whole model if it has
  * none — so a new piece of furniture fills the view rather than the whole site. Otherwise, all
- * that is shown.
+ * that is shown. `whole` says the box is the model's, not one piece's.
  */
-function focusBox(m: Model3D, object: THREE.Object3D, loc: VerseLoc) {
+function focusBox(m: Model3D, object: THREE.Object3D, loc: VerseLoc): { box: THREE.Box3; whole: boolean } {
   const at = modelBuildAt(m, loc);
   const step = at?.build.steps[at.step - 1];
-  if (!step) return visibleBox(object);
-  const b = new THREE.Box3();
+  if (!step) return { box: visibleBox(object), whole: true };
+  const box = new THREE.Box3();
+  let whole = false;
   for (const name of step.parts) {
     let n: THREE.Object3D | null | undefined = object.getObjectByName(name);
     while (n && n !== object && !n.userData.focus) n = n.parent;
-    b.union(visibleBox(n ?? object));
+    if (!n || n === object) whole = true;
+    box.union(visibleBox(n ?? object));
   }
-  return b;
+  return { box, whole };
+}
+
+/** Fades every material of the size reference; its materials are its own, so nothing else fades. */
+function setOpacity(o: THREE.Object3D, opacity: number) {
+  for (const mat of materialsOf(o)) { mat.transparent = opacity < 1; mat.opacity = opacity; }
 }
 
 /** Bounds of what is actually drawn — `Box3.setFromObject` counts hidden meshes too. */
@@ -137,6 +148,12 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   const [cutaway, setCutaway] = useState(true);
   const cutawayRef = useRef(cutaway);
   cutawayRef.current = cutaway;
+  // A figure or hand beside the model, and a bar, for its size; see ScaleNote for what they rest on.
+  const [scaleInfo, setScaleInfo] = useState<{ kind: ScaleReference['kind']; bar: string } | null>(null);
+  const [showScale, setShowScale] = useState(true);
+  const showScaleRef = useRef(showScale);
+  showScaleRef.current = showScale;
+  const referenceRef = useRef<ScaleReference | null>(null);
   useEffect(() => {
     const host = el.current;
     if (!host) return;
@@ -168,10 +185,46 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     };
     // During a build the camera frames the object the latest step is building (see focusBox).
     let framing: Framing | null = null;
+    // The size reference stands beside what the camera frames: at the model's chosen spot when that is
+    // the whole model, otherwise off the corner of the framed piece nearest the camera. It is framed too.
+    let move: Move | null = null;
+    const moveReference = (ref: ScaleReference, p: THREE.Vector3, box: THREE.Box3, toward: THREE.Vector3 | undefined, animate: boolean) => {
+      const settled = move ? move.p : ref.group.userData.at as THREE.Vector3 | undefined;
+      if (settled?.equals(p) && (move ? move.box : ref.group.userData.box as THREE.Box3 | undefined)?.equals(box)) return;
+      ref.group.userData.at = p; ref.group.userData.box = box;
+      if (animate && settled) { move = { t0: performance.now(), p, box, toward, placed: false }; return; }
+      move = null;
+      setScaleInfo({ kind: ref.kind, bar: ref.place(p, box, toward) });
+    };
+    const stepReference = () => {
+      const ref = referenceRef.current;
+      if (!move || !ref) return;
+      const now = performance.now();
+      if (!move.placed) {
+        const k = Math.min(1, (now - move.t0) / MOVE_OUT_MS);
+        setOpacity(ref.group, 1 - k);
+        if (k < 1) return;
+        setScaleInfo({ kind: ref.kind, bar: ref.place(move.p, move.box, move.toward) });
+        move.placed = true; move.t0 = now;
+      }
+      const k = Math.min(1, (now - move.t0) / MOVE_IN_MS);
+      setOpacity(ref.group, k);
+      if (k >= 1) move = null;
+    };
     frameRef.current = (animate) => {
       const o = objectRef.current;
-      const b = o && focusBox(m, o, locRef.current);
-      if (!b || b.isEmpty()) return;
+      const f = o && focusBox(m, o, locRef.current);
+      if (!f || f.box.isEmpty()) return;
+      const b = f.box.clone(), ref = referenceRef.current;
+      if (ref?.group.visible) {
+        // The reference group sits at the model's offset, so work in the model's own coordinates.
+        const off = ref.group.position, local = f.box.clone().translate(off.clone().negate());
+        const authored = f.whole ? m.scale?.at : undefined;
+        const toward = f.whole ? undefined : local.getCenter(new THREE.Vector3()).addScaledVector(camera.position.clone().sub(controls.target).normalize(), 1e4);
+        const p = ref.spot(local, authored, toward);
+        b.union(ref.boundsAt(p).translate(off));
+        moveReference(ref, p, local, toward, animate);
+      }
       const toDist = Math.max(b.getSize(new THREE.Vector3()).length() * 1.5, 0.3);
       framing = { from: controls.target.clone(), to: b.getCenter(new THREE.Vector3()), fromDist: camera.position.distanceTo(controls.target), toDist, t0: animate ? performance.now() : -Infinity };
     };
@@ -197,7 +250,13 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     let disposed = false;
     const place = (o: THREE.Object3D) => {
       if (disposed) { disposeObject(o); return; } // a glTF that finished loading after the view closed
+      const reference = m.scale && scaleReference(m.scale, new THREE.Box3().setFromObject(o));
       scene.add(o); fit(o); objectRef.current = o;
+      if (reference) {
+        // A sibling of the model, not a part of it, moved by the same offset `fit` gave the model.
+        reference.group.position.copy(o.position); reference.group.visible = showScaleRef.current;
+        scene.add(reference.group); referenceRef.current = reference;
+      }
       const tent = o.children.filter((p) => p.userData.cutaway);
       if (tent.length) {
         cutCenter = boxOf(tent).getCenter(new THREE.Vector3());
@@ -210,7 +269,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     if (m.kind === 'procedural' && m.procedural) place(buildProcedural(m.procedural));
     else if (m.kind === 'gltf' && m.src) new GLTFLoader().load(`${import.meta.env.BASE_URL}${m.src}`, (g) => place(g.scene));
     let raf = 0;
-    const loop = () => { animateArrivals(arrivals.current); stepFraming(); controls.update(); stepCutaway(); renderer.render(scene, camera); raf = requestAnimationFrame(loop); };
+    const loop = () => { animateArrivals(arrivals.current); stepFraming(); stepReference(); controls.update(); stepCutaway(); renderer.render(scene, camera); raf = requestAnimationFrame(loop); };
     loop();
     const ro = new ResizeObserver(() => { renderer.setSize(host.clientWidth, host.clientHeight); camera.aspect = host.clientWidth / host.clientHeight; camera.updateProjectionMatrix(); });
     ro.observe(host);
@@ -218,20 +277,45 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       disposed = true;
       cancelAnimationFrame(raf); ro.disconnect(); controls.dispose();
       if (objectRef.current) disposeObject(objectRef.current);
+      if (referenceRef.current) disposeObject(referenceRef.current.group);
       scene.environment?.dispose(); pmrem.dispose();
       // Browsers cap live WebGL contexts, and a chapter can show several viewers; release this one now.
       renderer.dispose(); renderer.forceContextLoss(); host.removeChild(renderer.domElement);
-      objectRef.current = null; arrivals.current = [];
+      objectRef.current = null; referenceRef.current = null; arrivals.current = [];
     };
   }, [m]);
   useEffect(() => {
     if (objectRef.current && syncParts(m, objectRef.current, loc, arrivals.current)) frameRef.current(true);
   }, [m, loc]);
+  useEffect(() => {
+    if (!referenceRef.current) return;
+    referenceRef.current.group.visible = showScale;
+    frameRef.current(true);
+  }, [showScale]);
   return (
-    <div className="model-view" ref={el}>
-      {hasCutaway && <button type="button" className="cutaway-toggle" onClick={() => setCutaway((c) => !c)}>{cutaway ? 'Show outside' : 'Show inside'}</button>}
-      <span className="hint">drag to rotate · scroll to zoom</span>
-    </div>
+    <>
+      <div className="model-view" ref={el}>
+        <div className="model-tools">
+          {hasCutaway && <button type="button" onClick={() => setCutaway((c) => !c)}>{cutaway ? 'Show outside' : 'Show inside'}</button>}
+          {scaleInfo && <button type="button" aria-pressed={showScale} onClick={() => setShowScale((v) => !v)}>{showScale ? 'Hide scale' : 'Show scale'}</button>}
+        </div>
+        <span className="hint">drag to rotate · scroll to zoom</span>
+      </div>
+      {scaleInfo && showScale && <ScaleNote m={m} kind={scaleInfo.kind} bar={scaleInfo.bar} />}
+    </>
+  );
+}
+
+/** What the size references are and what they rest on. */
+function ScaleNote({ m, kind, bar }: { m: Model3D; kind: ScaleReference['kind']; bar: string }) {
+  const cubits = m.scale?.unit === 'cubit';
+  return (
+    <p className="scale-note">
+      {kind === 'figure'
+        ? <>Figure ≈ {formatMetres(FIGURE_M)}{cubits && <> (≈ {(FIGURE_M / CUBIT_M).toFixed(1)} cubits)</>}: the average height of a Judaean man in the first century, from skeletal remains (J. E. Taylor, <i>What Did Jesus Look Like?</i>, 2018).</>
+        : <>Hand ≈ 18 cm long: its palm is one handbreadth across (⅙ cubit, ≈ {formatMetres(CUBIT_M / 6)}), its length drawn in proportion.</>}
+      {' '}Bar: {bar}.
+    </p>
   );
 }
 
