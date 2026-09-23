@@ -8,11 +8,11 @@ const places = new Map([place('a', 30, 34), place('d', 31, 35), place('e', 31, 3
 const journey: Journey = {
   id: 'j', title: 'J', ref: 'Num.33', summary: '', sources: [], confidence: 'estimate',
   stations: [
-    { verse: 'Num.33.3', name: 'A', place: 'a' },
+    { verse: 'Num.33.3', name: 'A', place: 'a', segment: 'South' },
     { verse: 'Num.33.4', name: 'B', estimate: { basis: 'unknown' } },
     { verse: 'Num.33.5', name: 'C', estimate: { basis: 'unknown' } },
     { verse: 'Num.33.6', name: 'D', place: 'd', via: { points: [[30.5, 35]], basis: 'coast' } },
-    { verse: 'Num.33.9', name: 'E', place: 'e' },
+    { verse: 'Num.33.9', name: 'E', place: 'e', segment: 'East' },
   ],
 };
 
@@ -27,6 +27,9 @@ describe('resolveRoute', () => {
     expect(stops[4].estimate).toContain('within 50 km of D');
     expect(stops[3].leg).toEqual([stops[2].at, [30.5, 35], [31, 35]]);
     expect(stops[3].legEstimated).toBe(true);
+  });
+  it('carries a named segment forward until the next one starts', () => {
+    expect(stops.map((s) => s.segment)).toEqual(['South', 'South', 'South', 'South', 'East']);
   });
   it('finds the camp reached at a verse', () => {
     expect([2, 3, 7, 50].map((v) => stopAt(stops, v))).toEqual([-1, 0, 3, 4]);

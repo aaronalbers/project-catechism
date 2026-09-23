@@ -103,7 +103,8 @@ them in CI — read it before adding content.
 - `related` ids must resolve to an existing insight, and links read better added in both
   directions.
 
-- Itineraries (`content/journeys.json`) take each station's position from OpenBible unless
+- Itineraries and boundaries (`content/journeys.json`; `kind: 'border'` for a boundary, drawn
+  a stretch per verse and filled when `closed`) take each station's position from OpenBible unless
   it has an `estimate` (an `at` point, or none to be spaced evenly between its neighbours);
   estimates and `via` waypoints need a `basis` saying what they rest on, and the map marks
   them ≈. The build flags OpenBible's "within 50 km of X" placeholders as `approx`.

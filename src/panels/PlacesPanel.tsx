@@ -15,6 +15,17 @@ const icon = (active: boolean, approx = false) => L.divIcon({
 });
 
 const LEG_MS = 900;
+/**
+ * Keeps fitted points clear of the zoom control (top left) and the stage card (top right): beside
+ * the card when the map is wide enough, below it when it isn't.
+ */
+function fitOptions(map: HTMLElement | null, card: HTMLElement | null): L.FitBoundsOptions {
+  const w = map?.clientWidth ?? 0, c = card?.getBoundingClientRect();
+  if (!c) return { maxZoom: 8, padding: [30, 30] };
+  return w - c.width > 360
+    ? { maxZoom: 8, paddingTopLeft: [50, 16], paddingBottomRight: [c.width + 24, 16] }
+    : { maxZoom: 8, paddingTopLeft: [50, c.height + 16], paddingBottomRight: [16, 16] };
+}
 
 function confidenceLabel(p: Place) {
   if (p.approx) return `≈ position only: ${p.approx}`;
@@ -40,6 +51,9 @@ export function PlacesPanel() {
   const routeLayer = useRef<L.LayerGroup | null>(null);
   const stageList = useRef<HTMLOListElement>(null);
   const shownStop = useRef<{ journey: string; index: number } | null>(null);
+  /** The last view we chose, re-applied if the map resizes before the user takes over. */
+  const wanted = useRef<L.LatLngBounds | null>(null);
+  const stageCard = useRef<HTMLDivElement>(null);
 
   useEffect(() => { loadPlaces().then(setAll); }, []);
   useEffect(() => { loadPlacesForBook(loc.book).then(setByVerse); }, [loc.book]);
@@ -63,14 +77,21 @@ export function PlacesPanel() {
 
   useEffect(() => {
     if (!mapEl.current || map.current) return;
-    map.current = L.map(mapEl.current, { zoomControl: true, attributionControl: true }).setView([31.8, 35.2], 7);
+    map.current = L.map(mapEl.current, { zoomControl: true, attributionControl: true, zoomSnap: 0.25, zoomDelta: 0.5 }).setView([31.8, 35.2], 7);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors · places: <a href="https://www.openbible.info/geo/">OpenBible.info</a> CC-BY',
     }).addTo(map.current);
     routeLayer.current = L.layerGroup().addTo(map.current);
     layer.current = L.layerGroup().addTo(map.current);
-    return () => { map.current?.remove(); map.current = null; };
+    // The panel often settles its height after the first fit; keep our view until the user moves the map.
+    const el = mapEl.current, m = map.current;
+    const release = () => { wanted.current = null; };
+    el.addEventListener('pointerdown', release);
+    el.addEventListener('wheel', release, { passive: true });
+    const ro = new ResizeObserver(() => { m.invalidateSize(); if (wanted.current) m.fitBounds(wanted.current, { ...fitOptions(el, stageCard.current), animate: false }); });
+    ro.observe(el);
+    return () => { ro.disconnect(); el.removeEventListener('pointerdown', release); el.removeEventListener('wheel', release); map.current?.remove(); map.current = null; };
   }, []);
 
   // Place markers. Names of the places in this verse stay on the map, not just in a popup.
@@ -96,7 +117,8 @@ export function PlacesPanel() {
     else if (shown.length) m.fitBounds(L.latLngBounds(shown.map((p) => [p.lat, p.lon] as L.LatLngExpression)).pad(0.3));
   }, [here, chapter, active]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // The route: faint ahead, solid behind, and the newest leg drawn growing when reading moves on one camp.
+  // The route: faint ahead, solid behind. When reading moves forward, the legs added by the new
+  // verse grow in turn (a verse can name several points), with a marker travelling along them.
   useEffect(() => {
     const m = map.current, lg = routeLayer.current;
     if (!m || !lg) return;
@@ -104,45 +126,66 @@ export function PlacesPanel() {
     if (!journey || !stops.length) { shownStop.current = null; return; }
     const prev = shownStop.current?.journey === journey.id ? shownStop.current.index : null;
     shownStop.current = { journey: journey.id, index: cur };
-    // Fit the whole route once the panel has its final size (it may still be laying out).
-    if (prev === null) setTimeout(() => { m.invalidateSize(); m.fitBounds(L.latLngBounds(stops.map((s) => s.at)).pad(0.08)); }, 60);
+    // A route is shown whole and panned to follow; a boundary is read a stretch at a time, so the
+    // map zooms to the stretch this verse describes and pulls back to the whole once it closes.
+    const whole = L.latLngBounds(stops.flatMap((s) => s.leg)).pad(0.08);
+    const border = journey.kind === 'border';
+    const first = cur < 0 ? 0 : stops.findIndex((s) => s.verse === stops[cur].verse);
+    const complete = cur === stops.length - 1 && !!journey.closed;
+    const view = border && cur >= 0 && !complete ? L.latLngBounds(stops.slice(first, cur + 1).flatMap((s) => s.leg)).pad(0.1) : prev === null || border ? whole : null;
+    const fit = fitOptions(mapEl.current, stageCard.current);
+    if (view) { wanted.current = view; if (prev === null) m.fitBounds(view, fit); else m.flyToBounds(view, { ...fit, duration: 0.7 }); }
 
+    const animFrom = prev !== null && prev >= 0 && prev < cur && cur - prev <= 8 ? prev : cur;
     const legStyle = (s: RouteStop, done: boolean): L.PolylineOptions => ({
       className: done ? 'route-leg' : 'route-ahead', weight: done ? 3.5 : 2, interactive: false,
       dashArray: s.legEstimated ? (done ? '6 6' : '2 6') : done ? undefined : '4 6',
     });
-    stops.forEach((s, i) => { if (i > 0) L.polyline(s.leg, legStyle(s, i < cur)).addTo(lg); });
+    stops.forEach((s, i) => { if (i > 0) L.polyline(s.leg, legStyle(s, i <= animFrom)).addTo(lg); });
+    const fill = () => {
+      if (journey.closed && cur === stops.length - 1) L.polygon(stops.flatMap((s) => s.leg), { className: 'route-fill', stroke: false, interactive: false }).addTo(lg).bringToBack();
+    };
     stops.forEach((s, i) => {
       const c = L.circleMarker(s.at, {
         radius: i === cur ? 7 : 4, weight: 2, fillOpacity: 1,
         className: `route-stop${i <= cur ? ' done' : ''}${i === cur ? ' current' : ''}${s.estimate ? ' approx' : ''}`,
         dashArray: s.estimate ? '2 2' : undefined,
       }).addTo(lg);
-      c.bindTooltip(escape(stopName(s)), i === cur || i === cur - 1
-        ? { permanent: true, direction: i === cur ? 'right' : 'left', offset: [i === cur ? 8 : -8, 0], className: i === cur ? 'map-label' : 'map-label muted' }
+      // Everything named in this verse keeps its label, and so does the point it set out from.
+      // Labels alternate sides, counting back from the current point, so close neighbours don't collide.
+      const named = i >= first && i <= cur, from = i === first - 1, left = (named || from) && (cur - i) % 2 === 1;
+      c.bindTooltip(escape(stopName(s)), named || from
+        ? { permanent: true, direction: left ? 'left' : 'right', offset: [left ? -8 : 8, 0], className: i === cur ? 'map-label' : 'map-label muted' }
         : { direction: 'right', offset: [6, 0], className: 'map-label muted' });
       c.on('click', () => goTo({ book: loc.book, chapter: loc.chapter, verse: s.verse }));
     });
 
     if (cur < 0) return;
     const target = stops[cur].at;
-    if (prev !== null && !m.getBounds().pad(-0.2).contains(target)) m.panTo(target, { animate: true, duration: 0.6 });
-    if (cur === 0 || prev !== cur - 1) { if (cur > 0) L.polyline(stops[cur].leg, legStyle(stops[cur], true)).addTo(lg); return; }
+    if (!border && prev !== null && !m.getBounds().pad(-0.2).contains(target)) m.panTo(target, { animate: true, duration: 0.6 });
+    if (animFrom === cur) { fill(); return; }
 
-    // Reading advanced by exactly one camp: draw the leg growing, with a marker travelling along it.
-    const path = stops[cur].leg;
-    const line = L.polyline([path[0]], legStyle(stops[cur], true)).addTo(lg);
-    const walker = L.circleMarker(path[0], { radius: 5, weight: 2, fillOpacity: 1, className: 'route-walker', interactive: false }).addTo(lg);
+    const legs = stops.slice(animFrom + 1, cur + 1);
+    const lines = legs.map((s) => L.polyline([s.leg[0]], legStyle(s, true)).addTo(lg));
+    const lengths = legs.map((s) => s.leg.slice(1).reduce((a, p, i) => a + Math.hypot(p[0] - s.leg[i][0], p[1] - s.leg[i][1]), 0));
+    const total = lengths.reduce((a, b) => a + b, 0) || 1;
+    const walker = L.circleMarker(legs[0].leg[0], { radius: 5, weight: 2, fillOpacity: 1, className: 'route-walker', interactive: false }).addTo(lg);
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const duration = Math.min(LEG_MS * legs.length, 3200);
     const start = performance.now();
     let raf = 0;
     const step = (now: number) => {
-      const t = reduce ? 1 : Math.min(1, (now - start) / LEG_MS);
-      const eased = 1 - (1 - t) ** 3;
-      const part: LatLon[] = partialPath(path, eased);
-      line.setLatLngs(part);
-      walker.setLatLng(part[part.length - 1]);
-      if (t < 1) raf = requestAnimationFrame(step); else lg.removeLayer(walker);
+      const t = reduce ? 1 : Math.min(1, (now - start) / duration);
+      let d = (1 - (1 - t) ** 3) * total;
+      let tip: LatLon = legs[0].leg[0];
+      legs.forEach((s, i) => {
+        const part: LatLon[] = partialPath(s.leg, lengths[i] ? Math.max(0, Math.min(1, d / lengths[i])) : 1);
+        lines[i].setLatLngs(part);
+        if (d > 0) tip = part[part.length - 1];
+        d -= lengths[i];
+      });
+      walker.setLatLng(tip);
+      if (t < 1) raf = requestAnimationFrame(step); else { lg.removeLayer(walker); fill(); }
     };
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
@@ -168,18 +211,21 @@ export function PlacesPanel() {
   );
 
   const current = cur >= 0 ? stops[cur] : undefined;
+  const border = journey?.kind === 'border';
+  const first = current ? stops.findIndex((s) => s.verse === current.verse) : -1;
+  const passed = current ? stops.slice(first, cur).map((s) => s.station.name) : [];
   return (
     <div className="panel-body flush">
-      <div className="map-wrap">
+      <div className="map-wrap" data-kind={journey?.kind ?? 'route'}>
         <div className="map" ref={mapEl} role="application" aria-label="Map of places in this passage" />
         {journey && stops.length > 0 && (
-          <div className="map-stage" aria-live="polite">
+          <div className="map-stage" aria-live="polite" ref={stageCard}>
             {current ? <>
-              <small>{cur === 0 ? 'Setting out' : `Camp ${cur} of ${stops.length - 1}`}</small>
+              <small>{border ? current.segment : cur === 0 ? 'Setting out' : `Camp ${cur} of ${stops.length - 1}`}</small>
               <strong>{stopName(current)}</strong>
-              {cur > 0 && <small>from {stops[cur - 1].station.name}</small>}
+              {first > 0 && <small className="from">from {stops[first - 1].station.name}{passed.length > 0 && <> via {passed.join(', ')}</>}</small>}
               {current.estimate && <small className="est">estimated position</small>}
-            </> : <><small>{journey.title}</small><strong>{stops.length - 1} camps</strong></>}
+            </> : <><small>{journey.title}</small><strong>{border ? `${stops.length} points` : `${stops.length - 1} camps`}</strong></>}
           </div>
         )}
       </div>
@@ -187,10 +233,11 @@ export function PlacesPanel() {
         {journey && stops.length > 0 && <>
           <div className="panel-title">{journey.title}</div>
           <ol className="stages" ref={stageList}>
-            {stops.map((s, i) => (
+            {stops.map((s, i) => [
+              s.segment && s.segment !== stops[i - 1]?.segment && <li key={`seg${i}`} className="stage-segment">{s.segment}</li>,
               <li key={i} aria-current={i === cur ? 'step' : undefined} className={i < cur ? 'done' : undefined}>
                 <button onClick={() => goTo({ book: loc.book, chapter: loc.chapter, verse: s.verse })}>
-                  <span className="n">{i === 0 ? '·' : i}</span>
+                  <span className="n">{border ? i + 1 : i === 0 ? '·' : i}</span>
                   <span className="nm">{s.station.name}{s.estimate && <span className="approx" title={s.estimate}> ≈</span>}</span>
                   <span className="v">{loc.chapter}:{s.verse}</span>
                 </button>
@@ -202,8 +249,8 @@ export function PlacesPanel() {
                     {s.place && <p><a href={`https://www.openbible.info/geo/ancient/${s.place.slug}`} target="_blank" rel="noreferrer">OpenBible.info: {s.place.name}</a></p>}
                   </div>
                 )}
-              </li>
-            ))}
+              </li>,
+            ])}
           </ol>
           <p className="stage-summary"><span className="badge estimate">estimate</span> {journey.summary}</p>
           <SourceList sources={journey.sources} />

@@ -77,12 +77,18 @@ export interface Ruler { id: string; name: string; realm: string; title: string;
 /** One camp in an itinerary. Its position is OpenBible's identification of `place` unless `estimate` overrides it. */
 export interface Station {
   verse: Ref; name: string; place?: string;
+  /** Starts a named stretch ("Southern border"); later stations inherit it. */
+  segment?: string;
   /** Our own position: `at` when given, otherwise spaced evenly between the fixed stations either side. */
   estimate?: { at?: [number, number]; basis: string };
   /** Waypoints on the leg from the previous station, where geography rather than evidence decides the path. */
   via?: { points: [number, number][]; basis: string };
 }
-export interface Journey { id: string; title: string; ref: Ref; summary: string; stations: Station[]; sources: Source[]; confidence: Confidence }
+/** An ordered set of points drawn as the text names them: a journey's camps, or a boundary (`kind: 'border'`, `closed` once complete). */
+export interface Journey {
+  id: string; title: string; ref: Ref; summary: string; stations: Station[]; sources: Source[]; confidence: Confidence;
+  kind?: 'route' | 'border'; closed?: boolean;
+}
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
   kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm'; src?: string;

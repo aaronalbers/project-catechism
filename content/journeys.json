@@ -54,5 +54,42 @@
    { "verse": "Num.33.47", "name": "Mountains of Abarim", "place": "aa8275b" },
    { "verse": "Num.33.48", "name": "Plains of Moab", "place": "aca767b" }
   ]
+ },
+ {
+  "id": "num34-borders-of-canaan",
+  "title": "The borders of Canaan",
+  "kind": "border",
+  "closed": true,
+  "ref": "Num.34.1-12",
+  "confidence": "estimate",
+  "summary": "The boundary God gives Moses for the land, traced clockwise from the southern tip of the Salt Sea: west across the Negev to the Brook of Egypt, up the Mediterranean coast, east through Lebo-hamath to Hazar-enan, and back down past the Sea of Galilee and the Jordan. Named points use OpenBible.info's top-ranked identification. Where the text names a feature (the Brook, the coast, the Jordan, the Salt Sea), the line follows it. Where a point is unidentified, it is spaced between its neighbours and marked ≈. The northern points are the most debated.",
+  "sources": [
+   { "kind": "scripture", "ref": "Num.34.1-12", "note": "The boundary description itself." },
+   { "kind": "scripture", "ref": "Josh.15.1-4", "note": "Judah's southern border repeats the same line: Akrabbim, Zin, Kadesh-barnea, Hezron/Addar, Azmon, the Brook of Egypt." },
+   { "kind": "scripture", "ref": "Ezek.47.15-20", "note": "Ezekiel's ideal borders repeat the northern and eastern line: Lebo-hamath, Zedad, Hazar-enan, the Jordan." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking; courses of Wadi el-Arish and the Jordan (traced from OpenStreetMap, ODbL)." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline and lakes", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "The Mediterranean coast and the outline of the Salt Sea." }
+  ],
+  "stations": [
+   { "verse": "Num.34.3", "name": "End of the Salt Sea", "place": "abed304", "segment": "Southern border", "estimate": { "at": [31.0864, 35.4763], "basis": "'The end of the Salt Sea' is taken as its southern tip, the southern end of the Dead Sea's southern basin in the Natural Earth outline. OpenBible's point for the Salt Sea is the middle of the lake." } },
+   { "verse": "Num.34.4", "name": "Ascent of Akrabbim", "place": "a39267b" },
+   { "verse": "Num.34.4", "name": "Zin", "place": "a190097", "estimate": { "basis": "No site identified. OpenBible gives only the Wilderness of Zin as a whole, whose point lies back to the east. Placed midway between the Ascent of Akrabbim and Kadesh-barnea, the points named either side." } },
+   { "verse": "Num.34.4", "name": "South of Kadesh-barnea", "place": "ac2cef0", "estimate": { "at": [30.615, 34.425], "basis": "The border passes 'south of Kadesh-barnea', so the line is drawn about 4 km south of Ain el-Qudeirat, OpenBible's site for Kadesh." } },
+   { "verse": "Num.34.4", "name": "Hazar-addar", "place": "a3f301c" },
+   { "verse": "Num.34.4", "name": "Azmon", "place": "a8f6a28" },
+   { "verse": "Num.34.5", "name": "Brook of Egypt", "place": "a7a59b4", "estimate": { "at": [30.6938, 34.1541], "basis": "Where the line from Azmon meets Wadi el-Arish, OpenBible's leading identification of the Brook of Egypt: the upstream end of OpenBible's geometry for it, which is traced from OpenStreetMap." } },
+   { "verse": "Num.34.5", "name": "The Sea, at the mouth of the Brook", "place": "a7a59b4", "via": { "points": [[30.7537, 34.1238], [30.7769, 34.1321], [30.7917, 34.1509], [30.8177, 34.1529], [30.8401, 34.1084], [30.8821, 34.0665], [30.8963, 33.9998], [30.9241, 33.9559], [30.9524, 33.9344], [30.9547, 33.9168], [30.9809, 33.8903], [30.9845, 33.8727], [31.0374, 33.8524], [31.047, 33.8328], [31.062, 33.8362], [31.0721, 33.817], [31.0988, 33.815], [31.1017, 33.8034], [31.1369, 33.8131]], "basis": "Follows the course of Wadi el-Arish down to the Mediterranean at El-Arish, using OpenBible's geometry for it, which is traced from OpenStreetMap." } },
+   { "verse": "Num.34.6", "name": "Coast of the Great Sea", "place": "aa805fb", "segment": "Western border", "estimate": { "at": [33.3958, 35.2468], "basis": "The western border is the coastline itself, traced from the Natural Earth coastline. It is drawn as far north as the northern border's starting point, which the text does not name. That point is taken as the coast due west of Mount Hor." }, "via": { "points": [[31.2292, 34.047], [31.3266, 34.2227], [31.5346, 34.4434], [31.7655, 34.6096], [31.9516, 34.7119], [32.2807, 34.8377], [32.7245, 34.9421], [32.8142, 34.9475], [32.8414, 34.9705], [32.8266, 35.0277], [32.8583, 35.0628], [33.1013, 35.0996], [33.1403, 35.1476], [33.1769, 35.1618], [33.1702, 35.1747], [33.2248, 35.2048], [33.2546, 35.2092], [33.28, 35.1883], [33.312, 35.2248]], "basis": "Follows the Mediterranean coastline (Natural Earth, 1:10m)." } },
+   { "verse": "Num.34.7", "name": "Mount Hor", "place": "a62fa2d", "segment": "Northern border" },
+   { "verse": "Num.34.8", "name": "Lebo-hamath", "place": "a5eb047" },
+   { "verse": "Num.34.8", "name": "Zedad", "place": "aab92ca" },
+   { "verse": "Num.34.9", "name": "Ziphron", "place": "adf05b8" },
+   { "verse": "Num.34.9", "name": "Hazar-enan", "place": "a1ce1b7" },
+   { "verse": "Num.34.10", "name": "Shepham", "place": "a9ba60c", "segment": "Eastern border", "estimate": { "basis": "Unidentified. OpenBible only puts it within 100 km of Riblah. Placed midway between Hazar-enan and Riblah, the points named either side." } },
+   { "verse": "Num.34.11", "name": "Riblah", "place": "ac95bd8" },
+   { "verse": "Num.34.11", "name": "Slopes east of the Sea of Chinnereth", "place": "a562fcc", "estimate": { "at": [32.745, 35.655], "basis": "The border runs along 'the slopes east of the Sea of Chinnereth' (Galilee), so the line keeps to the rising ground a few kilometres east of its shore." }, "via": { "points": [[32.885, 35.668], [32.81, 35.662]], "basis": "Down the eastern slopes above the Sea of Galilee, a few kilometres inland of the shore." } },
+   { "verse": "Num.34.12", "name": "Salt Sea, at the Jordan's mouth", "place": "abed304", "estimate": { "at": [31.7582, 35.5585], "basis": "Where the Jordan enters the Salt Sea: the end of OpenBible's geometry for the Jordan, which is traced from OpenStreetMap." }, "via": { "points": [[32.7, 35.625], [32.7108, 35.5793], [32.6752, 35.5566], [32.5522, 35.5774], [32.5148, 35.5526], [32.4876, 35.5802], [32.4224, 35.5519], [32.401, 35.5607], [32.4007, 35.5465], [32.3839, 35.5634], [32.3219, 35.5531], [32.2113, 35.5739], [32.107, 35.5325], [32.0823, 35.5461], [32.0475, 35.5192], [31.9689, 35.5483], [31.9077, 35.5243], [31.8727, 35.5499], [31.8162, 35.5389]], "basis": "Follows the Jordan from the Sea of Galilee down to the Salt Sea, using OpenBible's geometry for the Jordan, which is traced from OpenStreetMap." } },
+   { "verse": "Num.34.12", "name": "End of the Salt Sea", "place": "abed304", "estimate": { "at": [31.0864, 35.4763], "basis": "The Salt Sea itself is the boundary from the Jordan back to its southern tip, where the southern border began, so the line closes down the length of the lake." } }
+  ]
  }
 ]

@@ -7,6 +7,8 @@ import type { Journey, Place, Station } from './types';
 export type LatLon = [number, number];
 export interface RouteStop {
   station: Station; verse: number; at: LatLon; place?: Place;
+  /** The named stretch this stop belongs to, carried forward from the last station that set one. */
+  segment?: string;
   /** Why the position is approximate, or undefined when it is OpenBible's proposed site. */
   estimate?: string;
   /** Path from the previous stop, ending at `at`; waypoints in between when the leg has `via`. */
@@ -40,7 +42,7 @@ export function resolveRoute(j: Journey, places: Map<string, Place>): RouteStop[
     const estimate = s.estimate?.basis ?? (place?.approx ? `OpenBible only places it ${place.approx}.` : undefined);
     const prev = stops[stops.length - 1];
     stops.push({
-      station: s, verse: parseRef(s.verse)?.start.verse ?? 0, at: pt, place, estimate,
+      station: s, verse: parseRef(s.verse)?.start.verse ?? 0, at: pt, place, estimate, segment: s.segment ?? prev?.segment,
       leg: prev ? [prev.at, ...(s.via?.points ?? []), pt] : [pt],
       legEstimated: !!prev && (!!s.via || !!estimate || !!prev.estimate),
     });
