@@ -18,6 +18,8 @@ export interface Place {
   id: string; name: string; slug: string; types: string[]; lat: number; lon: number; description: string;
   confidence: { score: number | null; yes: number; likely: number; possible: number };
   verses: number; wikidata: string | null;
+  /** Set when OpenBible only places it relative to somewhere else ("within 50 km of Haradah"), so the point is not a site. */
+  approx?: string;
   image: { url: string; credit: string; creditUrl: string; license: string; description: string } | null;
 }
 
@@ -72,6 +74,15 @@ export interface Speaker { id: string; ref: Ref; speaker: string; summary?: stri
 export interface ChiasmLevel { label: string; ref: Ref; text: string }
 export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; confidence: Confidence }
 export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string }
+/** One camp in an itinerary. Its position is OpenBible's identification of `place` unless `estimate` overrides it. */
+export interface Station {
+  verse: Ref; name: string; place?: string;
+  /** Our own position: `at` when given, otherwise spaced evenly between the fixed stations either side. */
+  estimate?: { at?: [number, number]; basis: string };
+  /** Waypoints on the leg from the previous station, where geography rather than evidence decides the path. */
+  via?: { points: [number, number][]; basis: string };
+}
+export interface Journey { id: string; title: string; ref: Ref; summary: string; stations: Station[]; sources: Source[]; confidence: Confidence }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
   kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm'; src?: string;

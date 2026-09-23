@@ -2,16 +2,18 @@
 // and every card carries a citation and a confidence badge. These run in CI so a typo
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
-import { CHIASMS, FRAGMENTS, INSIGHTS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, videosFor, videosForStrongs } from '@/lib/content';
+import { existsSync, readFileSync } from 'node:fs';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, videosFor, videosForStrongs } from '@/lib/content';
 import { parseRef, BOOKS } from '@/lib/refs';
-import type { Source } from '@/lib/types';
+import { resolveRoute } from '@/lib/journey';
+import type { Place, Source } from '@/lib/types';
 
 const bad = (refs: string[]) => refs.filter((r) => !parseRef(r));
 const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'data']);
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS]
+  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
 /** Matches a wikipedia.org host only — wikisource (primary texts) and wikimedia (image credits) are fine. */
@@ -30,11 +32,12 @@ describe('content integrity', () => {
       ...RULERS.flatMap((r) => r.refs),
       ...MODELS.flatMap((m) => m.verses),
       ...VIDEOS.flatMap((v) => v.verses ?? []),
+      ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
     ];
     expect(bad(all)).toEqual([]);
   });
   it('ids are unique', () => {
-    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS]) {
+    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS, JOURNEYS]) {
       const ids = list.map((x) => x.id);
       expect(new Set(ids).size, `duplicate id in ${ids.find((id, i) => ids.indexOf(id) !== i)}`).toBe(ids.length);
     }
@@ -62,6 +65,33 @@ describe('content integrity', () => {
       .filter(({ s }) => s.url && WIKIPEDIA.test(s.url))
       .map(({ id, s }) => `${id} → ${s.url}`);
     expect(offenders, 'cite the underlying source, not the encyclopaedia article').toEqual([]);
+  });
+
+  // An itinerary is drawn as a route; any position or path that is ours rather than a
+  // proposed site has to say what it rests on, because the map shows it as ≈.
+  it('journeys cite evidence, run in order, and explain every estimate', () => {
+    for (const j of JOURNEYS) {
+      expect(j.sources.some((s) => evidential.has(s.kind)), j.id).toBe(true);
+      const verses = j.stations.map((st) => parseRef(st.verse)!.start.verse);
+      expect(verses, `${j.id} stations out of order`).toEqual([...verses].sort((a, b) => a - b));
+      for (const st of j.stations) {
+        expect(st.place || st.estimate, `${j.id}: ${st.name} has neither a place nor an estimate`).toBeTruthy();
+        if (st.estimate) expect(st.estimate.basis.length, `${j.id}: ${st.name}`).toBeGreaterThan(20);
+        if (st.via) expect(st.via.basis.length && st.via.points.length, `${j.id}: ${st.name} via`).toBeTruthy();
+      }
+    }
+  });
+  // Needs `npm run data`; CI builds the data before testing.
+  const index = new URL('../../public/data/places/index.json', import.meta.url);
+  it.skipIf(!existsSync(index))('journey stations resolve to OpenBible places and form one route', () => {
+    const places = new Map((JSON.parse(readFileSync(index, 'utf8')) as Place[]).map((p) => [p.id, p]));
+    for (const j of JOURNEYS) {
+      for (const st of j.stations) if (st.place) expect(places.has(st.place), `${j.id}: ${st.name} → ${st.place}`).toBe(true);
+      const stops = resolveRoute(j, places);
+      expect(stops.length, j.id).toBe(j.stations.length);
+      // No two consecutive camps on the same spot: that is a copied placeholder, not a site.
+      for (let i = 1; i < stops.length; i++) expect(stops[i].at, `${j.id}: ${stops[i].station.name} sits on ${stops[i - 1].station.name}`).not.toEqual(stops[i - 1].at);
+    }
   });
 
   it('rulers with estimated dates say so, and writers name real books', () => {

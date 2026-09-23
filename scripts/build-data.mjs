@@ -199,10 +199,14 @@ async function buildPlaces() {
     const img = thumb && images.get(thumb.image_id);
     const hasPhoto = img?.thumbnail_url_pattern; // satellite tiles are only in the (180 MB) thumbnails.zip, so skip them
     const tags = ident.votes?.tags ?? {};
+    // "within 50 km of Haradah": OpenBible copies the neighbour's point, so flag it rather than present it as a site.
+    const desc = stripTags(ident.description ?? '');
+    const radius = /^(?:within|about) ([\d.]+) km\b/.exec(desc);
     const place = {
       id: a.id, name: a.friendly_id.replace(/ \d+$/, ''), slug: a.url_slug,
       types: a.types, lat: +lat.toFixed(5), lon: +lon.toFixed(5),
-      description: stripTags(ident.description ?? ''),
+      description: desc,
+      ...(radius && +radius[1] >= 10 ? { approx: desc } : {}),
       confidence: { score: ident.score?.vote_average ?? null, yes: tags.confidence_yes ?? 0, likely: tags.confidence_likely ?? 0, possible: tags.confidence_possible ?? 0 },
       verses: (a.verses ?? []).length,
       wikidata: a.linked_data?.s7cc8b2?.id ?? null,

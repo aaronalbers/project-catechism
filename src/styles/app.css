@@ -189,7 +189,36 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .morph { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--muted); }
 
 /* Places */
+.map-wrap { position: relative; flex: 1; min-height: 260px; display: flex; }
 .map { flex: 1; min-height: 260px; }
+.map-stage { position: absolute; left: 10px; bottom: 22px; z-index: 500; display: flex; flex-direction: column; gap: 1px; max-width: 70%; padding: 6px 10px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); pointer-events: none; }
+.map-stage strong { font-family: var(--serif); font-size: 17px; line-height: 1.2; }
+.map-stage small { font-size: 11px; color: var(--muted); }
+.map-stage .est { color: var(--estimate); font-weight: 600; }
+.leaflet-tooltip.map-label { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; font-weight: 600; font-size: 12px; box-shadow: 0 1px 3px rgb(0 0 0 / 0.25); }
+.leaflet-tooltip.map-label.muted { font-weight: 400; color: var(--muted); font-size: 11px; opacity: 0.9 !important; }
+.leaflet-tooltip.map-label::before { display: none; }
+.route-ahead { stroke: var(--muted); stroke-opacity: 0.55; }
+.route-leg { stroke: var(--danger); stroke-opacity: 0.9; stroke-linecap: round; stroke-linejoin: round; }
+.route-stop { stroke: var(--muted); fill: var(--surface); cursor: pointer; }
+.route-stop.done { stroke: var(--danger); fill: var(--danger); }
+.route-stop.approx { fill: var(--surface); }
+.route-stop.current { stroke: var(--surface); fill: var(--danger); }
+.route-walker { stroke: var(--surface); fill: var(--danger); }
+.stages { list-style: none; margin: 0 0 10px; padding: 0; max-height: 220px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; position: relative; }
+.stages li { border-bottom: 1px solid var(--border); }
+.stages li:last-child { border-bottom: 0; }
+.stages button { display: grid; grid-template-columns: 26px 1fr auto; gap: 6px; width: 100%; padding: 5px 10px; text-align: left; font-size: 14px; }
+.stages button:hover .nm { color: var(--accent); }
+.stages .n { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.stages .v { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.stages .approx { color: var(--estimate); font-weight: 600; }
+.stages li.done .nm { color: var(--muted); }
+.stages li[aria-current='step'] { background: var(--current); }
+.stages li[aria-current='step'] .nm { font-weight: 600; }
+.stage-note { padding: 0 10px 8px 42px; font-size: 12px; color: var(--muted); }
+.stage-note p { margin: 2px 0; }
+.stage-summary { font-size: 13px; color: var(--muted); margin: 0 0 6px; }
 .leaflet-container { background: #dfe6dd; font: inherit; }
 :root[data-theme='dark'] .leaflet-container, :root:not([data-theme='light']).dark-system .leaflet-container { background: #1b2420; }
 .place-list { padding: 10px 16px 30px; }

@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Model3D, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
+import type { Chiasm, Fragment, Insight, Journey, Model3D, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
 import { contains, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -15,6 +15,7 @@ import chiasms from '@content/chiasms.json';
 import rulers from '@content/rulers.json';
 import models from '@content/models.json';
 import videos from '@content/videos.json';
+import journeys from '@content/journeys.json';
 
 export const PEOPLE = people as unknown as Person[];
 export const PROPHECIES = prophecies as unknown as Prophecy[];
@@ -26,6 +27,7 @@ export const CHIASMS = chiasms as unknown as Chiasm[];
 export const RULERS = rulers as unknown as Ruler[];
 export const MODELS = models as unknown as Model3D[];
 export const VIDEOS = videos as unknown as Video[];
+export const JOURNEYS = journeys as unknown as Journey[];
 
 export const PEOPLE_BY_ID = new Map(PEOPLE.map((p) => [p.id, p]));
 export const INSIGHT_BY_ID = new Map(INSIGHTS.map((i) => [i.id, i]));
@@ -49,6 +51,7 @@ export function writersFor(book: string) { return WRITERS.filter((w) => w.books.
 export function speakerFor(loc: VerseLoc) { return SPEAKERS.filter((s) => contains(s.ref, loc)); }
 export function chiasmsFor(loc: VerseLoc) { return CHIASMS.filter((c) => contains(c.ref, loc) || c.levels.some((l) => contains(l.ref, loc))); }
 export function rulersFor(loc: VerseLoc) { return RULERS.filter((r) => anyContains(r.refs, loc)); }
+export function journeysInChapter(book: string, chapter: number) { return JOURNEYS.filter((j) => touchesChapter(j.ref, book, chapter)); }
 export function modelsFor(loc: VerseLoc) { return MODELS.filter((m) => anyContains(m.verses, loc)); }
 export function modelsInChapter(book: string, chapter: number) { return MODELS.filter((m) => m.verses.some((r) => touchesChapter(r, book, chapter))); }
 /** Verses a ref spans, roughly — only used to rank narrower passages above wider ones. */
