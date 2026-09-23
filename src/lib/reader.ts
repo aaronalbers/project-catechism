@@ -1,7 +1,7 @@
 // Verse-by-verse playback controller. Drives the store's current verse so every
 // panel follows the reading, like the old BroadcastChannel setup but in-process.
 import { useSyncExternalStore } from 'react';
-import { BrowserEngine, KokoroEngine, hasWebGPU, type Engine, type KokoroDevice } from './tts';
+import { BrowserEngine, KokoroEngine, canUseKokoroGPU, type Engine, type KokoroDevice } from './tts';
 import { loadBook } from './data';
 import { BOOKS, type VerseLoc } from './refs';
 import { getState, setState } from '@/app/store';
@@ -21,7 +21,7 @@ export interface ReaderState {
 
 const stored = <T,>(k: string, d: T): T => { try { const v = localStorage.getItem(k); return v ? (JSON.parse(v) as T) : d; } catch { return d; } };
 let rs: ReaderState = {
-  status: 'idle', engine: stored('tts.engine', 'kokoro'), device: stored('tts.device', hasWebGPU() ? 'webgpu' : 'wasm'), voice: stored('tts.voice', 'bm_george'), speed: stored('tts.speed', 1), progress: null, error: null, continuous: true,
+  status: 'idle', engine: stored('tts.engine', 'kokoro'), device: canUseKokoroGPU() ? stored<KokoroDevice>('tts.device', 'webgpu') : 'wasm', voice: stored('tts.voice', 'bm_george'), speed: stored('tts.speed', 1), progress: null, error: null, continuous: true,
 };
 const listeners = new Set<() => void>();
 function set(p: Partial<ReaderState>) {

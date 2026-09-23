@@ -6,6 +6,10 @@ export interface SpeakOptions { voice: string; speed: number; signal: AbortSigna
 /** fp32 on WebGPU is what Kokoro recommends (≈330 MB); q8 on WASM is the small, works-everywhere build (≈90 MB). */
 export type KokoroDevice = 'webgpu' | 'wasm';
 export const hasWebGPU = () => 'gpu' in navigator;
+/** Off while onnxruntime-web's WebGPU ConvTranspose miscomputes Kokoro's vocoder (the
+ *  audio comes out as loud noise; still broken on 1.30.0 — microsoft/onnxruntime#29807). */
+const KOKORO_WEBGPU_WORKS = false;
+export const canUseKokoroGPU = () => KOKORO_WEBGPU_WORKS && hasWebGPU();
 export interface Engine {
   readonly id: 'kokoro' | 'browser';
   /** Resolves when the engine can synthesize. Reports download progress 0..1 for Kokoro. */
@@ -42,7 +46,7 @@ export class KokoroEngine implements Engine {
 
   private device: KokoroDevice | null = null;
 
-  async load(onProgress?: (p: { fraction: number; label: string }) => void, device: KokoroDevice = hasWebGPU() ? 'webgpu' : 'wasm') {
+  async load(onProgress?: (p: { fraction: number; label: string }) => void, device: KokoroDevice = canUseKokoroGPU() ? 'webgpu' : 'wasm') {
     if (this.ready && this.device !== device) { this.worker?.terminate(); this.worker = null; this.ready = null; this.cache.clear(); }
     if (this.ready) return this.ready;
     this.device = device;

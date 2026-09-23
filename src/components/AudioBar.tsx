@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useStore } from '@/app/store';
 import { play, setContinuous, setDevice, setEngine, setSpeed, setVoice, stop, useReader, voicesFor } from '@/lib/reader';
-import { hasWebGPU } from '@/lib/tts';
+import { canUseKokoroGPU } from '@/lib/tts';
 import { book } from '@/lib/refs';
 import { Icon } from './Icons';
 
@@ -34,9 +34,9 @@ export function AudioBar() {
           <option value="kokoro">Kokoro</option>
           <option value="browser">Browser</option>
         </select>
-        {r.engine === 'kokoro' && (
+        {r.engine === 'kokoro' && canUseKokoroGPU() && (
           <select aria-label="Kokoro build" value={r.device} onChange={(e) => setDevice(e.target.value as 'webgpu' | 'wasm')} title="GPU: best quality and speed, 330 MB download. CPU: 90 MB, works on any device.">
-            {hasWebGPU() && <option value="webgpu">GPU · 330 MB</option>}
+            <option value="webgpu">GPU · 330 MB</option>
             <option value="wasm">CPU · 90 MB</option>
           </select>
         )}
