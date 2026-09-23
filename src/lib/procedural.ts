@@ -53,10 +53,89 @@ function alabastron(heightCm: number): THREE.Group {
   return g;
 }
 
+// Materials are made per part, so a part can fade in without fading its neighbours.
+const wood = () => new THREE.MeshStandardMaterial({ color: 0x8b5a2b, roughness: 0.8 });
+const gold = () => new THREE.MeshStandardMaterial({ color: 0xd4a640, metalness: 1, roughness: 0.28 });
+const box = (w: number, h: number, d: number, x: number, y: number, z: number, mat: THREE.Material) => {
+  const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat); b.position.set(x, y, z); return b;
+};
+/** Adds a named group to `g` — the unit a build step reveals. */
+const namedPart = (g: THREE.Group) => (name: string, ...children: THREE.Object3D[]) => {
+  const p = new THREE.Group(); p.name = name; if (children.length) p.add(...children); g.add(p); return p;
+};
+
+/**
+ * Ark of the covenant (Exod 25:10–22), in cubits (1 unit = 1 cubit). Each child is a named
+ * part so a build in content/models.json can reveal it at the verse that describes it. Only
+ * the chest and cover sizes are given in the text; every other measure is an estimate, and
+ * its basis is recorded on the step in models.json.
+ */
+function ark(): THREE.Group {
+  const g = new THREE.Group();
+  const L = 2.5, W = 1.5, H = 1.5, wall = 0.06;
+  const part = namedPart(g);
+  // An open chest — floor and four walls — so the tablets can be seen going in before the cover goes on.
+  const shell = (grow: number, mat: THREE.Material) => [
+    box(L + grow, wall + grow, W + grow, 0, (wall) / 2, 0, mat),
+    box(L + grow, H + grow, wall + grow, 0, H / 2, W / 2 - wall / 2, mat),
+    box(L + grow, H + grow, wall + grow, 0, H / 2, -W / 2 + wall / 2, mat),
+    box(wall + grow, H + grow, W + grow, L / 2 - wall / 2, H / 2, 0, mat),
+    box(wall + grow, H + grow, W + grow, -L / 2 + wall / 2, H / 2, 0, mat),
+  ];
+  part('chest', ...shell(0, wood()));
+  // "Inside and out": a gold skin slightly thicker than each wall on both faces.
+  part('overlay', ...shell(0.02, gold()));
+  const m = gold(), mh = 0.08, lip = 0.05;
+  part('moulding',
+    box(L + 2 * lip, mh, lip, 0, H - mh / 2, W / 2 + lip / 2, m), box(L + 2 * lip, mh, lip, 0, H - mh / 2, -W / 2 - lip / 2, m),
+    box(lip, mh, W, L / 2 + lip / 2, H - mh / 2, 0, m), box(lip, mh, W, -L / 2 - lip / 2, H - mh / 2, 0, m));
+  // Rings low on the long sides ("its four feet"), turned so a pole along the length passes through.
+  const ringY = 0.2, poleZ = W / 2 + 0.1, rm = gold();
+  const rings = [-1, 1].flatMap((sx) => [-1, 1].map((sz) => {
+    const r = new THREE.Mesh(new THREE.TorusGeometry(0.08, 0.018, 12, 32), rm);
+    r.rotation.y = Math.PI / 2; r.position.set(sx * (L / 2 - 0.25), ringY, sz * poleZ); return r;
+  }));
+  part('rings', ...rings);
+  const pm = gold(), poleLen = 4.5;
+  part('poles', ...[-1, 1].map((sz) => {
+    const p = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.045, poleLen, 24), pm);
+    p.rotation.z = Math.PI / 2; p.position.set(0, ringY, sz * poleZ); return p;
+  }));
+  const stone = () => new THREE.MeshStandardMaterial({ color: 0x8f8a80, roughness: 0.95 });
+  part('tablets', box(0.8, 0.12, 0.55, -0.45, wall + 0.06, 0, stone()), box(0.8, 0.12, 0.55, 0.45, wall + 0.06, 0, stone()));
+  // Cover: one handbreadth (⅙ cubit) thick, per b. Sukkah 5a — the text gives only length and width.
+  const seatT = 1 / 6, top = H + seatT;
+  part('mercy-seat', box(L, seatT, W, 0, H + seatT / 2, 0, gold()));
+  // Cherubim: the text gives no form, so these are schematic kneeling figures facing each other.
+  const cx = L / 2 - 0.3, cm = gold();
+  part('cherubim', ...[-1, 1].map((sx) => {
+    const c = new THREE.Group();
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.2, 0.55, 24), cm); body.position.y = 0.275;
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.1, 24, 16), cm); head.position.set(-sx * 0.06, 0.64, 0);
+    c.add(body, head);
+    c.position.set(sx * cx, top, 0); c.rotation.z = sx * 0.18; // leaning in, "looking toward the mercy seat"
+    return c;
+  }));
+  // Wings "spread upward, overshadowing the mercy seat": each reaches up and in until the tips nearly meet.
+  const wingShape = new THREE.Shape();
+  wingShape.moveTo(0, 0); wingShape.quadraticCurveTo(0.15, 0.55, 0.55, 0.85); wingShape.lineTo(0.9, 0.9);
+  wingShape.quadraticCurveTo(0.65, 0.6, 0.12, -0.05); wingShape.lineTo(0, 0);
+  const wingGeo = new THREE.ShapeGeometry(wingShape, 16), wm = gold();
+  wm.side = THREE.DoubleSide;
+  part('wings', ...[-1, 1].flatMap((sx) => [-1, 1].map((sz) => {
+    const w = new THREE.Mesh(wingGeo, wm);
+    w.scale.x = -sx; // grow toward the centre from either end
+    w.position.set(sx * cx, top + 0.45, sz * 0.13); w.rotation.x = sz * 0.25;
+    return w;
+  })));
+  return g;
+}
+
 export function buildProcedural(kind: NonNullable<import('./types').Model3D['procedural']>): THREE.Object3D {
   switch (kind) {
     case 'denarius': return coin(19, 1.5, 0xd6d3c9, 'TI CAESAR DIVI AVG F AVGVSTVS', 'PONTIF MAXIM');
     case 'tetradrachm': return coin(26, 3, 0xd6d3c9, 'TYPOY IEPAΣ', 'KAI AΣYΛOY');
     case 'alabastron': return alabastron(18);
+    case 'ark': return ark();
   }
 }

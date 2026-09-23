@@ -94,10 +94,15 @@ export interface Journey {
   id: string; title: string; ref: Ref; summary: string; stations: Station[]; sources: Source[]; confidence: Confidence;
   kind?: 'route' | 'border'; closed?: boolean;
 }
+/** One step of a build: the verse, and the named parts of the model it adds. `basis` says what an estimated part rests on. */
+export interface ModelStep { ref: Ref; parts: string[]; basis?: string }
+/** A passage that describes the model piece by piece; while reading it, only the parts reached so far are shown. */
+export interface ModelBuild { ref: Ref; steps: ModelStep[] }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
-  kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm'; src?: string;
+  kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm' | 'ark'; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
+  builds?: ModelBuild[];
 }
 export type VideoKind = 'overview' | 'series' | 'theme' | 'word' | 'insight' | 'commentary' | 'how-to-read' | 'podcast' | 'class' | 'short' | 'remix';
 /**

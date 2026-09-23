@@ -68,6 +68,9 @@ function key(loc: VerseLoc): number {
   return bi * 1_000_000 + loc.chapter * 1000 + loc.verse;
 }
 
+/** Orders two verses by canonical position: negative if `a` comes first. */
+export function compareLoc(a: VerseLoc, b: VerseLoc): number { return key(a) - key(b); }
+
 export function contains(ref: Ref, loc: VerseLoc): boolean {
   const r = parseRef(ref);
   if (!r) return false;

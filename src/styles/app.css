@@ -247,6 +247,10 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .model-view { height: 300px; border-radius: var(--radius); overflow: hidden; background: radial-gradient(circle at 50% 30%, var(--surface-2), var(--bg)); border: 1px solid var(--border); position: relative; }
 .model-view canvas { display: block; width: 100% !important; height: 100% !important; }
 .model-view .hint { position: absolute; right: 8px; bottom: 6px; font-size: 11px; color: var(--muted); }
+.model-view .cutaway-toggle { position: absolute; left: 8px; top: 8px; z-index: 1; padding: 4px 10px; font-size: 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+.model-view .cutaway-toggle:hover { border-color: var(--accent); }
+.card .build-progress { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+.card .build-progress small { display: block; margin-top: 2px; }
 
 /* Videos */
 .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #000; margin-bottom: 8px; }

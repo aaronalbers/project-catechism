@@ -43,5 +43,42 @@
    {"kind": "primary", "title": "Mishnah Bekhorot 8:7", "url": "https://www.sefaria.org/Mishnah_Bekhorot.8.7", "note": "temple dues in Tyrian silver"}
   ],
   "confidence": "consensus"
+ },
+ {
+  "id": "ark-of-the-covenant",
+  "title": "Ark of the covenant — built as the text describes it",
+  "verses": ["Exod.25.10-22", "Exod.37.1-9", "Exod.40.20-21", "Heb.9.4-5"],
+  "summary": "Read or play Exodus 25:10–22 (the instructions) or 37:1–9 (Bezalel making it) and the ark builds up verse by verse: the acacia chest, its gold overlay and molding, the rings, the poles, the Testimony, the mercy seat, and the cherubim with their wings. Elsewhere it is shown whole. The text gives only the chest (2½ × 1½ × 1½ cubits) and the cover (2½ × 1½); the metric size assumes a common cubit of ≈44.5 cm. Everything else, from the cover's thickness to the look of the cherubim, is reconstructed, and each such step says what it rests on.",
+  "kind": "procedural",
+  "procedural": "ark",
+  "dimensions": "2½ × 1½ × 1½ cubits · ≈ 111 × 67 × 67 cm",
+  "builds": [
+   {"ref": "Exod.25.10-22", "steps": [
+    {"ref": "Exod.25.10", "parts": ["chest"]},
+    {"ref": "Exod.25.11", "parts": ["overlay", "moulding"], "basis": "the text says a molding goes 'around it' but not where; it is placed at the top edge, where it would frame the cover"},
+    {"ref": "Exod.25.12", "parts": ["rings"], "basis": "'its four feet' (BSB) puts the rings low; the Hebrew pa'am can also mean 'corner', so some reconstructions set them higher. Ring size is not given"},
+    {"ref": "Exod.25.13-14", "parts": ["poles"], "basis": "pole length and thickness are not given; modelled at ≈4½ cubits so they stand out at both ends"},
+    {"ref": "Exod.25.16", "parts": ["tablets"], "basis": "the Testimony is the two stone tablets (Exod 31:18); their size is not given, so they are sized to lie inside"},
+    {"ref": "Exod.25.17", "parts": ["mercy-seat"], "basis": "length and width are in the text; the thickness of one handbreadth (⅙ cubit) is the Talmud's inference, b. Sukkah 5a"},
+    {"ref": "Exod.25.18-19", "parts": ["cherubim"], "basis": "the text gives no form, height or posture for the cherubim; these are schematic figures, leaning in to face each other (v. 20)"},
+    {"ref": "Exod.25.20", "parts": ["wings"], "basis": "the wings 'spread upward, overshadowing the mercy seat'; their size and shape are not given, so the tips are drawn nearly meeting over the centre"}
+   ]},
+   {"ref": "Exod.37.1-9", "steps": [
+    {"ref": "Exod.37.1", "parts": ["chest"]},
+    {"ref": "Exod.37.2", "parts": ["overlay", "moulding"], "basis": "molding placed at the top edge; the text does not say where it runs"},
+    {"ref": "Exod.37.3", "parts": ["rings"], "basis": "rings set low, at the 'feet'; the Hebrew pa'am can also mean 'corner'"},
+    {"ref": "Exod.37.4-5", "parts": ["poles"], "basis": "pole length not given; ≈4½ cubits"},
+    {"ref": "Exod.37.6", "parts": ["mercy-seat"], "basis": "thickness of one handbreadth from b. Sukkah 5a"},
+    {"ref": "Exod.37.7-8", "parts": ["cherubim"], "basis": "form of the cherubim not given; schematic"},
+    {"ref": "Exod.37.9", "parts": ["wings"], "basis": "wing size and shape not given"}
+   ]}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Exod.25.10-22", "note": "the instructions: chest and cover dimensions, overlay, molding, rings, poles, Testimony, cherubim"},
+   {"kind": "scripture", "ref": "Exod.37.1-9", "note": "the same ark made by Bezalel; the Testimony is put in only at Exod 40:20"},
+   {"kind": "primary", "title": "Babylonian Talmud, Sukkah 5a", "url": "https://www.sefaria.org/Sukkah.5a", "note": "infers the cover was one handbreadth thick, noting that 'the Torah never states its dimensions explicitly'"},
+   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈17.5 in (≈44.5 cm) used for the metric conversion"}
+  ],
+  "confidence": "estimate"
  }
 ]

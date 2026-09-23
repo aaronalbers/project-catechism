@@ -3,8 +3,9 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, videosFor, videosForStrongs } from '@/lib/content';
-import { parseRef, touchesChapter, BOOKS } from '@/lib/refs';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, modelBuildAt, videosFor, videosForStrongs } from '@/lib/content';
+import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
+import { buildProcedural } from '@/lib/procedural';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import type { BibleBook, Place, Source } from '@/lib/types';
@@ -31,7 +32,7 @@ describe('content integrity', () => {
       ...SPEAKERS.map((s) => s.ref),
       ...CHIASMS.flatMap((c) => [c.ref, ...c.levels.map((l) => l.ref)]),
       ...RULERS.flatMap((r) => r.refs),
-      ...MODELS.flatMap((m) => m.verses),
+      ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)])]),
       ...VIDEOS.flatMap((v) => v.verses ?? []),
       ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
     ];
@@ -127,6 +128,37 @@ describe('content integrity', () => {
     }
   });
 
+  it('model builds stay inside their passage, run in order, and name parts the model has', () => {
+    for (const m of MODELS) {
+      if (!m.builds) continue;
+      const names: string[] = [];
+      if (m.kind === 'procedural' && m.procedural) buildProcedural(m.procedural).traverse((o) => { if (o.name) names.push(o.name); });
+      // Parts nest, so a name used twice would reveal two things at once.
+      expect(names.filter((n, i) => names.indexOf(n) !== i), `${m.id}: duplicate part names`).toEqual([]);
+      const parts = m.kind === 'procedural' ? new Set(names) : null;
+      for (const b of m.builds) {
+        const range = parseRef(b.ref)!;
+        expect(m.verses.some((v) => contains(v, range.start) && contains(v, range.end)), `${m.id}: build ${b.ref} is outside the model's verses`).toBe(true);
+        let prev = range.start;
+        for (const st of b.steps) {
+          const r = parseRef(st.ref)!;
+          expect(contains(b.ref, r.start) && contains(b.ref, r.end), `${m.id}: step ${st.ref} is outside ${b.ref}`).toBe(true);
+          expect(compareLoc(r.start, prev), `${m.id}: step ${st.ref} is out of order`).toBeGreaterThanOrEqual(0);
+          prev = r.start;
+          expect(st.parts.length, `${m.id}: step ${st.ref} adds nothing`).toBeGreaterThan(0);
+          if (parts) for (const p of st.parts) expect(parts.has(p), `${m.id}: step ${st.ref} names unknown part '${p}'`).toBe(true);
+        }
+      }
+    }
+  });
+  it('a model builds up through its passage and is whole outside it', () => {
+    const ark = MODELS.find((m) => m.id === 'ark-of-the-covenant')!;
+    expect(modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 9 })).toBeNull();
+    expect([...modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 12 })!.parts].sort()).toEqual(['chest', 'moulding', 'overlay', 'rings']);
+    expect(modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 15 })!.step).toBe(4);
+    // Bezalel's account never puts the Testimony in; that happens at Exod 40:20.
+    expect(modelBuildAt(ark, { book: 'Exod', chapter: 37, verse: 9 })!.parts.has('tablets')).toBe(false);
+  });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);
     for (const w of WRITERS) for (const b of w.books) expect(BOOKS.some((x) => x.id === b.book), `${w.id}: ${b.book}`).toBe(true);

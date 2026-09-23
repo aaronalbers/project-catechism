@@ -117,6 +117,14 @@ them in CI — read it before adding content.
   Only one passage-level chiasm may touch a chapter (the reader draws one rail), and an
   `interpretation` chiasm names who proposed it in `traditions`, as insights do.
 
+- Models (`content/models.json`) can build as the text is read. `builds` are passages whose `steps`
+  each name the parts a verse adds, with a `basis` for anything estimated; within a build only the
+  parts reached so far are drawn, and elsewhere the model is whole. Parts are the named nodes of the
+  model and nest: naming one shows everything inside it. A test fails the build if a step lies outside
+  its passage, runs out of order or names a part the model lacks, or if two parts share a name. In a
+  procedural model, `userData.focus` marks what the camera frames while a step builds inside it, and
+  `userData.cutaway` marks parts the viewer can cut open to show what they enclose.
+
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
 the surrounding file.
 
