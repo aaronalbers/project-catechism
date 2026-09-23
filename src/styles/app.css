@@ -291,3 +291,22 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 @media (max-width: 520px) { .brand span { display: none; } .header { gap: 6px; padding: 0 10px; } .audiobar .controls select { max-width: 92px; } }
 .progress { height: 3px; background: var(--surface-2); border-radius: 2px; overflow: hidden; margin-top: 4px; }
 .progress span { display: block; height: 100%; background: var(--accent); transition: width 0.2s; }
+
+/* Whole-Bible link circle (Links tab). Chart colours validated as a categorical set against each surface. */
+:root { --link-prophecy: #2f7d4f; --link-quote: #2b6cb0; --link-xref: #b7791f; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --link-prophecy: #48a26f; --link-quote: #5a8ecb; --link-xref: #b98628; }
+.circle { margin-bottom: 18px; }
+.circle-filters { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-bottom: 8px; font-size: 12px; color: var(--muted); }
+.circle-filters .chip { gap: 6px; }
+.circle-filters .chip[aria-pressed='false'] { opacity: 0.5; text-decoration: line-through; }
+.circle-filters label { display: inline-flex; align-items: center; gap: 6px; }
+.circle-filters input[type='range'] { width: 110px; accent-color: var(--accent); }
+.circle-filters .n { color: var(--text); font-variant-numeric: tabular-nums; }
+.circle .swatch { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
+.circle-wrap { width: 100%; display: flex; justify-content: center; }
+.circle-stage { position: relative; }
+.circle-stage canvas { position: absolute; inset: 0; }
+.circle-stage canvas + canvas { cursor: pointer; touch-action: manipulation; }
+.circle-tip { position: absolute; z-index: 2; max-width: 220px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; font-size: 12px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); }
+.circle-tip .kind { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+.circle-tip small { color: var(--muted); }

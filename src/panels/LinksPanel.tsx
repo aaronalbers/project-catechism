@@ -5,6 +5,7 @@ import { chiasmsFor, fragmentsFor, propheciesFor, quotesFor, speakerFor, writers
 import { formatRef, parseRef } from '@/lib/refs';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Xrefs } from '@/lib/types';
+import { LinkCircle } from './LinkCircle';
 
 function XrefRow({ to, votes }: { to: string; votes: number }) {
   const [text, setText] = useState('');
@@ -35,6 +36,8 @@ export function LinksPanel() {
   const rulers = rulersFor(loc);
   return (
     <div className="panel-body">
+      <div className="panel-title">Links across the Bible</div>
+      <LinkCircle />
       {speakers.length > 0 && <>
         <div className="panel-title">Who is speaking</div>
         {speakers.map((s) => <div className="card" key={s.id}><h3>{s.speaker}</h3>{s.summary && <p className="summary">{s.summary}</p>}<div className="verses"><RefChip r={s.ref} /></div>{s.sources && <SourceList sources={s.sources} />}</div>)}

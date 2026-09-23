@@ -3,6 +3,8 @@
 //   interlinear/<Book>/<ch>.json Hebrew/Greek words with Strong's, morphology and BSB gloss
 //   strongs/H/<n>.json, G/<n>.json  Strong's dictionary in shards of 100 entries
 //   xrefs/<Book>.json            cross references keyed by "ch.v"
+//   circle.json                  verse counts per chapter, plus the better-attested cross
+//                                references as running verse indices, for the Links circle
 //   places/index.json, places/by-book/<Book>.json
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { spawn, execSync } from 'node:child_process';
@@ -176,6 +178,34 @@ async function buildXrefs() {
   console.log('xrefs   ', perBook.size, 'books');
 }
 
+// ---------- 4b. Whole-Bible circle ----------
+// Positions are running verse indices (verseIndex order), so the client can place a verse
+// on the circle without loading any book. Only references with at least CIRCLE_MIN_VOTES
+// reader votes are kept, and A→B / B→A pairs collapse to one chord with the higher count.
+const CIRCLE_MIN_VOTES = 20;
+async function buildCircle() {
+  const pos = new Map(verseIndex.map(([b, c, v], i) => [`${b}.${c}.${v}`, i]));
+  const chapters = [];
+  for (const [b, c] of verseIndex) {
+    if (chapters.at(-1)?.[0] !== b) chapters.push([b, []]);
+    const counts = chapters.at(-1)[1];
+    counts[c - 1] = (counts[c - 1] ?? 0) + 1;
+  }
+  const rl = createInterface({ input: createReadStream(new URL('cross_references.txt', CACHE)) });
+  const pairs = new Map();
+  for await (const line of rl) {
+    const [from, to, votes] = line.split('\t');
+    if (!from || from === 'From Verse' || +votes < CIRCLE_MIN_VOTES) continue;
+    const a = pos.get(from), b = pos.get(to.split('-')[0]);
+    if (a === undefined || b === undefined || a === b) continue;
+    const key = a < b ? `${a}.${b}` : `${b}.${a}`;
+    pairs.set(key, Math.max(pairs.get(key) ?? 0, +votes));
+  }
+  const xrefs = [...pairs].sort((x, y) => x[1] - y[1]).flatMap(([k, v]) => [...k.split('.').map(Number), v]);
+  await writeJson('circle.json', { minVotes: CIRCLE_MIN_VOTES, chapters, xrefs });
+  console.log('circle  ', pairs.size, 'chords');
+}
+
 // ---------- 5. Places ----------
 async function readJsonl(name) {
   const text = await readFile(new URL(name, CACHE), 'utf8');
@@ -228,6 +258,6 @@ async function buildPlaces() {
 
 await fetchAll();
 await buildBible();
-await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs(), buildPlaces()]);
+await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs().then(buildCircle), buildPlaces()]);
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');
