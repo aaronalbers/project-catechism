@@ -100,7 +100,7 @@ async function buildInterlinear() {
     // [original, transliteration, morphology code, morphology long, strongs, gloss, original-order index, punctuation]
     verse.w.push([
       cells.F, cells.H ?? '', cells.I ?? '', cells.J ?? '', strongs,
-      (cells.S ?? '').trim(), +(lang === 'H' ? cells.A : cells.B) || 0, (cells.T ?? '').trim(),
+      stripTags(cells.S ?? ''), +(lang === 'H' ? cells.A : cells.B) || 0, stripTags(cells.T ?? ''),
     ]);
     count++;
   };
