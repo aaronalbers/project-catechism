@@ -1,0 +1,90 @@
+[
+ {
+  "id": "jericho-jerusalem-ascent",
+  "title": "'A man was going down from Jerusalem to Jericho'",
+  "kind": "geography",
+  "verses": ["Luke.10.30-37", "Luke.18.35", "Luke.19.28", "Mark.10.46", "Josh.18.17"],
+  "summary": "The road in the parable drops about a kilometre in vertical height over some 27 km of bare limestone gorge. 'Down' is not a figure of speech, and the terrain explains both the bandits and why a priest could be travelling that way at all.",
+  "body": [
+   "Jericho sits at roughly 250 m below sea level, the lowest city on earth. Jerusalem stands at about 750 m above it. The Roman-period road between them ran some 27 km through the Judean wilderness, climbing about 1,000 m — an average gradient near 4%, with much steeper stretches. Luke's 'going down' and 'going up' (Luke 10:30; 19:28) are simple description.",
+   "The route threads the head of the Wadi Qelt, a narrow limestone gorge with blind bends and high sides. Jerome calls the ascent Adummim, 'the ascent of blood', and the older name in Joshua 18:17 is Maaleh Adummim, the red ascent — most likely from the colour of the rock, but the reputation was old. Josephus and later travellers record it as a place where travellers were robbed. A lone man on that road, beaten and left, would be out of sight of anyone more than a bend away.",
+   "The priest and the Levite are not passing by coincidence. Jericho was a priestly town: many of the twenty-four priestly courses lived there and travelled up to Jerusalem for their weeks of temple service and home again. The parable's first two travellers are exactly who you would expect on that road, which is part of its point.",
+   "The elevations are modern survey figures and the road length depends on which line you trace; both are given here as approximations."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Wadi_Qelt_IMG_1734.jpg/500px-Wadi_Qelt_IMG_1734.jpg", "caption": "The Wadi Qelt, the gorge carrying the old road between Jericho and Jerusalem.", "credit": "بدارين, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Wadi_Qelt_IMG_1734.jpg", "license": "CC BY-SA 4.0"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.10.30", "note": "'a man was going down from Jerusalem to Jericho'"},
+   {"kind": "data", "title": "Elevations: Jericho ≈-250 m, Jerusalem ≈750 m above sea level", "note": "modern survey values; the historic road length of ≈27 km is approximate"},
+   {"kind": "primary", "title": "Josephus, Jewish War 4.474", "author": "Flavius Josephus", "year": "c. AD 75", "note": "describes the descent to Jericho as rugged and desolate"},
+   {"kind": "scripture", "ref": "Josh.18.17", "note": "the boundary passes 'the ascent of Adummim'"}
+  ],
+  "confidence": "evidence",
+  "related": ["two-denarii-innkeeper"]
+ },
+ {
+  "id": "galilee-squalls",
+  "title": "Why the Sea of Galilee turns violent so fast",
+  "kind": "geography",
+  "verses": ["Mark.4.35-41", "Matt.8.23-27", "Luke.8.22-25", "Matt.14.24", "John.6.18"],
+  "summary": "A warm lake 210 m below sea level, ringed by cold highlands 700 to 2,800 m above it, with wind funnelled down steep ravines. Fishermen who had worked it all their lives being frightened by a squall is not surprising — it is meteorology.",
+  "body": [
+   "The lake is small: about 21 km long, 13 km wide, 43 m deep at most. Its surface sits roughly 210 m below sea level, in a rift valley. To the east the Golan plateau rises to more than 700 m within a few kilometres of the shore; to the north-east Mount Hermon reaches 2,814 m.",
+   "The lake surface holds warm, humid air. When cold, dry air off those uplands spills over the rim — most often on an easterly — it is denser, so it drops through the ravines and wadis and spreads across the water while the warm air is forced up. The narrow valleys funnel and accelerate it. The result is a squall that arrives with little warning over open water and can raise steep short waves within half an hour, in a boat with a metre of freeboard.",
+   "This is the ordinary behaviour of the basin, still reported by sailors on the lake today, and it is why the Gospels have more than one storm scene there. It also sharpens what the narratives are actually claiming: Mark 4:38 notes that experienced Galilean fishermen were the ones who panicked, and 4:39 that what stopped was not just the waves but the wind.",
+   "The physical measurements are survey data. The description of the mechanism is the standard meteorological account of the basin rather than a measurement of any particular storm, so this card is filed as consensus."
+  ],
+  "sources": [
+   {"kind": "data", "title": "Sea of Galilee: surface ≈-210 m, length ≈21 km, width ≈13 km, maximum depth ≈43 m", "note": "Israel Hydrological Service survey values; lake level fluctuates by several metres"},
+   {"kind": "data", "title": "Surrounding relief: Golan plateau >700 m, Mount Hermon 2,814 m"},
+   {"kind": "scripture", "ref": "Mark.4.37", "note": "'a fierce windstorm arose, and the waves were breaking over the boat'"}
+  ],
+  "confidence": "consensus",
+  "related": ["galilee-boat"]
+ },
+ {
+  "id": "hinnom-gehenna",
+  "title": "Gehenna is a valley — and it was not the city rubbish dump",
+  "kind": "geography",
+  "verses": ["Matt.5.22", "Matt.5.29-30", "Matt.10.28", "Matt.18.9", "Mark.9.43-48", "Jer.7.31-32", "Jer.19.2-6", "2Kgs.23.10", "2Chr.28.3"],
+  "summary": "The word behind 'hell' in the Gospels is Ge-Hinnom, a real ravine on the south-west side of Jerusalem. The commonly repeated explanation that it was a perpetually burning garbage dump has no ancient evidence behind it at all — it starts with a rabbi in about AD 1200.",
+  "body": [
+   "Gehenna transliterates the Aramaic Ge-Hinnam, from Hebrew Ge ben-Hinnom, 'the valley of the son of Hinnom'. It is a specific place: the ravine curving round the south and west of the Old City, meeting the Kidron below the City of David. In Joshua 15:8 and 18:16 it is simply a boundary marker.",
+   "What made the name terrible is what happened there. 2 Kings 23:10 says Josiah defiled Topheth 'which is in the Valley of the Son of Hinnom, so that no one could make his son or his daughter pass through the fire to Molech'; 2 Chronicles 28:3 and 33:6 name Ahaz and Manasseh as kings who did. Jeremiah 7:31-32 and 19:6 pronounce that the place will be renamed the Valley of Slaughter and used as a burial ground until there is no room left. By the intertestamental period (1 Enoch 27, 90) the valley's name had become the name of the place of final judgement, and that is how the Gospels use it.",
+   "The dump story deserves a plain correction, because it is in many study Bibles and commentaries. There is no reference in the Hebrew Bible, the Apocrypha, Josephus, the Dead Sea Scrolls, the Mishnah or the Talmud to Jerusalem's refuse being burned in the Hinnom valley, and no archaeological deposit of the kind has been identified there. The earliest known statement of it is in Rabbi David Kimhi's commentary on Psalm 27, written around AD 1200 — more than a millennium after the Gospels. The image is vivid and it may even be a fair analogy, but it is a medieval guess presented as first-century background, and this card marks it as such.",
+   "The biblical associations are quite enough without it: child sacrifice, a prophet's curse, and a valley of corpses outside the walls."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Jerusalem-Hinnom-Kidron-Old-City-323.jpg/500px-Jerusalem-Hinnom-Kidron-Old-City-323.jpg", "caption": "The Hinnom valley below the south-west corner of the Old City of Jerusalem.", "credit": "Bukvoed, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-Hinnom-Kidron-Old-City-323.jpg", "license": "CC BY 4.0"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "2Kgs.23.10", "note": "Josiah defiles Topheth in the Valley of the Son of Hinnom"},
+   {"kind": "scripture", "ref": "Jer.7.31-32", "note": "'it will be called the Valley of Slaughter'"},
+   {"kind": "primary", "title": "David Kimhi (Radak), commentary on Psalm 27", "author": "Rabbi David Kimhi", "year": "c. AD 1200", "note": "the earliest known source for the burning-refuse explanation"},
+   {"kind": "scholarship", "title": "Gehenna: The Topography of Hell", "author": "Lloyd R. Bailey", "year": 1986, "note": "Biblical Archaeologist 49 — traces the rubbish-dump claim to Kimhi and finds no earlier evidence"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "going-up-to-jerusalem",
+  "title": "You always go up to Jerusalem",
+  "kind": "geography",
+  "verses": ["Ps.122.1-4", "Ps.120.1", "Luke.2.41-42", "Luke.18.31", "Mark.10.32-33", "Acts.15.2", "Acts.11.2"],
+  "summary": "Scripture speaks of going up to Jerusalem and down from it regardless of the compass direction — from Galilee in the north, from Jericho in the east, from Egypt in the south. The city stands on a ridge, and the language follows the ground before it follows anything else.",
+  "body": [
+   "Jerusalem sits on the central hill country at roughly 750 m above sea level, with ground falling away on three sides: to the Jordan rift in the east, the Shephelah and coastal plain in the west, and the desert in the south. Every approach is a climb. So Galileans travelling south 'go up' (Luke 2:42), Paul returning from Antioch in the north 'goes up' (Acts 15:2), and the good Samaritan's traveller heading east and downhill 'goes down' (Luke 10:30).",
+   "Because the geography was constant, the idiom hardened into vocabulary. The Hebrew verb alah, 'go up', became the technical term for pilgrimage; the three pilgrim feasts are the regalim, and the noun aliyah, 'a going up', is still the ordinary Hebrew word for immigrating to the land and for being called up to read the Torah.",
+   "Psalms 120-134 carry the heading shir hammaalot, 'a song of ascents' — most probably sung by pilgrims on the way up, though the heading has also been read as referring to steps in the temple or to a poetic device in which each verse steps up from the last. That range of readings is worth noting, but it does not affect the plain geography behind the phrase.",
+   "Once you have the picture, a number of lines read differently. 'Behold, we are going up to Jerusalem' (Mark 10:33) is a man announcing the last stage of a climb he knows ends at a cross; Psalm 122:1, 'let us go to the house of the LORD', is the start of a walk, not a sentiment."
+  ],
+  "sources": [
+   {"kind": "data", "title": "Jerusalem: ≈750 m above sea level on the central ridge", "note": "modern survey; the Temple Mount platform is somewhat lower than the western hill"},
+   {"kind": "scripture", "ref": "Luke.2.42", "note": "'they went up according to the custom of the feast'"},
+   {"kind": "lexicon", "title": "Strong's H5927 (alah, 'to go up, ascend')", "note": "the root behind aliyah and the 'songs of ascents' heading"},
+   {"kind": "scripture", "ref": "Mark.10.32", "note": "'they were on the road, going up to Jerusalem'"}
+  ],
+  "confidence": "evidence",
+  "related": ["jericho-jerusalem-ascent"]
+ }
+]

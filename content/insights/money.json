@@ -20,7 +20,7 @@
    {"kind": "scholarship", "title": "The Metallurgy of Roman Silver Coinage: From the Reform of Nero to the Reform of Trajan", "author": "Kevin Butcher & Matthew Ponting", "year": 2014, "note": "Julio-Claudian denarii assay at roughly 97–98% silver"}
   ],
   "confidence": "evidence",
-  "related": ["nard-300-denarii", "ten-thousand-talents", "widows-two-lepta"]
+  "related": ["nard-300-denarii", "ten-thousand-talents", "widows-two-lepta", "lost-drachma", "tyrian-shekel-temple-tax"]
  },
  {
   "id": "nard-300-denarii",
@@ -86,7 +86,7 @@
    {"kind": "primary", "title": "Roman denominations: 4 quadrantes = 1 as; 16 asses = 1 denarius", "note": "the as-to-denarius ratio was fixed at 16:1 from 141 BC"}
   ],
   "confidence": "evidence",
-  "related": ["denarius-days-wage"]
+  "related": ["denarius-days-wage", "tyrian-shekel-temple-tax", "lost-drachma"]
  },
  {
   "id": "temple-tax-stater",
@@ -107,7 +107,7 @@
    {"kind": "archaeology", "title": "Tyrian shekels and half-shekels, 126 BC – AD 66", "note": "hoards from Judea (e.g. the Isfiya hoard, 1960: c. 4,500 Tyrian coins) show the type circulating in quantity for the tax"}
   ],
   "confidence": "evidence",
-  "related": ["thirty-pieces-of-silver"]
+  "related": ["thirty-pieces-of-silver", "tyrian-shekel-temple-tax"]
  },
  {
   "id": "thirty-pieces-of-silver",
@@ -127,7 +127,7 @@
   ],
   "confidence": "estimate",
   "traditions": ["All major traditions read Exodus 21:32 and Zechariah 11 as the background; the coin identification is scholarly conjecture"],
-  "related": ["temple-tax-stater", "denarius-days-wage"]
+  "related": ["temple-tax-stater", "denarius-days-wage", "joseph-twenty-shekels"]
  },
  {
   "id": "two-denarii-innkeeper",
@@ -143,6 +143,73 @@
    {"kind": "scripture", "ref": "Matt.20.2", "note": "denarius as a day's wage"}
   ],
   "confidence": "estimate",
-  "related": ["denarius-days-wage"]
+  "related": ["denarius-days-wage", "jericho-jerusalem-ascent"]
+ },
+ {
+  "id": "joseph-twenty-shekels",
+  "title": "Twenty shekels for Joseph — and why the number keeps rising",
+  "kind": "money",
+  "verses": ["Gen.37.28", "Exod.21.32", "Lev.27.1-8", "Zech.11.12-13"],
+  "summary": "Joseph is sold for twenty shekels of silver, Exodus fixes the compensation for a gored slave at thirty, and Assyrian records of a few centuries later run to fifty or sixty. Each figure sits where the documented market price sat at that time.",
+  "body": [
+   "Genesis 37:28 prices Joseph at twenty shekels of silver. Exodus 21:32 sets thirty shekels as what an ox's owner pays when the animal gores someone else's slave. Leviticus 27:3-7 scales vow-valuations from three to fifty shekels by age and sex. Zechariah 11:12-13 has a shepherd paid off with thirty pieces of silver and calls it a contemptible sum.",
+   "Cuneiform sale contracts give an independent price curve. In the Third Dynasty of Ur, around 2100-2000 BC, ten shekels is the commonest price for a slave. Through the first half of the second millennium — roughly 1800-1700 BC, the Old Babylonian period — twenty shekels is the standard figure, and Hammurabi's laws assume it. Texts from Nuzi and Ugarit in the later second millennium sit around thirty. By about 1000 BC Assyrian documents are recording fifty to sixty shekels for a male slave, and Persian-period prices are higher still.",
+   "So the biblical figures are not a flat set of round numbers: twenty, thirty and the Leviticus scale each land near the going rate for the era each text is set in. Kenneth Kitchen pressed this as an argument that the traditions preserve authentic period detail rather than being composed wholesale at a much later date.",
+   "Two cautions, because the argument is often overstated. The correlation shows that the figures are plausible for those periods; it cannot by itself date the writing of the texts, since a later author could use traditional numbers. And prices varied by region, by the health and skill of the person sold, and by whether the sale was distressed — the 'standard' figures are averages across scattered contracts, so this card is marked as consensus rather than evidence."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Gen.37.28", "note": "'they sold Joseph to the Ishmaelites for twenty shekels of silver'"},
+   {"kind": "primary", "title": "Laws of Hammurabi §§116, 214, 252", "year": "c. 1750 BC", "note": "assume a slave valuation around twenty shekels"},
+   {"kind": "scholarship", "title": "Slavery in the Ancient Near East", "author": "Isaac Mendelsohn", "year": 1949, "note": "the collected contract prices by period"},
+   {"kind": "scholarship", "title": "On the Reliability of the Old Testament", "author": "Kenneth A. Kitchen", "year": 2003, "note": "sets out the rising price sequence against Gen 37:28, Exod 21:32 and Lev 27"}
+  ],
+  "confidence": "consensus",
+  "related": ["thirty-pieces-of-silver", "denarius-days-wage"]
+ },
+ {
+  "id": "tyrian-shekel-temple-tax",
+  "title": "Why there were money changers in the temple at all",
+  "kind": "money",
+  "verses": ["Matt.21.12-13", "Mark.11.15-17", "John.2.13-16", "Exod.30.13-15", "Matt.17.24-27"],
+  "summary": "The annual half-shekel had to be paid in Tyrian silver — the purest coin in circulation, and one stamped with a pagan god. Every pilgrim arriving with Roman or provincial money therefore had to change it first, which is what the tables were for.",
+  "body": [
+   "Exodus 30:13-15 requires every man counted in Israel to give half a shekel 'according to the shekel of the sanctuary'. By the Second Temple period this was an annual levy, collected before Passover, and the Mishnah rules that the sanctuary dues are reckoned 'in Tyrian coinage' (Bekhorot 8:7).",
+   "The reason was metallurgical. From about 126 BC the mint of Tyre struck shekels and half-shekels of unusually pure silver — assays put them at roughly 94-97% — and held that standard for well over a century, while Roman provincial silver was debased. For a fixed weight-based temple due, a coin whose silver content could be relied on was worth insisting on.",
+   "The irony was not lost on anyone. The Tyrian shekel carries the head of Melqart-Heracles on the obverse and an eagle on the reverse, with the legend 'of Tyre the holy and inviolable'. The purest coin available for the temple of the God of Israel was a coin bearing a Phoenician god.",
+   "So the moneychangers were performing a necessary service: pilgrims arriving with denarii, drachmas or local bronze could not pay the levy directly. The Gospels' complaint is not that the exchange existed but what it had become — 'you have made it a den of robbers' (Mark 11:17, quoting Jeremiah 7:11), a charge about the commission taken and the place it was taken in rather than about currency conversion as such.",
+   "The same coinage stands behind Matthew 17:24-27, where the two-drachma tax for two men is settled with a single stater — a Tyrian shekel being worth four drachmas."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Huseifa_hoard_-_Tyrian_shekel_%281%29.JPG/500px-Huseifa_hoard_-_Tyrian_shekel_%281%29.JPG", "caption": "A Tyrian shekel from the Huseifa hoard, Israel. Obverse: the head of Melqart. This is the coinage the temple required for the half-shekel due.", "credit": "Hanay, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Huseifa_hoard_-_Tyrian_shekel_(1).JPG", "license": "CC BY-SA 3.0"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Exod.30.13", "note": "'half a shekel according to the shekel of the sanctuary'"},
+   {"kind": "primary", "title": "Mishnah, Bekhorot 8:7", "note": "'all are in the shekel of the sanctuary, in Tyrian coinage'"},
+   {"kind": "archaeology", "title": "Tyrian shekels and half-shekels, struck c. 126 BC - AD 65", "note": "hoards from Israel including Huseifa and Qumran; silver fineness ≈94-97%"},
+   {"kind": "scripture", "ref": "Mark.11.15", "note": "'he overturned the tables of the money changers'"}
+  ],
+  "confidence": "evidence",
+  "related": ["temple-tax-stater", "denarius-days-wage", "widows-two-lepta"]
+ },
+ {
+  "id": "lost-drachma",
+  "title": "The lost coin, and why she lit a lamp to find it",
+  "kind": "money",
+  "verses": ["Luke.15.8-10"],
+  "summary": "A drachma was about a day's wage, so one of ten was ten per cent of a small household's reserve. Sweeping a windowless single-room house by lamplight for it was a rational response, not an extravagant one.",
+  "body": [
+   "The Greek drachma was roughly equivalent in value to the Roman denarius, and Jesus prices a day's labour at a denarius elsewhere (Matthew 20:2). Ten drachmas is therefore something like a fortnight's earnings for a labourer — and for the woman in the parable, evidently the whole of what she has.",
+   "The lamp and the broom are the realistic part. A village house of the period was typically one room with a beaten-earth or rough stone floor and one small high window or none; even at midday the corners were dark. A small silver coin lost in that floor would not be found by looking. So she lights a lamp — an expense in itself, since lamp oil cost money — sweeps the floor to hear it move, and searches carefully until she finds it.",
+   "There is a further suggestion often made about the ten coins: that they were a woman's marriage headdress or dowry ornament, strung as a set, so that losing one spoiled the whole. This is possible and is attested in later Near Eastern custom, but Luke says nothing of it and no first-century evidence establishes it for Galilee. It is noted here as a suggestion, not a fact.",
+   "The parable's force needs neither embellishment. The sum is small to a rich hearer and serious to a poor one, and the point of the pairing with the lost sheep is that the search is proportionate to what the searcher can afford to lose — which in the third parable of the chapter turns out to be a son."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.15.8", "note": "'or what woman, having ten silver coins, if she loses one...'"},
+   {"kind": "lexicon", "title": "Strong's G1406 (drachme)", "note": "Greek silver coin, in the first century roughly equal in value to the Roman denarius"},
+   {"kind": "scripture", "ref": "Matt.20.2", "note": "a denarius as the agreed day's wage"},
+   {"kind": "scholarship", "title": "Poet and Peasant / Through Peasant Eyes", "author": "Kenneth E. Bailey", "year": 1983, "note": "on the single-room house and the search; also the source of the dowry-headdress suggestion, which Bailey presents as a possibility"}
+  ],
+  "confidence": "evidence",
+  "related": ["denarius-days-wage", "widows-two-lepta"]
  }
 ]

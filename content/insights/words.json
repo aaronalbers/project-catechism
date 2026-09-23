@@ -47,8 +47,8 @@
    {"kind": "primary", "title": "Erasmus, Annotations on the New Testament (1516), on Matthew 3:2", "author": "Desiderius Erasmus", "year": 1516},
    {"kind": "primary", "title": "Martin Luther, Ninety-five Theses, Thesis 1", "author": "Martin Luther", "year": 1517, "url": "https://www.projectwittenberg.org/pub/resources/text/wittenberg/luther/web/ninetyfive.html"}
   ],
-  "traditions": ["Catholic tradition retains 'penance' as the sacramental expression of repentance while accepting the lexical sense; Protestant traditions emphasise the inner turning"],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "traditions": ["Catholic tradition retains 'penance' as the sacramental expression of repentance while accepting the lexical sense; Protestant traditions emphasise the inner turning"]
  },
  {
   "id": "word-g976-biblos-geneseos",
@@ -67,7 +67,8 @@
    {"kind": "primary", "title": "Septuagint (LXX) Genesis 2:4; 5:1", "note": "Αὕτη ἡ βίβλος γενέσεως…"},
    {"kind": "scholarship", "title": "The Gospel According to Saint Matthew (ICC), vol. 1", "author": "W. D. Davies & Dale C. Allison", "year": 1988, "note": "on 1:1"}
   ],
-  "confidence": "consensus"
+  "confidence": "consensus",
+  "related": ["word-h8414-tohu-wabohu"]
  },
  {
   "id": "word-fourteen-david",
@@ -84,8 +85,8 @@
    {"kind": "scripture", "ref": "1Chr.3.10-16", "note": "the full royal line, showing the omissions"},
    {"kind": "scholarship", "title": "The Gospel According to Saint Matthew (ICC), vol. 1", "author": "W. D. Davies & Dale C. Allison", "year": 1988, "note": "excursus on the genealogy; the gematria explanation"}
   ],
-  "traditions": ["Gematria reading: most modern commentators across traditions; alternatives noted above"],
-  "confidence": "interpretation"
+  "confidence": "interpretation",
+  "traditions": ["Gematria reading: most modern commentators across traditions; alternatives noted above"]
  },
  {
   "id": "word-g3107-makarios",
@@ -101,6 +102,112 @@
    {"kind": "lexicon", "title": "Strong's G3107", "note": "'supremely blest; by extension fortunate, well off'"},
    {"kind": "scripture", "ref": "Ps.1.1", "note": "אַשְׁרֵי — LXX μακάριος"},
    {"kind": "scripture", "ref": "Luke.1.68", "note": "εὐλογητός, the other 'blessed'"}
+  ],
+  "confidence": "evidence",
+  "related": ["word-h2617-hesed"]
+ },
+ {
+  "id": "word-h3068-yhwh-lord",
+  "title": "Why your Bible prints LORD in small capitals",
+  "kind": "word",
+  "verses": ["Exod.3.13-15", "Exod.6.2-3", "Deut.6.4", "Ps.23.1", "Gen.2.4"],
+  "summary": "'LORD' in small capitals is not a title. It marks the four Hebrew letters YHWH — the personal name God gives Moses — which Jewish tradition reads aloud as Adonai, and which nearly every English Bible therefore renders with the substitute word rather than the name.",
+  "body": [
+   "The Hebrew Bible uses two different things where English prints 'Lord'. One is adon/Adonai, an ordinary word meaning lord or master. The other is the four consonants YHWH — the Tetragrammaton, Strong's H3068 — which Exodus 3:15 presents as God's own name: 'this is my name forever, and thus I am to be remembered throughout all generations'. It occurs around 6,800 times.",
+   "By the Second Temple period the name was not pronounced in ordinary reading, and Adonai was said in its place. When the Masoretes added vowel points to the consonantal text in the early Middle Ages, they pointed YHWH with the vowels of the word to be said instead — a standing substitution technical enough to have its own name, qere perpetuum. Read those vowels with those consonants and you get the hybrid form 'Jehovah', which entered Christian usage in the sixteenth century and is a mechanical artefact of the notation rather than an ancient pronunciation. The reconstruction 'Yahweh' is a scholarly proposal from transliterations in early Greek writers; it is a reasoned estimate, not a recovered fact.",
+   "The Greek Septuagint had already rendered the name kyrios, 'lord'; the Vulgate used Dominus; Tyndale and the English tradition after him used LORD in capitals to keep the distinction visible on the page. So the typography is a translation decision with a long history behind it, and it is doing real work: LORD is the name, Lord is the title.",
+   "Once you can see it, verses change shape. Psalm 110:1, 'the LORD says to my Lord', is two different words. Exodus 6:3 turns on the name itself. And Deuteronomy 6:4 — 'Hear, O Israel: the LORD our God, the LORD is one' — is a statement about a named person, not a generic one.",
+   "Note on this reader: the Berean Standard Bible used here follows the same convention, so wherever you see LORD in small capitals in the text, the Hebrew underneath is YHWH."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's H3068 (YHWH) and H136 (Adonai)", "note": "the two words English renders LORD and Lord"},
+   {"kind": "scripture", "ref": "Exod.3.15", "note": "'this is my name forever'"},
+   {"kind": "primary", "title": "Masoretic vowel pointing of the Tetragrammaton (qere perpetuum)", "note": "vowels of Adonai written with the consonants YHWH; the source of the form 'Jehovah'"},
+   {"kind": "scholarship", "title": "The Septuagint's rendering of the Tetragrammaton as kyrios", "note": "the Greek precedent behind Dominus and English 'LORD'"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "word-h2617-hesed",
+  "title": "חֶסֶד (hesed) — loyalty that was never owed",
+  "kind": "word",
+  "verses": ["Ruth.1.8", "Ruth.2.20", "Ruth.3.10", "Exod.34.6", "Ps.136.1", "Hos.6.6", "Mic.6.8"],
+  "summary": "No single English word carries it: mercy, lovingkindness, steadfast love, covenant faithfulness have all been tried. The nearest sense is kindness a person keeps showing when nothing any longer compels them to.",
+  "body": [
+   "Hesed (Strong's H2617) appears about 250 times. The King James used 'mercy' and Coverdale coined 'lovingkindness'; modern versions favour 'steadfast love' or 'faithful love'; the Septuagint mostly chose eleos, 'mercy', which pulled later readings toward pity. Each catches part of it and loses part.",
+   "The word does two things at once that English separates. It is warm — real kindness, not mere legal performance — and it is durable, the behaviour of someone who does not stop. It usually occurs inside a relationship, which is why 'covenant faithfulness' is often used; but Ruth shows the relationship can be the one the actor chooses to honour rather than the one they are bound by. Naomi releases her daughters-in-law and prays that the LORD deal with them in hesed 'as you have dealt with the dead and with me' (Ruth 1:8); Boaz calls Ruth's refusal to chase younger men a greater hesed than her first (Ruth 3:10). In both cases the obligation had lapsed and the person acted anyway.",
+   "Exodus 34:6 puts it at the centre of God's self-description to Moses — 'abounding in hesed and faithfulness' — a line the Hebrew Bible then quotes back to itself repeatedly (Numbers 14:18; Psalm 86:15; Joel 2:13; Jonah 4:2). Psalm 136 makes it a refrain for twenty-six verses. Micah 6:8 sets it as one of three things required: do justice, love hesed, walk humbly.",
+   "Hosea 6:6, 'I desire hesed and not sacrifice', is the verse Jesus quotes twice in Matthew (9:13; 12:7) — in Greek, eleos. Reading it as 'mercy' alone narrows it; what Hosea contrasts with sacrifice is not a feeling but a way of keeping faith with people."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's H2617 (hesed)", "note": "'kindness, lovingkindness, mercy, steadfast love'"},
+   {"kind": "scripture", "ref": "Exod.34.6"},
+   {"kind": "scripture", "ref": "Ruth.3.10", "note": "'you have made this last kindness greater than the first'"},
+   {"kind": "scholarship", "title": "Hesed in the Bible", "author": "Nelson Glueck", "year": 1967, "note": "argued for the covenant-obligation sense; the standard starting point for the debate"},
+   {"kind": "scholarship", "title": "Hesed in the Hebrew Bible", "author": "Katharine Doob Sakenfeld", "year": 1978, "note": "shows the freely-chosen, non-obligated cases, including those in Ruth"}
+  ],
+  "confidence": "evidence",
+  "related": ["sandal-at-the-gate"]
+ },
+ {
+  "id": "word-g1577-ekklesia",
+  "title": "ἐκκλησία (ekklesia) — a town meeting, not a building",
+  "kind": "word",
+  "verses": ["Matt.16.18", "Matt.18.17", "Acts.19.32", "Acts.19.39-41", "1Cor.1.2"],
+  "summary": "The word translated 'church' was ordinary civic Greek for the assembly of citizens summoned to decide a city's business. Acts 19 uses it in that plain sense three times in one riot — including of a mob that had no idea why it had gathered.",
+  "body": [
+   "Ekklesia (Strong's G1577) is built from ek, 'out', and kaleo, 'to call' — the called-out body. In classical and Hellenistic usage it is a technical term: the citizen assembly of a Greek city, convened by a herald to vote on public business.",
+   "Acts 19 shows the ordinary meaning unchanged, and Luke does not flinch from it. In the Ephesus riot the crowd in the theatre is called an ekklesia (19:32), even as Luke notes that 'most of them did not know why they had come together'; the city clerk then tells the mob that any further complaint must be settled 'in the lawful ekklesia' (19:39), and finally he dismisses the ekklesia (19:41). Same word, three times, in its everyday civic sense.",
+   "The Septuagint had also used ekklesia for the qahal, the assembly of Israel gathered before God (Deuteronomy 9:10 calls Sinai 'the day of the ekklesia'). So when Jesus says 'on this rock I will build my ekklesia' (Matthew 16:18), the word carries both freights: a summoned assembly, and the assembly of Israel.",
+   "What it never means in the New Testament is a building — there were none for at least two centuries — and it is not primarily an institution or a denomination. Paul writes to 'the ekklesia of God that is in Corinth' (1 Corinthians 1:2): the assembly, in that city. English 'church' comes by a different route entirely, from Greek kyriakon, 'belonging to the Lord', which is where the building sense entered.",
+   "Matthew 18:17, 'tell it to the ekklesia', reads differently once the civic sense is audible: it is an instruction to bring a matter before the assembled body, the same move the Ephesian clerk recommends."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's G1577 (ekklesia)", "note": "'a calling out, an assembly'"},
+   {"kind": "scripture", "ref": "Acts.19.32", "note": "the word used of a confused crowd in the theatre"},
+   {"kind": "scripture", "ref": "Acts.19.39", "note": "'it shall be settled in the lawful assembly'"},
+   {"kind": "scripture", "ref": "Deut.9.10", "note": "the Septuagint uses ekklesia for the assembly at Horeb"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "word-g4697-splanchnizomai",
+  "title": "σπλαγχνίζομαι (splanchnizomai) — compassion felt in the gut",
+  "kind": "word",
+  "verses": ["Matt.9.36", "Matt.14.14", "Mark.1.41", "Mark.6.34", "Luke.7.13", "Luke.10.33", "Luke.15.20"],
+  "summary": "The Greek verb is formed from splanchna, the inward organs. It is not a word for a kind thought; it names the physical lurch in the abdomen — and in the Gospels it is used almost exclusively of Jesus.",
+  "body": [
+   "Splanchna are the viscera: heart, liver, lungs, intestines. Greeks located strong feeling there, much as English speaks of a gut reaction or of something being wrenching. The verb splanchnizomai (Strong's G4697) therefore means to be moved in the bowels — and translators, reasonably, give 'moved with compassion' or 'had compassion', which is accurate but loses the body.",
+   "In the Gospels the verb is used about a dozen times, and with two exceptions it always has Jesus as its subject: at the sight of the crowds 'harassed and helpless, like sheep without a shepherd' (Matthew 9:36; Mark 6:34), before feeding them (Matthew 14:14), before touching a leper (Mark 1:41), before the widow of Nain following her son's body (Luke 7:13).",
+   "The two exceptions are both in parables, and both are the hinge of the story. The Samaritan sees the beaten man and is moved in the gut (Luke 10:33) — the same verb that had just not been used of the priest and the Levite, who merely 'saw' and passed. And the father sees his son 'while he was still a long way off' and is moved in the gut, and runs (Luke 15:20).",
+   "In Mark 1:41 a small group of manuscripts, including Codex Bezae, reads orgistheis, 'moved with anger', instead. Several modern editions and the NIV footnote it; most editors retain 'compassion' on the weight of the evidence. The variant is noted here because it is real, not because it changes the pattern elsewhere.",
+   "The pattern is worth naming: in these narratives compassion is not a disposition that someone holds, but something that happens to a person's body and is immediately followed by a verb of action — he touched, he ran, he taught, he fed."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's G4697 (splanchnizomai) from G4698 (splanchna, the inward parts)"},
+   {"kind": "scripture", "ref": "Luke.15.20", "note": "'his father saw him and was moved with compassion, and ran'"},
+   {"kind": "scripture", "ref": "Luke.10.33", "note": "the Samaritan, in contrast with the priest and the Levite who only see"},
+   {"kind": "scholarship", "title": "Textual Commentary on the Greek New Testament, on Mark 1:41", "author": "Bruce M. Metzger", "year": 1994, "note": "the orgistheis / splanchnistheis variant and why the committee retained 'compassion'"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "word-h8414-tohu-wabohu",
+  "title": "תֹּהוּ וָבֹהוּ (tohu wabohu) — 'formless and void'",
+  "kind": "word",
+  "verses": ["Gen.1.2", "Jer.4.23", "Isa.34.11", "Isa.45.18"],
+  "summary": "The pair of words in Genesis 1:2 does not mean 'nothing'. Everywhere else in the Hebrew Bible tohu describes a wasteland — trackless, uninhabited, unusable — and the two chapters that quote the phrase back use it of a land undone.",
+  "body": [
+   "Tohu (Strong's H8414) occurs about twenty times. Its range is desert, wasteland, emptiness, futility: the wilderness where Israel wanders is a 'howling tohu' (Deuteronomy 32:10), idols are tohu (1 Samuel 12:21; Isaiah 41:29), and the ruined city is a 'city of tohu' (Isaiah 24:10). Bohu (H922) occurs only three times and only alongside tohu, so it has no independent profile; it appears to be a rhyming intensifier, which is why the pair sounds the way it does.",
+   "Those three occurrences matter. Jeremiah 4:23 deliberately quotes Genesis: 'I looked on the earth, and behold, it was tohu wabohu; and to the heavens, and they had no light' — a vision of judgement in which the land is returned to its pre-ordered state, with the birds gone and the fruitful place a desert. Isaiah 34:11 uses the two words of Edom reduced to rubble, measured out with 'the line of tohu and the plumb line of bohu'. In both, the phrase means devastation, not non-existence.",
+   "Isaiah 45:18 then says God did not create the earth tohu but formed it to be inhabited — which sets up the contrast the first chapter of Genesis works through. Days one to three separate and shape; days four to six fill. The narrative answers the opening condition point by point: the unformed gets form, the uninhabited gets inhabitants.",
+   "A note on what this does and does not settle. The lexical point — that tohu means waste rather than nothing — is not disputed. What people build on it is: some read Genesis 1:2 as describing pre-existing raw material, others as a state God had just brought about, and the older 'gap theory' reading of a ruined earlier creation rests on a translation of the verb 'was' as 'became' that Hebrew grammarians generally reject. This card stays with the words."
+  ],
+  "sources": [
+   {"kind": "lexicon", "title": "Strong's H8414 (tohu) and H922 (bohu)", "note": "'formlessness, confusion, unreality, emptiness'; bohu occurs only with tohu"},
+   {"kind": "scripture", "ref": "Jer.4.23", "note": "the only other place the full pair appears, of the land undone"},
+   {"kind": "scripture", "ref": "Isa.45.18", "note": "'he did not create it tohu; he formed it to be inhabited'"},
+   {"kind": "scripture", "ref": "Deut.32.10", "note": "tohu of the howling wilderness"}
   ],
   "confidence": "evidence"
  }

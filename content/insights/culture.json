@@ -17,8 +17,8 @@
    {"kind": "scholarship", "title": "Jesus and Nonviolence: A Third Way", "author": "Walter Wink", "year": 2003, "note": "the 'backhand' reading"},
    {"kind": "primary", "title": "Augustine, Sermon on the Mount 1.19", "author": "Augustine of Hippo", "year": "c. 394", "note": "'the precept concerns the preparation of the heart, not the outward act'"}
   ],
-  "traditions": ["Backhand/'third way' reading: Anabaptist, Mennonite, much of mainline Protestantism", "Disposition-of-the-heart reading: Augustine, Catholic and Orthodox commentators, Reformed tradition"],
   "confidence": "interpretation",
+  "traditions": ["Backhand/'third way' reading: Anabaptist, Mennonite, much of mainline Protestantism", "Disposition-of-the-heart reading: Augustine, Catholic and Orthodox commentators, Reformed tradition"],
   "related": ["extra-mile-angareia", "cloak-and-tunic"]
  },
  {
@@ -39,8 +39,8 @@
    {"kind": "primary", "title": "Herodotus, Histories 8.98", "author": "Herodotus", "year": "c. 430 BC", "note": "the Persian courier relay from which the word comes"},
    {"kind": "scholarship", "title": "Jesus and Nonviolence: A Third Way", "author": "Walter Wink", "year": 2003}
   ],
-  "traditions": ["The legal background is undisputed; the 'subversive second mile' reading is characteristic of Wink and Anabaptist teaching"],
   "confidence": "consensus",
+  "traditions": ["The legal background is undisputed; the 'subversive second mile' reading is characteristic of Wink and Anabaptist teaching"],
   "related": ["right-cheek-backhand"]
  },
  {
@@ -97,7 +97,7 @@
    {"kind": "archaeology", "title": "Triclinia at Masada, Herodium and the Jewish Quarter (Herodian Quarter) excavations, Jerusalem", "note": "1st-century BC/AD dining rooms with the U-shaped couch arrangement; see N. Avigad, Discovering Jerusalem (1983)"}
   ],
   "confidence": "evidence",
-  "related": ["nard-300-denarii"]
+  "related": ["nard-300-denarii", "tzitzit-fringe"]
  },
  {
   "id": "kataluma-guest-room",
@@ -116,8 +116,8 @@
    {"kind": "lexicon", "title": "BDAG s.v. κατάλυμα: 'lodging place, guest room'", "note": "Bauer, Danker, Arndt & Gingrich, Greek-English Lexicon (3rd ed., 2000)"},
    {"kind": "scholarship", "title": "Jesus Through Middle Eastern Eyes", "author": "Kenneth E. Bailey", "year": 2008, "note": "ch. 1, the village-house reading"}
   ],
-  "traditions": ["'Guest room' reading: increasingly standard in modern commentaries and in the NIV (2011) and other recent translations; the 'inn' reading remains in older translations and popular tradition"],
-  "confidence": "consensus"
+  "confidence": "consensus",
+  "traditions": ["'Guest room' reading: increasingly standard in modern commentaries and in the NIV (2011) and other recent translations; the 'inn' reading remains in older translations and popular tradition"]
  },
  {
   "id": "hebrew-day-evening-morning",
@@ -136,5 +136,67 @@
    {"kind": "scripture", "ref": "Luke.23.54"}
   ],
   "confidence": "evidence"
+ },
+ {
+  "id": "tzitzit-fringe",
+  "title": "The fringe she touched",
+  "kind": "culture",
+  "verses": ["Matt.9.20-22", "Matt.14.36", "Mark.6.56", "Num.15.37-41", "Deut.22.12", "Matt.23.5"],
+  "summary": "The woman with the haemorrhage reaches for 'the fringe of his garment' — the kraspedon, the tasselled corner Numbers 15 commands every Israelite man to wear as a memorial of the commandments.",
+  "body": [
+   "Numbers 15:38-39 tells Israel to make tassels on the corners of their garments, with a cord of blue in each, 'so that you may look at it and remember all the commandments of the LORD'. Deuteronomy 22:12 repeats the instruction. The Hebrew is tzitzit; the Greek translators and the Gospel writers use kraspedon, which English versions render fringe, tassel, hem or border.",
+   "So when Matthew 9:20 says the woman touched 'the fringe of his garment', it is not a vague reach for the hem of a robe. She took hold of the part of his clothing that marked him as a man under the commandments. Matthew 14:36 and Mark 6:56 repeat it: the sick in the villages ask to touch just the kraspedon.",
+   "Her condition makes the gesture heavier. Leviticus 15:25-27 places a woman with a chronic flow of blood in a state of ritual impurity that passes to whatever and whoever she touches; twelve years of it (Mark 5:25) had cut her off from ordinary contact. Reaching for the tassel from behind and in a crowd is the act of someone who expects to be turned on if noticed.",
+   "The same garment detail cuts the other way in Matthew 23:5, where Jesus says the scribes and Pharisees 'lengthen their tassels' to be seen. The object is not the problem; the display is.",
+   "Woollen tassels and cords of blue have been recovered from the Judean desert caves of the Bar Kokhba period, so the practice is attested physically as well as textually — though those finds are a century after the Gospels."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Num.15.38", "note": "tassels with a cord of blue on the corners of the garment"},
+   {"kind": "lexicon", "title": "Strong's G2899 (kraspedon) and H6734 (tzitzit)", "note": "the Septuagint uses kraspedon for tzitzit in Num 15:38-39"},
+   {"kind": "archaeology", "title": "Textiles with tassels and blue cords, Cave of Letters and related Judean desert caves", "note": "Yadin's excavations; second century AD, so later than the Gospels"},
+   {"kind": "scripture", "ref": "Matt.9.20"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "amanuensis-dictation",
+  "title": "'I, Tertius, who wrote this letter, greet you'",
+  "kind": "culture",
+  "verses": ["Rom.16.22", "1Cor.16.21", "Gal.6.11", "Col.4.18", "2Thess.3.17", "Phlm.1.19", "1Pet.5.12"],
+  "summary": "Paul's letters were dictated to a professional scribe and signed off in Paul's own hand. One of those scribes signs his own name in Romans, and the change of handwriting is something Paul twice points out on the page.",
+  "body": [
+   "Ancient letter writing was a two-person job. Writing on papyrus with a reed pen was a trained skill, and anyone who could afford it dictated to a secretary — an amanuensis. Hundreds of surviving papyrus letters show the pattern: a practised professional hand for the body, then a few clumsier lines and a signature added by the sender.",
+   "Paul's letters show exactly this. Romans ends with the scribe stepping briefly out of role: 'I, Tertius, who wrote this letter, greet you in the Lord' (Romans 16:22) — a Roman name common among slaves and freedmen. Elsewhere Paul takes the pen himself for the closing: 'the greeting is in my own hand' (1 Corinthians 16:21; Colossians 4:18), 'see with what large letters I am writing to you with my own hand' (Galatians 6:11), and in Philemon 19 an IOU written out personally. 2 Thessalonians 3:17 makes the signature a deliberate authentication: 'this is the sign of genuineness in every letter of mine'.",
+   "That last verse implies a real problem — letters circulating under Paul's name that were not his (2 Thessalonians 2:2) — and a practical answer to it.",
+   "Two consequences follow, and both are commonly overdrawn, so they are worth stating carefully. First, dictation is a plausible part of the explanation for the shifts of style between letters, since secretaries varied in how much they smoothed what they heard; how much latitude Paul gave is unknown, and the range of secretarial practice in antiquity runs from strict shorthand to near co-authorship. Second, 1 Peter 5:12, 'by Silvanus I have written to you briefly', is sometimes read as naming a secretary, but the Greek phrase more naturally identifies the letter carrier. Neither point is settled by the evidence; what is settled is the basic mechanics of how these letters reached the page."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Rom.16.22", "note": "'I, Tertius, who wrote this letter'"},
+   {"kind": "scripture", "ref": "Gal.6.11", "note": "'with what large letters I am writing to you with my own hand'"},
+   {"kind": "scripture", "ref": "2Thess.3.17", "note": "the autograph greeting as a mark of genuineness"},
+   {"kind": "scholarship", "title": "Paul the Letter-Writer: His World, His Options, His Skills", "author": "E. Randolph Richards", "year": 2004, "note": "the papyrus evidence for secretaries and the range of their involvement"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "sandal-at-the-gate",
+  "title": "A sandal, ten witnesses, and a property deal at the gate",
+  "kind": "culture",
+  "verses": ["Ruth.4.1-12", "Deut.25.5-10", "Lev.25.25", "Deut.21.19"],
+  "summary": "Boaz does not marry Ruth privately. He convenes a court in the town gateway, makes the nearer kinsman decline in public, and takes a sandal as the receipt. Ruth 4 is a legal transaction, recorded as one.",
+  "body": [
+   "The gate of a walled town was its courthouse. The gateway of an Iron Age Israelite city was a deep chambered structure with benches built into the side rooms — excavated examples survive at Dan, Gezer and Beersheba — and it was where everyone entering or leaving passed. Deuteronomy 21:19, 22:15 and 25:7 all send disputes 'to the elders at the gate'. Boaz sits down there, stops the man he needs and seats ten elders (Ruth 4:1-2): he is empanelling a court, in the one place where the whole town will see it.",
+   "Two separate laws are in play. Leviticus 25:25 gives a near relative the right and duty to redeem land a poor kinsman has had to sell. Deuteronomy 25:5-10 requires a dead man's brother to marry the widow and raise an heir in his name. Boaz presents the field first; the nearer redeemer accepts. Only then does Boaz add that the field comes with Ruth, and the man withdraws rather than 'impair my own inheritance' (Ruth 4:6) — that is, risk the land passing to an heir counted to another man's line.",
+   "Then the sandal. Ruth 4:7 explains the custom for readers who no longer practised it: 'to confirm a transaction, one party removed his sandal and gave it to the other'. This is a conveyancing gesture — a token handed over to make the transfer public and final, like a seal. It is related to, but not the same as, Deuteronomy 25:9, where the widow herself pulls the sandal off the refusing brother-in-law and spits in his face; that version is a shaming penalty. In Ruth the man takes his own sandal off and hands it over, and nobody spits. The narrator's aside that this was the custom 'in former times in Israel' tells us the book was written for an audience to whom it needed explaining.",
+   "What the law compelled and what Boaz actually does are not the same thing. He is not the nearest kinsman and is under no obligation, and the levirate law names a brother rather than a distant relative. He goes beyond the letter of both statutes and does it in front of witnesses — which is the book's argument about hesed made procedurally."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Ruth.4.7", "note": "'now this was the custom in former times in Israel'"},
+   {"kind": "scripture", "ref": "Deut.25.9", "note": "the widow removes the sandal and spits — a penalty, not a conveyance"},
+   {"kind": "archaeology", "title": "Chambered Iron Age gate complexes with benches at Tel Dan, Gezer and Beersheba", "note": "the physical setting of 'the elders at the gate'"},
+   {"kind": "scholarship", "title": "The Book of Ruth (NICOT)", "author": "Robert L. Hubbard Jr.", "year": 1988, "note": "on the gate court, the two statutes and the sandal gesture"}
+  ],
+  "confidence": "evidence",
+  "related": ["word-h2617-hesed"]
  }
 ]

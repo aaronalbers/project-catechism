@@ -15,7 +15,7 @@ The reader sits in the middle; a context panel follows the current verse.
 
 | Tab | What it shows | Where it comes from |
 |---|---|---|
-| **Insights** | Money & wages, cultural context, archaeology, history | `content/insights/*.json` (curated, cited) |
+| **Insights** | Money & wages, cultural context, archaeology, history, geography, word studies | `content/insights/*.json` (curated, cited) |
 | **Words** | Hebrew/Greek interlinear with morphology, Strong's lexicon | BSB interlinear tables, Strong's dictionaries |
 | **Places** | Map of every identifiable place in the passage, with confidence and photos | OpenBible.info geocoding (CC-BY) on OpenStreetMap |
 | **People** | Family graph and lifespans for people in the chapter | `content/people.json` (genealogies, cited per person) |
@@ -99,8 +99,9 @@ The interesting work is in `content/`. Each file is JSON validated against the
 types in `src/lib/types.ts`:
 
 - `insights/*.json` — cards for the Insights tab. Each needs `verses`, a
-  `confidence`, and at least one `source` of kind `scripture`, `archaeology`,
-  `primary` or `scholarship`. If the card is an interpretation, list the
+  `confidence`, and at least one `source` of an evidential kind — `scripture`,
+  `archaeology`, `primary`, `lexicon` or `data` (a `scholarship` citation alone
+  does not satisfy the check). If the card is an interpretation, list the
   `traditions` that hold it. If anything is an estimate, say so and say what it is
   based on.
 - `people.json` — genealogy. `bornAM`/`diedAM` are years from creation summed from

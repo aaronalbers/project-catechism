@@ -1,0 +1,65 @@
+[
+ {
+  "id": "claudius-expulsion-chrestus",
+  "title": "Why Aquila and Priscilla were in Corinth",
+  "kind": "history",
+  "verses": ["Acts.18.1-3", "Rom.16.3-5", "1Cor.16.19"],
+  "summary": "Luke says the couple had 'recently come from Italy, because Claudius had ordered all Jews to leave Rome'. Suetonius records the same expulsion, and gives a reason: constant disturbances 'at the instigation of Chrestus'.",
+  "body": [
+   "Acts 18:2 is a throwaway line of biography — Paul meets a tentmaker and his wife newly arrived from Italy — and it is corroborated from outside. Suetonius, writing around AD 120, says of Claudius: Iudaeos impulsore Chresto assidue tumultuantis Roma expulit, 'because the Jews were constantly making disturbances at the instigation of Chrestus, he expelled them from Rome'.",
+   "Chrestus was an ordinary slave name, and Suetonius writes as though it belonged to a man present in Rome. But Chrestus and Christus were pronounced almost identically in first-century Latin, and Christian writers of the period note that outsiders regularly wrote the one for the other. The usual reconstruction is that Suetonius, working from an earlier report, has recorded synagogue disputes about Jesus and taken the name for an agitator's. That reading is widely held but not universal: Slingerland and Benko among others argue for an otherwise unknown troublemaker.",
+   "The date is less firm than it is often made to sound. Orosius, writing in the fifth century, puts the expulsion in Claudius' ninth year — AD 49 — and cites a passage of Josephus that no one has ever found. Cassius Dio, describing AD 41, says Claudius did not expel the Jews but forbade them to meet. Scholars generally accept AD 49 because it fits Acts and the Gallio date, while acknowledging that the only witness to that year is a late one.",
+   "What survives the caution is the shape of the thing: a real imperial action, a couple displaced by it, and a chance meeting in Corinth that put Paul in a workshop with two people who would later host churches in Ephesus and Rome."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Suetonius, Life of Claudius 25.4", "author": "Suetonius", "year": "c. AD 121", "url": "http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Claudius*.html", "note": "'impulsore Chresto assidue tumultuantis Roma expulit'"},
+   {"kind": "primary", "title": "Cassius Dio, Roman History 60.6.6", "author": "Cassius Dio", "year": "c. AD 220", "note": "for AD 41: not an expulsion but a ban on assembly"},
+   {"kind": "primary", "title": "Orosius, History Against the Pagans 7.6.15-16", "author": "Paulus Orosius", "year": "c. AD 417", "note": "the sole source for the year AD 49"},
+   {"kind": "scripture", "ref": "Acts.18.2"}
+  ],
+  "confidence": "consensus",
+  "related": ["gallio-inscription"]
+ },
+ {
+  "id": "agrippa-death-caesarea",
+  "title": "Two accounts of the death of Herod Agrippa I",
+  "kind": "history",
+  "verses": ["Acts.12.19-23", "Acts.12.1-4"],
+  "summary": "Acts and Josephus, writing independently, describe the same death in the same city: the king in royal dress, a crowd hailing him as a god, a sudden agony in the abdomen, and a death some days later.",
+  "body": [
+   "Acts 12:21-23: on an appointed day Herod puts on his royal robes, takes his seat and addresses the people; they shout 'the voice of a god and not of a man'; he is struck down 'because he did not give God the glory', is eaten by worms and dies.",
+   "Josephus, Antiquities 19.343-350, gives far more detail and no less drama. Agrippa is at Caesarea for games in the emperor's honour. On the second day he enters the theatre early in a garment woven entirely of silver, which catches the rising sun so brightly that onlookers are afraid to look at him. Flatterers call out that he is a god. He does not rebuke them, and immediately a pain seizes his stomach; he is carried out, suffers for five days and dies, aged fifty-four, in the seventh year of his reign — AD 44.",
+   "The accounts are not copies of one another. Josephus has the silver robe, the omen of an owl and the five days; Acts has the Tyre and Sidon embassy and the angel. Where they overlap — the city, the royal dress, the acclamation as divine, the refusal to deflect it, the abdominal illness, the death — they overlap closely, and neither writer shows any sign of using the other.",
+   "The medical detail resists diagnosis. 'Eaten by worms' (skolekobrotos) is a stock phrase in Greek and Jewish writing for the death of a tyrant, and Josephus says only 'a pain in his belly, violent from the start'. Proposed causes from a ruptured appendix to intestinal parasites are guesses laid over two brief ancient descriptions, not findings."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities of the Jews 19.343-350", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/19.343-352/wst", "note": "the silver garment, the acclamation, five days of illness, death in AD 44"},
+   {"kind": "scripture", "ref": "Acts.12.21-23"},
+   {"kind": "scholarship", "title": "The Acts of the Apostles: A Socio-Rhetorical Commentary", "author": "Ben Witherington III", "year": 1998, "note": "on the independence of the two accounts and the topos of death by worms"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "quirinius-census",
+  "title": "The census problem in Luke 2",
+  "kind": "history",
+  "verses": ["Luke.2.1-5", "Acts.5.37"],
+  "summary": "Luke dates the birth of Jesus by a registration 'when Quirinius was governor of Syria'. The census Quirinius is known to have run took place in AD 6, about a decade after Herod the Great died. This card lays out the difficulty and the main answers without pretending it is settled.",
+  "body": [
+   "The difficulty in plain terms. Luke 1:5 and Matthew 2:1 put the birth in the reign of Herod the Great, who died in 4 BC (see the card on dating Herod's death). Luke 2:2 dates the registration to Quirinius' governorship of Syria. Josephus describes Quirinius arriving in Syria after Augustus deposed Herod's son Archelaus and annexed Judea, to assess the new province for tax — reckoned by Josephus as thirty-seven years after Actium, which is AD 6. That census provoked the revolt of Judas the Galilean, which Luke himself refers to in Acts 5:37. The two dates are about ten years apart.",
+   "The main proposals, fairly stated. (1) Translate prote as 'before': 'this registration was before Quirinius was governor', which is grammatically possible and defended by I. Howard Marshall and others, though it strains the Greek. (2) An earlier commission: Quirinius held military or administrative authority in the East around 7-6 BC alongside the legate Sentius Saturninus, and conducted a registration then. The Lapis Tiburtinus, an inscription naming an unidentified official who governed Syria twice, is sometimes brought in here, but it does not name Quirinius and the identification is contested. (3) A long registration: Augustus ordered an empire-wide enrolment carried out province by province over years, completed in Judea under Quirinius. (4) Luke is in error, or is using the census as a literary frame to move the family to Bethlehem — the position of most critical scholars.",
+   "What can be said with confidence is small: an Augustan interest in provincial registration is well attested, the AD 6 census under Quirinius certainly happened, and no independent evidence for a Herodian-era census of Judea has been found. Everything beyond that is reconstruction, and this card is marked as an interpretation for that reason."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.1-10, 26", "author": "Flavius Josephus", "year": "c. AD 94", "note": "Quirinius' census after the deposition of Archelaus; the revolt of Judas the Galilean"},
+   {"kind": "scripture", "ref": "Luke.2.2"},
+   {"kind": "scripture", "ref": "Acts.5.37", "note": "Luke's own reference to 'the days of the census'"},
+   {"kind": "archaeology", "title": "Lapis Tiburtinus (ILS 918), Vatican Museums", "note": "names an unidentified official who governed Syria twice; the identification with Quirinius is disputed"},
+   {"kind": "scholarship", "title": "The Gospel of Luke (NIGTC)", "author": "I. Howard Marshall", "year": 1978, "note": "defends reading prote as 'before'"},
+   {"kind": "scholarship", "title": "The Birth of the Messiah", "author": "Raymond E. Brown", "year": 1993, "note": "surveys the proposals and concludes Luke is mistaken on the date"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["Most critical scholarship (Brown, Schürer, Fitzmyer) treats Luke 2:2 as a historical error", "Conservative Protestant and Catholic scholarship commonly adopts the 'before Quirinius' translation or an earlier commission", "No major creed or confession depends on the census date"],
+  "related": ["herod-death-4bc", "tiberius-15th-year"]
+ }
+]
