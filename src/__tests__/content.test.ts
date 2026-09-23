@@ -200,6 +200,10 @@ describe('content integrity', () => {
     expect(modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 15 })!.step).toBe(4);
     // Bezalel's account never puts the Testimony in; that happens at Exod 40:20.
     expect(modelBuildAt(ark, { book: 'Exod', chapter: 37, verse: 9 })!.parts.has('ark-tablets')).toBe(false);
+    // Noah's ark: its size (Gen 6:15) is built in with the hull; the roof, door and decks come at 6:16.
+    const noah = MODELS.find((m) => m.id === 'noahs-ark')!;
+    expect([...modelBuildAt(noah, { book: 'Gen', chapter: 6, verse: 15 })!.parts].sort()).toEqual(['hull', 'pitch', 'rooms']);
+    expect(modelBuildAt(noah, { book: 'Gen', chapter: 7, verse: 1 })).toBeNull();
   });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);

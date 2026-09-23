@@ -250,5 +250,38 @@
    {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm used for the metric sizes"}
   ],
   "confidence": "estimate"
+ },
+ {
+  "id": "noahs-ark",
+  "title": "Noah's ark — built as the text describes it",
+  "verses": ["Gen.6.13-8.19", "Matt.24.37-39", "Luke.17.26-27", "Heb.11.7", "1Pet.3.20"],
+  "summary": "Read or play Genesis 6:14–16 and the ark builds up as God describes it to Noah: the gopher-wood hull, its rooms and its coat of pitch, then the roof, the door in the side and the three decks. Elsewhere it is shown whole. The text gives the size (300 × 50 × 30 cubits), and the model follows it. The metric size assumes a common cubit of ≈44.5 cm; the Ark Encounter's full-size replica in Kentucky uses a longer royal cubit of 51.8 cm, which makes it ≈155 m long. The hull's volume, 450,000 cubic cubits (≈40,000 m³ on the common cubit), is worked out from those figures, not stated. The shape, the rooms, the deck heights and the door are reconstructed; each estimate says what it rests on, both at the step that adds it and in the list under the model. Use Show outside / Show inside to see the whole hull or cut it open to see the decks.",
+  "kind": "procedural",
+  "procedural": "noahs-ark",
+  "dimensions": "300 × 50 × 30 cubits · ≈ 134 × 22 × 13 m",
+  "builds": [
+   {"ref": "Gen.6.14-16", "steps": [
+    {"ref": "Gen.6.14", "parts": ["hull", "rooms", "pitch"]},
+    {"ref": "Gen.6.16", "parts": ["roof", "door", "decks"], "basis": "the size in v. 15 is already built into the hull at v. 14"}
+   ]}
+  ],
+  "estimates": {
+   "hull": "tevah means 'a box' (the same word is used for the basket of Moses, Exod 2:3), and the text gives only length, width and height, so it is drawn as a rectangular barge. Tim Lovett's design for Answers in Genesis, whose Ark Encounter is a full-size replica, gives it a ship's hull instead, with a wind-catching bow and a skeg at the stern for seaworthiness; the text supports neither over the other. Wall thickness is not given; ½ cubit is assumed",
+   "pitch": "kopher is a coating, usually taken as bitumen; drawn as a dark skin over the hull inside and out",
+   "rooms": "qinnim, literally 'nests'; their number, size and layout are not given. Drawn as a room every 15 cubits either side of a 10-cubit central aisle, the partitions running through all three decks",
+   "roof": "the BSB reads tsohar as 'roof' and has the walls finished a cubit below it, so the roof is drawn on posts leaving a cubit-high opening all round. Others read tsohar as 'light' or 'window': Rashi gives both a window and a sloping roof narrowing to a cubit at the top, and Lovett's design has a skylight down the middle of the roof, a 'noon light' that 'ends a cubit upward and above'. Drawn in bare wood; whether it was pitched is not said",
+   "door": "'in the side', with no size or deck given; drawn 6 × 8 cubits, midway along the lower deck",
+   "decks": "three decks, the lowest being the hull floor; their heights are not given, so they are drawn equal, 10 cubits each. Rashi, after b. Sanhedrin 108b, puts people on the top deck, animals in the middle and refuse at the bottom"
+  },
+  "sources": [
+   {"kind": "scripture", "ref": "Gen.6.14-16", "note": "the instructions: gopher wood, rooms, pitch, 300 × 50 × 30 cubits, roof, door and three decks"},
+   {"kind": "scripture", "ref": "Gen.8.6", "note": "Noah opens 'the window he had made in the ark' (challon, a different word from the tsohar of 6:16)"},
+   {"kind": "lexicon", "title": "Strong's H8392 tevah, H7064 qen, H3724 kopher, H6672 tsohar", "note": "'a box'; 'a nest… a chamber'; 'bitumen (as used for coating)'; 'a light (i.e. window)'"},
+   {"kind": "primary", "title": "Rashi on Genesis 6:16", "url": "https://www.sefaria.org/Rashi_on_Genesis.6.16", "note": "tsohar as a window or a light-giving stone; a roof sloping to a cubit at the top; three decks, after b. Sanhedrin 108b"},
+   {"kind": "scholarship", "title": "Thinking Outside the Box", "author": "T. Lovett", "year": 2007, "url": "https://answersingenesis.org/noahs-ark/thinking-outside-the-box/", "note": "Answers in Genesis; a ship-shaped hull with a bow and skeg, and a central skylight read from tsohar as 'noon light', on a cubit of 20.4 in (51.8 cm)"},
+   {"kind": "scholarship", "title": "Ark Encounter, Williamstown, Kentucky", "url": "https://arkencounter.com/about/", "note": "Answers in Genesis's full-size timber replica, ≈510 × 85 × 51 ft on a royal cubit; one tradition's reconstruction among several"},
+   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm used for the metric size"}
+  ],
+  "confidence": "estimate"
  }
 ]
