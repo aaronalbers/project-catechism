@@ -100,7 +100,7 @@ export interface ModelStep { ref: Ref; parts: string[]; basis?: string }
 export interface ModelBuild { ref: Ref; steps: ModelStep[] }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
-  kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm' | 'ark'; src?: string;
+  kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm' | 'ark' | 'tabernacle'; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
   builds?: ModelBuild[];
 }
