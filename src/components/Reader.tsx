@@ -5,35 +5,19 @@ import { CHIASMS, markersForChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
 import { BOOKS, book, contains, parseRef, touchesChapter } from '@/lib/refs';
 import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
+import { alignVerse, tokenize } from '@/lib/align';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
-
-/** Maps an English word in the BSB text to the interlinear entry whose gloss contains it. */
-export function matchWordToInterlinear(word: string, position: number, il: InterlinearVerse | undefined): number | null {
-  if (!il) return null;
-  const w = word.toLowerCase().replace(/[^a-z'’]/g, '');
-  if (!w) return null;
-  let bestIndex: number | null = null;
-  let bestDistance = Infinity;
-  for (let i = 0; i < il.w.length; i++) {
-    const gloss = il.w[i][5].toLowerCase().replace(/[[\]]/g, '');
-    if (!gloss.split(/[\s-]+/).includes(w)) continue;
-    const d = Math.abs(i / il.w.length - position);
-    if (d < bestDistance) { bestDistance = d; bestIndex = i; }
-  }
-  return bestIndex;
-}
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
 function VerseText({ text, verse, current, il, ladder }: { text: string; verse: number; current: boolean; il?: InterlinearVerse; ladder?: LadderProps }) {
   const wordIndex = useStore((s) => s.wordIndex);
-  const total = text.split(/\s+/).filter(Boolean).length;
+  const aligned = useMemo(() => current ? alignVerse(text, il) : [], [current, text, il]);
   let n = 0;
   // Word positions run across the whole verse, so a ladder's words match the interlinear as prose does.
-  const words = (s: string) => !current ? s : s.split(/(\s+)/).map((t, i) => {
+  const words = (s: string) => !current ? s : tokenize(s).map((t, i) => {
         if (!t.trim()) return t;
-        const pos = n++ / Math.max(1, total);
-        const ilIndex = matchWordToInterlinear(t, pos, il);
+        const ilIndex = aligned[n++] ?? null;
         return (
           <span key={i} className={`w${ilIndex !== null && ilIndex === wordIndex ? ' active' : ''}`} title={ilIndex !== null ? `${il!.w[ilIndex][0]} (${il!.w[ilIndex][4]})` : undefined}
             onClick={(e) => { e.stopPropagation(); if (ilIndex !== null) setState({ wordIndex: ilIndex, tab: 'words', panelOpen: true }); }}
