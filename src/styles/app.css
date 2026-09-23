@@ -220,6 +220,14 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .video .playbtn { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; background: rgb(0 0 0 / 0.25); }
 .video .playbtn:hover { background: rgb(0 0 0 / 0.4); }
 .video .playbtn svg { width: 64px; height: 64px; filter: drop-shadow(0 2px 8px rgb(0 0 0 / 0.5)); }
+.video.external { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; background: var(--surface); border: 1px dashed var(--border); aspect-ratio: auto; padding: 20px 12px; text-align: center; }
+.video.external span { font-weight: 600; }
+.video.external small { color: var(--muted); font-size: 12px; }
+.video-search { width: 100%; margin-bottom: 10px; }
+.video-series { border-bottom: 1px solid var(--border); padding: 6px 0; }
+.video-series > summary { cursor: pointer; font-weight: 600; padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+.video-series > summary .count { font-size: 11px; font-weight: 500; background: var(--surface-2); border-radius: 999px; padding: 1px 6px; color: var(--muted); }
+.video-series[open] > summary { margin-bottom: 8px; }
 
 /* Chiasm */
 .chiasm { font-family: var(--serif); }

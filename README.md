@@ -21,7 +21,7 @@ The reader sits in the middle; a context panel follows the current verse.
 | **People** | Family graph and lifespans for people in the chapter | `content/people.json` (genealogies, cited per person) |
 | **Links** | Speaker, prophecy → fulfilment, quotations, chiastic structure, earliest manuscripts, rulers, cross-references, authorship | `content/*.json` + OpenBible.info cross-references |
 | **Models** | Rotatable 3D models built to published dimensions | `content/models.json` (procedural or glTF) |
-| **Videos** | BibleProject overviews and themes for the passage | `content/videos.json` (YouTube, click-to-load) |
+| **Videos** | Every BibleProject video for the passage — book overviews, themes, word studies, visual commentaries, podcast episodes and Shorts — plus the whole library by series; word studies also appear on their Hebrew/Greek word in **Words** | `content/videos.json` (YouTube, click-to-load; site-only videos link to bibleproject.com) |
 
 Press play and the whole page reads along: a neural voice (Kokoro-82M) runs in
 your browser, highlighting each verse and updating every panel as it goes.
@@ -75,7 +75,7 @@ There are no API keys and nothing to pay for.
 | Place photos | Wikimedia Commons (credited per image) | CC / public domain |
 | Map tiles | [OpenStreetMap](https://www.openstreetmap.org/copyright) | ODbL |
 | Text-to-speech | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) via [kokoro-js](https://github.com/hexgrad/kokoro) | Apache-2.0 |
-| Videos | [BibleProject](https://bibleproject.com/) on YouTube | © BibleProject, embedded |
+| Videos | [BibleProject](https://bibleproject.com/) on YouTube and bibleproject.com; Streetlights remixes on YouTube | © BibleProject / STREETLIGHTS, embedded or linked |
 | Hosting | GitHub Pages via GitHub Actions | free |
 
 The curated content in `content/` is released under the same MIT license as the code.

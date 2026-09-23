@@ -1,6 +1,6 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Model3D, Person, Prophecy, Quote, Ruler, Speaker, Video, Writer } from './types';
-import { contains, touchesChapter, type VerseLoc } from './refs';
+import type { Chiasm, Fragment, Insight, Model3D, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
+import { contains, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
 export const INSIGHTS: Insight[] = Object.values(insightFiles).flatMap((m) => m.default);
@@ -51,9 +51,35 @@ export function chiasmsFor(loc: VerseLoc) { return CHIASMS.filter((c) => contain
 export function rulersFor(loc: VerseLoc) { return RULERS.filter((r) => anyContains(r.refs, loc)); }
 export function modelsFor(loc: VerseLoc) { return MODELS.filter((m) => anyContains(m.verses, loc)); }
 export function modelsInChapter(book: string, chapter: number) { return MODELS.filter((m) => m.verses.some((r) => touchesChapter(r, book, chapter))); }
-export function videosFor(loc: VerseLoc) {
-  return VIDEOS.filter((v) => anyContains(v.verses, loc) || (v.books ?? []).includes(loc.book));
+/** Verses a ref spans, roughly — only used to rank narrower passages above wider ones. */
+function spanSize(ref: string) {
+  const r = parseRef(ref);
+  if (!r) return Infinity;
+  if (r.start.book !== r.end.book) return 1e6;
+  return (r.end.chapter - r.start.chapter) * 40 + Math.min(r.end.verse, 200) - r.start.verse;
 }
+const KIND_RANK: Partial<Record<VideoKind, number>> = { short: 1, podcast: 2, remix: 3 };
+
+/**
+ * Videos for a verse, most specific first: a video about this very passage outranks a book
+ * overview, and full videos outrank shorts, podcast episodes and remixes of the same passage.
+ */
+export function videosFor(loc: VerseLoc) {
+  const scored = VIDEOS.flatMap((v) => {
+    const hits = (v.verses ?? []).filter((r) => contains(r, loc)).map(spanSize);
+    if (hits.length) return [{ v, score: Math.min(...hits) }];
+    if ((v.books ?? []).includes(loc.book)) return [{ v, score: 1e7 + (v.books ?? []).length }];
+    return [];
+  });
+  return scored.sort((a, b) => (KIND_RANK[a.v.kind] ?? 0) - (KIND_RANK[b.v.kind] ?? 0) || a.score - b.score).map((x) => x.v);
+}
+export function videosForStrongs(id: string) { return VIDEOS.filter((v) => v.strongs?.includes(id)); }
+/** The whole library grouped by series, in content order. */
+export const VIDEO_SERIES: { series: string; videos: Video[] }[] = (() => {
+  const groups = new Map<string, Video[]>();
+  for (const v of VIDEOS) groups.set(v.series, [...(groups.get(v.series) ?? []), v]);
+  return [...groups].map(([series, videos]) => ({ series, videos }));
+})();
 
 /** Verse numbers in a chapter that have any curated content, for the reader's margin markers. */
 export function markersForChapter(book: string, chapter: number): Map<number, Set<string>> {

@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { setState, useStore } from '@/app/store';
 import { loadInterlinear, loadStrongs } from '@/lib/data';
 import type { InterlinearVerse, StrongsEntry } from '@/lib/types';
-import { INSIGHTS } from '@/lib/content';
+import { INSIGHTS, videosForStrongs } from '@/lib/content';
 import { InsightCard } from './InsightsPanel';
+import { VideoCard } from './VideosPanel';
 
 function Lexicon({ id }: { id: string }) {
   const [entry, setEntry] = useState<StrongsEntry | null | undefined>(undefined);
@@ -12,6 +13,7 @@ function Lexicon({ id }: { id: string }) {
   if (!entry) return <div className="empty">No Strong's entry for {id}.</div>;
   const heb = id.startsWith('H');
   const wordInsights = INSIGHTS.filter((i) => i.kind === 'word' && i.id.includes(id.toLowerCase()));
+  const wordVideos = videosForStrongs(id);
   return (
     <div className="lexicon">
       <div className={`lemma${heb ? ' heb' : ''}`}>{entry.lemma}</div>
@@ -23,6 +25,8 @@ function Lexicon({ id }: { id: string }) {
       </dl>
       <div className="sources"><h4>Source</h4><ol><li><span className="skind">Lexicon</span>Strong's Exhaustive Concordance dictionaries (1890/1894, public domain) — <a href="https://github.com/openscriptures/strongs" target="_blank" rel="noreferrer">Open Scriptures edition</a></li></ol></div>
       {wordInsights.map((i) => <InsightCard key={i.id} i={i} />)}
+      {wordVideos.length > 0 && <div className="panel-title">BibleProject on {entry.xlit || id}</div>}
+      {wordVideos.map((v) => <VideoCard key={v.id} v={v} />)}
     </div>
   );
 }

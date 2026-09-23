@@ -77,4 +77,13 @@ export interface Model3D {
   kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm'; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
 }
-export interface Video { id: string; title: string; provider: 'youtube'; videoId: string; channel: string; url: string; books?: string[]; verses?: Ref[]; summary?: string }
+export type VideoKind = 'overview' | 'series' | 'theme' | 'word' | 'insight' | 'commentary' | 'how-to-read' | 'podcast' | 'class' | 'short' | 'remix';
+/**
+ * A BibleProject video. `youtube` videos embed; `bibleproject` ones are only published on
+ * bibleproject.com and open there. `page` is the bibleproject.com page when there is one.
+ * `strongs` lists the Hebrew/Greek words a word study is about, for the Words panel.
+ */
+export interface Video {
+  id: string; title: string; provider: 'youtube' | 'bibleproject'; videoId?: string; channel: string; url: string; page?: string;
+  series: string; kind: VideoKind; books?: string[]; verses?: Ref[]; strongs?: string[]; summary?: string; duration?: number;
+}

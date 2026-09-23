@@ -2,7 +2,7 @@
 // and every card carries a citation and a confidence badge. These run in CI so a typo
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
-import { CHIASMS, FRAGMENTS, INSIGHTS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, videosFor, videosForStrongs } from '@/lib/content';
 import { parseRef, BOOKS } from '@/lib/refs';
 import type { Source } from '@/lib/types';
 
@@ -67,6 +67,33 @@ describe('content integrity', () => {
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);
     for (const w of WRITERS) for (const b of w.books) expect(BOOKS.some((x) => x.id === b.book), `${w.id}: ${b.book}`).toBe(true);
-    for (const v of VIDEOS) { expect(v.videoId).toMatch(/^[A-Za-z0-9_-]{11}$/); for (const b of v.books ?? []) expect(BOOKS.some((x) => x.id === b)).toBe(true); }
+  });
+
+  // Videos embed from YouTube where BibleProject publishes there, and otherwise link to
+  // bibleproject.com; word studies name their Strong's numbers so the Words panel finds them.
+  it('videos have a playable source, a series, and well-formed tags', () => {
+    const kinds = ['overview', 'series', 'theme', 'word', 'insight', 'commentary', 'how-to-read', 'podcast', 'class', 'short', 'remix'];
+    for (const v of VIDEOS) {
+      if (v.provider === 'youtube') {
+        expect(v.videoId, v.id).toMatch(/^[A-Za-z0-9_-]{11}$/);
+        expect(v.url, v.id).toBe(`https://www.youtube.com/watch?v=${v.videoId}`);
+      } else {
+        expect(v.provider, v.id).toBe('bibleproject');
+        expect(v.url, v.id).toMatch(/^https:\/\/bibleproject\.com\/videos\/[a-z0-9-]+\/$/);
+      }
+      if (v.page) expect(v.page, v.id).toMatch(/^https:\/\/bibleproject\.com\/videos\/[a-z0-9-]+\/$/);
+      expect(v.series, v.id).toBeTruthy();
+      expect(kinds, v.id).toContain(v.kind);
+      for (const b of v.books ?? []) expect(BOOKS.some((x) => x.id === b), `${v.id}: ${b}`).toBe(true);
+      for (const s of v.strongs ?? []) expect(s, v.id).toMatch(/^[HG][1-9]\d*$/);
+    }
+    const ids = VIDEOS.flatMap((v) => (v.videoId ? [v.videoId] : []));
+    expect(new Set(ids).size, 'a YouTube video is listed twice').toBe(ids.length);
+  });
+  it('ranks a video about the passage above book overviews, and finds word studies by Strong\'s number', () => {
+    const atPrayer = videosFor({ book: 'Matt', chapter: 6, verse: 9 });
+    expect(atPrayer[0].verses?.some((r) => r.startsWith('Matt.6.9'))).toBe(true);
+    expect(atPrayer.findIndex((v) => v.kind === 'overview')).toBeGreaterThan(0);
+    expect(videosForStrongs('H2617').map((v) => v.title)).toContain('Khesed / Loyal Love');
   });
 });
