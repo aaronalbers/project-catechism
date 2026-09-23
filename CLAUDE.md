@@ -114,6 +114,8 @@ them in CI — read it before adding content.
   level, in reading order. The reader lays those out as an indented ladder, and a test fails the
   build if a quote is not verbatim in its verse. A **passage-level** chiasm gives no quotes; its
   levels are verse ranges, drawn as a margin rail with a structure strip. `text` is always the label.
+  Only one passage-level chiasm may touch a chapter (the reader draws one rail), and an
+  `interpretation` chiasm names who proposed it in `traditions`, as insights do.
 
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
 the surrounding file.

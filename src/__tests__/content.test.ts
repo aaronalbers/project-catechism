@@ -4,7 +4,7 @@
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, videosFor, videosForStrongs } from '@/lib/content';
-import { parseRef, BOOKS } from '@/lib/refs';
+import { parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import type { BibleBook, Place, Source } from '@/lib/types';
@@ -99,11 +99,20 @@ describe('content integrity', () => {
     for (const c of CHIASMS) {
       const quoted = c.levels.filter((l) => l.quote).length;
       expect([0, c.levels.length], `${c.id}: ${quoted} of ${c.levels.length} levels quoted`).toContain(quoted);
+      if (c.confidence === 'interpretation') expect(c.traditions?.length, `${c.id} is an interpretation but lists no traditions`).toBeGreaterThan(0);
+      expect(c.levels.some((l) => l.label === c.centre), `${c.id}: centre ${c.centre} is not a level`).toBe(true);
       if (!isPhrase(c)) continue;
       for (const l of c.levels) {
         const r = parseRef(l.ref)!;
         expect(r.start, `${c.id} ${l.label}: a quoted level is one verse`).toEqual(r.end);
       }
+    }
+  });
+  it('passage-level chiasms do not share a chapter, since the reader draws one margin rail', () => {
+    const passages = CHIASMS.filter((c) => !isPhrase(c));
+    for (const b of BOOKS) for (let ch = 1; ch <= b.chapters; ch++) {
+      const here = passages.filter((c) => touchesChapter(c.ref, b.id, ch)).map((c) => c.id);
+      expect(here.length, `${b.id} ${ch}: ${here.join(', ')}`).toBeLessThan(2);
     }
   });
   const bibleDir = new URL('../../public/data/bible/', import.meta.url);

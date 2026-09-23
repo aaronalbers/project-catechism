@@ -77,7 +77,7 @@ export interface Speaker { id: string; ref: Ref; speaker: string; summary?: stri
  * levels are verse ranges, leave `quote` off.
  */
 export interface ChiasmLevel { label: string; ref: Ref; text: string; quote?: string }
-export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; confidence: Confidence }
+export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string }
 /** One camp in an itinerary. Its position is OpenBible's identification of `place` unless `estimate` overrides it. */
 export interface Station {

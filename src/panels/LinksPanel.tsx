@@ -77,7 +77,7 @@ export function LinksPanel() {
                 <div><div className="txt">{l.text}</div><button className="ref chip link" onClick={() => { const r = parseRef(l.ref); if (r) goTo(r.start); }}>{formatRef(l.ref)}</button></div>
               </div>
             ))}
-            <SourceList sources={c.sources} />
+            <SourceList sources={c.sources} traditions={c.traditions} />
           </div>
         ))}
       </>}
