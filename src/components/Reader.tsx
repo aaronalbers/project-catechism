@@ -74,6 +74,12 @@ export function Reader() {
     el?.scrollIntoView({ block: playing ? 'center' : 'start', behavior: 'smooth' });
   }, [loc, playing, data]);
 
+  // Bring a word picked in the Words tab into view; 'nearest' leaves it alone when it is already showing.
+  const wordIndex = useStore((s) => s.wordIndex);
+  useEffect(() => {
+    if (wordIndex !== null) document.querySelector('.verse.current .w.active')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }, [wordIndex]);
+
   if (error) return <div className="loading">Could not load {b?.name}. Run <code>npm run data</code> first. <br /><small>{error}</small></div>;
   if (!data || data.id !== loc.book) return <div className="loading">Loading {b?.name}…</div>;
   const chapter = data.chapters[loc.chapter - 1] ?? [];
