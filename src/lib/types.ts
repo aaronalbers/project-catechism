@@ -71,7 +71,12 @@ export interface Quote { id: string; quoting: Ref; quoted: Ref; summary: string;
 export interface Fragment { id: string; siglum: string; name: string; date: string; contents: Ref[]; held: string; summary: string; sources: Source[]; media?: Media[] }
 export interface Writer { id: string; name: string; books: { book: string; refs?: Ref[] }[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 export interface Speaker { id: string; ref: Ref; speaker: string; summary?: string; sources?: Source[] }
-export interface ChiasmLevel { label: string; ref: Ref; text: string }
+/**
+ * One member of a chiasm. `text` is its label; `quote` is the exact BSB wording it covers, which
+ * lets the reader lay a phrase-level chiasm out in the verse itself. Passage-level chiasms, whose
+ * levels are verse ranges, leave `quote` off.
+ */
+export interface ChiasmLevel { label: string; ref: Ref; text: string; quote?: string }
 export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; confidence: Confidence }
 export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string }
 /** One camp in an itinerary. Its position is OpenBible's identification of `place` unless `estimate` overrides it. */

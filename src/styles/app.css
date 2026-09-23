@@ -115,7 +115,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .marker.model { background: var(--consensus); }
 .marker.prophecy { background: var(--evidence); }
 .marker.quote { background: var(--muted); }
-.marker.chiasm { background: var(--danger); }
+.marker.chiasm { background: var(--chiasm); }
 .verse .text { position: relative; }
 .verse .text .w { border-radius: 3px; }
 .verse.current .text .w:hover, .verse.current .text .w.active { background: var(--accent); color: var(--accent-ink); }
@@ -310,3 +310,39 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .circle-tip { position: absolute; z-index: 2; max-width: 220px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; font-size: 12px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); }
 .circle-tip .kind { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
 .circle-tip small { color: var(--muted); }
+
+/* Chiastic structure on the text. One hue, faint at the outer levels and full at the centre;
+   letters carry the pairing, so colour is never the only cue. */
+:root { --chiasm: #2c7a7b; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --chiasm: #4fb3b0; }
+.chiasm-cap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 20px 0 6px; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+.chiasm-cap .kind { display: inline-flex; align-items: center; gap: 6px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.chiasm-cap .kind::before { content: ''; width: 4px; height: 12px; border-radius: 2px; background: var(--chiasm); }
+.chiasm-cap .name { color: var(--text); font-weight: 500; text-align: left; }
+.chiasm-cap .name:hover { text-decoration: underline; }
+.chiasm-toggle { margin-left: auto; color: var(--accent); font-size: 12px; }
+.chiasm-toggle:hover { text-decoration: underline; }
+.chiasm-strip { margin: 0 0 18px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.chiasm-strip .chiasm-cap { margin: 0; }
+.chiasm-strip ol { list-style: none; display: flex; justify-content: center; gap: 2px; margin: 10px 0 0; padding: 0 0 30px; }
+.chiasm-strip li { transform: translateY(calc(var(--depth) * 5px)); }
+.chiasm-strip li button { min-width: 21px; height: 26px; padding: 0 3px; border-radius: 5px; font: 600 11px var(--sans); color: var(--muted); background: transparent; opacity: 0.7; border-bottom: 3px solid color-mix(in oklab, var(--chiasm) var(--tone), var(--surface)); }
+.chiasm-strip li button.in-chapter { color: var(--text); background: color-mix(in oklab, var(--chiasm) 22%, var(--surface)); opacity: 1; }
+.chiasm-strip li button[aria-current='true'] { outline: 2px solid var(--accent); outline-offset: 1px; }
+.chiasm-level { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; margin: 16px -8px 2px; padding: 2px 8px 2px calc(8px + var(--depth) * 14px); font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.chiasm-level .lbl { font-weight: 700; color: var(--text); }
+.chiasm-level .t { color: var(--text); }
+.chiasm-level.centre .t { font-weight: 600; }
+.chiasm-level .pair { font-size: 11px; }
+/* The margin rail: a bracket per level, opened by its header and closed at its last verse. It
+   hangs off the wrapper round each verse so headings and captions inside a level don't break it. */
+.rail { position: relative; }
+.rail::before { content: ''; position: absolute; left: -18px; top: 0; bottom: 0; width: 4px; background: color-mix(in oklab, var(--chiasm) var(--tone), var(--surface)); }
+.rail-start::before { top: 22px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.rail-end::before { bottom: 8px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
+.verse .text.ladder { display: block; }
+.ladder .prose { display: block; }
+.rung { display: grid; grid-template-columns: 24px 1fr; margin: 1px 0 1px calc(var(--depth) * 18px); padding-left: 6px; border-left: 3px solid color-mix(in oklab, var(--chiasm) var(--tone), var(--surface)); border-radius: 3px; }
+.rung .lbl { font: 600 11px var(--sans); color: var(--muted); padding-top: 0.5em; }
+.rung.centre > span:last-child { font-weight: 600; }
+.rung.paired { background: color-mix(in oklab, var(--chiasm) 16%, transparent); }

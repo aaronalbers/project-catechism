@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, setState, useStore } from '@/app/store';
 import { loadBook, loadInterlinear } from '@/lib/data';
-import { markersForChapter } from '@/lib/content';
-import { BOOKS, book } from '@/lib/refs';
-import type { BibleBook, InterlinearVerse } from '@/lib/types';
+import { CHIASMS, markersForChapter } from '@/lib/content';
+import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
+import { BOOKS, book, contains, parseRef, touchesChapter } from '@/lib/refs';
+import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
+import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
 
 /** Maps an English word in the BSB text to the interlinear entry whose gloss contains it. */
 export function matchWordToInterlinear(word: string, position: number, il: InterlinearVerse | undefined): number | null {
@@ -21,26 +23,37 @@ export function matchWordToInterlinear(word: string, position: number, il: Inter
   return bestIndex;
 }
 
-function VerseText({ text, verse, current, il }: { text: string; verse: number; current: boolean; il?: InterlinearVerse }) {
+interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
+
+function VerseText({ text, verse, current, il, ladder }: { text: string; verse: number; current: boolean; il?: InterlinearVerse; ladder?: LadderProps }) {
   const wordIndex = useStore((s) => s.wordIndex);
-  if (!current) return <span className="text">{text}</span>;
-  const tokens = text.split(/(\s+)/);
-  const words = tokens.filter((t) => t.trim()).length;
+  const total = text.split(/\s+/).filter(Boolean).length;
   let n = 0;
-  return (
-    <span className="text">
-      {tokens.map((t, i) => {
+  // Word positions run across the whole verse, so a ladder's words match the interlinear as prose does.
+  const words = (s: string) => !current ? s : s.split(/(\s+)/).map((t, i) => {
         if (!t.trim()) return t;
-        const pos = n++ / Math.max(1, words);
+        const pos = n++ / Math.max(1, total);
         const ilIndex = matchWordToInterlinear(t, pos, il);
         return (
           <span key={i} className={`w${ilIndex !== null && ilIndex === wordIndex ? ' active' : ''}`} title={ilIndex !== null ? `${il!.w[ilIndex][0]} (${il!.w[ilIndex][4]})` : undefined}
             onClick={(e) => { e.stopPropagation(); if (ilIndex !== null) setState({ wordIndex: ilIndex, tab: 'words', panelOpen: true }); }}
             data-verse={verse}>{t}</span>
         );
-      })}
+      });
+  if (!ladder) return <span className="text">{words(text)}</span>;
+  const { chiasm, pieces, pair, onPair } = ladder;
+  return (
+    <span className="text ladder">
+      {pieces.map((p, k) => p.rung
+        ? <Rung key={k} c={chiasm} i={p.rung.index} pair={pair} onPair={onPair}>{words(p.text)}</Rung>
+        : <span key={k} className="prose">{words(p.text)}</span>)}
     </span>
   );
+}
+
+function useStoredFlag(key: string, initial: boolean): [boolean, () => void] {
+  const [v, setV] = useState(() => { try { const s = localStorage.getItem(key); return s === null ? initial : s === 'true'; } catch { return initial; } });
+  return [v, () => setV((x) => { try { localStorage.setItem(key, String(!x)); } catch { /* private mode */ } return !x; })];
 }
 
 export function Reader() {
@@ -62,6 +75,10 @@ export function Reader() {
 
   const markers = useMemo(() => markersForChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const ilByVerse = useMemo(() => new Map((il ?? []).map((v) => [v.v, v])), [il]);
+  const phrase = useMemo(() => CHIASMS.filter((c) => isPhrase(c) && touchesChapter(c.ref, loc.book, loc.chapter)), [loc.book, loc.chapter]);
+  const passage = useMemo(() => CHIASMS.find((c) => !isPhrase(c) && touchesChapter(c.ref, loc.book, loc.chapter)), [loc.book, loc.chapter]);
+  const [structure, toggleStructure] = useStoredFlag('structure', true);
+  const [pair, setPair] = useState<string | null>(null);
 
   // Keep the current verse in view, gently, when it changes (audio, links, hash).
   const lastScrolled = useRef<string>('');
@@ -84,20 +101,33 @@ export function Reader() {
     <article className="reader" aria-label={`${data.name} ${loc.chapter}`}>
       <h1>{data.name} {loc.chapter}</h1>
       <div className="attribution">Berean Standard Bible (public domain). Tap a verse to explore it; tap a word in the current verse for its Hebrew or Greek.</div>
-      {chapter.map((v) => {
+      {passage && <ChiasmStrip c={passage} loc={loc} show={structure} onToggle={toggleStructure} />}
+      {chapter.map((v, k) => {
         const ilv = ilByVerse.get(v.v);
         const current = v.v === loc.verse;
         const m = markers.get(v.v);
+        const vloc = { book: loc.book, chapter: loc.chapter, verse: v.v };
+        const pc = phrase.find((c) => c.levels.some((l) => contains(l.ref, vloc)));
+        // Footnotes are whole-verse notes with no anchor in the text, so a ladder leaves them out
+        // rather than hang them off whichever rung happens to be last; hiding the structure restores them.
+        const pieces = structure && pc ? ladder(pc, vloc, v.t) : null;
+        const opens = phrase.find((c) => { const r = parseRef(c.ref); return r?.start.book === loc.book && r.start.chapter === loc.chapter && r.start.verse === v.v; });
+        // Passage rail: which level this verse is in, and whether it opens or closes a run of that level here.
+        const li = structure && passage ? levelAt(passage, vloc) : -1;
+        const at = (d: number) => chapter[k + d] && passage ? levelAt(passage, { ...vloc, verse: chapter[k + d].v }) : -1;
+        const first = li >= 0 && at(-1) !== li, last = li >= 0 && at(1) !== li;
         return (
-          <div key={v.v}>
+          <div key={v.v} className={li >= 0 ? `rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : undefined} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
+            {first && <LevelHeader c={passage!} i={li} />}
             {ilv?.h && <div className="heading">{ilv.h}</div>}
+            {opens && <ChiasmCaption c={opens} show={structure} onToggle={toggleStructure} />}
             <div id={`v-${v.v}`} className={`verse${current ? ' current' : ''}`} onClick={() => goTo({ ...loc, verse: v.v })} role="button" tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo({ ...loc, verse: v.v }); } }} aria-current={current || undefined}>
               {m && <div className="markers" aria-hidden="true">{[...m].map((k) => <span key={k} className={`marker ${k}`} title={k} />)}</div>}
               <span className="num">{v.v}</span>
               <div>
-                <VerseText text={v.t} verse={v.v} current={current} il={ilv} />
-                {current && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
+                <VerseText text={v.t} verse={v.v} current={current} il={ilv} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />
+                {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
               </div>
             </div>
           </div>

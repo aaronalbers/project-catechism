@@ -6,6 +6,7 @@ import { formatRef, parseRef } from '@/lib/refs';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Xrefs } from '@/lib/types';
 import { LinkCircle } from './LinkCircle';
+import { label } from '@/components/Chiasm';
 
 function XrefRow({ to, votes }: { to: string; votes: number }) {
   const [text, setText] = useState('');
@@ -72,7 +73,7 @@ export function LinksPanel() {
             <p className="summary">{c.summary}</p>
             {c.levels.map((l, i) => (
               <div className={`level${l.label === c.centre ? ' centre' : ''}`} key={i} style={{ paddingLeft: `${Math.min(6, Math.abs(c.levels.length / 2 - Math.abs(c.levels.length / 2 - i))) * 8}px` }}>
-                <span className="lbl">{l.label}</span>
+                <span className="lbl">{label(l.label)}</span>
                 <div><div className="txt">{l.text}</div><button className="ref chip link" onClick={() => { const r = parseRef(l.ref); if (r) goTo(r.start); }}>{formatRef(l.ref)}</button></div>
               </div>
             ))}

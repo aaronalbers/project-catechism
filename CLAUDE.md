@@ -109,6 +109,12 @@ them in CI — read it before adding content.
   estimates and `via` waypoints need a `basis` saying what they rest on, and the map marks
   them ≈. The build flags OpenBible's "within 50 km of X" placeholders as `approx`.
 
+- Chiasms (`content/chiasms.json`) come in two shapes, and the reader draws each on the text. A
+  **phrase-level** chiasm gives every level a `quote`: the exact BSB words it covers, one verse per
+  level, in reading order. The reader lays those out as an indented ladder, and a test fails the
+  build if a quote is not verbatim in its verse. A **passage-level** chiasm gives no quotes; its
+  levels are verse ranges, drawn as a margin rail with a structure strip. `text` is always the label.
+
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
 the surrounding file.
 

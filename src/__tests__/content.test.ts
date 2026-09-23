@@ -6,7 +6,8 @@ import { existsSync, readFileSync } from 'node:fs';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, videosFor, videosForStrongs } from '@/lib/content';
 import { parseRef, BOOKS } from '@/lib/refs';
 import { resolveRoute } from '@/lib/journey';
-import type { Place, Source } from '@/lib/types';
+import { isPhrase, ladder } from '@/lib/chiasm';
+import type { BibleBook, Place, Source } from '@/lib/types';
 
 const bad = (refs: string[]) => refs.filter((r) => !parseRef(r));
 const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'data']);
@@ -91,6 +92,29 @@ describe('content integrity', () => {
       expect(stops.length, j.id).toBe(j.stations.length);
       // No two consecutive camps on the same spot: that is a copied placeholder, not a site.
       for (let i = 1; i < stops.length; i++) expect(stops[i].at, `${j.id}: ${stops[i].station.name} sits on ${stops[i - 1].station.name}`).not.toEqual(stops[i - 1].at);
+    }
+  });
+
+  it('a chiasm quotes every level or none, and phrase levels sit in one verse', () => {
+    for (const c of CHIASMS) {
+      const quoted = c.levels.filter((l) => l.quote).length;
+      expect([0, c.levels.length], `${c.id}: ${quoted} of ${c.levels.length} levels quoted`).toContain(quoted);
+      if (!isPhrase(c)) continue;
+      for (const l of c.levels) {
+        const r = parseRef(l.ref)!;
+        expect(r.start, `${c.id} ${l.label}: a quoted level is one verse`).toEqual(r.end);
+      }
+    }
+  });
+  const bibleDir = new URL('../../public/data/bible/', import.meta.url);
+  it.skipIf(!existsSync(bibleDir))('chiasm quotes are the BSB wording, in order', () => {
+    for (const c of CHIASMS.filter(isPhrase)) {
+      for (const ref of new Set(c.levels.map((l) => l.ref))) {
+        const loc = parseRef(ref)!.start;
+        const book = JSON.parse(readFileSync(new URL(`${loc.book}.json`, bibleDir), 'utf8')) as BibleBook;
+        const text = book.chapters[loc.chapter - 1].find((v) => v.v === loc.verse)!.t;
+        expect(ladder(c, loc, text), `${c.id} at ${ref}: a quote is not in "${text}"`).not.toBeNull();
+      }
     }
   });
 
