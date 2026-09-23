@@ -7,11 +7,11 @@ import { useStore } from '@/app/store';
 import { modelBuildAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Model3D } from '@/lib/types';
-import { buildProcedural } from '@/lib/procedural';
+import { buildProcedural } from '@/lib/models';
 import { formatRef, type VerseLoc } from '@/lib/refs';
 
-/** A part fading and dropping into place after its verse is reached; `mats` holds each material's own opacity to return to. */
-interface Arrival { part: THREE.Object3D; t0: number; y0: number; drop: number; mats: { mat: THREE.Material; transparent: boolean; opacity: number }[] }
+/** A part fading and dropping into place after its verse is reached. */
+interface Arrival { part: THREE.Object3D; t0: number; y0: number; drop: number; mats: THREE.Material[] }
 const ARRIVE_MS = 700;
 /** The camera easing to frame the parts shown so far, keeping the angle the viewer chose. */
 interface Framing { from: THREE.Vector3; to: THREE.Vector3; fromDist: number; toDist: number; t0: number }
@@ -43,8 +43,7 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, arrivals: 
     if (show !== undefined) {
       const appearing = show && !node.visible;
       if (appearing && arrivals && !parentArriving && !arrivals.some((a) => a.part === node)) {
-        const mats = new Set(materialsOf(node));
-        arrivals.push({ part: node, t0: performance.now(), y0: node.position.y, drop, mats: [...mats].map((mat) => ({ mat, transparent: mat.transparent, opacity: mat.opacity })) });
+        arrivals.push({ part: node, t0: performance.now(), y0: node.position.y, drop, mats: [...new Set(materialsOf(node))] });
       }
       arriving ||= appearing;
       if (node.visible !== show) changed = true;
@@ -88,11 +87,32 @@ function boxOf(parts: THREE.Object3D[]) {
   return b;
 }
 
+/**
+ * A material's own opacity and transparency, recorded the first time it fades in. Kept on the
+ * material rather than the arrival, so an arrival that starts while another is mid-fade returns
+ * to the true value, not a half-faded one.
+ */
+const restingLook = (mat: THREE.Material): { transparent: boolean; opacity: number } =>
+  mat.userData.resting ??= { transparent: mat.transparent, opacity: mat.opacity };
+
 const materialsOf = (o: THREE.Object3D) => {
   const out: THREE.Material[] = [];
   o.traverse((x) => { const mt = (x as THREE.Mesh).material; if (mt) out.push(...(Array.isArray(mt) ? mt : [mt])); });
   return out;
 };
+
+/** Frees what a model holds on the GPU: its geometries, materials and their textures. */
+function disposeObject(o: THREE.Object3D) {
+  o.traverse((x) => {
+    const m = x as THREE.Mesh;
+    m.geometry?.dispose();
+    if ((x as THREE.InstancedMesh).isInstancedMesh) (x as THREE.InstancedMesh).dispose();
+  });
+  for (const mat of new Set(materialsOf(o))) {
+    for (const v of Object.values(mat)) if (v instanceof THREE.Texture) v.dispose();
+    mat.dispose();
+  }
+}
 
 function animateArrivals(arrivals: Arrival[]) {
   const now = performance.now();
@@ -100,7 +120,7 @@ function animateArrivals(arrivals: Arrival[]) {
     const { part, t0, y0, drop, mats } = arrivals[i];
     const k = Math.min(1, (now - t0) / ARRIVE_MS), ease = 1 - (1 - k) ** 3;
     part.position.y = y0 + (1 - ease) * drop;
-    for (const x of mats) { x.mat.transparent = k < 1 || x.transparent; x.mat.opacity = x.opacity * ease; }
+    for (const mat of mats) { const r = restingLook(mat); mat.transparent = k < 1 || r.transparent; mat.opacity = r.opacity * ease; }
     if (k >= 1) arrivals.splice(i, 1);
   }
 }
@@ -174,7 +194,9 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       if (!cutawayRef.current) { cut.set(new THREE.Vector3(0, 1, 0), 1e9); return; }
       cut.setFromNormalAndCoplanarPoint(new THREE.Vector3(0, 0, camera.position.z > cutCenter.z ? -1 : 1), cutCenter);
     };
+    let disposed = false;
     const place = (o: THREE.Object3D) => {
+      if (disposed) { disposeObject(o); return; } // a glTF that finished loading after the view closed
       scene.add(o); fit(o); objectRef.current = o;
       const tent = o.children.filter((p) => p.userData.cutaway);
       if (tent.length) {
@@ -192,7 +214,15 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     loop();
     const ro = new ResizeObserver(() => { renderer.setSize(host.clientWidth, host.clientHeight); camera.aspect = host.clientWidth / host.clientHeight; camera.updateProjectionMatrix(); });
     ro.observe(host);
-    return () => { cancelAnimationFrame(raf); ro.disconnect(); controls.dispose(); pmrem.dispose(); renderer.dispose(); host.removeChild(renderer.domElement); objectRef.current = null; arrivals.current = []; };
+    return () => {
+      disposed = true;
+      cancelAnimationFrame(raf); ro.disconnect(); controls.dispose();
+      if (objectRef.current) disposeObject(objectRef.current);
+      scene.environment?.dispose(); pmrem.dispose();
+      // Browsers cap live WebGL contexts, and a chapter can show several viewers; release this one now.
+      renderer.dispose(); renderer.forceContextLoss(); host.removeChild(renderer.domElement);
+      objectRef.current = null; arrivals.current = [];
+    };
   }, [m]);
   useEffect(() => {
     if (objectRef.current && syncParts(m, objectRef.current, loc, arrivals.current)) frameRef.current(true);
@@ -205,17 +235,35 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   );
 }
 
-/** Where the reader is in a build: the passage, how many steps are done, and the latest step's basis if it is estimated. */
+const partLabel = (name: string) => name.replace(/-/g, ' ');
+
+/**
+ * Where the reader is in a build: the passage, how many steps are done, and for the latest step
+ * its own note and what each estimated part it adds rests on.
+ */
 function BuildProgress({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   const at = modelBuildAt(m, loc);
   if (!at) return m.builds?.length ? <p className="build-progress">Builds as you read {m.builds.map((b) => formatRef(b.ref)).join(' or ')}.</p> : null;
   const step = at.build.steps[at.step - 1];
+  const notes = step ? [step.basis, ...step.parts.map((p) => m.estimates?.[p] && `${partLabel(p)}: ${m.estimates[p]}`)].filter((n): n is string => !!n) : [];
   return (
     <p className="build-progress">
       Building from {formatRef(at.build.ref)}: step {at.step} of {at.build.steps.length}
-      {step && <> ({step.parts.join(', ').replace(/-/g, ' ')})</>}
-      {step?.basis && <small>≈ {step.basis}</small>}
+      {step && <> ({step.parts.map(partLabel).join(', ')})</>}
+      {notes.map((n) => <small key={n}>≈ {n}</small>)}
     </p>
+  );
+}
+
+/** Every estimated part of the model and what it rests on, so the whole model is labelled too, not only a build's latest step. */
+function Estimates({ m }: { m: Model3D }) {
+  const list = Object.entries(m.estimates ?? {});
+  if (!list.length) return null;
+  return (
+    <details className="estimates">
+      <summary>≈ What is reconstructed ({list.length})</summary>
+      <ul>{list.map(([p, why]) => <li key={p}><b>{partLabel(p)}</b>: {why}</li>)}</ul>
+    </details>
   );
 }
 
@@ -234,6 +282,7 @@ export function ModelsPanel() {
           <ModelView m={m} loc={loc} />
           <BuildProgress m={m} loc={loc} />
           <p className="summary">{m.summary}</p>
+          <Estimates m={m} />
           <MediaList media={m.media} />
           <SourceList sources={m.sources} />
         </div>

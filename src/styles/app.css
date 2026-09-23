@@ -251,6 +251,9 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .model-view .cutaway-toggle:hover { border-color: var(--accent); }
 .card .build-progress { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
 .card .build-progress small { display: block; margin-top: 2px; }
+.card .estimates ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
+.card .estimates li { margin-bottom: 3px; }
+.card .estimates b { color: var(--text); font-weight: 500; }
 
 /* Videos */
 .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #000; margin-bottom: 8px; }

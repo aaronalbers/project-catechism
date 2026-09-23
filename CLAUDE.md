@@ -118,11 +118,20 @@ them in CI — read it before adding content.
   `interpretation` chiasm names who proposed it in `traditions`, as insights do.
 
 - Models (`content/models.json`) can build as the text is read. `builds` are passages whose `steps`
-  each name the parts a verse adds, with a `basis` for anything estimated; within a build only the
-  parts reached so far are drawn, and elsewhere the model is whole. Parts are the named nodes of the
-  model and nest: naming one shows everything inside it. A test fails the build if a step lies outside
-  its passage, runs out of order or names a part the model lacks, or if two parts share a name. In a
-  procedural model, `userData.focus` marks what the camera frames while a step builds inside it, and
+  each name the parts a verse adds; within a build only the parts reached so far are drawn, and
+  elsewhere the model is whole. Parts are the named nodes of the model and nest: naming one shows
+  everything inside it. What an estimated part rests on goes once in the model's `estimates`
+  (part → basis), shown with each step that adds it and listed under the model; a step's own `basis`
+  is only for a note about that account (where it places a piece, say). A build that never adds a
+  part lists it in `omits` with the reason. A test fails the build if a step lies outside its passage,
+  runs out of order or names a part the model lacks, if two parts share a name, if a build leaves a
+  part out without `omits`, or if two parts share a material (a part fades in by fading its materials).
+- Procedural models live in `src/lib/models/`: one entry in the `BUILDERS` table in `index.ts`
+  registers a model (and its `procedural` id). `kit.ts` has the shared pieces; call the material
+  helpers (`gold()` …) once per part, and use `instances()` for many copies of one piece.
+  Furniture builders (`furniture.ts`) draw at the origin under a name prefix (`table` →
+  `table-body`, `table-bread`), so a model places them and can hold several of one kind. In a
+  model, `userData.focus` marks what the camera frames while a step builds inside it, and
   `userData.cutaway` marks parts the viewer can cut open to show what they enclose.
 
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match

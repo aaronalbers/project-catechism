@@ -5,7 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, modelBuildAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
-import { buildProcedural } from '@/lib/procedural';
+import * as THREE from 'three';
+import { buildProcedural, isProceduralKind } from '@/lib/models';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import type { BibleBook, Place, Source } from '@/lib/types';
@@ -128,15 +129,23 @@ describe('content integrity', () => {
     }
   });
 
+  it('procedural models name a builder that exists', () => {
+    for (const m of MODELS) if (m.kind === 'procedural') expect(isProceduralKind(m.procedural ?? ''), `${m.id}: no builder '${m.procedural}'`).toBe(true);
+  });
   it('model builds stay inside their passage, run in order, and name parts the model has', () => {
     for (const m of MODELS) {
-      if (!m.builds) continue;
+      if (!m.builds && !m.estimates) continue;
       const names: string[] = [];
       if (m.kind === 'procedural' && m.procedural) buildProcedural(m.procedural).traverse((o) => { if (o.name) names.push(o.name); });
       // Parts nest, so a name used twice would reveal two things at once.
       expect(names.filter((n, i) => names.indexOf(n) !== i), `${m.id}: duplicate part names`).toEqual([]);
       const parts = m.kind === 'procedural' ? new Set(names) : null;
-      for (const b of m.builds) {
+      if (parts) for (const p of Object.keys(m.estimates ?? {})) expect(parts.has(p), `${m.id}: estimate for unknown part '${p}'`).toBe(true);
+      for (const b of m.builds ?? []) {
+        if (parts) for (const p of Object.keys(b.omits ?? {})) {
+          expect(parts.has(p), `${m.id}: build ${b.ref} omits unknown part '${p}'`).toBe(true);
+          expect(b.steps.some((st) => st.parts.includes(p)), `${m.id}: build ${b.ref} both omits and adds '${p}'`).toBe(false);
+        }
         const range = parseRef(b.ref)!;
         expect(m.verses.some((v) => contains(v, range.start) && contains(v, range.end)), `${m.id}: build ${b.ref} is outside the model's verses`).toBe(true);
         let prev = range.start;
@@ -151,13 +160,46 @@ describe('content integrity', () => {
       }
     }
   });
+  // A part a build never reaches stays hidden to the end of the passage; that must be a choice the
+  // content states (the build's `omits`), not an oversight.
+  it('a build shows every part by its last step, unless it says it omits it', () => {
+    for (const m of MODELS) {
+      if (m.kind !== 'procedural' || !m.procedural || !m.builds) continue;
+      const model = buildProcedural(m.procedural);
+      const named = (o: THREE.Object3D | null, set: Set<string>) => { for (let n = o; n && n !== model; n = n.parent) if (set.has(n.name)) return true; return false; };
+      const leaves: THREE.Object3D[] = [];
+      model.traverse((o) => { if (o.name && o !== model && !o.children.some((c) => { let inner = false; c.traverse((x) => { if (x.name) inner = true; }); return inner; })) leaves.push(o); });
+      for (const b of m.builds) {
+        const added = new Set(b.steps.flatMap((st) => st.parts)), omitted = new Set(Object.keys(b.omits ?? {}));
+        const missing = leaves.filter((o) => !named(o, added) && !named(o, omitted)).map((o) => o.name);
+        expect(missing, `${m.id}: build ${b.ref} never shows these parts and does not list them in omits`).toEqual([]);
+      }
+    }
+  });
+  // Build steps fade parts in by fading their materials, so a material shared by two parts would
+  // fade a part already shown whenever the other arrives.
+  it('no material is shared between two parts of a model', () => {
+    for (const m of MODELS) {
+      if (m.kind !== 'procedural' || !m.procedural || !m.builds) continue;
+      const model = buildProcedural(m.procedural), owners = new Map<THREE.Material, Set<string>>();
+      model.traverse((o) => {
+        const mat = (o as THREE.Mesh).material;
+        if (!mat) return;
+        let n: THREE.Object3D | null = o;
+        while (n && !n.name) n = n.parent;
+        for (const x of Array.isArray(mat) ? mat : [mat]) owners.set(x, (owners.get(x) ?? new Set()).add(n?.name ?? '(root)'));
+      });
+      const shared = [...owners.values()].filter((s) => s.size > 1).map((s) => [...s].join(' + '));
+      expect(shared, `${m.id}: materials shared between parts`).toEqual([]);
+    }
+  });
   it('a model builds up through its passage and is whole outside it', () => {
     const ark = MODELS.find((m) => m.id === 'ark-of-the-covenant')!;
     expect(modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 9 })).toBeNull();
-    expect([...modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 12 })!.parts].sort()).toEqual(['chest', 'moulding', 'overlay', 'rings']);
+    expect([...modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 12 })!.parts].sort()).toEqual(['ark-chest', 'ark-moulding', 'ark-overlay', 'ark-rings']);
     expect(modelBuildAt(ark, { book: 'Exod', chapter: 25, verse: 15 })!.step).toBe(4);
     // Bezalel's account never puts the Testimony in; that happens at Exod 40:20.
-    expect(modelBuildAt(ark, { book: 'Exod', chapter: 37, verse: 9 })!.parts.has('tablets')).toBe(false);
+    expect(modelBuildAt(ark, { book: 'Exod', chapter: 37, verse: 9 })!.parts.has('ark-tablets')).toBe(false);
   });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);

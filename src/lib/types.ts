@@ -1,3 +1,5 @@
+import type { ProceduralKind } from './models';
+
 /** OSIS-style reference: "Matt.1.1", a range "Matt.1.1-Matt.1.5", or a chapter "Matt.1". */
 export type Ref = string;
 
@@ -94,15 +96,24 @@ export interface Journey {
   id: string; title: string; ref: Ref; summary: string; stations: Station[]; sources: Source[]; confidence: Confidence;
   kind?: 'route' | 'border'; closed?: boolean;
 }
-/** One step of a build: the verse, and the named parts of the model it adds. `basis` says what an estimated part rests on. */
+/**
+ * One step of a build: the verse, and the named parts of the model it adds. `basis` is a note on
+ * this account's step; what an estimated part rests on belongs in the model's `estimates`.
+ */
 export interface ModelStep { ref: Ref; parts: string[]; basis?: string }
-/** A passage that describes the model piece by piece; while reading it, only the parts reached so far are shown. */
-export interface ModelBuild { ref: Ref; steps: ModelStep[] }
+/**
+ * A passage that describes the model piece by piece; while reading it, only the parts reached so
+ * far are shown. `omits` names parts this account never adds, and why; every other part must be
+ * shown by the last step.
+ */
+export interface ModelBuild { ref: Ref; steps: ModelStep[]; omits?: Record<string, string> }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
-  kind: 'procedural' | 'gltf'; procedural?: 'denarius' | 'alabastron' | 'tetradrachm' | 'ark' | 'tabernacle'; src?: string;
+  kind: 'procedural' | 'gltf'; procedural?: ProceduralKind; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
   builds?: ModelBuild[];
+  /** What each estimated part rests on, keyed by part name; shown with every step that adds the part, and listed under the model. */
+  estimates?: Record<string, string>;
 }
 export type VideoKind = 'overview' | 'series' | 'theme' | 'word' | 'insight' | 'commentary' | 'how-to-read' | 'podcast' | 'class' | 'short' | 'remix';
 /**
