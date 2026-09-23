@@ -161,6 +161,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .sources ol { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
 .sources li { margin: 3px 0; }
 .sources .skind { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; margin-right: 4px; color: var(--muted); }
+.sources a svg { width: 0.85em; height: 0.85em; vertical-align: -0.1em; }
 .traditions { font-size: 12px; color: var(--muted); margin-top: 6px; }
 .media { margin: 10px 0; }
 .media img { width: 100%; border-radius: 8px; display: block; background: var(--surface); }
