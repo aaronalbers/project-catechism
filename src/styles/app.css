@@ -91,14 +91,24 @@ dialog.nav { border: 1px solid var(--border); border-radius: 14px; background: v
 dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .nav-head { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--surface); }
 .nav-head input { flex: 1; }
+.nav-head > svg { width: 20px; height: 20px; flex: none; color: var(--muted); }
 .nav-body { padding: 12px 16px 16px; overflow-y: auto; max-height: calc(86vh - 60px); }
 .nav-testament { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 10px 0 6px; }
-.nav-books { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 4px; }
+.nav-books { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px; }
 .nav-books button { text-align: left; padding: 6px 8px; border-radius: 6px; }
 .nav-books button:hover, .nav-books button[aria-current='true'] { background: var(--surface-2); }
 .nav-chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 4px; }
 .nav-chapters button { padding: 8px 0; border-radius: 6px; border: 1px solid var(--border); }
 .nav-chapters button:hover, .nav-chapters button[aria-current='true'] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.nav-chapters button { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.nav-dots { display: flex; flex: none; gap: 2px; min-height: 4px; }
+.nav-dots .marker { width: 4px; height: 4px; }
+.nav-chapters button:hover .nav-dots .marker, .nav-chapters button[aria-current='true'] .nav-dots .marker { box-shadow: 0 0 0 1px var(--accent-ink); }
+.nav-books button { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.nav-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 12px; font-size: 12px; color: var(--muted); }
+.nav-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+.nav-legend .chip { margin-left: auto; }
+.nav-legend .chip svg { width: 14px; height: 14px; }
 
 /* ---------- Reader ---------- */
 .reader { max-width: 720px; margin: 0 auto; padding: 28px 24px 120px; font-family: var(--serif); }
@@ -116,6 +126,8 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .marker.prophecy { background: var(--evidence); }
 .marker.quote { background: var(--muted); }
 .marker.chiasm { background: var(--chiasm); }
+.marker.journey { background: var(--journey); }
+.marker.fragment { background: var(--fragment); }
 .verse .text { position: relative; }
 .verse .text .w { border-radius: 3px; }
 .verse.current .text .w:hover, .verse.current .text .w.active { background: var(--accent); color: var(--accent-ink); }
@@ -329,8 +341,8 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 
 /* Chiastic structure on the text. One hue, faint at the outer levels and full at the centre;
    letters carry the pairing, so colour is never the only cue. */
-:root { --chiasm: #2c7a7b; }
-:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --chiasm: #4fb3b0; }
+:root { --chiasm: #2c7a7b; --journey: #b0502a; --fragment: #a8407a; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --chiasm: #4fb3b0; --journey: #e08a5f; --fragment: #e07fb4; }
 .chiasm-cap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 20px 0 6px; font-family: var(--sans); font-size: 12px; color: var(--muted); }
 .chiasm-cap .kind { display: inline-flex; align-items: center; gap: 6px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 .chiasm-cap .kind::before { content: ''; width: 4px; height: 12px; border-radius: 2px; background: var(--chiasm); }
@@ -362,3 +374,29 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .rung .lbl { font: 600 11px var(--sans); color: var(--muted); padding-top: 0.5em; }
 .rung.centre > span:last-child { font-weight: 600; }
 .rung.paired { background: color-mix(in oklab, var(--chiasm) 16%, transparent); }
+
+/* ---------- Index (#/index) ---------- */
+.ix { overflow-y: auto; min-height: 0; }
+.ix-inner { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+.ix-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.ix-head h1 { font-family: var(--serif); font-size: 28px; }
+.ix-head input { flex: 1 1 220px; min-width: 0; }
+.ix-intro { color: var(--muted); margin: 10px 0 14px; }
+.ix-toc { display: flex; flex-wrap: wrap; gap: 6px; position: sticky; top: 0; z-index: 1; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--border); }
+.ix-toc .chip { gap: 6px; font-size: 13px; padding: 4px 10px; }
+.ix-toc .chip:disabled { opacity: 0.45; cursor: default; }
+.ix-toc .count { font-size: 11px; color: var(--muted); }
+.ix .marker { display: inline-block; flex: none; }
+.ix-section { margin-top: 28px; }
+.ix-section h2 { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-size: 21px; }
+.ix-section h2 .marker { width: 9px; height: 9px; }
+.ix-blurb { color: var(--muted); margin: 4px 0 12px; font-size: 14px; }
+.ix-section ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ix-group { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 12px 0 0; }
+.ix-entry { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; }
+.ix-title { display: inline-flex; align-items: baseline; gap: 8px; font-weight: 600; text-align: left; }
+.ix-title .marker { transform: translateY(-1px); }
+.ix-title:hover { color: var(--accent); }
+.ix-summary { margin: 4px 0 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ix-line { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin-top: 8px; }
+.ix-label { font-size: 12px; color: var(--muted); margin-right: 2px; }

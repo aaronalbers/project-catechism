@@ -39,6 +39,10 @@ exposes `xFor(loc)` / `xInChapter(book, ch)` lookup helpers. A new file in
 `content/insights/` is picked up by the glob with no registration step; a new top-level
 `content/*.json` needs an import and an exported constant.
 
+`src/lib/catalog.ts` derives the index (`#/index`) and the chapter picker's dots from the
+same content, for the features only some passages have. New entries appear on their own; a
+new *kind* of sparse content needs a section in `CATALOG`.
+
 **Generated data** (`public/data/`) is built by `scripts/build-data.mjs` from public-domain
 sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/data.ts`
 (which memoises promises per path). It is sharded so a chapter costs one or two small

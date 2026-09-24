@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Reader } from '@/components/Reader';
 import { ContextPanel } from '@/components/ContextPanel';
 import { AudioBar } from '@/components/AudioBar';
+import { IndexView } from '@/components/IndexView';
 
 function useTheme() {
   const theme = useStore((s) => s.theme);
@@ -23,13 +24,16 @@ function useTheme() {
 export function App() {
   useTheme();
   const panelOpen = useStore((s) => s.panelOpen);
+  const index = useStore((s) => s.index);
   return (
     <div className="app">
       <Header />
-      <div className={`main${panelOpen ? '' : ' panel-closed'}`}>
-        <div className="reader-col" id="reader-scroll"><Reader /></div>
-        <aside className="panel-col" aria-label="Context for the current verse"><ContextPanel /></aside>
-      </div>
+      {index !== null ? <IndexView /> : (
+        <div className={`main${panelOpen ? '' : ' panel-closed'}`}>
+          <div className="reader-col" id="reader-scroll"><Reader /></div>
+          <aside className="panel-col" aria-label="Context for the current verse"><ContextPanel /></aside>
+        </div>
+      )}
       <AudioBar />
     </div>
   );

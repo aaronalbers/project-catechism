@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, setState, useStore } from '@/app/store';
 import { BOOKS, book, bookByName } from '@/lib/refs';
+import { FEATURE_LABEL, featuresInBook, orderKinds, type FeatureKind } from '@/lib/catalog';
 import { Icon } from './Icons';
 
 /** Accepts "Matt 5:39", "Matthew 5", "mk 14 3", "1 Cor 13:4". */
@@ -13,6 +14,11 @@ function parseInput(s: string) {
   return { book: b.id, chapter: Math.min(+(m[2] ?? 1), b.chapters) || 1, verse: +(m[3] ?? 1) || 1 };
 }
 
+function Dots({ kinds }: { kinds: FeatureKind[] }) {
+  return <span className="nav-dots" aria-hidden="true">{kinds.map((k) => <span key={k} className={`marker ${k}`} />)}</span>;
+}
+const describe = (kinds: FeatureKind[]) => kinds.map((k) => FEATURE_LABEL[k]).join(', ');
+
 function Navigator({ onClose }: { onClose: () => void }) {
   const loc = useStore((s) => s.loc);
   const [bookId, setBookId] = useState(loc.book);
@@ -21,6 +27,9 @@ function Navigator({ onClose }: { onClose: () => void }) {
   useEffect(() => { ref.current?.showModal(); }, []);
   const b = book(bookId)!;
   const parsed = useMemo(() => (query ? parseInput(query) : null), [query]);
+  const chapters = useMemo(() => featuresInBook(bookId), [bookId]);
+  const inBook = (id: string) => orderKinds([...featuresInBook(id).values()].flatMap((s) => [...s]));
+  const bookKinds = inBook(bookId);
   const submit = () => { if (parsed) { goTo(parsed); onClose(); } };
   return (
     <dialog className="nav" ref={ref} onClose={onClose} onClick={(e) => { if (e.target === ref.current) onClose(); }}>
@@ -35,7 +44,7 @@ function Navigator({ onClose }: { onClose: () => void }) {
             <div className="nav-testament">{t === 'OT' ? 'Old Testament' : 'New Testament'}</div>
             <div className="nav-books">
               {BOOKS.filter((x) => x.testament === t).map((x) => (
-                <button key={x.id} aria-current={x.id === bookId} onClick={() => setBookId(x.id)}>{x.name}</button>
+                <button key={x.id} aria-current={x.id === bookId} onClick={() => setBookId(x.id)} title={describe(inBook(x.id)) || undefined}>{x.name}<Dots kinds={inBook(x.id)} /></button>
               ))}
             </div>
           </div>
@@ -43,9 +52,18 @@ function Navigator({ onClose }: { onClose: () => void }) {
         <hr />
         <div className="nav-testament">{b.name} — chapter</div>
         <div className="nav-chapters">
-          {Array.from({ length: b.chapters }, (_, i) => i + 1).map((c) => (
-            <button key={c} aria-current={bookId === loc.book && c === loc.chapter} onClick={() => { goTo({ book: bookId, chapter: c, verse: 1 }); onClose(); }}>{c}</button>
-          ))}
+          {Array.from({ length: b.chapters }, (_, i) => i + 1).map((c) => {
+            const kinds = orderKinds(chapters.get(c) ?? []);
+            return (
+              <button key={c} aria-current={bookId === loc.book && c === loc.chapter} title={describe(kinds) || undefined} onClick={() => { goTo({ book: bookId, chapter: c, verse: 1 }); onClose(); }}>
+                {c}<Dots kinds={kinds} />
+              </button>
+            );
+          })}
+        </div>
+        <div className="nav-legend">
+          {bookKinds.map((k) => <span key={k}><span className={`marker ${k}`} aria-hidden="true" />{FEATURE_LABEL[k]}</span>)}
+          <button className="chip link" onClick={() => { setState({ index: '' }); onClose(); }}><Icon.Index /> Browse the index</button>
         </div>
       </div>
     </dialog>
@@ -56,6 +74,7 @@ export function Header() {
   const loc = useStore((s) => s.loc);
   const theme = useStore((s) => s.theme);
   const panelOpen = useStore((s) => s.panelOpen);
+  const index = useStore((s) => s.index);
   const [open, setOpen] = useState(false);
   const b = book(loc.book);
   return (
@@ -65,6 +84,7 @@ export function Header() {
         <span>Project Catechism <small>— Scripture with the evidence beside it</small></span>
       </div>
       <div className="spacer" />
+      <button className="iconbtn" title="Index of models, chiasms, journeys…" aria-label="Index" aria-pressed={index !== null} onClick={() => setState({ index: index === null ? '' : null })}><Icon.Index /></button>
       <button className="refbtn" onClick={() => setOpen(true)} aria-haspopup="dialog">
         {b?.name} {loc.chapter}:{loc.verse} <Icon.Chevron />
       </button>
