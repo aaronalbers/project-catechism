@@ -86,13 +86,15 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
   return {
     group, kind, boundsAt,
     // `at` if given; otherwise just off the corner of `box` nearest `toward` (the camera), clear of both faces,
-    // or for a model seen whole, beside its +x end.
+    // or for a model seen whole, beside its +x end. A figure stands on the ground (y = 0) even beside a
+    // piece raised above it, such as a capital on its pillar; a hand is held level with the piece.
     spot(box, at, toward) {
       if (at) return new THREE.Vector3(...at);
       const c = box.getCenter(new THREE.Vector3()), gap = kind === 'figure' ? 0.3 / u : half.x * 0.4;
-      if (!toward) return new THREE.Vector3(box.max.x + half.x + gap, box.min.y, c.z);
+      const y = kind === 'figure' ? Math.min(box.min.y, 0) : box.min.y;
+      if (!toward) return new THREE.Vector3(box.max.x + half.x + gap, y, c.z);
       const sx = toward.x >= c.x ? 1 : -1, sz = toward.z >= c.z ? 1 : -1;
-      return new THREE.Vector3(c.x + sx * (box.max.x - c.x + half.x + gap), box.min.y, c.z + sz * (box.max.z - c.z + half.z + gap));
+      return new THREE.Vector3(c.x + sx * (box.max.x - c.x + half.x + gap), y, c.z + sz * (box.max.z - c.z + half.z + gap));
     },
     // A bar of a round number of the model's units (cubits, or metric), about a quarter as long as the
     // box and figure together, on the ground in front of both.

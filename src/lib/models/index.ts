@@ -7,6 +7,7 @@ import { coin } from './coins';
 import { ark } from './furniture';
 import { noahsArk } from './noah';
 import { tabernacle } from './tabernacle';
+import { temple } from './temple';
 
 const BUILDERS = {
   denarius: () => coin(19, 1.5, 0xd6d3c9, 'TI CAESAR DIVI AVG F AVGVSTVS', 'PONTIF MAXIM'),
@@ -15,6 +16,7 @@ const BUILDERS = {
   ark: () => ark(),
   tabernacle,
   'noahs-ark': noahsArk,
+  temple,
 } satisfies Record<string, () => THREE.Object3D>;
 
 export type ProceduralKind = keyof typeof BUILDERS;

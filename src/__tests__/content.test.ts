@@ -158,6 +158,9 @@ describe('content integrity', () => {
     expect(p.y).toBe(0);
     expect(tabernacle.boundsAt(p).intersectsBox(table)).toBe(false);
     expect(tabernacle.place(p, table, new THREE.Vector3(100, 50, 100))).toBe('1 cubit (≈ 44.5 cm)');
+    // Beside a piece high off the ground (the temple's capitals, 18 cubits up) it still stands on the ground.
+    const capital = new THREE.Box3(new THREE.Vector3(18, 18, -9), new THREE.Vector3(22, 23, -3));
+    expect(tabernacle.spot(capital, undefined, new THREE.Vector3(100, 50, 100)).y).toBe(0);
   });
   it('procedural models name a builder that exists', () => {
     for (const m of MODELS) if (m.kind === 'procedural') expect(isProceduralKind(m.procedural ?? ''), `${m.id}: no builder '${m.procedural}'`).toBe(true);
@@ -234,6 +237,12 @@ describe('content integrity', () => {
     const noah = MODELS.find((m) => m.id === 'noahs-ark')!;
     expect([...modelBuildAt(noah, { book: 'Gen', chapter: 6, verse: 15 })!.parts].sort()).toEqual(['hull', 'pitch', 'rooms']);
     expect(modelBuildAt(noah, { book: 'Gen', chapter: 7, verse: 1 })).toBeNull();
+    // Solomon's temple: Kings sets out one table and no veil; Chronicles ten tables and a veil.
+    const temple = MODELS.find((m) => m.id === 'solomons-temple')!;
+    const kings = modelBuildAt(temple, { book: '1Kgs', chapter: 8, verse: 8 })!.parts;
+    expect([kings.has('table'), kings.has('more-tables'), kings.has('veil')]).toEqual([true, false, false]);
+    const chron = modelBuildAt(temple, { book: '2Chr', chapter: 5, verse: 9 })!.parts;
+    expect([chron.has('more-tables'), chron.has('veil'), chron.has('side-chambers')]).toEqual([true, true, false]);
   });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);
