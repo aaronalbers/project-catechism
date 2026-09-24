@@ -805,5 +805,33 @@
    {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm"}
   ],
   "confidence": "estimate"
+ },
+ {
+  "id": "ogs-bed",
+  "title": "Og's bed — nine cubits by four",
+  "verses": ["Deut.3.1-13"],
+  "summary": "Og king of Bashan was the last of the Rephaim, and Deuteronomy 3:11 gives the proof: 'his bed of iron, nine cubits long and four cubits wide, is still in Rabbah of the Ammonites'. The Hebrew adds 'by the cubit of a man', which Driver (1895) takes to mean an ordinary cubit of full measure. On a common cubit of ≈ 44.5 cm that is ≈ 4.0 × 1.8 m; the BSB's note, on a longer cubit, gives 4.3 × 1.8 m. The size figure (≈ 1.66 m) stands at its foot. The text gives no height and does not say how tall Og was. What the object was is disputed. The word, ʿeres, means a bed or couch everywhere else in the Bible. Since J. D. Michaelis, many have taken it here to be a sarcophagus, and the 'iron' the black basalt of Bashan, which has the colour and hardness of iron; ancient basalt sarcophagi are common east of the Jordan (Driver). Veijola (2006) takes it to be a dolmen, a stone burial monument, many of which stand in the same region. Millard (1988, 1990) reads it as what it says, a bed. In the Late Bronze Age iron was rare and costly, and was used to plate, veneer or stud fine furniture. The model takes Millard's reading: a wooden bed fitted with iron. How much iron, where, and the bed's height and form are reconstructed; each is listed under the model with what it rests on. The same two figures give the size of Marduk's bed in the shrine on top of Etemenanki, the ziggurat of Babylon: 'The bed: 9 cubits the length, 4 cubits the breadth' (the Esagil tablet, line 34). Lindquist (2011) argues that Og's bed is meant to recall it: a trophy of a king whose power is set beside a god's.",
+  "kind": "procedural",
+  "procedural": "ogs-bed",
+  "dimensions": "9 × 4 cubits · ≈ 4.0 × 1.8 m",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [5.6, 0, 1.2]},
+  "estimates": {
+   "bed": "nine cubits long and four wide overall, 'by the cubit of a man', the ordinary cubit (Driver 1895), taken as ≈ 44.5 cm. It is drawn as a wooden frame with slats, its top ≈ 1.4 cubits (≈ 62 cm) from the ground, with a head raised 1.6 cubits more, as on the couch the Assyrian king reclines on in the 'Garden Party' relief (British Museum 1856,0909.53, Nineveh, c. 645–635 BC). The text gives neither height nor form, and does not say what the bed was made of besides the iron. It is taken, as Millard (1988) reads it, to be a bed whose iron was fitted to wood, not solid iron; others take 'bed' as a sarcophagus or dolmen and 'iron' as basalt (see the summary)",
+   "iron": "the text says only 'a bed of iron'. Millard (1988, 1990) sets out evidence that iron, rare and costly in the Late Bronze Age, was used to decorate beds and thrones, plated, veneered or studded, rather than to make them solid. Drawn as iron-sheathed turned legs, six to carry nine cubits, straps round the rails at the corners and middle, a strap along the head, and studs along the side rails. Where the iron was, and how much, is not known"
+  },
+  "sources": [
+   {"kind": "scripture", "ref": "Deut.3.11", "note": "'his bed of iron, nine cubits long and four cubits wide', 'by the cubit of a man' in the Hebrew, 'still in Rabbah of the Ammonites'; the BSB's note gives ≈ 4.3 × 1.8 m"},
+   {"kind": "scripture", "ref": "2Chr.16.14", "note": "Asa laid on a bier: mishkav, usually 'bed', used of a resting place in a tomb, the parallel Driver gives for reading ʿeres as a sarcophagus"},
+   {"kind": "lexicon", "title": "Strong's H6210 ʿeres, H1270 barzel, H520 ammah, H376 ish", "note": "'a couch (properly, with a canopy)'; 'iron'; 'a cubit'; 'a man'"},
+   {"kind": "primary", "title": "The Esagil tablet, line 34", "url": "https://oracc.museum.upenn.edu/btto/Q007970", "note": "'The bed: 9 cubits the length, 4 cubits the breadth. The bed and the throne are opposite', in the shrine on top of Etemenanki at Babylon; ORACC's edition after A. R. George, Babylonian Topographical Texts (1992). Louvre AO 6555, a copy made at Uruk in 229 BC of a Neo-Babylonian original"},
+   {"kind": "archaeology", "title": "The 'Garden Party' relief of Ashurbanipal", "url": "https://artsandculture.google.com/asset/the-garden-party-relief-from-the-north-palace-of-ashurbanipal-room-s/QAFmvzeZOigV7g", "note": "British Museum 1856,0909.53, North Palace, Nineveh, c. 645–635 BC: the king reclining on a couch with a raised head, the form the model's head follows"},
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on Deuteronomy", "author": "S. R. Driver", "year": 1895, "url": "https://archive.org/details/criticalexegetic00driv", "note": "ICC, pp. 53–54: 'whether by this term is meant a bed or a sarcophagus, is disputed'; basalt sarcophagi 'found in great numbers in the country E. of Jordan'; 'by iron is meant probably the black basalt of the country'; 'the cubit of a man, i.e. an ordinary cubit, of full measure'"},
+   {"kind": "scholarship", "title": "King Og's Bed and Other Ancient Ironmongery", "author": "A. R. Millard", "year": 1988, "note": "in L. Eslinger and G. Taylor (eds), Ascribe to the Lord (JSOT Supplement 67), 481–492: iron used to decorate beds and thrones, plated, veneered or studded"},
+   {"kind": "scholarship", "title": "King Og's Iron Bed: Fact or Fancy?", "author": "A. R. Millard", "year": 1990, "url": "https://library.biblicalarchaeology.org/article/kings-ogs-iron-bed/", "note": "Bible Review, April 1990; the same case for a general reader"},
+   {"kind": "scholarship", "title": "King Og's Iron Bed (Deut 3:11) — Once Again", "author": "Timo Veijola", "year": 2006, "note": "in P. W. Flint, E. Tov and J. C. VanderKam (eds), Studies in the Hebrew Bible, Qumran, and the Septuagint Presented to Eugene Ulrich (VT Supplements 101), 60–76; reads ʿeres barzel as a dolmen"},
+   {"kind": "scholarship", "title": "King Og's Iron Bed", "author": "Maria Lindquist", "year": 2011, "note": "Catholic Biblical Quarterly 73, 477–492; the bed's size as that of Marduk's bed, and its meaning"},
+   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm"}
+  ],
+  "confidence": "estimate"
  }
 ]

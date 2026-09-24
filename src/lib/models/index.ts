@@ -10,6 +10,7 @@ import { ark } from './furniture';
 import { garments } from './garments';
 import { goliath } from './goliath';
 import { noahsArk } from './noah';
+import { ogsBed } from './og';
 import { statue } from './statue';
 import { tabernacle } from './tabernacle';
 import { temple } from './temple';
@@ -28,6 +29,7 @@ const BUILDERS = {
   'galilee-boat': galileeBoat,
   goliath,
   'nebuchadnezzars-statue': statue,
+  'ogs-bed': ogsBed,
 } satisfies Record<string, () => THREE.Object3D>;
 
 export type ProceduralKind = keyof typeof BUILDERS;

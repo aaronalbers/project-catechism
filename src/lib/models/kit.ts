@@ -8,6 +8,7 @@ export const wood = () => new THREE.MeshStandardMaterial({ color: 0x8b5a2b, roug
 export const gold = () => new THREE.MeshStandardMaterial({ color: 0xd4a640, metalness: 1, roughness: 0.28 });
 export const bronze = () => new THREE.MeshStandardMaterial({ color: 0xa8703a, metalness: 1, roughness: 0.4 });
 export const silver = () => new THREE.MeshStandardMaterial({ color: 0xd0d4d8, metalness: 1, roughness: 0.3 });
+export const iron = () => new THREE.MeshStandardMaterial({ color: 0x55575c, metalness: 1, roughness: 0.55 });
 export const stone = () => new THREE.MeshStandardMaterial({ color: 0x8f8a80, roughness: 0.95 });
 export const cloth = (color: number, map?: THREE.Texture) => new THREE.MeshStandardMaterial({ color, ...(map && { map }), roughness: 0.95, side: THREE.DoubleSide });
 
