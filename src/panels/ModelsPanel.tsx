@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
-import { useStore } from '@/app/store';
+import { useFeatureInView, useStore } from '@/app/store';
 import { modelBuildAt, modelStateAt, modelViewAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Model3D } from '@/lib/types';
@@ -383,11 +383,12 @@ export function ModelsPanel() {
   const here = modelsFor(loc);
   const chapter = modelsInChapter(loc.book, loc.chapter).filter((m) => !here.includes(m));
   const list = [...here, ...chapter];
+  useFeatureInView();
   return (
     <div className="panel-body">
       {list.length === 0 && <div className="empty"><p>No models for this chapter yet.</p><small>Register one in <code>content/models.json</code> — procedural (code) or glTF with attribution.</small></div>}
       {list.map((m) => (
-        <div className="card" key={m.id}>
+        <div className="card" key={m.id} id={`model-${m.id}`}>
           <h3><span style={{ flex: 1 }}>{m.title}</span><ConfidenceBadge c={m.confidence} /></h3>
           <div className="verses">{m.dimensions && <span className="badge kind">{m.dimensions}</span>}{m.verses.map((r) => <RefChip key={r} r={r} />)}</div>
           <ModelView m={m} loc={loc} />

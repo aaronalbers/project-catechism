@@ -1,24 +1,24 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, setState, useStore } from '@/app/store';
-import { CATALOG, type CatalogEntry, type CatalogSection } from '@/lib/catalog';
+import { CATALOG, cardId, type CatalogEntry, type CatalogSection } from '@/lib/catalog';
 import { formatRef, parseRef } from '@/lib/refs';
 
-function open(ref: string, s: CatalogSection) {
+function open(ref: string, e: CatalogEntry, s: CatalogSection) {
   const r = parseRef(ref);
-  if (r) goTo(r.start, { openTab: s.tab, reveal: s.reveal });
+  if (r) goTo(r.start, { openTab: s.tab, reveal: s.reveal, feature: cardId(e) });
 }
 
 function Entry({ e, s }: { e: CatalogEntry; s: CatalogSection }) {
   return (
     <li className="ix-entry">
-      <button className="ix-title" onClick={() => open(e.go, s)}>
+      <button className="ix-title" onClick={() => open(e.go, e, s)}>
         <span className={`marker ${e.kind}`} aria-hidden="true" />{e.title}
       </button>
       {e.summary && <p className="ix-summary">{e.summary}</p>}
       {e.lines.map((l, i) => (
         <div key={i} className="ix-line">
           {l.label && <span className="ix-label">{l.label}</span>}
-          {l.refs.map((r) => <button key={r} className="chip link" onClick={() => open(r, s)}>{formatRef(r)}</button>)}
+          {l.refs.map((r) => <button key={r} className="chip link" onClick={() => open(r, e, s)}>{formatRef(r)}</button>)}
         </div>
       ))}
     </li>

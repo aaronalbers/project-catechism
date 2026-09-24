@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 import { hashFromLoc, locFromHash, type VerseLoc } from '@/lib/refs';
 
 export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos';
@@ -17,6 +17,8 @@ export interface State {
   index: string | null;
   /** Set by a link that goes to a feature rather than a verse, for the reader to bring it into view; cleared by the next `goTo`. */
   reveal: Reveal | null;
+  /** Element id of the panel card a link goes to (`model-temple`), for the panel to scroll to; cleared once it has, or by the next `goTo`. */
+  feature: string | null;
 }
 export type Reveal = 'chiasm';
 
@@ -38,6 +40,7 @@ let state: State = {
   playing: false,
   index: indexFromHash(location.hash),
   reveal: null,
+  feature: null,
 };
 
 const listeners = new Set<() => void>();
@@ -58,8 +61,8 @@ export function setState(patch: Partial<State> | ((s: State) => Partial<State>))
   emit();
 }
 
-export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab; reveal?: Reveal } = {}) {
-  setState({ loc, wordIndex: null, index: null, reveal: opts.reveal ?? null, ...(opts.openTab ? { tab: opts.openTab, panelOpen: true } : {}) });
+export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab; reveal?: Reveal; feature?: string } = {}) {
+  setState({ loc, wordIndex: null, index: null, reveal: opts.reveal ?? null, feature: opts.feature ?? null, ...(opts.openTab ? { tab: opts.openTab, panelOpen: true } : {}) });
 }
 
 function fromHash() {
@@ -75,3 +78,17 @@ export function useStore<T>(select: (s: State) => T): T {
   return useSyncExternalStore((cb) => { listeners.add(cb); return () => listeners.delete(cb); }, () => select(state), () => select(state));
 }
 export const getState = () => state;
+
+/**
+ * In a panel: scroll the card a link went to into view, when the panel has it. It jumps rather than
+ * glides: Chrome runs one smooth scrollIntoView at a time, and the reader's, to the verse, cancels it.
+ */
+export function useFeatureInView() {
+  const feature = useStore((s) => s.feature);
+  useEffect(() => {
+    const el = feature && document.getElementById(feature);
+    if (!el) return;
+    el.scrollIntoView({ block: 'start', behavior: 'instant' });
+    setState({ feature: null });
+  });
+}

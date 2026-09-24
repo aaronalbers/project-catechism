@@ -1,4 +1,4 @@
-import { goTo, useStore } from '@/app/store';
+import { goTo, useFeatureInView, useStore } from '@/app/store';
 import { INSIGHT_BY_ID, insightsFor, insightsInChapter } from '@/lib/content';
 import type { Insight } from '@/lib/types';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
@@ -20,7 +20,7 @@ export function InsightCard({ i, compact = false }: { i: Insight; compact?: bool
           const rel = INSIGHT_BY_ID.get(id);
           if (!rel) return null;
           const first = parseRef(rel.verses[0]);
-          return <button key={id} className="chip link" onClick={() => first && goTo(first.start, { openTab: 'insights' })}>{rel.title}</button>;
+          return <button key={id} className="chip link" onClick={() => first && goTo(first.start, { openTab: 'insights', feature: `insight-${id}` })}>{rel.title}</button>;
         })}</div> : null}
       </>}
     </div>
@@ -31,6 +31,7 @@ export function InsightsPanel() {
   const loc = useStore((s) => s.loc);
   const here = insightsFor(loc);
   const nearby = insightsInChapter(loc.book, loc.chapter).filter((i) => !here.includes(i));
+  useFeatureInView();
   return (
     <div className="panel-body">
       {here.length === 0 && nearby.length === 0 && (

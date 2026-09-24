@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { goTo, useStore } from '@/app/store';
+import { goTo, useFeatureInView, useStore } from '@/app/store';
 import { loadVerseText, loadXrefs } from '@/lib/data';
 import { chiasmsFor, fragmentsFor, propheciesFor, quotesFor, speakerFor, writersFor, rulersFor } from '@/lib/content';
 import { formatRef, parseRef } from '@/lib/refs';
@@ -35,6 +35,7 @@ export function LinksPanel() {
   const speakers = speakerFor(loc);
   const writers = writersFor(loc.book);
   const rulers = rulersFor(loc);
+  useFeatureInView();
   return (
     <div className="panel-body">
       <div className="panel-title">Links across the Bible</div>
@@ -46,7 +47,7 @@ export function LinksPanel() {
       {prophecies.length > 0 && <>
         <div className="panel-title">Prophecy</div>
         {prophecies.map(({ p, role }) => (
-          <div className="card" key={p.id}>
+          <div className="card" key={p.id} id={`prophecy-${p.id}`}>
             <h3><span style={{ flex: 1 }}>{p.title}</span><ConfidenceBadge c={p.confidence} /></h3>
             <p className="summary">{p.summary}</p>
             <div className="verses"><span className="badge kind">{role === 'given' ? 'Given here' : 'Fulfilled here'}</span>
@@ -58,7 +59,7 @@ export function LinksPanel() {
       {quotes.length > 0 && <>
         <div className="panel-title">Quotations</div>
         {quotes.map(({ q, role }) => (
-          <div className="card" key={q.id}>
+          <div className="card" key={q.id} id={`quote-${q.id}`}>
             <p className="summary">{q.summary}</p>
             <div className="verses"><span className="badge kind">{role === 'quoting' ? 'Quotes' : 'Quoted by'}</span><RefChip r={role === 'quoting' ? q.quoted : q.quoting} /></div>
             {q.sources && <SourceList sources={q.sources} />}
@@ -68,7 +69,7 @@ export function LinksPanel() {
       {chiasms.length > 0 && <>
         <div className="panel-title">Chiastic structure</div>
         {chiasms.map((c) => (
-          <div className="card chiasm" key={c.id}>
+          <div className="card chiasm" key={c.id} id={`chiasm-${c.id}`}>
             <h3><span style={{ flex: 1 }}>{c.title}</span><ConfidenceBadge c={c.confidence} /></h3>
             <p className="summary">{c.summary}</p>
             {c.levels.map((l, i) => (
@@ -84,7 +85,7 @@ export function LinksPanel() {
       {fragments.length > 0 && <>
         <div className="panel-title">Earliest manuscript witnesses</div>
         {fragments.map((f) => (
-          <div className="card" key={f.id}>
+          <div className="card" key={f.id} id={`fragment-${f.id}`}>
             <h3><span style={{ flex: 1 }}>{f.siglum} — {f.name}</span><ConfidenceBadge c="evidence" /></h3>
             <div className="verses"><span className="badge kind">{f.date}</span><span className="chip">{f.held}</span></div>
             <p className="summary">{f.summary}</p>

@@ -20,6 +20,9 @@ export interface CatalogEntry {
   /** A sub-heading within the section (an insight's kind). */
   group?: string;
 }
+
+/** The element id of an entry's card in its panel, which a link from the index scrolls to. */
+export const cardId = (e: { kind: FeatureKind; id: string }) => `${e.kind}-${e.id}`;
 export interface CatalogSection {
   id: string; kind: FeatureKind; title: string; blurb: string; tab: PanelTab; entries: CatalogEntry[];
   /** What the reader should bring into view on arrival, beyond the verse. */
