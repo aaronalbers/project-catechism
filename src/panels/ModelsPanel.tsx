@@ -4,9 +4,9 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { useStore } from '@/app/store';
-import { modelBuildAt, modelHiddenIn, modelStateAt, modelsFor, modelsInChapter } from '@/lib/content';
+import { modelBuildAt, modelHiddenIn, modelStateAt, modelViewAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
-import type { Model3D } from '@/lib/types';
+import type { Model3D, ModelAngle, ModelChange, ModelStep } from '@/lib/types';
 import { buildProcedural } from '@/lib/models';
 import { CUBIT_M, FIGURE_M, formatMetres, scaleReference, type ScaleReference } from '@/lib/models/scale';
 import { formatRef, type VerseLoc } from '@/lib/refs';
@@ -17,9 +17,14 @@ import { formatRef, type VerseLoc } from '@/lib/refs';
  */
 interface Arrival { part: THREE.Object3D; t0: number; y0: number; drop: number; mats: THREE.Material[]; leaving?: boolean }
 const ARRIVE_MS = 700, LEAVE_MS = 1100;
-/** The camera easing to frame the parts shown so far, keeping the angle the viewer chose. */
-interface Framing { from: THREE.Vector3; to: THREE.Vector3; fromDist: number; toDist: number; t0: number }
+/**
+ * The camera easing to frame the parts shown so far. While a passage is building or changing the
+ * model it also turns to that passage's angle (`modelViewAt`); elsewhere it keeps the angle it has.
+ */
+interface Framing { from: THREE.Vector3; to: THREE.Vector3; fromDist: number; toDist: number; turn: { from: THREE.Spherical; to: THREE.Spherical } | null; t0: number }
 const FRAME_MS = 900;
+/** The unit direction from a model to a camera at `view`, as a spherical angle (phi from +y, theta from +z towards +x). */
+const viewDir = ([azimuth, elevation]: ModelAngle) => new THREE.Spherical(1, THREE.MathUtils.degToRad(90 - elevation), THREE.MathUtils.degToRad(azimuth));
 /** The size reference fading out where it stood and back in beside what the camera now frames. */
 interface Move { t0: number; p: THREE.Vector3; box: THREE.Box3; toward?: THREE.Vector3; placed: boolean }
 const MOVE_OUT_MS = 300, MOVE_IN_MS = 450;
@@ -80,6 +85,19 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: s
 }
 
 /**
+ * The parts the text is working on at `loc`: during a build, those the latest step adds; while
+ * reading the state `stateId` in one of its accounts, those its latest change removes or adds
+ * (`change` is then set). Undefined elsewhere.
+ */
+function activeParts(m: Model3D, loc: VerseLoc, stateId: string | null): { parts?: string[]; change?: ModelChange; step?: ModelStep } {
+  const at = modelBuildAt(m, loc);
+  if (at) { const step = at.build.steps[at.step - 1]; return { parts: step?.parts, step }; }
+  const reading = modelStateAt(m, loc);
+  const change = reading && reading.state.id === stateId ? reading.account.changes[reading.step - 1] : undefined;
+  return { parts: change && [...(change.hides ?? []), ...(change.shows ?? [])], change };
+}
+
+/**
  * What the camera should frame at `loc`: during a build, the objects the latest step is working
  * on — each named part's nearest ancestor flagged `userData.focus`, or the whole model if it has
  * none — so a new piece of furniture fills the view rather than the whole site. While reading a
@@ -87,10 +105,7 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: s
  * Otherwise, all that is shown. `whole` says the box is the model's, not one piece's.
  */
 function focusBox(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: string | null): { box: THREE.Box3; whole: boolean } {
-  const at = modelBuildAt(m, loc);
-  const reading = at ? null : modelStateAt(m, loc);
-  const change = reading && reading.state.id === stateId ? reading.account.changes[reading.step - 1] : undefined;
-  const parts = at ? at.build.steps[at.step - 1]?.parts : change && [...(change.hides ?? []), ...(change.shows ?? [])];
+  const { parts, change } = activeParts(m, loc, stateId);
   if (!parts) return { box: visibleBox(object), whole: true };
   const box = new THREE.Box3();
   let whole = false;
@@ -181,6 +196,8 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   const locRef = useRef(loc);
   locRef.current = loc;
   const frameRef = useRef<(animate: boolean) => void>(() => {});
+  // The angle last framed at, so a move between steps that shows nothing new still turns the camera.
+  const viewRef = useRef<string>('');
   // The later state shown: the one the text is describing here, unless the reader picked another.
   // A pick lasts until the reading moves into or out of a state's passage.
   const reading = modelStateAt(m, loc);
@@ -259,25 +276,41 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     };
     frameRef.current = (animate) => {
       const o = objectRef.current;
+      // Held at the passage's angle while one is being read, turning freely otherwise.
+      const view = modelViewAt(m, locRef.current, stateRef.current);
+      viewRef.current = JSON.stringify(view);
+      controls.autoRotate = !view;
+      const active = activeParts(m, locRef.current, stateRef.current);
+      cutAround(new Set(active.parts ?? []), !!active.step?.cutaway);
       const f = o && focusBox(m, o, locRef.current, stateRef.current);
       if (!f || f.box.isEmpty()) return;
+      const fromDir = new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target));
+      fromDir.radius = 1;
+      const toDir = view ? viewDir(view) : fromDir.clone();
+      // Turn the short way round (in spherical angles, so front to back goes round the model, not through it).
+      toDir.theta = fromDir.theta + THREE.MathUtils.euclideanModulo(toDir.theta - fromDir.theta + Math.PI, Math.PI * 2) - Math.PI;
       const b = f.box.clone(), ref = referenceRef.current;
       if (ref?.group.visible) {
         // The reference group sits at the model's offset, so work in the model's own coordinates.
         const off = ref.group.position, local = f.box.clone().translate(off.clone().negate());
-        const authored = f.whole ? m.scale?.at : undefined;
-        const toward = f.whole ? undefined : local.getCenter(new THREE.Vector3()).addScaledVector(camera.position.clone().sub(controls.target).normalize(), 1e4);
+        const worn = !!m.scale?.worn, authored = f.whole || worn ? m.scale?.at : undefined;
+        const toward = f.whole ? undefined : local.getCenter(new THREE.Vector3()).addScaledVector(new THREE.Vector3().setFromSpherical(toDir), 1e4);
         const p = ref.spot(local, authored, toward);
-        b.union(ref.boundsAt(p).translate(off));
+        // A figure wearing the model stays where it is and is not framed, so the camera can close in on a small part.
+        if (!worn || f.whole) b.union(ref.boundsAt(p).translate(off));
         moveReference(ref, p, local, toward, animate);
       }
-      const toDist = Math.max(b.getSize(new THREE.Vector3()).length() * 1.5, 0.3);
-      framing = { from: controls.target.clone(), to: b.getCenter(new THREE.Vector3()), fromDist: camera.position.distanceTo(controls.target), toDist, t0: animate ? performance.now() : -Infinity };
+      // Never closer than about 70 cm to a piece, so a ring or a cord is seen with what it hangs on.
+      const toDist = Math.max(b.getSize(new THREE.Vector3()).length() * 1.5, f.whole ? 0.3 : 0.7 / (m.scale?.metres ?? 1));
+      framing = { from: controls.target.clone(), to: b.getCenter(new THREE.Vector3()), fromDist: camera.position.distanceTo(controls.target), toDist, turn: view ? { from: fromDir, to: toDir } : null, t0: animate ? performance.now() : -Infinity };
     };
     const stepFraming = () => {
       if (!framing) return;
       const k = Math.min(1, (performance.now() - framing.t0) / FRAME_MS), ease = 1 - (1 - k) ** 3;
-      const dir = camera.position.clone().sub(controls.target).normalize();
+      const { turn } = framing;
+      const dir = turn
+        ? new THREE.Vector3().setFromSpherical(new THREE.Spherical(1, turn.from.phi + (turn.to.phi - turn.from.phi) * ease, turn.from.theta + (turn.to.theta - turn.from.theta) * ease))
+        : camera.position.clone().sub(controls.target).normalize();
       controls.target.lerpVectors(framing.from, framing.to, ease);
       const d = framing.fromDist + (framing.toDist - framing.fromDist) * ease;
       camera.position.copy(controls.target).addScaledVector(dir, d);
@@ -285,13 +318,30 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       if (k >= 1) framing = null;
     };
     // The cutaway is a lengthwise section: a vertical plane down the tent's long (x) axis that drops
-    // whichever long side faces the camera, so the inside stays open from any angle.
-    const cut = new THREE.Plane();
+    // whichever long side faces the camera, so the inside stays open from any angle. Parts flagged
+    // `cutaway: true` are cut by `cut`, which the Show outside / Show inside button moves out of the way;
+    // parts flagged `cutaway: 'step'` (the high priest's garments) are cut by `stepCut`, and only at a
+    // step marked `cutaway`, one that puts something on under them.
+    const cut = new THREE.Plane(), stepCut = new THREE.Plane();
     let cutCenter: THREE.Vector3 | null = null;
+    // The materials of the parts that can be cut away, and how; a material belongs to one part (see kit.ts).
+    let cutMats: [THREE.Material, boolean | 'step'][] = [];
+    // Everything that can be cut away is, except what the text is building or changing now (and all
+    // inside it), so a piece on the near side, such as the temple's stair, is not cut out of its own step.
+    const cutAround = (active: Set<string>, stepCuts: boolean) => {
+      const o = objectRef.current;
+      if (!o || !cutMats.length) return;
+      const keep = new Set<THREE.Material>();
+      for (const name of active) { const p = o.getObjectByName(name); if (p) for (const mat of materialsOf(p)) keep.add(mat); }
+      for (const [mat, how] of cutMats) {
+        const want = keep.has(mat) ? null : how === 'step' ? (stepCuts ? [stepCut] : null) : [cut];
+        if (mat.clippingPlanes?.[0] !== want?.[0]) { mat.clippingPlanes = want; mat.needsUpdate = true; }
+      }
+    };
     const stepCutaway = () => {
       if (!cutCenter) return;
-      if (!cutawayRef.current) { cut.set(new THREE.Vector3(0, 1, 0), 1e9); return; }
-      cut.setFromNormalAndCoplanarPoint(new THREE.Vector3(0, 0, camera.position.z > cutCenter.z ? -1 : 1), cutCenter);
+      stepCut.setFromNormalAndCoplanarPoint(new THREE.Vector3(0, 0, camera.position.z > cutCenter.z ? -1 : 1), cutCenter);
+      if (cutawayRef.current) cut.copy(stepCut); else cut.set(new THREE.Vector3(0, 1, 0), 1e9);
     };
     let disposed = false;
     const place = (o: THREE.Object3D) => {
@@ -306,8 +356,10 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       const tent = o.children.filter((p) => p.userData.cutaway);
       if (tent.length) {
         cutCenter = boxOf(tent).getCenter(new THREE.Vector3());
-        for (const p of tent) for (const mat of materialsOf(p)) mat.clippingPlanes = [cut];
-        setHasCutaway(true);
+        cutMats = tent.flatMap((p) => [...new Set(materialsOf(p))].map((mat): [THREE.Material, boolean | 'step'] => [mat, p.userData.cutaway]));
+        for (const [mat, how] of cutMats) if (how === true) mat.clippingPlanes = [cut];
+        // Only parts cut at the reader's choice get the button; step cuts follow the text.
+        setHasCutaway(tent.some((p) => p.userData.cutaway === true));
       }
       syncParts(m, o, locRef.current, stateRef.current, null);
       frameRef.current(false);
@@ -331,7 +383,9 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     };
   }, [m]);
   useEffect(() => {
-    if (objectRef.current && syncParts(m, objectRef.current, loc, stateId, arrivals.current)) frameRef.current(true);
+    if (!objectRef.current) return;
+    const shown = syncParts(m, objectRef.current, loc, stateId, arrivals.current);
+    if (shown || JSON.stringify(modelViewAt(m, loc, stateId)) !== viewRef.current) frameRef.current(true);
   }, [m, loc, stateId]);
   useEffect(() => {
     if (!referenceRef.current) return;

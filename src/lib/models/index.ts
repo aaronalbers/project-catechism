@@ -5,6 +5,7 @@ import type * as THREE from 'three';
 import { alabastron } from './alabastron';
 import { coin } from './coins';
 import { ark } from './furniture';
+import { garments } from './garments';
 import { noahsArk } from './noah';
 import { tabernacle } from './tabernacle';
 import { temple } from './temple';
@@ -17,6 +18,7 @@ const BUILDERS = {
   tabernacle,
   'noahs-ark': noahsArk,
   temple,
+  'priestly-garments': garments,
 } satisfies Record<string, () => THREE.Object3D>;
 
 export type ProceduralKind = keyof typeof BUILDERS;

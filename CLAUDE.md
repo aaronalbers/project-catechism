@@ -139,14 +139,27 @@ them in CI — read it before adding content.
   bar in cubits), and optionally `at`, where the size figure stands, somewhere that says something (the
   tabernacle's gate, the ark's door). The viewer draws a ≈1.66 m figure beside anything over half a metre
   and a hand, one handbreadth across the palm, beside smaller things; both are built in
-  `src/lib/models/scale.ts`, outside the model, so they are never build parts.
+  `src/lib/models/scale.ts`, outside the model, so they are never build parts. Something worn (the high
+  priest's garments) is cut to fit that figure and sets `at` to its own origin and `worn: true`, so the
+  figure wears it: it stays put through a build and the camera closes in on each part, not the whole
+  figure. `shoulder()` in `scale.ts` gives the arm's pose, for sleeves.
+- While a build or a state's account is being read, the camera holds still at an angle and eases to
+  each step; elsewhere the model turns. The angle is `view`, `[azimuth, elevation]` in degrees
+  (azimuth from the front, +z, round towards +x), set on the model, or on a step or change that needs
+  to show a part the model's angle hides (the ephod's apron, worn behind); without one it is
+  `DEFAULT_MODEL_VIEW` in `content.ts`. The size figure stands beside a framed piece, to its right as
+  the camera sees it, never between the camera and the piece.
 - Procedural models live in `src/lib/models/`: one entry in the `BUILDERS` table in `index.ts`
   registers a model (and its `procedural` id). `kit.ts` has the shared pieces; call the material
   helpers (`gold()` …) once per part, and use `instances()` for many copies of one piece.
   Furniture builders (`furniture.ts`) draw at the origin under a name prefix (`table` →
   `table-body`, `table-bread`), so a model places them and can hold several of one kind. In a
   model, `userData.focus` marks what the camera frames while a step builds inside it, and
-  `userData.cutaway` marks parts the viewer can cut open to show what they enclose.
+  `userData.cutaway` marks parts the viewer can cut open to show what they enclose. The part a step
+  is building (or a state's change is adding or removing) is never cut, so a piece on the near side
+  of the section, such as the temple's stair, still shows at its own step. A part flagged
+  `cutaway: 'step'` instead is cut only at a step marked `"cutaway": true`, with no button: the high
+  priest's garments open only where something is put on under them (the tunic, sash, undergarments).
 
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
 the surrounding file.

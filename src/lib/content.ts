@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Journey, Model3D, ModelBuild, ModelChange, ModelState, ModelStateAccount, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
+import type { Chiasm, Fragment, Insight, Journey, Model3D, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -73,6 +73,20 @@ export function modelStateAt(m: Model3D, loc: VerseLoc): { state: ModelState; ac
     const account = state.accounts.find((a) => contains(a.ref, loc));
     if (account) return { state, account, step: account.changes.filter((c) => { const r = parseRef(c.ref); return !!r && compareLoc(r.start, loc) <= 0; }).length };
   }
+  return null;
+}
+/** The camera's angle while a passage is building or changing a model that sets none: in front, a little to the right, and above. */
+export const DEFAULT_MODEL_VIEW: ModelAngle = [30, 25];
+/**
+ * Where the camera looks from at `loc`: while a build is read, or the state `stateId` is read in one
+ * of its accounts, the latest step's or change's `view`, else the model's own, else the default. Null
+ * anywhere else, where the model is shown whole and turns.
+ */
+export function modelViewAt(m: Model3D, loc: VerseLoc, stateId: string | null): ModelAngle | null {
+  const at = modelBuildAt(m, loc);
+  if (at) return at.build.steps[at.step - 1]?.view ?? m.view ?? DEFAULT_MODEL_VIEW;
+  const reading = modelStateAt(m, loc);
+  if (reading && reading.state.id === stateId) return reading.account.changes[reading.step - 1]?.view ?? m.view ?? DEFAULT_MODEL_VIEW;
   return null;
 }
 /**

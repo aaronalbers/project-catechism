@@ -19,13 +19,28 @@ const capsule = (r: number, len: number, mat: THREE.Material, x: number, y: numb
   const m = new THREE.Mesh(new THREE.CapsuleGeometry(r, Math.max(len, 0.001), 6, 16), mat); m.position.set(x, y, z); return m;
 };
 
-/** A plain standing figure `h` units tall, feet on y = 0, facing +z. Deliberately generic: no one in particular. */
+/**
+ * A group at the right (sx = 1) or left (sx = −1) shoulder of a figure `h` units tall, turned as its
+ * arm hangs: a little out from the side, so a robe can hang clear of it. What is added to it hangs
+ * down its −y axis, as the arm does; the high priest's sleeves are drawn this way.
+ */
+export function shoulder(h: number, sx: number, ...children: THREE.Object3D[]): THREE.Group {
+  const s = new THREE.Group(); s.position.set(sx * 0.13 * h, 0.8 * h, 0); s.rotation.z = sx * 0.3;
+  if (children.length) s.add(...children);
+  return s;
+}
+
+/**
+ * A plain standing figure `h` units tall, feet on y = 0, facing +z. Deliberately generic: no one in
+ * particular. A model worn by a person (the high priest's garments) sets its `scale.at` to where the
+ * wearer stands, and this figure wears it.
+ */
 export function figure(h: number): THREE.Group {
   const g = new THREE.Group(), mat = skin();
   const leg = 0.05 * h, hip = 0.47 * h;
   for (const sx of [-1, 1]) g.add(capsule(leg, hip - 2 * leg, mat, sx * 0.06 * h, hip / 2, 0));
   const torso = capsule(0.1 * h, 0.17 * h, mat, 0, 0.64 * h, 0); torso.scale.z = 0.6; g.add(torso);
-  for (const sx of [-1, 1]) { const a = capsule(0.035 * h, 0.31 * h, mat, sx * 0.145 * h, 0.62 * h, 0); a.rotation.z = sx * 0.06; g.add(a); }
+  for (const sx of [-1, 1]) g.add(shoulder(h, sx, capsule(0.035 * h, 0.31 * h, mat, 0, -0.19 * h, 0)));
   const head = new THREE.Mesh(new THREE.SphereGeometry(0.065 * h, 24, 16), mat); head.position.y = 0.93 * h; g.add(head);
   return g;
 }
@@ -85,16 +100,20 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
   const boundsAt = (p: THREE.Vector3) => local.clone().translate(p);
   return {
     group, kind, boundsAt,
-    // `at` if given; otherwise just off the corner of `box` nearest `toward` (the camera), clear of both faces,
-    // or for a model seen whole, beside its +x end. A figure stands on the ground (y = 0) even beside a
-    // piece raised above it, such as a capital on its pillar; a hand is held level with the piece.
+    // `at` if given; otherwise, seen from `toward` (the camera), just clear of `box` on its right, so it
+    // stands beside the piece rather than in front of it; or for a model seen whole, beside its +x end.
+    // A figure stands on the ground (y = 0) even beside a piece raised above it, such as a capital on
+    // its pillar; a hand is held level with the piece.
     spot(box, at, toward) {
       if (at) return new THREE.Vector3(...at);
       const c = box.getCenter(new THREE.Vector3()), gap = kind === 'figure' ? 0.3 / u : half.x * 0.4;
       const y = kind === 'figure' ? Math.min(box.min.y, 0) : box.min.y;
       if (!toward) return new THREE.Vector3(box.max.x + half.x + gap, y, c.z);
-      const sx = toward.x >= c.x ? 1 : -1, sz = toward.z >= c.z ? 1 : -1;
-      return new THREE.Vector3(c.x + sx * (box.max.x - c.x + half.x + gap), y, c.z + sz * (box.max.z - c.z + half.z + gap));
+      const look = toward.clone().sub(c).setY(0);
+      if (look.lengthSq() === 0) look.set(0, 0, 1);
+      const right = new THREE.Vector3(look.z, 0, -look.x).normalize(), size = box.getSize(new THREE.Vector3()).multiplyScalar(0.5);
+      const reach = (h: THREE.Vector3) => Math.abs(h.x * right.x) + Math.abs(h.z * right.z);
+      return c.clone().addScaledVector(right, reach(size) + reach(half) + gap).setY(y);
     },
     // A bar of a round number of the model's units (cubits, or metric), about a quarter as long as the
     // box and figure together, on the ground in front of both.

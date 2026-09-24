@@ -3,7 +3,7 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, modelBuildAt, modelHiddenIn, modelStateAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -148,15 +148,17 @@ describe('content integrity', () => {
     expect(placed(noah, at(300, 31, 51), [5, 0, 27])).toBe('50 cubits (≈ 22.3 m), in blocks of 10');
     expect(placed(scaleReference({ metres: 0.445, unit: 'cubit' }, at(2.5, 2.4, 1.7)), at(2.5, 2.4, 1.7))).toBe('1 cubit (≈ 44.5 cm)');
   });
-  // During a build the figure moves to whatever the camera frames, standing off its nearest corner.
-  it('the size figure stands clear of a framed piece, on the side toward the camera', () => {
+  // During a build the figure moves to whatever the camera frames, standing beside it as the camera sees it.
+  it('the size figure stands clear of a framed piece, beside it and not in front of it', () => {
     const tabernacle = scaleReference({ metres: 0.445, unit: 'cubit' }, new THREE.Box3(new THREE.Vector3(-50, 0, -25), new THREE.Vector3(50, 10, 25)));
     const table = new THREE.Box3(new THREE.Vector3(-11, 0, -3.7), new THREE.Vector3(-9, 1.6, -2.7));
-    const p = tabernacle.spot(table, undefined, new THREE.Vector3(100, 50, 100));
-    expect(p.x).toBeGreaterThan(table.max.x);
-    expect(p.z).toBeGreaterThan(table.max.z);
+    const camera = new THREE.Vector3(100, 50, 100), p = tabernacle.spot(table, undefined, camera);
     expect(p.y).toBe(0);
     expect(tabernacle.boundsAt(p).intersectsBox(table)).toBe(false);
+    const centre = table.getCenter(new THREE.Vector3());
+    expect(new THREE.Ray(camera, centre.clone().sub(camera).normalize()).intersectsBox(tabernacle.boundsAt(p))).toBe(false);
+    // To the right as seen from the camera.
+    expect(p.clone().sub(centre).cross(camera.clone().sub(centre)).y).toBeLessThan(0);
     expect(tabernacle.place(p, table, new THREE.Vector3(100, 50, 100))).toBe('1 cubit (≈ 44.5 cm)');
     // Beside a piece high off the ground (the temple's capitals, 18 cubits up) it still stands on the ground.
     const capital = new THREE.Box3(new THREE.Vector3(18, 18, -9), new THREE.Vector3(22, 23, -3));
@@ -291,6 +293,33 @@ describe('content integrity', () => {
     expect([kings.has('table'), kings.has('more-tables'), kings.has('veil')]).toEqual([true, false, false]);
     const chron = modelBuildAt(temple, { book: '2Chr', chapter: 5, verse: 9 })!.parts;
     expect([chron.has('more-tables'), chron.has('veil'), chron.has('side-chambers')]).toEqual([true, true, false]);
+    // The high priest's garments: the breastpiece's stones go on a row a verse; Lev 8 dresses Aaron from the tunic outward.
+    const garments = MODELS.find((m) => m.id === 'priestly-garments')!;
+    const rows = modelBuildAt(garments, { book: 'Exod', chapter: 28, verse: 18 })!.parts;
+    expect([rows.has('stones-row-2'), rows.has('stones-row-3'), rows.has('tunic')]).toEqual([true, false, false]);
+    const dressed = modelBuildAt(garments, { book: 'Lev', chapter: 8, verse: 7 })!.parts;
+    expect([dressed.has('robe'), dressed.has('breastpiece'), dressed.has('turban')]).toEqual([true, false, false]);
+  });
+  // A step that cuts the model open needs parts that open at a step; otherwise it would do nothing.
+  it('a step that cuts a model open names a model with parts cut at steps', () => {
+    for (const m of MODELS) {
+      const cutting = (m.builds ?? []).flatMap((b) => b.steps.filter((st) => st.cutaway));
+      if (!cutting.length) continue;
+      const model = buildProcedural(m.procedural!);
+      expect(model.children.some((c) => c.userData.cutaway === 'step'), `${m.id}: steps cut it open but no part is cut at steps`).toBe(true);
+    }
+  });
+  // While a passage builds or changes a model the camera holds an angle; elsewhere the model turns.
+  it('the camera holds an angle while a passage builds or changes a model, and turns outside it', () => {
+    const garments = MODELS.find((m) => m.id === 'priestly-garments')!;
+    expect(modelViewAt(garments, { book: 'Exod', chapter: 28, verse: 4 }, null)).toBeNull();
+    expect(modelViewAt(garments, { book: 'Exod', chapter: 28, verse: 6 }, null)).toEqual([205, 12]);
+    expect(modelViewAt(garments, { book: 'Exod', chapter: 28, verse: 8 }, null)).toEqual(garments.view);
+    const temple = MODELS.find((m) => m.id === 'solomons-temple')!;
+    expect(modelViewAt(temple, { book: '2Kgs', chapter: 25, verse: 9 }, 'babylon')).toEqual(temple.view ?? DEFAULT_MODEL_VIEW);
+    expect(modelViewAt(temple, { book: '2Kgs', chapter: 25, verse: 9 }, null)).toBeNull(); // the reader picked the temple as built
+    const angles = MODELS.flatMap((m) => [m.view, ...(m.builds ?? []).flatMap((b) => b.steps.map((st) => st.view)), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => a.changes.map((c) => c.view)))]);
+    for (const v of angles) if (v) expect(v.length === 2 && Math.abs(v[1]) < 90, `bad view ${JSON.stringify(v)}`).toBe(true);
   });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);
