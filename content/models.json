@@ -778,5 +778,32 @@
    {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm and the span as half of it"}
   ],
   "confidence": "estimate"
+ },
+ {
+  "id": "nebuchadnezzars-statue",
+  "title": "Nebuchadnezzar's golden statue — sixty cubits by six",
+  "verses": ["Dan.3.1-30"],
+  "summary": "The statue Nebuchadnezzar set up on the plain of Dura for all his officials to bow down to (Daniel 3). The text gives three things: it was gold, sixty cubits high and six cubits wide (≈ 26.7 × 2.7 m on a common cubit of ≈ 44.5 cm; the BSB's note, on a longer cubit, gives 27.4 × 2.7 m). It does not say whom it showed. Many since Hippolytus and Jerome have taken it to be the king himself, but 3:12, 14 and 18 set worshipping it beside serving his gods. As a human figure, sixty by six is ten times as tall as it is wide, where a body is five or six times (Montgomery 1927). Commentators have answered this in two ways. The height may include a pedestal, or the statue may have been a stele carved with a figure only at the top; the Aramaic word, tselem, is used of such a stele at Nerab. The model takes the first reading: a robed figure 30 cubits high on a brick pedestal of 30, the two together 60, and neither wider than 6. The split between them is a choice, not a measurement. 'Gold' is taken, as in Isaiah 40:19 and Jeremiah 10:4, to be gold plating on a core; the model shows only the gold surface. The figure's long robe, beard and tall banded crown follow how Babylonian gods and kings are shown, not any known statue. Each of these choices is listed under the model with what it rests on. The sixty and the six are sexagesimal, Babylon's way of counting, as is Ezekiel's rod of six cubits (Ezek 40:5). For scale, Herodotus reports a figure of solid gold twelve cubits high in the temple of Bel at Babylon, and Diodorus a hammered-gold statue forty feet high on top of it.",
+  "kind": "procedural",
+  "procedural": "nebuchadnezzars-statue",
+  "dimensions": "60 × 6 cubits · ≈ 26.7 × 2.7 m",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [5.5, 0, 6]},
+  "estimates": {
+   "pedestal": "the text gives one height, sixty cubits, for 'the statue'. It is taken here to include a pedestal, as many commentators have suggested, since a figure of human proportions six cubits wide would be 30–36 cubits high (Montgomery 1927: 'as 5 or 6 to 1'). The pedestal is drawn 30 cubits high and six square, of baked brick, Babylon's building material; its height, shape and material are not given. J. Oppert took a brick mass near Babylon, 14 m square and 6 m high, to be the pedestal (Expédition scientifique en Mésopotamie, 1863, cited by Montgomery). That mass is much wider than six cubits, and the place of Dura is not certainly known",
+   "statue": "gold, 'sixty cubits high and six cubits wide' with the pedestal (see the pedestal). The figure is drawn 30 cubits high, standing, and at most 5.8 cubits across at the shoulders. It is taken to be wood or another core plated with gold, as idols are in Isa 40:19, Jer 10:3-4 and the Letter of Jeremiah; only the gold is drawn. The text does not say whom it depicts. The long robe, the squared beard, the arms at the sides and the tall crown with bands follow Babylonian images of gods and kings in general, such as Marduk on the lapis seal of Marduk-zākir-šumi I (Berlin, VA Bab 646). No statue of this kind survives to copy"
+  },
+  "sources": [
+   {"kind": "scripture", "ref": "Dan.3.1", "note": "'a golden statue sixty cubits high and six cubits wide', set up on the plain of Dura in the province of Babylon"},
+   {"kind": "scripture", "ref": "Dan.3.12-18", "note": "refusing to 'serve your gods or worship the golden statue' (vv. 12, 14, 18)"},
+   {"kind": "scripture", "ref": "Isa.40.19", "note": "an idol that 'a metalworker overlays with gold'; also Jer 10:3-4"},
+   {"kind": "scripture", "ref": "Ezek.40.5", "note": "a measuring rod of six cubits, the other sexagesimal measure Montgomery compares"},
+   {"kind": "lexicon", "title": "Strong's H6755 tselem, H1722 dehab, H1757 Dura", "note": "'an idolatrous figure'; 'gold'; 'Dura, a place in Babylonia' (probably 'circle or dwelling')"},
+   {"kind": "primary", "title": "Herodotus, Histories 1.183", "url": "https://en.wikisource.org/wiki/The_History_of_Herodotus_(Rawlinson)/Book_1", "note": "Rawlinson's translation: in the temple of Bel at Babylon, a seated Zeus 'all of gold', and in Cyrus's time 'a figure of a man, twelve cubits high, entirely of solid gold', which Xerxes took away"},
+   {"kind": "primary", "title": "Diodorus Siculus, Library of History 2.9.4-5", "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/2A*.html", "note": "Oldfather's translation: three statues of hammered gold on top of the temple of Belus, the standing Zeus 'forty feet high' and weighing a thousand Babylonian talents"},
+   {"kind": "archaeology", "title": "Cylinder seal of Marduk, dedicated by Marduk-zākir-šumi I (c. 854–819 BC)", "url": "https://isaw.nyu.edu/exhibitions/ishtar-gate/objects/cylinder-seal-marduk", "note": "lapis lazuli, 19.4 cm, from Babylon; Berlin, Vorderasiatisches Museum VA Bab 646. A Babylonian god standing in a long robe and a tall crown, the general type the figure follows"},
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Book of Daniel", "author": "James A. Montgomery", "year": 1927, "url": "https://archive.org/details/criticalexegetic22montuoft", "note": "ICC, pp. 195–197: the gold 'consisted in overlaid plates'; 'the proportions of the human figure are as 5 or 6 to 1'; tselem is used at Nerab of 'a stele only partly sculptured'; the numbers are sexagesimal; Dura not certainly identified, and Oppert's brick pedestal, 14 m square by 6 high"},
+   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm"}
+  ],
+  "confidence": "estimate"
  }
 ]

@@ -10,7 +10,7 @@ import type { Model3D } from '@/lib/types';
 import { buildProcedural } from '@/lib/models';
 import { CUBIT_M, FIGURE_M, formatMetres, scaleReference, type ScaleReference } from '@/lib/models/scale';
 import { formatRef, type VerseLoc } from '@/lib/refs';
-import { cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, partsShown, type CutHow } from '@/lib/models/view';
+import { cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, MODEL_FOV, partsShown, type CutHow } from '@/lib/models/view';
 
 /**
  * A part fading and dropping into place after its verse is reached, or, when `leaving`, fading and
@@ -162,7 +162,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     const pmrem = new THREE.PMREMGenerator(renderer);
     scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     scene.environmentIntensity = 1.1;
-    const camera = new THREE.PerspectiveCamera(35, host.clientWidth / host.clientHeight, 0.01, 100);
+    const camera = new THREE.PerspectiveCamera(MODEL_FOV, host.clientWidth / host.clientHeight, 0.01, 100);
     camera.position.set(0, 1.2, 3.2);
     scene.add(new THREE.HemisphereLight(0xfff4e0, 0x403020, 1.6));
     const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(3, 4, 2); scene.add(key);

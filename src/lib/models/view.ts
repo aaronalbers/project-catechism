@@ -96,6 +96,9 @@ export function floorUnder(o: THREE.Object3D, p: THREE.Vector3, maxY: number): n
 /** The unit direction from a model to a camera at `view`, as a spherical angle (phi from +y, theta from +z towards +x). */
 export const viewDir = ([azimuth, elevation]: ModelAngle) => new THREE.Spherical(1, THREE.MathUtils.degToRad(90 - elevation), THREE.MathUtils.degToRad(azimuth));
 
+/** The viewer camera's vertical field of view, in degrees. */
+export const MODEL_FOV = 35;
+
 /**
  * Where the camera goes at `loc`: it looks at `target` from `dist` away along `dir`. While a passage
  * is building or changing the model, `dir` is that passage's angle (`turning`), turned the short way
@@ -125,8 +128,11 @@ export function framingAt(m: Model3D, o: THREE.Object3D, loc: VerseLoc, stateId:
     if (!worn || f.whole) b.union(ref.boundsAt(p).translate(off));
     reference = { p, local, toward };
   }
-  // Never closer than about 70 cm to a piece, so a ring or a cord is seen with what it hangs on.
-  const dist = Math.max(b.getSize(new THREE.Vector3()).length() * 1.5, f.whole ? 0.3 : 0.7 / (m.scale?.metres ?? 1));
+  // A model seen whole is far enough back that its height fits the view, which the diagonal alone misses
+  // for something tall and narrow (Nebuchadnezzar's statue). Never closer than about 70 cm to a piece,
+  // so a ring or a cord is seen with what it hangs on.
+  const size = b.getSize(new THREE.Vector3()), tall = f.whole ? (size.y / 2 / Math.tan(THREE.MathUtils.degToRad(MODEL_FOV / 2))) * 1.2 : 0;
+  const dist = Math.max(size.length() * 1.5, tall, f.whole ? 0.3 : 0.7 / (m.scale?.metres ?? 1));
   return { target: b.getCenter(new THREE.Vector3()), dist, dir, turning: !!view, reference };
 }
 
