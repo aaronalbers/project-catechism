@@ -69,9 +69,11 @@ export function Reader() {
   useEffect(() => {
     const key = `${loc.book}.${loc.chapter}.${loc.verse}`;
     if (lastScrolled.current === key) return;
-    lastScrolled.current = key;
+    // Until the book has loaded there is no verse to scroll to; try again when `data` arrives.
     const el = document.getElementById(`v-${loc.verse}`);
-    el?.scrollIntoView({ block: playing ? 'center' : 'start', behavior: 'smooth' });
+    if (!el) return;
+    lastScrolled.current = key;
+    el.scrollIntoView({ block: playing ? 'center' : 'start', behavior: 'smooth' });
   }, [loc, playing, data]);
 
   // Bring a word picked in the Words tab into view; 'nearest' leaves it alone when it is already showing.
