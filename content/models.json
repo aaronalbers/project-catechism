@@ -293,8 +293,8 @@
  {
   "id": "solomons-temple",
   "title": "Solomon's temple — built as the text describes it",
-  "verses": ["1Kgs.6.1-8.11", "2Chr.3.1-5.14", "1Kgs.8.64", "2Kgs.16.14-17", "2Kgs.25.13-17", "Jer.52.17-23"],
-  "summary": "Read or play 1 Kings 6–8 or 2 Chronicles 3–5 and the temple goes up as each account describes it. Kings builds the house first: walls, porch, windows, side chambers, roof, cedar panelling, gold, cherubim and doors. Then come Huram's bronzes (the pillars, the Sea and the stands), then the gold furnishings, and last the ark. Chronicles is shorter. It leaves out the side chambers and windows, and it adds a veil and the great bronze altar. Kings names one golden table, Chronicles ten; the model has ten, and in Kings only one appears. Elsewhere the temple is shown whole. The text gives the house (60 × 20 × 30 cubits), the porch, the three storeys of side chambers (5, 6 and 7 cubits wide), the inner sanctuary (a 20-cubit cube), the cherubim, the pillars, the Sea, the stands and the altar, and the model follows those. The metric size assumes a common cubit of ≈44.5 cm. Chronicles measures 'according to the old standard' (2 Chr 3:3), which is often taken to be the longer royal cubit of ≈52 cm; on that cubit the house would be ≈31 m long. Wall thicknesses, doorways, the court and most placements are reconstructed. Each estimate says what it rests on, both at the step that adds it and in the list under the model. The carvings of gourds, flowers, palms and cherubim, the lions and oxen on the stands and the smaller vessels are not drawn. Use Show outside / Show inside to see the whole house or cut it open to see the furniture.",
+  "verses": ["1Kgs.6.1-8.11", "2Chr.3.1-5.14", "1Kgs.8.64", "2Kgs.16.10-18", "2Kgs.18.13-16", "2Kgs.25.8-17", "2Chr.36.18-19", "Jer.52.12-23"],
+  "summary": "Read or play 1 Kings 6–8 or 2 Chronicles 3–5 and the temple goes up as each account describes it. Kings builds the house first: walls, porch, windows, side chambers, roof, cedar panelling, gold, cherubim and doors. Then come Huram's bronzes (the pillars, the Sea and the stands), then the gold furnishings, and last the ark. Chronicles is shorter. It leaves out the side chambers and windows, and it adds a veil and the great bronze altar. Kings names one golden table, Chronicles ten; the model has ten, and in Kings only one appears. Elsewhere the temple is shown whole. The text gives the house (60 × 20 × 30 cubits), the porch, the three storeys of side chambers (5, 6 and 7 cubits wide), the inner sanctuary (a 20-cubit cube), the cherubim, the pillars, the Sea, the stands and the altar, and the model follows those. The metric size assumes a common cubit of ≈44.5 cm. Chronicles measures 'according to the old standard' (2 Chr 3:3), which is often taken to be the longer royal cubit of ≈52 cm; on that cubit the house would be ≈31 m long. Wall thicknesses, doorways, the court and most placements are reconstructed. Each estimate says what it rests on, both at the step that adds it and in the list under the model. The carvings of gourds, flowers, palms and cherubim, the lions and oxen on the stands and the smaller vessels are not drawn. Use Show outside / Show inside to see the whole house or cut it open to see the furniture. The temple also changes after it is built. Ahaz moves the bronze altar, strips the stands and sets the Sea down on stone; Hezekiah strips the gold from the doors; the Babylonians break up the bronzes, carry off the furnishings and burn the house. Read or play those passages and the temple changes verse by verse as they tell it; anywhere else, the buttons under the model show it as it was after each.",
   "kind": "procedural",
   "procedural": "temple",
   "dimensions": "House 60 × 20 × 30 cubits (≈ 27 × 9 × 13 m) · with porch and side chambers ≈ 92 × 52 cubits",
@@ -317,7 +317,8 @@
     {"ref": "1Kgs.6.28", "parts": ["cherubim-gold"]},
     {"ref": "1Kgs.6.30", "parts": ["floor-gold"]},
     {"ref": "1Kgs.6.31-32", "parts": ["inner-doors"]},
-    {"ref": "1Kgs.6.33-35", "parts": ["doors"]},
+    {"ref": "1Kgs.6.33-34", "parts": ["doors"]},
+    {"ref": "1Kgs.6.35", "parts": ["door-gold"]},
     {"ref": "1Kgs.6.36", "parts": ["court"]},
     {"ref": "1Kgs.7.15", "parts": ["pillars"]},
     {"ref": "1Kgs.7.16", "parts": ["capitals"]},
@@ -327,6 +328,7 @@
     {"ref": "1Kgs.7.24", "parts": ["sea-ornaments"]},
     {"ref": "1Kgs.7.25", "parts": ["oxen"]},
     {"ref": "1Kgs.7.27", "parts": ["stands"]},
+    {"ref": "1Kgs.7.28-29", "parts": ["stand-panels"]},
     {"ref": "1Kgs.7.30", "parts": ["stand-wheels"]},
     {"ref": "1Kgs.7.38", "parts": ["basins"]},
     {"ref": "1Kgs.7.48", "parts": ["table", "table-bread"]},
@@ -348,13 +350,45 @@
     {"ref": "2Chr.4.2", "parts": ["sea"]},
     {"ref": "2Chr.4.3", "parts": ["sea-ornaments"]},
     {"ref": "2Chr.4.4", "parts": ["oxen"]},
-    {"ref": "2Chr.4.6", "parts": ["basins", "stands", "stand-wheels"], "basis": "the stands the basins rest on are only named in the list at 4:14; their form is from 1 Kgs 7:27-37"},
+    {"ref": "2Chr.4.6", "parts": ["basins", "stands", "stand-panels", "stand-wheels"], "basis": "the stands the basins rest on are only named in the list at 4:14; their form is from 1 Kgs 7:27-37"},
     {"ref": "2Chr.4.7", "parts": ["lampstands"]},
     {"ref": "2Chr.4.8", "parts": ["table", "more-tables"]},
     {"ref": "2Chr.4.9", "parts": ["court"]},
     {"ref": "2Chr.4.19", "parts": ["incense-altar", "table-bread", "more-bread"]},
-    {"ref": "2Chr.4.22", "parts": ["inner-doors", "doors"]},
+    {"ref": "2Chr.4.22", "parts": ["inner-doors", "doors", "door-gold"]},
     {"ref": "2Chr.5.7", "parts": ["ark"]}
+   ]}
+  ],
+  "states": [
+   {"id": "ahaz", "label": "Ahaz (≈ 732 BC)", "basis": "after meeting Tiglath-pileser at Damascus, Ahaz has Uriah build an altar copied from one he saw there and moves the bronze altar to its north (16:10-14). He cuts off the stands' panels, takes down their basins, and sets the Sea down from the oxen onto a stone base (16:17). The date is Damascus's fall to Assyria, which the Assyrian records put in 732 BC. The oxen are not mentioned again, so they are taken away here. 2 Chr 28:24 adds that he cut up the temple's vessels and shut its doors, which the model does not show", "accounts": [
+    {"ref": "2Kgs.16.10-18", "changes": [
+     {"ref": "2Kgs.16.11", "shows": ["great-altar"]},
+     {"ref": "2Kgs.16.14", "hides": ["bronze-altar"], "shows": ["bronze-altar-north"]},
+     {"ref": "2Kgs.16.17", "hides": ["stand-panels", "basins", "sea", "sea-ornaments", "oxen"], "shows": ["sea-on-stone"]}
+    ]}
+   ]},
+   {"id": "hezekiah", "label": "Hezekiah (701 BC)", "basis": "in his fourteenth year, when Sennacherib invaded (701 BC by the Assyrian annals), Hezekiah strips the gold from the temple's doors and doorposts to pay the tribute (18:16). The text says it was gold 'he had plated', perhaps when he repaired the doors (2 Chr 29:3). Ahaz's changes are still in place; Hezekiah's reforms (2 Kgs 18:4, 2 Chr 29) do not say he undid them", "accounts": [
+    {"ref": "2Kgs.18.13-16", "changes": [
+     {"ref": "2Kgs.18.16", "hides": ["door-gold"]}
+    ]}
+   ]},
+   {"id": "babylon", "label": "Babylon (587/586 BC)", "basis": "Nebuzaradan burns the house (2 Kgs 25:9). The Chaldeans break up the pillars, the stands and the Sea and carry the bronze to Babylon, with the vessels of bronze, gold and silver (25:13-17; Jer 52:17-23), 'everything… both large and small' (2 Chr 36:18). What burned or was taken is removed in the order each account gives it. The wood and gold of the house go with the fire. The bronze altar goes with 'all the articles of bronze', which do not name it. The stone walls, the side chambers, the court and Ahaz's stone altar are left standing, because the text does not say they were torn down and it does not say how much of them survived the fire. The ark's fate is not recorded in Kings or Chronicles; it is not seen again, so it is drawn going with the house", "accounts": [
+    {"ref": "2Kgs.25.8-17", "changes": [
+     {"ref": "2Kgs.25.9", "hides": ["roof", "panelling", "partition", "floor", "floor-gold", "hall-gold", "sanctuary-gold", "chains", "cherubim", "cherubim-wings", "cherubim-gold", "inner-doors", "doors", "veil", "stairs", "side-floors", "ark"]},
+     {"ref": "2Kgs.25.13", "hides": ["pillars", "capitals", "networks", "pomegranates", "stands", "stand-wheels", "sea-on-stone"]},
+     {"ref": "2Kgs.25.14", "hides": ["bronze-altar-north"]},
+     {"ref": "2Kgs.25.15", "hides": ["incense-altar", "lampstands", "table", "table-bread", "more-tables", "more-bread"]}
+    ]},
+    {"ref": "Jer.52.12-23", "changes": [
+     {"ref": "Jer.52.13", "hides": ["roof", "panelling", "partition", "floor", "floor-gold", "hall-gold", "sanctuary-gold", "chains", "cherubim", "cherubim-wings", "cherubim-gold", "inner-doors", "doors", "veil", "stairs", "side-floors", "ark"]},
+     {"ref": "Jer.52.17", "hides": ["pillars", "capitals", "networks", "pomegranates", "stands", "stand-wheels", "sea-on-stone"]},
+     {"ref": "Jer.52.18", "hides": ["bronze-altar-north"]},
+     {"ref": "Jer.52.19", "hides": ["incense-altar", "lampstands", "table", "table-bread", "more-tables", "more-bread"]}
+    ]},
+    {"ref": "2Chr.36.18-19", "changes": [
+     {"ref": "2Chr.36.18", "hides": ["pillars", "capitals", "networks", "pomegranates", "stands", "stand-wheels", "sea-on-stone", "bronze-altar-north", "incense-altar", "lampstands", "table", "table-bread", "more-tables", "more-bread"]},
+     {"ref": "2Chr.36.19", "hides": ["roof", "panelling", "partition", "floor", "floor-gold", "hall-gold", "sanctuary-gold", "chains", "cherubim", "cherubim-wings", "cherubim-gold", "inner-doors", "doors", "veil", "stairs", "side-floors", "ark"]}
+    ]}
    ]}
   ],
   "estimates": {
@@ -379,7 +413,12 @@
    "sea": "10 across, 5 high and 30 round, a handbreadth thick with a lily-shaped brim (7:23-26). Measured across a circle 10 wide, the line should be ≈31.4, not 30. Drawn with the line round the body just below a brim that flares to the full 10, which is one common reading; another is that the 30 was measured inside the handbreadth-thick wall. The bowl's profile is not given. Drawn this way it holds ≈24.5 m³, about 1,100 baths of ≈22 litres. Kings says 2,000 baths and Chronicles 3,000, which would need a smaller bath or a fuller, more cylindrical vessel",
    "sea-ornaments": "two rows of gourds, ten to the cubit (7:24), so 300 a row round the 30-cubit line. Chronicles has 'figures of oxen' (2 Chr 4:3), probably from the similar Hebrew word for oxen (bakar) and gourds (peka'im)",
    "oxen": "their size is not given; drawn about life size, so the Sea stands 2.4 cubits off the ground. Schematic figures",
-   "stands": "4 × 4 × 3 (7:27). The 3 is taken to include the wheels. The panels, their lions, oxen and cherubim, the supports and the handles (7:28-36) are simplified to a body with corner uprights and the round band on top (7:35). Placed in a row on each side of the house (7:39); their spacing is not given",
+   "stands": "4 × 4 × 3 (7:27). The 3 is taken to include the wheels. The supports and the handles (7:30, 34) are not drawn; each stand is corner uprights with the round band on top (7:35). Placed in a row on each side of the house (7:39); their spacing is not given",
+   "stand-panels": "the panels between the uprights (7:28), drawn plain; their lions, oxen, cherubim and wreaths (7:29, 36) are not drawn",
+   "door-gold": "'gold hammered evenly over the carvings' (6:35) is drawn as a gold panel on each leaf",
+   "great-altar": "Ahaz's altar, copied from one in Damascus (2 Kgs 16:10-11), is called 'the great altar' (16:15), but no size, material or form is given. It is drawn in stone, 14 × 14 × 7 cubits. It stands east of the bronze altar, which was 'between the new altar and the house' (16:14)",
+   "bronze-altar-north": "the bronze altar moved 'to the north side of the new altar' (16:14), drawn without the ramp, which is itself an estimate",
+   "sea-on-stone": "'a stone base' (16:17) is the Hebrew for a pavement of stones. Drawn as a low platform a cubit high, since its size is not given",
    "stand-wheels": "a cubit and a half across (7:32), on axles, like chariot wheels (7:33); drawn as solid discs",
    "basins": "4 cubits across, holding 40 baths (7:38). The depth is not given; a shallow bowl 1.4 cubits deep holds ≈900 litres, which is 40 baths of ≈22 litres. That depth is worked out from those figures, not stated",
    "bronze-altar": "20 × 20 × 10 (2 Chr 4:1); drawn as a plain block with horns. The text does not say how priests reached a top 10 cubits up (Exod 20:26 forbids steps). A ramp is drawn on the south, 32 × 16 cubits, the size Mishnah Middot 3:3 gives for the Second Temple's altar. Placed on the axis in front of the porch; 2 Kgs 16:14 has it 'before the LORD… at the front of the temple'",

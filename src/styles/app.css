@@ -252,6 +252,12 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .model-view .model-tools button:hover { border-color: var(--accent); }
 .card .scale-note { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
 .card .build-progress { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+.card .model-states { margin: 8px 0 0; }
+.card .model-states [role=group] { display: flex; flex-wrap: wrap; gap: 6px; }
+.card .model-states button { padding: 4px 10px; font-size: 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+.card .model-states button:hover { border-color: var(--accent); }
+.card .model-states button[aria-pressed=true] { border-color: var(--accent); color: var(--accent); }
+.card .model-states p { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
 .card .build-progress small { display: block; margin-top: 2px; }
 .card .estimates ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
 .card .estimates li { margin-bottom: 3px; }

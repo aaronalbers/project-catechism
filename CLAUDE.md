@@ -126,6 +126,15 @@ them in CI — read it before adding content.
   part lists it in `omits` with the reason. A test fails the build if a step lies outside its passage,
   runs out of order or names a part the model lacks, if two parts share a name, if a build leaves a
   part out without `omits`, or if two parts share a material (a part fades in by fading its materials).
+- A model can also change after it is built: `states` are later events (Ahaz stripping the temple's
+  stands, Babylon burning it), listed in the order they happen and cumulative. A state has one
+  `accounts` entry per passage that tells it (Kings, Jeremiah, Chronicles), whose `changes`, like a
+  build's steps, each `hides` parts or `shows` alternates at a verse: parts drawn only in a state and
+  never added by a build (the Sea on its stone base). A part a change must remove on its own has to
+  be a part of its own (the doors' gold). Reading an account changes the model verse by verse, removed
+  parts fading out; elsewhere the reader can pick any state whole. Each says what it rests on in
+  `basis`. A test fails the build if a change names an unknown part, lies outside or out of order in
+  its account, or a build adds an alternate.
 - Every model gives its `scale`: how many metres one of its units is (`"unit": "cubit"` marks the scale
   bar in cubits), and optionally `at`, where the size figure stands, somewhere that says something (the
   tabernacle's gate, the ark's door). The viewer draws a ≈1.66 m figure beside anything over half a metre

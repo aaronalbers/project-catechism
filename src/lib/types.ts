@@ -113,12 +113,25 @@ export interface ModelBuild { ref: Ref; steps: ModelStep[]; omits?: Record<strin
  * ground; without it the figure stands beside the model.
  */
 export interface ModelScale { metres: number; unit?: 'cubit'; at?: [number, number, number] }
+/** One verse's change to a built model: the parts it removes and the alternates it adds. */
+export interface ModelChange { ref: Ref; hides?: string[]; shows?: string[] }
+/** One passage's account of a later state, its changes in reading order (as a build's steps). */
+export interface ModelStateAccount { ref: Ref; changes: ModelChange[] }
+/**
+ * A later state of the model, when the text changes what was built. States are listed in the order
+ * they happen and accumulate, so a state includes every change before it. A state may be told in
+ * more than one passage (Kings, Jeremiah, Chronicles); while reading one, its changes happen verse
+ * by verse, and anywhere else the reader can pick the state whole. A part a change shows is an
+ * alternate: it is never drawn as built, and no build adds it. `basis` says what the state rests on.
+ */
+export interface ModelState { id: string; label: string; basis: string; accounts: ModelStateAccount[] }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
   kind: 'procedural' | 'gltf'; procedural?: ProceduralKind; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
   scale?: ModelScale;
   builds?: ModelBuild[];
+  states?: ModelState[];
   /** What each estimated part rests on, keyed by part name; shown with every step that adds the part, and listed under the model. */
   estimates?: Record<string, string>;
 }

@@ -4,16 +4,19 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { useStore } from '@/app/store';
-import { modelBuildAt, modelsFor, modelsInChapter } from '@/lib/content';
+import { modelBuildAt, modelHiddenIn, modelStateAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Model3D } from '@/lib/types';
 import { buildProcedural } from '@/lib/models';
 import { CUBIT_M, FIGURE_M, formatMetres, scaleReference, type ScaleReference } from '@/lib/models/scale';
 import { formatRef, type VerseLoc } from '@/lib/refs';
 
-/** A part fading and dropping into place after its verse is reached. */
-interface Arrival { part: THREE.Object3D; t0: number; y0: number; drop: number; mats: THREE.Material[] }
-const ARRIVE_MS = 700;
+/**
+ * A part fading and dropping into place after its verse is reached, or, when `leaving`, fading and
+ * sinking out of sight when a later change removes it.
+ */
+interface Arrival { part: THREE.Object3D; t0: number; y0: number; drop: number; mats: THREE.Material[]; leaving?: boolean }
+const ARRIVE_MS = 700, LEAVE_MS = 1100;
 /** The camera easing to frame the parts shown so far, keeping the angle the viewer chose. */
 interface Framing { from: THREE.Vector3; to: THREE.Vector3; fromDist: number; toDist: number; t0: number }
 const FRAME_MS = 900;
@@ -22,17 +25,20 @@ interface Move { t0: number; p: THREE.Vector3; box: THREE.Box3; toward?: THREE.V
 const MOVE_OUT_MS = 300, MOVE_IN_MS = 450;
 
 /**
- * Shows the parts of `object` the text has described by `loc` (every part outside a build). A
+ * Shows the parts of `object` the text has described by `loc`; outside a build, every part the
+ * state `stateId` (null: as built) has not hidden, as far as the reading has got through it. A
  * part is any named node, and parts nest: naming a part in a step shows everything inside it,
- * and a part stays visible while anything inside it is shown. Newly shown parts are queued in
- * `arrivals` to animate in — only the outermost, so nested pieces don't drop twice. Returns
- * whether anything was shown or hidden.
+ * hiding one hides everything inside it, and during a build a part stays visible while anything
+ * inside it is shown. Parts shown or removed are queued in `arrivals` to animate in or out — only
+ * the outermost, so nested pieces don't move twice. Returns whether anything was shown or hidden.
  */
-function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, arrivals: Arrival[] | null): boolean {
+function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: string | null, arrivals: Arrival[] | null): boolean {
   const at = modelBuildAt(m, loc);
+  const hidden = at ? null : modelHiddenIn(m, stateId, loc);
   const want = new Map<THREE.Object3D, boolean>();
   const decide = (node: THREE.Object3D, inherited: boolean): boolean => {
-    const self = inherited || (!!node.name && at!.parts.has(node.name));
+    const named = !!node.name;
+    const self = at ? inherited || (named && at.parts.has(node.name)) : inherited && !(named && hidden!.has(node.name));
     let any = self;
     for (const c of node.children) if (decide(c, self)) any = true;
     if (node.name) want.set(node, any);
@@ -41,19 +47,33 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, arrivals: 
   for (const c of object.children) decide(c, !at);
   const drop = new THREE.Box3().setFromObject(object).getSize(new THREE.Vector3()).y * 0.25;
   let changed = false;
-  const apply = (node: THREE.Object3D, parentArriving: boolean) => {
-    let arriving = parentArriving;
+  const apply = (node: THREE.Object3D, parentMoving: boolean) => {
+    let moving = parentMoving;
     const show = want.get(node);
     if (show !== undefined) {
-      const appearing = show && !node.visible;
-      if (appearing && arrivals && !parentArriving && !arrivals.some((a) => a.part === node)) {
-        arrivals.push({ part: node, t0: performance.now(), y0: node.position.y, drop, mats: [...new Set(materialsOf(node))] });
+      const queued = arrivals?.findIndex((a) => a.part === node) ?? -1, leaving = queued >= 0 && !!arrivals![queued].leaving;
+      if (show) {
+        if (leaving) { settle(arrivals!.splice(queued, 1)[0]); changed = true; } // shown again before it had gone
+        const appearing = !node.visible;
+        if (appearing && arrivals && !parentMoving && queued < 0) {
+          arrivals.push({ part: node, t0: performance.now(), y0: node.position.y, drop, mats: [...new Set(materialsOf(node))] });
+        }
+        moving ||= appearing;
+        if (appearing) changed = true;
+        node.visible = true;
+      } else if (leaving) {
+        return; // fading out; what is inside goes with it
+      } else if (node.visible) {
+        changed = true;
+        if (arrivals && !parentMoving) {
+          if (queued >= 0) settle(arrivals.splice(queued, 1)[0]);
+          arrivals.push({ part: node, t0: performance.now(), y0: node.position.y, drop, mats: [...new Set(materialsOf(node))], leaving: true });
+          return;
+        }
+        node.visible = false;
       }
-      arriving ||= appearing;
-      if (node.visible !== show) changed = true;
-      node.visible = show;
     }
-    for (const c of node.children) apply(c, arriving);
+    for (const c of node.children) apply(c, moving);
   };
   for (const c of object.children) apply(c, false);
   return changed;
@@ -62,20 +82,24 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, arrivals: 
 /**
  * What the camera should frame at `loc`: during a build, the objects the latest step is working
  * on — each named part's nearest ancestor flagged `userData.focus`, or the whole model if it has
- * none — so a new piece of furniture fills the view rather than the whole site. Otherwise, all
- * that is shown. `whole` says the box is the model's, not one piece's.
+ * none — so a new piece of furniture fills the view rather than the whole site. While reading a
+ * later state, likewise what its latest change removes or adds, including parts still fading out.
+ * Otherwise, all that is shown. `whole` says the box is the model's, not one piece's.
  */
-function focusBox(m: Model3D, object: THREE.Object3D, loc: VerseLoc): { box: THREE.Box3; whole: boolean } {
+function focusBox(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: string | null): { box: THREE.Box3; whole: boolean } {
   const at = modelBuildAt(m, loc);
-  const step = at?.build.steps[at.step - 1];
-  if (!step) return { box: visibleBox(object), whole: true };
+  const reading = at ? null : modelStateAt(m, loc);
+  const change = reading && reading.state.id === stateId ? reading.account.changes[reading.step - 1] : undefined;
+  const parts = at ? at.build.steps[at.step - 1]?.parts : change && [...(change.hides ?? []), ...(change.shows ?? [])];
+  if (!parts) return { box: visibleBox(object), whole: true };
   const box = new THREE.Box3();
   let whole = false;
-  for (const name of step.parts) {
+  for (const name of parts) {
     let n: THREE.Object3D | null | undefined = object.getObjectByName(name);
     while (n && n !== object && !n.userData.focus) n = n.parent;
     if (!n || n === object) whole = true;
-    box.union(visibleBox(n ?? object));
+    // A part being removed is framed where it stood, though it is on its way out of sight.
+    box.union(change ? new THREE.Box3().setFromObject(n ?? object) : visibleBox(n ?? object));
   }
   return { box, whole };
 }
@@ -125,10 +149,24 @@ function disposeObject(o: THREE.Object3D) {
   }
 }
 
+/** Ends an animation where it would finish: in place and at the part's own look, gone if it was leaving. */
+function settle({ part, y0, mats, leaving }: Arrival) {
+  part.position.y = y0;
+  for (const mat of mats) { const r = restingLook(mat); mat.transparent = r.transparent; mat.opacity = r.opacity; }
+  if (leaving) part.visible = false;
+}
+
 function animateArrivals(arrivals: Arrival[]) {
   const now = performance.now();
   for (let i = arrivals.length - 1; i >= 0; i--) {
-    const { part, t0, y0, drop, mats } = arrivals[i];
+    const { part, t0, y0, drop, mats, leaving } = arrivals[i];
+    if (leaving) {
+      const k = Math.min(1, (now - t0) / LEAVE_MS), ease = k * k;
+      part.position.y = y0 - ease * drop * 0.4;
+      for (const mat of mats) { const r = restingLook(mat); mat.transparent = true; mat.opacity = r.opacity * (1 - ease); }
+      if (k >= 1) { settle(arrivals[i]); arrivals.splice(i, 1); }
+      continue;
+    }
     const k = Math.min(1, (now - t0) / ARRIVE_MS), ease = 1 - (1 - k) ** 3;
     part.position.y = y0 + (1 - ease) * drop;
     for (const mat of mats) { const r = restingLook(mat); mat.transparent = k < 1 || r.transparent; mat.opacity = r.opacity * ease; }
@@ -143,6 +181,14 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   const locRef = useRef(loc);
   locRef.current = loc;
   const frameRef = useRef<(animate: boolean) => void>(() => {});
+  // The later state shown: the one the text is describing here, unless the reader picked another.
+  // A pick lasts until the reading moves into or out of a state's passage.
+  const reading = modelStateAt(m, loc);
+  const auto = reading?.state.id ?? null;
+  const [picked, setPicked] = useState<{ auto: string | null; id: string | null } | null>(null);
+  const stateId = picked && picked.auto === auto ? picked.id : auto;
+  const stateRef = useRef(stateId);
+  stateRef.current = stateId;
   // Models whose parts are flagged `cutaway` (the tabernacle's tent) can be opened to show what is inside.
   const [hasCutaway, setHasCutaway] = useState(false);
   const [cutaway, setCutaway] = useState(true);
@@ -213,7 +259,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     };
     frameRef.current = (animate) => {
       const o = objectRef.current;
-      const f = o && focusBox(m, o, locRef.current);
+      const f = o && focusBox(m, o, locRef.current, stateRef.current);
       if (!f || f.box.isEmpty()) return;
       const b = f.box.clone(), ref = referenceRef.current;
       if (ref?.group.visible) {
@@ -263,7 +309,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
         for (const p of tent) for (const mat of materialsOf(p)) mat.clippingPlanes = [cut];
         setHasCutaway(true);
       }
-      syncParts(m, o, locRef.current, null);
+      syncParts(m, o, locRef.current, stateRef.current, null);
       frameRef.current(false);
     };
     if (m.kind === 'procedural' && m.procedural) place(buildProcedural(m.procedural));
@@ -285,8 +331,8 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
     };
   }, [m]);
   useEffect(() => {
-    if (objectRef.current && syncParts(m, objectRef.current, loc, arrivals.current)) frameRef.current(true);
-  }, [m, loc]);
+    if (objectRef.current && syncParts(m, objectRef.current, loc, stateId, arrivals.current)) frameRef.current(true);
+  }, [m, loc, stateId]);
   useEffect(() => {
     if (!referenceRef.current) return;
     referenceRef.current.group.visible = showScale;
@@ -302,7 +348,32 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
         <span className="hint">drag to rotate · scroll to zoom</span>
       </div>
       {scaleInfo && showScale && <ScaleNote m={m} kind={scaleInfo.kind} bar={scaleInfo.bar} />}
+      {!!m.states?.length && !modelBuildAt(m, loc) && <ModelStates m={m} current={stateId} reading={reading?.state.id === stateId ? reading : null} onPick={(id) => setPicked({ auto, id })} />}
     </>
+  );
+}
+
+/**
+ * Buttons for the model as built and each later state, how far the reading has got through the
+ * state it is in, and what the state shown rests on.
+ */
+function ModelStates({ m, current, reading, onPick }: { m: Model3D; current: string | null; reading: ReturnType<typeof modelStateAt>; onPick: (id: string | null) => void }) {
+  const states = m.states ?? [], state = states.find((s) => s.id === current);
+  const change = reading?.account.changes[reading.step - 1];
+  return (
+    <div className="model-states">
+      <div role="group" aria-label="Show the model as it was">
+        <button type="button" aria-pressed={current === null} onClick={() => onPick(null)}>As built</button>
+        {states.map((s) => <button type="button" key={s.id} aria-pressed={current === s.id} onClick={() => onPick(s.id)}>{s.label}</button>)}
+      </div>
+      {reading && (
+        <p className="build-progress">
+          Changing as {formatRef(reading.account.ref)} tells it: change {reading.step} of {reading.account.changes.length}
+          {change && <> ({[...(change.hides ?? []).map((p) => `${partLabel(p)} removed`), ...(change.shows ?? []).map((p) => `${partLabel(p)} added`)].join(', ')})</>}
+        </p>
+      )}
+      {state && <p>{state.accounts.map((a) => formatRef(a.ref)).join('; ')}: {state.basis}</p>}
+    </div>
   );
 }
 

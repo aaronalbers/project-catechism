@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { box, boxGeo, bronze, cloth, cylGeo, gold, instances, meshAt, namedPart, sheet, weave, type V3 } from './kit';
+import { box, boxGeo, bronze, cloth, cylGeo, gold, instances, meshAt, namedPart, sheet, stone, weave, type V3 } from './kit';
 import { ark, incenseAltar, lampstand, table } from './furniture';
 
 const ashlar = () => new THREE.MeshStandardMaterial({ color: 0xcfc3a6, roughness: 0.95 });
@@ -157,9 +157,11 @@ export function temple(): THREE.Group {
     box(dw / 2, dh, 0.15, DEBIR + pt / 2 + dw / 4, dh / 2, sz * (dw / 2 + 0.1), od),
     box(dw / 2 - 0.5, dh - 1, 0.2, DEBIR + pt / 2 + dw / 4, dh / 2, sz * (dw / 2 + 0.1), og),
   ]));
-  // The main doors: two of cypress, each of two folding leaves, overlaid with gold (6:33-35); closed.
-  const dc = cypress(), dg = gold();
-  part('doors', ...[-3.75, -1.25, 1.25, 3.75].flatMap((z) => [box(0.2, door.h, 2.45, 3, door.h / 2, z, dc), box(0.3, door.h - 1, 2, 3, door.h / 2, z, dg)]));
+  // The main doors: two of cypress, each of two folding leaves (6:33-34), closed; and their gold
+  // (6:35), a part of its own because Hezekiah stripped it (2 Kgs 18:16).
+  const leaves = [-3.75, -1.25, 1.25, 3.75], dc = cypress(), dg = gold();
+  part('doors', ...leaves.map((z) => box(0.2, door.h, 2.45, 3, door.h / 2, z, dc)));
+  part('door-gold', ...leaves.map((z) => box(0.3, door.h - 1, 2, 3, door.h / 2, z, dg)));
   // The veil of blue, purple and crimson (2 Chr 3:14), hung across the doorway inside the sanctuary.
   part('veil', sheet(dw + 0.4, dh + 0.2, DEBIR - pt / 2 - 0.3, (dh + 0.2) / 2, 0, 'x', cloth(0xffffff, weave(4))));
 
@@ -195,18 +197,22 @@ export function temple(): THREE.Group {
 
   // The Sea (7:23-26): cast bronze, 10 across at the brim, 5 high, a handbreadth thick, its brim
   // flared like a lily. The line of 30 goes round just below the brim, where the radius is 30/2π.
+  // Two rows of gourds below the brim, ten to the cubit (7:24): 300 a row.
   const seaX = 10, seaZ = 36, oxH = 2.4;
   const seaOuter: [number, number][] = [[0, 0], [2.8, 0.05], [3.85, 0.6], [4.5, 1.8], [4.74, 3.3], [4.78, 4.4], [4.86, 4.85], [5, 5]];
   const seaInner: [number, number][] = [[4.85, 5], [4.7, 4.9], [4.61, 4.4], [4.57, 3.3], [4.33, 1.85], [3.72, 0.75], [2.75, 0.22], [0, 0.17]];
-  const seaM = bronze(); seaM.side = THREE.DoubleSide;
-  part('sea', meshAt(lathe([...seaOuter, ...seaInner], 64), seaM, seaX, oxH, seaZ));
-  // Two rows of gourds below the brim, ten to the cubit (7:24): 300 a row.
-  const gourdAt: V3[] = [];
-  for (const y of [4.05, 4.3]) for (let i = 0; i < 300; i++) {
-    const a = (2 * Math.PI * i) / 300, r = radiusAt(seaOuter, y) + 0.04;
-    gourdAt.push([seaX + r * Math.cos(a), oxH + y, seaZ + r * Math.sin(a)]);
-  }
-  part('sea-ornaments', instances(new THREE.SphereGeometry(0.06, 6, 4), bronze(), gourdAt));
+  const seaGeo = lathe([...seaOuter, ...seaInner], 64), gourdGeo = new THREE.SphereGeometry(0.06, 6, 4);
+  const seaBowl = (y0: number) => { const m = bronze(); m.side = THREE.DoubleSide; return meshAt(seaGeo, m, seaX, y0, seaZ); };
+  const gourds = (y0: number) => {
+    const at: V3[] = [];
+    for (const y of [4.05, 4.3]) for (let i = 0; i < 300; i++) {
+      const a = (2 * Math.PI * i) / 300, r = radiusAt(seaOuter, y) + 0.04;
+      at.push([seaX + r * Math.cos(a), y0 + y, seaZ + r * Math.sin(a)]);
+    }
+    return instances(gourdGeo, bronze(), at);
+  };
+  part('sea', seaBowl(oxH));
+  part('sea-ornaments', gourds(oxH));
   // Twelve oxen, three facing each way, hindquarters inward (7:25). Schematic figures.
   const oxM = bronze(), oxen = part('oxen');
   for (const [dx, dz] of [[0, -1], [-1, 0], [0, 1], [1, 0]]) for (const k of [-1.3, 0, 1.3]) {
@@ -221,10 +227,11 @@ export function temple(): THREE.Group {
   // bodies with corner uprights and a round band half a cubit high on top (7:35).
   const standAt: [number, number][] = [-48, -36, -24, -12, 0].flatMap((x) => [-1, 1].map((sz): [number, number] => [x, sz * 31]));
   const at = (y: number, dx = 0, dz = 0) => standAt.map(([x, z]): V3 => [x + dx, y, z + dz]);
+  // The panels between the uprights (7:28-29) are a part of their own, because Ahaz cut them off (2 Kgs 16:17).
   const stM = bronze();
-  part('stands', instances(boxGeo(4, 1.6, 4), stM, at(1.7)),
-    ...[-1, 1].flatMap((sx) => [-1, 1].map((sz) => instances(boxGeo(0.3, 2.5, 0.3), stM, at(1.25, sx * 1.85, sz * 1.85)))),
+  part('stands', ...[-1, 1].flatMap((sx) => [-1, 1].map((sz) => instances(boxGeo(0.3, 2.5, 0.3), stM, at(1.25, sx * 1.85, sz * 1.85)))),
     instances(cylGeo(0.85, 0.5, 24), stM, at(2.75)));
+  part('stand-panels', instances(boxGeo(3.4, 1.6, 3.4), bronze(), at(1.7)));
   // Four wheels a cubit and a half across, on axles, like chariot wheels (7:30-33).
   const wheelGeo = new THREE.CylinderGeometry(0.75, 0.75, 0.15, 20).rotateX(Math.PI / 2), axleGeo = new THREE.CylinderGeometry(0.08, 0.08, 4.4, 8).rotateX(Math.PI / 2);
   const whM = bronze();
@@ -238,10 +245,18 @@ export function temple(): THREE.Group {
   const altarX = 40, ramp = new THREE.Shape();
   ramp.moveTo(0, 0); ramp.lineTo(32, 0); ramp.lineTo(0, 10); ramp.lineTo(0, 0);
   const rampGeo = new THREE.ExtrudeGeometry(ramp, { depth: 16, bevelEnabled: false }).rotateY(-Math.PI / 2);
-  const am = bronze();
-  part('bronze-altar', box(20, 10, 20, altarX, 5, 0, am),
-    ...[-1, 1].flatMap((sx) => [-1, 1].map((sz) => meshAt(new THREE.ConeGeometry(0.8, 1.5, 12), am, altarX + 9 * sx, 10.75, 9 * sz))),
-    meshAt(rampGeo, ashlar(), altarX + 8, 0, 10));
+  const hornGeo = new THREE.ConeGeometry(0.8, 1.5, 12);
+  const altar = (x: number, z: number, s: number, h: number, mat: THREE.Material) => [box(s, h, s, x, h / 2, z, mat),
+    ...[-1, 1].flatMap((sx) => [-1, 1].map((sz) => meshAt(hornGeo, mat, x + (s / 2 - 1) * sx, h + 0.75, z + (s / 2 - 1) * sz)))];
+  part('bronze-altar', ...altar(altarX, 0, 20, 10, bronze()), meshAt(rampGeo, ashlar(), altarX + 8, 0, 10));
+
+  // Later changes, drawn only in the states that show them (models.json `states`). Ahaz puts his
+  // new altar east of the bronze one and moves the bronze altar to its north (2 Kgs 16:10-14), and
+  // sets the Sea down from the oxen onto a stone base (16:17).
+  const greatX = 58;
+  part('great-altar', ...altar(greatX, 0, 14, 7, stone()));
+  part('bronze-altar-north', ...altar(greatX, -19, 20, 10, bronze()));
+  part('sea-on-stone', box(12, 1, 12, seaX, 0.5, seaZ, ashlar()), seaBowl(1), gourds(1));
 
   // Furniture. The incense altar before the sanctuary (6:20-22); ten lampstands, five on each side
   // (7:49); one table in Kings (7:48), ten in Chronicles (2 Chr 4:8), laid out between them; the

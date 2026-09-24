@@ -3,7 +3,7 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, modelBuildAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, modelBuildAt, modelHiddenIn, modelStateAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -34,7 +34,7 @@ describe('content integrity', () => {
       ...SPEAKERS.map((s) => s.ref),
       ...CHIASMS.flatMap((c) => [c.ref, ...c.levels.map((l) => l.ref)]),
       ...RULERS.flatMap((r) => r.refs),
-      ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)])]),
+      ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)]), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => [a.ref, ...a.changes.map((c) => c.ref)])) ]),
       ...VIDEOS.flatMap((v) => v.verses ?? []),
       ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
     ];
@@ -194,7 +194,7 @@ describe('content integrity', () => {
     }
   });
   // A part a build never reaches stays hidden to the end of the passage; that must be a choice the
-  // content states (the build's `omits`), not an oversight.
+  // content states (the build's `omits`), not an oversight. Parts only a later state shows are exempt.
   it('a build shows every part by its last step, unless it says it omits it', () => {
     for (const m of MODELS) {
       if (m.kind !== 'procedural' || !m.procedural || !m.builds) continue;
@@ -203,7 +203,7 @@ describe('content integrity', () => {
       const leaves: THREE.Object3D[] = [];
       model.traverse((o) => { if (o.name && o !== model && !o.children.some((c) => { let inner = false; c.traverse((x) => { if (x.name) inner = true; }); return inner; })) leaves.push(o); });
       for (const b of m.builds) {
-        const added = new Set(b.steps.flatMap((st) => st.parts)), omitted = new Set(Object.keys(b.omits ?? {}));
+        const added = new Set(b.steps.flatMap((st) => st.parts)), omitted = new Set([...Object.keys(b.omits ?? {}), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => a.changes.flatMap((c) => c.shows ?? [])))]);
         const missing = leaves.filter((o) => !named(o, added) && !named(o, omitted)).map((o) => o.name);
         expect(missing, `${m.id}: build ${b.ref} never shows these parts and does not list them in omits`).toEqual([]);
       }
@@ -225,6 +225,54 @@ describe('content integrity', () => {
       const shared = [...owners.values()].filter((s) => s.size > 1).map((s) => [...s].join(' + '));
       expect(shared, `${m.id}: materials shared between parts`).toEqual([]);
     }
+  });
+  // A state changes what was built, so it names real parts, says what it rests on, and falls within
+  // the model's verses, its changes in reading order; the parts it shows are alternates, which no build adds.
+  it('model states name parts the model has, change in order within their passage, and show only alternates', () => {
+    for (const m of MODELS) {
+      if (!m.states) continue;
+      const names = new Set<string>();
+      if (m.kind === 'procedural' && m.procedural) buildProcedural(m.procedural).traverse((o) => { if (o.name) names.add(o.name); });
+      const built = new Set((m.builds ?? []).flatMap((b) => b.steps.flatMap((st) => st.parts)));
+      expect(new Set(m.states.map((st) => st.id)).size, `${m.id}: duplicate state ids`).toBe(m.states.length);
+      for (const st of m.states) {
+        expect(st.basis.length, `${m.id} ${st.id}: no basis`).toBeGreaterThan(20);
+        for (const a of st.accounts) {
+          const range = parseRef(a.ref)!;
+          expect(m.verses.some((v) => contains(v, range.start) && contains(v, range.end)), `${m.id} ${st.id}: ${a.ref} is outside the model's verses`).toBe(true);
+          let prev = range.start;
+          for (const c of a.changes) {
+            const r = parseRef(c.ref)!;
+            expect(contains(a.ref, r.start) && contains(a.ref, r.end), `${m.id} ${st.id}: change ${c.ref} is outside ${a.ref}`).toBe(true);
+            expect(compareLoc(r.start, prev), `${m.id} ${st.id}: change ${c.ref} is out of order`).toBeGreaterThanOrEqual(0);
+            prev = r.start;
+            expect((c.hides ?? []).length + (c.shows ?? []).length, `${m.id} ${st.id}: change ${c.ref} changes nothing`).toBeGreaterThan(0);
+            for (const p of [...(c.hides ?? []), ...(c.shows ?? [])]) expect(names.has(p), `${m.id} ${st.id}: unknown part '${p}'`).toBe(true);
+            for (const p of c.shows ?? []) expect(built.has(p), `${m.id} ${st.id}: '${p}' is shown by a state and added by a build`).toBe(false);
+          }
+        }
+      }
+    }
+  });
+  it('a later state changes verse by verse as it is read, and accumulates the states before it', () => {
+    const temple = MODELS.find((m) => m.id === 'solomons-temple')!;
+    const at = (book: string, chapter: number, verse: number) => ({ book, chapter, verse });
+    const hiddenAt = (loc: ReturnType<typeof at>) => modelHiddenIn(temple, modelStateAt(temple, loc)?.state.id ?? null, loc);
+    expect(modelStateAt(temple, at('1Kgs', 8, 64))).toBeNull();
+    const asBuilt = modelHiddenIn(temple, null);
+    expect([asBuilt.has('sea-on-stone'), asBuilt.has('oxen')]).toEqual([true, false]);
+    // Ahaz: the altar moves at 16:14, the Sea comes off the oxen at 16:17.
+    expect(modelStateAt(temple, at('2Kgs', 16, 10))!.step).toBe(0);
+    const v14 = hiddenAt(at('2Kgs', 16, 14)), v17 = hiddenAt(at('2Kgs', 16, 17));
+    expect([v14.has('bronze-altar'), v14.has('bronze-altar-north'), v14.has('oxen')]).toEqual([true, false, false]);
+    expect([v17.has('oxen'), v17.has('sea-on-stone')]).toEqual([true, false]);
+    // Picked whole, a state has all its changes; Hezekiah's temple still has Ahaz's.
+    expect(modelHiddenIn(temple, 'ahaz').has('oxen')).toBe(true);
+    const hezekiah = hiddenAt(at('2Kgs', 18, 16));
+    expect([hezekiah.has('oxen'), hezekiah.has('door-gold')]).toEqual([true, true]);
+    // Babylon, as Jeremiah tells it: the house burns at 52:13, the bronzes go at 52:17.
+    const j13 = hiddenAt(at('Jer', 52, 13)), j17 = hiddenAt(at('Jer', 52, 17));
+    expect([j13.has('roof'), j13.has('pillars'), j17.has('pillars'), j17.has('walls')]).toEqual([true, false, true, false]);
   });
   it('a model builds up through its passage and is whole outside it', () => {
     const ark = MODELS.find((m) => m.id === 'ark-of-the-covenant')!;

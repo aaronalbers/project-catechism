@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Journey, Model3D, ModelBuild, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
+import type { Chiasm, Fragment, Insight, Journey, Model3D, ModelBuild, ModelChange, ModelState, ModelStateAccount, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -63,6 +63,36 @@ export function modelBuildAt(m: Model3D, loc: VerseLoc): { build: ModelBuild; st
   if (!build) return null;
   const reached = build.steps.filter((s) => { const r = parseRef(s.ref); return !!r && compareLoc(r.start, loc) <= 0; });
   return { build, step: reached.length, parts: new Set(reached.flatMap((s) => s.parts)) };
+}
+/**
+ * The later state the text is describing at `loc`: the last state with an account containing it,
+ * that account, and how many of its changes have been reached. Null outside every account.
+ */
+export function modelStateAt(m: Model3D, loc: VerseLoc): { state: ModelState; account: ModelStateAccount; step: number } | null {
+  for (const state of [...(m.states ?? [])].reverse()) {
+    const account = state.accounts.find((a) => contains(a.ref, loc));
+    if (account) return { state, account, step: account.changes.filter((c) => { const r = parseRef(c.ref); return !!r && compareLoc(r.start, loc) <= 0; }).length };
+  }
+  return null;
+}
+/**
+ * Parts not drawn in a state (null: as built). As built, that is the alternates, the parts only a
+ * state shows. In a state, it is what the changes of every state up to it have hidden and not
+ * shown again; the state's own changes all apply, unless `loc` is in one of its accounts, when
+ * only the changes reached so far do.
+ */
+export function modelHiddenIn(m: Model3D, stateId: string | null, loc?: VerseLoc): Set<string> {
+  const states = m.states ?? [];
+  const hidden = new Set(states.flatMap((s) => s.accounts.flatMap((a) => a.changes.flatMap((c) => c.shows ?? []))));
+  if (stateId === null) return hidden;
+  const apply = (c: ModelChange) => { for (const p of c.hides ?? []) hidden.add(p); for (const p of c.shows ?? []) hidden.delete(p); };
+  const reading = loc && modelStateAt(m, loc);
+  for (const s of states) {
+    if (s.id === stateId && reading && reading.state === s) { reading.account.changes.slice(0, reading.step).forEach(apply); break; }
+    for (const a of s.accounts) a.changes.forEach(apply);
+    if (s.id === stateId) break;
+  }
+  return hidden;
 }
 /** Verses a ref spans, roughly — only used to rank narrower passages above wider ones. */
 function spanSize(ref: string) {
