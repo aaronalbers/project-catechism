@@ -166,8 +166,12 @@ them in CI — read it before adding content.
   Fix a failure with the step's `view`, or with `cuts` when the step adds a lining in front of what it
   also adds (the temple's gold and chains). Only a part the text itself hides (Noah's wood under its
   pitch) goes in the test's `HIDDEN_BY_THE_TEXT`, saying why. To find an angle,
-  `MODEL=<id> STEP=<ref> npm run models:angles` ranks a grid of views by how much of each part is seen;
-  `MODEL=<id>` alone lists the steps with a part less than half seen. A model whose raised floors the
+  `MODEL=<id> STEP=<ref> npm run models:angles` ranks a grid of views by how much of each part is seen
+  (`SORT=mean` for a step that adds many parts, `MIN_ELEVATION=0` to leave out views from below the
+  ground); `MODEL=<id>` alone lists the steps with a part less than half seen, and how big its largest
+  piece looks. The share of rays says nothing about size or about what a reader can make out, so look
+  at a new angle in the app: a view from below can score well and still lose the reader in a large
+  model (the temple's stands, seen from under the house). A model whose raised floors the
   size figure should stand on flags them `userData.ground` (Ezekiel's courts).
 
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
