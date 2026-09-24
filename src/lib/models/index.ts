@@ -3,6 +3,7 @@
 // A new model is one entry here: `ProceduralKind` and the content tests both read this table.
 import type * as THREE from 'three';
 import { alabastron } from './alabastron';
+import { galileeBoat } from './boat';
 import { coin } from './coins';
 import { ezekielsTemple } from './ezekiel';
 import { ark } from './furniture';
@@ -21,6 +22,7 @@ const BUILDERS = {
   temple,
   'ezekiels-temple': ezekielsTemple,
   'priestly-garments': garments,
+  'galilee-boat': galileeBoat,
 } satisfies Record<string, () => THREE.Object3D>;
 
 export type ProceduralKind = keyof typeof BUILDERS;

@@ -669,5 +669,42 @@
    "Some commentators: a plan for the exiles returning from Babylon, though the temple they rebuilt under Zerubbabel was smaller"
   ],
   "confidence": "interpretation"
+ },
+ {
+  "id": "galilee-boat",
+  "title": "A fishing boat of the Sea of Galilee",
+  "verses": ["Mark.1.16-20", "Luke.5.1-11", "Mark.4.35-41", "Matt.8.23-27", "Luke.8.22-25", "Mark.6.45-52", "Matt.14.22-33", "John.6.16-21", "John.21.1-11"],
+  "summary": "The kind of boat the Gospels' fishermen worked from, and the one Jesus slept in 'in the stern, on the cushion' (Mark 4:38) while the storm swamped it. In 1986, with the lake at a low ebb, a hull of the period was found in the mud near Ginosar. It is about 8.2 m long and 2.3 m across, and 1.2 m of its height survives. Pottery found with it runs from the late 1st century BC to about AD 70, and radiocarbon dates its wood to 40 BC ± 80 years. Nothing ties it to Jesus or the disciples; it is a boat of their time and lake. The model follows the surviving hull: a rounded stern, a fine bow, cedar planks edge-joined with pegged mortise-and-tenon joints on a keel, and oak frames. It had been repaired many times, and besides the cedar and oak it holds single pieces of five other woods. Everything above the hull is reconstructed: the decks at bow and stern, the rowers' benches, the mast (nail holes on the keel show where its step was fastened), the sail, four oars and the steering oars. Josephus puts four sailors in each boat, and a helmsman, so a crew of five. Wachsmann estimates fifteen men could fit in a boat this size, enough for Jesus and the Twelve. Each estimate says what it rests on, in the list under the model.",
+  "kind": "procedural",
+  "procedural": "galilee-boat",
+  "dimensions": "≈ 8.2 × 2.3 m · 1.2 m of its height survives",
+  "scale": {"metres": 1},
+  "estimates": {
+   "planks": "the length, beam and shape are the surviving hull's. Its sides are broken off at about 1.2 m, and the sheer (the top edge of the sides) is drawn a little above that, rising towards the ends; how high it was is not known. The strakes are drawn as even bands, not plank by plank",
+   "frames": "oak, as found, but drawn every 0.3 m as even ribs; the spacing and the many repairs of the surviving frames are not followed",
+   "stern-deck": "'both the fore and aft sections were probably decked in, although the boat was not preserved to this height' (Wachsmann, 1988). The deck's size is not known",
+   "bow-deck": "as the stern deck: probable, but not preserved",
+   "benches": "not preserved. Two benches are drawn for four rowers, after Josephus's four sailors to a boat",
+   "wales": "not preserved; a heavier timber along the top of each side is drawn for the oars to bear on",
+   "mast": "only the nail holes where the mast step was fastened to the keel survive, a little forward of amidships. The mast's height and the yard's length are not known; they are drawn at ≈6 m and ≈3.4 m",
+   "sail": "a single square sail, drawn brailed up to the yard (furled) as it would be under oars or in a storm. The hull shows only that it had a mast; the sail's shape and size are the reconstruction's",
+   "oars": "four, two a side, for Josephus's four sailors; the Migdal mosaic, of a boat of this period, shows three a side, the sternmost a steering oar. Their length (≈4 m) is not known",
+   "steering-oars": "one on each quarter, as in the museum's reconstruction; the Migdal mosaic shows its sternmost oar widening into a steering oar. Their size is not known",
+   "cushion": "Mark 4:38's proskephalaion, 'the cushion', with the article, as if it belonged to the boat. Wachsmann suggests a sandbag of the kind kept as ballast, stowed under the stern deck, and it is drawn there. Its size and shape are not known"
+  },
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/JesusBoat.jpg/500px-JesusBoat.jpg", "caption": "The Ginosar boat on its frame in the Yigal Allon Museum, Kibbutz Ginosar, with a drawing of the reconstruction behind it", "credit": "Travellers & Tinkers", "creditUrl": "https://commons.wikimedia.org/wiki/File:JesusBoat.jpg", "license": "CC BY-SA 4.0"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Mark.4.35-41", "note": "'Jesus was in the stern, sleeping on the cushion' (4:38); the waves break over the boat until it is nearly swamped (4:37); 'other boats were with Him' (4:36)"},
+   {"kind": "scripture", "ref": "Luke.5.1-11", "note": "two boats at the shore, the fishermen washing their nets; the catch fills both until they begin to sink (5:7)"},
+   {"kind": "scripture", "ref": "Mark.1.16-20", "note": "James and John in the boat with Zebedee and the hired men (1:20)"},
+   {"kind": "archaeology", "title": "The Ginosar boat (Sea of Galilee boat), found 1986, Yigal Allon Museum, Kibbutz Ginosar", "url": "https://library.biblicalarchaeology.org/article/the-galilee-boat-2000-year-old-hull-recovered-intact/", "note": "S. Wachsmann, 'The Galilee Boat—2,000-Year-Old Hull Recovered Intact', Biblical Archaeology Review 14:5 (1988): 26½ × 7½ × 4½ ft; cedar planks and oak frames edge-joined with pegged mortise-and-tenon joints; the mast step's nail holes on the keel; radiocarbon 40 BC ± 80; crew of five; room for fifteen"},
+   {"kind": "archaeology", "title": "The Excavations of an Ancient Boat from the Sea of Galilee (Lake Kinneret)", "author": "S. Wachsmann et al.", "year": 1990, "url": "https://www.academia.edu/5058314/The_Excavations_of_an_Ancient_Boat_from_the_Sea_of_Galilee_Lake_Kinneret_Atiqot_19", "note": "ʿAtiqot 19, the excavation report"},
+   {"kind": "archaeology", "title": "The Jesus Boat: research", "url": "https://www.jesusboat.com/the-jesus-boat-research/", "note": "the museum's summary: 8.2 m long, 2.3 m broad, 1.2 m of height preserved; a square sail amidships and two steering oars in its reconstruction"},
+   {"kind": "primary", "title": "Josephus, The Wars of the Jews 2.21.8 (2.635)", "url": "https://www.gutenberg.org/ebooks/2850", "note": "the 230 boats gathered on the lake at Taricheae, 'in each of them he put no more than four mariners'"},
+   {"kind": "scholarship", "title": "The Sea of Galilee Boat: An Extraordinary 2000 Year Old Discovery", "author": "S. Wachsmann", "year": 1995, "note": "the full account of the find, its construction and reconstruction"}
+  ],
+  "confidence": "estimate"
  }
 ]
