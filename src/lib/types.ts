@@ -106,9 +106,10 @@ export type ModelAngle = [number, number];
  * this account's step; what an estimated part rests on belongs in the model's `estimates`. `view`
  * turns the camera for this step, to show a part the model's own view would hide. `cutaway` cuts
  * open the parts the model flags `cutaway: 'step'` while this step is read, for a part put on under
- * them (the high priest's undergarments, under the tunic and robe).
+ * them (the high priest's undergarments, under the tunic and robe). The part a step adds is never cut,
+ * unless `cuts` names it: a lining added with what it would hide (the temple's gold and its chains).
  */
-export interface ModelStep { ref: Ref; parts: string[]; basis?: string; view?: ModelAngle; cutaway?: boolean }
+export interface ModelStep { ref: Ref; parts: string[]; basis?: string; view?: ModelAngle; cutaway?: boolean; cuts?: string[] }
 /**
  * A passage that describes the model piece by piece; while reading it, only the parts reached so
  * far are shown. `omits` names parts this account never adds, and why; every other part must be
@@ -116,13 +117,13 @@ export interface ModelStep { ref: Ref; parts: string[]; basis?: string; view?: M
  */
 export interface ModelBuild { ref: Ref; steps: ModelStep[]; omits?: Record<string, string> }
 /**
- * How long one of the model's units is, in metres, and whether they are cubits (the scale bar is
- * then marked in cubits). `at` is where the size figure or hand stands, in model units, on the
+ * How long one of the model's units is, in metres, and whether they are cubits or Ezekiel's long
+ * cubits of a cubit and a handbreadth (the scale bar is then marked in them). `at` is where the size figure or hand stands, in model units, on the
  * ground; without it the figure stands beside the model. `worn` says the figure wears the model (the
  * high priest's garments): it stays at `at` through a build, and the camera frames the parts being
  * added rather than the whole figure.
  */
-export interface ModelScale { metres: number; unit?: 'cubit'; at?: [number, number, number]; worn?: boolean }
+export interface ModelScale { metres: number; unit?: 'cubit' | 'long cubit'; at?: [number, number, number]; worn?: boolean }
 /** One verse's change to a built model: the parts it removes and the alternates it adds. */
 export interface ModelChange { ref: Ref; hides?: string[]; shows?: string[]; view?: ModelAngle }
 /** One passage's account of a later state, its changes in reading order (as a build's steps). */
@@ -139,6 +140,8 @@ export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
   kind: 'procedural' | 'gltf'; procedural?: ProceduralKind; src?: string;
   dimensions?: string; sources: Source[]; media?: Media[]; confidence: Confidence;
+  /** Who holds the reading, when `confidence` is 'interpretation' (what Ezekiel's temple is, say). */
+  traditions?: string[];
   scale?: ModelScale;
   /** The camera's angle while a build or state is being read (see `modelViewAt`); elsewhere the model turns. */
   view?: ModelAngle;

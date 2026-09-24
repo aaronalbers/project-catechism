@@ -164,6 +164,13 @@ describe('content integrity', () => {
     const capital = new THREE.Box3(new THREE.Vector3(18, 18, -9), new THREE.Vector3(22, 23, -3));
     expect(tabernacle.spot(capital, undefined, new THREE.Vector3(100, 50, 100)).y).toBe(0);
   });
+  it('a model that is one reading among several names who holds it', () => {
+    for (const m of MODELS) if (m.confidence === 'interpretation') expect(m.traditions?.length, `${m.id} is an interpretation but lists no traditions`).toBeGreaterThan(0);
+  });
+  it('a model in long cubits marks its bar in them', () => {
+    const ezekiel = scaleReference({ metres: 0.519, unit: 'long cubit' }, new THREE.Box3(new THREE.Vector3(-256, 0, -256), new THREE.Vector3(256, 60, 256)));
+    expect(ezekiel.place(new THREE.Vector3(256, 0, 9), new THREE.Box3(new THREE.Vector3(-256, 0, -256), new THREE.Vector3(256, 60, 256)))).toBe('100 long cubits (≈ 51.9 m), in blocks of 10');
+  });
   it('procedural models name a builder that exists', () => {
     for (const m of MODELS) if (m.kind === 'procedural') expect(isProceduralKind(m.procedural ?? ''), `${m.id}: no builder '${m.procedural}'`).toBe(true);
   });
@@ -191,6 +198,7 @@ describe('content integrity', () => {
           prev = r.start;
           expect(st.parts.length, `${m.id}: step ${st.ref} adds nothing`).toBeGreaterThan(0);
           if (parts) for (const p of st.parts) expect(parts.has(p), `${m.id}: step ${st.ref} names unknown part '${p}'`).toBe(true);
+          for (const p of st.cuts ?? []) expect(st.parts, `${m.id}: step ${st.ref} cuts '${p}', which it does not add`).toContain(p);
         }
       }
     }
@@ -294,6 +302,10 @@ describe('content integrity', () => {
     const chron = modelBuildAt(temple, { book: '2Chr', chapter: 5, verse: 9 })!.parts;
     expect([chron.has('more-tables'), chron.has('veil'), chron.has('side-chambers')]).toEqual([true, true, false]);
     // The high priest's garments: the breastpiece's stones go on a row a verse; Lev 8 dresses Aaron from the tunic outward.
+    const ezekiel = MODELS.find((m) => m.id === 'ezekiels-temple')!;
+    expect([...modelBuildAt(ezekiel, { book: 'Ezek', chapter: 40, verse: 8 })!.parts].sort()).toEqual(['east-gate-chambers', 'east-gate-inner-threshold', 'east-gate-steps', 'east-gate-threshold', 'outer-wall']);
+    expect(modelBuildAt(ezekiel, { book: 'Ezek', chapter: 43, verse: 18 })).toBeNull();
+
     const garments = MODELS.find((m) => m.id === 'priestly-garments')!;
     const rows = modelBuildAt(garments, { book: 'Exod', chapter: 28, verse: 18 })!.parts;
     expect([rows.has('stones-row-2'), rows.has('stones-row-3'), rows.has('tunic')]).toEqual([true, false, false]);

@@ -160,6 +160,15 @@ them in CI — read it before adding content.
   of the section, such as the temple's stair, still shows at its own step. A part flagged
   `cutaway: 'step'` instead is cut only at a step marked `"cutaway": true`, with no button: the high
   priest's garments open only where something is put on under them (the tunic, sash, undergarments).
+- Every part a step adds (or a state's change shows) must be seen from the camera the reader gets at that
+  step: `src/__tests__/visibility.test.ts` casts rays from it, using the viewer's own logic in
+  `src/lib/models/view.ts` (what is drawn, the framing, the cutaway), and fails on a part no ray reaches.
+  Fix a failure with the step's `view`, or with `cuts` when the step adds a lining in front of what it
+  also adds (the temple's gold and chains). Only a part the text itself hides (Noah's wood under its
+  pitch) goes in the test's `HIDDEN_BY_THE_TEXT`, saying why. To find an angle,
+  `MODEL=<id> STEP=<ref> npm run models:angles` ranks a grid of views by how much of each part is seen;
+  `MODEL=<id>` alone lists the steps with a part less than half seen. A model whose raised floors the
+  size figure should stand on flags them `userData.ground` (Ezekiel's courts).
 
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
 the surrounding file.

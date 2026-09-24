@@ -155,14 +155,14 @@ export function garments(): THREE.Group {
   }));
   const rg = gold();
   inBp('breastpiece-rings', ...[-1, 1].map((s) => meshAt(ringGeo, rg, s * cx, top - 0.03, face + 0.004)));
-  // Two more on the inside edge at the bottom corners (28:26), tied with blue cord (28:28) to rings at
-  // the foot of the shoulder pieces, just above the waistband (28:27).
+  // Two more on the inside edge at the bottom corners (28:26), half below the edge so they can be seen,
+  // tied with blue cord (28:28) to rings at the foot of the shoulder pieces, just above the waistband (28:27).
   const lr = gold();
-  inBp('lower-rings', ...[-1, 1].map((s) => meshAt(ringGeo, lr, s * cx, bottom + 0.03, bpZ - T / 2 - 0.004)));
+  inBp('lower-rings', ...[-1, 1].map((s) => meshAt(ringGeo, lr, s * cx, bottom - 0.005, bpZ - T / 2 - 0.004)));
   const footY = H(bandY + 0.03), er = gold();
   inEphod('ephod-rings', ...[-1, 1].map((s) => meshAt(ringGeo, er, s * sx0, footY, front(bandY + 0.03) + 0.004)));
   const bc = blue();
-  inBp('blue-cord', ...[-1, 1].map((s) => tube([[s * cx, bottom + 0.03, bpZ - T / 2 - 0.004], [s * (cx + sx0) / 2, (bottom + footY) / 2 + 0.01, bpZ - T / 2 - 0.02], [s * sx0, footY, front(bandY + 0.03) + 0.004]], 0.005, bc)));
+  inBp('blue-cord', ...[-1, 1].map((s) => tube([[s * cx, bottom - 0.005, bpZ - T / 2 - 0.004], [s * (cx + sx0) / 2, (bottom + footY) / 2 + 0.01, bpZ - T / 2 - 0.02], [s * sx0, footY, front(bandY + 0.03) + 0.004]], 0.005, bc)));
 
   // Urim and Thummim (28:30), put "in" the breastpiece: drawn as two small lots standing in its fold.
   const ut = new THREE.MeshStandardMaterial({ color: 0xe9e2cf, roughness: 0.5 }), utGeo = new THREE.BoxGeometry(0.06, 0.09, 0.012);

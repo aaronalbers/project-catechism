@@ -4,6 +4,7 @@
 import type * as THREE from 'three';
 import { alabastron } from './alabastron';
 import { coin } from './coins';
+import { ezekielsTemple } from './ezekiel';
 import { ark } from './furniture';
 import { garments } from './garments';
 import { noahsArk } from './noah';
@@ -18,6 +19,7 @@ const BUILDERS = {
   tabernacle,
   'noahs-ark': noahsArk,
   temple,
+  'ezekiels-temple': ezekielsTemple,
   'priestly-garments': garments,
 } satisfies Record<string, () => THREE.Object3D>;
 

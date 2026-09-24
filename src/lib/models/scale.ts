@@ -122,9 +122,9 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
       for (const c of [...bar.children]) { const mesh = c as THREE.Mesh; mesh.geometry.dispose(); (mesh.material as THREE.Material).dispose(); bar.remove(c); }
       const all = box.clone().union(boundsAt(p));
       const target = Math.max(...all.getSize(new THREE.Vector3()).toArray()) * u / 4;
-      const cubits = scale.unit === 'cubit';
-      const n = cubits ? Math.max(1, niceFloor(target / CUBIT_M)) : niceFloor(target);
-      const metres = cubits ? n * CUBIT_M : n, len = metres / u;
+      const cubits = !!scale.unit;
+      const n = cubits ? Math.max(1, niceFloor(target / u)) : niceFloor(target);
+      const metres = cubits ? n * u : n, len = metres / u;
       const lead = Math.round(n / 10 ** Math.floor(Math.log10(n)));
       const segments = cubits && n === 1 ? 1 : lead === 1 ? 10 : lead;
       const w = len / 12, h = w / 3, front = !toward || toward.z >= all.getCenter(new THREE.Vector3()).z;
@@ -135,7 +135,7 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
       }
       const each = n / segments;
       return cubits
-        ? `${n} cubit${n === 1 ? '' : 's'} (≈ ${formatMetres(metres)})${segments > 1 ? `, in blocks of ${each}` : ''}`
+        ? `${n} ${scale.unit}${n === 1 ? '' : 's'} (≈ ${formatMetres(metres)})${segments > 1 ? `, in blocks of ${each}` : ''}`
         : `${formatMetres(metres)}${segments > 1 ? `, in blocks of ${formatMetres(each)}` : ''}`;
     },
   };

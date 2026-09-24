@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "data": "node scripts/build-data.mjs",
     "data:fetch": "node scripts/fetch-sources.mjs",
-    "test": "vitest run"
+    "test": "vitest run",
+    "models:angles": "vitest run src/__tests__/angles.test.ts --silent=false --reporter=verbose"
   },
   "dependencies": {
     "kokoro-js": "^1.2.1",
