@@ -35,9 +35,9 @@ function VerseText({ text, verse, current, il, ladder }: { text: string; verse: 
   );
 }
 
-function useStoredFlag(key: string, initial: boolean): [boolean, () => void] {
+function useStoredFlag(key: string, initial: boolean): [boolean, (to?: boolean) => void] {
   const [v, setV] = useState(() => { try { const s = localStorage.getItem(key); return s === null ? initial : s === 'true'; } catch { return initial; } });
-  return [v, () => setV((x) => { try { localStorage.setItem(key, String(!x)); } catch { /* private mode */ } return !x; })];
+  return [v, (to) => setV((x) => { const y = to ?? !x; try { localStorage.setItem(key, String(y)); } catch { /* private mode */ } return y; })];
 }
 
 export function Reader() {
@@ -61,20 +61,30 @@ export function Reader() {
   const ilByVerse = useMemo(() => new Map((il ?? []).map((v) => [v.v, v])), [il]);
   const phrase = useMemo(() => CHIASMS.filter((c) => isPhrase(c) && touchesChapter(c.ref, loc.book, loc.chapter)), [loc.book, loc.chapter]);
   const passage = useMemo(() => CHIASMS.find((c) => !isPhrase(c) && touchesChapter(c.ref, loc.book, loc.chapter)), [loc.book, loc.chapter]);
-  const [structure, toggleStructure] = useStoredFlag('structure', true);
+  const [structure, setStructure] = useStoredFlag('structure', true);
+  const toggleStructure = () => setStructure();
   const [pair, setPair] = useState<string | null>(null);
+  const reveal = useStore((s) => s.reveal);
+  // Arriving from the index at a chiasm: show its structure even if the reader had hidden it.
+  useEffect(() => { if (reveal === 'chiasm') setStructure(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep the current verse in view, gently, when it changes (audio, links, hash).
   const lastScrolled = useRef<string>('');
   useEffect(() => {
-    const key = `${loc.book}.${loc.chapter}.${loc.verse}`;
+    const key = `${loc.book}.${loc.chapter}.${loc.verse}.${reveal}`;
     if (lastScrolled.current === key) return;
-    // Until the book has loaded there is no verse to scroll to; try again when `data` arrives.
+    // Until the book has loaded there is no verse to scroll to, and until the interlinear has, the
+    // section headings it carries are still to be inserted above it; try again when both are here.
     const el = document.getElementById(`v-${loc.verse}`);
-    if (!el) return;
+    if (!el || il === null) return;
     lastScrolled.current = key;
-    el.scrollIntoView({ block: playing ? 'center' : 'start', behavior: 'smooth' });
-  }, [loc, playing, data]);
+    if (playing) { el.scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+    // A passage-level chiasm opening here is shown whole in the strip at the top of the chapter;
+    // otherwise take in what sits above the verse: its heading, a chiasm's caption, a level's header.
+    const opens = passage && parseRef(passage.ref)?.start;
+    const strip = reveal === 'chiasm' && opens?.chapter === loc.chapter && opens.verse === loc.verse ? document.querySelector('.chiasm-strip') : null;
+    (strip ?? el.parentElement ?? el).scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }, [loc, playing, data, il, reveal]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Bring a word picked in the Words tab into view; 'nearest' leaves it alone when it is already showing.
   const wordIndex = useStore((s) => s.wordIndex);
@@ -109,7 +119,7 @@ export function Reader() {
         const at = (d: number) => chapter[k + d] && passage ? levelAt(passage, { ...vloc, verse: chapter[k + d].v }) : -1;
         const first = li >= 0 && at(-1) !== li, last = li >= 0 && at(1) !== li;
         return (
-          <div key={v.v} className={li >= 0 ? `rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : undefined} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
+          <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
             {ilv?.h && <div className="heading">{ilv.h}</div>}
             {opens && <ChiasmCaption c={opens} show={structure} onToggle={toggleStructure} />}

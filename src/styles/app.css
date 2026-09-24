@@ -115,6 +115,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .reader h1 { font-size: 30px; font-weight: 600; margin-bottom: 4px; }
 .reader .attribution { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-bottom: 20px; }
 .reader .heading { font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--muted); margin: 26px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+.vblock, .chiasm-strip { scroll-margin-top: 16px; }
 .verse { display: grid; grid-template-columns: 34px 1fr; gap: 6px; padding: 5px 8px; margin: 0 -8px; border-radius: 8px; font-size: 18.5px; line-height: 1.65; scroll-margin: 90px; cursor: pointer; position: relative; }
 .verse:hover { background: var(--surface-2); }
 .verse.current { background: var(--current); }

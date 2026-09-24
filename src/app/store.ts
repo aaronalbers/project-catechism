@@ -15,7 +15,10 @@ export interface State {
   playing: boolean;
   /** The feature index is open (`#/index`), scrolled to a section id when not ''; null when reading. */
   index: string | null;
+  /** Set by a link that goes to a feature rather than a verse, for the reader to bring it into view; cleared by the next `goTo`. */
+  reveal: Reveal | null;
 }
+export type Reveal = 'chiasm';
 
 /** Route hash for the index: #/index or #/index/models. */
 function indexFromHash(hash: string): string | null {
@@ -34,6 +37,7 @@ let state: State = {
   theme: stored('theme', 'system'),
   playing: false,
   index: indexFromHash(location.hash),
+  reveal: null,
 };
 
 const listeners = new Set<() => void>();
@@ -54,8 +58,8 @@ export function setState(patch: Partial<State> | ((s: State) => Partial<State>))
   emit();
 }
 
-export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab } = {}) {
-  setState({ loc, wordIndex: null, index: null, ...(opts.openTab ? { tab: opts.openTab, panelOpen: true } : {}) });
+export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab; reveal?: Reveal } = {}) {
+  setState({ loc, wordIndex: null, index: null, reveal: opts.reveal ?? null, ...(opts.openTab ? { tab: opts.openTab, panelOpen: true } : {}) });
 }
 
 function fromHash() {

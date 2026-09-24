@@ -1,4 +1,4 @@
-import type { PanelTab } from '@/app/store';
+import type { PanelTab, Reveal } from '@/app/store';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PROPHECIES, QUOTES } from './content';
 import { BOOKS, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
@@ -20,7 +20,11 @@ export interface CatalogEntry {
   /** A sub-heading within the section (an insight's kind). */
   group?: string;
 }
-export interface CatalogSection { id: string; kind: FeatureKind; title: string; blurb: string; tab: PanelTab; entries: CatalogEntry[] }
+export interface CatalogSection {
+  id: string; kind: FeatureKind; title: string; blurb: string; tab: PanelTab; entries: CatalogEntry[];
+  /** What the reader should bring into view on arrival, beyond the verse. */
+  reveal?: Reveal;
+}
 
 const byPosition = (a: CatalogEntry, b: CatalogEntry) => compareLoc(parseRef(a.go)!.start, parseRef(b.go)!.start);
 const sorted = (entries: CatalogEntry[]) => entries.sort(byPosition);
@@ -53,7 +57,7 @@ export const CATALOG: CatalogSection[] = [
     }))),
   },
   {
-    id: 'chiasms', kind: 'chiasm', title: 'Chiasms', tab: 'links',
+    id: 'chiasms', kind: 'chiasm', title: 'Chiasms', tab: 'links', reveal: 'chiasm',
     blurb: 'Mirrored structures drawn on the text itself: a ladder for phrases, a margin rail for passages.',
     entries: sorted(CHIASMS.map((c) => ({
       id: c.id, kind: 'chiasm', title: c.title, summary: c.summary,

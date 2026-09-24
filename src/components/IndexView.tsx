@@ -1,24 +1,24 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
-import { goTo, setState, useStore, type PanelTab } from '@/app/store';
-import { CATALOG, type CatalogEntry } from '@/lib/catalog';
+import { goTo, setState, useStore } from '@/app/store';
+import { CATALOG, type CatalogEntry, type CatalogSection } from '@/lib/catalog';
 import { formatRef, parseRef } from '@/lib/refs';
 
-function open(ref: string, tab: PanelTab) {
+function open(ref: string, s: CatalogSection) {
   const r = parseRef(ref);
-  if (r) goTo(r.start, { openTab: tab });
+  if (r) goTo(r.start, { openTab: s.tab, reveal: s.reveal });
 }
 
-function Entry({ e, tab }: { e: CatalogEntry; tab: PanelTab }) {
+function Entry({ e, s }: { e: CatalogEntry; s: CatalogSection }) {
   return (
     <li className="ix-entry">
-      <button className="ix-title" onClick={() => open(e.go, tab)}>
+      <button className="ix-title" onClick={() => open(e.go, s)}>
         <span className={`marker ${e.kind}`} aria-hidden="true" />{e.title}
       </button>
       {e.summary && <p className="ix-summary">{e.summary}</p>}
       {e.lines.map((l, i) => (
         <div key={i} className="ix-line">
           {l.label && <span className="ix-label">{l.label}</span>}
-          {l.refs.map((r) => <button key={r} className="chip link" onClick={() => open(r, tab)}>{formatRef(r)}</button>)}
+          {l.refs.map((r) => <button key={r} className="chip link" onClick={() => open(r, s)}>{formatRef(r)}</button>)}
         </div>
       ))}
     </li>
@@ -76,7 +76,7 @@ export function IndexView() {
               {s.entries.map((e, i) => (
                 <Fragment key={e.id}>
                   {e.group && e.group !== s.entries[i - 1]?.group && <li className="ix-group">{e.group}</li>}
-                  <Entry e={e} tab={s.tab} />
+                  <Entry e={e} s={s} />
                 </Fragment>
               ))}
             </ul>
