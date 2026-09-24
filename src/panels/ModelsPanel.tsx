@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { useFeatureInView, useStore } from '@/app/store';
-import { modelBuildAt, modelStateAt, modelViewAt, modelsFor, modelsInChapter } from '@/lib/content';
+import { modelBuildAt, modelLeadAt, modelStateAt, modelViewAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Model3D } from '@/lib/types';
 import { buildProcedural } from '@/lib/models';
@@ -384,6 +384,14 @@ export function ModelsPanel() {
   const chapter = modelsInChapter(loc.book, loc.chapter).filter((m) => !here.includes(m));
   const list = [...here, ...chapter];
   useFeatureInView();
+  // When the text turns to another model (1 Kgs 7 moves from the temple to the House of the Forest of
+  // Lebanon and back), bring its card into view. The cards keep their order, so nothing else moves; and
+  // it jumps, as useFeatureInView does, since the reader's smooth scroll to the verse would cancel a glide.
+  const lead = modelLeadAt(loc)?.id ?? null, shown = useRef(lead);
+  useEffect(() => {
+    if (lead && lead !== shown.current) document.getElementById(`model-${lead}`)?.scrollIntoView({ block: 'start', behavior: 'instant' });
+    shown.current = lead;
+  }, [lead]);
   return (
     <div className="panel-body">
       {list.length === 0 && <div className="empty"><p>No models for this chapter yet.</p><small>Register one in <code>content/models.json</code> — procedural (code) or glTF with attribution.</small></div>}

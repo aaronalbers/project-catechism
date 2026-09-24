@@ -3,7 +3,7 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -364,5 +364,17 @@ describe('content integrity', () => {
     expect(atPrayer[0].verses?.some((r) => r.startsWith('Matt.6.9'))).toBe(true);
     expect(atPrayer.findIndex((v) => v.kind === 'overview')).toBeGreaterThan(0);
     expect(videosForStrongs('H2617').map((v) => v.title)).toContain('Khesed / Loyal Love');
+  });
+});
+
+describe('the model the text is working on', () => {
+  // The Models tab scrolls to this model's card when it changes; where builds overlap, the latest step leads.
+  const lead = (book: string, chapter: number, verse: number) => modelLeadAt({ book, chapter, verse })?.id ?? null;
+  it('follows 1 Kings 7 from the temple to the House of the Forest of Lebanon and back', () => {
+    expect(lead('1Kgs', 6, 2)).toBe('solomons-temple');
+    expect(lead('1Kgs', 7, 2)).toBe('forest-of-lebanon');
+    expect(lead('1Kgs', 7, 5)).toBe('forest-of-lebanon');
+    expect(lead('1Kgs', 7, 15)).toBe('solomons-temple');
+    expect(lead('1Kgs', 10, 17)).toBe('forest-of-lebanon');
   });
 });

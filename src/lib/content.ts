@@ -75,6 +75,28 @@ export function modelStateAt(m: Model3D, loc: VerseLoc): { state: ModelState; ac
   }
   return null;
 }
+/**
+ * Where the text last turned to `m` by `loc`: the start of the latest step (or change) reached in the
+ * build (or state account) being read, or of that passage if none is reached yet. Null when no
+ * passage is building or changing it.
+ */
+export function modelActiveSince(m: Model3D, loc: VerseLoc): VerseLoc | null {
+  const at = modelBuildAt(m, loc), reading = at ? null : modelStateAt(m, loc);
+  const ref = at ? at.build.steps[at.step - 1]?.ref ?? at.build.ref : reading ? reading.account.changes[reading.step - 1]?.ref ?? reading.account.ref : null;
+  return ref ? parseRef(ref)?.start ?? null : null;
+}
+/**
+ * The model the text is working on at `loc`, if any. Where passages overlap (the House of the Forest
+ * of Lebanon, 1 Kgs 7:2-5, inside the temple's build), the one whose latest step began most recently.
+ */
+export function modelLeadAt(loc: VerseLoc): Model3D | null {
+  let lead: Model3D | null = null, leadSince: VerseLoc | null = null;
+  for (const m of modelsFor(loc)) {
+    const since = modelActiveSince(m, loc);
+    if (since && (!leadSince || compareLoc(since, leadSince) > 0)) { lead = m; leadSince = since; }
+  }
+  return lead;
+}
 /** The camera's angle while a passage is building or changing a model that sets none: in front, a little to the right, and above. */
 export const DEFAULT_MODEL_VIEW: ModelAngle = [30, 25];
 /**
