@@ -734,5 +734,49 @@
    {"kind": "scholarship", "title": "The Sea of Galilee Boat: An Extraordinary 2000 Year Old Discovery", "author": "S. Wachsmann", "year": 1995, "note": "the full account of the find, its construction and reconstruction"}
   ],
   "confidence": "estimate"
+ },
+ {
+  "id": "goliath",
+  "title": "Goliath's armour — as 1 Samuel 17 describes it",
+  "verses": ["1Sam.17.1-54", "1Sam.21.9", "1Sam.22.10", "2Sam.21.19", "1Chr.20.5"],
+  "summary": "Read or play 1 Samuel 17:4–7 and the Philistine champion is armed as the text lists it: his height, then the bronze helmet and the coat of scale armour, then the bronze greaves and the javelin between his shoulders, and last the spear and the shield-bearer who walked before him. Elsewhere he is shown whole, with the sword David later drew from its sheath (17:51). The text gives two weights. The coat weighs 5,000 shekels (≈57 kg) and the spear's iron point 600 shekels (≈6.8 kg), converted on a shekel of ≈11.4 g as in the BSB's notes; the model sizes the point to that weight. His height is where the witnesses differ. The Masoretic text, which the BSB follows, has 'six cubits and a span' (≈2.9 m on a common cubit of ≈44.5 cm); the Dead Sea scroll 4QSamᵃ (1st century BC), Codex Vaticanus and the Lucianic Greek, and Josephus have 'four cubits and a span' (≈2.0 m). He is drawn at the Masoretic height, with the ordinary figure's proportions, and the size figure (≈1.66 m) stands where his shield-bearer went before him. The shapes of the pieces, the length of the spear and javelin, the shield and the sword are reconstructed; each says what it rests on, both at the step that adds it and in the list under the model. The text does not say whose pattern the armour follows. Scholars point out that it does not match the Philistines on the Egyptian reliefs of the 12th century BC. They have read it as Near Eastern scale armour, as the Greek panoply of helmet, scale corselet, greaves and a great shield with a bearer, or as a mixture drawn from several.",
+  "kind": "procedural",
+  "procedural": "goliath",
+  "dimensions": "6 cubits and a span · ≈ 2.9 m (MT); 4 cubits and a span · ≈ 2.0 m (4QSamᵃ, LXX, Josephus)",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [-2.8, 0, 3.2]},
+  "builds": [
+   {"ref": "1Sam.17.4-7", "omits": {"sword": "vv. 4-7 do not mention it; he comes with 'sword and spear and javelin' (v. 45), and David draws it from its sheath (v. 51)"}, "steps": [
+    {"ref": "1Sam.17.4", "parts": ["goliath"]},
+    {"ref": "1Sam.17.5", "parts": ["helmet", "coat-of-mail"]},
+    {"ref": "1Sam.17.6", "parts": ["greaves", "javelin"], "view": [240, 10]},
+    {"ref": "1Sam.17.7", "parts": ["spear-shaft", "spear-point", "shield"]}
+   ]}
+  ],
+  "estimates": {
+   "goliath": "six cubits and a span, the Masoretic reading the BSB follows; the span is taken as half a cubit, so ≈ 2.9 m on the common cubit (the BSB's note, on a longer cubit, gives 297 cm). 4QSamᵃ, the oldest Hebrew witness to the verse, Codex Vaticanus, the Lucianic Greek and Josephus (Ant. 6.9.1) read four cubits and a span, ≈ 2.0 m. Hays (2005) argues for the shorter reading, Billington (2007) for the taller. His build is the ordinary figure's, scaled to his height; the text says nothing of it",
+   "helmet": "the text says only that it was bronze (kova, Strong's 'a helmet (as arched)'). Drawn as a rounded cap with a rolled rim. Its shape is not known; it is not the feathered headdress the Philistines wear on the Egyptian reliefs at Medinet Habu (A. Yadin 2004, after Galling)",
+   "coat-of-mail": "shiryon qasqassim, a corslet 'of scales', the word used of a fish's scales (Lev 11:9), so it is drawn as bronze scale armour. The text gives its weight, 5,000 shekels (≈ 57 kg), not its cut or length; it is drawn from the neck to mid-thigh with sleeves to the elbow, and the scales are a pattern, not counted pieces",
+   "greaves": "mitschot, 'a shinpiece of armour', only here in the Bible; bronze, 'on his legs'. Drawn from the ankle to below the knee, wrapping the shin and open behind the calf. Their shape is not given",
+   "javelin": "kidon, 'of bronze… between his shoulders'. The BSB reads a javelin, drawn ≈ 4 cubits (≈ 1.9 m) long, slung across the back with its head over the right shoulder; its length and how it was slung are not given. Strong's glosses it 'a dart'; the KJV has 'a target' (a small shield), and G. Molin (1956) took it to be a curved sword, a scimitar. Only the head is taken to be bronze; the shaft is drawn in wood",
+   "spear-shaft": "'like a weaver's beam', the beam of a loom, and so taken as thick: drawn ≈ 6 cm across and 7 cubits (≈ 3.1 m) long, neither of which is given. Y. Yadin (1955) read the likeness as a spear with a loop of cord for throwing, like the leash rods of a loom; it is drawn plain. The same phrase is used of his brother's spear (2 Sam 21:19; 1 Chr 20:5) and of an Egyptian's (1 Chr 11:23)",
+   "spear-point": "iron, 600 shekels (≈ 6.8 kg). Its shape is not given. Drawn as a leaf blade ≈ 50 cm long and 14.5 cm wide, ≈ 3.6 cm thick at the middle, on a socket 15 cm long: at 7.9 g/cm³ this holds ≈ 6.9 kg of iron (derived from the model's own shape, not a find)",
+   "shield": "a tsinnah, 'a (large) shield', carried by a bearer who went before him (v. 7, v. 41); its size, shape and material are not given. Drawn as a board of hide on a wooden frame ≈ 1.6 × 2.7 cubits (≈ 0.7 × 1.2 m), held before the bearer. The size figure stands where the bearer went; nothing is known of him",
+   "sword": "not in vv. 4-7. David draws it 'from its sheath' (17:51); later it lies at Nob wrapped in a cloth behind the ephod, and David says 'there is none like it' (21:9). Its size and shape are not given; it is drawn sheathed at the left hip, ≈ 2 cubits (≈ 0.9 m) long, on a belt"
+  },
+  "sources": [
+   {"kind": "scripture", "ref": "1Sam.17.4-7", "note": "height, helmet, coat of scales of 5,000 shekels, greaves, javelin, a spear 'like a weaver's beam' with an iron point of 600 shekels, and the shield-bearer; the BSB's notes give ≈ 297 cm, ≈ 57 kg and ≈ 6.8 kg, and the LXX/DSS/Josephus reading of four cubits and a span"},
+   {"kind": "scripture", "ref": "1Sam.17.51", "note": "David 'pulled it from its sheath'"},
+   {"kind": "scripture", "ref": "1Sam.21.9", "note": "the sword of Goliath, wrapped in a cloth behind the ephod: 'there is none like it'"},
+   {"kind": "scripture", "ref": "2Sam.21.19", "note": "'the shaft of whose spear was like a weaver's beam', of Goliath's brother (1 Chr 20:5); of an Egyptian's spear at 1 Chr 11:23"},
+   {"kind": "scripture", "ref": "Lev.11.9", "note": "qasqeset, the 'scales' of fish, the word for Goliath's coat"},
+   {"kind": "lexicon", "title": "Strong's H3553 kova, H8302 shiryon, H7193 qasqeset, H4697 mitschah, H3591 kidon, H2595 chanit, H4500 manor, H6793 tsinnah", "note": "'a helmet (as arched)'; 'a corslet'; 'a scale (of a fish); hence a coat of mail'; 'a shinpiece of armor'; 'a dart'; 'a lance'; 'the frame of a loom'; 'a (large) shield'"},
+   {"kind": "primary", "title": "Josephus, Antiquities of the Jews 6.9.1", "url": "https://en.wikisource.org/wiki/The_Antiquities_of_the_Jews/Book_VI", "note": "Whiston's translation: 'four cubits and a span in tallness… a breastplate on that weighed five thousand shekels… a helmet and greaves of brass'"},
+   {"kind": "primary", "title": "4QSamᵃ (4Q51), 1 Samuel 17:4", "note": "the Dead Sea scroll of Samuel, 1st century BC, reads 'four cubits and a span'; with Codex Vaticanus and Alexandrinus and the Lucianic recension, as set out by Hays (2005)"},
+   {"kind": "scholarship", "title": "Reconsidering the Height of Goliath", "author": "J. Daniel Hays", "year": 2005, "url": "https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-4_JETS_48-4_701-714.pdf", "note": "JETS 48, 701–714; argues for four cubits and a span, and that the armour's weight does not require the taller reading"},
+   {"kind": "scholarship", "title": "Goliath and the Exodus Giants: How Tall Were They?", "author": "Clyde E. Billington", "year": 2007, "url": "https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_50_50-3_JETS_50-3_489-508_Billington.pdf", "note": "JETS 50, 489–508; a reply to Hays, arguing from the armour's weight that Goliath was over 8 feet tall"},
+   {"kind": "scholarship", "title": "Goliath's Armor and Israelite Collective Memory", "author": "Azzan Yadin", "year": 2004, "note": "Vetus Testamentum 54, 373–395; the armour matches neither the Philistines of the Medinet Habu reliefs nor any one tradition (after K. Galling, VT 15, 1966); reads it as a Homeric panoply. Cites Y. Yadin, 'Goliath's Javelin and the menor ʾoregim', PEQ 86 (1955) 58–69, and G. Molin, 'What is a kidon?', JSS 1 (1956) 334–337"},
+   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm and the span as half of it"}
+  ],
+  "confidence": "estimate"
  }
 ]
