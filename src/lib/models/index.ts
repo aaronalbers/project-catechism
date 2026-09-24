@@ -4,7 +4,7 @@
 import type * as THREE from 'three';
 import { alabastron } from './alabastron';
 import { galileeBoat } from './boat';
-import { coin } from './coins';
+import { coin, lepta } from './coins';
 import { ezekielsTemple } from './ezekiel';
 import { ark } from './furniture';
 import { garments } from './garments';
@@ -15,6 +15,7 @@ import { temple } from './temple';
 const BUILDERS = {
   denarius: () => coin(19, 1.5, 0xd6d3c9, 'TI CAESAR DIVI AVG F AVGVSTVS', 'PONTIF MAXIM'),
   tetradrachm: () => coin(26, 3, 0xd6d3c9, 'TYPOY IEPAΣ', 'KAI AΣYΛOY'),
+  lepta,
   alabastron: () => alabastron(18),
   ark: () => ark(),
   tabernacle,

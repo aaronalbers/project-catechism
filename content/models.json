@@ -48,6 +48,34 @@
   "confidence": "consensus"
  },
  {
+  "id": "widows-lepta",
+  "title": "The widow's two lepta",
+  "verses": ["Mark.12.41-44", "Luke.21.1-4", "Luke.12.59"],
+  "summary": "The smallest coins in Judea. Mark calls the widow's gift lepta duo, 'two lepta', and explains it to Roman readers as a kodrantēs (quadrans), 1/64 of a denarius; Luke 12:59's 'very last penny' is the same coin. The Gospels do not say whose coins hers were. The ones most found in the excavated levels of the 1st century AD are the bronzes of the Hasmonean king Alexander Jannaeus (103–76 BC), struck a century and more earlier and still in use: an anchor, hung upside down as on a ship's side, with the Greek 'of King Alexander', and on the other side an eight-rayed star. They were struck on small, ragged flans, often off-centre, and vary widely: specimens of the type in the American Numismatic Society weigh from about 0.5 g to 3.6 g, the smallest sort (the anchor within a circle) mostly 0.8–1.8 g. The left coin is drawn at the size of one in the Yale University Art Gallery, minted in Jerusalem: 15.9 mm across, 1.87 g. The right is one of the smaller sort, turned to show its star. Its size, the thickness of both and the relief are estimates, each saying what it rests on in the list under the model.",
+  "kind": "procedural",
+  "procedural": "lepta",
+  "dimensions": "Ø 15.9 mm · 1.87 g (Yale's specimen); ≈ 13 mm · ≈ 1.2 g (the smaller)",
+  "scale": {"metres": 0.02, "at": [0, 0, 0]},
+  "estimates": {
+   "lepton-yale": "the diameter is the Yale coin's (15.9 mm). Its thickness (≈ 1.1 mm) is derived from its weight and diameter, taking bronze at about 8.8 g/cm³; a struck flan is thicker in the middle than at the edge. The ragged outline and the off-centre design are drawn after the type, not this coin, and the relief is schematic",
+   "lepton-small": "the smaller sort, with the anchor within a circle, weighs mostly 0.8–1.8 g in the ANS's specimens; Harvard's lepton of the type weighs 1.17 g. Neither museum record gives a diameter, so ≈ 13 mm is drawn, for about 1.2 g of bronze at ≈ 1 mm thick. The Aramaic or Paleo-Hebrew legend around the star is not drawn"
+  },
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Coin_of_Alexander_Jannaeus%2C_from_Jerusalem%2C_Yale_University_Art_Gallery%2C_inv._1938.6000.1877_-_YDEA_-_143024.jpg", "caption": "Bronze of Alexander Jannaeus, Jerusalem mint, 103–76 BC: star (left) and anchor (right); excavated at Dura-Europos. Yale University Art Gallery 1938.6000.1877", "credit": "Yale University Art Gallery", "creditUrl": "https://commons.wikimedia.org/wiki/File:Coin_of_Alexander_Jannaeus,_from_Jerusalem,_Yale_University_Art_Gallery,_inv._1938.6000.1877_-_YDEA_-_143024.jpg", "license": "CC0"}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Mark.12.42", "note": "lepta duo, ho estin kodrantēs: 'two lepta, which is a quadrans'"},
+   {"kind": "scripture", "ref": "Luke.12.59", "note": "to eschaton lepton, 'the last lepton'"},
+   {"kind": "archaeology", "title": "Coin of Alexander Jannaeus from Jerusalem, Yale University Art Gallery 1938.6000.1877", "url": "https://artgallery.yale.edu/collections/objects/143024", "note": "copper, 1.87 g, 15.9 mm; from the Yale-French excavations at Dura-Europos"},
+   {"kind": "archaeology", "title": "Lepton of Alexander Jannaeus, Harvard Art Museums 2008.2.23", "url": "https://harvardartmuseums.org/art/322301", "note": "1.17 g; anchor with the Greek 'of King Alexander' / eight-rayed star with the Paleo-Hebrew 'Yehonatan the King' between the rays"},
+   {"kind": "data", "title": "American Numismatic Society collection: bronzes of Alexander Jannaeus, anchor / eight-rayed star", "url": "https://numismatics.org/search/results?q=Alexander%20Jannaeus%20star&lang=en", "note": "weights of the 40 specimens this search returns: Hendin GBC 6189 (anchor / star) 1.2–3.6 g; GBC 6191 (anchor within a circle / star) 0.8–1.8 g; one of 0.51 g. The records give no diameters"},
+   {"kind": "archaeology", "title": "Alexander Jannaeus' coins and their dates", "author": "Y. Zlotnik", "url": "https://www.ins.org.il/files/files/alexander%20jannaeus%20coins.pdf", "note": "Israel Numismatic Society; argues the star/anchor type was in circulation by 90–89 BC; describes a smaller issue with the anchor in a circle and the Aramaic 'King Alexander year 25' around the star"},
+   {"kind": "archaeology", "title": "A Treasury of Jewish Coins from the Persian Period to Bar Kokhba", "author": "Ya'akov Meshorer", "year": 2001, "note": "prutot of Alexander Jannaeus are the commonest coin in Judean excavation strata of the 1st century AD"},
+   {"kind": "scholarship", "title": "Guide to Biblical Coins", "author": "David Hendin", "year": 2010, "note": "5th ed.; the types and their numbering (the ANS cites the 6th edition's GBC numbers)"}
+  ],
+  "confidence": "estimate"
+ },
+ {
   "id": "ark-of-the-covenant",
   "title": "Ark of the covenant — built as the text describes it",
   "verses": ["Exod.25.10-22", "Exod.37.1-9", "Exod.40.20-21", "Heb.9.4-5"],
