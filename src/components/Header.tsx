@@ -30,7 +30,15 @@ function Navigator({ onClose }: { onClose: () => void }) {
   const chapters = useMemo(() => featuresInBook(bookId), [bookId]);
   const inBook = (id: string) => orderKinds([...featuresInBook(id).values()].flatMap((s) => [...s]));
   const bookKinds = inBook(bookId);
+  const chaptersRef = useRef<HTMLDivElement>(null);
   const submit = () => { if (parsed) { goTo(parsed); onClose(); } };
+  // Picking a book leads on to its chapters: straight in when there is only one, else scroll to them.
+  const pickBook = (id: string) => {
+    if (book(id)!.chapters === 1) { goTo({ book: id, chapter: 1, verse: 1 }); onClose(); return; }
+    setBookId(id);
+    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    chaptersRef.current?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+  };
   return (
     <dialog className="nav" ref={ref} onClose={onClose} onClick={(e) => { if (e.target === ref.current) onClose(); }}>
       <div className="nav-head">
@@ -44,13 +52,13 @@ function Navigator({ onClose }: { onClose: () => void }) {
             <div className="nav-testament">{t === 'OT' ? 'Old Testament' : 'New Testament'}</div>
             <div className="nav-books">
               {BOOKS.filter((x) => x.testament === t).map((x) => (
-                <button key={x.id} aria-current={x.id === bookId} onClick={() => setBookId(x.id)} title={describe(inBook(x.id)) || undefined}>{x.name}<Dots kinds={inBook(x.id)} /></button>
+                <button key={x.id} aria-current={x.id === bookId} onClick={() => pickBook(x.id)} title={describe(inBook(x.id)) || undefined}>{x.name}<Dots kinds={inBook(x.id)} /></button>
               ))}
             </div>
           </div>
         ))}
         <hr />
-        <div className="nav-testament">{b.name} — chapter</div>
+        <div className="nav-testament" ref={chaptersRef}>{b.name} — chapter</div>
         <div className="nav-chapters">
           {Array.from({ length: b.chapters }, (_, i) => i + 1).map((c) => {
             const kinds = orderKinds(chapters.get(c) ?? []);
