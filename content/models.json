@@ -921,5 +921,58 @@
    {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm and the shekel of ≈11.4 g"}
   ],
   "confidence": "estimate"
+ },
+ {
+  "id": "sealed-scroll",
+  "title": "The scroll with seven seals",
+  "verses": ["Rev.5.1-14", "Rev.6.1-8.1", "Ezek.2.9-10", "Isa.29.11-12", "Jer.32.9-15", "Dan.12.4"],
+  "summary": "John sees 'a scroll in the right hand of the One seated on the throne. It had writing on both sides and was sealed with seven seals' (Rev 5:1). No one is found worthy to open it until the Lamb takes it (5:2-7). Read or play Revelation 6:1-8:1 and the seals break one at a time, as the Lamb opens them: the first four at 6:1, 3, 5 and 7 (the four horsemen), the fifth at 6:9, the sixth at 6:12, and the seventh at 8:1, when 'there was silence in heaven for about half an hour'. Elsewhere the buttons under the model show it sealed or opened. The Greek word, biblion, means a scroll here; the codex was only coming into use, and 6:14 likens the sky to 'a scroll being rolled up'. Writing on both sides echoes the scroll handed to Ezekiel, 'written on the front and back' (Ezek 2:10). A roll was normally written on the inside only, and the back was used when the inside was full; Pliny mentions the risk of smudging 'what was written on the back'. Some commentators punctuate 5:1 differently: 'written inside, and sealed on the back'. The text gives no size and does not say how the seals were fixed, so the roll, cords and bullae are reconstructed from documents of the kind, each saying what it rests on in the list under the model. Two kinds are suggested. The first is a legal deed. Jeremiah's deed of purchase had a sealed copy and an open copy (Jer 32:10-14). Samaria Papyrus 1, a slave sale of 335 BC found in the Wadi Daliyeh cave, was still rolled and sealed with seven clay bullae when it was found, each on a cord round the roll. The second is a Roman will. Gaius (2.119) says the praetor would uphold a will sealed with the seals of seven witnesses, and such a will could not be opened until its seals were broken. The seven seals have also been read as a number of completeness, like the book of Revelation's other sevens. The hand is the size reference, a palm one handbreadth across; the One seated on the throne is not drawn.",
+  "kind": "procedural",
+  "procedural": "sealed-scroll",
+  "dimensions": "≈ 24 cm high × ≈ 3.2 cm across, rolled (not given in the text)",
+  "scale": {"metres": 0.01, "at": [0, 0, 0]},
+  "builds": [
+   {"ref": "Rev.5.1", "steps": [{"ref": "Rev.5.1", "parts": ["scroll", "seals"]}]}
+  ],
+  "states": [
+   {
+    "id": "opened",
+    "label": "The seven seals opened",
+    "basis": "the Lamb opens the seals one at a time: the first at 6:1, then the second to sixth at 6:3, 5, 7, 9 and 12, and the seventh at 8:1. The text does not say how a seal was broken; each is drawn cracked in two and its cord cut, as a clay bulla on a cord would be when the document was opened. Most of the Wadi Daliyeh bullae were found with their cords cut (Gurwin, Goren and Lipschits 2015). The text does not say the scroll is unrolled or read, so it is drawn still rolled",
+    "accounts": [
+     {
+      "ref": "Rev.6.1-8.1",
+      "changes": [
+       {"ref": "Rev.6.1", "hides": ["seal-1"], "shows": ["broken-1"]},
+       {"ref": "Rev.6.3", "hides": ["seal-2"], "shows": ["broken-2"]},
+       {"ref": "Rev.6.5", "hides": ["seal-3"], "shows": ["broken-3"]},
+       {"ref": "Rev.6.7", "hides": ["seal-4"], "shows": ["broken-4"]},
+       {"ref": "Rev.6.9", "hides": ["seal-5"], "shows": ["broken-5"]},
+       {"ref": "Rev.6.12", "hides": ["seal-6"], "shows": ["broken-6"]},
+       {"ref": "Rev.8.1", "hides": ["seal-7"], "shows": ["broken-7"]}
+      ]
+     }
+    ]
+   }
+  ],
+  "estimates": {
+   "scroll": "a roll of papyrus, the usual writing material of the time; the text says only biblion, 'a scroll'. Drawn 24 cm high, the 13 digits Pliny gives as the breadth of the best paper (Natural History 13.24); whether Pliny's breadth is the height of the roll is not certain. Rolled ≈ 3.2 cm across, which is not given; the cord loops left on the Wadi Daliyeh bullae show that those documents were rolled very small. The writing on the outside is drawn as schematic lines in two columns, not letters; the writing inside is not seen while the scroll is sealed",
+   "seals": "seven clay bullae, each on a cord tied round the roll, as on Samaria Papyrus 1 (335 BC): a lump of clay pressed on the papyrus, the cord passed round the roll and through it, a second lump pressed over the cord, and a seal ring pressed into the clay (Gurwin, Goren and Lipschits 2015). Drawn ≈ 1.6 cm across, set 3 cm apart along the sheet's outer edge. Their size, spacing and material are not given; Roman documents were more often sealed in wax",
+   "broken-seals": "each bulla cracked across the cord, its halves fallen apart, and the cord cut. How the Lamb breaks them is not described"
+  },
+  "sources": [
+   {"kind": "scripture", "ref": "Rev.5.1-9", "note": "a scroll 'with writing on both sides… sealed with seven seals' in the right hand of the One seated on the throne; only the Lamb is worthy to open it"},
+   {"kind": "scripture", "ref": "Rev.6.1-8.1", "note": "the Lamb opens the seals one by one at 6:1, 3, 5, 7, 9, 12 and 8:1"},
+   {"kind": "scripture", "ref": "Ezek.2.9-10", "note": "a scroll 'written on the front and back'"},
+   {"kind": "scripture", "ref": "Jer.32.9-15", "note": "Jeremiah's deed of purchase, signed and sealed before witnesses, with a sealed copy and an open copy"},
+   {"kind": "scripture", "ref": "Isa.29.11", "note": "'like the words sealed in a scroll… I cannot, because it is sealed'"},
+   {"kind": "scripture", "ref": "Dan.12.4", "note": "'shut up these words and seal the book until the time of the end'; compare Rev 22:10"},
+   {"kind": "lexicon", "title": "Strong's G975 biblion, G3694 opisthen, G2696 katasphragizō", "note": "'a roll'; 'at the back'; 'to seal closely'"},
+   {"kind": "primary", "title": "Gaius, Institutes 2.119", "url": "https://www.thelatinlibrary.com/gaius2.html", "note": "'si septem signis testium signatum sit testamentum': the praetor grants possession to the heirs named in a will sealed with the seals of seven witnesses"},
+   {"kind": "primary", "title": "Pliny, Natural History 13.24 (§§ 78-79)", "url": "https://en.wikisource.org/wiki/Natural_History_(Rackham,_Jones,_%26_Eichholz)/Book_13", "note": "the breadths of the grades of papyrus paper, the best 13 digits; thin paper let 'what was written on the back' show through and smudge"},
+   {"kind": "archaeology", "title": "Structural, Technical and Petrographic Analysis of Bullae from the Samaria Papyri", "author": "Shira Gurwin, Yuval Goren and Oded Lipschits", "year": 2015, "url": "https://doi.org/10.1179/0334435515Z.00000000045", "note": "Tel Aviv 42, 89–102; the seven bullae attached to Samaria Papyrus 1 (WD 11), after Gropp 2001; bullae of local clay pressed round a cord that secured the roll, most found with their cords cut; the cord loops show the rolls were very small"},
+   {"kind": "archaeology", "title": "Wadi Daliyeh I: The Wadi Daliyeh Seal Impressions", "author": "Mary Joan Winn Leith", "year": 1997, "note": "Discoveries in the Judaean Desert XXIV; the full publication of the bullae"}
+  ],
+  "confidence": "estimate"
  }
 ]
