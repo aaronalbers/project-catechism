@@ -12,6 +12,7 @@ import { CUBIT_M, FIGURE_M, formatMetres, MAP_FROM_M, scaleReference, type Scale
 import { loadMap } from '@/lib/data';
 import { formatRef, type VerseLoc } from '@/lib/refs';
 import { cardId } from '@/lib/catalog';
+import { IndexLink } from '@/components/IndexView';
 import { activeParts, cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, MODEL_FOV, partsShown, type CutHow } from '@/lib/models/view';
 
 /**
@@ -450,7 +451,7 @@ export function ModelsPanel() {
   }, [lead]);
   return (
     <div className="panel-body">
-      {list.length === 0 && <div className="empty"><p>No models for this chapter yet.</p><small>Register one in <code>content/models.json</code> — procedural (code) or glTF with attribution.</small></div>}
+      {list.length === 0 && <div className="empty"><p>No models for this chapter yet.</p><IndexLink section="models" /><small>Register one in <code>content/models.json</code> — procedural (code) or glTF with attribution.</small></div>}
       {list.map((m) => <ModelCard key={m.id} m={m} loc={loc} />)}
     </div>
   );

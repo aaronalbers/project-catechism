@@ -88,3 +88,12 @@ export function IndexView() {
   );
 }
 
+
+/** A link to one section of the index, for a panel with nothing in this chapter. */
+export function IndexLink({ section }: { section: string }) {
+  const s = CATALOG.find((c) => c.id === section);
+  if (!s) return null;
+  // "Insights" → "insights", but "3D models" keeps its capitals.
+  const title = /^.[a-z]/.test(s.title) ? s.title[0].toLowerCase() + s.title.slice(1) : s.title;
+  return <p><a href={`#/index/${s.id}`}>Browse all {s.entries.length} {title} in the index</a></p>;
+}

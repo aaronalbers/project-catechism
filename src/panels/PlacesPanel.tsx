@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import L from 'leaflet';
 import { goTo, useStore } from '@/app/store';
 import { SourceList } from '@/components/SourceList';
+import { IndexLink } from '@/components/IndexView';
 import { journeysInChapter } from '@/lib/content';
 import { loadPlaces, loadPlacesForBook } from '@/lib/data';
 import { partialPath, resolveRoute, stopAt, type LatLon, type RouteStop } from '@/lib/journey';
@@ -264,7 +265,7 @@ export function PlacesPanel() {
         </>}
         {here.length > 0 && <><div className="panel-title">In this verse</div>{here.map((p) => <PlaceRow key={p.id} p={p} onPick={setActive} />)}</>}
         {chapter.length > 0 && <><div className="panel-title">Elsewhere in this chapter</div>{chapter.map((p) => <PlaceRow key={p.id} p={p} dim onPick={setActive} />)}</>}
-        {here.length + chapter.length === 0 && !journey && <div className="empty"><p>No identifiable places in this chapter.</p></div>}
+        {here.length + chapter.length === 0 && !journey && <div className="empty"><p>No identifiable places in this chapter.</p><IndexLink section="journeys" /></div>}
         <div className="sources"><ol><li><span className="skind">Dataset</span><a href="https://github.com/openbibleinfo/Bible-Geocoding-Data" target="_blank" rel="noreferrer">OpenBible.info Bible Geocoding Data</a> (CC-BY 4.0) — identifications weighed across 70+ atlases and commentaries; confidence shown per place.</li></ol></div>
       </div>
     </div>

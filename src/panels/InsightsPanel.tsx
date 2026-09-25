@@ -4,6 +4,7 @@ import type { Insight } from '@/lib/types';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import { parseRef } from '@/lib/refs';
 import { cardId } from '@/lib/catalog';
+import { IndexLink } from '@/components/IndexView';
 
 const KIND: Record<Insight['kind'], string> = { money: 'Money & wages', culture: 'Cultural context', archaeology: 'Archaeology', history: 'History', geography: 'Geography', word: 'Word study' };
 
@@ -38,6 +39,7 @@ export function InsightsPanel() {
       {here.length === 0 && nearby.length === 0 && (
         <div className="empty">
           <p>No insight cards for this chapter yet.</p>
+          <IndexLink section="insights" />
           <small>Cards live in <code>content/insights/</code>. Each one must cite Scripture, archaeology or a primary source.</small>
         </div>
       )}
