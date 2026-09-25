@@ -41,13 +41,19 @@ export class KokoroEngine implements Engine {
   private pending = new Map<number, { resolve: (a: AudioBuffer) => void; reject: (e: Error) => void }>();
   private cache = new Map<string, Promise<AudioBuffer>>();
   private ctx: AudioContext | null = null;
+  private device: KokoroDevice | null = null;
 
   private audioContext() { return (this.ctx ??= new AudioContext()); }
 
-  private device: KokoroDevice | null = null;
+  /** Ends the worker, failing whatever it was still synthesizing so nothing waits on it forever. */
+  private terminate() {
+    this.worker?.terminate(); this.worker = null; this.ready = null; this.cache.clear();
+    for (const p of this.pending.values()) p.reject(new Error('Voice model unloaded'));
+    this.pending.clear();
+  }
 
   async load(onProgress?: (p: { fraction: number; label: string }) => void, device: KokoroDevice = canUseKokoroGPU() ? 'webgpu' : 'wasm') {
-    if (this.ready && this.device !== device) { this.worker?.terminate(); this.worker = null; this.ready = null; this.cache.clear(); }
+    if (this.ready && this.device !== device) this.terminate();
     if (this.ready) return this.ready;
     this.device = device;
     this.ready = new Promise<void>((resolve, reject) => {
@@ -79,7 +85,7 @@ export class KokoroEngine implements Engine {
       worker.onerror = (e) => reject(new Error(e.message));
       worker.postMessage({ type: 'load', device, dtype: device === 'webgpu' ? 'fp32' : 'q8' } satisfies WorkerIn);
     });
-    this.ready.catch(() => { this.ready = null; this.worker?.terminate(); this.worker = null; });
+    this.ready.catch(() => this.terminate());
     return this.ready;
   }
 
@@ -112,8 +118,9 @@ export class KokoroEngine implements Engine {
       const src = ctx.createBufferSource();
       src.buffer = buffer;
       src.connect(ctx.destination);
-      src.onended = () => resolve();
-      opts.signal.addEventListener('abort', () => { try { src.stop(); } catch { /* already stopped */ } reject(new DOMException('aborted', 'AbortError')); }, { once: true });
+      const onAbort = () => { try { src.stop(); } catch { /* already stopped */ } reject(new DOMException('aborted', 'AbortError')); };
+      src.onended = () => { opts.signal.removeEventListener('abort', onAbort); resolve(); };
+      opts.signal.addEventListener('abort', onAbort, { once: true });
       src.start();
     });
   }
@@ -133,9 +140,11 @@ export class BrowserEngine implements Engine {
       const v = speechSynthesis.getVoices().find((v) => v.name === opts.voice);
       if (v) u.voice = v;
       u.rate = opts.speed;
-      u.onend = () => resolve();
-      u.onerror = (e) => (e.error === 'interrupted' || e.error === 'canceled' ? resolve() : reject(new Error(e.error)));
-      opts.signal.addEventListener('abort', () => { speechSynthesis.cancel(); reject(new DOMException('aborted', 'AbortError')); }, { once: true });
+      const onAbort = () => { speechSynthesis.cancel(); reject(new DOMException('aborted', 'AbortError')); };
+      const done = () => opts.signal.removeEventListener('abort', onAbort);
+      u.onend = () => { done(); resolve(); };
+      u.onerror = (e) => { done(); if (e.error === 'interrupted' || e.error === 'canceled') resolve(); else reject(new Error(e.error)); };
+      opts.signal.addEventListener('abort', onAbort, { once: true });
       speechSynthesis.speak(u);
     });
   }

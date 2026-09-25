@@ -40,6 +40,19 @@ function confidenceLabel(p: Place) {
 const escape = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 const stopName = (s: RouteStop) => (s.estimate ? '≈ ' : '') + s.station.name;
 
+function PlaceRow({ p, dim, onPick }: { p: Place; dim?: boolean; onPick: (id: string) => void }) {
+  return (
+    <div className="place" onClick={() => onPick(p.id)} style={dim ? { opacity: 0.75 } : undefined}>
+      {p.image ? <img src={p.image.url} alt={p.image.description} loading="lazy" title={`${p.image.credit} — ${p.image.license}`} /> : <div className="noimg" />}
+      <div>
+        <div className="name">{p.name} <span className="chip">{p.types.join(', ')}</span></div>
+        <div className="desc">{p.description}</div>
+        <div className="conf">{confidenceLabel(p)} · {p.verses} verse{p.verses === 1 ? '' : 's'}{p.wikidata && <> · <a href={`https://www.wikidata.org/wiki/${p.wikidata}`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>Wikidata</a></>}{p.image && <> · photo: <a href={p.image.creditUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>{p.image.credit}</a> ({p.image.license})</>}</div>
+      </div>
+    </div>
+  );
+}
+
 export function PlacesPanel() {
   const loc = useStore((s) => s.loc);
   const [all, setAll] = useState<Place[]>([]);
@@ -55,8 +68,13 @@ export function PlacesPanel() {
   const wanted = useRef<L.LatLngBounds | null>(null);
   const stageCard = useRef<HTMLDivElement>(null);
 
-  useEffect(() => { loadPlaces().then(setAll); }, []);
-  useEffect(() => { loadPlacesForBook(loc.book).then(setByVerse); }, [loc.book]);
+  useEffect(() => { loadPlaces().then(setAll, () => { /* no place data: the map stays empty */ }); }, []);
+  useEffect(() => {
+    let live = true;
+    setByVerse({});
+    loadPlacesForBook(loc.book).then((b) => live && setByVerse(b));
+    return () => { live = false; };
+  }, [loc.book]);
 
   const placesById = useMemo(() => new Map(all.map((p) => [p.id, p])), [all]);
 
@@ -199,17 +217,6 @@ export function PlacesPanel() {
 
   useEffect(() => { setActive(null); }, [loc.book, loc.chapter, loc.verse]);
 
-  const Row = ({ p, dim }: { p: Place; dim?: boolean }) => (
-    <div className="place" onClick={() => setActive(p.id)} style={dim ? { opacity: 0.75 } : undefined}>
-      {p.image ? <img src={p.image.url} alt={p.image.description} loading="lazy" title={`${p.image.credit} — ${p.image.license}`} /> : <div className="noimg" />}
-      <div>
-        <div className="name">{p.name} <span className="chip">{p.types.join(', ')}</span></div>
-        <div className="desc">{p.description}</div>
-        <div className="conf">{confidenceLabel(p)} · {p.verses} verse{p.verses === 1 ? '' : 's'}{p.wikidata && <> · <a href={`https://www.wikidata.org/wiki/${p.wikidata}`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>Wikidata</a></>}{p.image && <> · photo: <a href={p.image.creditUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>{p.image.credit}</a> ({p.image.license})</>}</div>
-      </div>
-    </div>
-  );
-
   const current = cur >= 0 ? stops[cur] : undefined;
   const border = journey?.kind === 'border';
   const first = current ? stops.findIndex((s) => s.verse === current.verse) : -1;
@@ -255,8 +262,8 @@ export function PlacesPanel() {
           <p className="stage-summary"><span className="badge estimate">estimate</span> {journey.summary}</p>
           <SourceList sources={journey.sources} />
         </>}
-        {here.length > 0 && <><div className="panel-title">In this verse</div>{here.map((p) => <Row key={p.id} p={p} />)}</>}
-        {chapter.length > 0 && <><div className="panel-title">Elsewhere in this chapter</div>{chapter.map((p) => <Row key={p.id} p={p} dim />)}</>}
+        {here.length > 0 && <><div className="panel-title">In this verse</div>{here.map((p) => <PlaceRow key={p.id} p={p} onPick={setActive} />)}</>}
+        {chapter.length > 0 && <><div className="panel-title">Elsewhere in this chapter</div>{chapter.map((p) => <PlaceRow key={p.id} p={p} dim onPick={setActive} />)}</>}
         {here.length + chapter.length === 0 && !journey && <div className="empty"><p>No identifiable places in this chapter.</p></div>}
         <div className="sources"><ol><li><span className="skind">Dataset</span><a href="https://github.com/openbibleinfo/Bible-Geocoding-Data" target="_blank" rel="noreferrer">OpenBible.info Bible Geocoding Data</a> (CC-BY 4.0) — identifications weighed across 70+ atlases and commentaries; confidence shown per place.</li></ol></div>
       </div>

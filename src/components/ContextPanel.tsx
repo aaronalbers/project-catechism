@@ -25,7 +25,7 @@ export function ContextPanel() {
   const tab = useStore((s) => s.tab);
   const loc = useStore((s) => s.loc);
   const open = useStore((s) => s.panelOpen);
-  const counts = useMemo(() => ({
+  const counts = useMemo((): Partial<Record<PanelTab, number>> => ({
     insights: insightsFor(loc).length,
     models: modelsFor(loc).length,
     people: peopleInChapter(loc.book, loc.chapter).length,
@@ -36,7 +36,7 @@ export function ContextPanel() {
     <>
       <div className="tabs" role="tablist">
         {TABS.map((t) => {
-          const n = (counts as Record<string, number>)[t.id];
+          const n = counts[t.id];
           return (
             <button key={t.id} role="tab" className="tab" aria-selected={tab === t.id && open} onClick={() => setState({ tab: t.id, panelOpen: tab === t.id ? !open : true })}>
               {t.label}{n ? <span className="count">{n}</span> : null}

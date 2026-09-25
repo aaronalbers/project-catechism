@@ -3,6 +3,7 @@ import type { Book, Ref } from './types';
 
 export const BOOKS: Book[] = booksJson as Book[];
 const byId = new Map(BOOKS.map((b) => [b.id, b]));
+const indexOf = new Map(BOOKS.map((b, i) => [b.id, i]));
 const byName = new Map(BOOKS.flatMap((b) => [[b.name.toLowerCase(), b], [(b.bsbName ?? b.name).toLowerCase(), b], [b.id.toLowerCase(), b]]));
 
 // Common abbreviations accepted by the "Go to" box, in addition to full names, OSIS ids and unambiguous prefixes.
@@ -17,12 +18,23 @@ const ABBREV: Record<string, string> = {
 };
 
 export function book(id: string): Book | undefined { return byId.get(id); }
+/** A book's position in the canon, or -1 for an unknown id. */
+export function bookIndex(id: string): number { return indexOf.get(id) ?? -1; }
 export function bookByName(name: string): Book | undefined {
   const key = name.trim().toLowerCase().replace(/\.$/, '');
   return byName.get(key) ?? byName.get(key.replace(/^([1-3]) /, '$1')) ?? byId.get(ABBREV[key.replace(/\s+/g, '')] ?? '');
 }
 
 export interface VerseLoc { book: string; chapter: number; verse: number }
+
+/** The most verses any chapter has (Psalm 119). */
+export const LONGEST_CHAPTER = 176;
+/**
+ * The verse a whole-chapter ref ("Matt.1") ends at. Refs are parsed without the Bible's verse counts,
+ * so this only has to be past the last verse of any chapter; it must stay below 1000, the verse's
+ * share of `key`'s ordering.
+ */
+export const CHAPTER_END = 999;
 export interface RefRange { start: VerseLoc; end: VerseLoc }
 
 function parseLoc(s: string, fallback?: VerseLoc): VerseLoc | null {
@@ -37,23 +49,27 @@ function parseLoc(s: string, fallback?: VerseLoc): VerseLoc | null {
   return { book: b.id, chapter: +(parts[1] ?? 1), verse: +(parts[2] ?? 1) };
 }
 
-/** Parses "Matt.1.1", "Matt.1.1-Matt.1.5", "Matt.1.1-5", "Matt.1" (whole chapter). */
+const isWholeChapter = (ref: Ref) => ref.split('-')[0].split('.').length === 2;
+
+/** Parses "Matt.1.1", "Matt.1.1-Matt.1.5", "Matt.1.1-5", "Matt.1" (whole chapter) and "Gen.1-2" (whole chapters). */
 export function parseRef(ref: Ref): RefRange | null {
   const [a, b] = ref.split('-');
   const start = parseLoc(a);
   if (!start) return null;
-  const wholeChapter = a.split('.').length === 2;
-  let end: VerseLoc = wholeChapter ? { ...start, verse: 999 } : start;
-  if (b) end = parseLoc(b, start) ?? end;
-  return { start, end };
+  if (!isWholeChapter(ref)) return { start, end: b ? parseLoc(b, start) ?? start : start };
+  if (!b) return { start, end: { ...start, verse: CHAPTER_END } };
+  // After a whole chapter, a bare number is the last chapter, not a verse ("Gen.1-2"), and so is "Gen.3".
+  const parts = b.split('.');
+  const end = parts.length === 1 ? { ...start, chapter: +b } : parseLoc(b, start) ?? start;
+  const toChapterEnd = parts.length === 1 || (parts.length === 2 && byId.has(parts[0]));
+  return { start, end: toChapterEnd ? { ...end, verse: CHAPTER_END } : end };
 }
 
 export function formatRef(ref: Ref): string {
   const r = parseRef(ref);
   if (!r) return ref;
   const b = byId.get(r.start.book)?.name ?? r.start.book;
-  const wholeChapter = ref.split('-')[0].split('.').length === 2;
-  if (wholeChapter) return `${b} ${r.start.chapter}`;
+  if (isWholeChapter(ref) && r.end.verse === CHAPTER_END && r.end.book === r.start.book) return r.end.chapter === r.start.chapter ? `${b} ${r.start.chapter}` : `${b} ${r.start.chapter}-${r.end.chapter}`;
   const s = `${b} ${r.start.chapter}:${r.start.verse}`;
   if (r.start.book === r.end.book && r.start.chapter === r.end.chapter && r.start.verse === r.end.verse) return s;
   if (r.start.book === r.end.book && r.start.chapter === r.end.chapter) return `${s}-${r.end.verse}`;
@@ -64,8 +80,7 @@ export function formatRef(ref: Ref): string {
 export function toRef(loc: VerseLoc): Ref { return `${loc.book}.${loc.chapter}.${loc.verse}`; }
 
 function key(loc: VerseLoc): number {
-  const bi = BOOKS.findIndex((b) => b.id === loc.book);
-  return bi * 1_000_000 + loc.chapter * 1000 + loc.verse;
+  return bookIndex(loc.book) * 1_000_000 + loc.chapter * 1000 + loc.verse;
 }
 
 /** Orders two verses by canonical position: negative if `a` comes first. */
@@ -83,7 +98,7 @@ export function touchesChapter(ref: Ref, bookId: string, chapter: number): boole
   const r = parseRef(ref);
   if (!r) return false;
   const a = key({ book: bookId, chapter, verse: 0 });
-  const b = key({ book: bookId, chapter, verse: 999 });
+  const b = key({ book: bookId, chapter, verse: CHAPTER_END });
   return key(r.start) <= b && key(r.end) >= a;
 }
 

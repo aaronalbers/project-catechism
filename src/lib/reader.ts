@@ -2,9 +2,10 @@
 // panel follows the reading, like the old BroadcastChannel setup but in-process.
 import { useSyncExternalStore } from 'react';
 import { BrowserEngine, KokoroEngine, canUseKokoroGPU, type Engine, type KokoroDevice } from './tts';
-import { loadBook } from './data';
-import { BOOKS, type VerseLoc } from './refs';
+import { loadBook, loadVerseText } from './data';
+import { BOOKS, bookIndex, type VerseLoc } from './refs';
 import { getState, setState } from '@/app/store';
+import { readStored, writeStored } from './storage';
 
 export interface ReaderState {
   status: 'idle' | 'loading' | 'playing' | 'paused' | 'error';
@@ -19,14 +20,13 @@ export interface ReaderState {
   continuous: boolean;
 }
 
-const stored = <T,>(k: string, d: T): T => { try { const v = localStorage.getItem(k); return v ? (JSON.parse(v) as T) : d; } catch { return d; } };
 let rs: ReaderState = {
-  status: 'idle', engine: stored('tts.engine', 'kokoro'), device: canUseKokoroGPU() ? stored<KokoroDevice>('tts.device', 'webgpu') : 'wasm', voice: stored('tts.voice', 'bm_george'), speed: stored('tts.speed', 1), progress: null, error: null, continuous: true,
+  status: 'idle', engine: readStored<ReaderState['engine']>('tts.engine', 'kokoro'), device: canUseKokoroGPU() ? readStored<KokoroDevice>('tts.device', 'webgpu') : 'wasm', voice: readStored('tts.voice', 'bm_george'), speed: readStored('tts.speed', 1), progress: null, error: null, continuous: true,
 };
 const listeners = new Set<() => void>();
 function set(p: Partial<ReaderState>) {
   rs = { ...rs, ...p };
-  for (const k of ['engine', 'device', 'voice', 'speed'] as const) if (k in p) try { localStorage.setItem(`tts.${k}`, JSON.stringify(rs[k])); } catch { /* ignore */ }
+  for (const k of ['engine', 'device', 'voice', 'speed'] as const) if (k in p) writeStored(`tts.${k}`, rs[k]);
   for (const l of listeners) l();
 }
 export function useReader() { return useSyncExternalStore((cb) => { listeners.add(cb); return () => listeners.delete(cb); }, () => rs, () => rs); }
@@ -40,18 +40,16 @@ export async function nextVerse(loc: VerseLoc): Promise<VerseLoc | null> {
   const idx = chapter.findIndex((v) => v.v === loc.verse);
   if (idx >= 0 && idx + 1 < chapter.length) return { ...loc, verse: chapter[idx + 1].v };
   if (loc.chapter < book.chapters.length) return { book: loc.book, chapter: loc.chapter + 1, verse: book.chapters[loc.chapter][0]?.v ?? 1 };
-  const bi = BOOKS.findIndex((b) => b.id === loc.book);
+  const bi = bookIndex(loc.book);
   if (bi + 1 < BOOKS.length) return { book: BOOKS[bi + 1].id, chapter: 1, verse: 1 };
   return null;
 }
 
-async function verseText(loc: VerseLoc) {
-  const book = await loadBook(loc.book);
-  return book.chapters[loc.chapter - 1]?.find((v) => v.v === loc.verse)?.t ?? '';
-}
+/** A verse's text as it is spoken: its whitespace collapsed, and empty for a verse the BSB omits. */
+const verseText = async (loc: VerseLoc) => (await loadVerseText(loc.book, loc.chapter, loc.verse) ?? '').replace(/\s+/g, ' ').trim();
 
-/** Numbers read as "verse 3" would be noise; strip bracketed footnote markers etc. */
-const clean = (t: string) => t.replace(/\s+/g, ' ').trim();
+/** Whether reading goes on from `loc` to `next`: always when continuous, otherwise only within the chapter. */
+const readsOn = (loc: VerseLoc, next: VerseLoc) => rs.continuous || (next.book === loc.book && next.chapter === loc.chapter);
 
 export async function play(from?: VerseLoc) {
   stop();
@@ -70,18 +68,20 @@ export async function play(from?: VerseLoc) {
     set({ status: 'error', error: e instanceof Error ? e.message : String(e) });
     return;
   }
+  // Stopped, or replaced by another play, while the engine loaded.
+  if (ctl.signal.aborted) return;
   set({ progress: null });
   let loc = from ?? getState().loc;
   setState({ loc, playing: true });
   try {
     while (!ctl.signal.aborted) {
-      const text = clean(await verseText(loc));
+      const text = await verseText(loc);
       const next = await nextVerse(loc);
-      if (next && (rs.continuous || next.chapter === loc.chapter)) void verseText(next).then((t) => engine.prefetch(clean(t), { voice: rs.voice, speed: rs.speed }));
+      if (next && readsOn(loc, next)) void verseText(next).then((t) => engine.prefetch(t, { voice: rs.voice, speed: rs.speed }));
       set({ status: 'playing' });
       if (text) await engine.speak(text, { voice: rs.voice, speed: rs.speed, signal: ctl.signal });
       if (ctl.signal.aborted) break;
-      if (!next || (!rs.continuous && next.chapter !== loc.chapter)) break;
+      if (!next || !readsOn(loc, next)) break;
       loc = next;
       setState({ loc, wordIndex: null });
     }
@@ -100,14 +100,16 @@ export function stop() {
   if (getState().playing) setState({ playing: false });
 }
 
-export function setEngine(engine: ReaderState['engine']) {
-  const wasPlaying = rs.status === 'playing' || rs.status === 'loading';
+/** Changes a playback setting, restarting the reading from the current verse if it was under way. */
+function restartWith(p: Partial<ReaderState>) {
+  const was = rs.status === 'playing' || rs.status === 'loading';
   stop();
-  set({ engine, voice: engine === 'kokoro' ? 'bm_george' : 'default', error: null });
-  if (wasPlaying) void play();
+  set(p);
+  if (was) void play();
 }
-export function setDevice(device: KokoroDevice) { const was = rs.status === 'playing' || rs.status === 'loading'; stop(); set({ device, error: null }); if (was) void play(); }
-export function setVoice(voice: string) { const was = rs.status === 'playing'; stop(); set({ voice }); if (was) void play(); }
-export function setSpeed(speed: number) { const was = rs.status === 'playing'; stop(); set({ speed }); if (was) void play(); }
+export function setEngine(engine: ReaderState['engine']) { restartWith({ engine, voice: engine === 'kokoro' ? 'bm_george' : 'default', error: null }); }
+export function setDevice(device: KokoroDevice) { restartWith({ device, error: null }); }
+export function setVoice(voice: string) { restartWith({ voice }); }
+export function setSpeed(speed: number) { restartWith({ speed }); }
 export function setContinuous(continuous: boolean) { set({ continuous }); }
 export function voicesFor(engine: ReaderState['engine']) { return engines[engine].voices(); }

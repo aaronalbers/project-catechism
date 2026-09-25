@@ -1,6 +1,6 @@
 // Curated content lives in /content as JSON and is bundled at build time.
 import type { Chiasm, Fragment, Insight, Journey, Model3D, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, Prophecy, Quote, Ruler, Speaker, Video, VideoKind, Writer } from './types';
-import { compareLoc, contains, parseRef, touchesChapter, type VerseLoc } from './refs';
+import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
 export const INSIGHTS: Insight[] = Object.values(insightFiles).flatMap((m) => m.default);
@@ -97,12 +97,12 @@ export function modelLeadAt(loc: VerseLoc): Model3D | null {
   }
   return lead;
 }
-/** The camera's angle while a passage is building or changing a model that sets none: in front, a little to the right, and above. */
 /** What each estimated part rests on, as `reading` draws it (the model's first reading when none is given). */
 export function modelEstimates(m: Model3D, reading?: string): Record<string, string> {
   const r = m.readings?.find((x) => x.id === reading) ?? m.readings?.[0];
   return { ...m.estimates, ...r?.estimates };
 }
+/** The camera's angle while a passage is building or changing a model that sets none: in front, a little to the right, and above. */
 export const DEFAULT_MODEL_VIEW: ModelAngle = [30, 25];
 /**
  * Where the camera looks from at `loc`: while a build is read, or the state `stateId` is read in one
@@ -140,7 +140,7 @@ function spanSize(ref: string) {
   const r = parseRef(ref);
   if (!r) return Infinity;
   if (r.start.book !== r.end.book) return 1e6;
-  return (r.end.chapter - r.start.chapter) * 40 + Math.min(r.end.verse, 200) - r.start.verse;
+  return (r.end.chapter - r.start.chapter) * 40 + Math.min(r.end.verse, LONGEST_CHAPTER) - r.start.verse;
 }
 const KIND_RANK: Partial<Record<VideoKind, number>> = { short: 1, podcast: 2, remix: 3 };
 
@@ -168,14 +168,17 @@ export const VIDEO_SERIES: { series: string; videos: Video[] }[] = (() => {
 /** Verse numbers in a chapter that have any curated content, for the reader's margin markers. */
 export function markersForChapter(book: string, chapter: number): Map<number, Set<string>> {
   const map = new Map<number, Set<string>>();
-  const add = (v: number, kind: string) => { if (!map.has(v)) map.set(v, new Set()); map.get(v)!.add(kind); };
-  for (let v = 1; v <= 200; v++) {
+  const here = (refs: string[]) => refs.filter((r) => touchesChapter(r, book, chapter));
+  const kinds: [string, string[]][] = [
+    ['insight', here(INSIGHTS.flatMap((i) => i.verses))],
+    ['model', here(MODELS.flatMap((m) => m.verses))],
+    ['prophecy', here(PROPHECIES.flatMap((p) => [p.given, ...p.fulfilled]))],
+    ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
+    ['chiasm', here(CHIASMS.map((c) => c.ref))],
+  ];
+  for (let v = 1; v <= LONGEST_CHAPTER; v++) {
     const loc = { book, chapter, verse: v };
-    if (INSIGHTS.some((i) => anyContains(i.verses, loc))) add(v, 'insight');
-    if (MODELS.some((m) => anyContains(m.verses, loc))) add(v, 'model');
-    if (PROPHECIES.some((p) => contains(p.given, loc) || anyContains(p.fulfilled, loc))) add(v, 'prophecy');
-    if (QUOTES.some((q) => contains(q.quoting, loc) || contains(q.quoted, loc))) add(v, 'quote');
-    if (CHIASMS.some((c) => contains(c.ref, loc))) add(v, 'chiasm');
+    for (const [kind, refs] of kinds) if (anyContains(refs, loc)) { if (!map.has(v)) map.set(v, new Set()); map.get(v)!.add(kind); }
   }
   return map;
 }

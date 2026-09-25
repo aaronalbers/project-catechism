@@ -2,8 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, useStore } from '@/app/store';
 import { PROPHECIES, QUOTES } from '@/lib/content';
 import { loadCircle } from '@/lib/data';
+import { readStored, writeStored } from '@/lib/storage';
 import { buildCanon, refIndex, type Canon, type CircleData } from '@/lib/circle';
-import { BOOKS, formatRef, parseRef, toRef, touchesChapter } from '@/lib/refs';
+import { book, formatRef, parseRef, toRef, touchesChapter } from '@/lib/refs';
 
 type Kind = 'prophecy' | 'quote' | 'xref';
 /** One line across the circle. `a` and `b` are running verse indices; curated chords keep their refs, cross references derive them. */
@@ -18,7 +19,7 @@ const KIND_NAME: Record<Kind, string> = { prophecy: 'Prophecy', quote: 'Quotatio
 
 interface Filters { prophecy: boolean; quote: boolean; xref: boolean; minVotes: number; chapterOnly: boolean }
 const DEFAULT_FILTERS: Filters = { prophecy: true, quote: true, xref: true, minVotes: 100, chapterOnly: false };
-const loadFilters = (): Filters => { try { return { ...DEFAULT_FILTERS, ...JSON.parse(localStorage.getItem('circle') ?? '{}') }; } catch { return DEFAULT_FILTERS; } };
+const loadFilters = (): Filters => ({ ...DEFAULT_FILTERS, ...readStored<Partial<Filters>>('circle', {}) });
 
 // Cross references are batched by vote count so thousands of chords stroke as a handful of paths.
 const XREF_BUCKETS = [{ min: 0, alpha: 0.06, width: 0.6 }, { min: 80, alpha: 0.1, width: 0.7 }, { min: 160, alpha: 0.18, width: 0.9 }, { min: 300, alpha: 0.3, width: 1 }];
@@ -44,7 +45,7 @@ export function LinkCircle() {
   const canon = useMemo(() => data && buildCanon(data.chapters), [data]);
 
   const [filters, setFilters] = useState(loadFilters);
-  const setF = (p: Partial<Filters>) => setFilters((f) => { const n = { ...f, ...p }; try { localStorage.setItem('circle', JSON.stringify(n)); } catch { /* private mode */ } return n; });
+  const setF = (p: Partial<Filters>) => setFilters((f) => { const n = { ...f, ...p }; writeStored('circle', n); return n; });
 
   const chords = useMemo(() => (canon && data ? allChords(canon, data) : []), [canon, data]);
   const chapter = canon?.chapterRange(loc.book, loc.chapter);
@@ -162,7 +163,7 @@ export function LinkCircle() {
         <label title="OpenBible.info reader votes a cross reference needs to be drawn">
           Min. votes <input type="range" min={data?.minVotes ?? 20} max={400} step={10} value={filters.minVotes} disabled={!filters.xref} onChange={(e) => setF({ minVotes: +e.target.value })} /> <span className="n">{filters.minVotes}</span>
         </label>
-        <label><input type="checkbox" checked={filters.chapterOnly} onChange={(e) => setF({ chapterOnly: e.target.checked })} /> Only {BOOKS.find((b) => b.id === loc.book)?.name} {loc.chapter}</label>
+        <label><input type="checkbox" checked={filters.chapterOnly} onChange={(e) => setF({ chapterOnly: e.target.checked })} /> Only {book(loc.book)?.name} {loc.chapter}</label>
       </div>
       <div className="circle-wrap" ref={wrap}>
         {!canon ? <div className="loading">Loading…</div> : <div className="circle-stage" style={{ width: size, height: size }}>

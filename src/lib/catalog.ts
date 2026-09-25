@@ -1,6 +1,6 @@
 import type { PanelTab, Reveal } from '@/app/store';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PROPHECIES, QUOTES } from './content';
-import { BOOKS, compareLoc, contains, formatRef, parseRef } from './refs';
+import { BOOKS, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
 /**
@@ -117,7 +117,7 @@ export function chaptersOf(ref: Ref): { book: string; chapter: number }[] {
   const r = parseRef(ref);
   if (!r) return [];
   const out: { book: string; chapter: number }[] = [];
-  const first = BOOKS.findIndex((b) => b.id === r.start.book), last = BOOKS.findIndex((b) => b.id === r.end.book);
+  const first = bookIndex(r.start.book), last = bookIndex(r.end.book);
   for (let bi = first; bi <= last; bi++) {
     const b = BOOKS[bi];
     const from = bi === first ? r.start.chapter : 1, to = bi === last ? Math.min(r.end.chapter, b.chapters) : b.chapters;

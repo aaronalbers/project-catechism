@@ -1,9 +1,10 @@
 // Downloads the public-domain / CC-BY source datasets into .cache/.
 // Run once (`npm run data:fetch`), then `npm run data` to build public/data/.
-import { mkdir, stat, writeFile } from 'node:fs/promises';
+import { mkdir, rename, rm, stat, writeFile } from 'node:fs/promises';
 import { pipeline } from 'node:stream/promises';
 import { createWriteStream } from 'node:fs';
 import { Readable } from 'node:stream';
+import { pathToFileURL } from 'node:url';
 
 export const CACHE = new URL('../.cache/', import.meta.url);
 
@@ -41,11 +42,18 @@ export async function fetchAll() {
     console.log('fetch  ', name, '<-', url);
     const res = await fetch(url);
     if (!res.ok || !res.body) throw new Error(`${url}: HTTP ${res.status}`);
-    await pipeline(Readable.fromWeb(res.body), createWriteStream(dest));
+    // Downloaded beside its name and moved into place whole, so an interrupted run isn't taken as cached.
+    const part = new URL(`${name}.part`, CACHE);
+    try {
+      await pipeline(Readable.fromWeb(res.body), createWriteStream(part));
+      await rename(part, dest);
+    } finally {
+      await rm(part, { force: true });
+    }
   }
   await writeFile(new URL('SOURCES.json', CACHE), JSON.stringify(SOURCES, null, 2));
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   fetchAll().catch((e) => { console.error(e); process.exit(1); });
 }

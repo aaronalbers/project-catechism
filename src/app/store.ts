@@ -1,5 +1,6 @@
 import { useEffect, useSyncExternalStore } from 'react';
-import { hashFromLoc, locFromHash, type VerseLoc } from '@/lib/refs';
+import { hashFromLoc, locFromHash, sameLoc, type VerseLoc } from '@/lib/refs';
+import { readStored, writeStored } from '@/lib/storage';
 
 export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos';
 export type Theme = 'system' | 'light' | 'dark';
@@ -29,14 +30,12 @@ function indexFromHash(hash: string): string | null {
 }
 const hashFromIndex = (section: string) => `#/index${section ? `/${section}` : ''}`;
 
-const stored = <T,>(k: string, d: T): T => { try { const v = localStorage.getItem(k); return v ? (JSON.parse(v) as T) : d; } catch { return d; } };
-
 let state: State = {
-  loc: locFromHash(location.hash) ?? stored('loc', { book: 'Matt', chapter: 1, verse: 1 }),
+  loc: locFromHash(location.hash) ?? readStored<VerseLoc>('loc', { book: 'Matt', chapter: 1, verse: 1 }),
   wordIndex: null,
-  tab: stored('tab', 'insights'),
+  tab: readStored<PanelTab>('tab', 'insights'),
   panelOpen: true,
-  theme: stored('theme', 'system'),
+  theme: readStored<Theme>('theme', 'system'),
   playing: false,
   index: indexFromHash(location.hash),
   reveal: null,
@@ -49,15 +48,15 @@ function emit() { for (const l of listeners) l(); }
 export function setState(patch: Partial<State> | ((s: State) => Partial<State>)) {
   const p = typeof patch === 'function' ? patch(state) : patch;
   state = { ...state, ...p };
-  if (p.loc) try { localStorage.setItem('loc', JSON.stringify(state.loc)); } catch { /* private mode */ }
+  if (p.loc) writeStored('loc', state.loc);
   if (p.loc || p.index !== undefined) {
     const h = state.index !== null ? hashFromIndex(state.index) : hashFromLoc(state.loc);
     // Opening the index adds a history entry, so Back returns to the verse.
     const opening = state.index !== null && indexFromHash(location.hash) === null;
     if (location.hash !== h) history[opening ? 'pushState' : 'replaceState'](null, '', h);
   }
-  if (p.tab) try { localStorage.setItem('tab', JSON.stringify(state.tab)); } catch { /* ignore */ }
-  if (p.theme) try { localStorage.setItem('theme', JSON.stringify(state.theme)); } catch { /* ignore */ }
+  if (p.tab) writeStored('tab', state.tab);
+  if (p.theme) writeStored('theme', state.theme);
   emit();
 }
 
@@ -68,8 +67,9 @@ export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab; reveal?: Reveal;
 function fromHash() {
   const index = indexFromHash(location.hash);
   if (index !== null) { if (index !== state.index) setState({ index }); return; }
+  // Back fires both events; the second finds the verse already set.
   const loc = locFromHash(location.hash);
-  if (loc) setState({ loc, wordIndex: null, index: null });
+  if (loc && (state.index !== null || !sameLoc(loc, state.loc))) goTo(loc);
 }
 window.addEventListener('hashchange', fromHash);
 window.addEventListener('popstate', fromHash);

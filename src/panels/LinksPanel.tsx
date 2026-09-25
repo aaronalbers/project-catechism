@@ -7,6 +7,9 @@ import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/So
 import type { Xrefs } from '@/lib/types';
 import { LinkCircle } from './LinkCircle';
 import { label } from '@/components/Chiasm';
+import { depth } from '@/lib/chiasm';
+import { cardId } from '@/lib/catalog';
+import { formatYear } from '@/lib/format';
 
 function XrefRow({ to, votes }: { to: string; votes: number }) {
   const [text, setText] = useState('');
@@ -21,12 +24,17 @@ function XrefRow({ to, votes }: { to: string; votes: number }) {
   );
 }
 
-const fmtYear = (y: number, est?: boolean) => <>{est && <span className="est" title="Estimated">≈</span>}{y < 0 ? `${-y} BC` : `AD ${y}`}</>;
+const fmtYear = (y: number, est?: boolean) => <>{est && <span className="est" title="Estimated">≈</span>}{formatYear(y)}</>;
 
 export function LinksPanel() {
   const loc = useStore((s) => s.loc);
   const [xrefs, setXrefs] = useState<Xrefs>({});
-  useEffect(() => { loadXrefs(loc.book).then(setXrefs); }, [loc.book]);
+  useEffect(() => {
+    let live = true;
+    setXrefs({});
+    loadXrefs(loc.book).then((x) => live && setXrefs(x));
+    return () => { live = false; };
+  }, [loc.book]);
   const refs = (xrefs[`${loc.chapter}.${loc.verse}`] ?? []).slice(0, 12);
   const prophecies = propheciesFor(loc);
   const quotes = quotesFor(loc);
@@ -47,7 +55,7 @@ export function LinksPanel() {
       {prophecies.length > 0 && <>
         <div className="panel-title">Prophecy</div>
         {prophecies.map(({ p, role }) => (
-          <div className="card" key={p.id} id={`prophecy-${p.id}`}>
+          <div className="card" key={p.id} id={cardId({ kind: 'prophecy', id: p.id })}>
             <h3><span style={{ flex: 1 }}>{p.title}</span><ConfidenceBadge c={p.confidence} /></h3>
             <p className="summary">{p.summary}</p>
             <div className="verses"><span className="badge kind">{role === 'given' ? 'Given here' : 'Fulfilled here'}</span>
@@ -59,7 +67,7 @@ export function LinksPanel() {
       {quotes.length > 0 && <>
         <div className="panel-title">Quotations</div>
         {quotes.map(({ q, role }) => (
-          <div className="card" key={q.id} id={`quote-${q.id}`}>
+          <div className="card" key={q.id} id={cardId({ kind: 'quote', id: q.id })}>
             <p className="summary">{q.summary}</p>
             <div className="verses"><span className="badge kind">{role === 'quoting' ? 'Quotes' : 'Quoted by'}</span><RefChip r={role === 'quoting' ? q.quoted : q.quoting} /></div>
             {q.sources && <SourceList sources={q.sources} />}
@@ -69,11 +77,11 @@ export function LinksPanel() {
       {chiasms.length > 0 && <>
         <div className="panel-title">Chiastic structure</div>
         {chiasms.map((c) => (
-          <div className="card chiasm" key={c.id} id={`chiasm-${c.id}`}>
+          <div className="card chiasm" key={c.id} id={cardId({ kind: 'chiasm', id: c.id })}>
             <h3><span style={{ flex: 1 }}>{c.title}</span><ConfidenceBadge c={c.confidence} /></h3>
             <p className="summary">{c.summary}</p>
             {c.levels.map((l, i) => (
-              <div className={`level${l.label === c.centre ? ' centre' : ''}`} key={i} style={{ paddingLeft: `${Math.min(6, Math.abs(c.levels.length / 2 - Math.abs(c.levels.length / 2 - i))) * 8}px` }}>
+              <div className={`level${l.label === c.centre ? ' centre' : ''}`} key={i} style={{ paddingLeft: `${Math.min(6, depth(c, i)) * 8}px` }}>
                 <span className="lbl">{label(l.label)}</span>
                 <div><div className="txt">{l.text}</div><button className="ref chip link" onClick={() => { const r = parseRef(l.ref); if (r) goTo(r.start); }}>{formatRef(l.ref)}</button></div>
               </div>
@@ -85,7 +93,7 @@ export function LinksPanel() {
       {fragments.length > 0 && <>
         <div className="panel-title">Earliest manuscript witnesses</div>
         {fragments.map((f) => (
-          <div className="card" key={f.id} id={`fragment-${f.id}`}>
+          <div className="card" key={f.id} id={cardId({ kind: 'fragment', id: f.id })}>
             <h3><span style={{ flex: 1 }}>{f.siglum} — {f.name}</span><ConfidenceBadge c="evidence" /></h3>
             <div className="verses"><span className="badge kind">{f.date}</span><span className="chip">{f.held}</span></div>
             <p className="summary">{f.summary}</p>

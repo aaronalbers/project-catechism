@@ -1,7 +1,7 @@
 // Geometry for the whole-Bible link circle: every verse has a place on the circumference, in
 // canonical order clockwise from the top, with a small gap between books and a wider one
 // between the testaments.
-import { BOOKS, parseRef, type VerseLoc } from './refs';
+import { book, parseRef, type VerseLoc } from './refs';
 import type { Ref } from './types';
 
 /** public/data/circle.json: chapters = [bookId, verse count per chapter][], xrefs = flat [a, b, votes] running verse indices. */
@@ -24,7 +24,6 @@ export interface Canon {
 }
 
 export function buildCanon(chapters: CircleData['chapters']): Canon {
-  const ntStart = BOOKS.findIndex((b) => b.testament === 'NT');
   const books: Canon['books'] = [];
   const chStart = new Map<string, number[]>(); // book -> running index of each chapter's first verse, plus one past the end
   let n = 0;
@@ -32,7 +31,7 @@ export function buildCanon(chapters: CircleData['chapters']): Canon {
     const starts = [n];
     for (const c of counts) starts.push((n += c ?? 0));
     chStart.set(id, starts);
-    books.push({ id, start: starts[0], end: n, nt: BOOKS.findIndex((b) => b.id === id) >= ntStart });
+    books.push({ id, start: starts[0], end: n, nt: book(id)?.testament === 'NT' });
   }
   // Positions along the circle in verse-widths, gaps included; half the testament gap sits at the top.
   const offset = books.map((b, i) => TESTAMENT_GAP / 2 + i * BOOK_GAP + (b.nt ? TESTAMENT_GAP : 0));

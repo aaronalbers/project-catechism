@@ -3,12 +3,13 @@ import { INSIGHT_BY_ID, insightsFor, insightsInChapter } from '@/lib/content';
 import type { Insight } from '@/lib/types';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import { parseRef } from '@/lib/refs';
+import { cardId } from '@/lib/catalog';
 
 const KIND: Record<Insight['kind'], string> = { money: 'Money & wages', culture: 'Cultural context', archaeology: 'Archaeology', history: 'History', geography: 'Geography', word: 'Word study' };
 
 export function InsightCard({ i, compact = false }: { i: Insight; compact?: boolean }) {
   return (
-    <div className="card" id={`insight-${i.id}`}>
+    <div className="card" id={cardId({ kind: 'insight', id: i.id })}>
       <h3><span style={{ flex: 1 }}>{i.title}</span><ConfidenceBadge c={i.confidence} /></h3>
       <div className="verses"><span className="badge kind">{KIND[i.kind]}</span>{i.verses.map((r) => <RefChip key={r} r={r} />)}</div>
       <p className="summary">{i.summary}</p>
@@ -20,7 +21,7 @@ export function InsightCard({ i, compact = false }: { i: Insight; compact?: bool
           const rel = INSIGHT_BY_ID.get(id);
           if (!rel) return null;
           const first = parseRef(rel.verses[0]);
-          return <button key={id} className="chip link" onClick={() => first && goTo(first.start, { openTab: 'insights', feature: `insight-${id}` })}>{rel.title}</button>;
+          return <button key={id} className="chip link" onClick={() => first && goTo(first.start, { openTab: 'insights', feature: cardId({ kind: 'insight', id }) })}>{rel.title}</button>;
         })}</div> : null}
       </>}
     </div>

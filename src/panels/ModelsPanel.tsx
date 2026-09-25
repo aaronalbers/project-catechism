@@ -11,6 +11,7 @@ import { buildProcedural } from '@/lib/models';
 import { CUBIT_M, FIGURE_M, formatMetres, MAP_FROM_M, scaleReference, type ScaleKind, type ScaleReference } from '@/lib/models/scale';
 import { loadMap } from '@/lib/data';
 import { formatRef, type VerseLoc } from '@/lib/refs';
+import { cardId } from '@/lib/catalog';
 import { activeParts, cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, MODEL_FOV, partsShown, type CutHow } from '@/lib/models/view';
 
 /**
@@ -335,7 +336,7 @@ function ModelCard({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   const [readingId, setReadingId] = useState(m.readings?.[0]?.id);
   const estimates = modelEstimates(m, readingId);
   return (
-    <div className="card" id={`model-${m.id}`}>
+    <div className="card" id={cardId({ kind: 'model', id: m.id })}>
       <h3><span style={{ flex: 1 }}>{m.title}</span><ConfidenceBadge c={m.confidence} /></h3>
       <div className="verses">{m.dimensions && <span className="badge kind">{m.dimensions}</span>}{m.verses.map((r) => <RefChip key={r} r={r} />)}</div>
       <ModelView m={m} loc={loc} readingId={readingId} />
@@ -444,7 +445,7 @@ export function ModelsPanel() {
   // it jumps, as useFeatureInView does, since the reader's smooth scroll to the verse would cancel a glide.
   const lead = modelLeadAt(loc)?.id ?? null, shown = useRef(lead);
   useEffect(() => {
-    if (lead && lead !== shown.current) document.getElementById(`model-${lead}`)?.scrollIntoView({ block: 'start', behavior: 'instant' });
+    if (lead && lead !== shown.current) document.getElementById(cardId({ kind: 'model', id: lead }))?.scrollIntoView({ block: 'start', behavior: 'instant' });
     shown.current = lead;
   }, [lead]);
   return (

@@ -3,9 +3,10 @@ import { goTo, setState, useStore } from '@/app/store';
 import { loadBook, loadInterlinear } from '@/lib/data';
 import { CHIASMS, markersForChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
-import { BOOKS, book, contains, parseRef, touchesChapter } from '@/lib/refs';
+import { BOOKS, book, bookIndex, contains, parseRef, touchesChapter } from '@/lib/refs';
 import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
 import { alignVerse, tokenize } from '@/lib/align';
+import { readStored, writeStored } from '@/lib/storage';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
@@ -36,15 +37,18 @@ function VerseText({ text, verse, current, il, ladder }: { text: string; verse: 
 }
 
 function useStoredFlag(key: string, initial: boolean): [boolean, (to?: boolean) => void] {
-  const [v, setV] = useState(() => { try { const s = localStorage.getItem(key); return s === null ? initial : s === 'true'; } catch { return initial; } });
-  return [v, (to) => setV((x) => { const y = to ?? !x; try { localStorage.setItem(key, String(y)); } catch { /* private mode */ } return y; })];
+  const [v, setV] = useState(() => readStored(key, initial));
+  return [v, (to) => setV((x) => { const y = to ?? !x; writeStored(key, y); return y; })];
 }
 
 export function Reader() {
   const loc = useStore((s) => s.loc);
   const playing = useStore((s) => s.playing);
   const [data, setData] = useState<BibleBook | null>(null);
-  const [il, setIl] = useState<InterlinearVerse[] | null>(null);
+  // Tagged with its chapter, so the render after a chapter change never uses the last chapter's words.
+  const [loaded, setLoaded] = useState<{ key: string; verses: InterlinearVerse[] } | null>(null);
+  const chapterKey = `${loc.book}.${loc.chapter}`;
+  const il = loaded?.key === chapterKey ? loaded.verses : null;
   const [error, setError] = useState<string | null>(null);
   const b = book(loc.book);
 
@@ -52,10 +56,9 @@ export function Reader() {
     let live = true;
     setError(null);
     loadBook(loc.book).then((d) => live && setData(d)).catch((e) => live && setError(String(e)));
-    setIl(null);
-    loadInterlinear(loc.book, loc.chapter).then((d) => live && setIl(d)).catch(() => live && setIl([]));
+    loadInterlinear(loc.book, loc.chapter).then((d) => live && setLoaded({ key: chapterKey, verses: d }), () => live && setLoaded({ key: chapterKey, verses: [] }));
     return () => { live = false; };
-  }, [loc.book, loc.chapter]);
+  }, [loc.book, loc.chapter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const markers = useMemo(() => markersForChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const ilByVerse = useMemo(() => new Map((il ?? []).map((v) => [v.v, v])), [il]);
@@ -95,7 +98,7 @@ export function Reader() {
   if (error) return <div className="loading">Could not load {b?.name}. Run <code>npm run data</code> first. <br /><small>{error}</small></div>;
   if (!data || data.id !== loc.book) return <div className="loading">Loading {b?.name}…</div>;
   const chapter = data.chapters[loc.chapter - 1] ?? [];
-  const bi = BOOKS.findIndex((x) => x.id === loc.book);
+  const bi = bookIndex(loc.book);
   const prev = loc.chapter > 1 ? { book: loc.book, chapter: loc.chapter - 1, verse: 1 } : bi > 0 ? { book: BOOKS[bi - 1].id, chapter: BOOKS[bi - 1].chapters, verse: 1 } : null;
   const next = loc.chapter < data.chapters.length ? { book: loc.book, chapter: loc.chapter + 1, verse: 1 } : bi + 1 < BOOKS.length ? { book: BOOKS[bi + 1].id, chapter: 1, verse: 1 } : null;
 

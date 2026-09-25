@@ -8,11 +8,17 @@ import { VideoCard } from './VideosPanel';
 
 function Lexicon({ id }: { id: string }) {
   const [entry, setEntry] = useState<StrongsEntry | null | undefined>(undefined);
-  useEffect(() => { setEntry(undefined); loadStrongs(id).then((e) => setEntry(e ?? null)); }, [id]);
+  useEffect(() => {
+    let live = true;
+    setEntry(undefined);
+    loadStrongs(id).then((e) => live && setEntry(e ?? null));
+    return () => { live = false; };
+  }, [id]);
   if (entry === undefined) return <div className="loading">Loading lexicon…</div>;
   if (!entry) return <div className="empty">No Strong's entry for {id}.</div>;
   const heb = id.startsWith('H');
-  const wordInsights = INSIGHTS.filter((i) => i.kind === 'word' && i.id.includes(id.toLowerCase()));
+  // Word cards are named for their number (`word-g211-alabastron`); matched whole, so G21 does not find G211.
+  const wordInsights = INSIGHTS.filter((i) => i.kind === 'word' && i.id.startsWith(`word-${id.toLowerCase()}-`));
   const wordVideos = videosForStrongs(id);
   return (
     <div className="lexicon">

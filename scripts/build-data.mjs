@@ -9,12 +9,15 @@
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
 //                                size reference drawn beside models too big for a figure
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { spawn, execSync } from 'node:child_process';
+import { spawn, execFileSync } from 'node:child_process';
 import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
+import { fileURLToPath } from 'node:url';
 import { CACHE, fetchAll } from './fetch-sources.mjs';
 
 const OUT = new URL('../public/data/', import.meta.url);
+/** A cached file's path on disk (URL.pathname would keep %20 for a space). */
+const cached = (name) => fileURLToPath(new URL(name, CACHE));
 const books = JSON.parse(await readFile(new URL('../content/books.json', import.meta.url), 'utf8'));
 const byBsbName = new Map(books.map((b) => [b.bsbName ?? b.name, b]));
 
@@ -61,7 +64,7 @@ function unescapeXml(s) {
 function stripTags(s) { return unescapeXml(s).replace(/<[^>]+>/g, '').trim(); }
 
 async function loadSharedStrings() {
-  const sst = execSync('unzip -p "' + new URL('bsb_tables.xlsx', CACHE).pathname + '" xl/sharedStrings.xml', { maxBuffer: 1 << 28 }).toString();
+  const sst = execFileSync('unzip', ['-p', cached('bsb_tables.xlsx'), 'xl/sharedStrings.xml'], { maxBuffer: 1 << 28 }).toString();
   const strings = [];
   const re = /<si>(.*?)<\/si>/gs; let m;
   while ((m = re.exec(sst))) strings.push([...m[1].matchAll(/<t[^>]*>(.*?)<\/t>/gs)].map((x) => x[1]).join(''));
@@ -70,7 +73,7 @@ async function loadSharedStrings() {
 
 async function buildInterlinear() {
   const strings = await loadSharedStrings();
-  const proc = spawn('unzip', ['-p', new URL('bsb_tables.xlsx', CACHE).pathname, 'xl/worksheets/sheet5.xml']);
+  const proc = spawn('unzip', ['-p', cached('bsb_tables.xlsx'), 'xl/worksheets/sheet5.xml']);
   let buf = '';
   let current = null; // { key, chapter: [verse...] }
   let verse = null;
@@ -130,7 +133,8 @@ async function buildInterlinear() {
       }
       buf = buf.slice(start);
     });
-    proc.stdout.on('end', resolve);
+    // A failed unzip still ends its output, so wait for its exit code rather than the end of the stream.
+    proc.on('close', (code) => (code === 0 ? resolve() : reject(new Error(`unzip sheet5.xml exited with ${code}`))));
     proc.on('error', reject);
   });
   flushChapter();
@@ -162,7 +166,7 @@ async function buildStrongs() {
 
 // ---------- 4. Cross references ----------
 async function buildXrefs() {
-  execSync('unzip -o -q "' + new URL('cross-references.zip', CACHE).pathname + '" -d "' + CACHE.pathname + '"');
+  execFileSync('unzip', ['-o', '-q', cached('cross-references.zip'), '-d', fileURLToPath(CACHE)]);
   const rl = createInterface({ input: createReadStream(new URL('cross_references.txt', CACHE)) });
   const perBook = new Map();
   for await (const line of rl) {

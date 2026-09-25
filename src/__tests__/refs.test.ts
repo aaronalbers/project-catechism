@@ -9,12 +9,15 @@ describe('parseRef', () => {
     expect(parseRef('Isa.9.6-Isa.9.7')?.end).toEqual({ book: 'Isa', chapter: 9, verse: 7 });
     expect(parseRef('Matt.1')?.end.verse).toBe(999);
     expect(parseRef('Nope.1.1')).toBeNull();
+    expect(parseRef('Gen.1-2')).toEqual({ start: { book: 'Gen', chapter: 1, verse: 1 }, end: { book: 'Gen', chapter: 2, verse: 999 } });
+    expect(parseRef('Gen.1-2.5')?.end).toEqual({ book: 'Gen', chapter: 2, verse: 5 });
   });
   it('formats readably', () => {
     expect(formatRef('Matt.5.39')).toBe('Matthew 5:39');
     expect(formatRef('Mark.14.3-9')).toBe('Mark 14:3-9');
     expect(formatRef('Gen.6.9-9.19')).toBe('Genesis 6:9-9:19');
     expect(formatRef('Ps.23')).toBe('Psalms 23');
+    expect(formatRef('Gen.1-2')).toBe('Genesis 1-2');
   });
   it('tests containment', () => {
     expect(contains('Mark.14.3-9', { book: 'Mark', chapter: 14, verse: 5 })).toBe(true);

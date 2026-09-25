@@ -6,6 +6,7 @@ import { PEOPLE, PEOPLE_BY_ID, peopleFor, peopleInChapter } from '@/lib/content'
 import { RefChip, SourceList } from '@/components/SourceList';
 import { parseRef } from '@/lib/refs';
 import type { Person } from '@/lib/types';
+import { formatYear } from '@/lib/format';
 
 /** People named in this chapter plus their close kin, so the graph has context without becoming the whole Bible. */
 function neighbourhood(seed: Person[], depth = 2): Person[] {
@@ -27,7 +28,7 @@ function neighbourhood(seed: Person[], depth = 2): Person[] {
 const life = (p: Person) => {
   const est = p.estimated ? <span className="est" title="Estimated — see the person's notes">≈ </span> : null;
   if (p.bornAM !== undefined) return <>{est}{p.bornAM}{p.diedAM !== undefined ? `–${p.diedAM} AM (lived ${p.diedAM - p.bornAM})` : ' AM'}</>;
-  if (p.born !== undefined) return <>{est}{p.born < 0 ? `${-p.born} BC` : `AD ${p.born}`}{p.died !== undefined ? ` – ${p.died < 0 ? `${-p.died} BC` : `AD ${p.died}`}` : ''}</>;
+  if (p.born !== undefined) return <>{est}{formatYear(p.born)}{p.died !== undefined ? ` – ${formatYear(p.died)}` : ''}</>;
   return null;
 };
 
@@ -47,7 +48,7 @@ function Lifespans({ people }: { people: Person[] }) {
       <div className="panel-title">Lifespans ({mode === 'AM' ? 'years from creation, summed from Genesis 5 & 11' : 'BC / AD'}){anyEst && <> · <span className="est">≈ estimated</span></>}</div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ fontFamily: 'var(--sans)', fontSize: 10 }}>
         {Array.from({ length: ticks + 1 }, (_, i) => min + ((max - min) * i) / ticks).map((y, i) => (
-          <g key={i}><line x1={x(y)} x2={x(y)} y1={16} y2={H - 12} stroke="var(--border)" /><text x={x(y)} y={11} textAnchor="middle" fill="var(--muted)">{mode === 'AM' ? Math.round(y) : y < 0 ? `${Math.round(-y)} BC` : `AD ${Math.round(y)}`}</text></g>
+          <g key={i}><line x1={x(y)} x2={x(y)} y1={16} y2={H - 12} stroke="var(--border)" /><text x={x(y)} y={11} textAnchor="middle" fill="var(--muted)">{mode === 'AM' ? Math.round(y) : formatYear(Math.round(y))}</text></g>
         ))}
         {rows.map((r, i) => (
           <g key={r.p.id} transform={`translate(0 ${22 + i * 18})`} style={{ cursor: 'pointer' }} onClick={() => { const ref = parseRef(r.p.refs[0]); if (ref) goTo(ref.start); }}>
