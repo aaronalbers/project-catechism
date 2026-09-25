@@ -8,9 +8,13 @@ import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/ref
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
 import { scaleReference } from '@/lib/models/scale';
+import { cutParts } from '@/lib/models/view';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
-import type { BibleBook, Place, Source } from '@/lib/types';
+import type { BibleBook, Model3D, Place, Source } from '@/lib/types';
+
+/** A procedural model drawn as each of its readings (once, if it has none). */
+const drawings = (m: Model3D) => (m.readings?.map((r) => r.id) ?? [undefined]).map((reading) => ({ reading, model: buildProcedural(m.procedural!, reading), label: reading ? `${m.id} (${reading})` : m.id }));
 
 const bad = (refs: string[]) => refs.filter((r) => !parseRef(r));
 const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'data']);
@@ -137,6 +141,7 @@ describe('content integrity', () => {
       if (m.scale?.at) expect(m.scale.at, `${m.id}: scale.at is not [x, y, z]`).toHaveLength(3);
     }
   });
+  const placedAt = (r: ReturnType<typeof scaleReference>, box: THREE.Box3, toward?: THREE.Vector3) => r.place(r.spot(box, undefined, toward), box, toward);
   it('small models get a hand for scale, large ones a figure, with a bar in round units', () => {
     const at = (x: number, y: number, z: number) => new THREE.Box3(new THREE.Vector3(-x / 2, 0, -z / 2), new THREE.Vector3(x / 2, y, z / 2));
     const placed = (r: ReturnType<typeof scaleReference>, box: THREE.Box3, where?: [number, number, number], toward?: THREE.Vector3) => r.place(r.spot(box, where, toward), box, toward);
@@ -171,17 +176,61 @@ describe('content integrity', () => {
     const ezekiel = scaleReference({ metres: 0.519, unit: 'long cubit' }, new THREE.Box3(new THREE.Vector3(-256, 0, -256), new THREE.Vector3(256, 60, 256)));
     expect(ezekiel.place(new THREE.Vector3(256, 0, 9), new THREE.Box3(new THREE.Vector3(-256, 0, -256), new THREE.Vector3(256, 60, 256)))).toBe('100 long cubits (≈ 51.9 m), in blocks of 10');
   });
+  // Something tens of kilometres across (the New Jerusalem) gets the map instead of the figure, once
+  // the viewer has loaded it, with Jerusalem under the framed box's middle; closer in, the figure again.
+  it('the map stands in for the figure beside anything tens of kilometres across', () => {
+    const S = 2_220_000, city = new THREE.Box3(new THREE.Vector3(-S / 2, 0, -S / 2), new THREE.Vector3(S / 2, S, S / 2));
+    const gate = new THREE.Box3(new THREE.Vector3(S / 2, 0, -25), new THREE.Vector3(S / 2 + 17, 64, 25));
+    const ref = scaleReference({ metres: 1 }, city);
+    expect(placedAt(ref, city)).toBe('500 km, in blocks of 100 km');
+    expect(ref.kind).toBe('figure'); // no map loaded
+    ref.setMap(new THREE.Group());
+    const p = ref.spot(city);
+    expect([p.x, p.y, p.z]).toEqual([0, 0, 0]);
+    expect(ref.place(p, city)).toBe('500 km, in blocks of 100 km');
+    expect(ref.kind).toBe('map');
+    placedAt(ref, gate, new THREE.Vector3(S, 50, 0));
+    expect(ref.kind).toBe('figure');
+  });
+  // A model drawn more than one way names each reading, says what it rests on and, for a reading of
+  // contested text, who holds it; its estimates are for parts that reading draws.
+  it('model readings are named, say what they rest on, and estimate only parts they draw', () => {
+    for (const m of MODELS.filter((x) => x.readings)) {
+      const ids = m.readings!.map((r) => r.id);
+      expect(ids.filter((id, i) => ids.indexOf(id) !== i), `${m.id}: duplicate reading ids`).toEqual([]);
+      for (const r of m.readings!) {
+        expect(r.label && r.basis, `${m.id}: reading ${r.id} needs a label and a basis`).toBeTruthy();
+        if (m.confidence === 'interpretation') expect(r.traditions?.length, `${m.id}: reading ${r.id} names no one who holds it`).toBeGreaterThan(0);
+        const names = new Set<string>();
+        if (m.procedural) buildProcedural(m.procedural, r.id).traverse((o) => { if (o.name) names.add(o.name); });
+        for (const p of Object.keys(r.estimates ?? {})) expect(names.has(p), `${m.id}: reading ${r.id} estimates unknown part '${p}'`).toBe(true);
+      }
+    }
+  });
+  // 'Its length and width and height are equal' (Rev 21:16), however the wall is read.
+  it('the New Jerusalem is a cube in every reading', () => {
+    for (const { model, label } of drawings(MODELS.find((m) => m.id === 'new-jerusalem')!)) {
+      const size = new THREE.Box3().setFromObject(model.getObjectByName('city')!).getSize(new THREE.Vector3());
+      expect(Math.abs(size.y / size.x - 1), `${label}: the city is ${Math.round(size.x / 1000)} km wide and ${Math.round(size.y / 1000)} km high`).toBeLessThan(0.01);
+    }
+  });
   it('procedural models name a builder that exists', () => {
     for (const m of MODELS) if (m.kind === 'procedural') expect(isProceduralKind(m.procedural ?? ''), `${m.id}: no builder '${m.procedural}'`).toBe(true);
   });
   it('model builds stay inside their passage, run in order, and name parts the model has', () => {
     for (const m of MODELS) {
       if (!m.builds && !m.estimates) continue;
-      const names: string[] = [];
-      if (m.kind === 'procedural' && m.procedural) buildProcedural(m.procedural).traverse((o) => { if (o.name) names.push(o.name); });
-      // Parts nest, so a name used twice would reveal two things at once.
-      expect(names.filter((n, i) => names.indexOf(n) !== i), `${m.id}: duplicate part names`).toEqual([]);
-      const parts = m.kind === 'procedural' ? new Set(names) : null;
+      // Every reading must have every part the builds name; the names are checked for each.
+      const readings = m.kind === 'procedural' && m.procedural ? drawings(m) : [];
+      let parts: Set<string> | null = null;
+      for (const { model, label } of readings) {
+        const names: string[] = [];
+        model.traverse((o) => { if (o.name) names.push(o.name); });
+        // Parts nest, so a name used twice would reveal two things at once.
+        expect(names.filter((n, i) => names.indexOf(n) !== i), `${label}: duplicate part names`).toEqual([]);
+        if (parts) expect([...names].sort(), `${label}: parts differ from the model's first reading`).toEqual([...parts].sort());
+        parts = new Set(names);
+      }
       if (parts) for (const p of Object.keys(m.estimates ?? {})) expect(parts.has(p), `${m.id}: estimate for unknown part '${p}'`).toBe(true);
       for (const b of m.builds ?? []) {
         if (parts) for (const p of Object.keys(b.omits ?? {})) {
@@ -196,8 +245,9 @@ describe('content integrity', () => {
           expect(contains(b.ref, r.start) && contains(b.ref, r.end), `${m.id}: step ${st.ref} is outside ${b.ref}`).toBe(true);
           expect(compareLoc(r.start, prev), `${m.id}: step ${st.ref} is out of order`).toBeGreaterThanOrEqual(0);
           prev = r.start;
-          expect(st.parts.length, `${m.id}: step ${st.ref} adds nothing`).toBeGreaterThan(0);
-          if (parts) for (const p of st.parts) expect(parts.has(p), `${m.id}: step ${st.ref} names unknown part '${p}'`).toBe(true);
+          // A step that only moves the camera (the New Jerusalem measured, 21:16) says where to with `frame`.
+          expect(st.parts.length + (st.frame?.length ?? 0), `${m.id}: step ${st.ref} adds nothing`).toBeGreaterThan(0);
+          if (parts) for (const p of [...st.parts, ...st.frame ?? []]) expect(parts.has(p), `${m.id}: step ${st.ref} names unknown part '${p}'`).toBe(true);
           for (const p of st.cuts ?? []) expect(st.parts, `${m.id}: step ${st.ref} cuts '${p}', which it does not add`).toContain(p);
         }
       }
@@ -208,14 +258,15 @@ describe('content integrity', () => {
   it('a build shows every part by its last step, unless it says it omits it', () => {
     for (const m of MODELS) {
       if (m.kind !== 'procedural' || !m.procedural || !m.builds) continue;
-      const model = buildProcedural(m.procedural);
+      for (const { model, label } of drawings(m)) {
       const named = (o: THREE.Object3D | null, set: Set<string>) => { for (let n = o; n && n !== model; n = n.parent) if (set.has(n.name)) return true; return false; };
       const leaves: THREE.Object3D[] = [];
       model.traverse((o) => { if (o.name && o !== model && !o.children.some((c) => { let inner = false; c.traverse((x) => { if (x.name) inner = true; }); return inner; })) leaves.push(o); });
       for (const b of m.builds) {
         const added = new Set(b.steps.flatMap((st) => st.parts)), omitted = new Set([...Object.keys(b.omits ?? {}), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => a.changes.flatMap((c) => c.shows ?? [])))]);
         const missing = leaves.filter((o) => !named(o, added) && !named(o, omitted)).map((o) => o.name);
-        expect(missing, `${m.id}: build ${b.ref} never shows these parts and does not list them in omits`).toEqual([]);
+        expect(missing, `${label}: build ${b.ref} never shows these parts and does not list them in omits`).toEqual([]);
+      }
       }
     }
   });
@@ -224,7 +275,8 @@ describe('content integrity', () => {
   it('no material is shared between two parts of a model', () => {
     for (const m of MODELS) {
       if (m.kind !== 'procedural' || !m.procedural || !m.builds) continue;
-      const model = buildProcedural(m.procedural), owners = new Map<THREE.Material, Set<string>>();
+      for (const { model, label } of drawings(m)) {
+      const owners = new Map<THREE.Material, Set<string>>();
       model.traverse((o) => {
         const mat = (o as THREE.Mesh).material;
         if (!mat) return;
@@ -233,7 +285,8 @@ describe('content integrity', () => {
         for (const x of Array.isArray(mat) ? mat : [mat]) owners.set(x, (owners.get(x) ?? new Set()).add(n?.name ?? '(root)'));
       });
       const shared = [...owners.values()].filter((s) => s.size > 1).map((s) => [...s].join(' + '));
-      expect(shared, `${m.id}: materials shared between parts`).toEqual([]);
+      expect(shared, `${label}: materials shared between parts`).toEqual([]);
+      }
     }
   });
   // A state changes what was built, so it names real parts, says what it rests on, and falls within
@@ -242,7 +295,7 @@ describe('content integrity', () => {
     for (const m of MODELS) {
       if (!m.states) continue;
       const names = new Set<string>();
-      if (m.kind === 'procedural' && m.procedural) buildProcedural(m.procedural).traverse((o) => { if (o.name) names.add(o.name); });
+      if (m.kind === 'procedural' && m.procedural) for (const { model } of drawings(m)) model.traverse((o) => { if (o.name) names.add(o.name); });
       const built = new Set((m.builds ?? []).flatMap((b) => b.steps.flatMap((st) => st.parts)));
       expect(new Set(m.states.map((st) => st.id)).size, `${m.id}: duplicate state ids`).toBe(m.states.length);
       for (const st of m.states) {
@@ -317,8 +370,7 @@ describe('content integrity', () => {
     for (const m of MODELS) {
       const cutting = (m.builds ?? []).flatMap((b) => b.steps.filter((st) => st.cutaway));
       if (!cutting.length) continue;
-      const model = buildProcedural(m.procedural!);
-      expect(model.children.some((c) => c.userData.cutaway === 'step'), `${m.id}: steps cut it open but no part is cut at steps`).toBe(true);
+      for (const { model, label } of drawings(m)) expect(cutParts(model).some(([, how]) => how === 'step'), `${label}: steps cut it open but no part is cut at steps`).toBe(true);
     }
   });
   // While a passage builds or changes a model the camera holds an angle; elsewhere the model turns.

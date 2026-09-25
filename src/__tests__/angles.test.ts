@@ -5,7 +5,7 @@
 // and prints, for the step's current angle and a grid of others, the share of rays from the viewer's
 // camera that reach each part the step adds (see rays.ts), best first: by the least-seen part, then
 // by the average (SORT=mean puts the average first, for a step that adds many parts). MIN_ELEVATION=0
-// leaves out views from below the ground. Put the angle you pick in the step's `view`. STEP may be a
+// leaves out views from below the ground, and READING=<id> draws a model as one of its readings (the first by default). Put the angle you pick in the step's `view`. STEP may be a
 // build step's ref or a state change's. Leave it out to list every step of the model with a part less
 // than half seen, with how tall its largest piece looks, as a share of the view's height: the share of
 // rays says nothing about size, and a part can be in plain sight and a speck. Small repeated pieces
@@ -19,7 +19,7 @@ import { cutCentre, cutParts, cutPlane, cutsAt, framingAt, partsShown } from '@/
 import type { ModelAngle, ModelChange, ModelStep } from '@/lib/types';
 import { moments, seen } from './rays';
 
-const { MODEL, STEP, SORT, MIN_ELEVATION } = process.env;
+const { MODEL, STEP, SORT, MIN_ELEVATION, READING } = process.env;
 /** The viewer's vertical field of view (ModelsPanel). */
 const FOV = 35;
 const GRID: ModelAngle[] = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].flatMap((az) => [-15, 0, 10, 30, 50, 70].map((el): ModelAngle => [az, el])).filter(([, el]) => el >= Number(MIN_ELEVATION ?? -90));
@@ -27,7 +27,7 @@ const GRID: ModelAngle[] = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 33
 it.skipIf(!MODEL)('camera angles for a model step', () => {
   const m = structuredClone(MODELS.find((x) => x.id === MODEL));
   if (!m) throw new Error(`no model '${MODEL}'; ids: ${MODELS.map((x) => x.id).join(', ')}`);
-  const model = buildProcedural(m.procedural!), ref = m.scale ? scaleReference(m.scale, new THREE.Box3().setFromObject(model)) : null;
+  const model = buildProcedural(m.procedural!, READING), ref = m.scale ? scaleReference(m.scale, new THREE.Box3().setFromObject(model)) : null;
   const cuts = cutParts(model), centre = cutCentre(model);
   // The step or change being read, so its `view` can be tried in place.
   const holder = (ref: string): ModelStep | ModelChange | undefined =>

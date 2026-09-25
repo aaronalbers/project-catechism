@@ -61,11 +61,17 @@ export function activeParts(m: Model3D, loc: VerseLoc, stateId: string | null): 
  * on — each named part's nearest ancestor flagged `userData.focus`, or the whole model if it has
  * none — so a new piece of furniture fills the view rather than the whole site. While reading a
  * later state, likewise what its latest change removes or adds, including parts still fading out.
- * Otherwise, all that is shown. `whole` says the box is the model's, not one piece's.
+ * Otherwise, all that is shown. A step's `frame` overrides what it adds, framed whether drawn or not.
+ * `whole` says the box is the model's, not one piece's.
  */
 export function focusBox(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: string | null): { box: THREE.Box3; whole: boolean } {
-  const { parts, change } = activeParts(m, loc, stateId);
+  const { parts, change, step } = activeParts(m, loc, stateId);
   if (!parts) return { box: visibleBox(object), whole: true };
+  if (step?.frame) {
+    const box = new THREE.Box3();
+    for (const name of step.frame) { const n = object.getObjectByName(name); if (n) box.union(new THREE.Box3().setFromObject(n)); }
+    return { box, whole: false };
+  }
   const box = new THREE.Box3();
   let whole = false;
   for (const name of parts) {
@@ -125,7 +131,7 @@ export function framingAt(m: Model3D, o: THREE.Object3D, loc: VerseLoc, stateId:
     // Beside a piece on a raised floor, the figure stands on that floor rather than inside it.
     if (!authored && ref.kind === 'figure') p.y = floorUnder(o, p, local.min.y) ?? p.y;
     // A figure wearing the model stays where it is and is not framed, so the camera can close in on a small part.
-    if (!worn || f.whole) b.union(ref.boundsAt(p).translate(off));
+    if (!worn || f.whole) b.union(ref.boundsAt(p, local).translate(off));
     reference = { p, local, toward };
   }
   // A model seen whole is far enough back that its height fits the view, which the diagonal alone misses
@@ -145,11 +151,18 @@ export function framingAt(m: Model3D, o: THREE.Object3D, loc: VerseLoc, stateId:
  * kit.ts) and how each is cut, and `cutCentre` is where the plane passes.
  */
 export type CutHow = true | 'step';
+/** The outermost nodes flagged `cutaway`, a part or a piece inside one (the New Jerusalem's gold, inside `city`). */
+const cutNodes = (o: THREE.Object3D) => {
+  const out: THREE.Object3D[] = [];
+  const walk = (n: THREE.Object3D) => { for (const c of n.children) if (c.userData.cutaway) out.push(c); else walk(c); };
+  walk(o);
+  return out;
+};
 export function cutParts(o: THREE.Object3D): [THREE.Material, CutHow][] {
-  return o.children.filter((p) => p.userData.cutaway).flatMap((p) => [...new Set(materialsOf(p))].map((mat): [THREE.Material, CutHow] => [mat, p.userData.cutaway]));
+  return cutNodes(o).flatMap((p) => [...new Set(materialsOf(p))].map((mat): [THREE.Material, CutHow] => [mat, p.userData.cutaway]));
 }
 export function cutCentre(o: THREE.Object3D): THREE.Vector3 | null {
-  const parts = o.children.filter((p) => p.userData.cutaway);
+  const parts = cutNodes(o);
   if (!parts.length) return null;
   const b = new THREE.Box3();
   for (const p of parts) b.union(new THREE.Box3().setFromObject(p));

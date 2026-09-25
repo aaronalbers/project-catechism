@@ -6,6 +6,8 @@
 //   circle.json                  verse counts per chapter, plus the better-attested cross
 //                                references as running verse indices, for the Links circle
 //   places/index.json, places/by-book/<Book>.json
+//   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
+//                                size reference drawn beside models too big for a figure
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { spawn, execSync } from 'node:child_process';
 import { createReadStream } from 'node:fs';
@@ -256,8 +258,54 @@ async function buildPlaces() {
   console.log('places  ', index.length, 'places');
 }
 
+// ---------- 6. Map ----------
+// The size reference for a model tens of kilometres across or more (the New Jerusalem, Rev 21:16):
+// Natural Earth's coastlines, the rivers and lakes a reader of the Bible knows, and some cities from
+// OpenBible, within MAP_KM of Jerusalem. Lines are [lon, lat, lon, lat, …], thinned to one point
+// every ≈ 5 km; the viewer projects them.
+const MAP_CENTRE = [35.23417, 31.77667], MAP_KM = 3000;
+const MAP_RIVERS = new Set(['Jordan', 'Nile', 'Damietta Branch', 'Rosetta Branch', 'Euphrates', 'Al Furat', 'Firat', 'Tigris', 'Dicle', 'Shatt al Arab']);
+const MAP_LAKES = new Set(['Dead Sea', 'Sea of Galilee']);
+// Few and far apart, so their names don't overlap at the scale the map is seen at.
+const MAP_CITIES = ['a15257a' /* Jerusalem */, 'afc8e7a' /* Rome */, 'a1fe6e7' /* Athens */, 'a217d18' /* Babylon */,
+  'a70fd5d' /* Nineveh */];
+function kmFromCentre([lon, lat]) {
+  const r = Math.PI / 180, [lon0, lat0] = MAP_CENTRE;
+  const a = Math.sin((lat - lat0) * r / 2) ** 2 + Math.cos(lat * r) * Math.cos(lat0 * r) * Math.sin((lon - lon0) * r / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(a));
+}
+/** Splits a line into the runs within MAP_KM, dropping points within ≈ 5 km of the last kept. */
+function mapRuns(coords) {
+  const runs = [];
+  let run = [], last = null;
+  const close = () => { if (run.length >= 4) runs.push(run); run = []; last = null; };
+  coords.forEach((p, i) => {
+    if (kmFromCentre(p) > MAP_KM) { close(); return; }
+    const end = i === coords.length - 1;
+    if (last && !end && Math.hypot(p[0] - last[0], (p[1] - last[1])) < 0.045) return;
+    run.push(+p[0].toFixed(3), +p[1].toFixed(3)); last = p;
+  });
+  close();
+  return runs;
+}
+async function buildMap() {
+  const geo = async (name) => JSON.parse(await readFile(new URL(name, CACHE), 'utf8')).features.filter((f) => f.geometry);
+  const lines = (features) => features.flatMap((f) => {
+    const g = f.geometry;
+    const parts = g.type === 'LineString' ? [g.coordinates] : g.type === 'MultiLineString' || g.type === 'Polygon' ? g.coordinates : g.coordinates.flat();
+    return parts.flatMap(mapRuns);
+  });
+  const coast = lines(await geo('ne-coastline.geojson'));
+  const rivers = lines((await geo('ne-rivers.geojson')).filter((f) => MAP_RIVERS.has(f.properties.name)));
+  const lakes = lines((await geo('ne-lakes.geojson')).filter((f) => MAP_LAKES.has(f.properties.name)));
+  const index = JSON.parse(await readFile(new URL('places/index.json', OUT), 'utf8'));
+  const cities = MAP_CITIES.map((id) => { const p = index.find((x) => x.id === id); if (!p) throw new Error(`map: no place ${id}`); return { name: p.name, lon: p.lon, lat: p.lat }; });
+  await writeJson('map.json', { centre: MAP_CENTRE, km: MAP_KM, coast, rivers, lakes, cities });
+  console.log('map     ', coast.length + rivers.length + lakes.length, 'lines,', cities.length, 'cities');
+}
+
 await fetchAll();
 await buildBible();
-await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs().then(buildCircle), buildPlaces()]);
+await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs().then(buildCircle), buildPlaces().then(buildMap)]);
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');

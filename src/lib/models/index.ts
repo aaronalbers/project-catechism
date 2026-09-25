@@ -10,6 +10,7 @@ import { forestOfLebanon } from './forest';
 import { ark } from './furniture';
 import { garments } from './garments';
 import { goliath } from './goliath';
+import { newJerusalem } from './newjerusalem';
 import { noahsArk } from './noah';
 import { ogsBed } from './og';
 import { sealedScroll } from './scroll';
@@ -34,8 +35,10 @@ const BUILDERS = {
   'ogs-bed': ogsBed,
   'forest-of-lebanon': forestOfLebanon,
   'sealed-scroll': sealedScroll,
-} satisfies Record<string, () => THREE.Object3D>;
+  'new-jerusalem': newJerusalem,
+} satisfies Record<string, (reading?: string) => THREE.Object3D>;
 
 export type ProceduralKind = keyof typeof BUILDERS;
 export const isProceduralKind = (k: string): k is ProceduralKind => Object.hasOwn(BUILDERS, k);
-export const buildProcedural = (kind: ProceduralKind): THREE.Object3D => BUILDERS[kind]();
+/** Builds a model, drawn as `reading` (one of its `readings`' ids) when it has more than one. */
+export const buildProcedural = (kind: ProceduralKind, reading?: string): THREE.Object3D => (BUILDERS[kind] as (reading?: string) => THREE.Object3D)(reading);

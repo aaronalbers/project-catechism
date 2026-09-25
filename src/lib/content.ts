@@ -98,6 +98,11 @@ export function modelLeadAt(loc: VerseLoc): Model3D | null {
   return lead;
 }
 /** The camera's angle while a passage is building or changing a model that sets none: in front, a little to the right, and above. */
+/** What each estimated part rests on, as `reading` draws it (the model's first reading when none is given). */
+export function modelEstimates(m: Model3D, reading?: string): Record<string, string> {
+  const r = m.readings?.find((x) => x.id === reading) ?? m.readings?.[0];
+  return { ...m.estimates, ...r?.estimates };
+}
 export const DEFAULT_MODEL_VIEW: ModelAngle = [30, 25];
 /**
  * Where the camera looks from at `loc`: while a build is read, or the state `stateId` is read in one

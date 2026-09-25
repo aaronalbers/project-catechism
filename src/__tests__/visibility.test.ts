@@ -19,8 +19,8 @@ describe('model visibility', () => {
   // another piece, or facing away) shows nothing new. Each part a step adds, or a state's change
   // shows, must be hit by at least one ray from the camera the viewer uses for that step.
   for (const m of MODELS.filter((x) => x.kind === 'procedural' && x.procedural && (x.builds || x.states))) {
-    it(`${m.id}: every part is seen at the step that adds it`, () => {
-      const model = buildProcedural(m.procedural!);
+    for (const reading of m.readings?.map((r) => r.id) ?? [undefined]) it(`${m.id}${reading ? ` (${reading})` : ''}: every part is seen at the step that adds it`, () => {
+      const model = buildProcedural(m.procedural!, reading);
       const ref = m.scale ? scaleReference(m.scale, new THREE.Box3().setFromObject(model)) : null;
       const cuts = cutParts(model), centre = cutCentre(model);
       const unseen: string[] = [], excused = new Set<string>();

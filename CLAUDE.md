@@ -47,7 +47,8 @@ new *kind* of sparse content needs a section in `CATALOG`.
 sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/data.ts`
 (which memoises promises per path). It is sharded so a chapter costs one or two small
 requests: `bible/<Book>.json`, `interlinear/<Book>/<ch>.json`, `strongs/<H|G>/<shard>.json`
-(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`.
+(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, and `map.json` (Natural Earth coasts, rivers and
+lakes round Jerusalem, for the models' map scale).
 
 Never commit anything under `public/data/` or `.cache/`, and never hand-edit files there —
 regenerate with `npm run data`.
@@ -147,6 +148,20 @@ them in CI — read it before adding content.
   priest's garments) is cut to fit that figure and sets `at` to its own origin and `worn: true`, so the
   figure wears it: it stays put through a build and the camera closes in on each part, not the whole
   figure. `shoulder()` in `scale.ts` gives the arm's pose, for sleeves.
+- Beside anything the camera frames that is 10 km or more across (`MAP_FROM_M`), the figure gives way to
+  a map: the coasts, rivers and cities round Jerusalem at the model's scale, flat on the ground with
+  Jerusalem under the framed box's middle (`src/lib/models/map.ts`, from `public/data/map.json`, loaded
+  only for a model that big). The New Jerusalem is drawn to true scale in metres, so the camera goes from
+  a 2,220 km cube to a figure at one gate; the viewer's logarithmic depth buffer and far plane allow it.
+- A model the text allows more than one reading of lists `readings` (id, label, `basis`, `traditions`,
+  and `estimates` that add to or replace the model's own); the first is the default and the viewer gives
+  each a button. The builder takes the reading's id and draws every reading under the same part names, so
+  the model's builds serve all of them; the content and visibility tests run for each reading. States are
+  for later events in the story, not for readings. The New Jerusalem is the first to use it (the wall as the
+  city's face, or a wall at its foot).
+- A step's `frame` names what the camera frames instead of what the step adds, drawn or not, and a step
+  may add nothing and only `frame` (the New Jerusalem measured at 21:16). For a view no part fits, a
+  model can hold never-drawn boxes named for it (`view-east-gate` in `newjerusalem.ts`).
 - While a build or a state's account is being read, the camera holds still at an angle and eases to
   each step; elsewhere the model turns. The angle is `view`, `[azimuth, elevation]` in degrees
   (azimuth from the front, +z, round towards +x), set on the model, or on a step or change that needs
@@ -159,7 +174,7 @@ them in CI — read it before adding content.
   Furniture builders (`furniture.ts`) draw at the origin under a name prefix (`table` →
   `table-body`, `table-bread`), so a model places them and can hold several of one kind. In a
   model, `userData.focus` marks what the camera frames while a step builds inside it, and
-  `userData.cutaway` marks parts the viewer can cut open to show what they enclose. The part a step
+  `userData.cutaway` marks parts (or a piece inside one, such as the New Jerusalem's gold inside `city`) the viewer can cut open to show what they enclose. The part a step
   is building (or a state's change is adding or removing) is never cut, so a piece on the near side
   of the section, such as the temple's stair, still shows at its own step. A part flagged
   `cutaway: 'step'` instead is cut only at a step marked `"cutaway": true`, with no button: the high

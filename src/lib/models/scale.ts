@@ -1,5 +1,6 @@
 // Size references drawn beside a model: a standing figure for anything a hand's length or more,
-// an open hand for smaller things, and a bar marked in the model's units. They live outside the
+// an open hand for smaller things, the lands round Jerusalem for whatever the camera frames that is
+// tens of kilometres across (see map.ts), and a bar marked in the model's units. They live outside the
 // model (the viewer adds them to the scene), so they are never build parts.
 import * as THREE from 'three';
 import type { ModelScale } from '@/lib/types';
@@ -13,6 +14,8 @@ export const FIGURE_M = 1.66;
 const HAND_LENGTH = 2.4; // handbreadths
 /** Below this size (largest dimension, metres) a model gets a hand rather than a figure. */
 const HAND_BELOW_M = 0.5;
+/** From this size (the framed box's largest dimension, metres) the map stands in for the figure, once loaded. */
+export const MAP_FROM_M = 10_000;
 
 const skin = () => new THREE.MeshStandardMaterial({ color: 0x8d8a85, roughness: 0.9 });
 const capsule = (r: number, len: number, mat: THREE.Material, x: number, y: number, z: number) => {
@@ -74,20 +77,24 @@ function niceFloor(x: number) {
 }
 export function formatMetres(m: number) {
   const r = (v: number) => String(+v.toPrecision(3));
-  return m >= 1 ? `${r(m)} m` : m >= 0.01 ? `${r(m * 100)} cm` : `${r(m * 1000)} mm`;
+  return m >= 1000 ? `${r(m / 1000)} km` : m >= 1 ? `${r(m)} m` : m >= 0.01 ? `${r(m * 100)} cm` : `${r(m * 1000)} mm`;
 }
 
 /**
  * The size reference for one model: a figure or a hand, chosen once from the model's size, and a
  * bar. The viewer moves it to stand beside whatever the camera frames, so `spot` says where it
  * would stand beside a box and `place` puts it there and lays a bar sized to that box. All
- * coordinates are the model's own, before the viewer centres it.
+ * coordinates are the model's own, before the viewer centres it. Once `setMap` has given it the map,
+ * a box at least MAP_FROM_M across gets the map instead, Jerusalem under the box's centre; `kind`
+ * says which was placed last.
  */
+export type ScaleKind = 'figure' | 'hand' | 'map';
 export interface ScaleReference {
-  group: THREE.Group; kind: 'figure' | 'hand';
+  group: THREE.Group; readonly kind: ScaleKind;
   spot(box: THREE.Box3, at?: [number, number, number], toward?: THREE.Vector3): THREE.Vector3;
-  boundsAt(p: THREE.Vector3): THREE.Box3;
+  boundsAt(p: THREE.Vector3, box?: THREE.Box3): THREE.Box3;
   place(p: THREE.Vector3, box: THREE.Box3, toward?: THREE.Vector3): string;
+  setMap(map: THREE.Object3D): void;
 }
 
 export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleReference {
@@ -97,14 +104,27 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
   const ref = kind === 'figure' ? figure(FIGURE_M / u) : hand(HANDBREADTH_M / u);
   const local = new THREE.Box3().setFromObject(ref), half = local.getSize(new THREE.Vector3()).multiplyScalar(0.5);
   group.add(ref, bar);
-  const boundsAt = (p: THREE.Vector3) => local.clone().translate(p);
+  let map: THREE.Object3D | null = null, placed: ScaleKind = kind;
+  const mapFor = (box?: THREE.Box3) => !!map && !!box && !box.isEmpty() && Math.max(...box.getSize(new THREE.Vector3()).toArray()) * u >= MAP_FROM_M;
   return {
-    group, kind, boundsAt,
+    group,
+    get kind() { return placed; },
+    setMap(m) { map = m; m.visible = false; group.add(m); },
+    // Beside the figure or hand, what they take up; with the map, the box and the land round it,
+    // so the camera frames the model with some of the map about it. The map runs on beyond.
+    boundsAt(p, box) {
+      if (!mapFor(box)) return local.clone().translate(p);
+      const b = box!.clone(), size = b.getSize(new THREE.Vector3());
+      b.expandByVector(new THREE.Vector3(size.x * 0.25, 0, size.z * 0.25));
+      b.min.y = b.max.y = p.y;
+      return b;
+    },
     // `at` if given; otherwise, seen from `toward` (the camera), just clear of `box` on its right, so it
     // stands beside the piece rather than in front of it; or for a model seen whole, beside its +x end.
     // A figure stands on the ground (y = 0) even beside a piece raised above it, such as a capital on
     // its pillar; a hand is held level with the piece.
     spot(box, at, toward) {
+      if (mapFor(box)) return box.getCenter(new THREE.Vector3()).setY(Math.min(box.min.y, 0));
       if (at) return new THREE.Vector3(...at);
       const c = box.getCenter(new THREE.Vector3()), gap = kind === 'figure' ? 0.3 / u : half.x * 0.4;
       const y = kind === 'figure' ? Math.min(box.min.y, 0) : box.min.y;
@@ -118,9 +138,12 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
     // A bar of a round number of the model's units (cubits, or metric), about a quarter as long as the
     // box and figure together, on the ground in front of both.
     place(p, box, toward) {
+      const onMap = mapFor(box);
+      placed = onMap ? 'map' : kind; ref.visible = !onMap;
+      if (map) { map.visible = onMap; map.position.copy(p); }
       ref.position.copy(p);
       for (const c of [...bar.children]) { const mesh = c as THREE.Mesh; mesh.geometry.dispose(); (mesh.material as THREE.Material).dispose(); bar.remove(c); }
-      const all = box.clone().union(boundsAt(p));
+      const all = box.clone().union(onMap ? box : local.clone().translate(p));
       const target = Math.max(...all.getSize(new THREE.Vector3()).toArray()) * u / 4;
       const cubits = !!scale.unit;
       const n = cubits ? Math.max(1, niceFloor(target / u)) : niceFloor(target);

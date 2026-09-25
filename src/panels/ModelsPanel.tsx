@@ -4,13 +4,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { useFeatureInView, useStore } from '@/app/store';
-import { modelBuildAt, modelLeadAt, modelStateAt, modelViewAt, modelsFor, modelsInChapter } from '@/lib/content';
+import { modelBuildAt, modelEstimates, modelLeadAt, modelStateAt, modelViewAt, modelsFor, modelsInChapter } from '@/lib/content';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Model3D } from '@/lib/types';
 import { buildProcedural } from '@/lib/models';
-import { CUBIT_M, FIGURE_M, formatMetres, scaleReference, type ScaleReference } from '@/lib/models/scale';
+import { CUBIT_M, FIGURE_M, formatMetres, MAP_FROM_M, scaleReference, type ScaleKind, type ScaleReference } from '@/lib/models/scale';
+import { loadMap } from '@/lib/data';
 import { formatRef, type VerseLoc } from '@/lib/refs';
-import { cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, MODEL_FOV, partsShown, type CutHow } from '@/lib/models/view';
+import { activeParts, cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, MODEL_FOV, partsShown, type CutHow } from '@/lib/models/view';
 
 /**
  * A part fading and dropping into place after its verse is reached, or, when `leaving`, fading and
@@ -18,6 +19,8 @@ import { cutCentre, cutParts, cutPlane, cutsAt, framingAt, materialsOf, MODEL_FO
  */
 interface Arrival { part: THREE.Object3D; t0: number; y0: number; drop: number; mats: THREE.Material[]; leaving?: boolean }
 const ARRIVE_MS = 700, LEAVE_MS = 1100;
+/** Parts drop a quarter of the model's height as they arrive, but no more than this (metres): the New Jerusalem is 2,220 km high. */
+const DROP_MAX_M = 50;
 /**
  * The camera easing to frame the parts shown so far. While a passage is building or changing the
  * model it also turns to that passage's angle (`modelViewAt`); elsewhere it keeps the angle it has.
@@ -35,7 +38,7 @@ const MOVE_OUT_MS = 300, MOVE_IN_MS = 450;
  */
 function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: string | null, arrivals: Arrival[] | null): boolean {
   const want = partsShown(m, object, loc, stateId);
-  const drop = new THREE.Box3().setFromObject(object).getSize(new THREE.Vector3()).y * 0.25;
+  const drop = Math.min(new THREE.Box3().setFromObject(object).getSize(new THREE.Vector3()).y * 0.25, DROP_MAX_M / (m.scale?.metres ?? 1));
   let changed = false;
   const apply = (node: THREE.Object3D, parentMoving: boolean) => {
     let moving = parentMoving;
@@ -68,6 +71,9 @@ function syncParts(m: Model3D, object: THREE.Object3D, loc: VerseLoc, stateId: s
   for (const c of object.children) apply(c, false);
   return changed;
 }
+
+/** What the camera is aimed by besides the parts shown: the angle, and a step's `frame`. A change reframes. */
+const aimKey = (m: Model3D, loc: VerseLoc, stateId: string | null) => JSON.stringify([modelViewAt(m, loc, stateId), activeParts(m, loc, stateId).step?.frame]);
 
 /** Fades every material of the size reference; its materials are its own, so nothing else fades. */
 function setOpacity(o: THREE.Object3D, opacity: number) {
@@ -120,14 +126,14 @@ function animateArrivals(arrivals: Arrival[]) {
   }
 }
 
-function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
+function ModelView({ m, loc, readingId }: { m: Model3D; loc: VerseLoc; readingId?: string }) {
   const el = useRef<HTMLDivElement>(null);
   const objectRef = useRef<THREE.Object3D | null>(null);
   const arrivals = useRef<Arrival[]>([]);
   const locRef = useRef(loc);
   locRef.current = loc;
   const frameRef = useRef<(animate: boolean) => void>(() => {});
-  // The angle last framed at, so a move between steps that shows nothing new still turns the camera.
+  // The angle (and step `frame`) last framed at, so a move between steps that shows nothing new still moves the camera.
   const viewRef = useRef<string>('');
   // The later state shown: the one the text is describing here, unless the reader picked another.
   // A pick lasts until the reading moves into or out of a state's passage.
@@ -143,7 +149,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   const cutawayRef = useRef(cutaway);
   cutawayRef.current = cutaway;
   // A figure or hand beside the model, and a bar, for its size; see ScaleNote for what they rest on.
-  const [scaleInfo, setScaleInfo] = useState<{ kind: ScaleReference['kind']; bar: string } | null>(null);
+  const [scaleInfo, setScaleInfo] = useState<{ kind: ScaleKind; bar: string } | null>(null);
   const [showScale, setShowScale] = useState(true);
   const showScaleRef = useRef(showScale);
   showScaleRef.current = showScale;
@@ -151,7 +157,9 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
   useEffect(() => {
     const host = el.current;
     if (!host) return;
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    // A logarithmic depth buffer, so a model thousands of kilometres across (the New Jerusalem) draws
+    // cleanly while the camera stands a few metres from a figure at its gate.
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, logarithmicDepthBuffer: true });
     renderer.setPixelRatio(Math.min(2, devicePixelRatio));
     renderer.setSize(host.clientWidth, host.clientHeight);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -188,7 +196,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       ref.group.userData.at = p; ref.group.userData.box = box;
       if (animate && settled) { move = { t0: performance.now(), p, box, toward, placed: false }; return; }
       move = null;
-      setScaleInfo({ kind: ref.kind, bar: ref.place(p, box, toward) });
+      const bar = ref.place(p, box, toward); setScaleInfo({ kind: ref.kind, bar }); // place first: it decides the kind
     };
     const stepReference = () => {
       const ref = referenceRef.current;
@@ -198,7 +206,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
         const k = Math.min(1, (now - move.t0) / MOVE_OUT_MS);
         setOpacity(ref.group, 1 - k);
         if (k < 1) return;
-        setScaleInfo({ kind: ref.kind, bar: ref.place(move.p, move.box, move.toward) });
+        const bar = ref.place(move.p, move.box, move.toward); setScaleInfo({ kind: ref.kind, bar });
         move.placed = true; move.t0 = now;
       }
       const k = Math.min(1, (now - move.t0) / MOVE_IN_MS);
@@ -209,7 +217,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       const o = objectRef.current;
       // Held at the passage's angle while one is being read, turning freely otherwise.
       const view = modelViewAt(m, locRef.current, stateRef.current);
-      viewRef.current = JSON.stringify(view);
+      viewRef.current = aimKey(m, locRef.current, stateRef.current);
       controls.autoRotate = !view;
       applyCuts();
       if (!o) return;
@@ -230,13 +238,15 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       controls.target.lerpVectors(framing.from, framing.to, ease);
       const d = framing.fromDist + (framing.toDist - framing.fromDist) * ease;
       camera.position.copy(controls.target).addScaledVector(dir, d);
-      camera.near = d / 500; camera.far = d * 10; camera.updateProjectionMatrix();
+      // Far enough to take in the whole model from wherever the camera is, as close in as it frames.
+      camera.near = d / 500; camera.far = Math.max(d * 10, (d + reach) * 2); camera.updateProjectionMatrix();
       if (k >= 1) framing = null;
     };
     // The cutaway (see `cutParts`): parts cut at the reader's choice use `cut`, which the Show outside /
     // Show inside button moves out of the way; parts cut at a step use `stepCut`.
     const cut = new THREE.Plane(), stepCut = new THREE.Plane();
     let centre: THREE.Vector3 | null = null, cuts: [THREE.Material, CutHow][] = [];
+    let reach = 0; // the model's bounding radius
     const applyCuts = () => {
       const o = objectRef.current;
       if (!o || !cuts.length) return;
@@ -255,10 +265,21 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       if (disposed) { disposeObject(o); return; } // a glTF that finished loading after the view closed
       const reference = m.scale && scaleReference(m.scale, new THREE.Box3().setFromObject(o));
       scene.add(o); fit(o); objectRef.current = o;
+      const box = new THREE.Box3().setFromObject(o);
+      reach = box.getBoundingSphere(new THREE.Sphere()).radius;
       if (reference) {
         // A sibling of the model, not a part of it, moved by the same offset `fit` gave the model.
         reference.group.position.copy(o.position); reference.group.visible = showScaleRef.current;
         scene.add(reference.group); referenceRef.current = reference;
+        // A model big enough for the map loads it, and the reference is placed afresh with it.
+        if (Math.max(...box.getSize(new THREE.Vector3()).toArray()) * m.scale!.metres >= MAP_FROM_M) {
+          void Promise.all([loadMap(), import('@/lib/models/map')]).then(([data, { mapReference }]) => {
+            if (disposed) return;
+            reference.setMap(mapReference(data, m.scale!.metres));
+            reference.group.userData.at = undefined;
+            frameRef.current(false);
+          }).catch(() => { /* no map data: the figure stays */ });
+        }
       }
       cuts = cutParts(o); centre = cutCentre(o);
       // Only parts cut at the reader's choice get the button; step cuts follow the text.
@@ -266,7 +287,7 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       syncParts(m, o, locRef.current, stateRef.current, null);
       frameRef.current(false);
     };
-    if (m.kind === 'procedural' && m.procedural) place(buildProcedural(m.procedural));
+    if (m.kind === 'procedural' && m.procedural) place(buildProcedural(m.procedural, readingId));
     else if (m.kind === 'gltf' && m.src) new GLTFLoader().load(`${import.meta.env.BASE_URL}${m.src}`, (g) => place(g.scene));
     let raf = 0;
     const loop = () => { animateArrivals(arrivals.current); stepFraming(); stepReference(); controls.update(); stepCutaway(); renderer.render(scene, camera); raf = requestAnimationFrame(loop); };
@@ -283,11 +304,11 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       renderer.dispose(); renderer.forceContextLoss(); host.removeChild(renderer.domElement);
       objectRef.current = null; referenceRef.current = null; arrivals.current = [];
     };
-  }, [m]);
+  }, [m, readingId]);
   useEffect(() => {
     if (!objectRef.current) return;
     const shown = syncParts(m, objectRef.current, loc, stateId, arrivals.current);
-    if (shown || JSON.stringify(modelViewAt(m, loc, stateId)) !== viewRef.current) frameRef.current(true);
+    if (shown || aimKey(m, loc, stateId) !== viewRef.current) frameRef.current(true);
   }, [m, loc, stateId]);
   useEffect(() => {
     if (!referenceRef.current) return;
@@ -306,6 +327,38 @@ function ModelView({ m, loc }: { m: Model3D; loc: VerseLoc }) {
       {scaleInfo && showScale && <ScaleNote m={m} kind={scaleInfo.kind} bar={scaleInfo.bar} />}
       {!!m.states?.length && !modelBuildAt(m, loc) && <ModelStates m={m} current={stateId} reading={reading?.state.id === stateId ? reading : null} onPick={(id) => setPicked({ auto, id })} />}
     </>
+  );
+}
+
+/** One model's card. A model the text allows more than one reading of shows the first, with a button for each. */
+function ModelCard({ m, loc }: { m: Model3D; loc: VerseLoc }) {
+  const [readingId, setReadingId] = useState(m.readings?.[0]?.id);
+  const estimates = modelEstimates(m, readingId);
+  return (
+    <div className="card" id={`model-${m.id}`}>
+      <h3><span style={{ flex: 1 }}>{m.title}</span><ConfidenceBadge c={m.confidence} /></h3>
+      <div className="verses">{m.dimensions && <span className="badge kind">{m.dimensions}</span>}{m.verses.map((r) => <RefChip key={r} r={r} />)}</div>
+      <ModelView m={m} loc={loc} readingId={readingId} />
+      {!!m.readings?.length && <ModelReadings m={m} current={readingId} onPick={setReadingId} />}
+      <BuildProgress m={m} loc={loc} estimates={estimates} />
+      <p className="summary">{m.summary}</p>
+      <Estimates estimates={estimates} />
+      <MediaList media={m.media} />
+      <SourceList sources={m.sources} traditions={m.traditions} />
+    </div>
+  );
+}
+
+/** Buttons for each reading of the text the model can be drawn as, and what the one shown rests on and who holds it. */
+function ModelReadings({ m, current, onPick }: { m: Model3D; current?: string; onPick: (id: string) => void }) {
+  const reading = m.readings?.find((r) => r.id === current);
+  return (
+    <div className="model-states">
+      <div role="group" aria-label="Draw the model as one reading of the text">
+        {m.readings!.map((r) => <button type="button" key={r.id} aria-pressed={r.id === current} onClick={() => onPick(r.id)}>{r.label}</button>)}
+      </div>
+      {reading && <p>{reading.basis}{!!reading.traditions?.length && <> Held by: {reading.traditions.join('; ')}.</>}</p>}
+    </div>
   );
 }
 
@@ -334,11 +387,13 @@ function ModelStates({ m, current, reading, onPick }: { m: Model3D; current: str
 }
 
 /** What the size references are and what they rest on. */
-function ScaleNote({ m, kind, bar }: { m: Model3D; kind: ScaleReference['kind']; bar: string }) {
+function ScaleNote({ m, kind, bar }: { m: Model3D; kind: ScaleKind; bar: string }) {
   const unit = m.scale?.unit;
   return (
     <p className="scale-note">
-      {kind === 'figure'
+      {kind === 'map'
+        ? <>Map: the coasts, rivers and cities round Jerusalem at the same scale, laid flat with Jerusalem under the middle of the model, only to compare sizes. Distances and bearings from Jerusalem are true (an azimuthal equidistant projection). Coasts, rivers and lakes from Natural Earth (public domain); cities from OpenBible.info. Where the text turns to a smaller part (the New Jerusalem's wall and gates), the camera closes in and the figure stands there instead.</>
+        : kind === 'figure'
         ? <>Figure ≈ {formatMetres(FIGURE_M)}{unit && m.scale && <> (≈ {(FIGURE_M / m.scale.metres).toFixed(1)} {unit}s)</>}: the average height of a Judaean man in the first century, from skeletal remains (J. E. Taylor, <i>What Did Jesus Look Like?</i>, 2018).</>
         : <>Hand ≈ 18 cm long: its palm is one handbreadth across (⅙ cubit, ≈ {formatMetres(CUBIT_M / 6)}), its length drawn in proportion.</>}
       {' '}Bar: {bar}.
@@ -352,23 +407,23 @@ const partLabel = (name: string) => name.replace(/-/g, ' ');
  * Where the reader is in a build: the passage, how many steps are done, and for the latest step
  * its own note and what each estimated part it adds rests on.
  */
-function BuildProgress({ m, loc }: { m: Model3D; loc: VerseLoc }) {
+function BuildProgress({ m, loc, estimates }: { m: Model3D; loc: VerseLoc; estimates: Record<string, string> }) {
   const at = modelBuildAt(m, loc);
   if (!at) return m.builds?.length ? <p className="build-progress">Builds as you read {m.builds.map((b) => formatRef(b.ref)).join(' or ')}.</p> : null;
   const step = at.build.steps[at.step - 1];
-  const notes = step ? [step.basis, ...step.parts.map((p) => m.estimates?.[p] && `${partLabel(p)}: ${m.estimates[p]}`)].filter((n): n is string => !!n) : [];
+  const notes = step ? [step.basis, ...step.parts.map((p) => estimates[p] && `${partLabel(p)}: ${estimates[p]}`)].filter((n): n is string => !!n) : [];
   return (
     <p className="build-progress">
       Building from {formatRef(at.build.ref)}: step {at.step} of {at.build.steps.length}
-      {step && <> ({step.parts.map(partLabel).join(', ')})</>}
+      {!!step?.parts.length && <> ({step.parts.map(partLabel).join(', ')})</>}
       {notes.map((n) => <small key={n}>≈ {n}</small>)}
     </p>
   );
 }
 
 /** Every estimated part of the model and what it rests on, so the whole model is labelled too, not only a build's latest step. */
-function Estimates({ m }: { m: Model3D }) {
-  const list = Object.entries(m.estimates ?? {});
+function Estimates({ estimates }: { estimates: Record<string, string> }) {
+  const list = Object.entries(estimates);
   if (!list.length) return null;
   return (
     <details className="estimates">
@@ -395,18 +450,7 @@ export function ModelsPanel() {
   return (
     <div className="panel-body">
       {list.length === 0 && <div className="empty"><p>No models for this chapter yet.</p><small>Register one in <code>content/models.json</code> — procedural (code) or glTF with attribution.</small></div>}
-      {list.map((m) => (
-        <div className="card" key={m.id} id={`model-${m.id}`}>
-          <h3><span style={{ flex: 1 }}>{m.title}</span><ConfidenceBadge c={m.confidence} /></h3>
-          <div className="verses">{m.dimensions && <span className="badge kind">{m.dimensions}</span>}{m.verses.map((r) => <RefChip key={r} r={r} />)}</div>
-          <ModelView m={m} loc={loc} />
-          <BuildProgress m={m} loc={loc} />
-          <p className="summary">{m.summary}</p>
-          <Estimates m={m} />
-          <MediaList media={m.media} />
-          <SourceList sources={m.sources} traditions={m.traditions} />
-        </div>
-      ))}
+      {list.map((m) => <ModelCard key={m.id} m={m} loc={loc} />)}
     </div>
   );
 }

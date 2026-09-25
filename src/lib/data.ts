@@ -1,5 +1,5 @@
 import type { CircleData } from './circle';
-import type { BibleBook, InterlinearVerse, Place, StrongsEntry, Xrefs } from './types';
+import type { BibleBook, InterlinearVerse, MapData, Place, StrongsEntry, Xrefs } from './types';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const cache = new Map<string, Promise<unknown>>();
@@ -20,6 +20,8 @@ export const loadXrefs = (book: string) => get<Xrefs>(`xrefs/${book}.json`).catc
 export const loadCircle = () => get<CircleData>('circle.json');
 export const loadPlaces = () => get<Place[]>('places/index.json');
 export const loadPlacesForBook = (book: string) => get<Record<string, string[]>>(`places/by-book/${book}.json`).catch(() => ({}));
+
+export const loadMap = () => get<MapData>('map.json');
 
 export async function loadStrongs(id: string): Promise<StrongsEntry | undefined> {
   const m = /^([HG])(\d+)$/.exec(id);

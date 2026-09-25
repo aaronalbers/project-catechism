@@ -25,6 +25,16 @@ export interface Place {
   image: { url: string; credit: string; creditUrl: string; license: string; description: string } | null;
 }
 
+/**
+ * The lands round Jerusalem, for the size reference beside a model too big for a figure (public/data/map.json):
+ * lines as flat [lon, lat, lon, lat, …] runs within `km` of `centre`, from Natural Earth, and cities from OpenBible.
+ */
+export interface MapData {
+  centre: [number, number]; km: number;
+  coast: number[][]; rivers: number[][]; lakes: number[][];
+  cities: { name: string; lon: number; lat: number }[];
+}
+
 /** Every claim in the curated content points at one or more of these. */
 export type SourceKind = 'scripture' | 'archaeology' | 'primary' | 'scholarship' | 'lexicon' | 'image' | 'video' | 'data';
 export interface Source {
@@ -108,8 +118,10 @@ export type ModelAngle = [number, number];
  * open the parts the model flags `cutaway: 'step'` while this step is read, for a part put on under
  * them (the high priest's undergarments, under the tunic and robe). The part a step adds is never cut,
  * unless `cuts` names it: a lining added with what it would hide (the temple's gold and its chains).
+ * `frame` names what the camera frames instead of what the step adds, drawn yet or not: a part too big
+ * to see whole at the scale the text is working at (the New Jerusalem's wall, framed at one gate).
  */
-export interface ModelStep { ref: Ref; parts: string[]; basis?: string; view?: ModelAngle; cutaway?: boolean; cuts?: string[] }
+export interface ModelStep { ref: Ref; parts: string[]; basis?: string; view?: ModelAngle; cutaway?: boolean; cuts?: string[]; frame?: string[] }
 /**
  * A passage that describes the model piece by piece; while reading it, only the parts reached so
  * far are shown. `omits` names parts this account never adds, and why; every other part must be
@@ -136,6 +148,13 @@ export interface ModelStateAccount { ref: Ref; changes: ModelChange[] }
  * alternate: it is never drawn as built, and no build adds it. `basis` says what the state rests on.
  */
 export interface ModelState { id: string; label: string; basis: string; accounts: ModelStateAccount[] }
+/**
+ * One way of reading a model's text, when the text allows more than one (the New Jerusalem's wall as the
+ * city's face, or as a wall at its foot). The first is the default; the viewer offers the others with a
+ * button each. The builder draws each under the same part names, so the model's builds serve all of them.
+ * `estimates` adds to, or replaces, the model's own for this reading.
+ */
+export interface ModelReading { id: string; label: string; basis: string; traditions?: string[]; estimates?: Record<string, string> }
 export interface Model3D {
   id: string; title: string; verses: Ref[]; summary: string;
   kind: 'procedural' | 'gltf'; procedural?: ProceduralKind; src?: string;
@@ -149,6 +168,7 @@ export interface Model3D {
   states?: ModelState[];
   /** What each estimated part rests on, keyed by part name; shown with every step that adds the part, and listed under the model. */
   estimates?: Record<string, string>;
+  readings?: ModelReading[];
 }
 export type VideoKind = 'overview' | 'series' | 'theme' | 'word' | 'insight' | 'commentary' | 'how-to-read' | 'podcast' | 'class' | 'short' | 'remix';
 /**
