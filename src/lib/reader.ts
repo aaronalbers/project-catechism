@@ -20,8 +20,11 @@ export interface ReaderState {
   continuous: boolean;
 }
 
+// The browser's own voice by default: it starts at once, where Kokoro downloads a model and synthesizes each verse first.
+const engine = readStored<ReaderState['engine']>('tts.engine', 'browser');
+const defaultVoice = (e: ReaderState['engine']) => (e === 'kokoro' ? 'bm_george' : 'default');
 let rs: ReaderState = {
-  status: 'idle', engine: readStored<ReaderState['engine']>('tts.engine', 'kokoro'), device: canUseKokoroGPU() ? readStored<KokoroDevice>('tts.device', 'webgpu') : 'wasm', voice: readStored('tts.voice', 'bm_george'), speed: readStored('tts.speed', 1), progress: null, error: null, continuous: true,
+  status: 'idle', engine, device: canUseKokoroGPU() ? readStored<KokoroDevice>('tts.device', 'webgpu') : 'wasm', voice: readStored('tts.voice', defaultVoice(engine)), speed: readStored('tts.speed', 1), progress: null, error: null, continuous: true,
 };
 const listeners = new Set<() => void>();
 function set(p: Partial<ReaderState>) {
@@ -107,7 +110,7 @@ function restartWith(p: Partial<ReaderState>) {
   set(p);
   if (was) void play();
 }
-export function setEngine(engine: ReaderState['engine']) { restartWith({ engine, voice: engine === 'kokoro' ? 'bm_george' : 'default', error: null }); }
+export function setEngine(engine: ReaderState['engine']) { restartWith({ engine, voice: defaultVoice(engine), error: null }); }
 export function setDevice(device: KokoroDevice) { restartWith({ device, error: null }); }
 export function setVoice(voice: string) { restartWith({ voice }); }
 export function setSpeed(speed: number) { restartWith({ speed }); }

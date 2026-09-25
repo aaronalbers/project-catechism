@@ -65,8 +65,9 @@ directly.
 `src/lib/reader.ts` is the reason for that design: verse-by-verse audio playback advances
 `loc` as it reads, so pressing play makes every panel follow along. It holds its own small
 store for playback settings and calls into `src/lib/tts.ts`, which puts two engines behind
-one `Engine` interface — Kokoro (neural, runs in a Web Worker, fp32/WebGPU ≈330 MB or
-q8/WASM ≈90 MB, user's choice) and the Web Speech API as a no-download fallback.
+one `Engine` interface — the Web Speech API, the default, which needs no download, and Kokoro
+(neural, runs in a Web Worker, fp32/WebGPU ≈330 MB or q8/WASM ≈90 MB, user's choice), which
+is slower to start. If Kokoro fails to load, playback falls back to the browser's voice.
 
 ### References are strings, parsed everywhere
 

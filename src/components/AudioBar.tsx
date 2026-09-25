@@ -25,14 +25,14 @@ export function AudioBar() {
           {r.error ? <span style={{ color: 'var(--danger)' }}>{r.error}</span>
             : r.progress ? r.progress.label
             : r.status === 'playing' ? 'Reading… every panel follows the verse being read'
-            : r.engine === 'kokoro' ? `Kokoro neural voice runs in your browser — first play downloads the ${r.device === 'webgpu' ? '330 MB GPU' : '90 MB CPU'} model once, then it is cached` : 'Using your browser’s built-in voice'}
+            : r.engine === 'kokoro' ? `Kokoro neural voice runs in your browser — first play downloads the ${r.device === 'webgpu' ? '330 MB GPU' : '90 MB CPU'} model once, then it is cached` : 'Using your browser’s built-in voice — choose Kokoro for a neural voice (downloads a model first)'}
         </div>
         {r.progress && r.progress.fraction < 1 && <div className="progress"><span style={{ width: `${Math.round(r.progress.fraction * 100)}%` }} /></div>}
       </div>
       <div className="controls">
         <select aria-label="Voice engine" value={r.engine} onChange={(e) => setEngine(e.target.value as 'kokoro' | 'browser')}>
-          <option value="kokoro">Kokoro</option>
           <option value="browser">Browser</option>
+          <option value="kokoro">Kokoro</option>
         </select>
         {r.engine === 'kokoro' && canUseKokoroGPU() && (
           <select aria-label="Kokoro build" value={r.device} onChange={(e) => setDevice(e.target.value as 'webgpu' | 'wasm')} title="GPU: best quality and speed, 330 MB download. CPU: 90 MB, works on any device.">

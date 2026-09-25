@@ -1,5 +1,5 @@
-// Two speech engines behind one interface. `KokoroEngine` is the default
-// (neural, runs locally); `BrowserEngine` (Web Speech API) needs no download.
+// Two speech engines behind one interface. `BrowserEngine` (Web Speech API) is the default and
+// needs no download; `KokoroEngine` is neural and runs locally, slower to start.
 import type { WorkerIn, WorkerOut } from '@/workers/tts.worker';
 
 export interface SpeakOptions { voice: string; speed: number; signal: AbortSignal }
@@ -130,8 +130,8 @@ export class BrowserEngine implements Engine {
   readonly id = 'browser' as const;
   async load() { if (!('speechSynthesis' in window)) throw new Error('This browser has no speech synthesis.'); }
   voices() {
-    const vs = speechSynthesis.getVoices().filter((v) => v.lang.startsWith('en'));
-    return vs.length ? vs.map((v) => ({ id: v.name, label: `${v.name} (${v.lang})` })) : [{ id: 'default', label: 'System default' }];
+    // 'default' leaves the utterance's voice unset, so the system's own choice speaks; it is listed so the menu shows it.
+    return [{ id: 'default', label: 'System default' }, ...speechSynthesis.getVoices().filter((v) => v.lang.startsWith('en')).map((v) => ({ id: v.name, label: `${v.name} (${v.lang})` }))];
   }
   prefetch() { /* nothing to warm */ }
   async speak(text: string, opts: SpeakOptions) {

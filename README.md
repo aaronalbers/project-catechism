@@ -23,8 +23,9 @@ The reader sits in the middle; a context panel follows the current verse.
 | **Models** | Rotatable 3D models built to published dimensions | `content/models.json` (procedural or glTF) |
 | **Videos** | Every BibleProject video for the passage — book overviews, themes, word studies, visual commentaries, podcast episodes and Shorts — plus the whole library by series; word studies also appear on their Hebrew/Greek word in **Words** | `content/videos.json` (YouTube, click-to-load; site-only videos link to bibleproject.com) |
 
-Press play and the whole page reads along: a neural voice (Kokoro-82M) runs in
-your browser, highlighting each verse and updating every panel as it goes.
+Press play and the whole page reads along in your browser's own voice, highlighting
+each verse and updating every panel as it goes. A neural voice (Kokoro-82M) that runs
+in the browser is one click away; it downloads a model first and is slower to start.
 
 ### Every card carries a confidence badge
 
