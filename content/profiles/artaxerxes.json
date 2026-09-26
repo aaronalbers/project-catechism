@@ -1,0 +1,39 @@
+{
+ "id": "artaxerxes",
+ "name": "Artaxerxes",
+ "role": "King of Persia who sent Ezra and Nehemiah",
+ "people": ["artaxerxes_314", "artaxerxes_313"],
+ "when": "≈ 465–424 BC reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. Ezra and Nehemiah name no number; the two men are usually dated under Artaxerxes I.",
+ "summary": "King of Persia who, on a complaint from the officials of Samaria, ordered the rebuilding of Jerusalem's walls stopped. He later sent Ezra the priest to teach the Law, with a letter granting silver, gold and temple vessels. In his twentieth year he saw his cupbearer Nehemiah's sad face, asked his request, and sent him to rebuild the city, with letters to the governors and the keeper of the king's forest.",
+ "body": [
+  "His letter to Ezra calls himself king of kings, frees the temple staff from tax, and gives Ezra authority to appoint magistrates and punish anyone who will not obey the law of God and of the king. Nehemiah served as governor from his twentieth to his thirty-second year, then returned to him."
+ ],
+ "moments": [
+  {"ref": "Ezra.4.7", "text": "The letter from Samaria"},
+  {"ref": "Ezra.4.21", "text": "Orders the work stopped"},
+  {"ref": "Ezra.7.1", "text": "Ezra comes in his reign"},
+  {"ref": "Ezra.7.12", "text": "“Artaxerxes, king of kings”"},
+  {"ref": "Ezra.7.21", "text": "His decree to the treasurers"},
+  {"ref": "Ezra.7.24", "text": "The temple staff freed from tax"},
+  {"ref": "Neh.2.1-2", "text": "Sees Nehemiah sad"},
+  {"ref": "Neh.2.4-5", "text": "“What is your request?”"},
+  {"ref": "Neh.2.8", "text": "Letters for timber"},
+  {"ref": "Neh.5.14", "text": "Nehemiah governor"},
+  {"ref": "Neh.13.6", "text": "Nehemiah returns to him"}
+ ],
+ "later": [
+  {"text": "Which Artaxerxes sent Ezra is disputed. Taken in the text's order, Ezra came in the seventh year of Artaxerxes I, ≈458 BC, before Nehemiah; since Albin van Hoonacker (1890) some have argued for the seventh year of Artaxerxes II, ≈398 BC, after him.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Ezra.7.7-8"}, {"kind": "scholarship", "title": "Ezra, Nehemiah (Word Biblical Commentary 16)", "author": "H. G. M. Williamson", "year": 1985}], "traditions": ["Artaxerxes I: the text's order and many commentators", "Artaxerxes II: Albin van Hoonacker and some later scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ezra.4.7-23"},
+  {"kind": "scripture", "ref": "Ezra.7.1-28"},
+  {"kind": "scripture", "ref": "Neh.2.1-9"},
+  {"kind": "scripture", "ref": "Neh.5.14"},
+  {"kind": "scripture", "ref": "Neh.13.6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/106.Artaxerxes_Grants_Freedom_to_the_Jews.jpg/500px-106.Artaxerxes_Grants_Freedom_to_the_Jews.jpg", "caption": "Artaxerxes grants freedom to the Jews, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:106.Artaxerxes_Grants_Freedom_to_the_Jews.jpg", "license": "Public domain"}
+ ]
+}

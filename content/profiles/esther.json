@@ -1,0 +1,35 @@
+{
+ "id": "esther",
+ "name": "Esther",
+ "role": "Jewish queen of Persia who saved her people",
+ "people": ["esther_1343"],
+ "when": "≈ 479 BC made queen",
+ "whenBasis": "She is taken to the king in the seventh year of his reign (Esther 2:16). The BSB names him Xerxes; if he is Xerxes I (486–465 BC), as most identify him, that is ≈479 BC.",
+ "summary": "Hadassah, an orphan raised by her cousin Mordecai in Susa, became queen of Persia. When Haman won a decree to destroy the Jews, she went to the king unsummoned at the risk of her life, exposed Haman, and won the Jews the right to defend themselves. The feast of Purim keeps the day.",
+ "body": [
+  "Mordecai raises her as his own daughter; she is chosen from the young women gathered for the king and made queen in place of Vashti, keeping her people secret at Mordecai's word.",
+  "When Haman, the king's chief official, obtains a decree to destroy every Jew in the empire, Mordecai urges her to speak: “who knows if perhaps you have come to the kingdom for such a time as this?” To go to the king unsummoned is death unless he holds out his sceptre. She asks the Jews of Susa to fast three days, and goes: “if I perish, I perish.”",
+  "The king receives her. At a second banquet she names Haman as the enemy, and he is hanged on the gallows he built for Mordecai. A decree cannot be revoked, so a second lets the Jews defend themselves. Esther and Mordecai write to confirm the feast of Purim."
+ ],
+ "moments": [
+  {"ref": "Esth.2.7", "text": "Hadassah, raised by Mordecai"},
+  {"ref": "Esth.2.17", "text": "Made queen in place of Vashti"},
+  {"ref": "Esth.4.14", "text": "“For such a time as this”"},
+  {"ref": "Esth.4.16", "text": "“If I perish, I perish”"},
+  {"ref": "Esth.5.2", "text": "The king holds out his sceptre"},
+  {"ref": "Esth.7.6", "text": "Names Haman"},
+  {"ref": "Esth.8.11", "text": "The Jews may defend themselves"},
+  {"ref": "Esth.9.29-32", "text": "Confirms Purim"}
+ ],
+ "later": [
+  {"text": "The king the Hebrew calls Ahasuerus is identified with Xerxes I, whose Persian name, Xšayāršā, the Hebrew spelling follows. The Septuagint instead calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Herodotus, Histories, book 7", "note": "Xerxes' reign and court"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}]},
+  {"text": "The Hebrew book never names God. The Greek adds six passages, with prayers of Mordecai and Esther among them. Catholic and Orthodox Bibles include them; Jewish and most Protestant Bibles do not.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Septuagint Esther, Additions A–F"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Esth.2.5-9.32"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Edwin_Long_-_Queen_Esther_-_Google_Art_Project.jpg/500px-Edwin_Long_-_Queen_Esther_-_Google_Art_Project.jpg", "caption": "Queen Esther, Edwin Long, 1878. National Gallery of Victoria, Melbourne.", "credit": "Edwin Long, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Edwin_Long_-_Queen_Esther_-_Google_Art_Project.jpg", "license": "Public domain"}
+ ]
+}

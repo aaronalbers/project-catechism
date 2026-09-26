@@ -1,0 +1,27 @@
+{
+ "id": "gehazi",
+ "name": "Gehazi",
+ "role": "Elisha's servant",
+ "people": ["gehazi_1293"],
+ "when": "≈ 850–795 BC",
+ "whenBasis": "From his call under Ahab to his death under Jehoash of Israel (2 Kings 13:14–20), in Thiele's reckoning; the other readings in the Reign tab differ by a few years.",
+ "summary": "Elisha's servant. He pointed out that the Shunammite woman had no son, and was sent ahead with Elisha's staff to lay on the dead boy, without effect. When Elisha refused Naaman's gifts, Gehazi ran after him, invented a request for two young prophets, and took silver and clothing; Elisha knew, and Naaman's leprosy clung to him. Later he told the king of Israel of Elisha's deeds as the Shunammite came to appeal for her land.",
+ "body": [
+  "He pushes the grieving mother away from Elisha's feet, and is told to let her alone. Asked where he has been, he says, “Your servant did not go anywhere.” Elisha answers, “Did not my spirit go with you?” He goes out a leper, white as snow."
+ ],
+ "moments": [
+  {"ref": "2Kgs.4.12-14", "text": "“She has no son”"},
+  {"ref": "2Kgs.4.27", "text": "Pushes her away"},
+  {"ref": "2Kgs.4.29-31", "text": "Lays the staff on the boy"},
+  {"ref": "2Kgs.5.20-23", "text": "Runs after Naaman"},
+  {"ref": "2Kgs.5.25-26", "text": "“Did not my spirit go with you?”"},
+  {"ref": "2Kgs.5.27", "text": "A leper"},
+  {"ref": "2Kgs.8.4-5", "text": "Tells the king of Elisha"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.4.8-37"},
+  {"kind": "scripture", "ref": "2Kgs.5.19-27"},
+  {"kind": "scripture", "ref": "2Kgs.8.1-6"}
+ ]
+}

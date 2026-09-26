@@ -1,0 +1,26 @@
+{
+ "id": "potiphar",
+ "name": "Potiphar",
+ "role": "Egyptian officer who bought Joseph",
+ "people": ["potiphar_2368"],
+ "summary": "An officer of Pharaoh and captain of the guard, who bought Joseph from the Ishmaelites. Seeing that the LORD was with him, he put Joseph in charge of his whole house. When his wife accused Joseph of assault, he was enraged and put him in the prison where the king's prisoners were kept.",
+ "body": [
+  "Genesis says the LORD blessed Potiphar's house for Joseph's sake, so that he concerned himself with nothing but the food he ate. His wife, unnamed, repeatedly asks Joseph to lie with her; he refuses, and when she seizes his cloak he flees, leaving it. She shows it to the household and to her husband as proof.",
+  "The text records Potiphar's anger but not his thoughts. Joseph is put in the royal prison rather than put to death."
+ ],
+ "moments": [
+  {"ref": "Gen.37.36", "text": "Buys Joseph"},
+  {"ref": "Gen.39.1-4", "text": "Puts Joseph over his house"},
+  {"ref": "Gen.39.5-6", "text": "His house blessed"},
+  {"ref": "Gen.39.7-12", "text": "His wife and Joseph"},
+  {"ref": "Gen.39.19-20", "text": "Puts Joseph in prison"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.37.36"},
+  {"kind": "scripture", "ref": "Gen.39.1-23"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Rembrandt_Workshop%2C_Joseph_Accused_by_Potiphar%27s_Wife%2C_1655%2C_NGA_86.jpg/500px-Rembrandt_Workshop%2C_Joseph_Accused_by_Potiphar%27s_Wife%2C_1655%2C_NGA_86.jpg", "caption": "Joseph accused by Potiphar's wife (Genesis 39:16–18), Rembrandt's workshop, 1655. National Gallery of Art, Washington.", "credit": "Rembrandt workshop, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Rembrandt_Workshop,_Joseph_Accused_by_Potiphar%27s_Wife,_1655,_NGA_86.jpg", "license": "CC0"}
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "simon-magus",
+ "name": "Simon the sorcerer",
+ "role": "Samaritan magician who tried to buy the Spirit",
+ "people": ["simon_2752"],
+ "when": "≈ AD 30–35",
+ "whenBasis": "The first years of the Jerusalem church, between the crucifixion (AD 30 or 33) and Saul's conversion, which Paul's own reckoning (Galatians 1:18; 2:1) and the Gallio date put ≈AD 33–35.",
+ "summary": "A man who practised sorcery in Samaria and astounded the people, who called him the divine power called the Great Power. When Philip preached, Simon too believed and was baptised, and followed Philip, amazed at his signs. When Peter and John laid hands on the Samaritans and they received the Holy Spirit, Simon offered them money for the same power. Peter answered, “May your silver perish with you,” and told him to repent; Simon asked Peter to pray for him.",
+ "body": [
+  "Peter tells him he has no part in this matter, because his heart is not right before God, and that he is poisoned by bitterness and captive to iniquity."
+ ],
+ "moments": [
+  {"ref": "Acts.8.9-10", "text": "The Great Power"},
+  {"ref": "Acts.8.13", "text": "Believes and is baptised"},
+  {"ref": "Acts.8.18-19", "text": "Offers money"},
+  {"ref": "Acts.8.20", "text": "“May your silver perish with you”"},
+  {"ref": "Acts.8.22-23", "text": "“Repent”"},
+  {"ref": "Acts.8.24", "text": "“Pray to the Lord for me”"}
+ ],
+ "later": [
+  {"text": "Justin Martyr and Irenaeus make Simon Magus a false messiah honoured in Rome and the father of the Gnostic heresies; later legend has him fall to his death in a contest with Peter.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Justin Martyr, First Apology 26"}, {"kind": "primary", "title": "Irenaeus, Against Heresies 1.23"}, {"kind": "primary", "title": "Acts of Peter 32"}], "traditions": ["Justin Martyr", "Irenaeus", "the Acts of Peter"]},
+  {"text": "Simony, the buying or selling of church office, is named after him.", "confidence": "evidence", "sources": [{"kind": "lexicon", "title": "simony, from Late Latin simonia"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.8.9-24"}
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "achan",
+ "name": "Achan",
+ "role": "Took the devoted things at Jericho",
+ "people": ["achan_61"],
+ "summary": "Son of Carmi, of Judah. At Jericho, where everything was devoted to the LORD, he took a fine cloak from Shinar, two hundred shekels of silver and a bar of gold, and hid them under his tent. Israel was routed at Ai. Chosen by lot, he confessed, and he and his household were stoned in the Valley of Achor.",
+ "body": [
+  "Joshua, after the defeat, tears his clothes before the ark; the LORD tells him Israel has sinned by taking devoted things. The tribes come forward, then clans, then households, and the lot falls on Achan.",
+  "“It is true,” he says, “I have sinned against the LORD,” and tells what he saw, coveted and took. The valley is named Achor, trouble, and the Chronicler calls him Achar, the one who brought trouble on Israel."
+ ],
+ "moments": [
+  {"ref": "Josh.7.1", "text": "Takes devoted things"},
+  {"ref": "Josh.7.4-5", "text": "Defeat at Ai"},
+  {"ref": "Josh.7.16-18", "text": "Chosen by lot"},
+  {"ref": "Josh.7.20-21", "text": "Confesses"},
+  {"ref": "Josh.7.24-26", "text": "The Valley of Achor"},
+  {"ref": "Josh.22.20", "text": "Remembered"},
+  {"ref": "1Chr.2.7", "text": "“Achar”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Josh.6.17-19"},
+  {"kind": "scripture", "ref": "Josh.7.1-26"},
+  {"kind": "scripture", "ref": "1Chr.2.7"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/048.Achan_Is_Stoned_to_Death.jpg/500px-048.Achan_Is_Stoned_to_Death.jpg", "caption": "Achan is stoned (Joshua 7:25), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:048.Achan_Is_Stoned_to_Death.jpg", "license": "Public domain"}
+ ]
+}

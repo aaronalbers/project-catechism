@@ -1,0 +1,32 @@
+{
+ "id": "zedekiah",
+ "name": "Zedekiah",
+ "role": "Last king of Judah",
+ "people": ["zedekiah_1950"],
+ "when": "≈ 597–586 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Josiah, named Mattaniah, set on the throne by Nebuchadnezzar in place of his nephew Jehoiachin. He rebelled against Babylon. During the siege he consulted Jeremiah in secret but let his officials throw him into a cistern. When the wall was breached he fled by night toward the Arabah, was caught near Jericho and brought to Nebuchadnezzar at Riblah, who slaughtered his sons before his eyes, then blinded him and took him to Babylon in bronze shackles.",
+ "body": [
+  "“Is there a word from the LORD?” he asks Jeremiah privately. Jeremiah tells him that if he surrenders, his life and the city will be spared. He is afraid of the Judeans who have already deserted, and does not. Ezekiel had foretold that he would be brought to Babylon and not see it, and die there."
+ ],
+ "moments": [
+  {"ref": "2Kgs.24.17", "text": "Made king"},
+  {"ref": "2Kgs.24.20", "text": "Rebels"},
+  {"ref": "Jer.37.17", "text": "“Is there a word from the LORD?”"},
+  {"ref": "Jer.38.5", "text": "“He is in your hands”"},
+  {"ref": "Jer.38.17-19", "text": "Afraid to surrender"},
+  {"ref": "2Kgs.25.4-5", "text": "Flees, and is caught"},
+  {"ref": "2Kgs.25.6-7", "text": "Blinded at Riblah"},
+  {"ref": "Ezek.12.13", "text": "Brought to Babylon, and not see it"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.24.17-25.7"},
+  {"kind": "scripture", "ref": "2Chr.36.10-13"},
+  {"kind": "scripture", "ref": "Jer.37.1-39.7"},
+  {"kind": "scripture", "ref": "Jer.52.1-11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/102.Zedekiah%27s_Sons_Are_Slaughtered_before_His_Eyes.jpg/500px-102.Zedekiah%27s_Sons_Are_Slaughtered_before_His_Eyes.jpg", "caption": "Zedekiah's sons are slaughtered before his eyes (2 Kings 25:7), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:102.Zedekiah%27s_Sons_Are_Slaughtered_before_His_Eyes.jpg", "license": "Public domain"}
+ ]
+}

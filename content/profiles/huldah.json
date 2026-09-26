@@ -1,0 +1,26 @@
+{
+ "id": "huldah",
+ "name": "Huldah",
+ "role": "Prophetess consulted by Josiah",
+ "people": ["huldah_1567"],
+ "when": "≈ 640–609 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "A prophetess, wife of Shallum, keeper of the wardrobe, who lived in the Second District of Jerusalem. When the Book of the Law was found, Josiah's officials went to her rather than to any other prophet. She confirmed that the disaster the book threatened would come on Jerusalem, but told the king that because his heart was tender, he would be gathered to his grave in peace and not see it.",
+ "body": [
+  "Her answer begins, “This is what the LORD, the God of Israel, says,” and addresses Josiah as the man who sent them. She is one of the few women called a prophet in the Hebrew Bible, with Miriam and Deborah."
+ ],
+ "moments": [
+  {"ref": "2Kgs.22.14", "text": "The officials go to her"},
+  {"ref": "2Kgs.22.15-17", "text": "Disaster will come"},
+  {"ref": "2Kgs.22.18-20", "text": "Josiah will be spared the sight"},
+  {"ref": "2Chr.34.22", "text": "In Chronicles"}
+ ],
+ "later": [
+  {"text": "The Mishnah names the two southern gates of the Temple Mount the Huldah Gates.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Mishnah, Middot 1:3", "url": "https://www.sefaria.org/Mishnah_Middot.1.3"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.22.14-20"},
+  {"kind": "scripture", "ref": "2Chr.34.22-28"}
+ ]
+}

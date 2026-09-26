@@ -1,5 +1,5 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PROPHECIES, QUOTES, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PROFILE_INDEX, PROPHECIES, QUOTES, TALLIES } from './content';
 import { BOOKS, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
@@ -8,7 +8,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'journey' | 'prophecy' | 'quote' | 'fragment' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -91,6 +91,14 @@ export const CATALOG: CatalogSection[] = [
     entries: sorted(JOURNEYS.map((j) => ({
       id: j.id, kind: 'journey', title: j.title, summary: j.summary,
       go: j.ref, lines: [{ label: `${j.kind === 'border' ? 'Border' : 'Route'}, ${j.stations.length} places`, refs: [j.ref] }],
+    }))),
+  },
+  {
+    id: 'people', kind: 'profile', title: 'People', tab: 'people',
+    blurb: 'Written profiles, with a painting of each: what the text says of them, verse by verse, and what tradition and archaeology add.',
+    entries: sorted(PROFILE_INDEX.map((p) => ({
+      id: p.id, kind: 'profile', title: p.name, summary: p.role,
+      go: p.moments[0].ref, lines: [{ label: 'Key moments', refs: p.moments.map((m) => m.ref) }],
     }))),
   },
   {

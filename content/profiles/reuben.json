@@ -1,0 +1,32 @@
+{
+ "id": "reuben",
+ "name": "Reuben",
+ "role": "Jacob's firstborn",
+ "people": ["reuben_2429"],
+ "genealogy": "reuben",
+ "summary": "Leah's first son. He brought his mother mandrakes, lay with his father's concubine Bilhah, and tried to save Joseph from his brothers, meaning to bring him back to Jacob from the pit. He offered his own two sons as surety for Benjamin. Jacob's last words took the firstborn's place from him for defiling his father's bed.",
+ "body": [
+  "When the brothers plot to kill Joseph, Reuben persuades them to throw him into the cistern alive instead, planning to rescue him. He is away when the others sell him, and returns to find the pit empty, tearing his clothes.",
+  "In Egypt, hearing the brothers blame themselves, he reminds them he told them not to sin against the boy. To win Jacob's consent for Benjamin's journey, he offers his two sons' lives as pledge. Jacob's blessing calls him uncontrolled as the waters, and 1 Chronicles explains that the birthright passed to Joseph's sons."
+ ],
+ "moments": [
+  {"ref": "Gen.29.32", "text": "Born to Leah"},
+  {"ref": "Gen.30.14", "text": "The mandrakes"},
+  {"ref": "Gen.35.22", "text": "Lies with Bilhah"},
+  {"ref": "Gen.37.21-22", "text": "Saves Joseph's life"},
+  {"ref": "Gen.37.29-30", "text": "Finds the pit empty"},
+  {"ref": "Gen.42.22", "text": "“Didn't I tell you?”"},
+  {"ref": "Gen.42.37", "text": "Pledges his sons"},
+  {"ref": "Gen.49.3-4", "text": "“Uncontrolled as the waters”"},
+  {"ref": "1Chr.5.1", "text": "The birthright to Joseph's sons"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.29.32"},
+  {"kind": "scripture", "ref": "Gen.35.22"},
+  {"kind": "scripture", "ref": "Gen.37.18-30"},
+  {"kind": "scripture", "ref": "Gen.42.22-37"},
+  {"kind": "scripture", "ref": "Gen.49.3-4"},
+  {"kind": "scripture", "ref": "1Chr.5.1-2"}
+ ]
+}

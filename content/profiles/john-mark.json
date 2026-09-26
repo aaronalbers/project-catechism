@@ -1,0 +1,41 @@
+{
+ "id": "john-mark",
+ "name": "John Mark",
+ "role": "Barnabas's cousin, who left and later rejoined Paul",
+ "people": ["mark_1679"],
+ "when": "≈ AD 44–60s",
+ "whenBasis": "From Peter's escape under Herod Agrippa I (before AD 44) to Paul's last letters.",
+ "summary": "John, also called Mark, whose mother Mary kept a house in Jerusalem where the church gathered to pray on the night Peter was freed. Barnabas and Saul took him to Antioch and on their first journey, but at Perga he left them and returned to Jerusalem. Paul refused to take him again, and the disagreement parted Paul and Barnabas. Later Paul sends greetings from Mark as a fellow worker and asks Timothy to bring him, because he is useful in the ministry. Peter calls him “my son Mark.”",
+ "body": [
+  "Colossians calls him the cousin of Barnabas."
+ ],
+ "moments": [
+  {"ref": "Acts.12.12", "text": "His mother's house"},
+  {"ref": "Acts.12.25", "text": "To Antioch"},
+  {"ref": "Acts.13.5", "text": "Their helper"},
+  {"ref": "Acts.13.13", "text": "Leaves at Perga"},
+  {"ref": "Acts.15.37-39", "text": "The disagreement"},
+  {"ref": "Col.4.10", "text": "Barnabas's cousin"},
+  {"ref": "Phlm.1.24", "text": "A fellow worker"},
+  {"ref": "2Tim.4.11", "text": "“Useful to me”"},
+  {"ref": "1Pet.5.13", "text": "“My son Mark”"}
+ ],
+ "later": [
+  {"text": "Papias, as quoted by Eusebius, says Mark became Peter's interpreter and wrote down accurately, though not in order, what he remembered of the Lord's words and deeds. The church has named him as author of the second Gospel; that he is this John Mark is a traditional identification.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.39.15"}], "traditions": ["Papias", "traditional Christian readers"]},
+  {"text": "Some take the young man who fled naked from Gethsemane, told only in Mark, to be the author himself.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.14.51-52"}], "traditions": ["some commentators"]},
+  {"text": "Eusebius says Mark founded the church of Alexandria. Venetian merchants took his relics to Venice in 828.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 2.16"}], "traditions": ["Eusebius", "the Coptic Church", "Venetian tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.12.12"},
+  {"kind": "scripture", "ref": "Acts.12.25-13.13"},
+  {"kind": "scripture", "ref": "Acts.15.36-39"},
+  {"kind": "scripture", "ref": "Col.4.10"},
+  {"kind": "scripture", "ref": "2Tim.4.11"},
+  {"kind": "scripture", "ref": "Phlm.1.24"},
+  {"kind": "scripture", "ref": "1Pet.5.13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Brooklyn_Museum_-_Saint_Mark_%28Saint_Marc%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_Saint_Mark_%28Saint_Marc%29_-_James_Tissot_-_overall.jpg", "caption": "Saint Mark, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Saint_Mark_(Saint_Marc)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

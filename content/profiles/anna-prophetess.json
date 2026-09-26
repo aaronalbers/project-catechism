@@ -1,0 +1,27 @@
+{
+ "id": "anna-prophetess",
+ "name": "Anna",
+ "role": "Prophetess who spoke of the child Jesus",
+ "people": ["anna_268"],
+ "when": "≈ 6–4 BC",
+ "whenBasis": "Jesus' birth, before Herod's death in 4 BC and perhaps up to two years before it (Matthew 2:16). See the card on dating Herod's death.",
+ "summary": "A prophetess, daughter of Phanuel of the tribe of Asher, widowed after seven years of marriage. She never left the temple, worshipping night and day with fasting and prayer. Coming up as Simeon blessed the child Jesus, she gave thanks to God and spoke about him to all who were waiting for the redemption of Jerusalem.",
+ "body": [
+  "She is one of the few women the New Testament calls a prophet, and one of the few Israelites it names from the northern tribe of Asher."
+ ],
+ "moments": [
+  {"ref": "Luke.2.36", "text": "Of the tribe of Asher"},
+  {"ref": "Luke.2.37", "text": "Worshipping night and day"},
+  {"ref": "Luke.2.38", "text": "Speaks of the child"}
+ ],
+ "later": [
+  {"text": "The Greek can mean that she was eighty-four, or that she had been a widow for eighty-four years, which would make her over a hundred.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Luke.2.37"}, {"kind": "scholarship", "title": "The Gospel According to Luke (Anchor Bible 28–28A)", "author": "Joseph A. Fitzmyer", "year": 1981}], "traditions": ["commentators, variously"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.2.36-38"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Brooklyn_Museum_-_The_Presentation_of_Jesus_in_the_Temple_%28La_pr%C3%A9sentation_de_J%C3%A9sus_au_Temple%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Presentation_of_Jesus_in_the_Temple_%28La_pr%C3%A9sentation_de_J%C3%A9sus_au_Temple%29_-_James_Tissot_-_overall.jpg", "caption": "The presentation of Jesus in the temple (Luke 2:22–38), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Presentation_of_Jesus_in_the_Temple_(La_pr%C3%A9sentation_de_J%C3%A9sus_au_Temple)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "nimrod",
+ "name": "Nimrod",
+ "role": "Mighty hunter, first king in Shinar",
+ "people": ["nimrod_2206"],
+ "summary": "A son of Cush, “a mighty hunter before the LORD,” whose name became a proverb. Genesis says his kingdom began in Babel, Erech, Akkad and Calneh in Shinar, and that from there he went into Assyria and built Nineveh. Micah calls Assyria “the land of Nimrod.”",
+ "body": [
+  "The Table of Nations pauses on him: he was the first to become a mighty one on the earth, a mighty hunter, so that people said, “Like Nimrod, a mighty hunter before the LORD.” His kingdom's cities are the great cities of Babylonia; Nineveh, Calah and Resen are Assyrian.",
+  "Genesis says nothing more of him. He is not named in the story of the tower of Babel that follows."
+ ],
+ "moments": [
+  {"ref": "Gen.10.8-9", "text": "A mighty hunter before the LORD"},
+  {"ref": "Gen.10.10", "text": "His kingdom in Shinar"},
+  {"ref": "Gen.10.11-12", "text": "Nineveh"},
+  {"ref": "1Chr.1.10", "text": "In the Chronicler's list"},
+  {"ref": "Mic.5.6", "text": "“The land of Nimrod”"}
+ ],
+ "later": [
+  {"text": "Josephus makes Nimrod the one who stirred people to build the tower of Babel in defiance of God, a reading many later retellings follow.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 1.113–114", "url": "https://www.gutenberg.org/ebooks/2848"}], "traditions": ["Josephus", "later Jewish and Christian retellings"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.10.8-12"},
+  {"kind": "scripture", "ref": "1Chr.1.10"},
+  {"kind": "scripture", "ref": "Mic.5.6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/010.The_Tower_of_Babel.jpg/500px-010.The_Tower_of_Babel.jpg", "caption": "The tower of Babel (Genesis 11), Gustave Doré, 1866. Genesis puts Babel at the start of Nimrod's kingdom (10:10); tying him to the tower is later tradition.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:010.The_Tower_of_Babel.jpg", "license": "Public domain"}
+ ]
+}

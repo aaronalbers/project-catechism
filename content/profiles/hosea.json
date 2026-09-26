@@ -1,0 +1,34 @@
+{
+ "id": "hosea",
+ "name": "Hosea",
+ "role": "Prophet whose marriage mirrored Israel's unfaithfulness",
+ "people": ["hosea_1555"],
+ "when": "≈ 750–720s BC",
+ "whenBasis": "In the reigns Hosea 1:1 names: Uzziah to Hezekiah in Judah, and Jeroboam II in Israel, in Thiele's reckoning.",
+ "summary": "Son of Beeri, a prophet to the northern kingdom in its last decades. The LORD told him to marry an adulterous wife, and he married Gomer; their children were named Jezreel, Lo-ruhamah (no compassion) and Lo-ammi (not my people), as signs of judgment. Told to love her again, he bought her back. His book pleads with Israel as a husband and a father pleads, and promises the names will be reversed.",
+ "body": [
+  "“When Israel was a child, I loved him, and out of Egypt I called My son,” the LORD says through him; “How could I give you up, O Ephraim?” He speaks against kings made without the LORD, calf-worship at Samaria, and alliances with Egypt and Assyria.",
+  "Paul quotes his reversal of the names, “I will call them ‘My people’ who are not My people,” and Matthew his words about the son called out of Egypt."
+ ],
+ "moments": [
+  {"ref": "Hos.1.1", "text": "The word to Hosea"},
+  {"ref": "Hos.1.2-3", "text": "Marries Gomer"},
+  {"ref": "Hos.1.4", "text": "Jezreel"},
+  {"ref": "Hos.1.6", "text": "Lo-ruhamah"},
+  {"ref": "Hos.1.9", "text": "Lo-ammi"},
+  {"ref": "Hos.2.23", "text": "The names reversed"},
+  {"ref": "Hos.3.1-2", "text": "Buys her back"},
+  {"ref": "Hos.6.6", "text": "“Mercy, not sacrifice”"},
+  {"ref": "Hos.11.1", "text": "“Out of Egypt I called My son”"},
+  {"ref": "Hos.11.8", "text": "“How could I give you up?”"},
+  {"ref": "Rom.9.25", "text": "Quoted by Paul"},
+  {"ref": "Matt.2.15", "text": "Quoted by Matthew"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Hos.1.1-14.9"},
+  {"kind": "scripture", "ref": "Rom.9.25-26"},
+  {"kind": "scripture", "ref": "Matt.2.15"},
+  {"kind": "scripture", "ref": "Matt.9.13"}
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "id": "elijah",
+ "name": "Elijah",
+ "role": "Prophet of Israel in the days of Ahab",
+ "people": ["elijah_1131"],
+ "when": "≈ 870s–850s BC",
+ "whenBasis": "He prophesies under Ahab and his son Ahaziah of Israel; Thiele dates Ahab ≈874–853 BC. The reckonings in the Reign tab differ by a few years.",
+ "summary": "Elijah the Tishbite, of Gilead, announced a drought to Ahab, was fed by ravens and a widow of Zarephath, and faced the prophets of Baal on Mount Carmel. Fleeing Jezebel, he met the LORD at Horeb in a still, small voice, called Elisha, and was taken up to heaven in a whirlwind.",
+ "body": [
+  "He appears without introduction, standing before Ahab to declare that there will be no dew or rain except at his word. During the drought he is fed by ravens at the brook Cherith, then by a widow of Zarephath in Sidon, whose son he raises.",
+  "On Mount Carmel he challenges the prophets of Baal to call down fire; theirs does not come, and the LORD's consumes his soaked offering. Threatened by Jezebel, he flees to Horeb and asks to die. The LORD is not in the wind, the earthquake or the fire, but comes in “a still, small voice,” and sends him back.",
+  "He throws his cloak over Elisha, condemns Ahab for Naboth's vineyard, and is taken up in a whirlwind as a chariot of fire parts him from Elisha. Malachi promises he will return before the Day of the LORD. Jesus says John the Baptist “is the Elijah who was to come,” though John, asked, says he is not; Elijah appears with Moses at the transfiguration."
+ ],
+ "moments": [
+  {"ref": "1Kgs.17.1", "text": "Announces the drought to Ahab"},
+  {"ref": "1Kgs.17.6", "text": "Fed by ravens"},
+  {"ref": "1Kgs.17.22", "text": "The widow's son lives again"},
+  {"ref": "1Kgs.18.38", "text": "Fire falls on Carmel"},
+  {"ref": "1Kgs.19.4", "text": "Under the broom tree, asks to die"},
+  {"ref": "1Kgs.19.12", "text": "A still, small voice"},
+  {"ref": "1Kgs.19.19", "text": "Throws his cloak over Elisha"},
+  {"ref": "1Kgs.21.17-19", "text": "Confronts Ahab over Naboth"},
+  {"ref": "2Kgs.2.11", "text": "Taken up in a whirlwind"},
+  {"ref": "Mal.4.5", "text": "Promised to return"},
+  {"ref": "Matt.11.14", "text": "John “is the Elijah who was to come”"},
+  {"ref": "John.1.21", "text": "John: “I am not”"},
+  {"ref": "Matt.17.3", "text": "With Moses at the transfiguration"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.17.1-2Kgs.2.12"},
+  {"kind": "scripture", "ref": "Mal.4.5-6"},
+  {"kind": "scripture", "ref": "Matt.11.14"},
+  {"kind": "scripture", "ref": "John.1.21"},
+  {"kind": "scripture", "ref": "Matt.17.3"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg/500px-Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg", "caption": "Elijah in the desert, fed by ravens (1 Kings 17), Washington Allston, 1818. Museum of Fine Arts, Boston.", "credit": "Washington Allston, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Washington_Allston_-_Elijah_in_the_Desert_-_Google_Art_Project.jpg", "license": "Public domain"}
+ ]
+}

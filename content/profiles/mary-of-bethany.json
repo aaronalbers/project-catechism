@@ -1,0 +1,35 @@
+{
+ "id": "mary-of-bethany",
+ "name": "Mary of Bethany",
+ "role": "Sister of Martha and Lazarus, who anointed Jesus",
+ "people": ["mary_1939"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "Sister of Martha and Lazarus of Bethany, who sat at the Lord's feet listening while Martha served; Jesus said she had chosen the good portion, which would not be taken from her. When Lazarus died she fell at Jesus' feet weeping, and he wept. Six days before the Passover she anointed his feet with a pint of costly nard and wiped them with her hair, and the house was filled with the fragrance.",
+ "body": [
+  "When Judas objects to the waste, Jesus answers, “Leave her alone… She has kept this perfume in preparation for the day of My burial.” Mark and Matthew tell of an unnamed woman at Bethany who poured perfume on his head, and Jesus says that wherever the gospel is preached, what she has done will be told in memory of her."
+ ],
+ "moments": [
+  {"ref": "Luke.10.39", "text": "At the Lord's feet"},
+  {"ref": "Luke.10.42", "text": "The good portion"},
+  {"ref": "John.11.1-2", "text": "The one who anointed the Lord"},
+  {"ref": "John.11.32", "text": "Falls at his feet"},
+  {"ref": "John.11.33-35", "text": "Jesus wept"},
+  {"ref": "John.12.3", "text": "Anoints his feet"},
+  {"ref": "John.12.7", "text": "“Leave her alone”"},
+  {"ref": "Mark.14.3-9", "text": "The anointing at Bethany"}
+ ],
+ "later": [
+  {"text": "Pope Gregory the Great, in a sermon of AD 591, identified her with Mary Magdalene and with the sinful woman of Luke 7; the Western church long followed him, and the Roman calendar separated them again in 1969. Eastern churches always kept them apart.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Gregory the Great, Homily 33 on the Gospels (591)"}, {"kind": "scripture", "ref": "Luke.7.36-50"}], "traditions": ["Gregory the Great and the medieval Western church", "the Eastern churches and most modern scholars, keeping them apart"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.10.38-42"},
+  {"kind": "scripture", "ref": "John.11.1-45"},
+  {"kind": "scripture", "ref": "John.12.1-8"},
+  {"kind": "scripture", "ref": "Mark.14.3-9"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Brooklyn_Museum_-_Jesus_Mary_Magdalene_and_Martha_at_Bethany_%28J%C3%A9sus_%C3%A0_Bethanie_Marie_Madeleine_et_Marthe%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Jesus_Mary_Magdalene_and_Martha_at_Bethany_%28J%C3%A9sus_%C3%A0_Bethanie_Marie_Madeleine_et_Marthe%29_-_James_Tissot.jpg", "caption": "Jesus at Bethany with Martha and Mary (Luke 10:38–42); Tissot calls Mary the Magdalene, after the old Western tradition, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Jesus_Mary_Magdalene_and_Martha_at_Bethany_(J%C3%A9sus_%C3%A0_Bethanie_Marie_Madeleine_et_Marthe)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "nathan",
+ "name": "Nathan",
+ "role": "Prophet to David and Solomon",
+ "people": ["nathan_2153"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "A prophet at David's court. When David wanted to build the LORD a house, Nathan brought him the promise that the LORD would build David a house, a dynasty whose throne would endure forever. After Bathsheba and Uriah he told David the parable of the rich man and the poor man's lamb, and said, “You are that man!” In David's old age he and Bathsheba secured the throne for Solomon, and he anointed him.",
+ "body": [
+  "His first answer to David's plan for a temple is to go ahead; that night the word of the LORD corrects him, and the promise he brings instead is the root of Israel's hope in a son of David.",
+  "The parable makes David condemn himself. Nathan tells him the sword will not depart from his house and the child will die, but the LORD has taken away his sin. When Adonijah claims the throne, Nathan coaches Bathsheba and follows her in to confirm her words, and with Zadok anoints Solomon at Gihon. Chronicles cites a history of Nathan the prophet."
+ ],
+ "moments": [
+  {"ref": "2Sam.7.2-3", "text": "“Go and do all that is in your heart”"},
+  {"ref": "2Sam.7.4-5", "text": "The word of the LORD comes to him"},
+  {"ref": "2Sam.7.12-16", "text": "A throne forever"},
+  {"ref": "2Sam.12.1-4", "text": "The parable"},
+  {"ref": "2Sam.12.7", "text": "“You are that man!”"},
+  {"ref": "2Sam.12.13", "text": "“The LORD has taken away your sin”"},
+  {"ref": "2Sam.12.25", "text": "Names Solomon Jedidiah"},
+  {"ref": "1Kgs.1.11-14", "text": "Counsels Bathsheba"},
+  {"ref": "1Kgs.1.34", "text": "Anoints Solomon"},
+  {"ref": "1Chr.29.29", "text": "His history"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.7.1-17"},
+  {"kind": "scripture", "ref": "2Sam.12.1-25"},
+  {"kind": "scripture", "ref": "1Kgs.1.8-45"},
+  {"kind": "scripture", "ref": "1Chr.29.29"},
+  {"kind": "scripture", "ref": "2Chr.9.29"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Eug%C3%A8ne_Siberdt_-_The_Prophet_Nathan_rebukes_King_David.jpg/500px-Eug%C3%A8ne_Siberdt_-_The_Prophet_Nathan_rebukes_King_David.jpg", "caption": "Nathan rebukes David (2 Samuel 12:7), Eugène Siberdt, late 19th century.", "credit": "Eugène Siberdt, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Siberdt_-_The_Prophet_Nathan_rebukes_King_David.jpg", "license": "Public domain"}
+ ]
+}

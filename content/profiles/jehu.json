@@ -1,0 +1,41 @@
+{
+ "id": "jehu",
+ "name": "Jehu",
+ "role": "King of Israel who wiped out Ahab's house",
+ "people": ["jehu_817"],
+ "when": "≈ 841–814 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Jehoshaphat son of Nimshi, a commander anointed king of Israel by a young prophet Elisha sent to him at Ramoth-gilead. He drove furiously to Jezreel, shot King Joram and had his body thrown on Naboth's field, had Ahaziah of Judah killed, and had Jezebel thrown from a window. He had Ahab's seventy sons beheaded, gathered the worshippers of Baal into their temple and killed them, and tore it down. But he did not turn from the golden calves of Jeroboam.",
+ "body": [
+  "Elijah was told to anoint him; Elisha sends another to do it. The watchman at Jezreel recognizes his driving: “he is driving like a madman!” Joram asks, “Have you come in peace, Jehu?”, and he answers, “How can there be peace,” so long as “the idolatry and witchcraft of your mother Jezebel abound?”",
+  "The LORD tells him his sons will sit on Israel's throne for four generations for doing what was right in destroying Ahab's house. In his days Hazael begins to cut off parts of Israel. Hosea, a century later, announces that the LORD will punish the house of Jehu for the bloodshed of Jezreel. He reigns twenty-eight years."
+ ],
+ "moments": [
+  {"ref": "1Kgs.19.16", "text": "Named to Elijah"},
+  {"ref": "2Kgs.9.1-3", "text": "Anointed at Ramoth-gilead"},
+  {"ref": "2Kgs.9.20", "text": "“Driving like a madman!”"},
+  {"ref": "2Kgs.9.22", "text": "“How can there be peace?”"},
+  {"ref": "2Kgs.9.24", "text": "Kills Joram"},
+  {"ref": "2Kgs.9.27", "text": "Ahaziah of Judah"},
+  {"ref": "2Kgs.9.33", "text": "Jezebel"},
+  {"ref": "2Kgs.10.7", "text": "Ahab's seventy sons"},
+  {"ref": "2Kgs.10.25-28", "text": "The worshippers of Baal"},
+  {"ref": "2Kgs.10.29", "text": "The golden calves remain"},
+  {"ref": "2Kgs.10.30", "text": "Four generations"},
+  {"ref": "2Kgs.10.32", "text": "Hazael"},
+  {"ref": "2Kgs.10.36", "text": "Twenty-eight years"},
+  {"ref": "Hos.1.4", "text": "The bloodshed of Jezreel"}
+ ],
+ "later": [
+  {"text": "The Black Obelisk of Shalmaneser III (British Museum ME 118885) shows a king bowing before the Assyrian king, labelled as the tribute of “Jehu son of Omri”, in 841 BC: the only surviving picture of an Israelite king. The Assyrians called Israel's kings after Omri, whatever their line.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Black Obelisk of Shalmaneser III, British Museum ME 118885", "note": "found by Austen Henry Layard at Nimrud, 1846"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.19.16-17"},
+  {"kind": "scripture", "ref": "2Kgs.9.1-10.36"},
+  {"kind": "scripture", "ref": "Hos.1.4"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Andrea_Celesti_-_Queen_Jezabel_Being_Punished_by_Jehu_-_WGA4622.jpg/500px-Andrea_Celesti_-_Queen_Jezabel_Being_Punished_by_Jehu_-_WGA4622.jpg", "caption": "Jezebel punished by Jehu (2 Kings 9:30–33), Andrea Celesti, later 17th century.", "credit": "Andrea Celesti, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Andrea_Celesti_-_Queen_Jezabel_Being_Punished_by_Jehu_-_WGA4622.jpg", "license": "Public domain"}
+ ]
+}

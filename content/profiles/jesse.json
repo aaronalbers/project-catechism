@@ -1,0 +1,31 @@
+{
+ "id": "jesse",
+ "name": "Jesse",
+ "role": "David's father",
+ "people": ["jesse_903"],
+ "genealogy": "jesse",
+ "summary": "Son of Obed and grandson of Ruth and Boaz, a Bethlehemite with eight sons, the youngest David. Samuel came to his sacrifice and passed over his older sons to anoint David. He sent David with food to his brothers in the army; when Saul was hunting David, David took his parents to the king of Moab for safety. Isaiah foresees a shoot from the stump of Jesse.",
+ "body": [
+  "The LORD tells Samuel not to look on Eliab's appearance or stature, for man sees what is outward but the LORD sees the heart. Jesse has to send for the youngest, who is keeping the sheep.",
+  "Saul calls David “the son of Jesse” when he means to belittle him. Isaiah's shoot from the stump of Jesse is taken up in the New Testament of Jesus, and Paul cites the root of Jesse ruling the nations."
+ ],
+ "moments": [
+  {"ref": "Ruth.4.17", "text": "Son of Obed"},
+  {"ref": "1Sam.16.1", "text": "Samuel sent to him"},
+  {"ref": "1Sam.16.10-11", "text": "“There is still the youngest”"},
+  {"ref": "1Sam.17.17-18", "text": "Sends David to the camp"},
+  {"ref": "1Sam.20.31", "text": "“The son of Jesse”"},
+  {"ref": "1Sam.22.3-4", "text": "Taken to Moab"},
+  {"ref": "Isa.11.1", "text": "A shoot from the stump of Jesse"},
+  {"ref": "Rom.15.12", "text": "“The Root of Jesse”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ruth.4.17-22"},
+  {"kind": "scripture", "ref": "1Sam.16.1-13"},
+  {"kind": "scripture", "ref": "1Sam.17.12-20"},
+  {"kind": "scripture", "ref": "1Sam.22.3-4"},
+  {"kind": "scripture", "ref": "Isa.11.1-10"},
+  {"kind": "scripture", "ref": "Rom.15.12"}
+ ]
+}

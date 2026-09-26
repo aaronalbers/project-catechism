@@ -1,0 +1,37 @@
+{
+ "id": "jephthah",
+ "name": "Jephthah",
+ "role": "Gileadite judge, and his vow",
+ "people": ["jephthah_839"],
+ "when": "≈ 12th–11th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one. He tells the Ammonites Israel has held the land 300 years (Judges 11:26).",
+ "summary": "Son of Gilead by a prostitute, driven out by his half-brothers, he led a band of raiders in the land of Tob. When the Ammonites attacked, the elders of Gilead begged him to lead them. He argued Israel's case with the Ammonite king, then vowed that whatever came out of his door to meet him on his return would be the LORD's as a burnt offering. His daughter, his only child, came out dancing; after two months in the hills mourning with her friends, she returned, and he did to her as he had vowed.",
+ "body": [
+  "He bargains with the elders to be their head if the LORD gives him victory. His message to the Ammonite king recounts how Israel came to hold the land, and asks why they have not reclaimed it in three hundred years.",
+  "When he sees his daughter he tears his clothes. She tells him to do as he has vowed, and asks only for two months. Judges says it became a custom for the young women of Israel to go four days a year to commemorate her.",
+  "The Ephraimites, angry not to have been called, threaten him; his Gileadites hold the fords and kill those who say “Sibboleth” instead of “Shibboleth.” He judges Israel six years."
+ ],
+ "moments": [
+  {"ref": "Judg.11.1-3", "text": "Driven out"},
+  {"ref": "Judg.11.5-11", "text": "Called back by the elders"},
+  {"ref": "Judg.11.26", "text": "Three hundred years"},
+  {"ref": "Judg.11.30-31", "text": "His vow"},
+  {"ref": "Judg.11.34-35", "text": "His daughter comes out"},
+  {"ref": "Judg.11.36-38", "text": "“Do to me as you have said”"},
+  {"ref": "Judg.11.39-40", "text": "A custom in Israel"},
+  {"ref": "Judg.12.5-6", "text": "Shibboleth"},
+  {"ref": "Judg.12.7", "text": "Judges six years"},
+  {"ref": "Heb.11.32", "text": "Among the faithful"}
+ ],
+ "later": [
+  {"text": "Most ancient readers, Jewish and Christian, understood that he offered her as a burnt offering. Some medieval and later interpreters read it instead as dedicating her to lifelong virginity, from the note that she had never known a man (11:39).", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 5.263–266", "url": "https://www.gutenberg.org/ebooks/2848"}, {"kind": "scripture", "ref": "Judg.11.39"}], "traditions": ["a sacrifice: Josephus and most ancient readers", "lifelong virginity: David Kimhi and some medieval and later interpreters"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.10.17-12.7"},
+  {"kind": "scripture", "ref": "Heb.11.32"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/058.Jephthah%27s_Daughter_Comes_to_Meet_Her_Father.jpg/500px-058.Jephthah%27s_Daughter_Comes_to_Meet_Her_Father.jpg", "caption": "Jephthah's daughter comes to meet her father (Judges 11:34), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:058.Jephthah%27s_Daughter_Comes_to_Meet_Her_Father.jpg", "license": "Public domain"}
+ ]
+}

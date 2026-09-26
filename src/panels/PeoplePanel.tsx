@@ -1,12 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Network, type Edge, type Node } from 'vis-network';
 import { DataSet } from 'vis-data';
-import { goTo, useStore } from '@/app/store';
-import { PEOPLE, PEOPLE_BY_ID, peopleFor, peopleInChapter } from '@/lib/content';
+import { goTo, openPerson, setState, useStore } from '@/app/store';
+import { PEOPLE, PEOPLE_BY_ID, PROFILE_BY_PERSON, PROFILE_INDEX, peopleFor, peopleInChapter } from '@/lib/content';
 import { RefChip, SourceList } from '@/components/SourceList';
-import { parseRef } from '@/lib/refs';
+import { book as bookOf, parseRef } from '@/lib/refs';
 import type { Person } from '@/lib/types';
 import { formatYear } from '@/lib/format';
+import { namedFor, namedInChapter, usePeopleInBook, type Named } from '@/lib/people';
+import { cardId } from '@/lib/catalog';
+import { Profile } from './Profile';
 
 /** People named in this chapter plus their close kin, so the graph has context without becoming the whole Bible. */
 function neighbourhood(seed: Person[], depth = 2): Person[] {
@@ -61,6 +64,21 @@ function Lifespans({ people }: { people: Person[] }) {
   );
 }
 
+/** A person in the chapter's list: portrait and role when there is a profile, their kin otherwise. */
+function NamedRow({ n, here = false }: { n: Named; here?: boolean }) {
+  const prof = PROFILE_BY_PERSON.get(n.id);
+  return (
+    <button className={`person named${here ? ' here' : ''}`} onClick={() => openPerson(n.id)}>
+      {prof?.thumb ? <img className="thumb" src={prof.thumb} alt="" loading="lazy" /> : <span className={`thumb initial ${n.sex}`} aria-hidden="true">{n.name[0]}</span>}
+      <span className="who">
+        <span className="name">{prof?.name ?? n.name}{prof && <span className="chip profiled" title="Has a written profile">Profile</span>}</span>
+        <span className="life">{prof?.role ?? n.title}</span>
+      </span>
+      <span className="life count" title="Verses of this chapter that name them">{n.verses.length > 1 ? `vv. ${n.verses[0]}–${n.verses[n.verses.length - 1]}` : `v. ${n.verses[0]}`}</span>
+    </button>
+  );
+}
+
 export function PeoplePanel() {
   const loc = useStore((s) => s.loc);
   const here = useMemo(() => peopleFor(loc), [loc]);
@@ -76,6 +94,21 @@ export function PeoplePanel() {
   const nodeSet = useRef<DataSet<Node> | null>(null);
   const fresh = useRef(true);
   const [selected, setSelected] = useState<Person | null>(null);
+  const person = useStore((s) => s.person);
+  const feature = useStore((s) => s.feature);
+  const byBook = usePeopleInBook(loc.book);
+  const named = useMemo(() => byBook ? namedInChapter(byBook, loc.chapter) : [], [byBook, loc.chapter]);
+  // A tree node opens that person's profile when the chapter names them; otherwise their genealogy card.
+  const pick = useRef((_p: Person | null) => {});
+  pick.current = (p) => {
+    const n = p && namedFor(p, named, loc.book, loc.chapter);
+    if (n) openPerson(n.id); else setSelected(p);
+  };
+  // A link from the index goes to a profile by its card id.
+  useEffect(() => {
+    const prof = feature && PROFILE_INDEX.find((p) => cardId({ kind: 'profile', id: p.id }) === feature);
+    if (prof) setState({ person: prof.people[0], feature: null });
+  }, [feature]);
 
   // Build the tree only when its node set changes; verse-to-verse updates restyle and pan it below.
   useEffect(() => {
@@ -101,9 +134,10 @@ export function PeoplePanel() {
     });
     nodeSet.current = nodes;
     fresh.current = true;
-    net.current.on('click', (params: { nodes: string[] }) => { const id = params.nodes[0]; setSelected(id ? PEOPLE_BY_ID.get(id) ?? null : null); });
+    net.current.on('click', (params: { nodes: string[] }) => { const id = params.nodes[0]; pick.current(id ? PEOPLE_BY_ID.get(id) ?? null : null); });
     return () => { net.current?.destroy(); net.current = null; nodeSet.current = null; };
-  }, [graphPeople]);
+    // Rebuilt on leaving a profile too, which unmounts the graph's container.
+  }, [graphPeople, person]);
 
   // Highlight the verse's people and glide the viewport to them. Colour/border updates don't trigger a relayout in vis-network.
   useEffect(() => {
@@ -119,16 +153,23 @@ export function PeoplePanel() {
     const frame = graphPeople.filter((p) => hereIds.has(p.id) || (p.father && hereIds.has(p.father)) || (p.mother && hereIds.has(p.mother)) || (p.father && here.some((h) => h.father === p.father))).map((p) => p.id);
     n.fit({ nodes: frame, maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
     fresh.current = false;
-  }, [graphPeople, here]);
+  }, [graphPeople, here, person]);
 
-  const list = selected ? [selected] : here.length ? here : inChapter;
+  if (person) return <Profile id={person} />;
+  const list = selected ? [selected] : [];
+  const hereNamed = named.filter((n) => n.verses.includes(loc.verse));
+  const restNamed = named.filter((n) => !n.verses.includes(loc.verse));
   return (
     <div className="panel-body flush">
       {/* Distinct keys: vis-network wipes its container on destroy, which would erase React's children if the div were reused. */}
-      {graphPeople.length ? <div key="graph" className="graph" ref={el} role="img" aria-label="Family relationships" /> : <div key="empty" className="empty"><p>No people from the genealogy tables are indexed to this chapter yet.</p><small>Add them in <code>content/people.json</code>.</small></div>}
+      {graphPeople.length ? <div key="graph" className="graph" ref={el} role="img" aria-label="Family relationships" /> : null}
       <Lifespans people={graphPeople} />
       <div className="people-list">
         {selected && <button className="chip link" onClick={() => setSelected(null)}>← all in this chapter</button>}
+        {!selected && byBook === undefined && <div className="loading">Loading people…</div>}
+        {!selected && byBook && !named.length && <div className="empty"><p>No one is named in {bookOf(loc.book)?.name} {loc.chapter}.</p></div>}
+        {!selected && hereNamed.length > 0 && <><div className="panel-title">In verse {loc.verse}</div>{hereNamed.map((n) => <NamedRow key={n.id} n={n} here />)}</>}
+        {!selected && restNamed.length > 0 && <><div className="panel-title">{hereNamed.length ? 'Elsewhere in' : 'Named in'} {bookOf(loc.book)?.name} {loc.chapter}</div>{restNamed.map((n) => <NamedRow key={n.id} n={n} />)}</>}
         {list.map((p) => (
           <div className="person" key={p.id}>
             <div className="name">{p.name} {p.sex === 'female' && <span className="chip">♀</span>}</div>
@@ -143,7 +184,7 @@ export function PeoplePanel() {
             {p.sources && <SourceList sources={p.sources} />}
           </div>
         ))}
-        <div className="sources"><ol><li><span className="skind">Scripture</span>Relationships follow the genealogies cited on each person (Genesis 5, 10–11, 25, 36, 46; Exodus 6; 1 Chronicles 1–2; Matthew 1; Luke 3). Anno Mundi years are simple sums of the ages given in Genesis 5 and 11, which assumes no generational gaps — a reading, not a measurement.</li></ol></div>
+        <div className="sources"><ol><li><span className="skind">Dataset</span>Who each verse names, and each person's kin, from <a href="https://github.com/robertrouse/theographic-bible-metadata" target="_blank" rel="noreferrer">Theographic Bible Metadata</a> (Robert Rouse, CC BY-SA 4.0).</li><li><span className="skind">Scripture</span>The family tree follows the genealogies cited on each person (Genesis 5, 10–11, 25, 36, 46; Exodus 6; 1 Chronicles 1–2; Matthew 1; Luke 3). Anno Mundi years are simple sums of the ages given in Genesis 5 and 11, which assumes no generational gaps — a reading, not a measurement.</li></ol></div>
       </div>
     </div>
   );

@@ -1,0 +1,38 @@
+{
+ "id": "haman",
+ "name": "Haman",
+ "role": "Persian vizier who plotted to destroy the Jews",
+ "people": ["haman_1360"],
+ "when": "≈ 474 BC",
+ "whenBasis": "The twelfth year of Xerxes (Esther 3:7), taking him as Xerxes I (486–465 BC).",
+ "summary": "Son of Hammedatha the Agagite, raised by Xerxes above all the princes. When Mordecai would not bow to him, he scorned to kill Mordecai alone and set out to destroy all the Jews in the kingdom, casting the pur, the lot, for the day, and offering ten thousand talents of silver for the decree. He built a gallows fifty cubits high for Mordecai, was made instead to lead Mordecai through the city in the king's robe, and at Esther's second banquet was named as the enemy. He was hanged on his own gallows.",
+ "body": [
+  "Invited alone with the king to Esther's banquet, he goes home glad of heart and then sees Mordecai at the gate, who does not rise. When the king asks what should be done for the man he delights to honour, Haman thinks it must be himself and describes the robe, the horse and the crown.",
+  "Found falling on the couch where Esther reclines, he is covered and led out; the eunuch Harbona points to the gallows at his house. His ten sons are killed in the fighting on the day he had fixed by lot."
+ ],
+ "moments": [
+  {"ref": "Esth.3.1", "text": "Promoted"},
+  {"ref": "Esth.3.5-6", "text": "Scorns to kill Mordecai alone"},
+  {"ref": "Esth.3.7", "text": "The Pur is cast"},
+  {"ref": "Esth.3.9", "text": "Ten thousand talents"},
+  {"ref": "Esth.5.9", "text": "Filled with rage"},
+  {"ref": "Esth.5.14", "text": "The gallows"},
+  {"ref": "Esth.6.6", "text": "“Whom would the king… honor?”"},
+  {"ref": "Esth.6.11", "text": "Parades Mordecai"},
+  {"ref": "Esth.7.6", "text": "“This wicked man—Haman!”"},
+  {"ref": "Esth.7.8", "text": "On the queen's couch"},
+  {"ref": "Esth.7.10", "text": "Hanged on his own gallows"},
+  {"ref": "Esth.9.10", "text": "His ten sons"},
+  {"ref": "Esth.9.24-26", "text": "Purim, from the pur"}
+ ],
+ "later": [
+  {"text": "Agagite is read as descent from Agag, the king of Amalek Saul spared; Josephus calls Haman an Amalekite.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "1Sam.15.8"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 11.209"}, {"kind": "primary", "title": "Babylonian Talmud, Megillah 13a", "url": "https://www.sefaria.org/Megillah.13a"}], "traditions": ["Josephus", "the Talmud and rabbinic tradition", "most commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Esth.3.1-9.25"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/117.Esther_Accuses_Haman.jpg/500px-117.Esther_Accuses_Haman.jpg", "caption": "Esther accuses Haman (Esther 7:6), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:117.Esther_Accuses_Haman.jpg", "license": "Public domain"}
+ ]
+}

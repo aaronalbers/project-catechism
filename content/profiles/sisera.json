@@ -1,0 +1,31 @@
+{
+ "id": "sisera",
+ "name": "Sisera",
+ "role": "Commander of the army of Jabin of Hazor",
+ "people": ["sisera_2757"],
+ "when": "≈ 12th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one.",
+ "summary": "Commander of the army of Jabin king of Canaan, who reigned in Hazor, with nine hundred iron chariots; Israel was oppressed twenty years. Drawn to the Kishon, his army was routed, and he fled on foot to the tent of Jael, who killed him as he slept. The Song of Deborah pictures his mother at the window, wondering why his chariot is so long in coming.",
+ "body": [
+  "He lives at Harosheth-hagoyim. When he hears that Barak has gone up Mount Tabor, he gathers his chariots at the Kishon, and the LORD routs them. The song says the stars fought against him from their courses, and the torrent of Kishon swept his men away.",
+  "Jael's tent is safe, he thinks, because of the peace between Jabin and Heber. The song ends with his mother and her ladies consoling themselves that the men must be dividing the spoil. Samuel and Psalm 83 recall his defeat. (A different Sisera appears among the temple servants' ancestors in Ezra and Nehemiah.)"
+ ],
+ "moments": [
+  {"ref": "Judg.4.2-3", "text": "Nine hundred iron chariots"},
+  {"ref": "Judg.4.13", "text": "At the Kishon"},
+  {"ref": "Judg.4.15", "text": "Flees on foot"},
+  {"ref": "Judg.4.17", "text": "To Jael's tent"},
+  {"ref": "Judg.4.21", "text": "Killed"},
+  {"ref": "Judg.5.20-21", "text": "The stars fought against him"},
+  {"ref": "Judg.5.28", "text": "His mother at the window"},
+  {"ref": "1Sam.12.9", "text": "Recalled by Samuel"},
+  {"ref": "Ps.83.9", "text": "In the Psalms"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.4.1-24"},
+  {"kind": "scripture", "ref": "Judg.5.19-30"},
+  {"kind": "scripture", "ref": "1Sam.12.9"},
+  {"kind": "scripture", "ref": "Ps.83.9-10"}
+ ]
+}

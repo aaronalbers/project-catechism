@@ -1,0 +1,36 @@
+{
+ "id": "rahab",
+ "name": "Rahab",
+ "role": "Woman of Jericho who hid Israel's spies",
+ "people": ["rahab_2388"],
+ "genealogy": "rahab",
+ "summary": "A prostitute of Jericho whose house was built into the city wall. She hid Joshua's two spies on her roof under stalks of flax, sent the king's men the wrong way, and let the spies down by a rope, asking to be spared; they told her to tie a scarlet cord in the window. When Jericho fell she and her family were brought out alive, and she lived among Israel. Matthew names her as the mother of Boaz.",
+ "body": [
+  "She tells the spies that the whole land has heard how the LORD dried up the sea and defeated Sihon and Og, “for the LORD your God is God in the heavens above and on the earth below.” She asks them to swear by the LORD to spare her father's household.",
+  "When the walls fall, Joshua sends the two men to bring her out with all her family. Hebrews counts her among the faithful, and James among those justified by what they did."
+ ],
+ "moments": [
+  {"ref": "Josh.2.1", "text": "The spies at her house"},
+  {"ref": "Josh.2.4-6", "text": "Hides them under the flax"},
+  {"ref": "Josh.2.11", "text": "“God in the heavens above”"},
+  {"ref": "Josh.2.15", "text": "Lets them down by a rope"},
+  {"ref": "Josh.2.18", "text": "The scarlet cord"},
+  {"ref": "Josh.6.22-23", "text": "Brought out alive"},
+  {"ref": "Josh.6.25", "text": "Lives among Israel"},
+  {"ref": "Matt.1.5", "text": "Mother of Boaz"},
+  {"ref": "Heb.11.31", "text": "By faith"},
+  {"ref": "Jas.2.25", "text": "Justified by what she did"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Josh.2.1-24"},
+  {"kind": "scripture", "ref": "Josh.6.17-25"},
+  {"kind": "scripture", "ref": "Matt.1.5"},
+  {"kind": "scripture", "ref": "Heb.11.31"},
+  {"kind": "scripture", "ref": "Jas.2.25"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/047.Joshua_Spares_Rahab.jpg/500px-047.Joshua_Spares_Rahab.jpg", "caption": "Joshua spares Rahab (Joshua 6:22–25), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:047.Joshua_Spares_Rahab.jpg", "license": "Public domain"}
+ ],
+ "eastonWrong": "Rahab as a poetic name for Egypt"
+}

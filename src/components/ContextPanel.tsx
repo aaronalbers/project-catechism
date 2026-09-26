@@ -7,6 +7,7 @@ import { LinksPanel } from '@/panels/LinksPanel';
 import { VideosPanel } from '@/panels/VideosPanel';
 import { ReignsPanel } from '@/panels/ReignsPanel';
 import { accountAt } from '@/lib/reign';
+import { namedInChapter, usePeopleInBook } from '@/lib/people';
 
 // Map, graph and 3D libraries are only fetched when their tab is opened.
 const PlacesPanel = lazy(() => import('@/panels/PlacesPanel').then((m) => ({ default: m.PlacesPanel })));
@@ -28,13 +29,15 @@ export function ContextPanel() {
   const tab = useStore((s) => s.tab);
   const loc = useStore((s) => s.loc);
   const open = useStore((s) => s.panelOpen);
+  const named = usePeopleInBook(loc.book);
   const counts = useMemo((): Partial<Record<PanelTab, number>> => ({
     insights: insightsFor(loc).length,
     models: modelsFor(loc).length,
-    people: peopleInChapter(loc.book, loc.chapter).length,
+    // Everyone the chapter names; the family tree's count stands in until that has loaded.
+    people: named ? namedInChapter(named, loc.chapter).length : peopleInChapter(loc.book, loc.chapter).length,
     videos: videosFor(loc).length,
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
-  }), [loc]);
+  }), [loc, named]);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted.
   const tabs = accountAt(loc) || tab === 'reigns' ? TABS : TABS.filter((t) => t.id !== 'reigns');
   return (

@@ -1,0 +1,32 @@
+{
+ "id": "achish",
+ "name": "Achish",
+ "role": "Philistine king of Gath who sheltered David",
+ "people": ["achish_66"],
+ "when": "≈ 1050–1000 BC",
+ "whenBasis": "In the reigns of Saul and David, dated by counting back from Solomon; 1 Samuel 13:1, which gives Saul's age and years, is damaged in the Hebrew.",
+ "summary": "King of Gath, to whom David twice fled from Saul. The first time David feigned madness to escape; the second he came with six hundred men and was given Ziklag, and raided Israel's enemies while telling Achish he was raiding Judah. Achish trusted him and wanted him in the battle against Saul, but the other Philistine lords refused.",
+ "body": [
+  "Achish's servants recognize David as the one of whom Israel sang “his tens of thousands.” Seeing him scratch on the gate and drool, Achish asks, “Am I in need of madmen?”",
+  "Later he tells David he has been as blameless as an angel of God, but the commanders will not have him fight with them. 1 Kings mentions an Achish of Gath in Solomon's day, to whom Shimei's slaves fled."
+ ],
+ "moments": [
+  {"ref": "1Sam.21.10-11", "text": "David flees to him"},
+  {"ref": "1Sam.21.13-15", "text": "David feigns madness"},
+  {"ref": "1Sam.27.2-3", "text": "David returns"},
+  {"ref": "1Sam.27.6", "text": "Gives him Ziklag"},
+  {"ref": "1Sam.27.10-12", "text": "Deceived"},
+  {"ref": "1Sam.28.1-2", "text": "“My bodyguard for life”"},
+  {"ref": "1Sam.29.6-9", "text": "Sends David back"},
+  {"ref": "1Kgs.2.39-40", "text": "Shimei's slaves"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.21.10-15"},
+  {"kind": "scripture", "ref": "1Sam.27.1-29.11"},
+  {"kind": "scripture", "ref": "1Kgs.2.39-40"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/David_returns_to_Achish.jpg/500px-David_returns_to_Achish.jpg", "caption": "David returns to Achish (1 Samuel 27), James Tissot, ≈1896–1902. Jewish Museum, New York.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:David_returns_to_Achish.jpg", "license": "Public domain"}
+ ]
+}

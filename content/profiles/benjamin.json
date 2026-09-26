@@ -1,0 +1,32 @@
+{
+ "id": "benjamin",
+ "name": "Benjamin",
+ "role": "Jacob's youngest son, by Rachel",
+ "people": ["benjamin_463"],
+ "genealogy": "benjamin",
+ "summary": "Rachel's second son, born as she died on the road to Ephrath: she named him Ben-oni, son of my sorrow, and Jacob called him Benjamin. Jacob kept him at home when his brothers went to Egypt; Joseph demanded he be brought, gave him five times as much as the others, and had his silver cup hidden in Benjamin's sack to test the brothers.",
+ "body": [
+  "After Joseph is lost, Benjamin is the son Jacob will not risk: “My son will not go down there with you.” Only the famine and Judah's pledge change his mind.",
+  "Joseph, seeing his mother's son, has to leave the room to weep. The cup is found in Benjamin's sack, and the brothers' willingness to stand by him, rather than abandon another of Rachel's sons, is what makes Joseph reveal himself. Jacob's blessing calls him a ravenous wolf; Paul names himself of Benjamin's tribe."
+ ],
+ "moments": [
+  {"ref": "Gen.35.16-18", "text": "Born as Rachel dies"},
+  {"ref": "Gen.42.4", "text": "Kept at home"},
+  {"ref": "Gen.42.38", "text": "“My son will not go down”"},
+  {"ref": "Gen.43.29-30", "text": "Joseph weeps"},
+  {"ref": "Gen.43.34", "text": "Five times as much"},
+  {"ref": "Gen.44.12", "text": "The cup in his sack"},
+  {"ref": "Gen.45.14", "text": "Joseph embraces him"},
+  {"ref": "Gen.49.27", "text": "“A ravenous wolf”"},
+  {"ref": "Phil.3.5", "text": "Paul, of his tribe"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.35.16-18"},
+  {"kind": "scripture", "ref": "Gen.42.1-45.15"},
+  {"kind": "scripture", "ref": "Gen.49.27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tissot_The_Cup_Found.jpg/500px-Tissot_The_Cup_Found.jpg", "caption": "The cup found in Benjamin's sack (Genesis 44:12), James Tissot, ≈1896–1902. Jewish Museum, New York.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Tissot_The_Cup_Found.jpg", "license": "Public domain"}
+ ]
+}

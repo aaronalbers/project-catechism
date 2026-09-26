@@ -1,0 +1,36 @@
+{
+ "id": "josiah",
+ "name": "Josiah",
+ "role": "King of Judah whose reform followed the Book of the Law",
+ "people": ["josiah_1730"],
+ "genealogy": "josiah",
+ "when": "≈ 640–609 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Made king at eight after his father Amon was murdered. In his eighteenth year, while the temple was being repaired, the high priest Hilkiah found the Book of the Law. When it was read to him, Josiah tore his clothes, sent to the prophetess Huldah, gathered all the people to renew the covenant, and purged Judah and Bethel of their altars, shrines and idols. He celebrated a Passover like none since the judges. He was killed at Megiddo confronting Pharaoh Necho.",
+ "body": [
+  "A man of God had named him three centuries before at Jeroboam's altar in Bethel; Josiah burns human bones on it, as foretold. He removes the horses dedicated to the sun, defiles Topheth so no one will burn a child there again, and deposes the idolatrous priests.",
+  "Kings says no king before or after turned to the LORD with all his heart, soul and strength as he did. Chronicles says Necho warned him not to interfere, and that Jeremiah composed laments for him."
+ ],
+ "moments": [
+  {"ref": "1Kgs.13.2", "text": "Named at Bethel"},
+  {"ref": "2Kgs.22.1-2", "text": "King at eight"},
+  {"ref": "2Kgs.22.8", "text": "The Book of the Law found"},
+  {"ref": "2Kgs.22.11", "text": "Tears his clothes"},
+  {"ref": "2Kgs.22.14", "text": "Sends to Huldah"},
+  {"ref": "2Kgs.23.2-3", "text": "Renews the covenant"},
+  {"ref": "2Kgs.23.10", "text": "Topheth defiled"},
+  {"ref": "2Kgs.23.15-16", "text": "Bethel's altar"},
+  {"ref": "2Kgs.23.21-22", "text": "The Passover"},
+  {"ref": "2Kgs.23.25", "text": "No king like him"},
+  {"ref": "2Kgs.23.29", "text": "Killed at Megiddo"},
+  {"ref": "2Chr.35.25", "text": "Jeremiah's laments"}
+ ],
+ "later": [
+  {"text": "Since W. M. L. de Wette (1805), most scholars identify the book found in the temple with Deuteronomy, or a core of it, because Josiah's reforms follow its laws on a single sanctuary and on the Passover.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Dissertatio critica", "author": "W. M. L. de Wette", "year": 1805}, {"kind": "scripture", "ref": "Deut.12.1-14"}, {"kind": "scripture", "ref": "Deut.16.1-8"}], "traditions": ["W. M. L. de Wette and most modern scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.22.1-23.30"},
+  {"kind": "scripture", "ref": "2Chr.34.1-35.27"}
+ ]
+}

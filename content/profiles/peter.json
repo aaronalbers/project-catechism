@@ -1,0 +1,43 @@
+{
+ "id": "peter",
+ "name": "Peter",
+ "role": "Fisherman, apostle, and leader of the first church",
+ "people": ["peter_2745"],
+ "summary": "Simon son of John (Matthew has son of Jonah), a Galilean fisherman called by Jesus with his brother Andrew. Named Cephas, Peter, “rock”, he confessed Jesus as the Christ, denied him three times, was restored, and led the church in Jerusalem. Two letters bear his name.",
+ "body": [
+  "Jesus calls him from his nets beside the Sea of Galilee and gives him the name Cephas, Aramaic for rock, which Peter translates into Greek. He is named first in every list of the Twelve and is one of the three with Jesus at the transfiguration and in Gethsemane.",
+  "He walks on the water and begins to sink; he confesses, “You are the Christ, the Son of the living God”; he swears he will never fall away, and that night denies three times that he knows Jesus. By the Sea of Galilee the risen Jesus asks him three times, “Do you love Me?” and tells him, “Feed My sheep”, and how he will die.",
+  "In Acts he preaches at Pentecost, heals, is jailed and freed by an angel, and at Cornelius's house learns that “God does not show favoritism,” baptizing the first Gentile converts. Paul records opposing him to his face at Antioch over eating with Gentiles."
+ ],
+ "moments": [
+  {"ref": "Matt.4.18-20", "text": "Called from his nets"},
+  {"ref": "John.1.42", "text": "Named Cephas"},
+  {"ref": "Matt.14.29-30", "text": "Walks on the water, and sinks"},
+  {"ref": "Matt.16.16-18", "text": "“You are the Christ”"},
+  {"ref": "Luke.22.61-62", "text": "Denies Jesus, and weeps"},
+  {"ref": "John.21.17", "text": "“Feed My sheep”"},
+  {"ref": "John.21.18-19", "text": "Told how he will die"},
+  {"ref": "Acts.2.14", "text": "Preaches at Pentecost"},
+  {"ref": "Acts.10.34-35", "text": "“God does not show favoritism”"},
+  {"ref": "Acts.12.7", "text": "Freed from prison"},
+  {"ref": "Gal.2.11", "text": "Opposed by Paul at Antioch"}
+ ],
+ "later": [
+  {"text": "He was martyred in Rome under Nero, ≈AD 64–68. First Clement, written from Rome ≈AD 96, speaks of his martyrdom, and Dionysius of Corinth (quoted by Eusebius) says Peter and Paul died in Italy at the same time. Most historians accept that he died in Rome.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "1 Clement 5"}, {"kind": "primary", "title": "Eusebius, Church History 2.25"}]},
+  {"text": "He was crucified head downward, at his own request.", "confidence": "interpretation", "traditions": ["Acts of Peter (late 2nd century)", "Origen, as quoted by Eusebius (Church History 3.1)"], "sources": [{"kind": "primary", "title": "Eusebius, Church History 3.1"}]},
+  {"text": "Mark's Gospel preserves Peter's preaching: Papias says Mark was Peter's interpreter and wrote down what he remembered.", "confidence": "interpretation", "traditions": ["Papias (early 2nd century)", "Eusebius", "many scholars, with reservations"], "sources": [{"kind": "primary", "title": "Eusebius, Church History 3.39"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.4.18-20"},
+  {"kind": "scripture", "ref": "Matt.16.13-20"},
+  {"kind": "scripture", "ref": "Luke.22.54-62"},
+  {"kind": "scripture", "ref": "John.21.15-19"},
+  {"kind": "scripture", "ref": "Acts.2.14-41"},
+  {"kind": "scripture", "ref": "Acts.10.1-48"},
+  {"kind": "scripture", "ref": "Gal.2.11-14"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/De_verloochening_van_Petrus_Rijksmuseum_SK-A-3137.jpeg/500px-De_verloochening_van_Petrus_Rijksmuseum_SK-A-3137.jpeg", "caption": "The denial of Peter (Luke 22), Rembrandt, 1660. Rijksmuseum, Amsterdam.", "credit": "Rembrandt, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:De_verloochening_van_Petrus_Rijksmuseum_SK-A-3137.jpeg", "license": "Public domain"}
+ ]
+}

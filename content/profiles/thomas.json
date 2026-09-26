@@ -1,0 +1,36 @@
+{
+ "id": "thomas",
+ "name": "Thomas",
+ "role": "Apostle called the Twin, who doubted and believed",
+ "people": ["thomas_2851"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "One of the Twelve, called Didymus, the Twin. When Jesus set out for Judea to Lazarus, Thomas said, “Let us also go, so that we may die with Him.” At the supper he asked how they could know the way. Absent when the risen Jesus first appeared to the disciples, he said he would never believe unless he put his finger in the nail marks. A week later Jesus showed him his hands and side, and Thomas answered, “My Lord and my God!”",
+ "body": [
+  "Jesus' answer to Thomas's question at the supper is “I am the way and the truth and the life.” His answer to Thomas's confession blesses those who have not seen and yet have believed."
+ ],
+ "moments": [
+  {"ref": "Matt.10.3", "text": "One of the Twelve"},
+  {"ref": "John.11.16", "text": "“Let us also go”"},
+  {"ref": "John.14.5", "text": "“How can we know the way?”"},
+  {"ref": "John.20.24-25", "text": "“I will never believe”"},
+  {"ref": "John.20.27", "text": "“Put your finger here”"},
+  {"ref": "John.20.28", "text": "“My Lord and my God!”"},
+  {"ref": "John.20.29", "text": "Blessed who have not seen"},
+  {"ref": "John.21.2", "text": "Fishing on the sea"}
+ ],
+ "later": [
+  {"text": "The Acts of Thomas (third century) sends him to India, where the Saint Thomas Christians of Kerala hold he founded their churches and was martyred near Chennai.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Acts of Thomas"}], "traditions": ["the Acts of Thomas", "the Saint Thomas Christians of India"]},
+  {"text": "The Gospel of Thomas, a collection of sayings found at Nag Hammadi in 1945, carries his name; scholars date it to the second century, some parts perhaps earlier.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Nag Hammadi Codex II, Coptic Museum, Cairo"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "John.11.16"},
+  {"kind": "scripture", "ref": "John.14.5-6"},
+  {"kind": "scripture", "ref": "John.20.24-29"},
+  {"kind": "scripture", "ref": "John.21.2"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Brooklyn_Museum_-_The_Disbelief_of_Saint_Thomas_%28Incredulit%C3%A9_de_Saint_Thomas%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_The_Disbelief_of_Saint_Thomas_%28Incredulit%C3%A9_de_Saint_Thomas%29_-_James_Tissot.jpg", "caption": "The disbelief of Saint Thomas (John 20:27), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Disbelief_of_Saint_Thomas_(Incredulit%C3%A9_de_Saint_Thomas)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

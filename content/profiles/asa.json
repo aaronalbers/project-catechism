@@ -1,0 +1,29 @@
+{
+ "id": "asa",
+ "name": "Asa",
+ "role": "King of Judah who removed the idols",
+ "people": ["asa_318"],
+ "genealogy": "asa",
+ "when": "≈ 911–870 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Abijah, who did right in the eyes of the LORD like David his father. He removed the shrine prostitutes and idols, deposed his grandmother Maacah as queen mother for her Asherah pole and burned it at the Kidron. At war with Baasha of Israel, he sent the temple's silver and gold to Ben-hadad of Aram to break Baasha's alliance. Chronicles adds a victory over Zerah the Cushite, a rebuke from Hanani the seer, whom he imprisoned, and a disease of the feet in which he sought physicians and not the LORD.",
+ "body": [
+  "The high places were not removed, but his heart was fully devoted to the LORD all his days, says Kings. Chronicles tells the reign in two halves: reform and victory when he relied on the LORD, trouble when he relied on Aram. He reigns forty-one years."
+ ],
+ "moments": [
+  {"ref": "1Kgs.15.11", "text": "Right, like David"},
+  {"ref": "1Kgs.15.12-13", "text": "Removes the idols; deposes Maacah"},
+  {"ref": "1Kgs.15.14", "text": "The high places remain"},
+  {"ref": "1Kgs.15.18-19", "text": "Pays Ben-hadad"},
+  {"ref": "1Kgs.15.23", "text": "Diseased feet"},
+  {"ref": "2Chr.14.9-12", "text": "Zerah the Cushite"},
+  {"ref": "2Chr.15.1-2", "text": "Azariah's word"},
+  {"ref": "2Chr.16.7-10", "text": "Hanani imprisoned"},
+  {"ref": "2Chr.16.12", "text": "Seeks physicians"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.15.8-24"},
+  {"kind": "scripture", "ref": "2Chr.14.1-16.14"}
+ ]
+}

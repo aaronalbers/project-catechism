@@ -1,0 +1,28 @@
+{
+ "id": "gamaliel",
+ "name": "Gamaliel",
+ "role": "Pharisee and teacher of the Law, Paul's teacher",
+ "people": ["gamaliel_1277"],
+ "when": "≈ AD 30–35",
+ "whenBasis": "The first years of the Jerusalem church, between the crucifixion (AD 30 or 33) and Saul's conversion, which Paul's own reckoning (Galatians 1:18; 2:1) and the Gallio date put ≈AD 33–35.",
+ "summary": "A Pharisee in the council, a teacher of the Law honoured by all the people. When the council wanted to kill the apostles, he had them put outside and advised: leave these men alone, for if their work is of human origin it will fail, but if it is from God, you will not be able to stop them and may find yourselves fighting against God. The council was persuaded, flogged the apostles and let them go. Paul says he was educated at Gamaliel's feet.",
+ "body": [
+  "He reminds the council of Theudas and Judas the Galilean, whose followers scattered when they were killed."
+ ],
+ "moments": [
+  {"ref": "Acts.5.34", "text": "Honoured by all the people"},
+  {"ref": "Acts.5.35-37", "text": "Theudas and Judas"},
+  {"ref": "Acts.5.38-39", "text": "“If it is from God”"},
+  {"ref": "Acts.5.40", "text": "The council persuaded"},
+  {"ref": "Acts.22.3", "text": "Paul's teacher"}
+ ],
+ "later": [
+  {"text": "The Mishnah remembers him as Rabban Gamaliel the Elder and says that when he died, the glory of the Torah ceased and purity and separateness perished.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Mishnah Sotah 9:15", "url": "https://www.sefaria.org/Mishnah_Sotah.9.15"}]},
+  {"text": "Josephus dates Theudas's revolt to the governorship of Fadus, ≈AD 44–46, a decade after the speech Acts gives; either Luke's order is loose or Gamaliel meant an earlier Theudas.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.97–98"}, {"kind": "scripture", "ref": "Acts.5.36"}], "traditions": ["commentators, variously"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.5.33-40"},
+  {"kind": "scripture", "ref": "Acts.22.3"}
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "naomi",
+ "name": "Naomi",
+ "role": "Ruth's mother-in-law",
+ "people": ["naomi_2147"],
+ "when": "≈ 11th century BC",
+ "whenBasis": "The book is set “in the days when the judges ruled” (Ruth 1:1), three generations before David.",
+ "summary": "Wife of Elimelech of Bethlehem, who went to Moab in a famine. There her husband and both sons died. Returning with Ruth, she told the women of Bethlehem not to call her Naomi, pleasant, but Mara, bitter. She guided Ruth to Boaz, and when Obed was born the women said, “A son has been born to Naomi.”",
+ "body": [
+  "She urges both her Moabite daughters-in-law to go home; Orpah kisses her goodbye, Ruth will not leave. In Bethlehem she tells the women that she went away full and the LORD has brought her back empty.",
+  "When she hears whose field Ruth has gleaned in, she blesses the LORD who has not stopped showing kindness to the living and the dead, for Boaz is one of their redeemers. She sends Ruth to the threshing floor. At the end she takes the child in her lap and becomes his nurse."
+ ],
+ "moments": [
+  {"ref": "Ruth.1.1-2", "text": "To Moab in the famine"},
+  {"ref": "Ruth.1.3-5", "text": "Widowed and bereaved"},
+  {"ref": "Ruth.1.8-9", "text": "Sends her daughters-in-law home"},
+  {"ref": "Ruth.1.20-21", "text": "“Call me Mara”"},
+  {"ref": "Ruth.2.20", "text": "Boaz, a redeemer"},
+  {"ref": "Ruth.3.1-4", "text": "Sends Ruth to the threshing floor"},
+  {"ref": "Ruth.4.14-16", "text": "Nurses Obed"},
+  {"ref": "Ruth.4.17", "text": "“A son has been born to Naomi”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ruth.1.1-4.17"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/068.Naomi_and_Her_Daughters-in-Law.jpg/500px-068.Naomi_and_Her_Daughters-in-Law.jpg", "caption": "Naomi and her daughters-in-law (Ruth 1), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:068.Naomi_and_Her_Daughters-in-Law.jpg", "license": "Public domain"}
+ ]
+}

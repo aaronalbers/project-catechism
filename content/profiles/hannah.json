@@ -1,0 +1,36 @@
+{
+ "id": "hannah",
+ "name": "Hannah",
+ "role": "Mother of Samuel",
+ "people": ["hannah_1400"],
+ "when": "≈ 11th century BC",
+ "whenBasis": "Her son Samuel anoints Saul and then David, whose reign is dated ≈1010–970 BC.",
+ "summary": "One of the two wives of Elkanah of Ramathaim, loved but barren, provoked year after year by the other wife, Peninnah. At Shiloh she prayed in anguish, vowing that if the LORD gave her a son he would be the LORD's all his life; Eli, seeing her lips move, thought her drunk. She bore Samuel, brought him to Eli once he was weaned, and sang of the LORD who raises the poor from the dust.",
+ "body": [
+  "Elkanah gives her a double portion and asks, “Am I not better to you than ten sons?” She weeps and will not eat. At the temple she prays silently, only her lips moving, and tells Eli she has been pouring out her soul before the LORD.",
+  "She keeps Samuel until he is weaned, then brings him with a bull, flour and wine, and tells Eli, “I prayed for this boy.” Her song rejoices that the LORD brings low and exalts, lifts the needy from the ash heap, and will give strength to his king. Each year she makes Samuel a little robe, and she bears three more sons and two daughters."
+ ],
+ "moments": [
+  {"ref": "1Sam.1.2", "text": "Barren"},
+  {"ref": "1Sam.1.6-7", "text": "Provoked by Peninnah"},
+  {"ref": "1Sam.1.8", "text": "“Am I not better to you than ten sons?”"},
+  {"ref": "1Sam.1.10-11", "text": "Her vow"},
+  {"ref": "1Sam.1.13-15", "text": "“I have poured out my soul”"},
+  {"ref": "1Sam.1.20", "text": "Samuel born"},
+  {"ref": "1Sam.1.27-28", "text": "“I prayed for this boy”"},
+  {"ref": "1Sam.2.1-10", "text": "Her song"},
+  {"ref": "1Sam.2.19", "text": "A little robe each year"},
+  {"ref": "1Sam.2.21", "text": "Five more children"}
+ ],
+ "later": [
+  {"text": "Her song is echoed in Mary's Magnificat: the proud brought down, the humble lifted up, the hungry filled.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "1Sam.2.1-10"}, {"kind": "scripture", "ref": "Luke.1.46-55"}]},
+  {"text": "The Talmud draws rules for prayer from hers: to pray with directed heart, to form the words with the lips, and not to raise the voice.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Berakhot 31a", "url": "https://www.sefaria.org/Berakhot.31a"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.1.1-2.21"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Eeckhout%2C_Gerbrand_van_den_-_The_Infant_Samuel_brought_by_Hannah_to_Eli_-_Ashmolean_Museum.jpg/500px-Eeckhout%2C_Gerbrand_van_den_-_The_Infant_Samuel_brought_by_Hannah_to_Eli_-_Ashmolean_Museum.jpg", "caption": "Hannah brings the infant Samuel to Eli (1 Samuel 1:24–28), Gerbrand van den Eeckhout, ≈1665. Ashmolean Museum, Oxford.", "credit": "Gerbrand van den Eeckhout, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Eeckhout,_Gerbrand_van_den_-_The_Infant_Samuel_brought_by_Hannah_to_Eli_-_Ashmolean_Museum.jpg", "license": "Public domain"}
+ ]
+}

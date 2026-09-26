@@ -1,0 +1,34 @@
+{
+ "id": "cain",
+ "name": "Cain",
+ "role": "Firstborn of Adam and Eve, who killed his brother",
+ "people": ["cain_533"],
+ "genealogy": "cain",
+ "summary": "A worker of the ground whose offering the LORD did not regard. Angry, he killed his brother Abel in the field, answered the LORD, “Am I my brother's keeper?”, and was driven out as a wanderer, marked by the LORD so that no one would kill him. He settled in the land of Nod, east of Eden, and built a city named for his son Enoch.",
+ "body": [
+  "Cain brings an offering of the fruit of the ground; Abel brings the firstborn of his flock. The LORD looks with favour on Abel's offering and not on Cain's, and the text does not say why. The LORD warns him that sin is crouching at his door and that he must master it.",
+  "He kills Abel in the field. The LORD tells him that his brother's blood cries out from the ground and drives him from it as a restless wanderer. When Cain protests that whoever finds him will kill him, the LORD sets a mark on him. His descendants down to Lamech are credited with the first city, tents and livestock, the harp and flute, and bronze and iron.",
+  "The New Testament holds him up as a warning: John says he “belonged to the evil one,” and Jude speaks of those who have “traveled the path of Cain.”"
+ ],
+ "moments": [
+  {"ref": "Gen.4.1", "text": "Born to Eve"},
+  {"ref": "Gen.4.3-5", "text": "His offering not regarded"},
+  {"ref": "Gen.4.7", "text": "“Sin is crouching at your door”"},
+  {"ref": "Gen.4.8", "text": "Kills Abel"},
+  {"ref": "Gen.4.9", "text": "“Am I my brother's keeper?”"},
+  {"ref": "Gen.4.10-12", "text": "Driven out as a wanderer"},
+  {"ref": "Gen.4.15", "text": "The mark"},
+  {"ref": "Gen.4.16-17", "text": "Nod, and the first city"},
+  {"ref": "1John.3.12", "text": "“Belonged to the evil one”"},
+  {"ref": "Jude.1.11", "text": "“The path of Cain”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.4.1-24"},
+  {"kind": "scripture", "ref": "1John.3.12"},
+  {"kind": "scripture", "ref": "Jude.1.11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/005.Cain_Slays_Abel.jpg/500px-005.Cain_Slays_Abel.jpg", "caption": "Cain slays Abel (Genesis 4:8), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:005.Cain_Slays_Abel.jpg", "license": "Public domain"}
+ ]
+}

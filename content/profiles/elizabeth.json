@@ -1,0 +1,33 @@
+{
+ "id": "elizabeth",
+ "name": "Elizabeth",
+ "role": "Mother of John the Baptist",
+ "people": ["elisabeth_1152"],
+ "when": "≈ 7–5 BC",
+ "whenBasis": "In the days of Herod king of Judea (Luke 1:5), who died in 4 BC; John was born about six months before Jesus (Luke 1:36). See the card on dating Herod's death.",
+ "summary": "Wife of the priest Zechariah and a descendant of Aaron, righteous and blameless, but barren and well along in years. She conceived John in her old age and hid herself for five months, saying the Lord had taken away her disgrace. When her relative Mary came to her, the baby leapt in her womb and she was filled with the Holy Spirit and cried, “Blessed are you among women.” At his naming she insisted, “No! He shall be called John.”",
+ "body": [
+  "She asks why she is so honoured that the mother of her Lord should come to her. Mary stays with her about three months."
+ ],
+ "moments": [
+  {"ref": "Luke.1.5-7", "text": "Righteous and barren"},
+  {"ref": "Luke.1.13", "text": "John promised"},
+  {"ref": "Luke.1.24-25", "text": "Her disgrace taken away"},
+  {"ref": "Luke.1.36", "text": "Mary's relative"},
+  {"ref": "Luke.1.41", "text": "The baby leaps"},
+  {"ref": "Luke.1.42-43", "text": "“Blessed are you among women”"},
+  {"ref": "Luke.1.56", "text": "Mary stays three months"},
+  {"ref": "Luke.1.57-58", "text": "John born"},
+  {"ref": "Luke.1.60", "text": "“He shall be called John”"}
+ ],
+ "later": [
+  {"text": "The Protevangelium of James tells how she fled with the infant John to the hills when Herod's soldiers came, and a mountain opened to hide them.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Protevangelium of James 22"}], "traditions": ["the Protevangelium of James"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.1.5-80"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Brooklyn_Museum_-_The_Visitation_%28La_visitation%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Visitation_%28La_visitation%29_-_James_Tissot_-_overall.jpg", "caption": "The Visitation (Luke 1:39–42), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Visitation_(La_visitation)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

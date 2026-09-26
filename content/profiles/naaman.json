@@ -1,0 +1,33 @@
+{
+ "id": "naaman",
+ "name": "Naaman",
+ "role": "Aramean commander healed of leprosy",
+ "people": ["naaman_2122"],
+ "when": "≈ 850–795 BC",
+ "whenBasis": "From his call under Ahab to his death under Jehoash of Israel (2 Kings 13:14–20), in Thiele's reckoning; the other readings in the Reign tab differ by a few years.",
+ "summary": "Commander of the army of the king of Aram, a great man and a valiant soldier, but a leper. An Israelite girl taken captive told his wife of the prophet in Samaria. Elisha sent word to wash seven times in the Jordan; Naaman, angry, would have gone home, but his servants persuaded him, and his flesh became like a young boy's. He confessed there is no God in all the earth except in Israel, and took home earth to worship on.",
+ "body": [
+  "The king of Aram sends a letter to the king of Israel, who tears his clothes, thinking it a pretext for war. Elisha does not come out; he sends a messenger. “Are not the Abanah and Pharpar, the rivers of Damascus, better than all the waters of Israel?” Naaman asks. His servants reason that if he had been told to do something great, he would have done it.",
+  "Elisha refuses his gifts, and grants his request to be pardoned when he must bow in the temple of Rimmon with his master: “Go in peace.” Jesus cites him in the synagogue at Nazareth as the one leper cleansed in Elisha's time, a foreigner."
+ ],
+ "moments": [
+  {"ref": "2Kgs.5.1", "text": "A valiant soldier, a leper"},
+  {"ref": "2Kgs.5.2-3", "text": "The captive girl"},
+  {"ref": "2Kgs.5.7", "text": "The king tears his clothes"},
+  {"ref": "2Kgs.5.10", "text": "“Wash yourself seven times”"},
+  {"ref": "2Kgs.5.11-12", "text": "Angry"},
+  {"ref": "2Kgs.5.13", "text": "His servants reason"},
+  {"ref": "2Kgs.5.14", "text": "Healed"},
+  {"ref": "2Kgs.5.15", "text": "“No God in all the earth except in Israel”"},
+  {"ref": "2Kgs.5.17-19", "text": "Earth, and Rimmon"},
+  {"ref": "Luke.4.27", "text": "Named by Jesus"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.5.1-27"},
+  {"kind": "scripture", "ref": "Luke.4.27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Pieter_Fransz._de_Grebber_-_Elisha_Refusing_Gifts_from_Naaman_-_WGA10388.jpg/500px-Pieter_Fransz._de_Grebber_-_Elisha_Refusing_Gifts_from_Naaman_-_WGA10388.jpg", "caption": "Elisha refuses Naaman's gifts (2 Kings 5:16), Pieter de Grebber, ≈1630.", "credit": "Pieter de Grebber, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Pieter_Fransz._de_Grebber_-_Elisha_Refusing_Gifts_from_Naaman_-_WGA10388.jpg", "license": "Public domain"}
+ ]
+}

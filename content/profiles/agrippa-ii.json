@@ -1,0 +1,32 @@
+{
+ "id": "agrippa-ii",
+ "name": "Herod Agrippa II",
+ "role": "The last Herodian king, who heard Paul's defence",
+ "people": ["agrippa_111"],
+ "when": "≈ AD 50–93 reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. His death date is uncertain; c. AD 93–100.",
+ "summary": "King Agrippa, son of Agrippa I, who came with Bernice to Caesarea to welcome the new governor Festus. Festus laid Paul's case before him, and the next day, with great pomp, Agrippa heard Paul tell of his conversion on the road to Damascus. Paul appealed to him: “King Agrippa, do you believe the prophets? I know you do.” Agrippa answered, “Can you persuade me in such a short time to become a Christian?” He told Festus the man could have been released if he had not appealed to Caesar.",
+ "body": [
+  "Paul says he is fortunate to make his defence before Agrippa, who is well acquainted with all the customs and controversies of the Jews."
+ ],
+ "moments": [
+  {"ref": "Acts.25.13", "text": "Comes with Bernice"},
+  {"ref": "Acts.25.22", "text": "“I would like to hear this man”"},
+  {"ref": "Acts.25.23", "text": "With great pomp"},
+  {"ref": "Acts.26.1", "text": "“You have permission to speak”"},
+  {"ref": "Acts.26.2-3", "text": "Acquainted with the customs"},
+  {"ref": "Acts.26.27", "text": "“Do you believe the prophets?”"},
+  {"ref": "Acts.26.28", "text": "“In such a short time”"},
+  {"ref": "Acts.26.31-32", "text": "Nothing worthy of death"}
+ ],
+ "later": [
+  {"text": "Josephus says he tried to dissuade the Jews from war with Rome in AD 66 and sided with Rome through it. Bernice was his sister; rumours about them reached Rome, and she was later the mistress of Titus.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Jewish War 2.345–404"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.145"}, {"kind": "primary", "title": "Suetonius, Life of Titus 7"}, {"kind": "primary", "title": "Juvenal, Satires 6.156–160"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.25.13-26.32"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/James_Thornhill_-_St._Paul_before_Agrippa_-_Google_Art_Project.jpg/500px-James_Thornhill_-_St._Paul_before_Agrippa_-_Google_Art_Project.jpg", "caption": "Saint Paul before Agrippa, James Thornhill, ≈1710.", "credit": "James Thornhill, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:James_Thornhill_-_St._Paul_before_Agrippa_-_Google_Art_Project.jpg", "license": "Public domain"}
+ ]
+}

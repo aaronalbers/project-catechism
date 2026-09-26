@@ -1,0 +1,29 @@
+{
+ "id": "obadiah-prophet",
+ "name": "Obadiah",
+ "role": "Prophet against Edom",
+ "people": ["obadiah_2226"],
+ "when": "≈ 586 BC or after",
+ "whenBasis": "The book is undated; its charge that Edom stood aloof and joined in when strangers entered Jerusalem's gates (verses 11–14) is usually read of Babylon's capture of the city in 586 BC.",
+ "summary": "Author of the shortest book in the Old Testament, a vision against Edom. Edom's pride, secure in the clefts of the rocks, will be brought down, because it stood aloof and even joined in on the day strangers carried off Jerusalem's wealth, the day of its brother Jacob's disaster. Deliverers will go up Mount Zion to rule the mountains of Esau, and the kingdom will be the LORD's.",
+ "body": [
+  "Nothing else is told of him. Jeremiah 49 has an oracle against Edom with many of the same lines."
+ ],
+ "moments": [
+  {"ref": "Obad.1.1", "text": "The vision"},
+  {"ref": "Obad.1.3", "text": "The clefts of the rocks"},
+  {"ref": "Obad.1.10", "text": "Violence against Jacob"},
+  {"ref": "Obad.1.11", "text": "You stood aloof"},
+  {"ref": "Obad.1.15", "text": "The Day of the LORD"},
+  {"ref": "Obad.1.21", "text": "The kingdom will be the LORD's"},
+  {"ref": "Jer.49.14-16", "text": "Jeremiah's parallel"}
+ ],
+ "later": [
+  {"text": "The Talmud identifies him with Ahab's steward Obadiah, who hid a hundred prophets, and says he was an Edomite convert.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Sanhedrin 39b", "url": "https://www.sefaria.org/Sanhedrin.39b"}, {"kind": "scripture", "ref": "1Kgs.18.3-4"}], "traditions": ["the Talmud"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Obad.1.1-21"},
+  {"kind": "scripture", "ref": "Jer.49.7-22"}
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "jonah",
+ "name": "Jonah",
+ "role": "Prophet sent to Nineveh",
+ "people": ["jonah_1689"],
+ "when": "≈ 790s–750s BC",
+ "whenBasis": "2 Kings 14:25 has Jonah son of Amittai foretell Jeroboam II's recovery of Israel's borders; Thiele dates Jeroboam II ≈793–753 BC.",
+ "summary": "Jonah son of Amittai, of Gath-hepher, foretold Israel's expansion under Jeroboam II. Sent to preach against Nineveh, he fled by sea, was swallowed by a great fish, and was cast up after three days. Nineveh repented, and the book ends with the LORD asking him whether He should not care for the city.",
+ "body": [
+  "Kings mentions him once, as the prophet whose word Jeroboam II fulfilled. The book named for him is a story about him more than a collection of his sayings.",
+  "Told to cry out against Nineveh, the Assyrian capital, he takes ship from Joppa for Tarshish, the other way. In the storm the sailors throw him overboard at his own word, and the LORD appoints a great fish to swallow him. He prays from its belly and is thrown up on dry land.",
+  "Sent again, he proclaims, “Forty more days and Nineveh will be overturned!” The city fasts and turns, and God relents. Jonah is angry, and says this is why he fled: he knew God to be gracious and compassionate. The book ends on God's question about the city's 120,000 people and its cattle, unanswered. Jesus gives “the sign of the prophet Jonah” as a sign of his own three days."
+ ],
+ "moments": [
+  {"ref": "2Kgs.14.25", "text": "Foretells Jeroboam II's borders"},
+  {"ref": "Jonah.1.3", "text": "Flees toward Tarshish"},
+  {"ref": "Jonah.1.15", "text": "Thrown into the sea"},
+  {"ref": "Jonah.1.17", "text": "Swallowed by a great fish"},
+  {"ref": "Jonah.2.10", "text": "Thrown up on dry land"},
+  {"ref": "Jonah.3.4", "text": "“Forty more days”"},
+  {"ref": "Jonah.3.10", "text": "God relents"},
+  {"ref": "Jonah.4.2", "text": "Angry that God is gracious"},
+  {"ref": "Jonah.4.11", "text": "God's last question"},
+  {"ref": "Matt.12.40", "text": "The sign of Jonah"}
+ ],
+ "later": [
+  {"text": "The book is history: Jesus speaks of Jonah and of Nineveh's repentance as events (Matthew 12:40–41).", "confidence": "interpretation", "traditions": ["traditional Jewish and Christian readings", "many evangelical scholars"], "sources": [{"kind": "scripture", "ref": "Matt.12.40-41"}]},
+  {"text": "The book is a didactic story, a parable-like tale about God's mercy to Israel's enemies, told with irony and exaggeration.", "confidence": "interpretation", "traditions": ["most historical-critical scholarship"], "sources": [{"kind": "scholarship", "title": "Jonah (Anchor Bible 24B)", "author": "Jack M. Sasson", "year": 1990}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.14.25"},
+  {"kind": "scripture", "ref": "Jonah.1.1-4.11"},
+  {"kind": "scripture", "ref": "Matt.12.39-41"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg/500px-Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg", "caption": "Jonah thrown up by the fish (Jonah 2:10), Pieter Lastman, 1621. Museum Kunstpalast, Düsseldorf.", "credit": "Pieter Lastman, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg", "license": "Public domain"}
+ ]
+}

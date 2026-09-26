@@ -1,0 +1,38 @@
+{
+ "id": "rachel",
+ "name": "Rachel",
+ "role": "Jacob's beloved wife, mother of Joseph and Benjamin",
+ "people": ["rachel_2386"],
+ "genealogy": "rachel",
+ "summary": "Laban's younger daughter, whom Jacob met at the well and loved, serving seven years for her that seemed but a few days. Barren while her sister bore sons, she gave Jacob her servant Bilhah, then bore Joseph. She stole her father's household idols when they fled, and died on the road to Ephrath giving birth to Benjamin. Jeremiah hears her weeping for her children.",
+ "body": [
+  "She comes to the well with her father's sheep; Jacob rolls the stone from its mouth, waters the flock, kisses her and weeps. Given Leah first, he serves seven more years for her.",
+  "“Give me children, or I will die!” she tells Jacob, who answers that he is not in God's place. When God remembers her and she bears Joseph, she prays for another son. Leaving Haran she takes Laban's household idols and hides them in her camel's saddle, sitting on them when he searches.",
+  "Near Ephrath she dies in hard labour, naming her son Ben-oni, son of my sorrow; Jacob calls him Benjamin and sets a pillar on her grave. Jeremiah pictures her weeping in Ramah for her children, gone into exile, and Matthew hears the verse again at the killing of Bethlehem's children."
+ ],
+ "moments": [
+  {"ref": "Gen.29.9-11", "text": "At the well"},
+  {"ref": "Gen.29.20", "text": "Seven years like a few days"},
+  {"ref": "Gen.30.1", "text": "“Give me children”"},
+  {"ref": "Gen.30.3", "text": "Gives Bilhah to Jacob"},
+  {"ref": "Gen.30.22-24", "text": "Bears Joseph"},
+  {"ref": "Gen.31.19", "text": "Steals her father's idols"},
+  {"ref": "Gen.31.34", "text": "Sits on them"},
+  {"ref": "Gen.35.16-18", "text": "Dies bearing Benjamin"},
+  {"ref": "Gen.35.19-20", "text": "The pillar on her grave"},
+  {"ref": "Jer.31.15", "text": "Weeping for her children"},
+  {"ref": "Matt.2.18", "text": "In Matthew"}
+ ],
+ "later": [
+  {"text": "A tomb on the road into Bethlehem has been honoured as hers since at least 333, when the Bordeaux Pilgrim recorded it. 1 Samuel 10:2 instead puts Rachel's tomb in the territory of Benjamin, at Zelzah, and where it lay is argued.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Itinerarium Burdigalense (the Bordeaux Pilgrim), 333"}, {"kind": "scripture", "ref": "1Sam.10.2"}], "traditions": ["Jewish, Christian and Muslim pilgrimage to the site near Bethlehem"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.29.1-35.20"},
+  {"kind": "scripture", "ref": "Jer.31.15"},
+  {"kind": "scripture", "ref": "Matt.2.18"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Tissot_Jacob_and_Rachel_at_the_Well.jpg/500px-Tissot_Jacob_and_Rachel_at_the_Well.jpg", "caption": "Jacob and Rachel at the well (Genesis 29:10–11), James Tissot, ≈1896–1902. Jewish Museum, New York.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Tissot_Jacob_and_Rachel_at_the_Well.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "id": "deborah",
+ "name": "Deborah",
+ "role": "Prophetess who judged Israel",
+ "people": ["deborah_997"],
+ "when": "≈ 12th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one.",
+ "summary": "A prophetess, the wife of Lappidoth, who was judging Israel when Jabin of Hazor oppressed it. She summoned Barak to fight Sisera, went with him when he would not go alone, and sang the victory song of Judges 5.",
+ "body": [
+  "Judges introduces her sitting under the Palm of Deborah, between Ramah and Bethel in the hill country of Ephraim, where Israelites came up to her for judgment. She is the only judge the book also calls a prophet.",
+  "She sends for Barak son of Abinoam with the LORD's command to take ten thousand men to Mount Tabor. When he will go only if she goes, she agrees, but warns that the honour will not be his: the LORD will sell Sisera into a woman's hand. It is Jael, not Barak, who kills him.",
+  "Judges 5 gives the battle again as a song sung by Deborah and Barak, in which she calls herself “a mother in Israel.” The land then has rest for forty years."
+ ],
+ "moments": [
+  {"ref": "Judg.4.4-5", "text": "Judging Israel under the Palm of Deborah"},
+  {"ref": "Judg.4.6-7", "text": "Sends for Barak with the LORD's command"},
+  {"ref": "Judg.4.8-9", "text": "Goes with Barak, and warns the honour will go to a woman"},
+  {"ref": "Judg.4.14", "text": "Gives the signal: “Arise, for this is the day”"},
+  {"ref": "Judg.4.21", "text": "Jael kills Sisera, as she foretold"},
+  {"ref": "Judg.5.1", "text": "Sings with Barak"},
+  {"ref": "Judg.5.7", "text": "“A mother in Israel”"},
+  {"ref": "Judg.5.31", "text": "The land has rest forty years"}
+ ],
+ "later": [
+  {"text": "The Babylonian Talmud counts her among the seven prophetesses of Israel: Sarah, Miriam, Deborah, Hannah, Abigail, Huldah and Esther.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Megillah 14a", "url": "https://www.sefaria.org/Megillah.14a"}]},
+  {"text": "Many scholars take the Song of Deborah to be among the oldest poems in the Hebrew Bible, older than the prose account beside it, from its archaic language.", "confidence": "interpretation", "traditions": ["Frank Moore Cross and David Noel Freedman", "much historical-critical scholarship"], "sources": [{"kind": "scholarship", "title": "Studies in Ancient Yahwistic Poetry", "author": "Frank Moore Cross and David Noel Freedman", "year": 1975}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.4.4-5.31"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/053.Deborah_Praises_Jael.jpg/500px-053.Deborah_Praises_Jael.jpg", "caption": "Deborah praises Jael (Judges 5): Gustave Doré's engraving for La Grande Bible de Tours, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:053.Deborah_Praises_Jael.jpg", "license": "Public domain"}
+ ]
+}

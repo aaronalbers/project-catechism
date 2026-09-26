@@ -1,0 +1,31 @@
+{
+ "id": "ish-bosheth",
+ "name": "Ish-bosheth",
+ "role": "Saul's son, king over Israel for two years",
+ "people": ["ish-bosheth_622"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "Saul's son, made king over Israel at Mahanaim by Abner after Saul's death, at forty, while Judah followed David. He reigned two years. When he accused Abner over Saul's concubine Rizpah, Abner turned to David, and Ish-bosheth lost heart. Two of his captains killed him as he lay on his bed at noon and brought his head to David, who had them executed.",
+ "body": [
+  "His name means man of shame; Chronicles calls him Eshbaal, which probably preserves the original, with baal, lord, replaced in Samuel by boshet, shame.",
+  "He is afraid of Abner and cannot answer him. At David's demand he takes Michal from Paltiel and sends her back. David buries his head in Abner's tomb at Hebron."
+ ],
+ "moments": [
+  {"ref": "2Sam.2.8-9", "text": "Made king by Abner"},
+  {"ref": "2Sam.2.10", "text": "Reigns two years"},
+  {"ref": "2Sam.3.7-11", "text": "Accuses Abner"},
+  {"ref": "2Sam.3.14-15", "text": "Returns Michal"},
+  {"ref": "2Sam.4.1", "text": "Loses heart"},
+  {"ref": "2Sam.4.5-7", "text": "Murdered"},
+  {"ref": "2Sam.4.12", "text": "Buried in Abner's tomb"},
+  {"ref": "1Chr.8.33", "text": "Eshbaal"}
+ ],
+ "later": [
+  {"text": "An ink inscription on a jar from Khirbet Qeiyafa, of about the 10th century BC, names an Ishbaal son of Beda, showing the name was in use in Judah in that period; the man is not Saul's son.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Ishbaal inscription, Khirbet Qeiyafa", "note": "published by Yosef Garfinkel and others, 2015"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.2.8-4.12"},
+  {"kind": "scripture", "ref": "1Chr.8.33"}
+ ]
+}

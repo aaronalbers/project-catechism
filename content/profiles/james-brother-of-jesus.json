@@ -1,0 +1,45 @@
+{
+ "id": "james-brother-of-jesus",
+ "name": "James the brother of the Lord",
+ "role": "Leader of the Jerusalem church",
+ "people": ["james_719"],
+ "when": "≈ AD 30–62",
+ "whenBasis": "From Jesus' ministry to his stoning in AD 62, which Josephus dates to the interval between the governors Festus and Albinus.",
+ "summary": "One of the brothers of Jesus, who did not believe in him during his ministry. The risen Jesus appeared to him. When Paul first went up to Jerusalem he saw James, the Lord's brother; Peter, freed from prison, sent word to James; at the council he gave the judgment that the Gentiles turning to God should not be troubled; and when Paul came to Jerusalem the last time, he went in to James and all the elders. Paul counts him one of the pillars. The letter of James opens in his name.",
+ "body": [
+  "Jesus' family, including his brothers, once came to take custody of him, saying he was out of his mind. After the ascension his brothers are in prayer with the disciples. Paul says that men came from James to Antioch, and Peter drew back from eating with Gentiles."
+ ],
+ "moments": [
+  {"ref": "Mark.6.3", "text": "Brother of Jesus"},
+  {"ref": "Mark.3.21", "text": "“He is out of His mind”"},
+  {"ref": "John.7.5", "text": "His brothers did not believe"},
+  {"ref": "1Cor.15.7", "text": "He appeared to James"},
+  {"ref": "Acts.1.14", "text": "With His brothers"},
+  {"ref": "Gal.1.19", "text": "“James, the Lord's brother”"},
+  {"ref": "Acts.12.17", "text": "“Send word to James”"},
+  {"ref": "Acts.15.13", "text": "“Brothers, listen to me!”"},
+  {"ref": "Acts.15.19", "text": "His judgment"},
+  {"ref": "Gal.2.9", "text": "A pillar"},
+  {"ref": "Gal.2.12", "text": "Men from James"},
+  {"ref": "Acts.21.18", "text": "Paul goes in to James"},
+  {"ref": "Jas.1.1", "text": "His letter"}
+ ],
+ "later": [
+  {"text": "Josephus says the high priest Ananus had “the brother of Jesus who was called Christ, whose name was James” stoned in AD 62. Hegesippus, as quoted by Eusebius, calls him James the Just and says his knees were hard as a camel's from praying in the temple.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.200"}, {"kind": "primary", "title": "Eusebius, Ecclesiastical History 2.23.4–18"}]},
+  {"text": "Whether the brother of the Lord wrote the letter of James is debated.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Letter of James (Anchor Bible 37A)", "author": "Luke Timothy Johnson", "year": 1995}], "traditions": ["by James: Luke Timothy Johnson and many others", "by a later writer: other scholars"]},
+  {"text": "Jerome identified him with James son of Alphaeus and with the James whose mother Mary stood at the cross, and so held him Jesus' cousin. Theographic's record follows that tradition and counts those verses as his.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Jerome, Against Helvidius 13–16"}, {"kind": "scripture", "ref": "Mark.15.40"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for James"}], "traditions": ["Jerome and Catholic tradition", "most Protestant and many modern scholars keep them apart"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mark.6.3"},
+  {"kind": "scripture", "ref": "1Cor.15.7"},
+  {"kind": "scripture", "ref": "Gal.1.18-2.12"},
+  {"kind": "scripture", "ref": "Acts.12.17"},
+  {"kind": "scripture", "ref": "Acts.15.13-21"},
+  {"kind": "scripture", "ref": "Acts.21.17-26"},
+  {"kind": "scripture", "ref": "Jas.1.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Brooklyn_Museum_-_Saint_James_the_Less_%28Saint_Jacques_le_Mineur%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Saint_James_the_Less_%28Saint_Jacques_le_Mineur%29_-_James_Tissot.jpg", "caption": "Saint James the Less, as Tissot titles him, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Saint_James_the_Less_(Saint_Jacques_le_Mineur)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

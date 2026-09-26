@@ -1,0 +1,38 @@
+{
+ "id": "goliath",
+ "name": "Goliath",
+ "role": "Philistine champion of Gath",
+ "people": ["goliath_1327"],
+ "when": "≈ 1050–1000 BC",
+ "whenBasis": "In the reigns of Saul and David, dated by counting back from Solomon; 1 Samuel 13:1, which gives Saul's age and years, is damaged in the Hebrew.",
+ "summary": "A champion of the Philistines from Gath, six cubits and a span tall, in bronze armour, whose spear shaft was like a weaver's beam. For forty days he challenged Israel to send a man to fight him. The shepherd boy David went out with a sling, struck him in the forehead with a stone and cut off his head with his own sword, which was later kept at Nob.",
+ "body": [
+  "His armour is described piece by piece: a bronze helmet, a coat of scale armour weighing five thousand shekels, bronze greaves, a bronze javelin, a spear with an iron point weighing six hundred shekels. Saul and all Israel are dismayed.",
+  "David answers his curse: “You come against me with sword and spear and javelin, but I come against you in the name of the LORD of Hosts.” Goliath falls face down, and the Philistines flee. David later takes his sword from the priest at Nob. 2 Samuel 21:19 credits Elhanan with killing Goliath the Gittite, and 1 Chronicles 20:5 says Elhanan killed Goliath's brother."
+ ],
+ "moments": [
+  {"ref": "1Sam.17.4", "text": "Six cubits and a span"},
+  {"ref": "1Sam.17.5-7", "text": "His armour"},
+  {"ref": "1Sam.17.10", "text": "“I defy the ranks of Israel”"},
+  {"ref": "1Sam.17.16", "text": "Forty days"},
+  {"ref": "1Sam.17.45", "text": "“In the name of the LORD of Hosts”"},
+  {"ref": "1Sam.17.49", "text": "The stone"},
+  {"ref": "1Sam.17.51", "text": "His own sword"},
+  {"ref": "1Sam.21.9", "text": "His sword at Nob"},
+  {"ref": "2Sam.21.19", "text": "Elhanan"},
+  {"ref": "1Chr.20.5", "text": "Goliath's brother"}
+ ],
+ "later": [
+  {"text": "The Dead Sea Scroll of Samuel (4QSamᵃ), the Septuagint and Josephus give his height as four cubits and a span, about two metres, instead of six cubits and a span, about three.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "4QSamᵃ, from Qumran Cave 4"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 6.171", "url": "https://www.gutenberg.org/ebooks/2848"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.17.1-58"},
+  {"kind": "scripture", "ref": "1Sam.21.9"},
+  {"kind": "scripture", "ref": "2Sam.21.19"},
+  {"kind": "scripture", "ref": "1Chr.20.5"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/071A.David_Slays_Goliath.jpg/500px-071A.David_Slays_Goliath.jpg", "caption": "David slays Goliath (1 Samuel 17:50–51), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:071A.David_Slays_Goliath.jpg", "license": "Public domain"}
+ ]
+}

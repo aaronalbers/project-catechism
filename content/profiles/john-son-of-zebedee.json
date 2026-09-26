@@ -1,0 +1,41 @@
+{
+ "id": "john-son-of-zebedee",
+ "name": "John son of Zebedee",
+ "role": "Apostle, brother of James, a pillar of the Jerusalem church",
+ "people": ["john_1677"],
+ "when": "≈ AD 28–50s",
+ "whenBasis": "From Jesus' ministry to Paul's meeting with the pillars in Jerusalem (Galatians 2:9), ≈AD 48–49. Tradition carries him to the end of the first century; see below.",
+ "summary": "Son of Zebedee, brother of James, called from mending nets. With Peter and James he was in Jesus' inner circle. After the resurrection he went with Peter to the temple, where they healed a lame man and were arrested; the council marvelled at their boldness, seeing they were unschooled, ordinary men. He went with Peter to Samaria, and Paul names him with James and Cephas as a pillar of the Jerusalem church.",
+ "body": [
+  "He tells Jesus they saw a man casting out demons in his name and tried to stop him. He and Peter prepare the Passover. The Gospel of John never names him; it speaks instead of the disciple whom Jesus loved."
+ ],
+ "moments": [
+  {"ref": "Mark.1.19-20", "text": "Called with James"},
+  {"ref": "Mark.3.17", "text": "Sons of Thunder"},
+  {"ref": "Mark.9.2", "text": "The transfiguration"},
+  {"ref": "Mark.9.38", "text": "Stops a man casting out demons"},
+  {"ref": "Luke.22.8", "text": "Prepares the Passover"},
+  {"ref": "Acts.3.1", "text": "To the temple with Peter"},
+  {"ref": "Acts.4.13", "text": "Unschooled, ordinary men"},
+  {"ref": "Acts.8.14", "text": "Sent to Samaria"},
+  {"ref": "Gal.2.9", "text": "A pillar"},
+  {"ref": "Rev.1.9", "text": "John on Patmos"}
+ ],
+ "later": [
+  {"text": "Irenaeus (≈AD 180) says John, the Lord's disciple who leaned on his breast, wrote the Gospel at Ephesus and lived there into the reign of Trajan. Tradition also gives him the three letters and Revelation.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Irenaeus, Against Heresies 3.1.1; 2.22.5"}, {"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.23"}], "traditions": ["Irenaeus", "Catholic, Orthodox and many Protestant readers"]},
+  {"text": "Many modern scholars doubt that the apostle wrote the Gospel, the letters and Revelation, or that the beloved disciple is John son of Zebedee.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Community of the Beloved Disciple", "author": "Raymond E. Brown", "year": 1979}, {"kind": "scholarship", "title": "The Testimony of the Beloved Disciple", "author": "Richard Bauckham", "year": 2007}], "traditions": ["many historical-critical scholars", "Richard Bauckham and others argue for a different eyewitness, John the Elder"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mark.1.19-20"},
+  {"kind": "scripture", "ref": "Mark.9.2-9"},
+  {"kind": "scripture", "ref": "Mark.9.38"},
+  {"kind": "scripture", "ref": "Luke.22.8"},
+  {"kind": "scripture", "ref": "Acts.3.1-4.23"},
+  {"kind": "scripture", "ref": "Acts.8.14-25"},
+  {"kind": "scripture", "ref": "Gal.2.9"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Brooklyn_Museum_-_The_Calling_of_Saint_John_and_Saint_Andrew_%28Vocation_de_Saint_Jean_et_de_Saint_Andr%C3%A9%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Calling_of_Saint_John_and_Saint_Andrew_%28Vocation_de_Saint_Jean_et_de_Saint_Andr%C3%A9%29_-_James_Tissot_-_overall.jpg", "caption": "The calling of Saint John and Saint Andrew (John 1:35–40), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Calling_of_Saint_John_and_Saint_Andrew_(Vocation_de_Saint_Jean_et_de_Saint_Andr%C3%A9)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

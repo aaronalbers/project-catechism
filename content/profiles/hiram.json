@@ -1,0 +1,36 @@
+{
+ "id": "hiram",
+ "name": "Hiram",
+ "role": "King of Tyre, ally of David and Solomon",
+ "people": ["hiram_1532"],
+ "when": "≈ 970–931 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years. 931 BC for the division of the kingdom is the anchor of most chronologies, worked back from Assyrian records that date Ahab (853) and Jehu (841).",
+ "summary": "King of Tyre, who sent cedar logs, carpenters and stonemasons to build David's palace, and made a treaty with Solomon to supply cedar and cypress for the temple in exchange for wheat and oil. Solomon gave him twenty towns in Galilee, which he called Cabul, worthless. Their ships sailed together to Ophir for gold.",
+ "body": [
+  "He had always loved David, and rejoices when Solomon succeeds him. His men float the timber down the coast in rafts. When he sees the towns Solomon gave him, he asks, “What are these towns you have given me, my brother?” He sends Solomon 120 talents of gold, and sailors who know the sea for the fleet at Ezion-geber.",
+  "A second Hiram, a bronze-worker of Tyre whose mother was of Naphtali, casts the pillars Jachin and Boaz and the temple's bronze furnishings."
+ ],
+ "moments": [
+  {"ref": "2Sam.5.11", "text": "Builds David a house"},
+  {"ref": "1Kgs.5.1", "text": "Sends envoys to Solomon"},
+  {"ref": "1Kgs.5.7-9", "text": "Cedar by sea"},
+  {"ref": "1Kgs.5.10-12", "text": "A treaty"},
+  {"ref": "1Kgs.9.11-13", "text": "Cabul"},
+  {"ref": "1Kgs.9.14", "text": "120 talents of gold"},
+  {"ref": "1Kgs.9.26-28", "text": "The fleet to Ophir"},
+  {"ref": "1Kgs.10.22", "text": "Ships of Tarshish"}
+ ],
+ "later": [
+  {"text": "Josephus cites the Tyrian annals, through the historian Menander of Ephesus, for Hiram's reign of thirty-four years and his dealings with Solomon.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Against Apion 1.113–120", "url": "https://www.gutenberg.org/ebooks/2849"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.5.11"},
+  {"kind": "scripture", "ref": "1Kgs.5.1-18"},
+  {"kind": "scripture", "ref": "1Kgs.9.10-28"},
+  {"kind": "scripture", "ref": "1Kgs.10.22"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/085.Cedars_Are_Cut_Down_for_the_Jerusalem_Temple.jpg/500px-085.Cedars_Are_Cut_Down_for_the_Jerusalem_Temple.jpg", "caption": "Cedars are cut down for the temple (1 Kings 5), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:085.Cedars_Are_Cut_Down_for_the_Jerusalem_Temple.jpg", "license": "Public domain"}
+ ]
+}

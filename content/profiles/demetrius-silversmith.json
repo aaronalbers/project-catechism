@@ -1,0 +1,29 @@
+{
+ "id": "demetrius-silversmith",
+ "name": "Demetrius",
+ "role": "Silversmith who stirred the riot at Ephesus",
+ "people": ["demetrius_1007"],
+ "when": "≈ AD 52–55",
+ "whenBasis": "Paul's stay of about three years at Ephesus (Acts 19:10; 20:31), after Corinth and the Gallio date.",
+ "summary": "A silversmith at Ephesus who made silver shrines of Artemis and brought much business to the craftsmen. He gathered them and warned that Paul had persuaded a great number of people, in Ephesus and nearly all Asia, that gods made by hands are no gods at all: their trade would fall into disrepute and the temple of the great goddess Artemis be discredited. The crowd filled the theatre shouting “Great is Artemis of the Ephesians!” for about two hours, until the town clerk quieted them.",
+ "body": [
+  "The town clerk tells them that if Demetrius and his fellow craftsmen have a complaint, the courts are open and there are proconsuls."
+ ],
+ "moments": [
+  {"ref": "Acts.19.24", "text": "Silver shrines of Artemis"},
+  {"ref": "Acts.19.25-26", "text": "“This Paul has persuaded”"},
+  {"ref": "Acts.19.27", "text": "The temple discredited"},
+  {"ref": "Acts.19.28", "text": "“Great is Artemis of the Ephesians!”"},
+  {"ref": "Acts.19.29", "text": "The theatre"},
+  {"ref": "Acts.19.34", "text": "Two hours"},
+  {"ref": "Acts.19.38", "text": "“The courts are open”"}
+ ],
+ "later": [
+  {"text": "The temple of Artemis at Ephesus was counted one of the seven wonders; its site was found by John Turtle Wood in 1869, and the theatre where the crowd gathered still stands.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Temple of Artemis, Ephesus, excavated by J. T. Wood, 1869; sculpture in the British Museum"}, {"kind": "archaeology", "title": "Great Theatre, Ephesus"}]},
+  {"text": "Theographic's record for him also counts the Demetrius commended in 3 John 12, a different man.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "3John.1.12"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Demetrius"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.19.23-41"}
+ ]
+}

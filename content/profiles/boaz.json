@@ -1,0 +1,35 @@
+{
+ "id": "boaz",
+ "name": "Boaz",
+ "role": "Bethlehem landowner who married Ruth",
+ "people": ["boaz_519"],
+ "genealogy": "boaz",
+ "when": "≈ 11th century BC",
+ "whenBasis": "Ruth is set “in the days when the judges ruled” (Ruth 1:1), and its genealogy puts Boaz three generations before David, whose reign is dated ≈1010–970 BC.",
+ "summary": "A wealthy relative of Naomi's husband Elimelech, in whose field Ruth gleaned. He protected her, told his men to leave extra stalks for her, and when she came to him at night on the threshing floor, promised to act as kinsman-redeemer. After a nearer relative declined, he bought Elimelech's land before the elders at the gate and married her. Their son Obed was David's grandfather.",
+ "body": [
+  "He greets his harvesters, “The LORD be with you,” asks who the young woman is, and tells her to glean only in his field and drink from his men's jars. He has heard what she has done for Naomi: “May the LORD repay your work.”",
+  "Waking at midnight on the threshing floor to find her at his feet, he calls her request an even greater kindness than the first, since she has not gone after younger men. At the gate the nearer redeemer will buy the land but not take Ruth with it, and removes his sandal; Boaz buys it all before witnesses. One of the bronze pillars of Solomon's temple is named Boaz."
+ ],
+ "moments": [
+  {"ref": "Ruth.2.1", "text": "A worthy man of Elimelech's clan"},
+  {"ref": "Ruth.2.4", "text": "“The LORD be with you”"},
+  {"ref": "Ruth.2.8-9", "text": "“Stay here close to my servant girls”"},
+  {"ref": "Ruth.2.12", "text": "“May the LORD repay your work”"},
+  {"ref": "Ruth.2.15-16", "text": "Leave stalks for her"},
+  {"ref": "Ruth.3.9-11", "text": "At the threshing floor"},
+  {"ref": "Ruth.4.1", "text": "At the gate"},
+  {"ref": "Ruth.4.9-10", "text": "Redeems the land and marries Ruth"},
+  {"ref": "Ruth.4.13", "text": "Obed born"},
+  {"ref": "Matt.1.5", "text": "In Jesus' genealogy"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ruth.2.1-4.22"},
+  {"kind": "scripture", "ref": "1Kgs.7.21"},
+  {"kind": "scripture", "ref": "Matt.1.5"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/069.Ruth_and_Boaz.jpg/500px-069.Ruth_and_Boaz.jpg", "caption": "Ruth and Boaz (Ruth 2), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:069.Ruth_and_Boaz.jpg", "license": "Public domain"}
+ ]
+}

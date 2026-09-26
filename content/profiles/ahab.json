@@ -1,0 +1,40 @@
+{
+ "id": "ahab",
+ "name": "Ahab",
+ "role": "King of Israel, husband of Jezebel",
+ "people": ["ahab_113"],
+ "when": "≈ 874–853 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Omri, who did more evil in the sight of the LORD than all who were before him. He married Jezebel of Sidon and built a temple and altar for Baal in Samaria. Elijah announced a drought to him and defeated the prophets of Baal on Carmel in his reign. He defeated Ben-hadad of Aram twice and spared him, took Naboth's vineyard after Jezebel had him killed, and died at Ramoth-gilead from a random arrow, as Micaiah had foretold.",
+ "body": [
+  "When Elijah comes to him after three years of drought, Ahab asks, “Is that you, O troubler of Israel?” After Carmel he rides to Jezreel ahead of the rain. A prophet condemns him for letting Ben-hadad go.",
+  "Sulking over Naboth's refusal, he lies on his bed and will not eat, and Jezebel takes the vineyard for him. Elijah meets him there: dogs will lick his blood where they licked Naboth's. Ahab tears his clothes and fasts, and the LORD delays the disaster to his son's days.",
+  "Before Ramoth-gilead his four hundred prophets promise victory; Micaiah foresees Israel scattered like sheep. Ahab goes into battle in disguise; an archer draws his bow at random and strikes him between the joints of his armour. He dies propped up in his chariot, and the dogs lick his blood as his chariot is washed at the pool of Samaria. Kings mentions the ivory house he built."
+ ],
+ "moments": [
+  {"ref": "1Kgs.16.30-31", "text": "More evil than all before him"},
+  {"ref": "1Kgs.16.32-33", "text": "A temple for Baal"},
+  {"ref": "1Kgs.18.17", "text": "“O troubler of Israel”"},
+  {"ref": "1Kgs.18.44-46", "text": "Rides to Jezreel"},
+  {"ref": "1Kgs.20.34", "text": "Spares Ben-hadad"},
+  {"ref": "1Kgs.21.2-4", "text": "Naboth refuses him"},
+  {"ref": "1Kgs.21.20", "text": "“So you have found me”"},
+  {"ref": "1Kgs.21.27-29", "text": "Humbles himself"},
+  {"ref": "1Kgs.22.8", "text": "He hates Micaiah"},
+  {"ref": "1Kgs.22.30", "text": "In disguise"},
+  {"ref": "1Kgs.22.34-35", "text": "The arrow"},
+  {"ref": "1Kgs.22.38", "text": "The dogs lick his blood"},
+  {"ref": "1Kgs.22.39", "text": "The ivory house"}
+ ],
+ "later": [
+  {"text": "The Kurkh Monolith of Shalmaneser III (British Museum ME 118884) lists “Ahab the Israelite” among the allied kings who fought him at Qarqar in 853 BC, with 2,000 chariots and 10,000 soldiers, the largest chariot force of the coalition.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Kurkh Monolith of Shalmaneser III, British Museum ME 118884", "note": "found at Kurkh (Üçtepe), Turkey, 1861"}]},
+  {"text": "Carved ivories found in the royal quarter of Samaria are commonly linked to the “ivory house” of 1 Kings 22:39.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Samaria ivories", "note": "Harvard excavations of 1908–10 and the Joint Expedition of 1931–35"}, {"kind": "scripture", "ref": "1Kgs.22.39"}, {"kind": "scripture", "ref": "Amos.3.15"}], "traditions": ["many archaeologists"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.16.29-22.40"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/093.The_Death_of_Ahab.jpg/500px-093.The_Death_of_Ahab.jpg", "caption": "The death of Ahab (1 Kings 22:34–35), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:093.The_Death_of_Ahab.jpg", "license": "Public domain"}
+ ]
+}

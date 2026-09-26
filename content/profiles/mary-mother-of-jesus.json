@@ -1,0 +1,49 @@
+{
+ "id": "mary-mother-of-jesus",
+ "name": "Mary",
+ "role": "Mother of Jesus",
+ "people": ["mary_1938"],
+ "genealogy": "mary",
+ "when": "≈ 6 BC to after AD 30",
+ "whenBasis": "From the annunciation, before Herod's death in 4 BC, to her presence with the disciples in Jerusalem after the ascension (Acts 1:14).",
+ "summary": "A young woman of Nazareth, betrothed to Joseph, to whom the angel Gabriel announced that she would conceive by the Holy Spirit and bear a son named Jesus. She answered, “I am the Lord's servant,” visited her relative Elizabeth, and sang the Magnificat. She gave birth in Bethlehem, fled with Joseph and the child to Egypt, and raised him in Nazareth. At Cana she told the servants, “Do whatever He tells you.” She stood by the cross, where Jesus gave her to the disciple he loved, and prayed with the disciples after the ascension.",
+ "body": [
+  "Luke twice says she treasured up what happened and pondered it in her heart. Simeon tells her a sword will pierce her soul. When the twelve-year-old Jesus stays behind in the temple, she says, “Your father and I have been anxiously searching for You.”",
+  "Once during the ministry she and his brothers come to take him home, and he answers that whoever does the will of God is his mother and brothers. Mark and Matthew name the brothers James, Joses or Joseph, Judas and Simon, and mention sisters."
+ ],
+ "moments": [
+  {"ref": "Luke.1.26-27", "text": "Betrothed to Joseph"},
+  {"ref": "Luke.1.30-31", "text": "The annunciation"},
+  {"ref": "Luke.1.38", "text": "“I am the Lord's servant”"},
+  {"ref": "Luke.1.39-42", "text": "Visits Elizabeth"},
+  {"ref": "Luke.1.46-48", "text": "The Magnificat"},
+  {"ref": "Matt.1.18", "text": "Found with child"},
+  {"ref": "Luke.2.7", "text": "Gives birth"},
+  {"ref": "Luke.2.19", "text": "Ponders in her heart"},
+  {"ref": "Luke.2.34-35", "text": "A sword will pierce your soul"},
+  {"ref": "Matt.2.14", "text": "Flees to Egypt"},
+  {"ref": "Luke.2.48", "text": "Finds Jesus in the temple"},
+  {"ref": "John.2.5", "text": "“Do whatever He tells you”"},
+  {"ref": "Mark.3.31-35", "text": "Comes with his brothers"},
+  {"ref": "John.19.26-27", "text": "“Here is your mother”"},
+  {"ref": "Acts.1.14", "text": "In prayer with the disciples"}
+ ],
+ "later": [
+  {"text": "The Protevangelium of James, from the second century, names her parents Joachim and Anna and tells of her childhood in the temple.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Protevangelium of James 1–8"}], "traditions": ["the Protevangelium of James, and Catholic and Orthodox tradition after it"]},
+  {"text": "The Council of Ephesus (431) called her Theotokos, God-bearer. Catholic and Orthodox Christians hold that she remained a virgin; Catholics also define her Immaculate Conception (1854) and Assumption (1950), and Orthodox Christians keep her Dormition.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Council of Ephesus (431)"}, {"kind": "primary", "title": "Pius IX, Ineffabilis Deus (1854)"}, {"kind": "primary", "title": "Pius XII, Munificentissimus Deus (1950)"}], "traditions": ["Catholic and Orthodox churches"]},
+  {"text": "Jesus' brothers and sisters have been read as Mary's later children (Helvidius, and most Protestants today), Joseph's children by an earlier marriage (Epiphanius, and the Orthodox), or cousins (Jerome, and Catholic tradition).", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.6.3"}, {"kind": "primary", "title": "Jerome, Against Helvidius"}, {"kind": "primary", "title": "Epiphanius, Panarion 78"}], "traditions": ["Helvidius and most Protestants", "Epiphanius and the Orthodox", "Jerome and Catholic tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.1.26-2.52"},
+  {"kind": "scripture", "ref": "Matt.1.16-2.23"},
+  {"kind": "scripture", "ref": "Mark.3.31-35"},
+  {"kind": "scripture", "ref": "Mark.6.3"},
+  {"kind": "scripture", "ref": "John.2.1-12"},
+  {"kind": "scripture", "ref": "John.19.25-27"},
+  {"kind": "scripture", "ref": "Acts.1.14"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Brooklyn_Museum_-_The_Magnificat_%28Le_magnificat%29_-_James_Tissot_-_overall_.jpg/500px-Brooklyn_Museum_-_The_Magnificat_%28Le_magnificat%29_-_James_Tissot_-_overall_.jpg", "caption": "The Magnificat (Luke 1:46), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Magnificat_(Le_magnificat)_-_James_Tissot_-_overall_.jpg", "license": "Public domain"}
+ ]
+}

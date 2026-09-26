@@ -24,6 +24,8 @@ export interface State {
   feature: string | null;
   /** How the reign charts date the kings, inline and in the Reign tab alike. */
   reignDates: ReignDates;
+  /** The person whose profile the People tab shows (a generated person's id), or null for the chapter's list. It outlives `goTo`, so a verse in a profile can be read with the profile still open. */
+  person: string | null;
 }
 export type Reveal = 'chiasm' | 'tally' | 'reign';
 
@@ -45,6 +47,7 @@ let state: State = {
   reveal: null,
   feature: null,
   reignDates: readStored<ReignDates>('reign-dates', 'thiele'),
+  person: null,
 };
 
 const listeners = new Set<() => void>();
@@ -65,6 +68,9 @@ export function setState(patch: Partial<State> | ((s: State) => Partial<State>))
   if (p.reignDates) writeStored('reign-dates', state.reignDates);
   emit();
 }
+
+/** Opens someone's profile in the People tab. */
+export function openPerson(id: string) { setState({ person: id, tab: 'people', panelOpen: true }); }
 
 export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab; reveal?: Reveal; feature?: string } = {}) {
   setState({ loc, wordIndex: null, index: null, reveal: opts.reveal ?? null, feature: opts.feature ?? null, ...(opts.openTab ? { tab: opts.openTab, panelOpen: true } : {}) });

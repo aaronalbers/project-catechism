@@ -1,0 +1,26 @@
+{
+ "id": "elymas",
+ "name": "Elymas",
+ "role": "Sorcerer struck blind at Paphos",
+ "people": ["elymas_403"],
+ "when": "≈ AD 46–48",
+ "whenBasis": "Paul and Barnabas's first journey, before the Jerusalem council of ≈AD 48–49, counting back from the Gallio date.",
+ "summary": "A Jewish sorcerer and false prophet named Bar-Jesus, attendant of the proconsul Sergius Paulus at Paphos. He opposed Barnabas and Saul and tried to turn the proconsul from the faith. Paul, filled with the Holy Spirit, called him a child of the devil and enemy of all righteousness and told him he would be blind for a time; mist and darkness came over him, and he groped about for someone to lead him by the hand.",
+ "body": [
+  "Luke says Elymas is what his name means, sorcerer."
+ ],
+ "moments": [
+  {"ref": "Acts.13.6", "text": "Bar-Jesus"},
+  {"ref": "Acts.13.8", "text": "Opposes them"},
+  {"ref": "Acts.13.10", "text": "“O child of the devil”"},
+  {"ref": "Acts.13.11", "text": "Blind for a time"},
+  {"ref": "Acts.13.12", "text": "The proconsul believes"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.13.6-12"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/The_Blinding_of_Elymas_Met_DP888580.jpg/500px-The_Blinding_of_Elymas_Met_DP888580.jpg", "caption": "The blinding of Elymas, Agostino Veneziano after Raphael, engraving, 1516, Metropolitan Museum of Art.", "credit": "Agostino Veneziano, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Blinding_of_Elymas_Met_DP888580.jpg", "license": "CC0"}
+ ]
+}

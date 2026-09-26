@@ -1,0 +1,32 @@
+{
+ "id": "eli",
+ "name": "Eli",
+ "role": "Priest at Shiloh who raised Samuel",
+ "people": ["eli_1072"],
+ "when": "≈ 11th century BC",
+ "whenBasis": "He judges Israel forty years before Samuel (1 Samuel 4:18), and Samuel anoints Saul, whose son-in-law David reigned ≈1010–970 BC.",
+ "summary": "Priest at the house of the LORD in Shiloh, who judged Israel forty years. He took Hannah's silent prayer for drunkenness, then blessed her, and raised her son Samuel. His sons Hophni and Phinehas treated the LORD's offering with contempt and he did not restrain them; a man of God, and then the boy Samuel, told him of judgment on his house. When word came that his sons were dead and the ark taken, he fell backward from his seat and broke his neck; he was ninety-eight.",
+ "body": [
+  "His sons take the meat of the sacrifices by force and lie with the women serving at the tent's entrance. Eli rebukes them, too late and too mildly, and they will not listen. A man of God tells him his house will lose the priesthood, and his two sons will die on one day.",
+  "When the boy Samuel hears his name in the night, it is Eli who realizes the LORD is calling. Told the judgment in the morning, he says, “He is the LORD,” and, “Let Him do what is good in His eyes.” At the news from the battle of Aphek, it is the loss of the ark that makes him fall."
+ ],
+ "moments": [
+  {"ref": "1Sam.1.9", "text": "By the doorpost of the temple"},
+  {"ref": "1Sam.1.13-14", "text": "Thinks Hannah drunk"},
+  {"ref": "1Sam.1.17", "text": "Blesses her"},
+  {"ref": "1Sam.2.12-17", "text": "His sons' contempt"},
+  {"ref": "1Sam.2.22-25", "text": "Rebukes them"},
+  {"ref": "1Sam.2.27-34", "text": "The man of God"},
+  {"ref": "1Sam.3.8-9", "text": "Understands the LORD is calling"},
+  {"ref": "1Sam.3.18", "text": "“Let Him do what is good in His eyes”"},
+  {"ref": "1Sam.4.15-18", "text": "Falls and dies"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.1.1-4.22"},
+  {"kind": "scripture", "ref": "1Kgs.2.27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/James_Daniell_-_Samuel_Declareth_to_Eli_the_Judgements_of_God_Upon_his_House_-_B1970.3.493_-_Yale_Center_for_British_Art.jpg/500px-James_Daniell_-_Samuel_Declareth_to_Eli_the_Judgements_of_God_Upon_his_House_-_B1970.3.493_-_Yale_Center_for_British_Art.jpg", "caption": "Samuel tells Eli the judgments of God on his house (1 Samuel 3:18), James Daniell, 1805. Yale Center for British Art.", "credit": "James Daniell, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:James_Daniell_-_Samuel_Declareth_to_Eli_the_Judgements_of_God_Upon_his_House_-_B1970.3.493_-_Yale_Center_for_British_Art.jpg", "license": "CC0"}
+ ]
+}

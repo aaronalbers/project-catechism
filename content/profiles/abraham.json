@@ -1,0 +1,49 @@
+{
+ "id": "abraham",
+ "name": "Abraham",
+ "role": "Patriarch, called from Ur, father of Israel",
+ "people": ["abraham_58"],
+ "genealogy": "abraham",
+ "when": "≈ 2000 BC in the Bible's own reckoning",
+ "whenBasis": "Genesis gives ages but no dates in any calendar we can fix. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; many historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
+ "summary": "Abram son of Terah left Ur of the Chaldeans with his father, and at the LORD's call left Haran for Canaan with Sarai and Lot, promised land, offspring and a blessing for all the families of the earth. He believed the LORD, and it was credited to him as righteousness. Renamed Abraham, he fathered Ishmael by Hagar and, at a hundred, Isaac by Sarah, whom he was then told to offer on a mountain in Moriah.",
+ "body": [
+  "The LORD tells him to go from his country, his kindred and his father's house to a land he will be shown. He goes at seventy-five, builds altars across Canaan, goes down to Egypt in a famine and passes Sarai off as his sister, and parts from Lot, who chooses the Jordan plain. When Lot is carried off in a raid, Abram pursues the kings with 318 men and brings him back, and Melchizedek king of Salem blesses him.",
+  "Childless, he is shown the stars and told his offspring will be as many; he believes, and it is credited to him as righteousness. The LORD makes a covenant with him over the halves of animals. When Sarai gives him Hagar, Ishmael is born. At ninety-nine he is renamed Abraham, “father of many nations,” and circumcision is given as the covenant's sign. Three visitors promise Sarah a son, and Abraham pleads with the LORD for Sodom.",
+  "Isaac is born when he is a hundred. God tells him to offer Isaac as a burnt offering; he goes, binds him on the altar and takes the knife, and the angel of the LORD stops him, and a ram is provided. He buys the cave of Machpelah to bury Sarah, sends for a wife for Isaac from his kin, and dies at 175, buried there by Isaac and Ishmael. Paul makes his faith the pattern of justification, and James says he was called “a friend of God.”"
+ ],
+ "moments": [
+  {"ref": "Gen.11.31", "text": "From Ur to Haran"},
+  {"ref": "Gen.12.1-3", "text": "The call and the promise"},
+  {"ref": "Gen.12.10-13", "text": "In Egypt"},
+  {"ref": "Gen.13.8-9", "text": "Parts from Lot"},
+  {"ref": "Gen.14.14-16", "text": "Rescues Lot"},
+  {"ref": "Gen.14.18-20", "text": "Blessed by Melchizedek"},
+  {"ref": "Gen.15.5-6", "text": "Believes, and it is credited as righteousness"},
+  {"ref": "Gen.16.3", "text": "Takes Hagar"},
+  {"ref": "Gen.17.5", "text": "Renamed Abraham"},
+  {"ref": "Gen.18.1-2", "text": "Three visitors"},
+  {"ref": "Gen.18.23-25", "text": "Pleads for Sodom"},
+  {"ref": "Gen.21.2-3", "text": "Isaac born"},
+  {"ref": "Gen.22.2", "text": "“Take your son”"},
+  {"ref": "Gen.22.12-13", "text": "The ram"},
+  {"ref": "Gen.23.19", "text": "Buries Sarah at Machpelah"},
+  {"ref": "Gen.25.7-9", "text": "Dies at 175"},
+  {"ref": "Rom.4.3", "text": "Paul on his faith"},
+  {"ref": "Jas.2.23", "text": "“A friend of God”"}
+ ],
+ "later": [
+  {"text": "Ur of the Chaldeans is usually identified with the Sumerian city at Tell el-Muqayyar in southern Iraq, excavated by Leonard Woolley from 1922 to 1934. A tradition going back centuries instead places his birth near Haran, at Urfa (Şanlıurfa) in Turkey.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Excavations at Ur (Tell el-Muqayyar)", "note": "Leonard Woolley for the British Museum and the University of Pennsylvania, 1922–34"}, {"kind": "scripture", "ref": "Gen.11.28-31"}], "traditions": ["southern Ur: most scholars", "a northern Ur near Haran: Jewish and Muslim tradition at Urfa, and some scholars"]},
+  {"text": "Judaism, Christianity and Islam all honour him as a patriarch. The Qur'an tells of Ibrahim and Ismail raising the foundations of the House in Mecca.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Qur'an 2:127"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.11.26-25.11"},
+  {"kind": "scripture", "ref": "Rom.4.1-25"},
+  {"kind": "scripture", "ref": "Jas.2.21-23"},
+  {"kind": "scripture", "ref": "Heb.11.8-19"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Tissot_The_Caravan_of_Abraham.jpg/500px-Tissot_The_Caravan_of_Abraham.jpg", "caption": "The caravan of Abraham (Genesis 12), James Tissot, ≈1896–1902. Jewish Museum, New York.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Tissot_The_Caravan_of_Abraham.jpg", "license": "Public domain"}
+ ]
+}

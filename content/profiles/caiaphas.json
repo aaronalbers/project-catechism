@@ -1,0 +1,39 @@
+{
+ "id": "caiaphas",
+ "name": "Caiaphas",
+ "role": "High priest who tried Jesus",
+ "people": ["caiaphas_532"],
+ "when": "≈ AD 18–36 high priest",
+ "whenBasis": "Josephus has Valerius Gratus appoint him and Vitellius remove him (Antiquities 18.35, 18.95). See the card on the Caiaphas ossuary.",
+ "summary": "High priest in the year Jesus died, son-in-law of Annas. When the council feared that Jesus' signs would bring the Romans down on them, he told them it was better for one man to die for the people than for the whole nation to perish. The chief priests and elders met in his courtyard to plot Jesus' arrest. At the trial in his house he put Jesus under oath to say whether he was the Christ, the Son of God, and at his answer tore his clothes and declared it blasphemy.",
+ "body": [
+  "John says he did not speak on his own but as high priest prophesied that Jesus would die for the nation. Annas sends Jesus bound to him, and from him Jesus is taken to Pilate. He is among the high priest's family who question Peter and John after Pentecost."
+ ],
+ "moments": [
+  {"ref": "Luke.3.2", "text": "High priest with Annas"},
+  {"ref": "John.11.49-50", "text": "“One man die for the people”"},
+  {"ref": "John.11.51", "text": "He prophesied"},
+  {"ref": "Matt.26.3-4", "text": "The plot in his courtyard"},
+  {"ref": "Matt.26.57", "text": "Jesus brought to him"},
+  {"ref": "Matt.26.63", "text": "“I charge You under oath”"},
+  {"ref": "Matt.26.65", "text": "Tears his clothes"},
+  {"ref": "John.18.24", "text": "Sent by Annas"},
+  {"ref": "John.18.28", "text": "To the Praetorium"},
+  {"ref": "Acts.4.6", "text": "Questions Peter and John"}
+ ],
+ "later": [
+  {"text": "Josephus names him Joseph called Caiaphas and dates his high priesthood from Valerius Gratus to Vitellius, the longest of any in the Roman period.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.35, 18.95"}]},
+  {"text": "An ornate ossuary inscribed “Yehosef bar Qayafa,” found in a Jerusalem tomb in 1990, is widely taken to be his.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Ossuary of Yehosef bar Qayafa, Israel Museum"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.26.3-5"},
+  {"kind": "scripture", "ref": "Matt.26.57-68"},
+  {"kind": "scripture", "ref": "John.11.47-53"},
+  {"kind": "scripture", "ref": "John.18.13-28"},
+  {"kind": "scripture", "ref": "Acts.4.6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Brooklyn_Museum_-_Annas_and_Caiaphas_%28Anne_et_Ca%C3%AFphe%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Annas_and_Caiaphas_%28Anne_et_Ca%C3%AFphe%29_-_James_Tissot.jpg", "caption": "Annas and Caiaphas, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Annas_and_Caiaphas_(Anne_et_Ca%C3%AFphe)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

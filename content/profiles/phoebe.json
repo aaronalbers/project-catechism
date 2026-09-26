@@ -1,0 +1,24 @@
+{
+ "id": "phoebe",
+ "name": "Phoebe",
+ "role": "Servant of the church at Cenchrea, commended to Rome",
+ "people": ["phebe_2340"],
+ "when": "≈ AD 57",
+ "whenBasis": "The letter to the Romans, written from Corinth near the end of Paul's third journey, counted forward from the Gallio date.",
+ "summary": "A sister in the faith and a servant of the church at Cenchrea, the eastern port of Corinth, whom Paul commends to the church in Rome. He asks them to welcome her in the Lord in a manner worthy of the saints and to help her with anything she needs, for she has been a great help to many people, including Paul himself.",
+ "body": [
+  "Hers is the first name in Paul's long list of greetings to Rome."
+ ],
+ "moments": [
+  {"ref": "Rom.16.1", "text": "A servant of the church in Cenchrea"},
+  {"ref": "Rom.16.2", "text": "A great help to many"}
+ ],
+ "later": [
+  {"text": "The Greek calls her diakonos, servant or deacon, of the church, and prostatis, helper or patron, of many.", "confidence": "evidence", "sources": [{"kind": "lexicon", "title": "Greek diakonos; prostatis"}]},
+  {"text": "Later manuscripts end Romans with a note that it was written from Corinth and sent by Phoebe; the King James Version prints it.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Subscription to Romans in the Byzantine manuscripts, printed in the King James Version (1611)"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Rom.16.1-2"}
+ ]
+}

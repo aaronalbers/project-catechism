@@ -1,0 +1,30 @@
+{
+ "id": "manoah",
+ "name": "Manoah",
+ "role": "Father of Samson",
+ "people": ["manoah_1933"],
+ "summary": "A man of Zorah, of the clan of the Danites, whose wife was barren. When an angel told her she would bear a Nazirite son, Manoah prayed for the man of God to come again and teach them how to raise the boy. At his offering the angel went up in the flame, and Manoah feared they would die for having seen God; his wife reasoned that the LORD would not have accepted their offering if he meant to kill them.",
+ "body": [
+  "The angel appears first to the woman, whose name is never given, and again to her in the field; she runs to fetch her husband. Asked his name, the angel answers that it is wonderful, beyond understanding.",
+  "When Samson wants a Philistine wife from Timnah, his parents object, not knowing it is from the LORD, but go down with him. Samson is buried between Zorah and Eshtaol in the tomb of his father Manoah."
+ ],
+ "moments": [
+  {"ref": "Judg.13.2", "text": "A Danite of Zorah"},
+  {"ref": "Judg.13.8", "text": "Prays for the man of God to return"},
+  {"ref": "Judg.13.11-14", "text": "Asks how to raise the boy"},
+  {"ref": "Judg.13.17-18", "text": "“Why do you ask my name?”"},
+  {"ref": "Judg.13.20", "text": "The angel in the flame"},
+  {"ref": "Judg.13.22-23", "text": "“We are going to die”"},
+  {"ref": "Judg.14.2-3", "text": "Objects to the Philistine bride"},
+  {"ref": "Judg.16.31", "text": "Samson buried in his tomb"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.13.1-25"},
+  {"kind": "scripture", "ref": "Judg.14.1-10"},
+  {"kind": "scripture", "ref": "Judg.16.31"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pieter_lastman_the_sacrifice_of_manoah_071043%29.jpg/500px-Pieter_lastman_the_sacrifice_of_manoah_071043%29.jpg", "caption": "The sacrifice of Manoah (Judges 13:19–20), Pieter Lastman, 1622.", "credit": "Pieter Lastman, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Pieter_lastman_the_sacrifice_of_manoah_071043).jpg", "license": "Public domain"}
+ ]
+}

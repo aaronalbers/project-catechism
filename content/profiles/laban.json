@@ -1,0 +1,36 @@
+{
+ "id": "laban",
+ "name": "Laban",
+ "role": "Rebekah's brother, Jacob's uncle and father-in-law",
+ "people": ["laban_1803"],
+ "genealogy": "laban",
+ "summary": "Rebekah's brother in Haran, who welcomed Abraham's servant and let her go to Isaac. Years later he took in Jacob, made him serve seven years for Rachel and gave him Leah instead, then seven more for Rachel. When Jacob fled with his daughters, Laban pursued him, searched for his stolen household idols, and made a covenant with him at Mizpah.",
+ "body": [
+  "He runs out to the servant at the spring when he sees the gold on his sister's arms. A generation later he runs out to meet Jacob, and calls him his own flesh and blood.",
+  "After a month he asks Jacob to name his wages; Jacob asks for Rachel. On the wedding night Laban brings Leah, and answers Jacob's protest that in their country the younger is not given before the firstborn. Jacob later says Laban changed his wages ten times.",
+  "When Jacob leaves while Laban is shearing his sheep, he pursues him to the hill country of Gilead, warned in a dream not to harm him. He searches the tents for his household idols, which Rachel is sitting on. They set up a heap of stones as a witness between them, and he kisses his grandchildren and daughters goodbye."
+ ],
+ "moments": [
+  {"ref": "Gen.24.29-31", "text": "Welcomes the servant"},
+  {"ref": "Gen.24.50-51", "text": "Lets Rebekah go"},
+  {"ref": "Gen.29.13-14", "text": "Welcomes Jacob"},
+  {"ref": "Gen.29.18-19", "text": "Agrees to Rachel"},
+  {"ref": "Gen.29.25-27", "text": "Gives Leah instead"},
+  {"ref": "Gen.31.7", "text": "Changes Jacob's wages ten times"},
+  {"ref": "Gen.31.22-24", "text": "Pursues Jacob"},
+  {"ref": "Gen.31.34-35", "text": "Searches for his idols"},
+  {"ref": "Gen.31.48-49", "text": "Mizpah"},
+  {"ref": "Gen.31.55", "text": "Kisses his daughters goodbye"}
+ ],
+ "later": [
+  {"text": "Tablets from Nuzi in northern Iraq (15th century BC) mention household gods passed down with an inheritance. Cyrus Gordon and others took this to explain why Rachel stole Laban's gods; the parallel has been doubted since the 1970s.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Nuzi tablets, Yorghan Tepe, excavated 1925–31"}, {"kind": "scholarship", "title": "The Historicity of the Patriarchal Narratives", "author": "Thomas L. Thompson", "year": 1974}], "traditions": ["Cyrus H. Gordon and others, from the Nuzi tablets", "doubted by Thomas L. Thompson, John Van Seters and later scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.24.29-60"},
+  {"kind": "scripture", "ref": "Gen.29.1-31.55"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/022.Jacob_Tends_Laban%27s_Flocks_and_Meets_Rachel.jpg/500px-022.Jacob_Tends_Laban%27s_Flocks_and_Meets_Rachel.jpg", "caption": "Jacob tends Laban's flocks and meets Rachel (Genesis 29), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:022.Jacob_Tends_Laban%27s_Flocks_and_Meets_Rachel.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "dinah",
+ "name": "Dinah",
+ "role": "Daughter of Jacob and Leah",
+ "people": ["dinah_1012"],
+ "genealogy": "dinah-of-jacob",
+ "summary": "The only daughter of Jacob that Genesis names. When she went out to see the women of the land, Shechem son of Hamor took her and lay with her by force, then sought to marry her. Her brothers Simeon and Levi, having made the men of the city agree to be circumcised, killed them all; Jacob rebuked them, and on his deathbed cursed their anger.",
+ "body": [
+  "Dinah herself never speaks. Shechem, the prince of the region, takes her and then, loving her, asks his father to get her for him as a wife. Jacob keeps silent until his sons come in from the field.",
+  "The brothers answer deceitfully: they will intermarry only if every male is circumcised. On the third day, while the men are in pain, Simeon and Levi take their swords, kill every male, and bring Dinah out of Shechem's house; the other sons plunder the city. Jacob fears the Canaanites' revenge; his sons answer, “Should he have treated our sister like a prostitute?”"
+ ],
+ "moments": [
+  {"ref": "Gen.30.21", "text": "Born to Leah"},
+  {"ref": "Gen.34.1-2", "text": "Taken by Shechem"},
+  {"ref": "Gen.34.3-4", "text": "Shechem asks to marry her"},
+  {"ref": "Gen.34.13-15", "text": "The brothers' condition"},
+  {"ref": "Gen.34.25-26", "text": "Simeon and Levi kill the men"},
+  {"ref": "Gen.34.30-31", "text": "Jacob's rebuke, and their answer"},
+  {"ref": "Gen.46.15", "text": "Goes down to Egypt"},
+  {"ref": "Gen.49.5-7", "text": "Jacob curses their anger"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.34.1-31"},
+  {"kind": "scripture", "ref": "Gen.49.5-7"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Dinah_tissot.jpg/500px-Dinah_tissot.jpg", "caption": "Dinah, James Tissot, ≈1896–1902. Jewish Museum, New York.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Dinah_tissot.jpg", "license": "Public domain"}
+ ]
+}

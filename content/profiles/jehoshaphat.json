@@ -1,0 +1,36 @@
+{
+ "id": "jehoshaphat",
+ "name": "Jehoshaphat",
+ "role": "King of Judah, ally of Ahab",
+ "people": ["jehoshaphat_808"],
+ "genealogy": "jehoshaphat",
+ "when": "≈ 872–848 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Asa, who did right as his father had. He made peace with Israel, married his son Jehoram to Ahab's daughter Athaliah, and went with Ahab to Ramoth-gilead, where he asked for a prophet of the LORD and nearly died in Ahab's place. Chronicles says he sent officials to teach the Law in Judah's towns and appointed judges, and that when Moab and Ammon invaded he prayed, sent singers ahead of the army, and found the enemy destroyed.",
+ "body": [
+  "At Ramoth-gilead he wears his royal robes while Ahab goes disguised, and the Aramean chariots turn on him until he cries out. The seer Jehu son of Hanani rebukes him: “Should you help the wicked and love those who hate the LORD?”",
+  "Facing the great army at En-gedi he prays, “We do not know what to do, but our eyes are upon You.” He builds ships to sail to Ophir for gold, which are wrecked at Ezion-geber (Chronicles says he built them in alliance with Ahaziah of Israel), and joins Joram against Moab, when Elisha says he would not look at Joram but for Jehoshaphat. He reigns twenty-five years."
+ ],
+ "moments": [
+  {"ref": "1Kgs.22.4", "text": "“I am as you are”"},
+  {"ref": "1Kgs.22.7", "text": "“Is there not still a prophet of the LORD?”"},
+  {"ref": "1Kgs.22.32-33", "text": "The chariots turn on him"},
+  {"ref": "1Kgs.22.43", "text": "Right, like Asa"},
+  {"ref": "1Kgs.22.48", "text": "Ships wrecked"},
+  {"ref": "2Kgs.3.14", "text": "Elisha's regard for him"},
+  {"ref": "2Chr.17.7-9", "text": "Teaching the Law"},
+  {"ref": "2Chr.19.2", "text": "“Should you help the wicked?”"},
+  {"ref": "2Chr.19.5-7", "text": "Judges"},
+  {"ref": "2Chr.20.12", "text": "“Our eyes are upon You”"},
+  {"ref": "2Chr.20.21-22", "text": "Singers ahead of the army"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.22.1-50"},
+  {"kind": "scripture", "ref": "2Kgs.3.1-27"},
+  {"kind": "scripture", "ref": "2Chr.17.1-21.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/103.The_Ammonite_and_Moabite_Armies_Are_Destroyed.jpg/500px-103.The_Ammonite_and_Moabite_Armies_Are_Destroyed.jpg", "caption": "The Ammonite and Moabite armies are destroyed (2 Chronicles 20:22–23), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:103.The_Ammonite_and_Moabite_Armies_Are_Destroyed.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "zechariah-priest",
+ "name": "Zechariah",
+ "role": "Priest, father of John the Baptist",
+ "people": ["zacharias_2971"],
+ "when": "≈ 7–5 BC",
+ "whenBasis": "In the days of Herod king of Judea (Luke 1:5), who died in 4 BC; John was born about six months before Jesus (Luke 1:36). See the card on dating Herod's death.",
+ "summary": "A priest of the division of Abijah, husband of Elizabeth. While he burned incense in the temple, the angel Gabriel told him his prayer was heard: Elizabeth would bear a son, to be named John, who would go before the Lord in the spirit and power of Elijah. Because he asked, “How can I be sure of this?”, he was struck silent until the child was born. When he wrote, “His name is John,” his tongue was freed and he prophesied the Benedictus.",
+ "body": [
+  "The people outside wonder why he stays so long in the sanctuary, and realise he has seen a vision when he comes out unable to speak. His song blesses the God of Israel for visiting his people and tells his son, “And you, child, will be called a prophet of the Most High.”"
+ ],
+ "moments": [
+  {"ref": "Luke.1.5", "text": "Of the division of Abijah"},
+  {"ref": "Luke.1.8-9", "text": "Chosen to burn incense"},
+  {"ref": "Luke.1.13", "text": "“Your prayer has been heard”"},
+  {"ref": "Luke.1.17", "text": "In the spirit of Elijah"},
+  {"ref": "Luke.1.18", "text": "“How can I be sure of this?”"},
+  {"ref": "Luke.1.20", "text": "Struck silent"},
+  {"ref": "Luke.1.63", "text": "“His name is John”"},
+  {"ref": "Luke.1.64", "text": "His tongue released"},
+  {"ref": "Luke.1.68", "text": "The Benedictus"},
+  {"ref": "Luke.1.76", "text": "“A prophet of the Most High”"}
+ ],
+ "later": [
+  {"text": "The division of Abijah was the eighth of the twenty-four priestly courses David set up.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "1Chr.24.10"}]},
+  {"text": "The Protevangelium of James says Herod had him killed in the temple for not revealing where John was hidden.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Protevangelium of James 23–24"}], "traditions": ["the Protevangelium of James"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.1.5-80"},
+  {"kind": "scripture", "ref": "Luke.3.2"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Brooklyn_Museum_-_Portrait_of_Zacharias_and_Elizabeth_%28Portrait_de_Zacharie_et_d%27Elisabeth%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_Portrait_of_Zacharias_and_Elizabeth_%28Portrait_de_Zacharie_et_d%27Elisabeth%29_-_James_Tissot_-_overall.jpg", "caption": "Zacharias and Elizabeth, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Portrait_of_Zacharias_and_Elizabeth_(Portrait_de_Zacharie_et_d%27Elisabeth)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

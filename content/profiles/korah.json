@@ -1,0 +1,31 @@
+{
+ "id": "korah",
+ "name": "Korah",
+ "role": "Levite who led a revolt against Moses and Aaron",
+ "people": ["korah_1795"],
+ "summary": "A Levite of the clan of Kohath who, with Dathan and Abiram of Reuben and 250 leaders of the congregation, rose against Moses and Aaron: everyone in the congregation is holy, so why do you exalt yourselves? Challenged to bring censers before the LORD, the rebels were judged: the ground opened under Dathan and Abiram's tents, and fire consumed the 250. Korah's line did not die out.",
+ "body": [
+  "Moses answers that the LORD will show who is holy, and asks the Levites whether it is too small a thing that God set them apart, that they now seek the priesthood too. Dathan and Abiram refuse to come, saying Moses has brought them out of a land flowing with milk and honey to die in the wilderness.",
+  "The earth swallows them and their households; fire comes from the LORD and consumes the men offering incense. Their bronze censers are hammered into a covering for the altar, a reminder that only Aaron's descendants may burn incense. Numbers 26 counts Korah among those the earth swallowed, and adds that his sons did not die. Psalms 42–49 and 84–88 include eleven headed “of the sons of Korah,” and Jude names Korah's rebellion as a warning."
+ ],
+ "moments": [
+  {"ref": "Exod.6.21", "text": "A son of Izhar"},
+  {"ref": "Num.16.1-3", "text": "“Everyone in the entire congregation is holy”"},
+  {"ref": "Num.16.8-10", "text": "Moses answers the Levites"},
+  {"ref": "Num.16.31-33", "text": "The earth opens"},
+  {"ref": "Num.16.35", "text": "Fire consumes the 250"},
+  {"ref": "Num.16.38-40", "text": "The censers hammered for the altar"},
+  {"ref": "Num.26.10-11", "text": "His line did not die out"},
+  {"ref": "Ps.84.1", "text": "“Of the sons of Korah”"},
+  {"ref": "Jude.1.11", "text": "“Korah's rebellion”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Num.16.1-50"},
+  {"kind": "scripture", "ref": "Num.26.9-11"},
+  {"kind": "scripture", "ref": "Jude.1.11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/040.The_Death_of_Korah%2C_Dathan%2C_and_Abiram.jpg/500px-040.The_Death_of_Korah%2C_Dathan%2C_and_Abiram.jpg", "caption": "The death of Korah, Dathan and Abiram (Numbers 16), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:040.The_Death_of_Korah,_Dathan,_and_Abiram.jpg", "license": "Public domain"}
+ ]
+}

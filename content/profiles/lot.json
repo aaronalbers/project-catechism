@@ -1,0 +1,37 @@
+{
+ "id": "lot",
+ "name": "Lot",
+ "role": "Abraham's nephew, rescued from Sodom",
+ "people": ["lot_1830"],
+ "genealogy": "lot",
+ "summary": "The son of Abram's brother Haran, who went with Abram to Canaan. When their herds grew too many, he chose the well-watered Jordan plain and settled near Sodom. Carried off in a raid and rescued by Abram, he later took in two angels, fled with his daughters as Sodom was destroyed, and lost his wife on the way; his daughters bore Moab and Ammon by him.",
+ "body": [
+  "Given the choice, Lot looks toward the Jordan plain, “like the garden of the LORD,” and pitches his tent toward Sodom. When four kings sack the cities of the plain he is taken, and Abram pursues and recovers him.",
+  "He is sitting in Sodom's gateway when two angels arrive, and presses them to stay with him. The men of the city surround the house demanding them; Lot offers his daughters instead, and the angels strike the men blind. At dawn they drag him, his wife and daughters out; his wife looks back and becomes a pillar of salt. In a cave above Zoar his daughters make him drunk and conceive by him; their sons are Moab and Ben-ammi, fathers of Moab and Ammon.",
+  "Jesus tells his hearers to remember Lot's wife. Peter calls Lot righteous, distressed by the conduct of the lawless."
+ ],
+ "moments": [
+  {"ref": "Gen.11.27", "text": "Son of Haran"},
+  {"ref": "Gen.12.4", "text": "Goes with Abram"},
+  {"ref": "Gen.13.10-12", "text": "Chooses the Jordan plain"},
+  {"ref": "Gen.14.12", "text": "Taken captive"},
+  {"ref": "Gen.14.16", "text": "Rescued by Abram"},
+  {"ref": "Gen.19.1-3", "text": "Takes in the angels"},
+  {"ref": "Gen.19.15-16", "text": "Dragged out of Sodom"},
+  {"ref": "Gen.19.26", "text": "His wife looks back"},
+  {"ref": "Gen.19.36-38", "text": "Moab and Ammon"},
+  {"ref": "Luke.17.32", "text": "“Remember Lot's wife”"},
+  {"ref": "2Pet.2.7-8", "text": "“A righteous man”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.11.27-14.16"},
+  {"kind": "scripture", "ref": "Gen.19.1-38"},
+  {"kind": "scripture", "ref": "Luke.17.28-32"},
+  {"kind": "scripture", "ref": "2Pet.2.6-8"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/013.Lot_Flees_as_Sodom_and_Gomorrah_Burn.jpg/500px-013.Lot_Flees_as_Sodom_and_Gomorrah_Burn.jpg", "caption": "Lot flees as Sodom and Gomorrah burn (Genesis 19), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:013.Lot_Flees_as_Sodom_and_Gomorrah_Burn.jpg", "license": "Public domain"}
+ ],
+ "eastonWrong": "the lots that were cast to decide a matter"
+}

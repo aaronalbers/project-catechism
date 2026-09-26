@@ -1,0 +1,30 @@
+{
+ "id": "jehoiakim",
+ "name": "Jehoiakim",
+ "role": "King of Judah who burned Jeremiah's scroll",
+ "people": ["jehoiakim_1085"],
+ "when": "≈ 609–598 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Josiah, named Eliakim, made king by Pharaoh Necho, who changed his name and taxed the land to pay Egypt's tribute. He became Nebuchadnezzar's vassal for three years, then rebelled. He had the prophet Uriah brought back from Egypt and killed. When Jeremiah's scroll was read to him in the winter house, he cut it off column by column with a scribe's knife and burned it in the brazier.",
+ "body": [
+  "Jeremiah condemns him for building his palace by unrighteousness and not paying his workers: he will be buried with a donkey's burial, dragged off and thrown outside Jerusalem's gates. His officials urge him not to burn the scroll; he does not listen, and neither he nor his servants are afraid. Jeremiah dictates it again to Baruch, with many words added."
+ ],
+ "moments": [
+  {"ref": "2Kgs.23.34-35", "text": "Made king by Necho"},
+  {"ref": "2Kgs.24.1", "text": "Serves Nebuchadnezzar, then rebels"},
+  {"ref": "Jer.22.13-14", "text": "His palace"},
+  {"ref": "Jer.22.18-19", "text": "A donkey's burial"},
+  {"ref": "Jer.26.20-23", "text": "Kills the prophet Uriah"},
+  {"ref": "Jer.36.22-23", "text": "Burns the scroll"},
+  {"ref": "Jer.36.24-25", "text": "Not afraid"},
+  {"ref": "Jer.36.30", "text": "No one on David's throne"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.23.34-24.6"},
+  {"kind": "scripture", "ref": "2Chr.36.4-8"},
+  {"kind": "scripture", "ref": "Jer.22.13-19"},
+  {"kind": "scripture", "ref": "Jer.26.20-23"},
+  {"kind": "scripture", "ref": "Jer.36.1-32"}
+ ]
+}

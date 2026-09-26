@@ -1,0 +1,36 @@
+{
+ "id": "titus",
+ "name": "Titus",
+ "role": "Greek fellow worker of Paul, left in charge in Crete",
+ "people": ["titus_2869"],
+ "when": "≈ AD 49–60s",
+ "whenBasis": "From Paul's second journey, dated from the Gallio inscription, to his last letters.",
+ "summary": "A Greek whom Paul took with Barnabas to Jerusalem, where he was not compelled to be circumcised. Paul sent him to Corinth during the troubled correspondence; not finding him at Troas, Paul had no peace, and was comforted by his arrival in Macedonia with good news. He organised the collection at Corinth. The letter to Titus leaves him in Crete to appoint elders in every town; Paul's last letter says he has gone to Dalmatia.",
+ "body": [
+  "Paul calls him his true child in our common faith, and his partner and fellow worker. Acts never names him."
+ ],
+ "moments": [
+  {"ref": "Gal.2.1", "text": "To Jerusalem"},
+  {"ref": "Gal.2.3", "text": "Not compelled to be circumcised"},
+  {"ref": "2Cor.2.13", "text": "Not found at Troas"},
+  {"ref": "2Cor.7.6", "text": "Comfort in his arrival"},
+  {"ref": "2Cor.8.16-17", "text": "Eager to go"},
+  {"ref": "2Cor.8.23", "text": "Partner and fellow worker"},
+  {"ref": "Titus.1.4", "text": "“My true child”"},
+  {"ref": "Titus.1.5", "text": "Left in Crete"},
+  {"ref": "2Tim.4.10", "text": "Gone to Dalmatia"}
+ ],
+ "later": [
+  {"text": "Eusebius says he was bishop of the churches of Crete; a ruined basilica of Saint Titus stands at Gortyn.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.4.6"}, {"kind": "archaeology", "title": "Basilica of Saint Titus, Gortyn, Crete"}], "traditions": ["Eusebius", "Cretan Orthodox tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gal.2.1-3"},
+  {"kind": "scripture", "ref": "2Cor.2.12-13"},
+  {"kind": "scripture", "ref": "2Cor.7.5-16"},
+  {"kind": "scripture", "ref": "2Cor.8.6-24"},
+  {"kind": "scripture", "ref": "2Cor.12.18"},
+  {"kind": "scripture", "ref": "Titus.1.1-3.15"},
+  {"kind": "scripture", "ref": "2Tim.4.10"}
+ ]
+}

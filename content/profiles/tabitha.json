@@ -1,0 +1,28 @@
+{
+ "id": "tabitha",
+ "name": "Tabitha",
+ "role": "Disciple at Joppa whom Peter raised",
+ "people": ["dorcas_2810"],
+ "when": "≈ AD 35–40",
+ "whenBasis": "Peter's journey through Lydda and Joppa, after Saul's conversion and before Cornelius (Acts 9:31–10:1).",
+ "summary": "A disciple in Joppa, called Dorcas in Greek, always occupied with works of kindness and charity. When she fell ill and died, the disciples sent for Peter at Lydda. The widows stood weeping in the upper room, showing him the tunics and other clothing she had made. Peter sent them out, knelt and prayed, and said, “Tabitha, get up!” She opened her eyes and sat up, and many in Joppa believed.",
+ "body": [
+  "Both names mean gazelle, one in Aramaic and one in Greek. She is the only woman Acts calls a disciple."
+ ],
+ "moments": [
+  {"ref": "Acts.9.36", "text": "Works of kindness and charity"},
+  {"ref": "Acts.9.37", "text": "She dies"},
+  {"ref": "Acts.9.38", "text": "They send for Peter"},
+  {"ref": "Acts.9.39", "text": "The widows and the tunics"},
+  {"ref": "Acts.9.40", "text": "“Tabitha, get up!”"},
+  {"ref": "Acts.9.41-42", "text": "Many believe"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.9.36-43"},
+  {"kind": "lexicon", "title": "Aramaic ṭabyĕtā and Greek dorkas, gazelle"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cappella_brancacci%2C_Guarigione_dello_storpio_e_resurrezione_di_Tabita_%28restaurato%29%2C_Masolino.jpg/500px-Cappella_brancacci%2C_Guarigione_dello_storpio_e_resurrezione_di_Tabita_%28restaurato%29%2C_Masolino.jpg", "caption": "The healing of the cripple and the raising of Tabitha, Masolino, 1424–25, Brancacci Chapel, Florence.", "credit": "Masolino, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Cappella_brancacci,_Guarigione_dello_storpio_e_resurrezione_di_Tabita_(restaurato),_Masolino.jpg", "license": "Public domain"}
+ ]
+}

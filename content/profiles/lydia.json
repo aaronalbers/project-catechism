@@ -1,0 +1,26 @@
+{
+ "id": "lydia",
+ "name": "Lydia",
+ "role": "Dealer in purple cloth, Paul's first convert in Europe",
+ "people": ["lydia_1837"],
+ "when": "≈ AD 49–52",
+ "whenBasis": "Paul's second journey, dated from the Gallio inscription, which puts him in Corinth ≈AD 50–52. See the card on the Gallio inscription.",
+ "summary": "A dealer in purple cloth from Thyatira and a worshipper of God, among the women gathered at the place of prayer by the river outside Philippi. The Lord opened her heart to respond to Paul's message, and she and her household were baptised. She urged Paul and his companions to stay at her house, and persuaded them. After their release from prison, Paul and Silas went to her house to encourage the brothers before leaving the city.",
+ "body": [
+  "She says, “If you consider me a believer in the Lord, come and stay at my house.” Her house becomes the meeting place of the church at Philippi."
+ ],
+ "moments": [
+  {"ref": "Acts.16.13", "text": "The place of prayer"},
+  {"ref": "Acts.16.14", "text": "The Lord opened her heart"},
+  {"ref": "Acts.16.15", "text": "Baptised; “Come and stay at my house”"},
+  {"ref": "Acts.16.40", "text": "The brothers at her house"}
+ ],
+ "later": [
+  {"text": "Theographic's record for her also counts two Old Testament verses that belong to the Edomite woman Timna.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.36.22"}, {"kind": "scripture", "ref": "1Chr.1.39"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Lydia"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.16.11-15"},
+  {"kind": "scripture", "ref": "Acts.16.40"}
+ ]
+}

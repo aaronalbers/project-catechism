@@ -1,0 +1,36 @@
+{
+ "id": "barabbas",
+ "name": "Barabbas",
+ "role": "Prisoner released in Jesus' place",
+ "people": ["barabbas_399"],
+ "when": "≈ AD 30 or 33",
+ "whenBasis": "The crucifixion under Pilate (AD 26–36), usually dated to the Passover of AD 30 or 33 from the weekday the gospels give.",
+ "summary": "A notorious prisoner held with the rebels who had committed murder in the insurrection. At the Passover, when the governor customarily released a prisoner of the crowd's choosing, Pilate offered them Jesus or Barabbas. Stirred up by the chief priests, the crowd shouted for Barabbas and for Jesus to be crucified, and Pilate released him.",
+ "body": [
+  "John calls him simply an insurrectionist; Luke says he had been thrown into prison for an insurrection in the city, and for murder."
+ ],
+ "moments": [
+  {"ref": "Matt.27.16", "text": "A notorious prisoner"},
+  {"ref": "Mark.15.7", "text": "With the rebels"},
+  {"ref": "Matt.27.17", "text": "Barabbas or Jesus"},
+  {"ref": "Matt.27.20", "text": "The crowd persuaded"},
+  {"ref": "Matt.27.21", "text": "“Barabbas”"},
+  {"ref": "John.18.40", "text": "“Not this man”"},
+  {"ref": "Luke.23.19", "text": "Insurrection and murder"},
+  {"ref": "Matt.27.26", "text": "Released"}
+ ],
+ "later": [
+  {"text": "Some manuscripts of Matthew 27:16–17 call him Jesus Barabbas, a reading Origen already knew; the name Barabbas means son of the father.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Origen, Commentary on Matthew, series 121"}, {"kind": "lexicon", "title": "Aramaic bar abbā, son of the father"}]},
+  {"text": "No source outside the gospels mentions the custom of releasing a prisoner at Passover.", "confidence": "consensus", "sources": [{"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.27.15-26"},
+  {"kind": "scripture", "ref": "Mark.15.6-15"},
+  {"kind": "scripture", "ref": "Luke.23.18-25"},
+  {"kind": "scripture", "ref": "John.18.39-40"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Barabbas_%28James_Tissot%29.jpg/500px-Barabbas_%28James_Tissot%29.jpg", "caption": "Barabbas, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Barabbas_(James_Tissot).jpg", "license": "Public domain"}
+ ]
+}

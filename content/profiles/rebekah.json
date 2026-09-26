@@ -1,0 +1,36 @@
+{
+ "id": "rebekah",
+ "name": "Rebekah",
+ "role": "Wife of Isaac, mother of Jacob and Esau",
+ "people": ["rebekah_2401"],
+ "genealogy": "rebekah",
+ "summary": "Daughter of Bethuel in Aram, Abraham's great-niece, she gave water to Abraham's servant and to his camels at the well, the sign he had asked for, and agreed to go to Canaan to marry Isaac. Barren for twenty years, she bore twins after the LORD told her the older would serve the younger. She favoured Jacob, contrived to win him Isaac's blessing, and sent him to her brother Laban.",
+ "body": [
+  "The servant prays for a young woman who will offer to water his camels as well as him; before he finishes, Rebekah comes out with her jar and does just that. When her family asks if she will go with the man, she says, “I will go.”",
+  "Isaac is forty when he marries her and sixty when the twins are born. When they struggle in her womb she asks the LORD why, and is told that two nations are in her and the older will serve the younger.",
+  "She overhears Isaac send Esau for game, cooks the meal herself, dresses Jacob in Esau's clothes and goatskins, and takes any curse on herself. When Esau vows to kill his brother, she sends Jacob to Laban. She is buried in the cave of Machpelah; Paul cites the word she was given."
+ ],
+ "moments": [
+  {"ref": "Gen.24.15-16", "text": "At the well"},
+  {"ref": "Gen.24.18-20", "text": "Waters the camels"},
+  {"ref": "Gen.24.58", "text": "“I will go”"},
+  {"ref": "Gen.24.67", "text": "Isaac loves her"},
+  {"ref": "Gen.25.21-23", "text": "Two nations in her womb"},
+  {"ref": "Gen.25.28", "text": "Loves Jacob"},
+  {"ref": "Gen.27.5-10", "text": "Plans the deception"},
+  {"ref": "Gen.27.13", "text": "“Your curse be on me”"},
+  {"ref": "Gen.27.42-45", "text": "Sends Jacob away"},
+  {"ref": "Gen.49.31", "text": "Buried at Machpelah"},
+  {"ref": "Rom.9.10-12", "text": "“The older will serve the younger”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.24.1-67"},
+  {"kind": "scripture", "ref": "Gen.25.19-28"},
+  {"kind": "scripture", "ref": "Gen.27.1-28.5"},
+  {"kind": "scripture", "ref": "Rom.9.10-13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/018.Eliezer_and_Rebekah_at_the_Well.jpg/500px-018.Eliezer_and_Rebekah_at_the_Well.jpg", "caption": "Abraham's servant and Rebekah at the well (Genesis 24), Gustave Doré, 1866. Genesis 24 does not name the servant; the plate's title follows the tradition that he is Eliezer (15:2).", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:018.Eliezer_and_Rebekah_at_the_Well.jpg", "license": "Public domain"}
+ ]
+}

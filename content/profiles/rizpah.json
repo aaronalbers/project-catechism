@@ -1,0 +1,26 @@
+{
+ "id": "rizpah",
+ "name": "Rizpah",
+ "role": "Saul's concubine who guarded her sons' bodies",
+ "people": ["rizpah_2444"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "Daughter of Aiah, Saul's concubine, over whom Ish-bosheth quarrelled with Abner. When the Gibeonites demanded seven of Saul's descendants to avenge Saul's slaughter of them, her two sons were among those hanged on the hill at Gibeah. She spread sackcloth on a rock and kept the birds off them by day and the beasts by night from harvest until the rains; when David heard, he gathered their bones with Saul's and Jonathan's and buried them.",
+ "body": [
+  "Her vigil runs from the beginning of the barley harvest through the dry months. It moves David to give Saul's house a proper burial in the tomb of Kish at Zela, and after that, the text says, God answered prayer for the land."
+ ],
+ "moments": [
+  {"ref": "2Sam.3.7", "text": "Saul's concubine"},
+  {"ref": "2Sam.21.8-9", "text": "Her sons hanged"},
+  {"ref": "2Sam.21.10", "text": "Her vigil"},
+  {"ref": "2Sam.21.11-14", "text": "David buries them"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.3.7"},
+  {"kind": "scripture", "ref": "2Sam.21.1-14"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/082.Rizpah%E2%80%99s_Kindness_toward_the_Dead.jpg/500px-082.Rizpah%E2%80%99s_Kindness_toward_the_Dead.jpg", "caption": "Rizpah's kindness toward the dead (2 Samuel 21:10), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:082.Rizpah%E2%80%99s_Kindness_toward_the_Dead.jpg", "license": "Public domain"}
+ ]
+}

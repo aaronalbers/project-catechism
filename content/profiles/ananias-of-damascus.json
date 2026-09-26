@@ -1,0 +1,33 @@
+{
+ "id": "ananias-of-damascus",
+ "name": "Ananias of Damascus",
+ "role": "Disciple who laid hands on Saul",
+ "people": ["ananias_259"],
+ "when": "≈ AD 33–35",
+ "whenBasis": "Saul's conversion, which Paul's own reckoning (Galatians 1:18; 2:1) and the Gallio date put ≈AD 33–35.",
+ "summary": "A disciple in Damascus, devout by the standard of the Law and well regarded by all the Jews there. In a vision the Lord told him to go to the house of Judas on Straight Street and lay hands on Saul of Tarsus, who was praying and blind. Ananias protested that he had heard how much harm Saul had done; the Lord answered that Saul was his chosen instrument to carry his name before the Gentiles. Ananias went, called him “Brother Saul,” and something like scales fell from Saul's eyes; he was baptised.",
+ "body": [
+  "In Paul's retelling to the crowd in Jerusalem, Ananias tells him that God has appointed him to be a witness to all men, and says, “Get up, be baptized, and wash your sins away, calling on His name.”"
+ ],
+ "moments": [
+  {"ref": "Acts.9.10", "text": "“Here I am, Lord”"},
+  {"ref": "Acts.9.11-12", "text": "Straight Street"},
+  {"ref": "Acts.9.13", "text": "Protests"},
+  {"ref": "Acts.9.15", "text": "“My chosen instrument”"},
+  {"ref": "Acts.9.17", "text": "“Brother Saul”"},
+  {"ref": "Acts.9.18", "text": "Scales fall"},
+  {"ref": "Acts.22.12", "text": "Devout and well regarded"},
+  {"ref": "Acts.22.16", "text": "“Get up, be baptized”"}
+ ],
+ "later": [
+  {"text": "A small underground chapel in the old city of Damascus is shown as his house.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Chapel of Saint Ananias, Bab Sharqi, Damascus"}], "traditions": ["local Christian tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.9.10-19"},
+  {"kind": "scripture", "ref": "Acts.22.12-16"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Saint_Paul_Ananias_Sight_Restored.jpg/500px-Saint_Paul_Ananias_Sight_Restored.jpg", "caption": "Ananias restoring the sight of Saint Paul, Pietro da Cortona, ≈1631, Santa Maria della Concezione, Rome.", "credit": "Pietro da Cortona, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Saint_Paul_Ananias_Sight_Restored.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "adam",
+ "name": "Adam",
+ "role": "The first man",
+ "people": ["adam_78"],
+ "genealogy": "adam",
+ "summary": "Formed from the dust of the ground and given the breath of life, the man was set in Eden to work and keep it, named the animals, and was given the woman. Both ate from the tree the LORD had forbidden, and they were sent out of the garden. He fathered Cain, Abel and Seth, and Genesis gives his age at death as 930.",
+ "body": [
+  "Genesis 2 tells of the LORD God forming the man from the dust and breathing life into his nostrils, and setting him in Eden with one command: not to eat from the tree of the knowledge of good and evil. He names the animals, but among them no suitable helper is found; the woman is made from his side, and he greets her with a poem.",
+  "The serpent persuades the woman, she eats and gives to her husband, and he eats. When the LORD God calls, “Where are you?”, he is hiding, and he blames the woman. The ground is cursed because of him: he will eat by the sweat of his brow until he returns to the dust. The LORD God clothes them in skins and sends them out, with cherubim guarding the way to the tree of life.",
+  "Genesis 5 begins the line from him to Noah: he fathers Seth at 130 and lives 930 years. Luke's genealogy of Jesus ends with “Adam, the son of God,” and Paul sets him beside Christ: as sin and death came into the world through one man, so life comes through one."
+ ],
+ "moments": [
+  {"ref": "Gen.2.7", "text": "Formed from the dust"},
+  {"ref": "Gen.2.15-17", "text": "Set in Eden, with one command"},
+  {"ref": "Gen.2.19-20", "text": "Names the animals"},
+  {"ref": "Gen.2.22-23", "text": "The woman is brought to him"},
+  {"ref": "Gen.3.6", "text": "Eats"},
+  {"ref": "Gen.3.9-12", "text": "Hides, and blames the woman"},
+  {"ref": "Gen.3.17-19", "text": "“To dust you shall return”"},
+  {"ref": "Gen.3.23-24", "text": "Sent out of Eden"},
+  {"ref": "Gen.5.3-5", "text": "Seth, and 930 years"},
+  {"ref": "Luke.3.38", "text": "The end of Luke's genealogy"},
+  {"ref": "Rom.5.12", "text": "Sin entered through one man"},
+  {"ref": "1Cor.15.22", "text": "“As in Adam all die”"}
+ ],
+ "later": [
+  {"text": "The Hebrew ʾādām is also the ordinary word for a human being, or humankind (Genesis 1:26–27), and Genesis 2–3 mostly calls him “the man,” with the article. Readers divide over whether these chapters tell of one historical man or of humanity in a representative figure.", "confidence": "interpretation", "sources": [{"kind": "lexicon", "title": "Strong's H120, ʾādām", "note": "man, mankind"}, {"kind": "scripture", "ref": "Gen.1.26-27"}], "traditions": ["one historical first man: traditional Jewish and Christian readings", "a representative figure: many modern commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.2.4-5.5"},
+  {"kind": "scripture", "ref": "Rom.5.12-21"},
+  {"kind": "scripture", "ref": "1Cor.15.21-22"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/003.Adam_and_Eve_Are_Driven_out_of_Eden.jpg/500px-003.Adam_and_Eve_Are_Driven_out_of_Eden.jpg", "caption": "Adam and Eve driven out of Eden (Genesis 3:23–24), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:003.Adam_and_Eve_Are_Driven_out_of_Eden.jpg", "license": "Public domain"}
+ ]
+}

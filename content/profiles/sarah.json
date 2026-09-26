@@ -1,0 +1,38 @@
+{
+ "id": "sarah",
+ "name": "Sarah",
+ "role": "Wife of Abraham, mother of Isaac",
+ "people": ["sarah_2473"],
+ "summary": "Sarai, Abraham's wife and half-sister, barren most of her life, went with him from Haran to Canaan and twice was passed off as his sister, in Egypt and in Gerar. She gave her servant Hagar to Abraham, then drove her out. Told she would bear a son at ninety, she laughed; she bore Isaac, and died at 127 at Hebron, buried in the cave of Machpelah.",
+ "body": [
+  "Genesis introduces her as barren. In Egypt Abram asks her to say she is his sister, and she is taken into Pharaoh's house until plagues send her back; the same happens with Abimelech king of Gerar, to whom Abraham explains that she is his father's daughter but not his mother's.",
+  "Childless, she gives him Hagar. When Hagar conceives and despises her, Sarai treats her harshly, and Hagar flees. God renames her Sarah and promises she will be the mother of nations. Listening at the tent door as a visitor says she will have a son, she laughs to herself, and denies it when asked. When Isaac is born she says God has made laughter for her, and later has Hagar and Ishmael sent away.",
+  "She dies at Kiriath-arba, that is, Hebron, and Abraham buys the cave of Machpelah to bury her. Isaiah tells Israel to look to Sarah who gave them birth; Hebrews counts her faith, and Peter her deference to Abraham."
+ ],
+ "moments": [
+  {"ref": "Gen.11.29-30", "text": "Barren"},
+  {"ref": "Gen.12.11-15", "text": "Taken into Pharaoh's house"},
+  {"ref": "Gen.16.1-2", "text": "Gives Hagar to Abram"},
+  {"ref": "Gen.16.6", "text": "Deals harshly with Hagar"},
+  {"ref": "Gen.17.15-16", "text": "Renamed Sarah"},
+  {"ref": "Gen.18.12", "text": "Laughs"},
+  {"ref": "Gen.20.2", "text": "Taken by Abimelech"},
+  {"ref": "Gen.21.1-2", "text": "Bears Isaac"},
+  {"ref": "Gen.21.6", "text": "“God has made me laugh”"},
+  {"ref": "Gen.21.10", "text": "“Expel the slave woman”"},
+  {"ref": "Gen.23.1-2", "text": "Dies at 127"},
+  {"ref": "Gen.23.19", "text": "Buried at Machpelah"},
+  {"ref": "Isa.51.2", "text": "“Sarah who gave you birth”"},
+  {"ref": "Heb.11.11", "text": "By faith"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.11.29-23.20"},
+  {"kind": "scripture", "ref": "Isa.51.2"},
+  {"kind": "scripture", "ref": "Heb.11.11"},
+  {"kind": "scripture", "ref": "1Pet.3.6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Provost%2C_Jan_-_L%27Ange_annon%C3%A7ant_%C3%A0_Abraham_la_naissance_d%27un_fils%2C_RF_1989_35.jpg/500px-Provost%2C_Jan_-_L%27Ange_annon%C3%A7ant_%C3%A0_Abraham_la_naissance_d%27un_fils%2C_RF_1989_35.jpg", "caption": "The angel announces to Abraham and Sarah the birth of a son (Genesis 18:10), Jan Provoost, ≈1520s. Louvre, Paris.", "credit": "Jan Provoost, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Provost,_Jan_-_L%27Ange_annon%C3%A7ant_%C3%A0_Abraham_la_naissance_d%27un_fils,_RF_1989_35.jpg", "license": "Public domain"}
+ ]
+}

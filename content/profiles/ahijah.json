@@ -1,0 +1,28 @@
+{
+ "id": "ahijah",
+ "name": "Ahijah",
+ "role": "Prophet of Shiloh",
+ "people": ["ahijah_135"],
+ "when": "≈ 931–910 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "A prophet of Shiloh who met Jeroboam outside Jerusalem, tore his own new cloak into twelve pieces and gave him ten: the LORD would tear the kingdom from Solomon's son and give him ten tribes. Years later, old and blind, he recognised Jeroboam's disguised wife and told her their son would die and Jeroboam's house would be swept away for the calves he had made.",
+ "body": [
+  "He speaks for the LORD twice to Jeroboam: first the promise of a lasting house if he keeps the LORD's statutes, then its withdrawal. Chronicles cites “the prophecy of Ahijah the Shilonite” among the records of Solomon's reign."
+ ],
+ "moments": [
+  {"ref": "1Kgs.11.29-31", "text": "Tears his cloak"},
+  {"ref": "1Kgs.11.38", "text": "The promise"},
+  {"ref": "1Kgs.12.15", "text": "His word fulfilled"},
+  {"ref": "1Kgs.14.4-6", "text": "Blind, he knows her"},
+  {"ref": "1Kgs.14.10-13", "text": "The judgment"},
+  {"ref": "1Kgs.15.29", "text": "Fulfilled under Baasha"},
+  {"ref": "2Chr.9.29", "text": "His prophecy recorded"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.11.29-39"},
+  {"kind": "scripture", "ref": "1Kgs.14.1-18"},
+  {"kind": "scripture", "ref": "1Kgs.15.29"},
+  {"kind": "scripture", "ref": "2Chr.9.29"}
+ ]
+}

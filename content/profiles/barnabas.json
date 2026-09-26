@@ -1,0 +1,44 @@
+{
+ "id": "barnabas",
+ "name": "Barnabas",
+ "role": "The Son of Encouragement, Paul's first partner",
+ "people": ["barnabas_1722"],
+ "when": "≈ AD 30–50",
+ "whenBasis": "From the first years of the Jerusalem church to his parting from Paul after the Jerusalem council, ≈AD 49–50.",
+ "summary": "Joseph, a Levite from Cyprus, whom the apostles called Barnabas, Son of Encouragement. He sold a field and laid the money at the apostles' feet. When the disciples in Jerusalem were afraid of the newly converted Saul, Barnabas brought him to the apostles. Sent to Antioch, he fetched Saul from Tarsus and taught there a year. The Spirit set the two apart for the work; they went to Cyprus and Galatia, were taken for Zeus and Hermes at Lystra, and went up together to the council in Jerusalem. They parted over John Mark, his cousin, and Barnabas sailed for Cyprus with him.",
+ "body": [
+  "Luke calls him a good man, full of the Holy Spirit and faith. The disciples are first called Christians at Antioch while he and Saul teach there. At Lystra he and Paul tear their clothes and run into the crowd to stop the sacrifice.",
+  "Paul says that at Antioch even Barnabas was led astray into withdrawing from table fellowship with Gentiles, and names him as one who, like himself, worked for his living."
+ ],
+ "moments": [
+  {"ref": "Acts.4.36-37", "text": "Son of Encouragement"},
+  {"ref": "Acts.9.27", "text": "Brings Saul to the apostles"},
+  {"ref": "Acts.11.22-24", "text": "Sent to Antioch"},
+  {"ref": "Acts.11.25-26", "text": "Fetches Saul; “Christians”"},
+  {"ref": "Acts.13.2", "text": "Set apart"},
+  {"ref": "Acts.13.7", "text": "Before the proconsul"},
+  {"ref": "Acts.14.12", "text": "Called Zeus"},
+  {"ref": "Acts.14.14", "text": "Tears his clothes"},
+  {"ref": "Acts.15.2", "text": "Up to Jerusalem"},
+  {"ref": "Acts.15.37-39", "text": "The parting"},
+  {"ref": "Gal.2.13", "text": "Led astray"},
+  {"ref": "1Cor.9.6", "text": "Works for a living"},
+  {"ref": "Col.4.10", "text": "Mark's cousin"}
+ ],
+ "later": [
+  {"text": "Tertullian names him as the author of Hebrews. The Epistle of Barnabas, from the early second century, carries his name, but scholars agree he did not write it.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Tertullian, On Modesty 20"}, {"kind": "primary", "title": "Epistle of Barnabas"}, {"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Tertullian, on Hebrews"]},
+  {"text": "The Acts of Barnabas says he was martyred at Salamis on Cyprus, where a monastery stands by the tomb shown as his.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Acts of Barnabas"}], "traditions": ["Cypriot Orthodox tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.4.36-37"},
+  {"kind": "scripture", "ref": "Acts.9.26-27"},
+  {"kind": "scripture", "ref": "Acts.11.19-30"},
+  {"kind": "scripture", "ref": "Acts.13.1-15.39"},
+  {"kind": "scripture", "ref": "Gal.2.1-13"},
+  {"kind": "scripture", "ref": "1Cor.9.6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/V%26A_-_Raphael%2C_The_Sacrifice_at_Lystra_%281515%29.jpg/500px-V%26A_-_Raphael%2C_The_Sacrifice_at_Lystra_%281515%29.jpg", "caption": "The sacrifice at Lystra (Acts 14:13), Raphael, cartoon for the Sistine Chapel tapestries, 1515–16, Royal Collection, on loan to the Victoria and Albert Museum.", "credit": "Raphael, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:V%26A_-_Raphael,_The_Sacrifice_at_Lystra_(1515).jpg", "license": "Public domain"}
+ ]
+}

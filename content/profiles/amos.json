@@ -1,0 +1,32 @@
+{
+ "id": "amos",
+ "name": "Amos",
+ "role": "Shepherd of Tekoa sent to prophesy in Israel",
+ "people": ["amos_238"],
+ "when": "≈ 760 BC",
+ "whenBasis": "“Two years before the earthquake,” in the days of Uzziah of Judah and Jeroboam II of Israel (Amos 1:1).",
+ "summary": "A shepherd from Tekoa in Judah, and a tender of sycamore figs, sent to prophesy against the northern kingdom in the prosperous days of Jeroboam II. He condemned those who sold the righteous for silver and the needy for a pair of sandals, lay on beds of ivory and trampled the poor. At Bethel the priest Amaziah told him to go back to Judah; he answered that he was no prophet nor a prophet's son, but the LORD had taken him from following the flock.",
+ "body": [
+  "He begins with oracles against Israel's neighbours and turns them on Israel. His visions show locusts, fire, a plumb line, a basket of summer fruit. “Let justice roll on like a river, and righteousness like an ever-flowing stream.”",
+  "He ends with a promise to raise up David's fallen tent, which James quotes at the council in Jerusalem."
+ ],
+ "moments": [
+  {"ref": "Amos.1.1", "text": "Among the shepherds of Tekoa"},
+  {"ref": "Amos.2.6", "text": "The righteous sold for silver"},
+  {"ref": "Amos.5.24", "text": "“Let justice roll on”"},
+  {"ref": "Amos.6.4", "text": "Beds of ivory"},
+  {"ref": "Amos.7.7-8", "text": "The plumb line"},
+  {"ref": "Amos.7.10-13", "text": "Amaziah of Bethel"},
+  {"ref": "Amos.7.14-15", "text": "“I was not a prophet”"},
+  {"ref": "Amos.9.11", "text": "David's fallen tent"},
+  {"ref": "Acts.15.16", "text": "Quoted by James"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Amos.1.1-9.15"},
+  {"kind": "scripture", "ref": "Acts.15.16-17"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/136.The_Prophet_Amos.jpg/500px-136.The_Prophet_Amos.jpg", "caption": "The prophet Amos, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:136.The_Prophet_Amos.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "onesimus",
+ "name": "Onesimus",
+ "role": "Runaway slave whom Paul sent back as a brother",
+ "people": ["onesimus_2251"],
+ "when": "≈ AD 55–62",
+ "whenBasis": "Paul's imprisonment, whether at Ephesus, Caesarea or Rome, counted forward from the Gallio date.",
+ "summary": "A slave of Philemon who had left his master and came to Paul in prison, where Paul became his father in the faith. Paul sent him back with a letter asking Philemon to receive him no longer as a slave but as a beloved brother, and offering to repay anything he owed. Formerly useless, Paul says, he has now become useful, a play on his name.",
+ "body": [
+  "Paul calls him “my very heart,” and says he would have liked to keep him to serve in Philemon's place. Colossians sends him with Tychicus as our faithful and beloved brother, one of you."
+ ],
+ "moments": [
+  {"ref": "Phlm.1.10", "text": "“My child Onesimus”"},
+  {"ref": "Phlm.1.11", "text": "Useless, now useful"},
+  {"ref": "Phlm.1.12", "text": "“My very heart”"},
+  {"ref": "Phlm.1.15-16", "text": "No longer as a slave"},
+  {"ref": "Phlm.1.18-19", "text": "“Charge it to my account”"},
+  {"ref": "Col.4.9", "text": "A faithful and beloved brother"}
+ ],
+ "later": [
+  {"text": "Onesimus means useful in Greek.", "confidence": "evidence", "sources": [{"kind": "lexicon", "title": "Greek onēsimos, useful"}]},
+  {"text": "Ignatius of Antioch, writing ≈AD 110, names an Onesimus as bishop of Ephesus. Some, following John Knox (1935), think he was Philemon's slave, and the one who first collected Paul's letters.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Ignatius, To the Ephesians 1.3"}, {"kind": "scholarship", "title": "Philemon among the Letters of Paul", "author": "John Knox", "year": 1935}], "traditions": ["John Knox and some later scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Phlm.1.8-21"},
+  {"kind": "scripture", "ref": "Col.4.7-9"}
+ ]
+}

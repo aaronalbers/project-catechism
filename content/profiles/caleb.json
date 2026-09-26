@@ -1,0 +1,33 @@
+{
+ "id": "caleb",
+ "name": "Caleb",
+ "role": "Spy who trusted the LORD, and took Hebron",
+ "people": ["caleb_537"],
+ "when": "≈ 15th or 13th century BC",
+ "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC; many historians put it under Ramesses II, ≈1270s–1250s BC. The text gives no date in a calendar we can fix.",
+ "summary": "Son of Jephunneh the Kenizzite, of Judah, one of the twelve sent to spy out Canaan. With Joshua he urged Israel to go up, and the LORD said he had a different spirit and would enter the land. At eighty-five he asked for the hill country of Hebron, drove out the sons of Anak, and gave his daughter Achsah to Othniel for taking Debir.",
+ "body": [
+  "Ten spies report giants and fortified cities; Caleb quiets the people and says, “We must go up and take possession of the land, for we can certainly conquer it!” The people want to stone him and Joshua, and the LORD condemns that generation to die in the wilderness, all but the two of them.",
+  "Forty-five years later he reminds Joshua of the promise: he is as strong at eighty-five as he was at forty. He takes Hebron and drives out Sheshai, Ahiman and Talmai. When Achsah asks her father for springs of water with her land in the Negev, he gives her the upper and lower springs."
+ ],
+ "moments": [
+  {"ref": "Num.13.6", "text": "Sent from Judah"},
+  {"ref": "Num.13.30", "text": "“We must go up”"},
+  {"ref": "Num.14.6-9", "text": "With Joshua, pleads with the people"},
+  {"ref": "Num.14.24", "text": "“A different spirit”"},
+  {"ref": "Josh.14.6-12", "text": "Asks for Hebron at 85"},
+  {"ref": "Josh.14.13-14", "text": "Given Hebron"},
+  {"ref": "Josh.15.14", "text": "Drives out the sons of Anak"},
+  {"ref": "Josh.15.16-17", "text": "Achsah to Othniel"},
+  {"ref": "Josh.15.18-19", "text": "The upper and lower springs"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Num.13.1-14.38"},
+  {"kind": "scripture", "ref": "Josh.14.6-15"},
+  {"kind": "scripture", "ref": "Josh.15.13-19"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/041B.The_Spies_Return_from_the_Promised_Land.jpg/500px-041B.The_Spies_Return_from_the_Promised_Land.jpg", "caption": "The spies return from the Promised Land (Numbers 13), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:041B.The_Spies_Return_from_the_Promised_Land.jpg", "license": "Public domain"}
+ ]
+}

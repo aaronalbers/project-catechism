@@ -1,0 +1,37 @@
+{
+ "id": "jonathan",
+ "name": "Jonathan",
+ "role": "Saul's son, David's covenant friend",
+ "people": ["jonathan_1692"],
+ "when": "≈ 1050–1000 BC",
+ "whenBasis": "In the reigns of Saul and David, dated by counting back from Solomon; 1 Samuel 13:1, which gives Saul's age and years, is damaged in the Hebrew.",
+ "summary": "Saul's eldest son, a warrior who with only his armour-bearer climbed to a Philistine outpost at Michmash and routed it. When David killed Goliath, their souls were knit together and they made a covenant; Jonathan gave David his robe and sword, warned him of Saul's intent, and sent him away with an arrow signal. He died with his father on Mount Gilboa, and David mourned him.",
+ "body": [
+  "“Nothing can hinder the LORD from saving, whether by many or by few,” he tells his armour-bearer at Michmash. Unaware of his father's oath that no one should eat until evening, he tastes honey, and Saul would have killed him had the people not ransomed him.",
+  "He is heir to the throne, yet he tells David, “you will be king over Israel, and I will be your second-in-command.” When Saul throws a spear at him for taking David's side, he leaves the table in anger. At the field he shoots the arrows beyond the boy, the sign for David to flee, and they part weeping. David's lament says his love was extraordinary, surpassing the love of women, and David later shows kindness to his lame son Mephibosheth for his sake."
+ ],
+ "moments": [
+  {"ref": "1Sam.14.1", "text": "Goes to the Philistine outpost"},
+  {"ref": "1Sam.14.6", "text": "“Whether by many or by few”"},
+  {"ref": "1Sam.14.27", "text": "Tastes the honey"},
+  {"ref": "1Sam.18.1", "text": "Knit to David"},
+  {"ref": "1Sam.18.3-4", "text": "The covenant, and his robe"},
+  {"ref": "1Sam.19.1-2", "text": "Warns David"},
+  {"ref": "1Sam.20.33", "text": "Saul's spear"},
+  {"ref": "1Sam.20.35-40", "text": "The arrows"},
+  {"ref": "1Sam.20.42", "text": "“Go in peace”"},
+  {"ref": "1Sam.23.16-17", "text": "“I will be your second-in-command”"},
+  {"ref": "1Sam.31.2", "text": "Killed at Gilboa"},
+  {"ref": "2Sam.1.26", "text": "David's lament"},
+  {"ref": "2Sam.9.1", "text": "Kindness for his sake"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.13.2-31.2"},
+  {"kind": "scripture", "ref": "2Sam.1.17-27"},
+  {"kind": "scripture", "ref": "2Sam.9.1-13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/073A.David_and_Jonathan.jpg/500px-073A.David_and_Jonathan.jpg", "caption": "David and Jonathan (1 Samuel 20:41), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:073A.David_and_Jonathan.jpg", "license": "Public domain"}
+ ]
+}

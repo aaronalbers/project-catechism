@@ -1,0 +1,24 @@
+{
+ "id": "judas-the-galilean",
+ "name": "Judas the Galilean",
+ "role": "Rebel whom Gamaliel remembered",
+ "people": ["judas_1757"],
+ "when": "≈ AD 6",
+ "whenBasis": "The census of Quirinius, which Josephus dates to the thirty-seventh year after Actium, AD 6. See the card on the census problem.",
+ "summary": "A man who, in Gamaliel's speech to the council, appeared in the days of the census and drew people after him; he too perished, and all his followers were scattered. Gamaliel cites him with Theudas to argue that a movement of human origin will fail on its own.",
+ "body": [
+  "Acts says nothing else about him."
+ ],
+ "moments": [
+  {"ref": "Acts.5.36", "text": "Theudas before him"},
+  {"ref": "Acts.5.37", "text": "In the days of the census"},
+  {"ref": "Acts.5.38-39", "text": "Gamaliel's advice"}
+ ],
+ "later": [
+  {"text": "Josephus says Judas the Galilean, with a Pharisee named Saddok, led resistance to Quirinius's census in AD 6, teaching that paying tax to Rome was slavery and that God alone was their master; he calls this the fourth philosophy, from which the later Zealots grew. Two of Judas's sons were crucified under the governor Tiberius Alexander, ≈AD 46–48.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.1–10, 18.23–25, 20.102"}, {"kind": "primary", "title": "Josephus, Jewish War 2.117–118"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.5.34-39"}
+ ]
+}

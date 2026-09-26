@@ -1,0 +1,29 @@
+{
+ "id": "jairus",
+ "name": "Jairus",
+ "role": "Synagogue leader whose daughter Jesus raised",
+ "people": ["jairus_711"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "A leader of the synagogue, probably at Capernaum, who fell at Jesus' feet and pleaded for his little daughter, who was dying. On the way Jesus stopped for a woman healed of bleeding, and messengers came to say the girl was dead. Jesus told Jairus, “Do not be afraid; just believe,” put out the mourners, took the girl by the hand and said, “Talitha koum!” She got up and walked; she was twelve years old.",
+ "body": [
+  "Jesus takes only Peter, James and John and the child's parents into the room. He tells them to give her something to eat, and not to tell anyone."
+ ],
+ "moments": [
+  {"ref": "Mark.5.22-23", "text": "Pleads for his daughter"},
+  {"ref": "Mark.5.35", "text": "“Your daughter is dead”"},
+  {"ref": "Mark.5.36", "text": "“Do not be afraid; just believe”"},
+  {"ref": "Mark.5.40", "text": "The mourners put out"},
+  {"ref": "Mark.5.41", "text": "“Talitha koum!”"},
+  {"ref": "Mark.5.42-43", "text": "She gets up"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mark.5.21-43"},
+  {"kind": "scripture", "ref": "Luke.8.40-56"},
+  {"kind": "scripture", "ref": "Matt.9.18-26"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Brooklyn_Museum_-_The_Daughter_of_Jairus_%28La_fille_de_Z%C3%A4ire%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Daughter_of_Jairus_%28La_fille_de_Z%C3%A4ire%29_-_James_Tissot_-_overall.jpg", "caption": "The daughter of Jairus (Mark 5:41), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Daughter_of_Jairus_(La_fille_de_Z%C3%A4ire)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

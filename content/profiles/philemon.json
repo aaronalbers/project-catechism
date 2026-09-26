@@ -1,0 +1,27 @@
+{
+ "id": "philemon",
+ "name": "Philemon",
+ "role": "The believer to whom Paul returned Onesimus",
+ "people": ["philemon_2342"],
+ "when": "≈ AD 55–62",
+ "whenBasis": "Paul's imprisonment, whether at Ephesus, Caesarea or Rome, counted forward from the Gallio date.",
+ "summary": "A believer, Paul's beloved fellow worker, in whose house a church met with Apphia and Archippus. Paul thanks God for his love and faith, which have refreshed the hearts of the saints. Writing from prison, Paul sends back Philemon's slave Onesimus and asks him to welcome him as he would Paul himself, adding that Philemon owes Paul his very self.",
+ "body": [
+  "Paul could order him to do what is right, but appeals on the basis of love, and asks him to prepare a guest room, hoping to be released to visit."
+ ],
+ "moments": [
+  {"ref": "Phlm.1.1-2", "text": "The church in his house"},
+  {"ref": "Phlm.1.7", "text": "Refreshed the hearts of the saints"},
+  {"ref": "Phlm.1.8-9", "text": "An appeal on the basis of love"},
+  {"ref": "Phlm.1.17", "text": "“Receive him as you would receive me”"},
+  {"ref": "Phlm.1.19", "text": "“You owe me your very self”"},
+  {"ref": "Phlm.1.22", "text": "A guest room"}
+ ],
+ "later": [
+  {"text": "Because Colossians sends Onesimus and greetings to Archippus, Philemon is usually placed at Colossae.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Col.4.9"}, {"kind": "scripture", "ref": "Col.4.17"}], "traditions": ["most commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Phlm.1.1-25"}
+ ]
+}

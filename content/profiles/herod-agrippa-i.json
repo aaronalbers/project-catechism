@@ -1,0 +1,27 @@
+{
+ "id": "herod-agrippa-i",
+ "name": "Herod Agrippa I",
+ "role": "King who killed James and imprisoned Peter",
+ "people": ["herod_1506"],
+ "when": "≈ AD 41–44 reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible.",
+ "summary": "Grandson of Herod the Great, called King Herod in Acts. To please the Jews he had James the brother of John put to death with the sword and seized Peter at Passover, meaning to bring him out for trial; an angel freed Peter from prison the night before. At Caesarea, in his royal robes, he addressed the people, who shouted that it was the voice of a god and not a man. Because he did not give God the glory, an angel of the Lord struck him down, and he was eaten by worms and died.",
+ "body": [
+  "He has the guards executed after Peter's escape. The people of Tyre and Sidon, who depend on his country for food, seek peace with him on the day he dies."
+ ],
+ "moments": [
+  {"ref": "Acts.12.1-2", "text": "Kills James"},
+  {"ref": "Acts.12.3-4", "text": "Seizes Peter"},
+  {"ref": "Acts.12.19", "text": "Executes the guards"},
+  {"ref": "Acts.12.20", "text": "Tyre and Sidon"},
+  {"ref": "Acts.12.21-22", "text": "“The voice of a god”"},
+  {"ref": "Acts.12.23", "text": "Struck down"}
+ ],
+ "later": [
+  {"text": "Josephus tells of his death at Caesarea in AD 44 in a robe of silver, hailed as a god, seized by a pain in his belly and dead in five days. See the card on the two accounts.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 19.343–350"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.12.1-23"}
+ ]
+}

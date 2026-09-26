@@ -1,0 +1,34 @@
+{
+ "id": "abigail",
+ "name": "Abigail",
+ "role": "Wife of Nabal, then of David",
+ "people": ["abigail_26"],
+ "when": "≈ 1050–1000 BC",
+ "whenBasis": "In the reigns of Saul and David, dated by counting back from Solomon; 1 Samuel 13:1, which gives Saul's age and years, is damaged in the Hebrew.",
+ "summary": "The intelligent and beautiful wife of Nabal of Maon, a rich and harsh man. When Nabal insulted David's men, who had guarded his shepherds, she loaded donkeys with food, rode out to meet David and his four hundred men on their way to kill every male of the household, and talked him out of bloodshed. When Nabal died ten days later, David sent for her and she became his wife.",
+ "body": [
+  "She falls at David's feet and takes the blame on herself, calls her husband a fool, true to his name, and reminds David that when the LORD makes him ruler over Israel he will not want the burden of blood shed without cause. David blesses her good judgment.",
+  "She tells Nabal nothing until he is sober the next morning; his heart fails him, and ten days later the LORD strikes him dead. She goes with David to Hebron and bears him a son, Chileab, also called Daniel. She is taken captive when the Amalekites raid Ziklag, and rescued."
+ ],
+ "moments": [
+  {"ref": "1Sam.25.3", "text": "Intelligent and beautiful"},
+  {"ref": "1Sam.25.18", "text": "Loads the donkeys"},
+  {"ref": "1Sam.25.23-25", "text": "At David's feet"},
+  {"ref": "1Sam.25.28-31", "text": "“Needless bloodshed”"},
+  {"ref": "1Sam.25.32-33", "text": "“Blessed is your discernment”"},
+  {"ref": "1Sam.25.36-38", "text": "Nabal dies"},
+  {"ref": "1Sam.25.39-42", "text": "Becomes David's wife"},
+  {"ref": "1Sam.30.5", "text": "Taken captive at Ziklag"},
+  {"ref": "2Sam.3.3", "text": "Chileab"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.25.1-44"},
+  {"kind": "scripture", "ref": "1Sam.30.5-18"},
+  {"kind": "scripture", "ref": "2Sam.3.3"},
+  {"kind": "scripture", "ref": "1Chr.3.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Sir_Peter_Paul_Rubens%2C_The_Meeting_of_David_and_Abigail%2C_c._1630%2C_NGA_99280.jpg/500px-Sir_Peter_Paul_Rubens%2C_The_Meeting_of_David_and_Abigail%2C_c._1630%2C_NGA_99280.jpg", "caption": "The meeting of David and Abigail (1 Samuel 25:23), Peter Paul Rubens, ≈1630. National Gallery of Art, Washington.", "credit": "Peter Paul Rubens, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens,_The_Meeting_of_David_and_Abigail,_c._1630,_NGA_99280.jpg", "license": "CC0"}
+ ]
+}

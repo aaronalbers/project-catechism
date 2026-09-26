@@ -47,7 +47,7 @@ new *kind* of sparse content needs a section in `CATALOG`.
 sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/data.ts`
 (which memoises promises per path). It is sharded so a chapter costs one or two small
 requests: `bible/<Book>.json`, `interlinear/<Book>/<ch>.json`, `strongs/<H|G>/<shard>.json`
-(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, and `map.json` (Natural Earth coasts, rivers and
+(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<a-z>.json` (everyone the Bible names, from Theographic, with their Easton's entry), and `map.json` (Natural Earth coasts, rivers and
 lakes round Jerusalem, for the models' map scale).
 
 Never commit anything under `public/data/` or `.cache/`, and never hand-edit files there —
@@ -108,6 +108,19 @@ them in CI — read it before adding content.
   widths; 500px is what existing cards use.
 - `related` ids must resolve to an existing insight, and links read better added in both
   directions.
+
+- Profiles (`content/profiles/<id>.json`, one file per person, the file name its id) are written for people the
+  People tab lists from the generated data, keyed by Theographic id in `people` (more than one when Theographic
+  lists someone twice, or for a group the text treats as one, such as Job's three friends) and by people.json id in
+  `genealogy`. The chapter list and the index bundle only the fields `scripts/vite-profile-index.mjs` picks out
+  (`?index`); the full profile is a lazy chunk loaded when opened. The summary, body and moments keep to what the
+  text says; what tradition, archaeology or scholarship adds goes in `later`, each with its own confidence and
+  sources (and `traditions` when it is an interpretation). A `when` starts with ≈ and `whenBasis` says what it rests
+  on; a king's comes from `rulers.json` so it agrees with the Reign tab, and someone the text does not date has none.
+  `media` is optional: a Commons painting, credited from the Commons API, shown as a depiction, not a likeness.
+  `eastonWrong` hides an Easton's entry Theographic attached to the wrong person, saying what it is about instead.
+  A test fails the build if a quotation (“…”) in the summary, body or moments is not the BSB wording of a passage
+  the profile cites. Theographic's own disambiguation titles and year spans are unreliable and are not shown.
 
 - Itineraries and boundaries (`content/journeys.json`; `kind: 'border'` for a boundary, drawn
   a stretch per verse and filled when `closed`) take each station's position from OpenBible unless

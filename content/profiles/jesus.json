@@ -1,0 +1,59 @@
+{
+ "id": "jesus",
+ "name": "Jesus",
+ "role": "Jesus of Nazareth, whom the New Testament proclaims the Christ",
+ "people": ["jesus_905"],
+ "genealogy": "jesus",
+ "when": "≈ 6–4 BC to AD 30 or 33",
+ "whenBasis": "Born before Herod's death in 4 BC (Matthew 2:1, 19); about thirty in the fifteenth year of Tiberius, AD 28–29 (Luke 3:1, 23); crucified under Pontius Pilate (AD 26–36), most often dated AD 30 or 33. See the cards on Herod's death and Tiberius's fifteenth year.",
+ "summary": "Son of Mary, regarded as the son of Joseph, born in Bethlehem and raised in Nazareth, where he worked as a carpenter. At about thirty he was baptised by John in the Jordan and began to preach in Galilee that the kingdom of God was near. He called twelve disciples, taught in parables, healed the sick and ate with tax collectors and sinners. Peter confessed him the Christ. He went up to Jerusalem at Passover, was arrested, tried before the high priest and Pontius Pilate, and crucified. The gospels say that on the third day the tomb was empty and he appeared to his disciples, and that he was taken up into heaven.",
+ "body": [
+  "The gospels give his birth in Bethlehem in Herod's days, a visit to the temple at twelve, and nothing more until his baptism, when a voice from heaven calls him “My beloved Son.” He is tempted in the wilderness, reads Isaiah in the synagogue at Nazareth and is driven out, and makes Capernaum his base.",
+  "He teaches on a mountain and from a boat, feeds crowds, calms a storm, raises the dead, and disputes with Pharisees and scribes over the Sabbath and purity. He tells his disciples that the Son of Man must suffer, be killed and after three days rise again, and that he came “to give His life as a ransom for many.”",
+  "He enters Jerusalem on a colt to shouts of Hosanna, drives the traders from the temple courts, and at a last Passover meal gives his disciples bread and wine as his body and blood. He prays in Gethsemane, is betrayed by Judas, denied by Peter, and crucified between two criminals under a notice reading King of the Jews. Paul, writing about twenty years later, passes on that he died, was buried, was raised on the third day and appeared to Peter, the Twelve and more than five hundred at once."
+ ],
+ "moments": [
+  {"ref": "Matt.2.1", "text": "Born in Bethlehem"},
+  {"ref": "Luke.2.7", "text": "Laid in a manger"},
+  {"ref": "Luke.2.49", "text": "“In My Father's house”"},
+  {"ref": "Mark.1.9-11", "text": "Baptised by John"},
+  {"ref": "Mark.1.15", "text": "“The kingdom of God is near”"},
+  {"ref": "Luke.4.18", "text": "Reads Isaiah at Nazareth"},
+  {"ref": "Mark.3.14", "text": "Appoints the Twelve"},
+  {"ref": "Matt.5.3", "text": "The Sermon on the Mount"},
+  {"ref": "Mark.6.3", "text": "“Isn't this the carpenter”"},
+  {"ref": "Matt.16.15-16", "text": "“Who do you say I am?”"},
+  {"ref": "Mark.8.31", "text": "Foretells his death"},
+  {"ref": "John.11.25", "text": "“I am the resurrection”"},
+  {"ref": "Mark.11.9", "text": "Hosanna"},
+  {"ref": "Mark.11.15", "text": "Clears the temple"},
+  {"ref": "Mark.14.22", "text": "The Last Supper"},
+  {"ref": "Mark.14.36", "text": "Gethsemane"},
+  {"ref": "Luke.23.34", "text": "“Father, forgive them”"},
+  {"ref": "John.19.30", "text": "“It is finished”"},
+  {"ref": "Mark.16.6", "text": "“He has risen!”"},
+  {"ref": "John.20.19", "text": "Appears to the disciples"},
+  {"ref": "Matt.28.19", "text": "Sends them to all nations"},
+  {"ref": "Acts.1.9", "text": "Taken up"},
+  {"ref": "1Cor.15.3-6", "text": "Paul's summary"}
+ ],
+ "later": [
+  {"text": "Tacitus, writing ≈AD 116, says the name Christian came from Christus, who was executed by the procurator Pontius Pilate in the reign of Tiberius.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Tacitus, Annals 15.44"}]},
+  {"text": "Josephus, ≈AD 93, records the stoning of “the brother of Jesus who was called Christ, whose name was James.” His longer passage on Jesus (Antiquities 18.63–64) has certainly been added to by Christian copyists; most scholars think a shorter original lies beneath it.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.200"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.63–64"}, {"kind": "scholarship", "title": "A Marginal Jew, vol. 1", "author": "John P. Meier", "year": 1991}]},
+  {"text": "Christian churches confess him as the Son of God, true God and true man, in the words of the Nicene Creed (AD 325, revised 381) and the Definition of Chalcedon (451).", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Nicene-Constantinopolitan Creed (381)"}, {"kind": "primary", "title": "Definition of Chalcedon (451)"}], "traditions": ["Catholic, Orthodox and most Protestant churches"]},
+  {"text": "The Qur'an honours him as ʿĪsā, a prophet and Messiah born of the virgin Maryam, but denies that he was crucified.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Qur'an 3:45–49; 4:157–158; 19:16–34"}], "traditions": ["Islam"]},
+  {"text": "The appearances chart counts every verse Theographic links to him, including Old Testament titles Christian readers take as his (the Branch, Immanuel, Shiloh).", "confidence": "interpretation", "sources": [{"kind": "data", "title": "Theographic Bible Metadata, person record for Jesus"}], "traditions": ["Theographic's data, following traditional Christian readings"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.1.1-28.20"},
+  {"kind": "scripture", "ref": "Mark.1.1-16.8"},
+  {"kind": "scripture", "ref": "Luke.1.26-24.53"},
+  {"kind": "scripture", "ref": "John.1.1-21.25"},
+  {"kind": "scripture", "ref": "Acts.1.1-11"},
+  {"kind": "scripture", "ref": "1Cor.15.3-8"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Brooklyn_Museum_-_Jesus_Unrolls_the_Book_in_the_Synagogue_%28J%C3%A9sus_dans_la_synagogue_d%C3%A9roule_le_livre%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_Jesus_Unrolls_the_Book_in_the_Synagogue_%28J%C3%A9sus_dans_la_synagogue_d%C3%A9roule_le_livre%29_-_James_Tissot_-_overall.jpg", "caption": "Jesus unrolls the book in the synagogue at Nazareth (Luke 4:17), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Jesus_Unrolls_the_Book_in_the_Synagogue_(J%C3%A9sus_dans_la_synagogue_d%C3%A9roule_le_livre)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

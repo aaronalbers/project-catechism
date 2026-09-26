@@ -1,0 +1,30 @@
+{
+ "id": "zacchaeus",
+ "name": "Zacchaeus",
+ "role": "Chief tax collector of Jericho",
+ "people": ["zacchaeus_2961"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "A chief tax collector at Jericho, very wealthy, who wanted to see Jesus but was too short to see over the crowd, so he ran ahead and climbed a sycamore tree. Jesus stopped, looked up and said, “Zacchaeus, hurry down, for I must stay at your house today.” The crowd grumbled that he had gone to be the guest of a sinner. Zacchaeus stood and promised half his possessions to the poor and fourfold repayment to anyone he had cheated.",
+ "body": [
+  "Jesus answers, “Today salvation has come to this house, because this man too is a son of Abraham. For the Son of Man came to seek and to save the lost.”"
+ ],
+ "moments": [
+  {"ref": "Luke.19.2", "text": "A chief tax collector"},
+  {"ref": "Luke.19.3-4", "text": "Climbs a sycamore"},
+  {"ref": "Luke.19.5", "text": "“Hurry down”"},
+  {"ref": "Luke.19.7", "text": "The guest of a sinner"},
+  {"ref": "Luke.19.8", "text": "Half to the poor, fourfold"},
+  {"ref": "Luke.19.9-10", "text": "“Today salvation has come”"}
+ ],
+ "later": [
+  {"text": "The Apostolic Constitutions (≈AD 380) name Zacchaeus the tax collector as the first bishop of Caesarea.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Apostolic Constitutions 7.46"}], "traditions": ["the Apostolic Constitutions"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.19.1-10"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Brooklyn_Museum_-_Zacchaeus_in_the_Sycamore_Awaiting_the_Passage_of_Jesus_%28Zach%C3%A9e_sur_le_sycomore_attendant_le_passage_de_J%C3%A9sus%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Zacchaeus_in_the_Sycamore_Awaiting_the_Passage_of_Jesus_%28Zach%C3%A9e_sur_le_sycomore_attendant_le_passage_de_J%C3%A9sus%29_-_James_Tissot.jpg", "caption": "Zacchaeus in the sycamore awaiting the passage of Jesus (Luke 19:4), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Zacchaeus_in_the_Sycamore_Awaiting_the_Passage_of_Jesus_(Zach%C3%A9e_sur_le_sycomore_attendant_le_passage_de_J%C3%A9sus)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

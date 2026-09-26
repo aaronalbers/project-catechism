@@ -1,0 +1,27 @@
+{
+ "id": "rabshakeh",
+ "name": "Rabshakeh",
+ "role": "Assyrian official who demanded Jerusalem's surrender",
+ "people": ["rabshakeh_2384"],
+ "when": "≈ 701 BC",
+ "whenBasis": "Sennacherib's campaign against Judah, dated by the Assyrian records.",
+ "summary": "Sennacherib's chief official, sent from Lachish with the Tartan and the Rab-saris and a great army. Standing by the aqueduct of the upper pool, he called on Jerusalem to surrender, mocking trust in Egypt, that splintered reed, and in the LORD. Asked to speak Aramaic so the people on the wall would not understand, he spoke louder in Hebrew. He returned to find his king fighting at Libnah.",
+ "body": [
+  "Rabshakeh is a title, not a name; it means chief cupbearer in Akkadian. His speech argues that Hezekiah has removed the LORD's own altars, and that the LORD himself sent Assyria. He promises the people a land like their own if they surrender. They answer nothing, as Hezekiah had ordered."
+ ],
+ "moments": [
+  {"ref": "2Kgs.18.17", "text": "At the upper pool"},
+  {"ref": "2Kgs.18.19-21", "text": "Egypt, a splintered reed"},
+  {"ref": "2Kgs.18.22", "text": "The altars removed"},
+  {"ref": "2Kgs.18.26-28", "text": "Speaks louder in Hebrew"},
+  {"ref": "2Kgs.18.31-32", "text": "A land like your own"},
+  {"ref": "2Kgs.18.36", "text": "No answer"},
+  {"ref": "2Kgs.19.8", "text": "Returns to Libnah"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.18.17-19.8"},
+  {"kind": "scripture", "ref": "Isa.36.2-37.8"},
+  {"kind": "lexicon", "title": "Akkadian rab šāqê, chief cupbearer"}
+ ]
+}

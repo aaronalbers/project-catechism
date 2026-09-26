@@ -1,0 +1,39 @@
+{
+ "id": "john-the-baptist",
+ "name": "John the Baptist",
+ "role": "Prophet who baptized in the Jordan and pointed to Jesus",
+ "people": ["john_1676"],
+ "when": "≈ AD 28–29 his preaching began",
+ "whenBasis": "Luke 3:1 dates it to the fifteenth year of Tiberius, ≈AD 28/29 depending on how the years are counted. His death under Herod Antipas is shortly before Jesus' own.",
+ "summary": "Son of the priest Zechariah and of Elizabeth, John preached repentance in the Judean wilderness, baptized in the Jordan, and baptized Jesus. He rebuked Herod Antipas for marrying his brother's wife Herodias, was imprisoned, and was beheaded at her daughter's request.",
+ "body": [
+  "An angel announces his birth to Zechariah in the temple; he is to be named John and go before the Lord “in the spirit and power of Elijah.” His mother Elizabeth is a relative of Mary.",
+  "Luke dates the start of his preaching carefully, to the fifteenth year of Tiberius. He wears camel's hair and a leather belt, eats locusts and wild honey, and calls crowds to a baptism of repentance. He tries to refuse to baptize Jesus, and later points him out: “Look, the Lamb of God, who takes away the sin of the world!”",
+  "He rebukes Herod the tetrarch over Herodias and is imprisoned. At Herod's birthday feast Herodias's daughter dances, and at her mother's prompting asks for John's head on a platter. Jesus says no one born of women is greater."
+ ],
+ "moments": [
+  {"ref": "Luke.1.13", "text": "His birth announced to Zechariah"},
+  {"ref": "Luke.1.17", "text": "“In the spirit and power of Elijah”"},
+  {"ref": "Luke.3.1-3", "text": "The word comes to him, fifteenth year of Tiberius"},
+  {"ref": "Matt.3.4", "text": "Camel's hair, locusts and wild honey"},
+  {"ref": "Matt.3.13-15", "text": "Baptizes Jesus"},
+  {"ref": "John.1.29", "text": "“Look, the Lamb of God”"},
+  {"ref": "Luke.3.19-20", "text": "Imprisoned by Herod"},
+  {"ref": "Matt.11.11", "text": "No one born of women greater"},
+  {"ref": "Mark.6.27-28", "text": "Beheaded"}
+ ],
+ "later": [
+  {"text": "Josephus, writing ≈AD 93, tells of John “surnamed the Baptist,” a good man who called the Jews to virtue and to baptism. Herod Antipas, fearing his influence, imprisoned him at Machaerus and killed him, and many Jews saw Herod's later defeat by Aretas as God's punishment for it.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.116–119", "url": "https://www.gutenberg.org/ebooks/2848"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.1.5-80"},
+  {"kind": "scripture", "ref": "Luke.3.1-20"},
+  {"kind": "scripture", "ref": "Matt.3.1-17"},
+  {"kind": "scripture", "ref": "Mark.6.14-29"},
+  {"kind": "scripture", "ref": "John.1.19-36"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Leonardo_da_Vinci_-_St_John_the_Baptist_-_WGA12723.jpg/500px-Leonardo_da_Vinci_-_St_John_the_Baptist_-_WGA12723.jpg", "caption": "St John the Baptist, Leonardo da Vinci, ≈1513–16. Louvre, Paris.", "credit": "Leonardo da Vinci, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_St_John_the_Baptist_-_WGA12723.jpg", "license": "Public domain"}
+ ]
+}

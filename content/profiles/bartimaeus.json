@@ -1,0 +1,27 @@
+{
+ "id": "bartimaeus",
+ "name": "Bartimaeus",
+ "role": "Blind beggar healed at Jericho",
+ "people": ["bartimaeus_406"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "Son of Timaeus, a blind beggar sitting by the road as Jesus left Jericho on the way to Jerusalem. Hearing it was Jesus of Nazareth, he cried out, “Jesus, Son of David, have mercy on me!” and shouted all the louder when the crowd rebuked him. Called, he threw off his cloak, jumped up and came. Asked what he wanted, he said, “Rabboni… let me see again.” Jesus said his faith had healed him, and he followed Jesus along the road.",
+ "body": [
+  "He is the last person Jesus heals in Mark before he enters Jerusalem, and the first to call him Son of David."
+ ],
+ "moments": [
+  {"ref": "Mark.10.46", "text": "By the road at Jericho"},
+  {"ref": "Mark.10.47", "text": "“Son of David, have mercy on me!”"},
+  {"ref": "Mark.10.48", "text": "Cries out all the louder"},
+  {"ref": "Mark.10.50", "text": "Throws off his cloak"},
+  {"ref": "Mark.10.51", "text": "“Let me see again”"},
+  {"ref": "Mark.10.52", "text": "Follows Jesus"}
+ ],
+ "later": [
+  {"text": "Matthew tells of two blind men and Luke of one, unnamed, healed near Jericho; only Mark gives a name.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Matt.20.29-34"}, {"kind": "scripture", "ref": "Luke.18.35-43"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mark.10.46-52"}
+ ]
+}

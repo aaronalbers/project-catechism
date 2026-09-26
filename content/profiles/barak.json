@@ -1,0 +1,32 @@
+{
+ "id": "barak",
+ "name": "Barak",
+ "role": "Commander who defeated Sisera",
+ "people": ["barak_401"],
+ "when": "≈ 12th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one.",
+ "summary": "Son of Abinoam, of Kedesh in Naphtali. Summoned by Deborah with the LORD's command, he would go only if she went; they led ten thousand men down from Mount Tabor and routed Sisera's chariots by the Kishon. The honour of killing Sisera went to Jael. Samuel and Hebrews name him among Israel's deliverers.",
+ "body": [
+  "Deborah tells him the LORD will draw Sisera and his chariots to the River Kishon. “If you will go with me, I will go; but if you will not go with me, I will not go.” She goes, and warns him the honour will not be his.",
+  "At her word he comes down Tabor, and the LORD throws Sisera's army into confusion; Barak pursues the chariots to Harosheth-hagoyim, where not a man is left. He sings the song of Judges 5 with Deborah."
+ ],
+ "moments": [
+  {"ref": "Judg.4.6-7", "text": "Summoned by Deborah"},
+  {"ref": "Judg.4.8", "text": "“If you will go with me”"},
+  {"ref": "Judg.4.10", "text": "Ten thousand men"},
+  {"ref": "Judg.4.14-16", "text": "Routs Sisera's army"},
+  {"ref": "Judg.4.22", "text": "Finds Sisera dead"},
+  {"ref": "Judg.5.1", "text": "Sings with Deborah"},
+  {"ref": "1Sam.12.11", "text": "Named by Samuel"},
+  {"ref": "Heb.11.32", "text": "Among the faithful"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.4.1-5.31"},
+  {"kind": "scripture", "ref": "1Sam.12.11"},
+  {"kind": "scripture", "ref": "Heb.11.32"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Tissot_Jael_Shows_to_Barak%2C_Sisera_Lying_Dead.jpg/500px-Tissot_Jael_Shows_to_Barak%2C_Sisera_Lying_Dead.jpg", "caption": "Jael shows Barak Sisera lying dead (Judges 4:22), James Tissot, ≈1896–1902. Jewish Museum, New York.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Tissot_Jael_Shows_to_Barak,_Sisera_Lying_Dead.jpg", "license": "Public domain"}
+ ]
+}

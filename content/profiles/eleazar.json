@@ -1,0 +1,31 @@
+{
+ "id": "eleazar",
+ "name": "Eleazar",
+ "role": "Aaron's son and successor as high priest",
+ "people": ["eleazar_1062"],
+ "genealogy": "eleazar",
+ "summary": "Aaron's third son, anointed a priest with his brothers. After Nadab and Abihu died, he and Ithamar served; on Mount Hor Moses put Aaron's garments on him, and he became high priest. He took the census on the plains of Moab with Moses, stood by as Joshua was commissioned, and with Joshua divided the land by lot. He was buried in the hill country of Ephraim.",
+ "body": [
+  "As chief over the leaders of the Levites he oversees the sanctuary. He hammers the rebels' censers into a covering for the altar, and on Mount Hor receives his father's garments as Aaron dies.",
+  "From then on he stands beside Moses and then Joshua: at the second census, at the daughters of Zelophehad's request, at Joshua's commissioning, where Joshua is to ask the LORD's decisions through him, and at the division of Canaan. His son Phinehas succeeds him."
+ ],
+ "moments": [
+  {"ref": "Exod.6.23", "text": "Aaron's son"},
+  {"ref": "Lev.10.6", "text": "Told not to mourn his brothers"},
+  {"ref": "Num.3.32", "text": "Chief over the Levites"},
+  {"ref": "Num.16.37-39", "text": "The censers"},
+  {"ref": "Num.20.25-28", "text": "Receives Aaron's garments"},
+  {"ref": "Num.26.1-3", "text": "Takes the census"},
+  {"ref": "Num.27.21", "text": "Joshua to inquire through him"},
+  {"ref": "Josh.14.1", "text": "Divides the land"},
+  {"ref": "Josh.24.33", "text": "Dies and is buried"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Num.20.23-29"},
+  {"kind": "scripture", "ref": "Num.26.1-4"},
+  {"kind": "scripture", "ref": "Num.27.1-23"},
+  {"kind": "scripture", "ref": "Josh.14.1"},
+  {"kind": "scripture", "ref": "Josh.24.33"}
+ ]
+}

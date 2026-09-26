@@ -1,0 +1,30 @@
+{
+ "id": "jeroboam-ii",
+ "name": "Jeroboam II",
+ "role": "King of Israel who restored its borders",
+ "people": ["jeroboam_873"],
+ "when": "≈ 793–753 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Joash, king of Israel for forty-one years, who did evil as the first Jeroboam had, yet restored Israel's border from Lebo-hamath to the Sea of the Arabah, as the prophet Jonah had foretold, because the LORD saw how bitter Israel's affliction was. Amos and Hosea prophesied in his reign against the luxury and injustice of his kingdom.",
+ "body": [
+  "Kings gives the reason for his success in theological terms: the LORD had not said he would blot out Israel's name, so he saved them by Jeroboam's hand. Amaziah the priest of Bethel reports Amos to him for conspiracy."
+ ],
+ "moments": [
+  {"ref": "2Kgs.14.23-24", "text": "Forty-one years"},
+  {"ref": "2Kgs.14.25", "text": "Restores the border"},
+  {"ref": "2Kgs.14.26-27", "text": "The LORD saw their affliction"},
+  {"ref": "Amos.1.1", "text": "In Amos's day"},
+  {"ref": "Amos.7.10-11", "text": "Amos reported to him"},
+  {"ref": "Hos.1.1", "text": "In Hosea's day"}
+ ],
+ "later": [
+  {"text": "A seal found at Megiddo in 1904, carved with a roaring lion and inscribed “belonging to Shema, servant of Jeroboam,” is usually dated to his reign.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Seal of Shema servant of Jeroboam, Megiddo", "note": "found by Gottlieb Schumacher, 1904; known from a bronze cast, the original lost"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.14.23-29"},
+  {"kind": "scripture", "ref": "Amos.1.1"},
+  {"kind": "scripture", "ref": "Amos.7.9-11"},
+  {"kind": "scripture", "ref": "Hos.1.1"}
+ ]
+}

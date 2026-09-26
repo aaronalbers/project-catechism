@@ -1,0 +1,35 @@
+{
+ "id": "hazael",
+ "name": "Hazael",
+ "role": "King of Aram who oppressed Israel",
+ "people": ["hazael_1463"],
+ "when": "≈ 850–795 BC",
+ "whenBasis": "From his call under Ahab to his death under Jehoash of Israel (2 Kings 13:14–20), in Thiele's reckoning; the other readings in the Reign tab differ by a few years.",
+ "summary": "An official of Ben-hadad king of Aram, sent with forty camel-loads of gifts to ask Elisha whether his master would recover. Elisha stared at him and wept, foreseeing what he would do to Israel. The next day Hazael smothered the king with a wet cloth and took the throne. In the reigns of Jehu and Jehoahaz he cut Israel down, took Gath, and turned toward Jerusalem until Joash of Judah paid him off.",
+ "body": [
+  "Elijah had been told at Horeb to anoint him king over Aram, one of three to bring judgment. Told he will set Israel's fortresses on fire, Hazael answers, “How could your servant, a mere dog, do such a monstrous thing?” Elisha replies that the LORD has shown him that Hazael will be king."
+ ],
+ "moments": [
+  {"ref": "1Kgs.19.15", "text": "Named to Elijah"},
+  {"ref": "2Kgs.8.8-9", "text": "Sent to Elisha"},
+  {"ref": "2Kgs.8.11-12", "text": "Elisha weeps"},
+  {"ref": "2Kgs.8.13", "text": "“A mere dog”"},
+  {"ref": "2Kgs.8.15", "text": "Smothers Ben-hadad"},
+  {"ref": "2Kgs.10.32", "text": "Cuts Israel down"},
+  {"ref": "2Kgs.12.17-18", "text": "Gath, and Jerusalem"},
+  {"ref": "2Kgs.13.3", "text": "Israel in his hand"},
+  {"ref": "2Kgs.13.22", "text": "All the days of Jehoahaz"}
+ ],
+ "later": [
+  {"text": "An inscription of Shalmaneser III calls Hazael “son of a nobody” who seized the throne, agreeing with 2 Kings that he was a usurper.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Shalmaneser III's inscription on a statue from Assur", "note": "translated in J. B. Pritchard, Ancient Near Eastern Texts (1969), p. 280"}]},
+  {"text": "The Aramaic Tel Dan stele, which boasts of killing a king of Israel and a king of the house of David, is usually attributed to Hazael.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Tel Dan Stele, Israel Museum, Jerusalem"}, {"kind": "scholarship", "title": "The Tel Dan Inscription: A New Fragment", "author": "Avraham Biran and Joseph Naveh", "year": 1995, "note": "Israel Exploration Journal 45"}], "traditions": ["most scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.19.15-17"},
+  {"kind": "scripture", "ref": "2Kgs.8.7-15"},
+  {"kind": "scripture", "ref": "2Kgs.10.32-33"},
+  {"kind": "scripture", "ref": "2Kgs.12.17-18"},
+  {"kind": "scripture", "ref": "2Kgs.13.3-25"}
+ ]
+}

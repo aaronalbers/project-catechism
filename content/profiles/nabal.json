@@ -1,0 +1,26 @@
+{
+ "id": "nabal",
+ "name": "Nabal",
+ "role": "Rich sheep farmer who insulted David",
+ "people": ["nabal_2126"],
+ "when": "≈ 1050–1000 BC",
+ "whenBasis": "In the reigns of Saul and David, dated by counting back from Solomon; 1 Samuel 13:1, which gives Saul's age and years, is damaged in the Hebrew.",
+ "summary": "A wealthy Calebite of Maon with three thousand sheep and a thousand goats, harsh and evil in his dealings. At shearing time David's men asked him for provisions, since they had protected his shepherds; he answered, “Who is David?” His wife Abigail averted David's revenge. When she told him the next morning, his heart died within him, and ten days later the LORD struck him and he died.",
+ "body": [
+  "His name means fool, as his wife points out. His servants say no one can speak to him.",
+  "He holds a feast like a king's and gets very drunk the night his wife is saving his life. On hearing of David's coming, he becomes like a stone. David praises the LORD for keeping him from evil and bringing Nabal's wrongdoing on his own head."
+ ],
+ "moments": [
+  {"ref": "1Sam.25.2-3", "text": "Rich, and harsh"},
+  {"ref": "1Sam.25.10-11", "text": "“Who is David?”"},
+  {"ref": "1Sam.25.17", "text": "No one can speak to him"},
+  {"ref": "1Sam.25.25", "text": "“His name means Fool”"},
+  {"ref": "1Sam.25.36-37", "text": "His heart dies within him"},
+  {"ref": "1Sam.25.38", "text": "Struck by the LORD"},
+  {"ref": "1Sam.25.39", "text": "David's praise"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.25.1-42"}
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "id": "lazarus",
+ "name": "Lazarus",
+ "role": "The man Jesus raised at Bethany",
+ "people": ["lazarus_1812"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "Brother of Martha and Mary of Bethany, whom Jesus loved. His sisters sent word that he was sick, but Jesus waited two days. By the time he came, Lazarus had been in the tomb four days. Jesus wept, had the stone taken away, and called in a loud voice, “Lazarus, come out!” He came out bound in linen strips. Many believed; the chief priests plotted to kill Jesus, and Lazarus too.",
+ "body": [
+  "The sisters' message is “Lord, the one You love is sick.” Afterward Lazarus reclines with Jesus at the dinner in Bethany, and crowds come to see him. John makes the raising the sign that decides the council to have Jesus put to death."
+ ],
+ "moments": [
+  {"ref": "John.11.1", "text": "Sick at Bethany"},
+  {"ref": "John.11.3", "text": "“The one You love is sick”"},
+  {"ref": "John.11.11", "text": "“Our friend Lazarus has fallen asleep”"},
+  {"ref": "John.11.17", "text": "Four days in the tomb"},
+  {"ref": "John.11.35", "text": "Jesus wept"},
+  {"ref": "John.11.43", "text": "“Lazarus, come out!”"},
+  {"ref": "John.11.44", "text": "“Unwrap him and let him go”"},
+  {"ref": "John.11.53", "text": "The plot against Jesus"},
+  {"ref": "John.12.2", "text": "At the dinner"},
+  {"ref": "John.12.10-11", "text": "A plot against Lazarus"}
+ ],
+ "later": [
+  {"text": "The Bordeaux Pilgrim (AD 333) was shown the crypt where Lazarus was laid; the village's Arabic name, al-Eizariya, comes from his.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Itinerarium Burdigalense (the Bordeaux Pilgrim), AD 333"}]},
+  {"text": "Orthodox tradition says he became bishop of Kition on Cyprus, where the Church of Saint Lazarus at Larnaca stands over the tomb shown as his.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Church of Saint Lazarus, Larnaca, Cyprus"}], "traditions": ["Orthodox tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "John.11.1-12.19"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Brooklyn_Museum_-_Lazarus_%28Lazare%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Lazarus_%28Lazare%29_-_James_Tissot.jpg", "caption": "Lazarus, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Lazarus_(Lazare)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

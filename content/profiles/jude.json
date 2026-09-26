@@ -1,0 +1,28 @@
+{
+ "id": "jude",
+ "name": "Jude",
+ "role": "Brother of James, author of the letter of Jude",
+ "people": ["jude_1756"],
+ "summary": "Judas, named among the brothers of Jesus with James, Joseph and Simon. The letter of Jude opens with “Jude, a servant of Jesus Christ and a brother of James,” and urges its readers to contend earnestly for the faith entrusted once for all to the saints, against men who have slipped in unnoticed.",
+ "body": [
+  "His short letter cites the archangel Michael disputing with the devil over the body of Moses, and a prophecy of Enoch, the seventh from Adam."
+ ],
+ "moments": [
+  {"ref": "Matt.13.55", "text": "Among Jesus' brothers"},
+  {"ref": "Mark.6.3", "text": "Judas"},
+  {"ref": "Jude.1.1", "text": "“A brother of James”"},
+  {"ref": "Jude.1.3", "text": "Contend for the faith"},
+  {"ref": "Jude.1.9", "text": "Michael and the body of Moses"},
+  {"ref": "Jude.1.14", "text": "Enoch's prophecy"}
+ ],
+ "later": [
+  {"text": "Jude 14–15 quotes 1 Enoch 1:9, a Jewish apocalypse known in full only in Ethiopic, with Aramaic fragments at Qumran.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "1 Enoch 1:9"}, {"kind": "archaeology", "title": "Aramaic fragments of 1 Enoch, Qumran Cave 4 (4QEnᶜ)"}]},
+  {"text": "Hegesippus, as quoted by Eusebius, tells how Jude's grandsons, poor farmers, were brought before the emperor Domitian as descendants of David and released.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.19–20"}], "traditions": ["Hegesippus"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.13.55"},
+  {"kind": "scripture", "ref": "Mark.6.3"},
+  {"kind": "scripture", "ref": "Jude.1.1-25"}
+ ]
+}

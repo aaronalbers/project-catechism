@@ -1,0 +1,37 @@
+{
+ "id": "james-son-of-zebedee",
+ "name": "James son of Zebedee",
+ "role": "Apostle, brother of John, first of the Twelve to die",
+ "people": ["james_717"],
+ "when": "≈ AD 28–44",
+ "whenBasis": "From Jesus' ministry to his execution by Herod Agrippa I, who died in AD 44 (Acts 12:1–2, 23).",
+ "summary": "A fisherman, son of Zebedee and brother of John, called with him from their nets and their father's boat. Jesus named the brothers Boanerges, Sons of Thunder. With Peter and John he saw the raising of Jairus's daughter and the transfiguration, and was taken further into Gethsemane. He and John wanted to call down fire on a Samaritan village and asked to sit at Jesus' right and left in his glory. Herod Agrippa I had him put to death with the sword.",
+ "body": [
+  "Asked whether they can drink the cup Jesus drinks, the brothers say, “We can,” and Jesus tells them they will. James is the only one of the Twelve whose death the New Testament records."
+ ],
+ "moments": [
+  {"ref": "Mark.1.19-20", "text": "Called with John"},
+  {"ref": "Mark.3.17", "text": "Sons of Thunder"},
+  {"ref": "Mark.5.37", "text": "At Jairus's house"},
+  {"ref": "Mark.9.2", "text": "The transfiguration"},
+  {"ref": "Luke.9.54", "text": "Fire from heaven"},
+  {"ref": "Mark.10.35-37", "text": "At your right and left"},
+  {"ref": "Mark.10.39", "text": "“We can”"},
+  {"ref": "Mark.14.33", "text": "In Gethsemane"},
+  {"ref": "Acts.12.2", "text": "Put to death with the sword"}
+ ],
+ "later": [
+  {"text": "Spanish tradition from the ninth century holds that his body was brought to Galicia and found at Santiago de Compostela, the end of the pilgrim road still called the Way of Saint James.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Pilgrimage to Santiago", "author": "Edwin Mullins", "year": 1974}], "traditions": ["Spanish and Catholic tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mark.1.19-20"},
+  {"kind": "scripture", "ref": "Mark.3.17"},
+  {"kind": "scripture", "ref": "Mark.10.35-45"},
+  {"kind": "scripture", "ref": "Luke.9.51-56"},
+  {"kind": "scripture", "ref": "Acts.12.1-2"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Brooklyn_Museum_-_The_Calling_of_Saint_James_and_Saint_John_%28Vocation_de_Saint_Jacques_et_de_Saint_Jean%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Calling_of_Saint_James_and_Saint_John_%28Vocation_de_Saint_Jacques_et_de_Saint_Jean%29_-_James_Tissot_-_overall.jpg", "caption": "The calling of Saint James and Saint John (Mark 1:19–20), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Calling_of_Saint_James_and_Saint_John_(Vocation_de_Saint_Jacques_et_de_Saint_Jean)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

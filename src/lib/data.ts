@@ -1,5 +1,5 @@
 import type { CircleData } from './circle';
-import type { BibleBook, InterlinearVerse, MapData, Place, StrongsEntry, Xrefs } from './types';
+import type { BibleBook, BiblePerson, InterlinearVerse, MapData, PeopleInBook, Place, StrongsEntry, Xrefs } from './types';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const cache = new Map<string, Promise<unknown>>();
@@ -20,6 +20,11 @@ export const loadXrefs = (book: string) => get<Xrefs>(`xrefs/${book}.json`).catc
 export const loadCircle = () => get<CircleData>('circle.json');
 export const loadPlaces = () => get<Place[]>('places/index.json');
 export const loadPlacesForBook = (book: string) => get<Record<string, string[]>>(`places/by-book/${book}.json`).catch(() => ({}));
+
+const NO_PEOPLE: PeopleInBook = { verses: {}, people: {} };
+export const loadPeopleForBook = (book: string) => get<PeopleInBook>(`people/by-book/${book}.json`).catch(() => NO_PEOPLE);
+/** Everyone named in the Bible is sharded by the first letter of their id. */
+export const loadPerson = (id: string) => get<Record<string, BiblePerson>>(`people/${id[0]}.json`).then((s) => s[id]).catch(() => undefined);
 
 export const loadMap = () => get<MapData>('map.json');
 

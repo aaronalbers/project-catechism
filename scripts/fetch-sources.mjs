@@ -10,6 +10,7 @@ export const CACHE = new URL('../.cache/', import.meta.url);
 
 const NE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/';
 const GEO = 'https://raw.githubusercontent.com/openbibleinfo/Bible-Geocoding-Data/main/data/';
+const THEO = 'https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/master/json/';
 export const SOURCES = {
   // Berean Standard Bible — public domain. https://berean.bible/
   'bsb.txt': 'https://bereanbible.com/bsb.txt',
@@ -24,6 +25,10 @@ export const SOURCES = {
   // Strong's dictionaries (Open Scriptures JSON edition) — CC-BY-SA.
   'strongs-hebrew.js': 'https://raw.githubusercontent.com/openscriptures/strongs/master/hebrew/strongs-hebrew-dictionary.js',
   'strongs-greek.js': 'https://raw.githubusercontent.com/openscriptures/strongs/master/greek/strongs-greek-dictionary.js',
+  // Theographic Bible Metadata — CC-BY-SA 4.0. https://github.com/robertrouse/theographic-bible-metadata
+  // Every named person, the verses naming them, their kin, and Easton's Bible Dictionary (1897, public domain).
+  'theo-people.json': THEO + 'people.json',
+  'theo-verses.json': THEO + 'verses.json',
   // Natural Earth 1:50m coastlines, lakes and rivers — public domain. https://www.naturalearthdata.com/
   'ne-coastline.geojson': NE + 'ne_50m_coastline.geojson',
   'ne-lakes.geojson': NE + 'ne_50m_lakes.geojson',

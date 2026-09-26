@@ -1,0 +1,36 @@
+{
+ "id": "baruch",
+ "name": "Baruch",
+ "role": "Jeremiah's scribe",
+ "people": ["baruch_410"],
+ "when": "≈ 627–580s BC",
+ "whenBasis": "From the thirteenth year of Josiah (Jeremiah 1:2), ≈627 BC in Thiele's reckoning, until after Jerusalem fell in 586 BC and he was taken to Egypt.",
+ "summary": "Son of Neriah, Jeremiah's scribe and companion. He witnessed the deed when Jeremiah bought the field at Anathoth, wrote down Jeremiah's words at his dictation and read the scroll in the temple on a fast day, then hid with Jeremiah when the king ordered them seized. After the scroll was burned he wrote it again. Accused of turning Jeremiah against the survivors, he was taken with him to Egypt.",
+ "body": [
+  "Jeremiah gives him a personal word: he is not to seek great things for himself, but his life will be spared wherever he goes. His brother Seraiah was an official of Zedekiah."
+ ],
+ "moments": [
+  {"ref": "Jer.32.12-13", "text": "Witnesses the deed"},
+  {"ref": "Jer.36.4", "text": "Writes at Jeremiah's dictation"},
+  {"ref": "Jer.36.8-10", "text": "Reads the scroll in the temple"},
+  {"ref": "Jer.36.19", "text": "“You and Jeremiah must hide yourselves”"},
+  {"ref": "Jer.36.32", "text": "Writes it again"},
+  {"ref": "Jer.43.3", "text": "Accused"},
+  {"ref": "Jer.43.6", "text": "Taken to Egypt"},
+  {"ref": "Jer.45.4-5", "text": "“Do you seek great things for yourself?”"}
+ ],
+ "later": [
+  {"text": "Two unprovenanced clay seal impressions reading “belonging to Berekhyahu son of Neriyahu the scribe” were published in 1978 and 1996. Their authenticity has been questioned because neither came from an excavation.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Bulla of Berekhyahu son of Neriyahu, Israel Museum"}, {"kind": "scholarship", "title": "Hebrew Bullae from the Time of Jeremiah", "author": "Nahman Avigad", "year": 1986}], "traditions": ["authentic: Nahman Avigad and others", "doubtful: Yuval Goren and others, since they are unprovenanced"]},
+  {"text": "Later Jewish writings in his name include the Book of Baruch (in the Apocrypha) and the apocalypses 2 and 3 Baruch.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Book of Baruch"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Jer.32.12-16"},
+  {"kind": "scripture", "ref": "Jer.36.1-32"},
+  {"kind": "scripture", "ref": "Jer.43.1-7"},
+  {"kind": "scripture", "ref": "Jer.45.1-5"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/123.Baruch_Writes_Jeremiah%27s_Prophecies.jpg/500px-123.Baruch_Writes_Jeremiah%27s_Prophecies.jpg", "caption": "Baruch writes Jeremiah's prophecies (Jeremiah 36:4), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:123.Baruch_Writes_Jeremiah%27s_Prophecies.jpg", "license": "Public domain"}
+ ]
+}

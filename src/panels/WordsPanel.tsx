@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { setState, useStore } from '@/app/store';
+import { openPerson, setState, useStore } from '@/app/store';
 import { loadInterlinear, loadStrongs } from '@/lib/data';
 import type { InterlinearVerse, StrongsEntry } from '@/lib/types';
 import { INSIGHTS, videosForStrongs } from '@/lib/content';
 import { InsightCard } from './InsightsPanel';
 import { VideoCard } from './VideosPanel';
+import { usePeopleInBook } from '@/lib/people';
 
 function Lexicon({ id }: { id: string }) {
   const [entry, setEntry] = useState<StrongsEntry | null | undefined>(undefined);
@@ -41,6 +42,7 @@ export function WordsPanel() {
   const loc = useStore((s) => s.loc);
   const wordIndex = useStore((s) => s.wordIndex);
   const [verse, setVerse] = useState<InterlinearVerse | null | undefined>(undefined);
+  const named = usePeopleInBook(loc.book);
   useEffect(() => {
     let live = true;
     setVerse(undefined);
@@ -54,6 +56,9 @@ export function WordsPanel() {
   // Show words in original-language order; glosses reveal the English mapping.
   const ordered = verse.w.map((w, i) => ({ w, i })).sort((a, b) => a.w[6] - b.w[6]);
   const sel = wordIndex !== null ? verse.w[wordIndex] : null;
+  // A name in the verse that is someone the verse names: offer their profile beside the word's lexicon entry.
+  const glossWords = sel ? sel[5].split(/[^\p{L}-]+/u) : [];
+  const person = named && (named.verses[`${loc.chapter}.${loc.verse}`] ?? []).find((id) => glossWords.includes(named.people[id]?.[0]));
   return (
     <div className="panel-body">
       <div className="panel-title">{heb ? 'Hebrew' : 'Greek'} — tap a word</div>
@@ -70,6 +75,7 @@ export function WordsPanel() {
         <>
           <hr />
           <div className="morph" title={sel[2]}>{sel[3] || sel[2]}</div>
+          {person && <button className="chip link person-link" onClick={() => openPerson(person)}>{named!.people[person][0]}: profile →</button>}
           {sel[4] ? <Lexicon id={sel[4]} /> : <div className="empty">No Strong's number attached to this word.</div>}
         </>
       ) : <div className="empty"><p>Select a word for its lexicon entry and morphology.</p><small>Text: Berean Standard Bible interlinear (public domain).</small></div>}

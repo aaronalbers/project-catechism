@@ -1,0 +1,25 @@
+{
+ "id": "epaphroditus",
+ "name": "Epaphroditus",
+ "role": "Messenger of the Philippians to Paul in prison",
+ "people": ["epaphroditus_1196"],
+ "when": "≈ AD 55–62",
+ "whenBasis": "Paul's imprisonment, whether at Ephesus, Caesarea or Rome, counted forward from the Gallio date.",
+ "summary": "A believer from Philippi whom the church sent with gifts to Paul in prison, to minister to his needs. He fell ill, nearly to death, for the work of Christ, risking his life, and was distressed that the Philippians had heard of it. Paul sent him home with the letter, asking them to welcome him with joy and honour men like him.",
+ "body": [
+  "Paul calls him “my brother, fellow worker, and fellow soldier,” and the Philippians' gifts through him a fragrant offering, an acceptable sacrifice, well-pleasing to God."
+ ],
+ "moments": [
+  {"ref": "Phil.2.25", "text": "“My brother, fellow worker, and fellow soldier”"},
+  {"ref": "Phil.2.26", "text": "Distressed"},
+  {"ref": "Phil.2.27", "text": "Sick nearly unto death"},
+  {"ref": "Phil.2.29", "text": "Welcome him"},
+  {"ref": "Phil.2.30", "text": "Risking his life"},
+  {"ref": "Phil.4.18", "text": "A fragrant offering"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Phil.2.25-30"},
+  {"kind": "scripture", "ref": "Phil.4.18"}
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "pontius-pilate",
+ "name": "Pontius Pilate",
+ "role": "Roman governor who crucified Jesus",
+ "people": ["pilate_2365"],
+ "when": "≈ AD 26–36 reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. Josephus places his arrival under Tiberius and his recall before Tiberius' death; 26–36 is the usual reconstruction. Some argue for AD 19 as the start.",
+ "summary": "Roman governor of Judea to whom the chief priests handed Jesus. He asked Jesus if he was the King of the Jews, found no basis for a charge, and sent him to Herod, who sent him back. At Passover he offered to release Jesus or Barabbas, and the crowd chose Barabbas. His wife sent word to have nothing to do with that innocent man. He washed his hands before the crowd, had Jesus flogged, and handed him over to be crucified, under a notice reading King of the Jews. He gave Joseph of Arimathea the body and let the priests guard the tomb.",
+ "body": [
+  "John gives the longest exchange: Pilate asks, “What is truth?”, presents the flogged Jesus with the words “Here is the man!”, and is afraid when he hears Jesus called the Son of God. The crowd shouts that if he releases this man he is no friend of Caesar. He refuses to change the notice: “What I have written, I have written.”",
+  "Luke mentions Galileans whose blood Pilate mixed with their sacrifices."
+ ],
+ "moments": [
+  {"ref": "Luke.3.1", "text": "Governor of Judea"},
+  {"ref": "Luke.13.1", "text": "The Galileans' blood"},
+  {"ref": "Matt.27.2", "text": "Jesus handed over to him"},
+  {"ref": "John.18.33", "text": "“Are You the King of the Jews?”"},
+  {"ref": "John.18.38", "text": "“What is truth?”"},
+  {"ref": "Luke.23.4", "text": "No basis for a charge"},
+  {"ref": "Luke.23.6-7", "text": "Sends him to Herod"},
+  {"ref": "Matt.27.19", "text": "His wife's dream"},
+  {"ref": "Matt.27.24", "text": "Washes his hands"},
+  {"ref": "John.19.5", "text": "“Here is the man!”"},
+  {"ref": "John.19.12", "text": "No friend of Caesar"},
+  {"ref": "Matt.27.26", "text": "Hands him over"},
+  {"ref": "John.19.19-22", "text": "“What I have written”"},
+  {"ref": "Mark.15.43-45", "text": "Grants the body"},
+  {"ref": "Matt.27.65", "text": "“You have a guard”"}
+ ],
+ "later": [
+  {"text": "A limestone block found at Caesarea in 1961 bears his name and his title, prefect of Judea.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Pilate inscription, Caesarea Maritima, Israel Museum"}]},
+  {"text": "Josephus and Philo tell of his clashes with the Jews: standards bearing the emperor's image brought into Jerusalem, temple money spent on an aqueduct, gilded shields hung in Herod's palace. He was recalled to Rome after attacking Samaritans on Mount Gerizim.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.55–62, 18.85–89"}, {"kind": "primary", "title": "Philo, Embassy to Gaius 299–305"}]},
+  {"text": "Tacitus says Christus was executed by the procurator Pontius Pilate under Tiberius.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Tacitus, Annals 15.44"}]},
+  {"text": "The Ethiopian and Coptic churches honour Pilate and his wife, whom tradition names Procula, as saints.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Ethiopian Synaxarium, 25 Sene"}], "traditions": ["the Ethiopian and Coptic churches"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.27.1-66"},
+  {"kind": "scripture", "ref": "Mark.15.1-47"},
+  {"kind": "scripture", "ref": "Luke.23.1-25"},
+  {"kind": "scripture", "ref": "John.18.28-19.38"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Brooklyn_Museum_-_Pilate_Washes_His_Hands_%28Pilate_se_lave_les_mains%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Pilate_Washes_His_Hands_%28Pilate_se_lave_les_mains%29_-_James_Tissot.jpg", "caption": "Pilate washes his hands (Matthew 27:24), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Pilate_Washes_His_Hands_(Pilate_se_lave_les_mains)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

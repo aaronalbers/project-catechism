@@ -1,0 +1,31 @@
+{
+ "id": "nicodemus",
+ "name": "Nicodemus",
+ "role": "Pharisee who came to Jesus by night",
+ "people": ["nicodemus_2204"],
+ "summary": "A Pharisee and a leader of the Jews who came to Jesus at night and was told he must be born again. Later he objected in the council that the Law does not condemn a man unheard, and with Joseph of Arimathea he buried Jesus with about seventy-five pounds of myrrh and aloes.",
+ "body": [
+  "Only John mentions him, three times. He comes by night, acknowledging Jesus as a teacher come from God, and is told that no one can see the kingdom of God unless he is born again. His puzzled questions (“How can a man be born when he is old?”) draw out the conversation of John 3.",
+  "When the chief priests and Pharisees want Jesus arrested, he asks, “Does our law convict a man without first hearing from him?” and is mocked for it.",
+  "After the crucifixion he brings a mixture of myrrh and aloes, about seventy-five pounds, and with Joseph of Arimathea wraps Jesus' body in linen with the spices."
+ ],
+ "moments": [
+  {"ref": "John.3.1-2", "text": "Comes to Jesus at night"},
+  {"ref": "John.3.3-4", "text": "“You must be born again”"},
+  {"ref": "John.7.50-51", "text": "Speaks up in the council"},
+  {"ref": "John.19.39-40", "text": "Brings spices for the burial"}
+ ],
+ "later": [
+  {"text": "The Gospel of Nicodemus, also called the Acts of Pilate, is a later apocryphal account of the trial and of Christ's descent to the dead, written in his name.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Gospel of Nicodemus (Acts of Pilate)", "note": "dated variously from the 4th century; some material may be earlier"}]},
+  {"text": "He may be the wealthy Nakdimon ben Gurion whom the Talmud names in Jerusalem before its fall.", "confidence": "interpretation", "traditions": ["some scholars; the identification is speculative"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Taanit 19b–20a", "url": "https://www.sefaria.org/Taanit.19b"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "John.3.1-21"},
+  {"kind": "scripture", "ref": "John.7.45-52"},
+  {"kind": "scripture", "ref": "John.19.38-42"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Henry_Ossawa_Tanner_-_Jesus_and_nicodemus.jpg/500px-Henry_Ossawa_Tanner_-_Jesus_and_nicodemus.jpg", "caption": "Nicodemus visiting Jesus on a rooftop at night (John 3), Henry Ossawa Tanner, 1899. Pennsylvania Academy of the Fine Arts.", "credit": "Henry Ossawa Tanner, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Henry_Ossawa_Tanner_-_Jesus_and_nicodemus.jpg", "license": "Public domain"}
+ ]
+}

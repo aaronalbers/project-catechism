@@ -1,0 +1,33 @@
+{
+ "id": "gideon",
+ "name": "Gideon",
+ "role": "Judge who routed Midian with three hundred men",
+ "people": ["gideon_1314"],
+ "when": "≈ 12th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one.",
+ "summary": "Son of Joash the Abiezrite of Manasseh, found threshing wheat in a winepress to hide it from Midian. Called by the angel of the LORD, he tore down his father's altar to Baal, asked for signs with a fleece, and routed Midian with three hundred men. He refused to be king, but his gold ephod became a snare to Israel.",
+ "body": [
+  "The angel of the LORD finds him hiding his harvest and greets him as a “mighty man of valor”. Gideon answers with doubt, and asks for a sign; the text lets him ask for more than one, including the fleece wet and then dry.",
+  "His first act is to tear down his father's altar to Baal and the Asherah pole beside it, by night, for fear of his family. His father defends him, and he is renamed Jerubbaal, “Let Baal contend with him.”",
+  "The LORD cuts his army from thirty-two thousand to three hundred, so that Israel cannot boast. With trumpets, jars and torches they rout the Midianite camp. Offered kingship afterward, he refuses: “The LORD shall rule over you.” Yet he makes an ephod from the spoil, and Israel worships it."
+ ],
+ "moments": [
+  {"ref": "Judg.6.11-12", "text": "Threshing in a winepress when the angel comes"},
+  {"ref": "Judg.6.27", "text": "Tears down Baal's altar by night"},
+  {"ref": "Judg.6.32", "text": "Named Jerubbaal"},
+  {"ref": "Judg.6.36-40", "text": "The fleece, wet and then dry"},
+  {"ref": "Judg.7.7", "text": "Three hundred men who lapped the water"},
+  {"ref": "Judg.7.19-21", "text": "Trumpets, jars and torches"},
+  {"ref": "Judg.8.22-23", "text": "Refuses to be king"},
+  {"ref": "Judg.8.27", "text": "The ephod becomes a snare"},
+  {"ref": "Heb.11.32", "text": "Named among the faithful"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.6.1-8.35"},
+  {"kind": "scripture", "ref": "Heb.11.32"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/054.Gideon_Chooses_300_Soldiers.jpg/500px-054.Gideon_Chooses_300_Soldiers.jpg", "caption": "Gideon chooses his three hundred (Judges 7): Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:054.Gideon_Chooses_300_Soldiers.jpg", "license": "Public domain"}
+ ]
+}

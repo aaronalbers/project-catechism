@@ -1,0 +1,36 @@
+{
+ "id": "joshua-high-priest",
+ "name": "Joshua the high priest",
+ "role": "High priest of the return, called Jeshua",
+ "people": ["joshua_893"],
+ "when": "≈ 538–515 BC",
+ "whenBasis": "The first return under Cyrus (≈538 BC) to the temple's completion in the sixth year of Darius I (Ezra 6:15), ≈515 BC; Haggai 1:1 dates him as governor in Darius's second year, ≈520 BC.",
+ "summary": "Son of Jehozadak, the priest taken into exile by Nebuchadnezzar, and the first high priest after the return; Ezra calls him Jeshua. With Zerubbabel he built the altar and the temple. In Zechariah's vision he stands in filthy garments before the angel of the LORD with Satan accusing him; the LORD rebukes Satan, and his garments are changed for splendid robes. Zechariah was told to set a crown on his head.",
+ "body": [
+  "He and his companions are called a sign of the coming servant, the Branch. When the crown is set on him, the word is, “Here is a man whose name is the Branch, and He will branch out from His place and build the temple of the LORD.” Some of his own descendants were among the priests who had married foreign women. The high priests of Nehemiah's day are his line."
+ ],
+ "moments": [
+  {"ref": "1Chr.6.15", "text": "His father taken into exile"},
+  {"ref": "Ezra.2.2", "text": "Returns"},
+  {"ref": "Ezra.3.2", "text": "Builds the altar"},
+  {"ref": "Ezra.5.2", "text": "Begins again"},
+  {"ref": "Hag.1.1", "text": "The high priest"},
+  {"ref": "Hag.2.4", "text": "“Be strong, O Joshua”"},
+  {"ref": "Zech.3.1", "text": "Accused by Satan"},
+  {"ref": "Zech.3.3-4", "text": "Filthy garments removed"},
+  {"ref": "Zech.3.8", "text": "A sign of the Branch"},
+  {"ref": "Zech.6.11-12", "text": "Crowned"},
+  {"ref": "Ezra.10.18", "text": "His descendants' foreign wives"},
+  {"ref": "Neh.12.10", "text": "His line"}
+ ],
+ "later": [
+  {"text": "Joshua and Jeshua are forms of the same Hebrew name, which Greek writes Iēsous, Jesus. Justin Martyr read Zechariah's crowned high priest named Joshua as a figure of Christ.", "confidence": "interpretation", "sources": [{"kind": "lexicon", "title": "Hebrew yĕhôšuaʿ, yēšûaʿ; Greek Iēsous"}, {"kind": "primary", "title": "Justin Martyr, Dialogue with Trypho 115–116"}], "traditions": ["Justin Martyr and Christian typological readings"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ezra.3.1-5.2"},
+  {"kind": "scripture", "ref": "Hag.1.1-2.4"},
+  {"kind": "scripture", "ref": "Zech.3.1-10"},
+  {"kind": "scripture", "ref": "Zech.6.9-15"}
+ ]
+}

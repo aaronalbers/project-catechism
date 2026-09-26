@@ -1,0 +1,28 @@
+{
+ "id": "benaiah",
+ "name": "Benaiah",
+ "role": "Captain of David's bodyguard, Solomon's commander",
+ "people": ["benaiah_439"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "Son of Jehoiada, from Kabzeel, a man of many exploits among David's mighty men: he struck down two champions of Moab, went down into a pit on a snowy day and killed a lion, and killed an Egyptian with the man's own spear. He commanded the Cherethites and Pelethites, David's bodyguard. He stood by Solomon, carried out the executions of Adonijah, Joab and Shimei, and replaced Joab over the army.",
+ "body": [
+  "He was the most honoured among the Thirty, but did not become one of the Three. At Gihon he answers David's order to anoint Solomon, “Amen,” and, “May the LORD, the God of my lord the king, so declare it.”"
+ ],
+ "moments": [
+  {"ref": "2Sam.8.18", "text": "Over the Cherethites and Pelethites"},
+  {"ref": "2Sam.23.20", "text": "The lion in the pit"},
+  {"ref": "2Sam.23.21", "text": "The Egyptian's spear"},
+  {"ref": "2Sam.23.22-23", "text": "Honoured among the Thirty"},
+  {"ref": "1Kgs.1.36-38", "text": "“Amen!”"},
+  {"ref": "1Kgs.2.25", "text": "Kills Adonijah"},
+  {"ref": "1Kgs.2.34-35", "text": "Kills Joab; over the army"},
+  {"ref": "1Kgs.2.46", "text": "Kills Shimei"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.23.20-23"},
+  {"kind": "scripture", "ref": "1Kgs.1.8-44"},
+  {"kind": "scripture", "ref": "1Kgs.2.25-46"}
+ ]
+}

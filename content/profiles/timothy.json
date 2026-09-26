@@ -1,0 +1,46 @@
+{
+ "id": "timothy",
+ "name": "Timothy",
+ "role": "Paul's young fellow worker",
+ "people": ["timotheus_2863"],
+ "when": "≈ AD 49–60s",
+ "whenBasis": "From Paul's second journey, dated from the Gallio inscription, to his last letters.",
+ "summary": "A disciple of Lystra, son of a believing Jewish woman and a Greek father, well spoken of by the brothers. Paul took him on his travels and had him circumcised because of the Jews there. He worked with Paul in Macedonia, Achaia and Asia, was sent to strengthen the Thessalonians and to Corinth, and is named as co-sender of six of Paul's letters. Two letters are addressed to him, left in charge at Ephesus.",
+ "body": [
+  "Paul calls him his beloved and faithful child in the Lord, and writes that he has no one else like him who genuinely cares. The second letter recalls the faith of his grandmother Lois and mother Eunice, and that he has known the Scriptures from infancy. It tells him not to let anyone despise his youth, to drink a little wine for his stomach, and to come quickly. Hebrews says he has been released from prison."
+ ],
+ "moments": [
+  {"ref": "Acts.16.1-2", "text": "A disciple at Lystra"},
+  {"ref": "Acts.16.3", "text": "Joins Paul"},
+  {"ref": "Acts.17.14", "text": "At Berea"},
+  {"ref": "Acts.18.5", "text": "In Corinth"},
+  {"ref": "1Thess.3.2", "text": "Sent to Thessalonica"},
+  {"ref": "1Cor.4.17", "text": "“My beloved and faithful child”"},
+  {"ref": "Phil.2.20", "text": "No one else like him"},
+  {"ref": "Phil.2.22", "text": "His proven worth"},
+  {"ref": "1Tim.1.3", "text": "At Ephesus"},
+  {"ref": "1Tim.4.12", "text": "“Let no one despise your youth”"},
+  {"ref": "1Tim.5.23", "text": "A little wine"},
+  {"ref": "2Tim.1.5", "text": "Lois and Eunice"},
+  {"ref": "2Tim.3.15", "text": "From infancy"},
+  {"ref": "2Tim.4.9", "text": "“Come to me quickly”"},
+  {"ref": "Heb.13.23", "text": "Released"}
+ ],
+ "later": [
+  {"text": "Eusebius says he was the first bishop of Ephesus; a later account of his martyrdom has him killed there.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.4.5"}, {"kind": "primary", "title": "Acts of Timothy"}], "traditions": ["Eusebius", "Catholic and Orthodox tradition"]},
+  {"text": "Whether Paul wrote the letters to Timothy and Titus is disputed; many scholars date them after his death.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Pastoral Epistles (International Critical Commentary)", "author": "I. Howard Marshall", "year": 1999}], "traditions": ["by Paul: traditional readers and some scholars", "by a later follower: many historical-critical scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.16.1-3"},
+  {"kind": "scripture", "ref": "Acts.17.14-18.5"},
+  {"kind": "scripture", "ref": "Acts.19.22"},
+  {"kind": "scripture", "ref": "Acts.20.4"},
+  {"kind": "scripture", "ref": "1Cor.4.17"},
+  {"kind": "scripture", "ref": "Phil.2.19-23"},
+  {"kind": "scripture", "ref": "1Thess.3.2-6"},
+  {"kind": "scripture", "ref": "1Tim.1.1-6.21"},
+  {"kind": "scripture", "ref": "2Tim.1.1-4.22"},
+  {"kind": "scripture", "ref": "Heb.13.23"}
+ ]
+}

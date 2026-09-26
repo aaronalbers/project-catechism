@@ -1,0 +1,23 @@
+{
+ "id": "ebed-melech",
+ "name": "Ebed-melech",
+ "role": "Cushite official who rescued Jeremiah",
+ "people": ["ebed-melech_1029"],
+ "when": "≈ 588–582 BC",
+ "whenBasis": "The siege and fall of Jerusalem, dated by the Babylonian Chronicle and the regnal years Kings gives: 588–586 BC, and the few years after.",
+ "summary": "A Cushite, an official in the king's palace, who heard that Jeremiah had been put into the cistern to die. He went to Zedekiah at the Benjamin Gate and told him the men had acted wickedly; the king gave him thirty men, and he let down old rags and worn-out clothes on ropes for Jeremiah to put under his arms, and drew him up. Jeremiah was given a promise for him: he would not fall by the sword, because he had trusted in the LORD.",
+ "body": [
+  "His name means servant of the king. He speaks to the king in public, in the gate, where others spoke against Jeremiah in private."
+ ],
+ "moments": [
+  {"ref": "Jer.38.7-9", "text": "Speaks to the king"},
+  {"ref": "Jer.38.10", "text": "Thirty men"},
+  {"ref": "Jer.38.11-13", "text": "The rags and ropes"},
+  {"ref": "Jer.39.16-18", "text": "His life spared"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Jer.38.7-13"},
+  {"kind": "scripture", "ref": "Jer.39.15-18"}
+ ]
+}

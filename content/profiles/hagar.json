@@ -1,0 +1,36 @@
+{
+ "id": "hagar",
+ "name": "Hagar",
+ "role": "Egyptian servant of Sarah, mother of Ishmael",
+ "people": ["hagar_1348"],
+ "genealogy": "hagar",
+ "summary": "Sarai's Egyptian slave, given to Abram to bear a child. When she conceived and Sarai mistreated her, she fled; the angel of the LORD found her by a spring on the way to Shur, and she named the LORD who spoke to her “You are the God who sees me.” Later sent away with Ishmael, she was shown a well in the wilderness of Beersheba when their water ran out.",
+ "body": [
+  "She is the first person in the Bible to be visited by the angel of the LORD, and the only one to give God a name. The angel sends her back to Sarai, promises her offspring too many to count, and tells her to name her son Ishmael, because the LORD has heard her affliction.",
+  "After Isaac is weaned, Sarah sees Ishmael laughing, or mocking, and demands they go. Abraham sends them off with bread and a skin of water. When it is gone she puts the boy under a bush and sits a bowshot away so as not to watch him die; God hears the boy, opens her eyes to a well, and promises to make him a great nation. She later finds him a wife from Egypt. Paul reads her allegorically as the covenant of Sinai, bearing children for slavery."
+ ],
+ "moments": [
+  {"ref": "Gen.16.1-3", "text": "Given to Abram"},
+  {"ref": "Gen.16.4-6", "text": "Conceives, and flees"},
+  {"ref": "Gen.16.7-10", "text": "The angel at the spring"},
+  {"ref": "Gen.16.11", "text": "“Name him Ishmael”"},
+  {"ref": "Gen.16.13", "text": "“You are the God who sees me”"},
+  {"ref": "Gen.21.9-10", "text": "Sarah demands she go"},
+  {"ref": "Gen.21.14", "text": "Sent away with bread and water"},
+  {"ref": "Gen.21.16-19", "text": "The well in the wilderness"},
+  {"ref": "Gen.21.21", "text": "A wife for Ishmael from Egypt"},
+  {"ref": "Gal.4.24-25", "text": "Paul's allegory"}
+ ],
+ "later": [
+  {"text": "In Islam, Hajar is honoured as the mother of Ismail. Her running to and fro in search of water is remembered in the sa'i, the walk between the hills of Safa and Marwa that is part of the pilgrimage to Mecca.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Sahih al-Bukhari 3364"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.16.1-16"},
+  {"kind": "scripture", "ref": "Gen.21.8-21"},
+  {"kind": "scripture", "ref": "Gal.4.21-31"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/015.Hagar_and_Ishmael_in_the_Wilderness.jpg/500px-015.Hagar_and_Ishmael_in_the_Wilderness.jpg", "caption": "Hagar and Ishmael in the wilderness (Genesis 21:15–19), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:015.Hagar_and_Ishmael_in_the_Wilderness.jpg", "license": "Public domain"}
+ ]
+}

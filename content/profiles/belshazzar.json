@@ -1,0 +1,37 @@
+{
+ "id": "belshazzar",
+ "name": "Belshazzar",
+ "role": "King in Babylon on the night it fell",
+ "people": ["belshazzar_437"],
+ "when": "≈ 539 BC",
+ "whenBasis": "The fall of Babylon to Cyrus, dated by the Nabonidus Chronicle to October 539 BC. Daniel's visions in chapters 7 and 8 are dated to his first and third years.",
+ "summary": "King of Babylon who held a feast for a thousand nobles and drank from the gold and silver vessels taken from the temple in Jerusalem, praising his gods. The fingers of a human hand wrote on the plaster of the wall. None of his wise men could read it; Daniel read MENE, MENE, TEKEL, PARSIN, and told him his kingdom was numbered, weighed and divided. That very night he was killed.",
+ "body": [
+  "The queen reminds him of Daniel, whom Nebuchadnezzar had made chief of the wise men. Daniel refuses his gifts, recalls how Nebuchadnezzar was humbled until he acknowledged the Most High, and charges Belshazzar with knowing all this and not humbling his heart. Belshazzar still has him clothed in purple and proclaimed third ruler in the kingdom."
+ ],
+ "moments": [
+  {"ref": "Dan.5.1", "text": "The feast"},
+  {"ref": "Dan.5.2", "text": "The temple vessels"},
+  {"ref": "Dan.5.5", "text": "The hand on the wall"},
+  {"ref": "Dan.5.9", "text": "Terrified"},
+  {"ref": "Dan.5.22-23", "text": "“Have not humbled your heart”"},
+  {"ref": "Dan.5.25", "text": "MENE, MENE, TEKEL, PARSIN"},
+  {"ref": "Dan.5.29", "text": "Daniel made third ruler"},
+  {"ref": "Dan.5.30", "text": "Killed that night"},
+  {"ref": "Dan.7.1", "text": "Daniel's dream in his first year"},
+  {"ref": "Dan.8.1", "text": "The vision in his third year"}
+ ],
+ "later": [
+  {"text": "Babylonian texts name Belshazzar (Bel-šarra-uṣur) as the eldest son of the last king, Nabonidus, who left him in charge of Babylon for ten years while he stayed at Tema in Arabia. That explains how he could make Daniel only “third” in the kingdom.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Nabonidus Cylinder from Ur, British Museum 91128", "note": "a prayer for Belshazzar, his eldest son"}, {"kind": "archaeology", "title": "Nabonidus Chronicle, British Museum 35382"}, {"kind": "archaeology", "title": "Verse Account of Nabonidus, British Museum 38299", "note": "says he entrusted the kingship to his eldest son"}]},
+  {"text": "Daniel calls Nebuchadnezzar his father. Nabonidus was not of Nebuchadnezzar's family, so some scholars see an error; others read father as predecessor, as ancient royal inscriptions sometimes do, or suppose descent through his mother.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Dan.5.2"}, {"kind": "scripture", "ref": "Dan.5.22"}, {"kind": "scholarship", "title": "Daniel (Anchor Bible 23)", "author": "Louis F. Hartman and Alexander A. Di Lella", "year": 1978}], "traditions": ["an error of the author: many historical-critical scholars", "father as royal predecessor or through his mother: traditional and conservative commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Dan.5.1-30"},
+  {"kind": "scripture", "ref": "Dan.7.1"},
+  {"kind": "scripture", "ref": "Dan.8.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/130.Daniel_Interprets_the_Writing_on_the_Wall.jpg/500px-130.Daniel_Interprets_the_Writing_on_the_Wall.jpg", "caption": "Daniel interprets the writing on the wall, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:130.Daniel_Interprets_the_Writing_on_the_Wall.jpg", "license": "Public domain"}
+ ]
+}

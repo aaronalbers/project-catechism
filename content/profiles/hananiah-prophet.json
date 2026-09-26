@@ -1,0 +1,27 @@
+{
+ "id": "hananiah-prophet",
+ "name": "Hananiah",
+ "role": "Prophet who broke Jeremiah's yoke",
+ "people": ["hananiah_1395"],
+ "when": "≈ 594 BC",
+ "whenBasis": "The fourth year of Zedekiah (Jeremiah 28:1), ≈594/593 BC in Thiele's reckoning.",
+ "summary": "Son of Azur, a prophet from Gibeon, who announced in the temple that within two years the LORD would break the yoke of the king of Babylon and bring back the vessels, King Jehoiachin and the exiles. He took the wooden yoke Jeremiah was wearing as a sign and broke it. Jeremiah answered that the LORD had not sent him, and that he would die that year. He died in the seventh month.",
+ "body": [
+  "Jeremiah first answers “Amen!” and “May the LORD do so!”, then reminds him that a prophet of peace is known only when his word comes true. The LORD's word comes back: Hananiah has broken a yoke of wood, but made one of iron in its place."
+ ],
+ "moments": [
+  {"ref": "Jer.28.1", "text": "In the temple"},
+  {"ref": "Jer.28.2-4", "text": "“I have broken the yoke”"},
+  {"ref": "Jer.28.6", "text": "Jeremiah: “Amen!”"},
+  {"ref": "Jer.28.9", "text": "The test of a prophet of peace"},
+  {"ref": "Jer.28.10", "text": "Breaks the yoke"},
+  {"ref": "Jer.28.13", "text": "A yoke of iron"},
+  {"ref": "Jer.28.15", "text": "“The LORD did not send you”"},
+  {"ref": "Jer.28.16", "text": "“You will die this year”"},
+  {"ref": "Jer.28.17", "text": "He dies"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Jer.27.1-28.17"}
+ ]
+}

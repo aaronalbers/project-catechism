@@ -1,0 +1,23 @@
+{
+ "id": "demas",
+ "name": "Demas",
+ "role": "Fellow worker who deserted Paul",
+ "people": ["demas_1006"],
+ "when": "≈ AD 55–62",
+ "whenBasis": "Paul's imprisonment, whether at Ephesus, Caesarea or Rome, counted forward from the Gallio date.",
+ "summary": "A fellow worker of Paul, who sends greetings with Luke to the Colossians and to Philemon. In Paul's last letter he has deserted him “in his love of this world” and gone to Thessalonica.",
+ "body": [
+  "Colossians and Philemon both name him with Mark, Aristarchus and Luke among those sending greetings."
+ ],
+ "moments": [
+  {"ref": "Col.4.14", "text": "Greetings with Luke"},
+  {"ref": "Phlm.1.24", "text": "A fellow worker"},
+  {"ref": "2Tim.4.10", "text": "Deserted Paul"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Col.4.14"},
+  {"kind": "scripture", "ref": "Phlm.1.24"},
+  {"kind": "scripture", "ref": "2Tim.4.10"}
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "leah",
+ "name": "Leah",
+ "role": "Jacob's first wife, mother of six tribes",
+ "people": ["leah_1813"],
+ "genealogy": "leah",
+ "summary": "Laban's elder daughter, who had weak eyes, given to Jacob in her sister's place on the wedding night. Unloved beside Rachel, she bore Reuben, Simeon, Levi and Judah, naming the first three for her hope of her husband's love, then Issachar, Zebulun and Dinah. She was buried at Machpelah with Abraham, Isaac and their wives.",
+ "body": [
+  "The LORD sees that she is unloved and opens her womb. She names Reuben because the LORD has seen her misery, Simeon because he has heard, Levi hoping her husband will be attached to her; with Judah she says, “This time I will praise the LORD.”",
+  "The sisters' rivalry runs through the births: Rachel gives Jacob her servant Bilhah, Leah gives him Zilpah, and Rachel trades a night with Jacob for Reuben's mandrakes. Jacob asks to be buried where he buried Leah. Ruth 4 names her with Rachel as the two who built up the house of Israel."
+ ],
+ "moments": [
+  {"ref": "Gen.29.16-17", "text": "Weak eyes"},
+  {"ref": "Gen.29.23-25", "text": "Given to Jacob"},
+  {"ref": "Gen.29.31-32", "text": "Unloved, bears Reuben"},
+  {"ref": "Gen.29.35", "text": "“This time I will praise the LORD”"},
+  {"ref": "Gen.30.9", "text": "Gives Zilpah to Jacob"},
+  {"ref": "Gen.30.14-16", "text": "The mandrakes"},
+  {"ref": "Gen.30.20-21", "text": "Zebulun and Dinah"},
+  {"ref": "Gen.49.31", "text": "Buried at Machpelah"},
+  {"ref": "Ruth.4.11", "text": "Built up the house of Israel"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.29.16-30.21"},
+  {"kind": "scripture", "ref": "Gen.49.31"},
+  {"kind": "scripture", "ref": "Ruth.4.11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Hendrick_ter_Brugghen_-_Jacob_verwijt_Laban_zijn_bedrog_met_Lea_%281627%29.jpg/500px-Hendrick_ter_Brugghen_-_Jacob_verwijt_Laban_zijn_bedrog_met_Lea_%281627%29.jpg", "caption": "Jacob reproaches Laban for giving him Leah (Genesis 29:25), Hendrick ter Brugghen, 1627.", "credit": "Hendrick ter Brugghen, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Hendrick_ter_Brugghen_-_Jacob_verwijt_Laban_zijn_bedrog_met_Lea_(1627).jpg", "license": "Public domain"}
+ ]
+}

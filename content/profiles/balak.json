@@ -1,0 +1,30 @@
+{
+ "id": "balak",
+ "name": "Balak",
+ "role": "King of Moab who hired Balaam",
+ "people": ["balak_387"],
+ "summary": "Son of Zippor, king of Moab when Israel camped on the plains across the Jordan from Jericho. Afraid of them, he sent twice for Balaam to curse Israel, and took him to three heights to look down on their camp; each time Balaam blessed them instead. Later Scripture remembers him as the king who fought against Israel and hired a curse.",
+ "body": [
+  "Moab is terrified at the number of Israel, who have just defeated Sihon and Og. Balak tells the elders of Midian that this horde will lick up everything around them, and sends messengers with a fee for divination.",
+  "At the first blessing he protests: “What have you done to me? I brought you here to curse my enemies, and behold, you have only blessed them!” At last he strikes his hands together and sends Balaam home without his reward. Joshua, Jephthah and Micah recall the episode, and Revelation says Balaam taught Balak to put a stumbling block before Israel."
+ ],
+ "moments": [
+  {"ref": "Num.22.2-4", "text": "Afraid of Israel"},
+  {"ref": "Num.22.5-6", "text": "Sends for Balaam"},
+  {"ref": "Num.22.15-17", "text": "Sends again"},
+  {"ref": "Num.23.11", "text": "“You have only blessed them”"},
+  {"ref": "Num.23.13", "text": "Another place"},
+  {"ref": "Num.24.10-11", "text": "Sends Balaam away"},
+  {"ref": "Josh.24.9", "text": "Recalled by Joshua"},
+  {"ref": "Mic.6.5", "text": "“Remember what Balak king of Moab counseled”"},
+  {"ref": "Rev.2.14", "text": "In Revelation"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Num.22.1-24.25"},
+  {"kind": "scripture", "ref": "Josh.24.9-10"},
+  {"kind": "scripture", "ref": "Judg.11.25"},
+  {"kind": "scripture", "ref": "Mic.6.5"},
+  {"kind": "scripture", "ref": "Rev.2.14"}
+ ]
+}

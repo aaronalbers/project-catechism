@@ -1,0 +1,43 @@
+{
+ "id": "jacob",
+ "name": "Jacob",
+ "role": "Patriarch renamed Israel, father of the twelve tribes",
+ "people": ["israel_682"],
+ "genealogy": "jacob",
+ "when": "≈ 1900–1800 BC in the Bible's own reckoning",
+ "whenBasis": "Genesis gives ages but no dates in any calendar we can fix. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; many historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
+ "summary": "The younger twin, born grasping Esau's heel. He bought Esau's birthright and, with his mother's help, took his blessing, then fled to his uncle Laban in Haran, dreaming on the way of a ladder reaching to heaven at Bethel. He served fourteen years for Rachel, married Leah too, and fathered twelve sons and a daughter; he wrestled at the Jabbok and was renamed Israel, and died in Egypt, blessing his sons.",
+ "body": [
+  "His name is taken to mean he grasps the heel, and Esau says he has supplanted him twice. At Bethel, alone, he dreams of a ladder with God's angels going up and down and the LORD above it renewing Abraham's promise, and says, “Surely the LORD is in this place, and I was unaware of it.”",
+  "In Haran the deceiver is deceived: given Leah in place of Rachel, he serves another seven years. His sons are born to Leah, Rachel and their servants Bilhah and Zilpah; he grows rich in flocks and leaves secretly. Before meeting Esau, a man wrestles with him until daybreak, and he will not let go without a blessing: “Your name will no longer be Jacob, but Israel, because you have struggled with God and with men, and you have prevailed.” He limps from it.",
+  "He loves Joseph more than his other sons and mourns him as dead for years. When he hears Joseph is alive and ruling Egypt, he goes down with seventy of his household. Before Pharaoh he calls his years “few and hard.” He blesses Joseph's sons and his own, and is carried back to be buried at Machpelah."
+ ],
+ "moments": [
+  {"ref": "Gen.25.26", "text": "Born grasping Esau's heel"},
+  {"ref": "Gen.25.33", "text": "Buys the birthright"},
+  {"ref": "Gen.27.19", "text": "“I am Esau, your firstborn”"},
+  {"ref": "Gen.28.12-13", "text": "The ladder at Bethel"},
+  {"ref": "Gen.28.16-17", "text": "“Surely the LORD is in this place”"},
+  {"ref": "Gen.29.20", "text": "Seven years for Rachel"},
+  {"ref": "Gen.29.25", "text": "Given Leah"},
+  {"ref": "Gen.32.24-28", "text": "Wrestles, and is renamed Israel"},
+  {"ref": "Gen.33.4", "text": "Esau embraces him"},
+  {"ref": "Gen.37.3", "text": "Loves Joseph more"},
+  {"ref": "Gen.37.34-35", "text": "Mourns Joseph"},
+  {"ref": "Gen.45.27-28", "text": "“My son Joseph is still alive!”"},
+  {"ref": "Gen.46.2-4", "text": "Told to go down to Egypt"},
+  {"ref": "Gen.47.9", "text": "“Few and hard”"},
+  {"ref": "Gen.49.1", "text": "Blesses his sons"},
+  {"ref": "Gen.49.33", "text": "Dies"},
+  {"ref": "Gen.50.13", "text": "Buried at Machpelah"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.25.19-50.14"},
+  {"kind": "scripture", "ref": "Hos.12.2-4"},
+  {"kind": "scripture", "ref": "Heb.11.21"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/024.Jacob_Wrestles_with_the_Angel.jpg/500px-024.Jacob_Wrestles_with_the_Angel.jpg", "caption": "Jacob wrestles with the angel (Genesis 32:24–28), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:024.Jacob_Wrestles_with_the_Angel.jpg", "license": "Public domain"}
+ ]
+}

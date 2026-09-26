@@ -1,0 +1,38 @@
+{
+ "id": "manasseh-king",
+ "name": "Manasseh",
+ "role": "King of Judah who reigned longest and worst",
+ "people": ["manasseh_1930"],
+ "genealogy": "manasseh-king",
+ "when": "≈ 697–642 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Hezekiah, king at twelve, who reigned fifty-five years in Jerusalem, longer than any other king of Judah. He rebuilt the high places, raised altars to Baal and to the host of heaven in the temple courts, set up an Asherah image in the temple, burned his son in the fire, practised divination, and shed so much innocent blood that it filled Jerusalem. Kings says the LORD would bring disaster on Judah for his sins. Chronicles adds that he was taken to Babylon in chains, humbled himself, and was restored.",
+ "body": [
+  "Kings makes him the reason the exile could not be averted: even Josiah's reforms did not turn away the LORD's anger because of all Manasseh had done.",
+  "Chronicles tells the rest: the Assyrian commanders took him with hooks and bronze shackles to Babylon; in distress he sought the LORD, who heard him and brought him back; he removed the foreign gods and restored the altar. Jeremiah still names him as the cause of disaster."
+ ],
+ "moments": [
+  {"ref": "2Kgs.21.1", "text": "Twelve years old; fifty-five years"},
+  {"ref": "2Kgs.21.3-5", "text": "Altars to Baal and the host of heaven"},
+  {"ref": "2Kgs.21.6", "text": "His son in the fire"},
+  {"ref": "2Kgs.21.7", "text": "The Asherah in the temple"},
+  {"ref": "2Kgs.21.11-13", "text": "Disaster on Jerusalem"},
+  {"ref": "2Kgs.21.16", "text": "Innocent blood"},
+  {"ref": "2Kgs.23.26", "text": "Not turned away"},
+  {"ref": "2Chr.33.11", "text": "Taken to Babylon"},
+  {"ref": "2Chr.33.12-13", "text": "Humbles himself"},
+  {"ref": "2Chr.33.15-16", "text": "Removes the foreign gods"},
+  {"ref": "Jer.15.4", "text": "Named by Jeremiah"}
+ ],
+ "later": [
+  {"text": "A prism of the Assyrian king Esarhaddon lists “Manasseh king of Judah” among twenty-two western kings made to deliver building materials for Nineveh.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Prism of Esarhaddon (Prism B), British Museum", "note": "translated in Ancient Near Eastern Texts, ed. J. B. Pritchard, p. 291"}]},
+  {"text": "The Prayer of Manasseh, a short penitential prayer in his name, is in the Greek Bible tradition and the Apocrypha.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Prayer of Manasseh"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.21.1-18"},
+  {"kind": "scripture", "ref": "2Kgs.23.26"},
+  {"kind": "scripture", "ref": "2Chr.33.1-20"},
+  {"kind": "scripture", "ref": "Jer.15.4"}
+ ]
+}

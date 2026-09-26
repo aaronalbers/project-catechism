@@ -1,0 +1,39 @@
+{
+ "id": "daniel",
+ "name": "Daniel",
+ "role": "Exile in Babylon, interpreter of dreams and seer of visions",
+ "people": ["daniel_975"],
+ "when": "≈ 605–536 BC in the book's setting",
+ "whenBasis": "From the third year of Jehoiakim (Daniel 1:1, ≈605 BC by Babylonian reckoning) to the third year of Cyrus (10:1, ≈536 BC). When the book was written is argued; see below.",
+ "summary": "A young man of Judah taken to Babylon and trained for Nebuchadnezzar's court. He kept his diet and his prayers, interpreted the king's dreams and the writing on the wall, was delivered from the lions' den, and saw visions of kingdoms to come.",
+ "body": [
+  "Renamed Belteshazzar, he resolves not to defile himself with the king's food and thrives on vegetables and water. When Nebuchadnezzar demands that his wise men tell him his dream as well as its meaning, the mystery is revealed to Daniel in a vision of the night, and he is made ruler over the province of Babylon.",
+  "He reads the writing on Belshazzar's wall: MENE, MENE, TEKEL, PARSIN. Under Darius the Mede, rivals trap him by a law against prayer to anyone but the king. He prays three times a day at his open window toward Jerusalem regardless, is thrown to the lions, and is found unhurt.",
+  "The second half of the book is his visions: four beasts and one like a son of man coming with the clouds, the ram and the goat, the seventy weeks. Ezekiel names a Daniel with Noah and Job as a model of righteousness, and Jesus cites “the prophet Daniel.”"
+ ],
+ "moments": [
+  {"ref": "Dan.1.7", "text": "Named Belteshazzar"},
+  {"ref": "Dan.1.8", "text": "Resolves not to defile himself"},
+  {"ref": "Dan.2.19", "text": "The king's dream revealed to him"},
+  {"ref": "Dan.2.48", "text": "Made ruler over the province of Babylon"},
+  {"ref": "Dan.5.25-28", "text": "Reads the writing on the wall"},
+  {"ref": "Dan.6.10", "text": "Prays three times a day, toward Jerusalem"},
+  {"ref": "Dan.6.22", "text": "“My God sent His angel”"},
+  {"ref": "Dan.7.13-14", "text": "One like the Son of Man"},
+  {"ref": "Ezek.14.14", "text": "Named with Noah and Job"},
+  {"ref": "Matt.24.15", "text": "“Spoken of by the prophet Daniel”"}
+ ],
+ "later": [
+  {"text": "The book was written by Daniel in the sixth century BC, and its visions foretell the kingdoms after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Josephus (Antiquities 11.337)", "many evangelical scholars"], "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 11.337", "note": "Alexander is shown the book of Daniel"}]},
+  {"text": "The book was completed ≈167–164 BC under Antiochus IV, whose persecution chapters 8 and 11 describe closely, and whose death they do not.", "confidence": "interpretation", "traditions": ["Porphyry (3rd century, known through Jerome)", "most historical-critical scholarship"], "sources": [{"kind": "primary", "title": "Jerome, Commentary on Daniel, prologue", "note": "answers Porphyry's dating"}, {"kind": "scholarship", "title": "Daniel (Hermeneia)", "author": "John J. Collins", "year": 1993}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Dan.1.1-12.13"},
+  {"kind": "scripture", "ref": "Ezek.14.14"},
+  {"kind": "scripture", "ref": "Matt.24.15"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sir_Peter_Paul_Rubens%2C_Daniel_in_the_Lions%27_Den%2C_c._1614-1616%2C_NGA_50298.jpg/500px-Sir_Peter_Paul_Rubens%2C_Daniel_in_the_Lions%27_Den%2C_c._1614-1616%2C_NGA_50298.jpg", "caption": "Daniel in the lions' den (Daniel 6), Peter Paul Rubens, ≈1614–16. National Gallery of Art, Washington.", "credit": "Peter Paul Rubens, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens,_Daniel_in_the_Lions%27_Den,_c._1614-1616,_NGA_50298.jpg", "license": "CC0"}
+ ]
+}

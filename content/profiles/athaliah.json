@@ -1,0 +1,34 @@
+{
+ "id": "athaliah",
+ "name": "Athaliah",
+ "role": "Queen who ruled Judah six years",
+ "people": ["athaliah_359"],
+ "when": "≈ 841–835 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Daughter of Ahab and granddaughter of Omri, married to Jehoram of Judah and mother of King Ahaziah. When Ahaziah was killed by Jehu, she set out to destroy the whole royal family and ruled Judah herself for six years. Her grandson Joash was hidden in the temple by his aunt Jehosheba. In the seventh year the priest Jehoiada crowned the boy; Athaliah came to the temple crying “Treason! Treason!” and was put to death at the Horse Gate.",
+ "body": [
+  "She is the only woman to rule Judah or Israel as monarch in the Bible. Chronicles says she counselled her son to do wickedly, and that her sons had broken into the house of God and used its sacred things for the Baals.",
+  "Jehoiada has her taken out between the ranks so she will not be killed in the temple. The people of the land rejoice, and the city is quiet."
+ ],
+ "moments": [
+  {"ref": "2Kgs.8.18", "text": "Married into Judah"},
+  {"ref": "2Kgs.8.26", "text": "Mother of Ahaziah"},
+  {"ref": "2Kgs.11.1", "text": "Destroys the royal family"},
+  {"ref": "2Kgs.11.2-3", "text": "Joash hidden"},
+  {"ref": "2Kgs.11.13-14", "text": "“Treason! Treason!”"},
+  {"ref": "2Kgs.11.15-16", "text": "Put to death"},
+  {"ref": "2Kgs.11.20", "text": "The city is quiet"},
+  {"ref": "2Chr.22.3", "text": "Her counsel"},
+  {"ref": "2Chr.24.7", "text": "Her sons and the temple"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.8.16-27"},
+  {"kind": "scripture", "ref": "2Kgs.11.1-20"},
+  {"kind": "scripture", "ref": "2Chr.22.1-23.21"},
+  {"kind": "scripture", "ref": "2Chr.24.7"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/099.The_Death_of_Athaliah.jpg/500px-099.The_Death_of_Athaliah.jpg", "caption": "The death of Athaliah (2 Kings 11:16), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:099.The_Death_of_Athaliah.jpg", "license": "Public domain"}
+ ]
+}

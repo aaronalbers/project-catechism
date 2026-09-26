@@ -1,0 +1,33 @@
+{
+ "id": "ham",
+ "name": "Ham",
+ "role": "Son of Noah, father of Canaan",
+ "people": ["ham_1359"],
+ "genealogy": "ham-of-noah",
+ "summary": "One of Noah's three sons, saved with his wife in the ark. When Noah lay drunk and uncovered in his tent, Ham saw his father's nakedness and told his brothers, who covered him without looking; Noah, waking, cursed Ham's son Canaan. Genesis traces Cush, Mizraim (Egypt), Put and Canaan from him.",
+ "body": [
+  "He enters the ark with his father, his brothers Shem and Japheth, and their wives. After the flood, Genesis introduces him as “the father of Canaan” before telling what he did. The curse Noah speaks falls on Canaan, to be a servant to his brothers.",
+  "The Table of Nations gives his sons as Cush, Mizraim, Put and Canaan, the peoples of Africa and Canaan in the Bible's map of the world. The Psalms call Egypt “the land of Ham.”"
+ ],
+ "moments": [
+  {"ref": "Gen.5.32", "text": "Born to Noah"},
+  {"ref": "Gen.7.13", "text": "Enters the ark"},
+  {"ref": "Gen.9.18", "text": "“The father of Canaan”"},
+  {"ref": "Gen.9.22", "text": "Sees his father's nakedness"},
+  {"ref": "Gen.9.23", "text": "His brothers cover Noah"},
+  {"ref": "Gen.9.25", "text": "Canaan cursed"},
+  {"ref": "Gen.10.6", "text": "His sons"},
+  {"ref": "Ps.105.23", "text": "“The land of Ham”"}
+ ],
+ "later": [
+  {"text": "The curse in Genesis 9:25 falls on Canaan, not on Ham. From late antiquity, and above all from the 17th to the 19th century, it was misread as a curse on Ham's supposed African descendants and used to defend slavery. That reading has been rejected across Jewish and Christian traditions.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.9.25"}, {"kind": "scholarship", "title": "The Curse of Ham: Race and Slavery in Early Judaism, Christianity, and Islam", "author": "David M. Goldenberg", "year": 2003}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.9.18-10.20"},
+  {"kind": "scripture", "ref": "Ps.105.23"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/009.Noah_Curses_Ham_and_Canaan.jpg/500px-009.Noah_Curses_Ham_and_Canaan.jpg", "caption": "Noah curses Ham and Canaan (Genesis 9:25), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:009.Noah_Curses_Ham_and_Canaan.jpg", "license": "Public domain"}
+ ]
+}

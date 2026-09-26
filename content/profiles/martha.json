@@ -1,0 +1,35 @@
+{
+ "id": "martha",
+ "name": "Martha",
+ "role": "Sister of Mary and Lazarus of Bethany",
+ "people": ["martha_1937"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "A woman of Bethany who welcomed Jesus into her home. Distracted by all the preparations, she asked him to tell her sister Mary to help; he answered, “Martha, Martha… you are worried and upset about many things,” but only one thing was necessary. When her brother Lazarus died, she went out to meet Jesus and said that if he had been there, her brother would not have died. Jesus told her, “I am the resurrection and the life,” and she answered, “I believe that You are the Christ, the Son of God.”",
+ "body": [
+  "At the tomb she objects that the body has been there four days. Six days before the Passover, at the dinner given for Jesus in Bethany, Martha serves."
+ ],
+ "moments": [
+  {"ref": "Luke.10.38", "text": "Welcomes Jesus"},
+  {"ref": "Luke.10.40", "text": "“Tell her to help me!”"},
+  {"ref": "Luke.10.41-42", "text": "“Martha, Martha”"},
+  {"ref": "John.11.5", "text": "Jesus loved Martha"},
+  {"ref": "John.11.20-21", "text": "Goes to meet Jesus"},
+  {"ref": "John.11.25", "text": "“I am the resurrection”"},
+  {"ref": "John.11.27", "text": "“I believe that You are the Christ”"},
+  {"ref": "John.11.39", "text": "Four days"},
+  {"ref": "John.12.2", "text": "Martha served"}
+ ],
+ "later": [
+  {"text": "A medieval Provençal legend brings Martha, Mary and Lazarus by boat to the south of France, where Martha tamed a dragon at Tarascon.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Jacobus de Voragine, The Golden Legend (≈1260), Saint Martha"}], "traditions": ["medieval Provençal tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.10.38-42"},
+  {"kind": "scripture", "ref": "John.11.1-44"},
+  {"kind": "scripture", "ref": "John.12.1-2"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Brooklyn_Museum_-_Jesus_Mary_Magdalene_and_Martha_at_Bethany_%28J%C3%A9sus_%C3%A0_Bethanie_Marie_Madeleine_et_Marthe%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Jesus_Mary_Magdalene_and_Martha_at_Bethany_%28J%C3%A9sus_%C3%A0_Bethanie_Marie_Madeleine_et_Marthe%29_-_James_Tissot.jpg", "caption": "Jesus at Bethany with Martha and Mary (Luke 10:38–42); Tissot calls Mary the Magdalene, after the old Western tradition, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Jesus_Mary_Magdalene_and_Martha_at_Bethany_(J%C3%A9sus_%C3%A0_Bethanie_Marie_Madeleine_et_Marthe)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

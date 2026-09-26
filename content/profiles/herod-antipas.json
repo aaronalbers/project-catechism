@@ -1,0 +1,42 @@
+{
+ "id": "herod-antipas",
+ "name": "Herod Antipas",
+ "role": "Tetrarch of Galilee who beheaded John the Baptist",
+ "people": ["herod_1505"],
+ "when": "≈ 4 BC – AD 39 ruled",
+ "whenBasis": "Tetrarch of Galilee and Perea from his father Herod's death until the emperor Gaius exiled him (Josephus, Antiquities 18.252).",
+ "summary": "Son of Herod the Great, tetrarch of Galilee in Jesus' day, called Herod in the gospels and once king. He married Herodias, his brother Philip's wife, and when John the Baptist told him it was not lawful, he imprisoned John. At his birthday banquet Herodias's daughter danced; he promised her anything, and at her mother's prompting she asked for John's head. Hearing of Jesus, he feared John had been raised. Jesus called him “that fox.” Pilate sent Jesus to him; he questioned him, mocked him and sent him back, and he and Pilate became friends that day.",
+ "body": [
+  "Mark says he feared John as a righteous and holy man, and liked to listen to him though he was greatly perplexed. He is sorry at the girl's request but will not break his oath before his guests. Luke says he had long wanted to see Jesus perform a miracle; Jesus answers him nothing."
+ ],
+ "moments": [
+  {"ref": "Luke.3.1", "text": "Tetrarch of Galilee"},
+  {"ref": "Matt.14.3-4", "text": "Imprisons John"},
+  {"ref": "Mark.6.20", "text": "Listens to John gladly"},
+  {"ref": "Mark.6.22", "text": "The dance"},
+  {"ref": "Mark.6.26", "text": "Keeps his oath"},
+  {"ref": "Matt.14.1-2", "text": "Thinks John has risen"},
+  {"ref": "Luke.9.9", "text": "Tries to see Jesus"},
+  {"ref": "Luke.13.31-32", "text": "“That fox”"},
+  {"ref": "Luke.23.7-8", "text": "Pilate sends Jesus to him"},
+  {"ref": "Luke.23.11", "text": "Mocks him"},
+  {"ref": "Luke.23.12", "text": "Friends with Pilate"},
+  {"ref": "Acts.4.27", "text": "Named in the church's prayer"}
+ ],
+ "later": [
+  {"text": "Josephus says Herod executed John at the fortress of Machaerus, fearing that his influence might lead to a revolt, and that many Jews saw Herod's defeat by the Nabataean king Aretas as God's punishment for it.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.116–119"}]},
+  {"text": "He founded the city of Tiberias on the Sea of Galilee, named for the emperor, and was exiled to Gaul by Gaius in AD 39, Herodias going with him.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.36–38, 18.240–255"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.14.1-12"},
+  {"kind": "scripture", "ref": "Mark.6.14-29"},
+  {"kind": "scripture", "ref": "Luke.3.1"},
+  {"kind": "scripture", "ref": "Luke.3.19-20"},
+  {"kind": "scripture", "ref": "Luke.13.31-33"},
+  {"kind": "scripture", "ref": "Luke.23.6-12"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Brooklyn_Museum_-_Jesus_Before_Herod_%28J%C3%A9sus_devant_H%C3%A9rode%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Jesus_Before_Herod_%28J%C3%A9sus_devant_H%C3%A9rode%29_-_James_Tissot.jpg", "caption": "Jesus before Herod (Luke 23:8–11), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Jesus_Before_Herod_(J%C3%A9sus_devant_H%C3%A9rode)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

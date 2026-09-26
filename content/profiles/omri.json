@@ -1,0 +1,30 @@
+{
+ "id": "omri",
+ "name": "Omri",
+ "role": "King of Israel who built Samaria",
+ "people": ["omri_2243"],
+ "when": "≈ 885–874 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Commander of Israel's army, made king by the troops in the field when Zimri killed King Elah. He besieged Tirzah, where Zimri burned the palace over himself, and after four years of rivalry with Tibni ruled all Israel. He bought the hill of Samaria from Shemer for two talents of silver and built his capital there. Kings says he did more evil than all before him. His son was Ahab.",
+ "body": [
+  "Kings gives him six verses and a formula. His importance shows outside the Bible: his dynasty lasted four reigns, and the Assyrians went on calling Israel the house of Omri long after it had fallen."
+ ],
+ "moments": [
+  {"ref": "1Kgs.16.16", "text": "Made king in the camp"},
+  {"ref": "1Kgs.16.17-18", "text": "Tirzah; Zimri dies"},
+  {"ref": "1Kgs.16.21-22", "text": "Defeats Tibni"},
+  {"ref": "1Kgs.16.23", "text": "Twelve years"},
+  {"ref": "1Kgs.16.24", "text": "Buys the hill of Samaria"},
+  {"ref": "1Kgs.16.25-26", "text": "More evil than all before him"},
+  {"ref": "1Kgs.16.28", "text": "Ahab succeeds him"},
+  {"ref": "Mic.6.16", "text": "“The statutes of Omri”"}
+ ],
+ "later": [
+  {"text": "The Mesha Stele (Louvre AO 5066), set up by Mesha king of Moab, says “Omri was king of Israel and he oppressed Moab many days,” and that his son did the same. Assyrian records name Israel Bit-Humri, the house of Omri.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Mesha Stele, Louvre AO 5066", "note": "found at Dhiban, Jordan, 1868"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.16.15-28"},
+  {"kind": "scripture", "ref": "Mic.6.16"}
+ ]
+}

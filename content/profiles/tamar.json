@@ -1,0 +1,34 @@
+{
+ "id": "tamar",
+ "name": "Tamar",
+ "role": "Judah's daughter-in-law, mother of Perez and Zerah",
+ "people": ["tamar_2821"],
+ "genealogy": "tamar",
+ "summary": "Married to Judah's firstborn Er, then to Onan, both of whom died. When Judah held back his third son Shelah, she veiled herself by the road to Timnah, and Judah, taking her for a prostitute, left his seal, cord and staff as a pledge. Condemned when her pregnancy was found, she sent them to him, and he said, “She is more righteous than I.” Her son Perez is an ancestor of David and, in Matthew, of Jesus.",
+ "body": [
+  "By custom the brother of a man who died childless married his widow to raise up an heir. Onan refuses to give his brother offspring, and dies; Judah, afraid Shelah will die too, sends Tamar back to her father's house to wait.",
+  "When she sees that Shelah is grown and she has not been given to him, she takes off her widow's clothes and sits veiled at the entrance to Enaim. Three months later Judah orders her burned. She sends him the pledge with the message that the owner is the father. She bears twins, Perez and Zerah; the elders of Bethlehem bless Boaz with a house like Perez's, and Matthew names her first of the women in Jesus' genealogy."
+ ],
+ "moments": [
+  {"ref": "Gen.38.6", "text": "Married to Er"},
+  {"ref": "Gen.38.8-10", "text": "Onan"},
+  {"ref": "Gen.38.11", "text": "Sent home to wait"},
+  {"ref": "Gen.38.14", "text": "Veils herself"},
+  {"ref": "Gen.38.18", "text": "Takes Judah's pledge"},
+  {"ref": "Gen.38.24", "text": "Condemned"},
+  {"ref": "Gen.38.25-26", "text": "Sends the pledge"},
+  {"ref": "Gen.38.27-30", "text": "Perez and Zerah"},
+  {"ref": "Ruth.4.12", "text": "“Like the house of Perez”"},
+  {"ref": "Matt.1.3", "text": "In Jesus' genealogy"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.38.1-30"},
+  {"kind": "scripture", "ref": "Ruth.4.12"},
+  {"kind": "scripture", "ref": "Matt.1.3"},
+  {"kind": "scripture", "ref": "Deut.25.5-6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Arent_de_Gelder_-_Judah_and_Tamar_-_40_-_Dordrechts_Museum.jpg/500px-Arent_de_Gelder_-_Judah_and_Tamar_-_40_-_Dordrechts_Museum.jpg", "caption": "Judah and Tamar (Genesis 38:18), Arent de Gelder, ≈1700. Dordrechts Museum.", "credit": "Arent de Gelder, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Arent_de_Gelder_-_Judah_and_Tamar_-_40_-_Dordrechts_Museum.jpg", "license": "Public domain"}
+ ]
+}

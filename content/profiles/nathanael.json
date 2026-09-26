@@ -1,0 +1,32 @@
+{
+ "id": "nathanael",
+ "name": "Nathanael",
+ "role": "Disciple from Cana whom Jesus saw under the fig tree",
+ "people": ["nathanael_2158"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "A man of Cana in Galilee whom Philip brought to Jesus. Told they had found the one Moses wrote about, Jesus of Nazareth, he asked, “Can anything good come from Nazareth?” Jesus called him a true Israelite in whom there is no deceit, and said he had seen him under the fig tree before Philip called him. Nathanael answered, “Rabbi… You are the Son of God! You are the King of Israel!”",
+ "body": [
+  "Jesus promises he will see greater things: heaven opened and the angels of God ascending and descending on the Son of Man. He is among the seven disciples fishing on the Sea of Tiberias when the risen Jesus appears on the shore."
+ ],
+ "moments": [
+  {"ref": "John.1.45", "text": "Philip finds him"},
+  {"ref": "John.1.46", "text": "“Can anything good come from Nazareth?”"},
+  {"ref": "John.1.47", "text": "“A true Israelite”"},
+  {"ref": "John.1.48", "text": "Under the fig tree"},
+  {"ref": "John.1.49", "text": "“You are the Son of God!”"},
+  {"ref": "John.1.51", "text": "Angels ascending and descending"},
+  {"ref": "John.21.2", "text": "From Cana, fishing"}
+ ],
+ "later": [
+  {"text": "The other gospels never name him, and John never names Bartholomew; because Bartholomew is a family name (son of Tolmai) and is paired with Philip in the lists, many identify the two.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.10.3"}, {"kind": "scripture", "ref": "John.1.45"}], "traditions": ["many commentators, from the Middle Ages on"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "John.1.45-51"},
+  {"kind": "scripture", "ref": "John.21.2"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Brooklyn_Museum_-_Nathaniel_Under_the_Fig_Tree_%28Nathana%C3%ABl_sous_le_figuier%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_Nathaniel_Under_the_Fig_Tree_%28Nathana%C3%ABl_sous_le_figuier%29_-_James_Tissot_-_overall.jpg", "caption": "Nathanael under the fig tree (John 1:48), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Nathaniel_Under_the_Fig_Tree_(Nathana%C3%ABl_sous_le_figuier)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

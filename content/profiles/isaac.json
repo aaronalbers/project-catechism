@@ -1,0 +1,40 @@
+{
+ "id": "isaac",
+ "name": "Isaac",
+ "role": "Son of the promise, father of Jacob and Esau",
+ "people": ["isaac_616"],
+ "genealogy": "isaac",
+ "when": "≈ 2000–1800 BC in the Bible's own reckoning",
+ "whenBasis": "Genesis gives ages but no dates in any calendar we can fix. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; many historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
+ "summary": "Born to Abraham and Sarah in their old age and named for laughter, Isaac was bound on an altar on a mountain in Moriah and spared when the LORD provided a ram. He married Rebekah, prayed for her when she was barren, and fathered the twins Esau and Jacob. Old and blind, he was tricked into giving Esau's blessing to Jacob; he died at 180, and his sons buried him.",
+ "body": [
+  "His name means he laughs: both his parents laughed at the promise of him, and Sarah says at his birth that God has made laughter for her. As a boy he carries the wood up the mountain and asks where the lamb is; Abraham answers that God will provide it.",
+  "Abraham's servant brings Rebekah from Aram, and Isaac, meditating in the field at evening, sees the camels coming. He loves her, and is comforted after his mother's death. Like his father, he calls his wife his sister in Gerar, and he re-digs his father's wells, which the herdsmen of Gerar dispute until he reaches Rehoboth, room.",
+  "He favours Esau for his game; Rebekah favours Jacob. When his eyes are too dim to see, Jacob, dressed in Esau's clothes, receives the blessing, and Isaac trembles violently when Esau comes in. He lives to see Jacob return, and dies at Mamre."
+ ],
+ "moments": [
+  {"ref": "Gen.21.3", "text": "Named Isaac"},
+  {"ref": "Gen.22.6-8", "text": "“God Himself will provide the lamb”"},
+  {"ref": "Gen.22.9", "text": "Bound on the altar"},
+  {"ref": "Gen.24.63-67", "text": "Meets Rebekah"},
+  {"ref": "Gen.25.21", "text": "Prays for her"},
+  {"ref": "Gen.25.28", "text": "Loves Esau"},
+  {"ref": "Gen.26.7", "text": "Calls her his sister"},
+  {"ref": "Gen.26.22", "text": "Rehoboth"},
+  {"ref": "Gen.27.1", "text": "Eyes too dim to see"},
+  {"ref": "Gen.27.33", "text": "Trembles"},
+  {"ref": "Gen.35.28-29", "text": "Dies at 180"},
+  {"ref": "Heb.11.17-18", "text": "Offered by faith"}
+ ],
+ "later": [
+  {"text": "The binding of Isaac, the Akedah, is the Torah reading for the second day of Rosh Hashanah.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Megillah 31a", "url": "https://www.sefaria.org/Megillah.31a"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.21.1-35.29"},
+  {"kind": "scripture", "ref": "Heb.11.17-20"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/016.The_Testing_of_Abraham%27s_Faith.jpg/500px-016.The_Testing_of_Abraham%27s_Faith.jpg", "caption": "The testing of Abraham's faith: Isaac on the altar (Genesis 22:9–12), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:016.The_Testing_of_Abraham%27s_Faith.jpg", "license": "Public domain"}
+ ]
+}

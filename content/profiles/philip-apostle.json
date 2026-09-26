@@ -1,0 +1,37 @@
+{
+ "id": "philip-apostle",
+ "name": "Philip",
+ "role": "Apostle from Bethsaida",
+ "people": ["philip_2344"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "One of the Twelve, from Bethsaida, the town of Andrew and Peter. Jesus found him and said, “Follow Me,” and Philip found Nathanael and told him they had found the one Moses and the prophets wrote about. Tested by Jesus before the feeding of the five thousand, he reckoned that two hundred denarii would not buy enough bread. At the Last Supper he asked, “Lord, show us the Father, and that will be enough for us.”",
+ "body": [
+  "He answers Nathanael's scorn for Nazareth with “Come and see.” Greeks at the feast come to him asking to see Jesus. Jesus answers his request at the supper: “Anyone who has seen Me has seen the Father.”"
+ ],
+ "moments": [
+  {"ref": "John.1.43", "text": "“Follow Me”"},
+  {"ref": "John.1.44", "text": "From Bethsaida"},
+  {"ref": "John.1.45", "text": "Finds Nathanael"},
+  {"ref": "John.1.46", "text": "“Come and see”"},
+  {"ref": "John.6.5-7", "text": "Two hundred denarii"},
+  {"ref": "John.12.21-22", "text": "The Greeks come to him"},
+  {"ref": "John.14.8", "text": "“Show us the Father”"},
+  {"ref": "John.14.9", "text": "“Anyone who has seen Me”"},
+  {"ref": "Acts.1.13", "text": "In the upper room"}
+ ],
+ "later": [
+  {"text": "Polycrates of Ephesus (≈AD 190) says Philip “of the twelve apostles” was buried at Hierapolis in Asia with his daughters; he may be confusing him with Philip the evangelist, who had four prophesying daughters. Excavators at Hierapolis announced a tomb they took for his in 2011.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.31.3; 5.24.2"}, {"kind": "scripture", "ref": "Acts.21.8-9"}, {"kind": "archaeology", "title": "Hierapolis excavations, Italian Archaeological Mission", "note": "Francesco D'Andria, 2011"}], "traditions": ["Polycrates", "Francesco D'Andria"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "John.1.43-46"},
+  {"kind": "scripture", "ref": "John.6.5-7"},
+  {"kind": "scripture", "ref": "John.12.20-22"},
+  {"kind": "scripture", "ref": "John.14.8-10"},
+  {"kind": "scripture", "ref": "Matt.10.3"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Brooklyn_Museum_-_Address_to_Saint_Philip_%28Allocution_%C3%A0_Saint_Philippe%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Address_to_Saint_Philip_%28Allocution_%C3%A0_Saint_Philippe%29_-_James_Tissot.jpg", "caption": "Address to Saint Philip (John 14:9), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Address_to_Saint_Philip_(Allocution_%C3%A0_Saint_Philippe)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

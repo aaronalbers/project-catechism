@@ -6,6 +6,8 @@
 //   circle.json                  verse counts per chapter, plus the better-attested cross
 //                                references as running verse indices, for the Links circle
 //   places/index.json, places/by-book/<Book>.json
+//   people/by-book/<Book>.json  who each verse names ("ch.v" → ids), with each one's name, kin title and sex
+//   people/<a-z>.json            everyone named in the Bible, keyed by id, in shards by first letter
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
 //                                size reference drawn beside models too big for a figure
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -31,6 +33,8 @@ async function writeJson(rel, data) {
 // verseIndex[i] = [bookId, chapter, verse] in canonical order; the interlinear
 // sheet refers to verses by this same running index.
 const verseIndex = [];
+/** "Gen.1.1" → BSB text, for the people build to read which name a verse uses. */
+const bsbText = new Map();
 async function buildBible() {
   const text = await readFile(new URL('bsb.txt', CACHE), 'utf8');
   const lines = text.replace(/^﻿/, '').split('\n').slice(3);
@@ -49,6 +53,7 @@ async function buildBible() {
     const chapters = bible.get(book.id);
     (chapters[ch - 1] ??= []).push({ v, t: verseText });
     verseIndex.push([book.id, ch, v]);
+    bsbText.set(`${book.id}.${ch}.${v}`, verseText);
   }
   for (const [id, chapters] of bible) {
     const book = books.find((b) => b.id === id);
@@ -319,8 +324,76 @@ async function buildMap() {
   console.log('map     ', coast.length + rivers.length + lakes.length, 'lines,', cities.length, 'cities,', near.length, 'places near Jerusalem');
 }
 
+// ---------- People: Theographic's persons, with their Easton's entries ----------
+// The divine names are not people to profile; God alone is tagged in 8,500 verses.
+const NOT_PEOPLE = new Set(['god_1324', 'holy_spirit_7400']);
+/** Easton's links `[Judg. 4:6](/judg#Judg.4.6)` become `[[Judg.4.6|Judg. 4:6]]`, for the app to draw as verse links. */
+const eastonText = (t) => t.replace(/\[([^\]]+)\]\(\/?[a-z0-9]*\/?#([1-3]?[A-Za-z]+\.\d+(?:\.\d+)?)\)/g, '[[$2|$1]]').replace(/\s+/g, ' ').trim();
+/**
+ * Theographic tags a tribe or nation to the ancestor it is named for: Judah in all of Kings, Moab in Jeremiah,
+ * Israel in every book. These ancestors keep only the verses about the man himself: his own story in Genesis
+ * (Exodus 1 and 6 list the sons who went down to Egypt), the genealogies of 1 Chronicles 1–9, Matthew 1 and
+ * Luke 3, and, where a later verse uses his personal name for him (Jacob, Esau), that verse.
+ */
+const EPONYMS = {
+  israel_682: 'Jacob', esau_1216: 'Esau', judah_1751: null, benjamin_463: null, ephraim_1206: null, manasseh_1928: null,
+  reuben_2429: null, simeon_2741: null, levi_1820: null, dan_973: null, naphtali_2149: null, gad_1262: null,
+  asher_337: null, issachar_645: null, zebulun_3002: null, canaan_914: null, moab_2103: null, midian_2075: null, amalek_197: null,
+};
+function ancestorsOwn(ref, personal) {
+  const [book, ch] = ref.split('.');
+  if (book === 'Gen' || (book === 'Exod' && (+ch === 1 || +ch === 6)) || (book === '1Chr' && +ch <= 9)
+    || (book === 'Matt' && +ch === 1) || (book === 'Luke' && +ch === 3)) return true;
+  // Outside those, only the New Testament uses the personal name for the man rather than the nation ("the God of Jacob" aside).
+  const nt = books.findIndex((b) => b.id === book) >= books.findIndex((b) => b.id === 'Matt');
+  return !!personal && nt && new RegExp(`\\b${personal}\\b`).test(bsbText.get(ref) ?? '');
+}
+async function buildPeople() {
+  const raw = JSON.parse(await readFile(new URL('theo-people.json', CACHE), 'utf8'));
+  const verses = JSON.parse(await readFile(new URL('theo-verses.json', CACHE), 'utf8'));
+  const osisOf = new Map(verses.map((v) => [v.id, v.fields.osisRef]));
+  const rec = new Map(raw.map((r) => [r.id, r.fields]));
+  const slug = new Map(raw.map((r) => [r.id, r.fields.slug]));
+  const kin = (ids) => (ids ?? []).filter((id) => rec.has(id) && !NOT_PEOPLE.has(slug.get(id))).map((id) => ({ id: slug.get(id), name: rec.get(id).name }));
+  const shards = new Map();
+  const perBook = new Map();
+  for (const r of raw) {
+    const f = r.fields;
+    if (NOT_PEOPLE.has(f.slug)) continue;
+    // Theographic's own disambiguation titles are unreliable (John the Baptist's reads "son of Zebedee"),
+    // so namesakes are told apart by their kin: "son of Jesse", "wife of Lapidoth".
+    const sex = f.gender === 'Female' ? 'female' : 'male';
+    const parent = kin(f.father)[0] ?? kin(f.mother)[0], spouse = kin(f.partners)[0];
+    const title = parent ? `${sex === 'female' ? 'daughter' : 'son'} of ${parent.name}` : spouse ? `${sex === 'female' ? 'wife' : 'husband'} of ${spouse.name}` : undefined;
+    const refs = (f.verses ?? []).map((id) => osisOf.get(id)).filter(Boolean)
+      .filter((ref) => !(f.slug in EPONYMS) || ancestorsOwn(ref, EPONYMS[f.slug]));
+    const person = {
+      id: f.slug, name: f.name, ...(title ? { title } : {}), sex,
+      ...(f.alsoCalled ? { also: f.alsoCalled.split(',').map((s) => s.trim()).filter(Boolean) } : {}),
+      ...Object.fromEntries([['father', f.father], ['mother', f.mother], ['spouses', f.partners], ['children', f.children], ['siblings', f.siblings]]
+        .map(([k, ids]) => [k, kin(ids)]).filter(([, v]) => v.length)),
+      // Theographic's minYear/maxYear are only the span of the verses naming them, on an Ussher timeline, not a lifespan, so they are left out.
+      refs,
+      ...(f.dictText?.length ? { easton: f.dictText.map(eastonText) } : {}),
+    };
+    const letter = f.slug[0].toLowerCase();
+    if (!shards.has(letter)) shards.set(letter, {});
+    shards.get(letter)[f.slug] = person;
+    for (const ref of refs) {
+      const [book, ch, v] = ref.split('.');
+      if (!perBook.has(book)) perBook.set(book, { verses: {}, people: {} });
+      const b = perBook.get(book);
+      (b.verses[`${ch}.${v}`] ??= []).push(f.slug);
+      b.people[f.slug] ??= [f.name, title ?? '', sex === 'female' ? 'f' : 'm'];
+    }
+  }
+  for (const [letter, data] of shards) await writeJson(`people/${letter}.json`, data);
+  for (const [book, data] of perBook) await writeJson(`people/by-book/${book}.json`, data);
+  console.log('people  ', [...shards.values()].reduce((n, s) => n + Object.keys(s).length, 0), 'people');
+}
+
 await fetchAll();
 await buildBible();
-await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs().then(buildCircle), buildPlaces().then(buildMap)]);
+await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs().then(buildCircle), buildPlaces().then(buildMap), buildPeople()]);
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');

@@ -1,0 +1,34 @@
+{
+ "id": "darius-i",
+ "name": "Darius",
+ "role": "King of Persia under whom the temple was finished",
+ "people": ["darius_978"],
+ "when": "≈ 522–486 BC reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible.",
+ "summary": "King of Persia in whose second year the prophets Haggai and Zechariah stirred Zerubbabel and Joshua to resume the temple, halted since Cyrus's day. When the governor Tattenai wrote to ask who had authorised the work, Darius had the archives searched, found Cyrus's decree at Ecbatana, and ordered the work paid for from the royal taxes, on pain of impalement for anyone who interfered. The temple was completed in his sixth year.",
+ "body": [
+  "Haggai's and Zechariah's oracles are dated by his reign, to the day. His decree asks the elders to pray for the life of the king and his sons."
+ ],
+ "moments": [
+  {"ref": "Ezra.4.24", "text": "The work halted until his second year"},
+  {"ref": "Hag.1.1", "text": "His second year"},
+  {"ref": "Zech.1.1", "text": "Zechariah's first word"},
+  {"ref": "Ezra.5.6-7", "text": "Tattenai's letter"},
+  {"ref": "Ezra.6.1-2", "text": "The archives searched"},
+  {"ref": "Ezra.6.8", "text": "Paid from the royal treasury"},
+  {"ref": "Ezra.6.11", "text": "On pain of impalement"},
+  {"ref": "Ezra.6.15", "text": "The temple completed"},
+  {"ref": "Zech.7.1", "text": "His fourth year"}
+ ],
+ "later": [
+  {"text": "His own account of how he took the throne in 522 BC is carved in three languages on the cliff at Behistun in Iran.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Behistun inscription of Darius I, Kermanshah province, Iran"}]},
+  {"text": "The sixth year of Darius, month Adar, day 3 falls in March 515 BC by the Babylonian calendar tables; this is a conversion, not a date the text gives.", "confidence": "estimate", "sources": [{"kind": "scripture", "ref": "Ezra.6.15"}, {"kind": "scholarship", "title": "Babylonian Chronology 626 B.C.–A.D. 75", "author": "Richard A. Parker and Waldo H. Dubberstein", "year": 1956}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ezra.4.24-6.22"},
+  {"kind": "scripture", "ref": "Hag.1.1"},
+  {"kind": "scripture", "ref": "Zech.1.1"},
+  {"kind": "scripture", "ref": "Zech.7.1"}
+ ]
+}

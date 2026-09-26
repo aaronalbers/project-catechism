@@ -1,0 +1,29 @@
+{
+ "id": "joash-of-judah",
+ "name": "Joash",
+ "role": "Boy king of Judah who repaired the temple",
+ "people": ["joash_1632"],
+ "when": "≈ 835–796 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Ahaziah, hidden as a baby from his grandmother Athaliah's massacre and raised six years in the temple. At seven the priest Jehoiada crowned him. He did what was right all the days Jehoiada instructed him, and had a chest set by the altar for money to repair the temple. After Jehoiada died he turned to Asherah poles and idols, and had Jehoiada's son Zechariah stoned in the temple court. He paid Hazael off with the temple's treasures, and his own servants killed him.",
+ "body": [
+  "The coronation is staged in the temple, the guards surrounding the boy: they put the crown on him, give him the testimony, anoint him, and clap and shout, “Long live the king!”",
+  "When the priests are slow to use the money for repairs, Jehoiada bores a hole in a chest lid and the money goes straight to the workmen. Chronicles adds the fall: the officials of Judah bow to the king after Jehoiada's death, and when Zechariah rebukes them, they stone him at the king's command. Zechariah dies saying, “May the LORD see this and call you to account.” Joash reigns forty years."
+ ],
+ "moments": [
+  {"ref": "2Kgs.11.2", "text": "Hidden as a baby"},
+  {"ref": "2Kgs.11.12", "text": "Crowned"},
+  {"ref": "2Kgs.11.21", "text": "Seven years old"},
+  {"ref": "2Kgs.12.2", "text": "Right while Jehoiada instructed him"},
+  {"ref": "2Kgs.12.9", "text": "The chest"},
+  {"ref": "2Kgs.12.17-18", "text": "Pays off Hazael"},
+  {"ref": "2Kgs.12.20-21", "text": "Killed by his servants"},
+  {"ref": "2Chr.24.17-18", "text": "Turns to idols"},
+  {"ref": "2Chr.24.20-22", "text": "Zechariah stoned"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.11.1-12.21"},
+  {"kind": "scripture", "ref": "2Chr.22.10-24.27"}
+ ]
+}

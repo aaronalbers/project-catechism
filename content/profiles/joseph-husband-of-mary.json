@@ -1,0 +1,41 @@
+{
+ "id": "joseph-husband-of-mary",
+ "name": "Joseph",
+ "role": "Husband of Mary, who raised Jesus",
+ "people": ["joseph_1715"],
+ "genealogy": "joseph-of-jacob",
+ "when": "≈ 6–4 BC",
+ "whenBasis": "Jesus' birth, before Herod's death in 4 BC and perhaps up to two years before it (Matthew 2:16). See the card on dating Herod's death.",
+ "summary": "A descendant of David, betrothed to Mary. Finding her with child, he was a righteous man and meant to divorce her quietly, until an angel in a dream told him not to be afraid to take her as his wife. He went with her to Bethlehem for the registration, named the child Jesus, fled with them by night to Egypt when warned in a dream, and returned to settle in Nazareth. Jesus was known as the carpenter's son.",
+ "body": [
+  "Four times Matthew has him guided by a dream, and each time he gets up and does as he is told. Luke has him present Jesus in the temple and take the family to Jerusalem every Passover. He is last seen searching for the twelve-year-old Jesus. He does not appear in the ministry; at the cross Jesus entrusts Mary to a disciple."
+ ],
+ "moments": [
+  {"ref": "Matt.1.16", "text": "Husband of Mary"},
+  {"ref": "Matt.1.19", "text": "A righteous man"},
+  {"ref": "Matt.1.20", "text": "“Do not be afraid”"},
+  {"ref": "Matt.1.24-25", "text": "Takes Mary as his wife"},
+  {"ref": "Luke.2.4-5", "text": "To Bethlehem"},
+  {"ref": "Luke.2.16", "text": "With the shepherds"},
+  {"ref": "Luke.2.22", "text": "Presents Jesus in the temple"},
+  {"ref": "Matt.2.13-14", "text": "Flees to Egypt"},
+  {"ref": "Matt.2.19-23", "text": "Settles in Nazareth"},
+  {"ref": "Luke.2.41-48", "text": "Searching for Jesus"},
+  {"ref": "Matt.13.55", "text": "“The carpenter's son”"}
+ ],
+ "later": [
+  {"text": "The Greek tektōn means a builder or craftsman in wood or stone, not only a carpenter.", "confidence": "evidence", "sources": [{"kind": "lexicon", "title": "Greek tektōn"}]},
+  {"text": "Matthew and Luke give him different fathers (Jacob and Heli). Since Julius Africanus (≈AD 220) it has been explained by a levirate marriage; others read Luke's line as Mary's.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.1.16"}, {"kind": "scripture", "ref": "Luke.3.23"}, {"kind": "primary", "title": "Eusebius, Ecclesiastical History 1.7"}], "traditions": ["levirate marriage: Julius Africanus", "Luke gives Mary's line: some later commentators"]},
+  {"text": "The Protevangelium of James makes him an old widower with sons, chosen by lot to take Mary into his care.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Protevangelium of James 9"}], "traditions": ["the Protevangelium, and Orthodox tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.1.16-2.23"},
+  {"kind": "scripture", "ref": "Luke.1.27"},
+  {"kind": "scripture", "ref": "Luke.2.1-51"},
+  {"kind": "scripture", "ref": "Matt.13.55"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Brooklyn_Museum_-_The_Anxiety_of_Saint_Joseph_%28L%27anxi%C3%A9t%C3%A9_de_Saint_Joseph%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Anxiety_of_Saint_Joseph_%28L%27anxi%C3%A9t%C3%A9_de_Saint_Joseph%29_-_James_Tissot_-_overall.jpg", "caption": "The anxiety of Saint Joseph (Matthew 1:19), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Anxiety_of_Saint_Joseph_(L%27anxi%C3%A9t%C3%A9_de_Saint_Joseph)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

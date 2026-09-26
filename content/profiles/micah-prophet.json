@@ -1,0 +1,36 @@
+{
+ "id": "micah-prophet",
+ "name": "Micah",
+ "role": "Prophet from Moresheth under Hezekiah",
+ "people": ["micah_2053"],
+ "when": "≈ 740–690s BC",
+ "whenBasis": "In the days of Jotham, Ahaz and Hezekiah (Micah 1:1), in Thiele's reckoning.",
+ "summary": "Micah the Moreshite, from a town in the Judean lowland, who prophesied against Samaria and Jerusalem in the days of Jotham, Ahaz and Hezekiah. He condemned landowners who seize fields, rulers who hate good, and prophets who cry peace for food, and said Zion would be plowed like a field. He also saw the nations stream to the LORD's mountain, beating swords into plowshares, and a ruler coming out of Bethlehem.",
+ "body": [
+  "A century later, when Jeremiah was on trial for his life, elders recalled that Micah had said Zion would be plowed like a field and Hezekiah had not put him to death but sought the LORD; so Jeremiah was spared.",
+  "His summary of what the LORD requires, “to act justly, to love mercy, and to walk humbly with your God,” is among the best known lines of the prophets. Matthew's chief priests quote his Bethlehem oracle to Herod."
+ ],
+ "moments": [
+  {"ref": "Mic.1.1", "text": "The word to Micah"},
+  {"ref": "Mic.2.2", "text": "They covet fields"},
+  {"ref": "Mic.3.11", "text": "Prophets for money"},
+  {"ref": "Mic.3.12", "text": "Zion plowed like a field"},
+  {"ref": "Mic.4.3", "text": "Swords into plowshares"},
+  {"ref": "Mic.5.2", "text": "Out of Bethlehem"},
+  {"ref": "Mic.6.8", "text": "“Act justly… love mercy”"},
+  {"ref": "Jer.26.18", "text": "Recalled at Jeremiah's trial"},
+  {"ref": "Matt.2.6", "text": "Quoted to Herod"}
+ ],
+ "later": [
+  {"text": "His vision of the nations at the LORD's mountain (Micah 4:1–3) is found almost word for word in Isaiah 2:2–4; whether one borrowed from the other, or both from an older oracle, is debated.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mic.4.1-3"}, {"kind": "scripture", "ref": "Isa.2.2-4"}, {"kind": "scholarship", "title": "Micah (Anchor Bible 24E)", "author": "Francis I. Andersen and David Noel Freedman", "year": 2000}], "traditions": ["commentators, variously"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mic.1.1-7.20"},
+  {"kind": "scripture", "ref": "Jer.26.17-19"},
+  {"kind": "scripture", "ref": "Matt.2.5-6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/139.Micah_Exhorts_the_Israelites_to_Repent.jpg/500px-139.Micah_Exhorts_the_Israelites_to_Repent.jpg", "caption": "Micah exhorts the Israelites to repent, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:139.Micah_Exhorts_the_Israelites_to_Repent.jpg", "license": "Public domain"}
+ ]
+}

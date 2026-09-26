@@ -1,0 +1,32 @@
+{
+ "id": "jehoiachin",
+ "name": "Jehoiachin",
+ "role": "King of Judah taken to Babylon",
+ "people": ["jehoiachin_791"],
+ "when": "≈ 598–597 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Jehoiakim, king at eighteen for three months, when Nebuchadnezzar besieged Jerusalem. He surrendered with his mother, officials and servants, and was taken to Babylon with the temple treasures, the craftsmen and ten thousand captives, Ezekiel among them. Thirty-seven years later Evil-merodach released him from prison, spoke kindly to him, and gave him a seat at the king's table for the rest of his life.",
+ "body": [
+  "Jeremiah calls him Coniah and says he will be recorded as childless, for none of his descendants will sit on David's throne; yet Matthew's genealogy runs through him, as Jeconiah, to Joseph. Ezekiel dates his visions by the years of his exile. The release that ends 2 Kings leaves David's line alive in Babylon."
+ ],
+ "moments": [
+  {"ref": "2Kgs.24.8-9", "text": "Three months"},
+  {"ref": "2Kgs.24.12", "text": "Surrenders"},
+  {"ref": "2Kgs.24.14-16", "text": "Taken to Babylon"},
+  {"ref": "Jer.22.24", "text": "“Coniah”"},
+  {"ref": "Jer.22.30", "text": "“Childless”"},
+  {"ref": "Ezek.1.2", "text": "The years of his exile"},
+  {"ref": "2Kgs.25.27-30", "text": "Released"},
+  {"ref": "Matt.1.11-12", "text": "Jeconiah, in Matthew's genealogy"}
+ ],
+ "later": [
+  {"text": "Tablets from Nebuchadnezzar's palace in Babylon record rations of oil issued to “Ya'ukin, king of the land of Yahudu” and his five sons.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian ration tablets (the Weidner tablets), Vorderasiatisches Museum, Berlin", "note": "published by Ernst Weidner, 1939"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.24.6-17"},
+  {"kind": "scripture", "ref": "2Kgs.25.27-30"},
+  {"kind": "scripture", "ref": "Jer.22.24-30"},
+  {"kind": "scripture", "ref": "Jer.52.31-34"}
+ ]
+}

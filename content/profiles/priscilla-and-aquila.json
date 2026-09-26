@@ -1,0 +1,34 @@
+{
+ "id": "priscilla-and-aquila",
+ "name": "Priscilla and Aquila",
+ "role": "Tentmakers who worked and taught with Paul",
+ "people": ["priscilla_2370", "aquila_279"],
+ "when": "≈ AD 49–60s",
+ "whenBasis": "From Paul's second journey, dated from the Gallio inscription, to his last letters.",
+ "summary": "Aquila, a Jew of Pontus, and his wife Priscilla, recently come from Italy because Claudius had ordered the Jews out of Rome. Paul found them in Corinth and stayed and worked with them, for they were tentmakers as he was. They sailed with him to Ephesus, where they heard Apollos preach and took him aside to explain the way of God more accurately. A church met in their house at Ephesus, and later in Rome. Paul says they risked their lives for him.",
+ "body": [
+  "Paul calls her Prisca. Luke and Paul name her before her husband four times out of six. Paul thanks them on behalf of all the churches of the Gentiles."
+ ],
+ "moments": [
+  {"ref": "Acts.18.2", "text": "Expelled from Rome"},
+  {"ref": "Acts.18.3", "text": "Tentmakers"},
+  {"ref": "Acts.18.18-19", "text": "To Ephesus"},
+  {"ref": "Acts.18.26", "text": "Teach Apollos"},
+  {"ref": "1Cor.16.19", "text": "The church in their house"},
+  {"ref": "Rom.16.3-4", "text": "Risked their lives"},
+  {"ref": "Rom.16.5", "text": "A church in Rome"},
+  {"ref": "2Tim.4.19", "text": "Greeted"}
+ ],
+ "later": [
+  {"text": "Suetonius says Claudius expelled the Jews from Rome for disturbances at the instigation of Chrestus, usually read as disputes about Christ and dated AD 49. See the card on Claudius's expulsion.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Suetonius, Life of Claudius 25.4"}, {"kind": "primary", "title": "Orosius, History Against the Pagans 7.6.15–16"}]},
+  {"text": "Adolf von Harnack proposed in 1900 that Priscilla wrote the letter to the Hebrews.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Probabilia über die Adresse und den Verfasser des Hebräerbriefes", "author": "Adolf von Harnack", "year": 1900}, {"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Adolf von Harnack; few have followed him"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.18.1-3"},
+  {"kind": "scripture", "ref": "Acts.18.18-26"},
+  {"kind": "scripture", "ref": "Rom.16.3-5"},
+  {"kind": "scripture", "ref": "1Cor.16.19"},
+  {"kind": "scripture", "ref": "2Tim.4.19"}
+ ]
+}

@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
+import type { Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -35,6 +35,10 @@ export const MONARCHY = monarchy as unknown as Monarchy;
 /** The kings of the divided kingdoms, whose reigns the reader charts, in the order `rulers.json` gives them. */
 export const KINGS = RULERS.filter((r): r is Ruler & { reign: NonNullable<Ruler['reign']> } => !!r.reign);
 
+/** The written profiles, as much as the lists and the index show; `loadProfile` (profiles.ts) has the rest. */
+export const PROFILE_INDEX = Object.values(import.meta.glob<ProfileIndex>('@content/profiles/*.json', { eager: true, query: '?index', import: 'default' }));
+/** A profile by any of the generated person ids it covers. */
+export const PROFILE_BY_PERSON = new Map(PROFILE_INDEX.flatMap((p) => p.people.map((id) => [id, p] as const)));
 export const PEOPLE_BY_ID = new Map(PEOPLE.map((p) => [p.id, p]));
 export const INSIGHT_BY_ID = new Map(INSIGHTS.map((i) => [i.id, i]));
 

@@ -1,0 +1,47 @@
+{
+ "id": "solomon",
+ "name": "Solomon",
+ "role": "Son of David, king of Israel, builder of the temple",
+ "people": ["solomon_2762"],
+ "genealogy": "solomon",
+ "when": "≈ 970–931 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years. 931 BC for the division of the kingdom is the anchor of most chronologies, worked back from Assyrian records that date Ahab (853) and Jehu (841).",
+ "summary": "Son of David and Bathsheba, named Jedidiah by the LORD through Nathan, anointed king while Adonijah claimed the throne. At Gibeon he asked for an understanding heart to govern, and was given wisdom, riches and honour besides. He built the temple and his palace, dedicated the temple with a long prayer, received the queen of Sheba, and grew rich beyond any king of his day. In old age his many foreign wives turned his heart to other gods, and after his death the kingdom split.",
+ "body": [
+  "His first acts secure the throne: Adonijah, Joab and Shimei are killed, Abiathar is banished. In a dream at Gibeon the LORD tells him to ask for what he wants; he asks for a discerning heart to judge the people and distinguish between good and evil. Two women come before him claiming the same baby, and he calls for a sword to divide it, and gives the child to the woman who would rather lose it than see it die.",
+  "With Hiram of Tyre's cedar and craftsmen, and forced labour from Israel, he builds the temple in seven years and his own house in thirteen. At its dedication he prays that the LORD, whom even the highest heaven cannot contain, will hear prayers made toward this house. He fortifies Hazor, Megiddo and Gezer, trades by sea from Ezion-geber, and the queen of Sheba comes to test him with hard questions.",
+  "Kings sums up his reign as unmatched in riches and wisdom, and says he loved many foreign women, seven hundred wives and three hundred concubines, who turned his heart after Ashtoreth, Milcom and Chemosh. The LORD raises up adversaries and tells him ten tribes will be torn from his son. He reigns forty years."
+ ],
+ "moments": [
+  {"ref": "2Sam.12.24-25", "text": "Born; named Jedidiah"},
+  {"ref": "1Kgs.1.39", "text": "Anointed at Gihon"},
+  {"ref": "1Kgs.3.5", "text": "The dream at Gibeon"},
+  {"ref": "1Kgs.3.9", "text": "Asks for a discerning heart"},
+  {"ref": "1Kgs.3.24-27", "text": "The two mothers"},
+  {"ref": "1Kgs.4.29-32", "text": "His proverbs and songs"},
+  {"ref": "1Kgs.5.1-6", "text": "Hiram's cedar"},
+  {"ref": "1Kgs.6.1", "text": "Begins the temple"},
+  {"ref": "1Kgs.6.38", "text": "Seven years building"},
+  {"ref": "1Kgs.8.22-23", "text": "The dedication prayer"},
+  {"ref": "1Kgs.8.27", "text": "The highest heavens cannot contain Him"},
+  {"ref": "1Kgs.9.15", "text": "Hazor, Megiddo and Gezer"},
+  {"ref": "1Kgs.10.1", "text": "The queen of Sheba"},
+  {"ref": "1Kgs.11.3-4", "text": "His heart turned"},
+  {"ref": "1Kgs.11.11", "text": "The kingdom to be torn away"},
+  {"ref": "1Kgs.11.42-43", "text": "Forty years"},
+  {"ref": "Matt.6.29", "text": "“Solomon in all his glory”"}
+ ],
+ "later": [
+  {"text": "Proverbs, Ecclesiastes and the Song of Songs carry his name in their opening lines; the Talmud instead ascribes their writing to Hezekiah and his colleagues, and most modern scholars date much of all three later than Solomon.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Prov.1.1"}, {"kind": "scripture", "ref": "Eccl.1.1"}, {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 15a", "url": "https://www.sefaria.org/Bava_Batra.15a"}], "traditions": ["Solomon as author: traditional Jewish and Christian readings", "compiled later: the Talmud for the writing down, and most modern scholars"]},
+  {"text": "Similar six-chambered gates at Hazor, Megiddo and Gezer, the three cities 1 Kings 9:15 says he built, were attributed to Solomon by Yigael Yadin. Israel Finkelstein's lower chronology dates them a century later, to the Omrides. No inscription of Solomon's time names him.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "City gates at Hazor, Megiddo and Gezer"}, {"kind": "scholarship", "title": "Solomon's Cities: Hazor, Megiddo, and Gezer", "author": "Yigael Yadin", "year": 1958, "note": "Israel Exploration Journal 8"}, {"kind": "scholarship", "title": "The Archaeology of the United Monarchy: An Alternative View", "author": "Israel Finkelstein", "year": 1996, "note": "Levant 28"}], "traditions": ["Solomonic: Yigael Yadin, Amihai Mazar and others", "9th century: Israel Finkelstein and others"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.12.24-25"},
+  {"kind": "scripture", "ref": "1Kgs.1.1-11.43"},
+  {"kind": "scripture", "ref": "2Chr.1.1-9.31"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/084.The_Judgment_of_Solomon.jpg/500px-084.The_Judgment_of_Solomon.jpg", "caption": "The judgment of Solomon (1 Kings 3:24–27), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:084.The_Judgment_of_Solomon.jpg", "license": "Public domain"}
+ ]
+}

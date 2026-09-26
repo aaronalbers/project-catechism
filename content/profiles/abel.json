@@ -1,0 +1,32 @@
+{
+ "id": "abel",
+ "name": "Abel",
+ "role": "Keeper of flocks, killed by his brother",
+ "people": ["abel_13"],
+ "genealogy": "abel-of-adam",
+ "summary": "The second son of Adam and Eve, a keeper of sheep. The LORD looked with favour on his offering of the firstborn of his flock, and his brother Cain, angry, killed him in the field. The LORD tells Cain that his brother's blood cries out from the ground. Jesus calls him righteous, and Hebrews holds up his faith.",
+ "body": [
+  "Abel never speaks in Genesis. He brings fat portions from the firstborn of his flock, the LORD regards his offering, and his brother kills him. His name, hebel in Hebrew, is the word Ecclesiastes uses for breath, vapour, futility.",
+  "Jesus names him as the first of the righteous whose blood was shed, from Abel to Zechariah. Hebrews says that by faith he offered a better sacrifice than Cain, and that Jesus' blood speaks a better word than his."
+ ],
+ "moments": [
+  {"ref": "Gen.4.2", "text": "A keeper of flocks"},
+  {"ref": "Gen.4.4", "text": "His offering regarded"},
+  {"ref": "Gen.4.8", "text": "Killed by Cain"},
+  {"ref": "Gen.4.10", "text": "His blood cries from the ground"},
+  {"ref": "Matt.23.35", "text": "“Righteous Abel”"},
+  {"ref": "Heb.11.4", "text": "A better sacrifice, by faith"},
+  {"ref": "Heb.12.24", "text": "A better word than Abel's blood"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.4.1-10"},
+  {"kind": "scripture", "ref": "Matt.23.35"},
+  {"kind": "scripture", "ref": "Heb.11.4"},
+  {"kind": "scripture", "ref": "Heb.12.24"},
+  {"kind": "lexicon", "title": "Strong's H1893, Hebel", "note": "from H1892, emptiness, vanity, breath"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/004.Cain_and_Abel_Offer_Their_Sacrifices.jpg/500px-004.Cain_and_Abel_Offer_Their_Sacrifices.jpg", "caption": "Cain and Abel offer their sacrifices (Genesis 4:3–4), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:004.Cain_and_Abel_Offer_Their_Sacrifices.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "job",
+ "name": "Job",
+ "role": "Blameless man of Uz, tested by suffering",
+ "people": ["job_1639"],
+ "summary": "A blameless and wealthy man of Uz who lost his children, his goods and his health when God allowed the Accuser to test him. He cursed the day he was born but not God, argued with three friends who said he must have sinned, was answered by the LORD out of the whirlwind, and was restored.",
+ "body": [
+  "The book gives no date and no king: Job lives in Uz, outside Israel, and offers sacrifices for his family himself, as the patriarchs do.",
+  "In a scene in heaven the Accuser (in Hebrew, the satan) says Job fears God only because God has blessed him. In one day Job loses his herds and his ten children, and says, “The LORD gave, and the LORD has taken away. Blessed be the name of the LORD.” Then he is struck with sores from head to foot.",
+  "Eliphaz, Bildad and Zophar sit with him seven days in silence, then argue that suffering must be punishment. Job insists on his innocence and demands a hearing from God. The LORD answers him out of the whirlwind with questions about creation; Job repents in dust and ashes, the LORD rebukes the friends, and Job's fortunes are restored double. James holds up his perseverance."
+ ],
+ "moments": [
+  {"ref": "Job.1.1", "text": "Blameless and upright, in the land of Uz"},
+  {"ref": "Job.1.21", "text": "“The LORD gave, and the LORD has taken away”"},
+  {"ref": "Job.2.7", "text": "Struck with sores"},
+  {"ref": "Job.2.11-13", "text": "Three friends sit with him"},
+  {"ref": "Job.3.1", "text": "Curses the day of his birth"},
+  {"ref": "Job.19.25", "text": "“I know that my Redeemer lives”"},
+  {"ref": "Job.38.1", "text": "The LORD answers out of the whirlwind"},
+  {"ref": "Job.42.6", "text": "Repents in dust and ashes"},
+  {"ref": "Job.42.10", "text": "Restored double"},
+  {"ref": "Ezek.14.14", "text": "Named with Noah and Daniel"},
+  {"ref": "Jas.5.11", "text": "Job's perseverance"}
+ ],
+ "later": [
+  {"text": "The Talmud records a debate over when Job lived, from the days of Abraham to the return from exile, and the view of one rabbi that he “never was, and was not created, but was a parable.”", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 15a–b", "url": "https://www.sefaria.org/Bava_Batra.15a"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Job.1.1-42.17"},
+  {"kind": "scripture", "ref": "Ezek.14.14"},
+  {"kind": "scripture", "ref": "Jas.5.11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/L%C3%A9on_Bonnat_-_Job.jpg/500px-L%C3%A9on_Bonnat_-_Job.jpg", "caption": "Job, Léon Bonnat, 1880.", "credit": "Léon Bonnat, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:L%C3%A9on_Bonnat_-_Job.jpg", "license": "Public domain"}
+ ]
+}

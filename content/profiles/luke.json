@@ -1,0 +1,35 @@
+{
+ "id": "luke",
+ "name": "Luke",
+ "role": "The beloved physician, Paul's companion",
+ "people": ["luke_1836"],
+ "when": "≈ AD 49–60s",
+ "whenBasis": "From Paul's second journey, dated from the Gallio inscription, to his last letters.",
+ "summary": "Paul's fellow worker, whom Colossians calls the beloved physician. He sends greetings with Demas to the Colossians and to Philemon, and in Paul's last letter he is the only one with him. Tradition makes him the author of the Gospel of Luke and Acts, both addressed to Theophilus.",
+ "body": [
+  "The letters name him only three times. In parts of Acts the story switches to we, from Troas to Philippi, and from Philippi on to Jerusalem and Rome, as if the writer was with Paul."
+ ],
+ "moments": [
+  {"ref": "Col.4.14", "text": "The beloved physician"},
+  {"ref": "Phlm.1.24", "text": "A fellow worker"},
+  {"ref": "2Tim.4.11", "text": "“Only Luke is with me”"},
+  {"ref": "Luke.1.3", "text": "To Theophilus"},
+  {"ref": "Acts.1.1", "text": "The first account"},
+  {"ref": "Acts.16.10", "text": "“We got ready”"}
+ ],
+ "later": [
+  {"text": "Irenaeus and the Muratorian fragment (late second century) name Luke, Paul's companion, as author of the Gospel and Acts; a prologue of uncertain date adds that he was from Antioch in Syria and died at eighty-four in Boeotia.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Irenaeus, Against Heresies 3.1.1; 3.14.1"}, {"kind": "primary", "title": "Muratorian fragment, lines 2–8"}, {"kind": "primary", "title": "Anti-Marcionite Prologue to Luke"}], "traditions": ["Irenaeus and early church tradition", "many scholars accept, others doubt, the identification"]},
+  {"text": "Colossians 4:10–14 lists him apart from the men of the circumcision, so he is usually taken to be a Gentile.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Col.4.10-14"}], "traditions": ["most commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Col.4.14"},
+  {"kind": "scripture", "ref": "2Tim.4.11"},
+  {"kind": "scripture", "ref": "Phlm.1.24"},
+  {"kind": "scripture", "ref": "Luke.1.1-4"},
+  {"kind": "scripture", "ref": "Acts.1.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Brooklyn_Museum_-_Saint_Luke_%28Saint_Luc%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Saint_Luke_%28Saint_Luc%29_-_James_Tissot.jpg", "caption": "Saint Luke, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Saint_Luke_(Saint_Luc)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

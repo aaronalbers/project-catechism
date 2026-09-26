@@ -1,0 +1,34 @@
+{
+ "id": "abner",
+ "name": "Abner",
+ "role": "Commander of Saul's army",
+ "people": ["abner_57"],
+ "when": "≈ 1050–1000 BC",
+ "whenBasis": "In the reigns of Saul and David, dated by counting back from Solomon; 1 Samuel 13:1, which gives Saul's age and years, is damaged in the Hebrew.",
+ "summary": "Son of Ner and Saul's cousin, commander of his army, who brought the young David to Saul after he killed Goliath. After Saul's death he made Ish-bosheth king over Israel and fought David's men under Joab. He killed Joab's brother Asahel in battle. When Ish-bosheth accused him over Saul's concubine Rizpah, he went over to David, and Joab murdered him in the gate at Hebron. David mourned him openly.",
+ "body": [
+  "At Gibeon twelve of his men and twelve of Joab's kill each other, and in the battle that follows Asahel chases him and will not turn aside; Abner kills him with the butt of his spear. He calls to Joab across the hill, “Must the sword devour forever?”",
+  "Having turned to David, he goes back to bring all Israel to him. Joab, avenging Asahel, takes him aside in the gateway as if to speak privately and stabs him. David walks behind the bier, weeps at the grave, fasts, and says, “Do you not realize that a great prince has fallen today in Israel?” The people understand that David had no part in it."
+ ],
+ "moments": [
+  {"ref": "1Sam.14.50", "text": "Commander of Saul's army"},
+  {"ref": "1Sam.17.55-57", "text": "Brings David to Saul"},
+  {"ref": "1Sam.26.14-15", "text": "David taunts him"},
+  {"ref": "2Sam.2.8-9", "text": "Makes Ish-bosheth king"},
+  {"ref": "2Sam.2.23", "text": "Kills Asahel"},
+  {"ref": "2Sam.2.26", "text": "“Must the sword devour forever?”"},
+  {"ref": "2Sam.3.7-10", "text": "Turns to David"},
+  {"ref": "2Sam.3.27", "text": "Murdered by Joab"},
+  {"ref": "2Sam.3.31-34", "text": "David mourns him"},
+  {"ref": "2Sam.3.38", "text": "“A great prince has fallen”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.14.50-51"},
+  {"kind": "scripture", "ref": "2Sam.2.8-3.39"},
+  {"kind": "scripture", "ref": "1Kgs.2.5"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/078.Combat_between_Soldiers_of_Ish-bosheth_and_David.jpg/500px-078.Combat_between_Soldiers_of_Ish-bosheth_and_David.jpg", "caption": "Combat between the soldiers of Ish-bosheth and David at Gibeon (2 Samuel 2:12–16), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:078.Combat_between_Soldiers_of_Ish-bosheth_and_David.jpg", "license": "Public domain"}
+ ]
+}

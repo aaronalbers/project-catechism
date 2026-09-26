@@ -1,0 +1,26 @@
+{
+ "id": "othniel",
+ "name": "Othniel",
+ "role": "The first of the judges",
+ "people": ["othniel_2259"],
+ "when": "≈ 13th–12th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one.",
+ "summary": "Son of Kenaz, Caleb's younger brother, who took Kiriath-sepher (Debir) and won Caleb's daughter Achsah as his wife. When Israel served Cushan-rishathaim king of Aram-naharaim eight years, the Spirit of the LORD came on him; he judged Israel and prevailed, and the land had rest forty years.",
+ "body": [
+  "Judges gives his story as the pattern for all that follow: Israel does evil, the LORD sells them into an enemy's hand, they cry out, the LORD raises up a deliverer, the Spirit comes on him, and the land has rest until he dies.",
+  "Nothing more is told of him, and no speech of his is recorded."
+ ],
+ "moments": [
+  {"ref": "Josh.15.17", "text": "Takes Kiriath-sepher"},
+  {"ref": "Judg.1.13", "text": "Marries Achsah"},
+  {"ref": "Judg.3.8", "text": "Cushan-rishathaim"},
+  {"ref": "Judg.3.9-10", "text": "The Spirit comes on him"},
+  {"ref": "Judg.3.11", "text": "Forty years of rest"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Josh.15.15-19"},
+  {"kind": "scripture", "ref": "Judg.1.11-15"},
+  {"kind": "scripture", "ref": "Judg.3.7-11"}
+ ]
+}

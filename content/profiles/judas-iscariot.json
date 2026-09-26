@@ -1,0 +1,46 @@
+{
+ "id": "judas-iscariot",
+ "name": "Judas Iscariot",
+ "role": "The apostle who betrayed Jesus",
+ "people": ["judas_1760"],
+ "when": "≈ AD 30 or 33",
+ "whenBasis": "The crucifixion under Pilate (AD 26–36), usually dated to the Passover of AD 30 or 33 from the weekday the gospels give.",
+ "summary": "Son of Simon Iscariot, one of the Twelve, who kept the money bag. He went to the chief priests and asked what they would give him to hand Jesus over, and they paid him thirty pieces of silver. At the Last Supper Jesus said one of them would betray him; Judas took the morsel and went out into the night. In Gethsemane he led the crowd to Jesus and kissed him. When Jesus was condemned, he was filled with remorse, threw the silver into the temple, and hanged himself.",
+ "body": [
+  "John says he complained when Mary anointed Jesus with costly perfume, not because he cared for the poor but because he was a thief. Jesus says to him at the arrest, “Judas, are you betraying the Son of Man with a kiss?”",
+  "The priests buy a potter's field with the silver. Acts gives a different account of his death: he bought a field and fell headlong in it. The apostles choose Matthias to take his place."
+ ],
+ "moments": [
+  {"ref": "Matt.10.4", "text": "Among the Twelve"},
+  {"ref": "John.12.4-6", "text": "A thief"},
+  {"ref": "Matt.26.14-15", "text": "Thirty pieces of silver"},
+  {"ref": "Matt.26.25", "text": "“Surely not I, Rabbi?”"},
+  {"ref": "John.13.27", "text": "Satan entered into him"},
+  {"ref": "John.13.30", "text": "Out into the night"},
+  {"ref": "Matt.26.49", "text": "The kiss"},
+  {"ref": "Luke.22.48", "text": "“With a kiss?”"},
+  {"ref": "Matt.27.3", "text": "Filled with remorse"},
+  {"ref": "Matt.27.5", "text": "Hangs himself"},
+  {"ref": "Acts.1.18", "text": "A field"},
+  {"ref": "Acts.1.25-26", "text": "Replaced by Matthias"}
+ ],
+ "later": [
+  {"text": "Iscariot is usually taken to mean “man of Kerioth,” a town in Judah; other meanings proposed include “assassin” or “false one.”", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Josh.15.25"}, {"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}], "traditions": ["man of Kerioth: most commentators", "other derivations: some"]},
+  {"text": "The Gospel of Judas, a second-century Gnostic text known from a Coptic copy published in 2006, makes his betrayal a secret task Jesus gave him.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Codex Tchacos, Coptic, ≈AD 280, published 2006"}]},
+  {"text": "Theographic's record for him also counts John 14:22, where John names “Judas (not Iscariot),” the apostle also called Thaddaeus.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "John.14.22"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Judas Iscariot"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.26.14-27.10"},
+  {"kind": "scripture", "ref": "Mark.14.10-11"},
+  {"kind": "scripture", "ref": "Mark.14.43-46"},
+  {"kind": "scripture", "ref": "Luke.22.3-6"},
+  {"kind": "scripture", "ref": "Luke.22.47-48"},
+  {"kind": "scripture", "ref": "John.12.4-6"},
+  {"kind": "scripture", "ref": "John.13.21-30"},
+  {"kind": "scripture", "ref": "Acts.1.16-26"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Brooklyn_Museum_-_The_Kiss_of_Judas_%28Le_baiser_de_Judas%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_The_Kiss_of_Judas_%28Le_baiser_de_Judas%29_-_James_Tissot.jpg", "caption": "The kiss of Judas (Matthew 26:49), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Kiss_of_Judas_(Le_baiser_de_Judas)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

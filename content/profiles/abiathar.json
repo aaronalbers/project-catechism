@@ -1,0 +1,30 @@
+{
+ "id": "abiathar",
+ "name": "Abiathar",
+ "role": "Priest who escaped Nob and stayed with David",
+ "people": ["abiathar_20"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "Son of Ahimelech the priest of Nob, the only one to escape when Saul had Doeg kill the priests. He fled to David with the ephod, and served as his priest through his outlaw years and his reign. He sided with Adonijah, and Solomon banished him to his estate at Anathoth, fulfilling the word against Eli's house.",
+ "body": [
+  "David tells him, “I myself am responsible for the lives of everyone in your father's house,” and keeps him safe. Through the ephod David asks the LORD whether to go down to Keilah and whether to pursue the Amalekites.",
+  "Solomon spares his life because he carried the ark and shared David's hardships. Jesus, citing David's eating of the consecrated bread, speaks of the time of Abiathar the high priest; 1 Samuel names his father Ahimelech as the priest who gave it."
+ ],
+ "moments": [
+  {"ref": "1Sam.22.20-23", "text": "Escapes to David"},
+  {"ref": "1Sam.23.6", "text": "Brings the ephod"},
+  {"ref": "1Sam.30.7-8", "text": "Inquires for David"},
+  {"ref": "2Sam.15.24", "text": "With the ark"},
+  {"ref": "1Kgs.1.7", "text": "Backs Adonijah"},
+  {"ref": "1Kgs.2.26-27", "text": "Banished to Anathoth"},
+  {"ref": "Mark.2.26", "text": "Named by Jesus"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.22.20-23"},
+  {"kind": "scripture", "ref": "1Sam.23.6-12"},
+  {"kind": "scripture", "ref": "1Kgs.1.7"},
+  {"kind": "scripture", "ref": "1Kgs.2.26-27"},
+  {"kind": "scripture", "ref": "Mark.2.25-26"}
+ ]
+}

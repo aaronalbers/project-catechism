@@ -1,0 +1,38 @@
+{
+ "id": "absalom",
+ "name": "Absalom",
+ "role": "David's son, who rebelled against him",
+ "people": ["absalom_59"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "David's third son, by Maacah daughter of the king of Geshur, the handsomest man in Israel. When his half-brother Amnon raped his sister Tamar, he waited two years and had him killed, then fled to Geshur. Brought back, he stole the hearts of Israel at the city gate, had himself proclaimed king at Hebron, and drove David from Jerusalem. In the battle in the forest of Ephraim his head caught in an oak, and Joab killed him. David wept, “O my son Absalom!”",
+ "body": [
+  "His hair is so heavy he cuts it once a year. He sets Joab's field on fire to get his attention, and after five years is reconciled to his father with a kiss.",
+  "For four years he stands by the gate, telling those with lawsuits that the king has no one to hear them, and kissing those who bow. At Hebron he is proclaimed king, and David flees barefoot up the Mount of Olives. In Jerusalem he pitches a tent on the roof and goes in to his father's concubines, on Ahithophel's advice; but he follows Hushai's advice to wait, and loses.",
+  "David asks his commanders to deal gently with the young man. Absalom's mule runs under a great oak and leaves him hanging; Joab thrusts three spears into his heart, and they throw him into a pit under a heap of stones. He had set up a pillar for himself, having no son to keep his name."
+ ],
+ "moments": [
+  {"ref": "2Sam.3.3", "text": "Born to Maacah"},
+  {"ref": "2Sam.13.22", "text": "Hates Amnon"},
+  {"ref": "2Sam.13.28-29", "text": "Has Amnon killed"},
+  {"ref": "2Sam.13.37-38", "text": "Flees to Geshur"},
+  {"ref": "2Sam.14.25-26", "text": "Handsome, and his hair"},
+  {"ref": "2Sam.14.33", "text": "Reconciled with a kiss"},
+  {"ref": "2Sam.15.6", "text": "Steals the hearts of Israel"},
+  {"ref": "2Sam.15.10", "text": "Proclaimed king at Hebron"},
+  {"ref": "2Sam.16.22", "text": "On the roof"},
+  {"ref": "2Sam.17.14", "text": "Follows Hushai's advice"},
+  {"ref": "2Sam.18.5", "text": "“Treat the young man Absalom gently”"},
+  {"ref": "2Sam.18.9", "text": "Caught in the oak"},
+  {"ref": "2Sam.18.14", "text": "Killed by Joab"},
+  {"ref": "2Sam.18.18", "text": "His pillar"},
+  {"ref": "2Sam.18.33", "text": "“O my son Absalom!”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.13.1-19.8"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/080.The_Death_of_Absalom.jpg/500px-080.The_Death_of_Absalom.jpg", "caption": "The death of Absalom (2 Samuel 18:9–14), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:080.The_Death_of_Absalom.jpg", "license": "Public domain"}
+ ]
+}

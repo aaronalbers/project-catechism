@@ -1,0 +1,24 @@
+{
+ "id": "micah-of-ephraim",
+ "name": "Micah",
+ "role": "Ephraimite who set up a shrine with a Levite priest",
+ "people": ["micah_2049"],
+ "summary": "A man of the hill country of Ephraim who returned eleven hundred shekels of silver he had taken from his mother; she had part of it made into a carved image. He set up a shrine with an ephod and household idols, made one of his sons priest, then hired a wandering Levite from Bethlehem. Danites migrating north took his idols and his priest, and when he pursued them, told him to go home.",
+ "body": [
+  "“Now I know that the LORD will be good to me, because a Levite has become my priest,” he says. Judges frames the story with the refrain that in those days there was no king in Israel and everyone did what was right in his own eyes.",
+  "The Danites' scouts had stayed with him; returning with six hundred armed men, they take the carved image and persuade the Levite that a tribe is better than one household. At Laish, renamed Dan, they set up the image, and the Levite, named at the end as Jonathan son of Gershom, son of Moses, and his sons serve as their priests."
+ ],
+ "moments": [
+  {"ref": "Judg.17.1-4", "text": "The silver, and the image"},
+  {"ref": "Judg.17.5", "text": "His shrine"},
+  {"ref": "Judg.17.6", "text": "No king in Israel"},
+  {"ref": "Judg.17.10-13", "text": "Hires a Levite"},
+  {"ref": "Judg.18.14-18", "text": "The Danites take his gods"},
+  {"ref": "Judg.18.22-26", "text": "“What else do I have?”"},
+  {"ref": "Judg.18.30-31", "text": "The image at Dan"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.17.1-18.31"}
+ ]
+}

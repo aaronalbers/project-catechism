@@ -1,0 +1,30 @@
+{
+ "id": "simeon-in-the-temple",
+ "name": "Simeon",
+ "role": "Old man who held the infant Jesus in the temple",
+ "people": ["simeon_2742"],
+ "when": "≈ 6–4 BC",
+ "whenBasis": "Jesus' birth, before Herod's death in 4 BC and perhaps up to two years before it (Matthew 2:16). See the card on dating Herod's death.",
+ "summary": "A righteous and devout man in Jerusalem, waiting for the consolation of Israel, to whom the Holy Spirit had revealed that he would not die before he had seen the Lord's Christ. Moved by the Spirit, he came into the temple as Joseph and Mary brought Jesus, took him in his arms and blessed God: now let Your servant depart in peace, for my eyes have seen Your salvation, a light for revelation to the Gentiles.",
+ "body": [
+  "He tells Mary that the child is appointed for the rise and fall of many in Israel, a sign that will be spoken against, “and a sword will pierce your soul as well.”"
+ ],
+ "moments": [
+  {"ref": "Luke.2.25", "text": "Waiting for the consolation of Israel"},
+  {"ref": "Luke.2.26", "text": "Not to die before seeing the Christ"},
+  {"ref": "Luke.2.27-28", "text": "Takes the child in his arms"},
+  {"ref": "Luke.2.29-30", "text": "“My eyes have seen Your salvation”"},
+  {"ref": "Luke.2.32", "text": "A light to the Gentiles"},
+  {"ref": "Luke.2.34-35", "text": "A sword will pierce your soul"}
+ ],
+ "later": [
+  {"text": "His song, the Nunc Dimittis from its Latin opening, is sung at Compline and at Anglican Evening Prayer.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Book of Common Prayer (1662), Evening Prayer"}, {"kind": "primary", "title": "Liturgy of the Hours, Night Prayer"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.2.22-35"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Brooklyn_Museum_-_The_Aged_Simeon_%28Le_vieux_Sim%C3%A9on%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Aged_Simeon_%28Le_vieux_Sim%C3%A9on%29_-_James_Tissot_-_overall.jpg", "caption": "The aged Simeon (Luke 2:25–35), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Aged_Simeon_(Le_vieux_Sim%C3%A9on)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

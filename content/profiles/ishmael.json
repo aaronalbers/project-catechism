@@ -1,0 +1,37 @@
+{
+ "id": "ishmael",
+ "name": "Ishmael",
+ "role": "Abraham's firstborn, by Hagar",
+ "people": ["ishmael_630"],
+ "genealogy": "ishmael",
+ "summary": "Named by the angel before his birth, for the LORD had heard his mother's affliction, and circumcised with Abraham at thirteen. Sent away with Hagar after Isaac was weaned, he grew up in the wilderness of Paran and became an archer. God promised to make him a great nation; his twelve sons were chieftains, and with Isaac he buried Abraham.",
+ "body": [
+  "The angel tells Hagar he will be a wild donkey of a man, his hand against everyone. When Abraham asks that Ishmael might live before God, God blesses him too: twelve princes, a great nation, though the covenant will be with Isaac.",
+  "In the wilderness God is with the boy as he grows. He marries an Egyptian. The brothers meet again at Abraham's burial in Machpelah. He dies at 137, and Esau marries one of his daughters."
+ ],
+ "moments": [
+  {"ref": "Gen.16.11-12", "text": "Named before his birth"},
+  {"ref": "Gen.16.15-16", "text": "Born when Abram is 86"},
+  {"ref": "Gen.17.18-20", "text": "Blessed, twelve princes"},
+  {"ref": "Gen.17.25", "text": "Circumcised at thirteen"},
+  {"ref": "Gen.21.9", "text": "Laughing at Isaac's feast"},
+  {"ref": "Gen.21.17-18", "text": "God hears the boy"},
+  {"ref": "Gen.21.20-21", "text": "An archer in Paran"},
+  {"ref": "Gen.25.9", "text": "Buries Abraham with Isaac"},
+  {"ref": "Gen.25.13-17", "text": "His sons, and his death"},
+  {"ref": "Gen.28.9", "text": "Esau marries his daughter"}
+ ],
+ "later": [
+  {"text": "Arab genealogy and Islamic tradition trace the northern Arabs, and the Prophet Muhammad, to Ismail, whom the Qur'an names with Ibrahim as raising the foundations of the House in Mecca.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Qur'an 2:127"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.16.1-16"},
+  {"kind": "scripture", "ref": "Gen.17.18-27"},
+  {"kind": "scripture", "ref": "Gen.21.8-21"},
+  {"kind": "scripture", "ref": "Gen.25.9-18"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/014.Abraham_Sends_Hagar_and_Ishmael_Away.jpg/500px-014.Abraham_Sends_Hagar_and_Ishmael_Away.jpg", "caption": "Abraham sends Hagar and Ishmael away (Genesis 21:14), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:014.Abraham_Sends_Hagar_and_Ishmael_Away.jpg", "license": "Public domain"}
+ ]
+}

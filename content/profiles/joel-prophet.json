@@ -1,0 +1,30 @@
+{
+ "id": "joel-prophet",
+ "name": "Joel",
+ "role": "Prophet of the locusts and the outpoured Spirit",
+ "people": ["joel_1660"],
+ "summary": "Son of Pethuel, who described a plague of locusts stripping the land as a sign of the Day of the LORD, and called the people to rend their hearts and not their garments. He promised that the LORD would repay the years the locusts had eaten, and afterward pour out His Spirit on all people, so that sons and daughters would prophesy. Peter quotes him at Pentecost.",
+ "body": [
+  "Blow the ram's horn in Zion, he says; the Day of the LORD is near. Everyone who calls on the name of the LORD will be saved, a line Paul quotes in Romans."
+ ],
+ "moments": [
+  {"ref": "Joel.1.1", "text": "The word to Joel"},
+  {"ref": "Joel.1.4", "text": "The locusts"},
+  {"ref": "Joel.2.1", "text": "The ram's horn in Zion"},
+  {"ref": "Joel.2.13", "text": "Rend your hearts"},
+  {"ref": "Joel.2.25", "text": "The years the locusts ate"},
+  {"ref": "Joel.2.28", "text": "“I will pour out My Spirit”"},
+  {"ref": "Joel.2.32", "text": "Everyone who calls"},
+  {"ref": "Acts.2.16-17", "text": "Quoted by Peter at Pentecost"},
+  {"ref": "Rom.10.13", "text": "Quoted by Paul"}
+ ],
+ "later": [
+  {"text": "Some date him early, under the boy-king Joash, because the book names no king; most modern scholars date it after the return from exile.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Joel and Amos (Hermeneia)", "author": "Hans Walter Wolff", "year": 1977}], "traditions": ["early: some traditional commentators", "after the exile: Hans Walter Wolff and most modern scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Joel.1.1-3.21"},
+  {"kind": "scripture", "ref": "Acts.2.14-21"},
+  {"kind": "scripture", "ref": "Rom.10.13"}
+ ]
+}

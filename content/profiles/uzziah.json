@@ -1,0 +1,39 @@
+{
+ "id": "uzziah",
+ "name": "Uzziah",
+ "role": "King of Judah struck with leprosy",
+ "people": ["uzziah_375"],
+ "when": "≈ 792–740 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years. He is also called Azariah.",
+ "summary": "Son of Amaziah, also called Azariah, made king at sixteen, who reigned fifty-two years and did right while he sought the LORD. Chronicles tells of his building, farming, army and inventions, and of his pride: he went into the temple to burn incense himself, the priests opposed him, and leprosy broke out on his forehead. He lived in a separate house until he died, while his son Jotham governed. Isaiah saw the LORD in the year he died.",
+ "body": [
+  "Kings says only that the LORD struck him with leprosy and he lived in isolation. Chronicles explains: when he became strong, his heart grew proud. Azariah the priest and eighty others stand against him, and he rages at them with the censer in his hand until the leprosy appears.",
+  "Amos and Hosea date their work by his reign, and Amos by the earthquake in his days, which Zechariah still remembers."
+ ],
+ "moments": [
+  {"ref": "2Kgs.15.1-3", "text": "King at sixteen; fifty-two years"},
+  {"ref": "2Kgs.15.5", "text": "Struck with leprosy"},
+  {"ref": "2Chr.26.5", "text": "Prospered while he sought the LORD"},
+  {"ref": "2Chr.26.9-10", "text": "Towers and cisterns"},
+  {"ref": "2Chr.26.15", "text": "His machines"},
+  {"ref": "2Chr.26.16", "text": "His heart grew proud"},
+  {"ref": "2Chr.26.18-19", "text": "The priests oppose him"},
+  {"ref": "2Chr.26.21", "text": "A separate house"},
+  {"ref": "Isa.6.1", "text": "The year he died"},
+  {"ref": "Amos.1.1", "text": "The earthquake"},
+  {"ref": "Zech.14.5", "text": "Still remembered"}
+ ],
+ "later": [
+  {"text": "A stone plaque of the Second Temple period, in Aramaic, reads: “Here were brought the bones of Uzziah king of Judah. Do not open.”", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Uzziah epitaph, Israel Museum", "note": "found in 1931 in the collection of the Russian Orthodox Church on the Mount of Olives"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.15.1-7"},
+  {"kind": "scripture", "ref": "2Chr.26.1-23"},
+  {"kind": "scripture", "ref": "Isa.6.1"},
+  {"kind": "scripture", "ref": "Amos.1.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Rembrandt_Harmensz._van_Rijn_032.jpg/500px-Rembrandt_Harmensz._van_Rijn_032.jpg", "caption": "A man in oriental dress, traditionally called King Uzziah stricken with leprosy (2 Chronicles 26:19), Rembrandt, ≈1639. Chatsworth House. The title is traditional; the subject is not certain.", "credit": "Rembrandt, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_032.jpg", "license": "Public domain"}
+ ]
+}

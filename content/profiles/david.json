@@ -1,0 +1,40 @@
+{
+ "id": "david",
+ "name": "David",
+ "role": "Shepherd, psalmist, and king of Israel",
+ "people": ["david_994"],
+ "genealogy": "david",
+ "when": "≈ 1010–970 BC reigned",
+ "whenBasis": "His forty years (2 Samuel 5:4–5; 1 Kings 2:11) counted back from Solomon, as Thiele and most chronologies do; other schemes shift them by a decade or so.",
+ "summary": "The youngest son of Jesse of Bethlehem, anointed by Samuel while a shepherd. He killed Goliath, served and then fled Saul, reigned seven years in Hebron and thirty-three in Jerusalem, brought the ark there, and was promised a lasting house. His taking of Bathsheba and killing of Uriah brought trouble on his house.",
+ "body": [
+  "Samuel passes over Jesse's older sons and anoints the youngest, called in from the sheep. He comes to Saul's court as a musician, and to fame by killing Goliath with a sling and a stone. Saul's son Jonathan loves him; Saul grows jealous and hunts him, and twice David spares Saul's life, “the LORD's anointed.”",
+  "After Saul's death he is made king over Judah at Hebron, then over all Israel. He takes Jerusalem, brings the ark up dancing before the LORD, and is promised through Nathan that his house and throne will endure forever.",
+  "He takes Bathsheba, the wife of Uriah, and has Uriah killed in battle. Nathan confronts him, “You are that man!”, and David confesses. The rest of his reign is troubled by his own sons: Amnon, Absalom's rebellion, and Adonijah's bid for the throne. He dies and is buried in the City of David; Matthew begins Jesus' genealogy with him and Abraham."
+ ],
+ "moments": [
+  {"ref": "1Sam.16.12-13", "text": "Anointed by Samuel"},
+  {"ref": "1Sam.17.49-50", "text": "Kills Goliath"},
+  {"ref": "1Sam.18.1", "text": "Jonathan's love"},
+  {"ref": "1Sam.24.6", "text": "Spares Saul"},
+  {"ref": "2Sam.5.3-5", "text": "King over all Israel"},
+  {"ref": "2Sam.6.14-15", "text": "Dances before the ark"},
+  {"ref": "2Sam.7.16", "text": "A house and throne forever"},
+  {"ref": "2Sam.11.2-4", "text": "Bathsheba"},
+  {"ref": "2Sam.12.7", "text": "“You are that man!”"},
+  {"ref": "2Sam.18.33", "text": "Mourns Absalom"},
+  {"ref": "1Kgs.2.10-11", "text": "Dies after forty years"},
+  {"ref": "Matt.1.1", "text": "Jesus, son of David"}
+ ],
+ "later": [
+  {"text": "The Tel Dan stele, a 9th-century BC Aramaic victory inscription found in 1993–94, speaks of a king of the “House of David” (bytdwd), the earliest mention of David outside the Bible.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Tel Dan Stele, Israel Museum, Jerusalem", "note": "found at Tel Dan by Avraham Biran's excavation, 1993–94"}, {"kind": "scholarship", "title": "An Aramaic Stele Fragment from Tel Dan", "author": "Avraham Biran and Joseph Naveh", "year": 1993, "note": "Israel Exploration Journal 43"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.16.1-1Kgs.2.11"},
+  {"kind": "scripture", "ref": "Matt.1.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Saul_and_David_by_Rembrandt_Mauritshuis_621.jpg/500px-Saul_and_David_by_Rembrandt_Mauritshuis_621.jpg", "caption": "David plays the harp before Saul (1 Samuel 16:23), Rembrandt or his workshop, ≈1650–70. Mauritshuis, The Hague.", "credit": "Rembrandt or workshop, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Saul_and_David_by_Rembrandt_Mauritshuis_621.jpg", "license": "Public domain"}
+ ]
+}

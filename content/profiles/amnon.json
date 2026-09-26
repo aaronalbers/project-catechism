@@ -1,0 +1,31 @@
+{
+ "id": "amnon",
+ "name": "Amnon",
+ "role": "David's firstborn, who raped his half-sister",
+ "people": ["amnon_232"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "David's eldest son, by Ahinoam of Jezreel. Sick with desire for his half-sister Tamar, he followed his cousin Jonadab's advice, pretended to be ill, asked for her to bring him food, and raped her. Then he hated her more than he had loved her and had her thrown out. David was furious but did nothing. Two years later Absalom had him killed at a sheep-shearing feast.",
+ "body": [
+  "Tamar pleads with him: “Do not violate me, for such a thing should never be done in Israel.” She tells him to ask the king, who would not withhold her from him. He will not listen.",
+  "Absalom invites all the king's sons to Baal-hazor and orders his servants to strike Amnon when his heart is merry with wine. David mourns his son every day."
+ ],
+ "moments": [
+  {"ref": "2Sam.3.2", "text": "David's firstborn"},
+  {"ref": "2Sam.13.1-2", "text": "Desires Tamar"},
+  {"ref": "2Sam.13.3-5", "text": "Jonadab's advice"},
+  {"ref": "2Sam.13.11-14", "text": "Rapes her"},
+  {"ref": "2Sam.13.15", "text": "Hates her"},
+  {"ref": "2Sam.13.21", "text": "David is furious"},
+  {"ref": "2Sam.13.28-29", "text": "Killed at the feast"},
+  {"ref": "2Sam.13.37", "text": "David mourns"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.3.2"},
+  {"kind": "scripture", "ref": "2Sam.13.1-39"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Giovanni_Francesco_Barbieri%2C_called_Guercino%2C_Amnon_and_Tamar%2C_1649%2C_NGA_70988.jpg/500px-Giovanni_Francesco_Barbieri%2C_called_Guercino%2C_Amnon_and_Tamar%2C_1649%2C_NGA_70988.jpg", "caption": "Amnon and Tamar (2 Samuel 13), Guercino, 1649. National Gallery of Art, Washington.", "credit": "Guercino, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Francesco_Barbieri,_called_Guercino,_Amnon_and_Tamar,_1649,_NGA_70988.jpg", "license": "CC0"}
+ ]
+}

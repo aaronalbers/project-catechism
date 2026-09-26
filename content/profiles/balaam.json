@@ -1,0 +1,39 @@
+{
+ "id": "balaam",
+ "name": "Balaam",
+ "role": "Diviner hired to curse Israel, who blessed it",
+ "people": ["balaam_593"],
+ "summary": "A seer from Pethor near the Euphrates whom Balak king of Moab sent for to curse Israel. God forbade him, then let him go; on the road his donkey saw the angel of the LORD barring the way, and spoke. From the heights above Israel's camp he blessed them three times, and foretold a star coming forth from Jacob. Numbers later blames his advice for Israel's sin with the women at Peor, and he was killed among the Midianites.",
+ "body": [
+  "When Balak's first envoys come, God tells him not to go. The second time he goes. Three times his donkey turns aside from the angel with the drawn sword that Balaam cannot see, and he beats her; the LORD opens her mouth, then opens Balaam's eyes.",
+  "Balak builds seven altars on three heights, and each time Balaam speaks only what the LORD puts in his mouth: “How can I curse those whom God has not cursed?” In his last oracle he sees a star from Jacob and a sceptre from Israel that will crush Moab. Balak dismisses him in anger.",
+  "Numbers 31 says the Midianite women led Israel astray at Peor on Balaam's advice, and that he was killed with the kings of Midian. The New Testament remembers him for greed: he loved the wages of wickedness."
+ ],
+ "moments": [
+  {"ref": "Num.22.5-6", "text": "Sent for by Balak"},
+  {"ref": "Num.22.12", "text": "“Do not go with them”"},
+  {"ref": "Num.22.28", "text": "The donkey speaks"},
+  {"ref": "Num.22.31", "text": "His eyes opened"},
+  {"ref": "Num.23.8", "text": "“How can I curse?”"},
+  {"ref": "Num.24.10", "text": "Balak's anger"},
+  {"ref": "Num.24.17", "text": "“A star will come forth from Jacob”"},
+  {"ref": "Num.31.8", "text": "Killed with the kings of Midian"},
+  {"ref": "Num.31.16", "text": "His advice at Peor"},
+  {"ref": "2Pet.2.15-16", "text": "Loved the wages of wickedness"},
+  {"ref": "Rev.2.14", "text": "“The teaching of Balaam”"}
+ ],
+ "later": [
+  {"text": "A plaster inscription found at Deir Alla in the Jordan valley in 1967, from about 800 BC, tells of a vision of “Balaam son of Beor, a seer of the gods,” the only mention of a biblical prophet outside the Bible from so early.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Deir Alla inscription, Tell Deir Alla, Jordan", "note": "ink on plaster, found by H. J. Franken's excavation in 1967; ≈800 BC"}, {"kind": "scholarship", "title": "Aramaic Texts from Deir 'Alla", "author": "J. Hoftijzer and G. van der Kooij", "year": 1976}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Num.22.1-24.25"},
+  {"kind": "scripture", "ref": "Num.31.8-16"},
+  {"kind": "scripture", "ref": "2Pet.2.15-16"},
+  {"kind": "scripture", "ref": "Jude.1.11"},
+  {"kind": "scripture", "ref": "Rev.2.14"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Rembrandt_-_L%27%C3%82nesse_du_proph%C3%A8te_Balaam_-_J_95_-_Mus%C3%A9e_Cognacq-Jay.jpg/500px-Rembrandt_-_L%27%C3%82nesse_du_proph%C3%A8te_Balaam_-_J_95_-_Mus%C3%A9e_Cognacq-Jay.jpg", "caption": "Balaam and his donkey (Numbers 22:27–31), Rembrandt, 1626. Musée Cognacq-Jay, Paris.", "credit": "Rembrandt, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_L%27%C3%82nesse_du_proph%C3%A8te_Balaam_-_J_95_-_Mus%C3%A9e_Cognacq-Jay.jpg", "license": "Public domain"}
+ ]
+}

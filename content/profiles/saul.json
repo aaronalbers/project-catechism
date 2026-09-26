@@ -1,0 +1,41 @@
+{
+ "id": "saul",
+ "name": "Saul",
+ "role": "Israel's first king",
+ "people": ["saul_2478"],
+ "when": "≈ 1050–1010 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years. 1 Samuel 13:1 is textually damaged in Hebrew; Acts 13:21 gives forty years. Absolute dates are estimates worked back from Solomon.",
+ "summary": "Son of Kish, a Benjamite, choice and handsome and a head taller than anyone, anointed by Samuel as Israel's first king. He rescued Jabesh-gilead and fought the Philistines, but offered sacrifice without waiting for Samuel and spared Agag and the best of Amalek's flocks, and the LORD rejected him. Tormented by a spirit and jealous of David, he hunted him for years. On the eve of his last battle he consulted a medium at Endor; he died with three sons on Mount Gilboa.",
+ "body": [
+  "He is out looking for his father's lost donkeys when he comes to Samuel, who anoints him. Found hiding among the baggage when chosen by lot, he wins the people over by rallying Israel to relieve Jabesh-gilead.",
+  "At Gilgal, with the Philistines gathering and his men scattering, he offers the burnt offering himself; Samuel tells him his kingdom will not endure. Sent to destroy Amalek, he keeps King Agag and the best animals, and Samuel answers his excuses: “obedience is better than sacrifice.” The Spirit of the LORD departs from him and a spirit of distress torments him; David's harp relieves him.",
+  "When the women sing “Saul has slain his thousands, and David his tens of thousands,” he eyes David from that day. He throws a spear at him, sends him against the Philistines hoping he will fall, kills the priests of Nob for helping him, and pursues him through the wilderness, twice spared by him. Facing the Philistines at Gilboa, with no answer from the LORD, he has the medium at Endor call up Samuel, who foretells his death. Badly wounded, he falls on his own sword. David laments: “How the mighty have fallen!”"
+ ],
+ "moments": [
+  {"ref": "1Sam.9.2", "text": "A head taller"},
+  {"ref": "1Sam.9.3", "text": "Looking for donkeys"},
+  {"ref": "1Sam.10.1", "text": "Anointed by Samuel"},
+  {"ref": "1Sam.10.21-22", "text": "Hiding among the baggage"},
+  {"ref": "1Sam.11.6-11", "text": "Relieves Jabesh-gilead"},
+  {"ref": "1Sam.13.9-13", "text": "The offering at Gilgal"},
+  {"ref": "1Sam.15.9", "text": "Spares Agag"},
+  {"ref": "1Sam.15.22-23", "text": "“Obedience is better than sacrifice”"},
+  {"ref": "1Sam.16.14", "text": "A spirit of distress"},
+  {"ref": "1Sam.18.7-9", "text": "“His thousands”"},
+  {"ref": "1Sam.18.10-11", "text": "The spear"},
+  {"ref": "1Sam.22.18", "text": "The priests of Nob"},
+  {"ref": "1Sam.24.16-17", "text": "“You are more righteous than I”"},
+  {"ref": "1Sam.28.7-8", "text": "The medium at Endor"},
+  {"ref": "1Sam.31.4", "text": "Falls on his sword"},
+  {"ref": "2Sam.1.19", "text": "“How the mighty have fallen!”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.9.1-31.13"},
+  {"kind": "scripture", "ref": "2Sam.1.17-27"},
+  {"kind": "scripture", "ref": "Acts.13.21"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/070A.Samuel_Blesses_Saul.jpg/500px-070A.Samuel_Blesses_Saul.jpg", "caption": "Samuel blesses Saul (1 Samuel 10:1), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:070A.Samuel_Blesses_Saul.jpg", "license": "Public domain"}
+ ]
+}

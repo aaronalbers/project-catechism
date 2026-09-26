@@ -1,0 +1,36 @@
+{
+ "id": "joab",
+ "name": "Joab",
+ "role": "David's nephew and army commander",
+ "people": ["joab_1617"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "Son of David's sister Zeruiah, brother of Abishai and Asahel, commander of David's army for most of his reign. He took Jerusalem's stronghold, arranged Uriah's death at David's order, brought Absalom back from exile and then killed him in the oak against the king's command. He murdered Abner and Amasa, and backed Adonijah for the throne; Solomon had him killed at the altar.",
+ "body": [
+  "He wins the command by being first up into the Jebusite city. He is ruthless and loyal to David in his own way: he sets Uriah where the fighting is hardest when David's letter tells him to, contrives through the wise woman of Tekoa to bring Absalom home, and, when Absalom hangs in the oak, thrusts three spears into his heart.",
+  "When David mourns so that the victory becomes grief, Joab tells him he has shamed his servants. He kills Abner to avenge Asahel, and Amasa, David's new commander, with a kiss and a sword. David's last charge to Solomon names these killings. When Adonijah fails, Joab flees to the tent of the LORD and takes hold of the altar, and Benaiah strikes him down there."
+ ],
+ "moments": [
+  {"ref": "2Sam.2.13", "text": "At the pool of Gibeon"},
+  {"ref": "2Sam.3.27", "text": "Kills Abner"},
+  {"ref": "1Chr.11.6", "text": "Takes the stronghold"},
+  {"ref": "2Sam.11.14-17", "text": "Uriah's death"},
+  {"ref": "2Sam.14.1-3", "text": "The woman of Tekoa"},
+  {"ref": "2Sam.18.14", "text": "Kills Absalom"},
+  {"ref": "2Sam.19.5-7", "text": "Rebukes David"},
+  {"ref": "2Sam.20.9-10", "text": "Kills Amasa"},
+  {"ref": "2Sam.24.2-4", "text": "Objects to the census"},
+  {"ref": "1Kgs.1.7", "text": "Backs Adonijah"},
+  {"ref": "1Kgs.2.5-6", "text": "David's charge"},
+  {"ref": "1Kgs.2.28-34", "text": "Killed at the altar"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.2.12-24.9"},
+  {"kind": "scripture", "ref": "1Kgs.1.7-2.34"},
+  {"kind": "scripture", "ref": "1Chr.11.6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/080.The_Death_of_Absalom.jpg/500px-080.The_Death_of_Absalom.jpg", "caption": "The death of Absalom at Joab's hand (2 Samuel 18:14), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:080.The_Death_of_Absalom.jpg", "license": "Public domain"}
+ ]
+}

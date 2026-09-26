@@ -1,0 +1,31 @@
+{
+ "id": "cleopas",
+ "name": "Cleopas",
+ "role": "Disciple who met the risen Jesus on the road to Emmaus",
+ "people": ["cleophas_950"],
+ "when": "≈ AD 30 or 33",
+ "whenBasis": "The crucifixion under Pilate (AD 26–36), usually dated to the Passover of AD 30 or 33 from the weekday the gospels give.",
+ "summary": "One of two disciples walking to Emmaus, about seven miles from Jerusalem, on the day of the resurrection. Jesus came and walked with them, but they did not recognise him. Cleopas asked if he was the only visitor to Jerusalem who did not know what had happened: they had hoped he was the one to redeem Israel. Jesus explained what all the Scriptures said about him. At table he broke the bread, their eyes were opened, and he vanished. They returned to Jerusalem that same hour.",
+ "body": [
+  "They say to each other, “Were not our hearts burning within us as He spoke with us on the road and opened the Scriptures to us?”"
+ ],
+ "moments": [
+  {"ref": "Luke.24.13", "text": "To Emmaus"},
+  {"ref": "Luke.24.18", "text": "“The only visitor to Jerusalem”"},
+  {"ref": "Luke.24.21", "text": "“We were hoping”"},
+  {"ref": "Luke.24.27", "text": "Moses and all the Prophets"},
+  {"ref": "Luke.24.30-31", "text": "The bread broken"},
+  {"ref": "Luke.24.32", "text": "Hearts burning"},
+  {"ref": "Luke.24.33-35", "text": "Back to Jerusalem"}
+ ],
+ "later": [
+  {"text": "John names a Clopas whose wife Mary stood by the cross, and Hegesippus says Clopas was Joseph's brother. Whether Cleopas is Clopas is debated; Theographic's data treats them as one.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "John.19.25"}, {"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.11"}], "traditions": ["the same man: some commentators and Theographic's data", "two men: others"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.24.13-35"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Brooklyn_Museum_-_The_Pilgrims_of_Emmaus_on_the_Road_%28Les_p%C3%A8lerins_d%27Emma%C3%BCs_en_chemin%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_The_Pilgrims_of_Emmaus_on_the_Road_%28Les_p%C3%A8lerins_d%27Emma%C3%BCs_en_chemin%29_-_James_Tissot.jpg", "caption": "The pilgrims of Emmaus on the road (Luke 24:15), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Pilgrims_of_Emmaus_on_the_Road_(Les_p%C3%A8lerins_d%27Emma%C3%BCs_en_chemin)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

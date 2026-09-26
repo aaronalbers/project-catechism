@@ -1,0 +1,34 @@
+{
+ "id": "mary-magdalene",
+ "name": "Mary Magdalene",
+ "role": "Follower of Jesus, first witness of the resurrection",
+ "people": ["mary_1943"],
+ "summary": "A woman from Magdala whom Jesus freed from seven demons, who with other women supported his ministry from their own means. She watched the crucifixion and the burial, went to the tomb on the first day of the week, and in John is the first to see the risen Jesus, sent to tell his disciples.",
+ "body": [
+  "Luke names her among the women travelling with Jesus and the Twelve, “from whom seven demons had gone out,” who provided for them out of their means. Her name places her from Magdala, on the Sea of Galilee.",
+  "Matthew, Mark and John put her at the crucifixion, and all four Gospels at the tomb. She sees where Jesus is laid and returns after the Sabbath with spices. In John she finds the stone moved, runs for Peter and the other disciple, and stays weeping. Jesus speaks her name; she answers, “Rabboni!” and he sends her to his brothers. She goes and says, “I have seen the Lord!”",
+  "The Gospels never call her a prostitute or identify her with the sinful woman who anoints Jesus in Luke 7. That came later; see below."
+ ],
+ "moments": [
+  {"ref": "Luke.8.1-3", "text": "Travels with Jesus, freed of seven demons"},
+  {"ref": "Mark.15.40-41", "text": "Watches the crucifixion"},
+  {"ref": "Matt.27.61", "text": "Sits opposite the tomb"},
+  {"ref": "Mark.16.1", "text": "Brings spices after the Sabbath"},
+  {"ref": "John.20.1", "text": "Finds the stone taken away"},
+  {"ref": "John.20.16-17", "text": "“Rabboni!”"},
+  {"ref": "John.20.18", "text": "“I have seen the Lord!”"}
+ ],
+ "later": [
+  {"text": "Gregory the Great, preaching in 591, made her one woman with the sinner of Luke 7 and with Mary of Bethany, and the Western church long painted her as a penitent. The Eastern churches kept the three apart, and the Roman calendar revised in 1969 no longer treats her as a penitent.", "confidence": "interpretation", "traditions": ["the Latin West from Gregory the Great"], "sources": [{"kind": "primary", "title": "Gregory the Great, Homilies on the Gospels 33"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.8.1-3"},
+  {"kind": "scripture", "ref": "Mark.15.40-16.1"},
+  {"kind": "scripture", "ref": "John.19.25"},
+  {"kind": "scripture", "ref": "John.20.1-18"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Titian_-_Noli_me_Tangere_-_Google_Art_Project.jpg/500px-Titian_-_Noli_me_Tangere_-_Google_Art_Project.jpg", "caption": "Noli me tangere: the risen Jesus and Mary Magdalene in the garden (John 20:17), Titian, ≈1514. National Gallery, London.", "credit": "Titian, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Titian_-_Noli_me_Tangere_-_Google_Art_Project.jpg", "license": "Public domain"}
+ ]
+}

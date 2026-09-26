@@ -1,0 +1,29 @@
+{
+ "id": "enoch",
+ "name": "Enoch",
+ "role": "Who walked with God, and was taken",
+ "people": ["enoch_1192"],
+ "genealogy": "enoch-of-jared",
+ "summary": "The seventh from Adam in the line of Seth, and the father of Methuselah. Where every other entry in Genesis 5 ends with the man's death, his ends: he walked with God, and then he was no more, because God had taken him away. Hebrews reads this as being taken without seeing death, and Jude quotes a prophecy in his name.",
+ "body": [
+  "Genesis 5 is a list of fathers and sons, each with his age at his son's birth and at his death, each closing “and then he died.” Enoch's entry is different: twice it says he walked with God, it gives him the shortest life in the list, 365 years, and it does not say he died.",
+  "Hebrews 11 counts him among the faithful: he was taken up so that he did not see death, having pleased God. Jude, calling him “the seventh from Adam,” quotes his prophecy of the Lord coming with myriads of his holy ones."
+ ],
+ "moments": [
+  {"ref": "Gen.5.18", "text": "Born to Jared"},
+  {"ref": "Gen.5.21-22", "text": "Fathers Methuselah, and walks with God"},
+  {"ref": "Gen.5.23-24", "text": "365 years, and taken"},
+  {"ref": "Luke.3.37", "text": "In Luke's genealogy"},
+  {"ref": "Heb.11.5", "text": "Taken so that he did not see death"},
+  {"ref": "Jude.1.14-15", "text": "“The seventh from Adam”"}
+ ],
+ "later": [
+  {"text": "The book Jude quotes is 1 Enoch, a collection of Jewish apocalyptic writings from about the 3rd century BC to the turn of the era: Jude 14–15 follows 1 Enoch 1:9. Fragments of it were found among the Dead Sea Scrolls, and the Ethiopian Orthodox Church counts it as Scripture.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "1 Enoch 1:9"}, {"kind": "scholarship", "title": "1 Enoch 1 (Hermeneia)", "author": "George W. E. Nickelsburg", "year": 2001}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.5.1-32"},
+  {"kind": "scripture", "ref": "Heb.11.5"},
+  {"kind": "scripture", "ref": "Jude.1.14-15"}
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "id": "malachi",
+ "name": "Malachi",
+ "role": "Last of the twelve prophets",
+ "people": ["malachi_1899"],
+ "when": "≈ 500–430 BC",
+ "whenBasis": "The book is undated. The temple is standing and sacrifices offered (Malachi 1:7–10), and a governor rules (1:8), so it falls in the Persian period after 515 BC; many put it near Nehemiah's time, whose concerns it shares.",
+ "summary": "The prophet whose book closes the twelve. In a series of disputes the people ask how the LORD has loved them, how they have despised His name, how they rob Him. He rebukes priests who offer blind and lame animals, men who break faith with the wives of their youth, and a people who withhold tithes. He foretells the messenger who will prepare the way, and Elijah sent before the great day of the LORD.",
+ "body": [
+  "“Try offering them to your governor!” he says of the sick animals brought to the altar. He calls the people to bring the full tithe into the storehouse and see if the LORD will not open the windows of heaven.",
+  "The gospels read his messenger and his Elijah of John the Baptist."
+ ],
+ "moments": [
+  {"ref": "Mal.1.1", "text": "The word through Malachi"},
+  {"ref": "Mal.1.2", "text": "“I have loved you”"},
+  {"ref": "Mal.1.8", "text": "Blind animals"},
+  {"ref": "Mal.2.16", "text": "“I hate divorce”"},
+  {"ref": "Mal.3.1", "text": "“I will send My messenger”"},
+  {"ref": "Mal.3.8", "text": "Robbing God"},
+  {"ref": "Mal.3.10", "text": "The full tithe"},
+  {"ref": "Mal.4.5", "text": "Elijah before the Day"},
+  {"ref": "Mal.4.6", "text": "The hearts of the fathers"},
+  {"ref": "Mark.1.2", "text": "Read of John the Baptist"},
+  {"ref": "Matt.11.14", "text": "“He is the Elijah”"},
+  {"ref": "Luke.1.17", "text": "In the spirit of Elijah"}
+ ],
+ "later": [
+  {"text": "Malachi means “my messenger,” and it may be a title rather than a name; the Greek translation of 1:1 reads “by the hand of his messenger.”", "confidence": "evidence", "sources": [{"kind": "lexicon", "title": "Hebrew malʾākî, my messenger"}, {"kind": "primary", "title": "Septuagint, Malachi 1:1"}]},
+  {"text": "One rabbi in the Talmud says Malachi was Mordecai, another that he was Ezra; the Targum names him Ezra the scribe.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Megillah 15a", "url": "https://www.sefaria.org/Megillah.15a"}, {"kind": "primary", "title": "Targum Jonathan to Malachi 1:1"}], "traditions": ["the Talmud", "the Targum"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Mal.1.1-4.6"},
+  {"kind": "scripture", "ref": "Mark.1.2"},
+  {"kind": "scripture", "ref": "Matt.11.10-14"},
+  {"kind": "scripture", "ref": "Luke.1.17"}
+ ]
+}

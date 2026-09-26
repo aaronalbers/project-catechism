@@ -1,0 +1,27 @@
+{
+ "id": "micaiah",
+ "name": "Micaiah",
+ "role": "Prophet who foretold Ahab's death",
+ "people": ["micaiah_2054"],
+ "when": "≈ 874–853 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Imlah, a prophet Ahab hated because he never prophesied anything good about him. When Ahab and Jehoshaphat of Judah asked about going to war at Ramoth-gilead, four hundred prophets promised victory. Summoned at Jehoshaphat's request, Micaiah first echoed them, then, pressed, told of Israel scattered on the hills like sheep without a shepherd, and of a lying spirit in the mouths of Ahab's prophets. He was struck and imprisoned; Ahab died in the battle.",
+ "body": [
+  "The messenger urges him to agree with the others; he answers, “As surely as the LORD lives, I will speak whatever the LORD tells me.” He tells his vision of the LORD on his throne asking who will entice Ahab.",
+  "Zedekiah son of Chenaanah slaps him. Ahab orders him fed on bread and water until he returns safely. “If you ever return safely,” Micaiah says, “the LORD has not spoken through me.”"
+ ],
+ "moments": [
+  {"ref": "1Kgs.22.8", "text": "Ahab hates him"},
+  {"ref": "1Kgs.22.13-14", "text": "“I will speak whatever the LORD tells me”"},
+  {"ref": "1Kgs.22.15", "text": "Echoes the others"},
+  {"ref": "1Kgs.22.17", "text": "Sheep without a shepherd"},
+  {"ref": "1Kgs.22.19-23", "text": "The lying spirit"},
+  {"ref": "1Kgs.22.24", "text": "Struck"},
+  {"ref": "1Kgs.22.27-28", "text": "Imprisoned"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.22.1-38"},
+  {"kind": "scripture", "ref": "2Chr.18.1-34"}
+ ]
+}

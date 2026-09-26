@@ -1,0 +1,29 @@
+{
+ "id": "tobiah",
+ "name": "Tobiah",
+ "role": "Ammonite official who opposed Nehemiah",
+ "people": ["tobiah_2872"],
+ "when": "≈ 445–430s BC",
+ "whenBasis": "Nehemiah's governorship under Artaxerxes I (Nehemiah 2:1, 13:6).",
+ "summary": "Tobiah the Ammonite official, Sanballat's ally, who mocked the new wall: if a fox climbed on it, it would break down. He was bound by marriage to leading families of Judah, who kept up a stream of letters with him, and joined in hiring a prophet to frighten Nehemiah. While Nehemiah was away, the priest Eliashib, a relative, gave him a room in the temple courts; Nehemiah threw all his household goods out.",
+ "body": [
+  "His son Jehohanan married the daughter of Meshullam, one of the wall's builders; he himself was son-in-law to Shecaniah. Nehemiah prays that God will remember what he and Sanballat have done."
+ ],
+ "moments": [
+  {"ref": "Neh.2.10", "text": "Deeply disturbed"},
+  {"ref": "Neh.4.3", "text": "“If even a fox were to climb up”"},
+  {"ref": "Neh.4.7-8", "text": "Plots with Sanballat"},
+  {"ref": "Neh.6.12", "text": "Hires a prophet"},
+  {"ref": "Neh.6.17-18", "text": "Letters with the nobles"},
+  {"ref": "Neh.13.4-5", "text": "A room in the temple"},
+  {"ref": "Neh.13.7-8", "text": "Thrown out"}
+ ],
+ "later": [
+  {"text": "Many historians connect him with the Tobiads, a powerful family east of the Jordan: a Tobias appears in the Zenon papyri of 259 BC, the name Tobiah is cut in the rock at ʿIraq al-Amir, and Josephus tells of the family's feuds.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "ʿIraq al-Amir, rock-cut inscription “Tobiah”"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 12.160–236"}, {"kind": "scholarship", "title": "The Tobiads", "author": "Benjamin Mazar", "year": 1957, "note": "Israel Exploration Journal 7"}], "traditions": ["Benjamin Mazar and many historians"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Neh.2.10-6.19"},
+  {"kind": "scripture", "ref": "Neh.13.4-9"}
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "nebuchadnezzar",
+ "name": "Nebuchadnezzar",
+ "role": "King of Babylon who destroyed Jerusalem",
+ "people": ["nebuchadnezzar_2167"],
+ "when": "≈ 605–562 BC reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible.",
+ "summary": "King of Babylon, who made Jehoiakim his vassal, took Jehoiachin and ten thousand captives to Babylon, and after Zedekiah's rebellion besieged Jerusalem for a year and a half, then had the city, the temple and the palace burned in 586 BC. In Daniel he dreams of a statue of four metals, throws three young men into a furnace, and, after boasting over the great Babylon he built, lives like an animal until he acknowledges the Most High.",
+ "body": [
+  "Jeremiah calls him the LORD's servant, the instrument of judgment on Judah and the nations. His captain Nebuzaradan burns the temple and carries off its bronze.",
+  "In Daniel, the Chaldeans cannot tell him his dream and Daniel can; he sets up a golden image on the plain of Dura; he walks on his palace roof and says, “Is this not Babylon the great, which I myself have built?” For seven periods of time he eats grass like an ox, and when his reason returns he praises the King of heaven."
+ ],
+ "moments": [
+  {"ref": "2Kgs.24.1", "text": "Jehoiakim his vassal"},
+  {"ref": "2Kgs.24.10-14", "text": "Takes Jehoiachin and the captives"},
+  {"ref": "2Kgs.25.1", "text": "The siege"},
+  {"ref": "2Kgs.25.8-9", "text": "The temple burned"},
+  {"ref": "Jer.27.6", "text": "“My servant”"},
+  {"ref": "Dan.2.1", "text": "His dream"},
+  {"ref": "Dan.3.1", "text": "The golden image"},
+  {"ref": "Dan.3.24-25", "text": "Four men in the fire"},
+  {"ref": "Dan.4.30", "text": "“Babylon the great”"},
+  {"ref": "Dan.4.33", "text": "Like an ox"},
+  {"ref": "Dan.4.34", "text": "His reason returns"}
+ ],
+ "later": [
+  {"text": "The Babylonian Chronicle (British Museum 21946) records that in his seventh year, on the second of Adar (16 March 597 BC), he captured “the city of Judah”, seized its king and appointed a king of his choice.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian Chronicle for 605–594 BC, British Museum 21946"}]},
+  {"text": "No Babylonian record mentions a madness of Nebuchadnezzar. A Qumran text, the Prayer of Nabonidus, tells a similar story of a seven-year affliction of Nabonidus, the last king of Babylon, and many scholars think Daniel 4 drew on such a tradition.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Prayer of Nabonidus (4Q242), from Qumran Cave 4"}, {"kind": "scholarship", "title": "Daniel (Hermeneia)", "author": "John J. Collins", "year": 1993}], "traditions": ["many historical-critical scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.24.1-25.21"},
+  {"kind": "scripture", "ref": "Jer.27.6"},
+  {"kind": "scripture", "ref": "Dan.1.1-4.37"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/William_Blake_-_Nebuchadnezzar_%28Tate_Britain%29.jpg/500px-William_Blake_-_Nebuchadnezzar_%28Tate_Britain%29.jpg", "caption": "Nebuchadnezzar (Daniel 4:33), William Blake, 1795/≈1805. Tate Britain, London.", "credit": "William Blake, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:William_Blake_-_Nebuchadnezzar_(Tate_Britain).jpg", "license": "Public domain"}
+ ]
+}

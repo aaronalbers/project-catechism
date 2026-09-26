@@ -1,0 +1,36 @@
+{
+ "id": "ruth",
+ "name": "Ruth",
+ "role": "Moabite widow, great-grandmother of David",
+ "people": ["ruth_2450"],
+ "genealogy": "ruth",
+ "when": "≈ 11th century BC",
+ "whenBasis": "The book is set “in the days when the judges ruled” (Ruth 1:1), and its genealogy puts her three generations before David, whose reign is dated ≈1010–970 BC.",
+ "summary": "A Moabite woman who married into a family from Bethlehem. Widowed, she would not leave her mother-in-law Naomi, gleaned in the fields of Boaz, and became his wife. Their son Obed was the grandfather of David, and Matthew names her in Jesus' genealogy.",
+ "body": [
+  "Famine takes Elimelech and Naomi from Bethlehem to Moab, where their sons marry Moabite women, Orpah and Ruth. All three men die. When Naomi turns home, Orpah goes back to her people, but Ruth refuses: “wherever you go, I will go … your people will be my people, and your God will be my God.”",
+  "In Bethlehem at the barley harvest she gleans behind the reapers and happens on the field of Boaz, a relative of Elimelech, who protects and provides for her. At Naomi's direction she goes to him at night on the threshing floor and asks him to spread his garment over her, as a kinsman-redeemer.",
+  "After a nearer kinsman declines, Boaz redeems Elimelech's land and marries Ruth before the elders at the gate. Their son Obed is the father of Jesse, the father of David. Matthew includes her by name, one of the few women in his genealogy."
+ ],
+ "moments": [
+  {"ref": "Ruth.1.1", "text": "In the days of the judges"},
+  {"ref": "Ruth.1.4", "text": "Marries into Naomi's family in Moab"},
+  {"ref": "Ruth.1.16-17", "text": "“Wherever you go, I will go”"},
+  {"ref": "Ruth.2.3", "text": "Gleans in the field of Boaz"},
+  {"ref": "Ruth.3.9", "text": "At the threshing floor"},
+  {"ref": "Ruth.4.13", "text": "Marries Boaz"},
+  {"ref": "Ruth.4.17", "text": "Obed, grandfather of David"},
+  {"ref": "Matt.1.5", "text": "In Jesus' genealogy"}
+ ],
+ "later": [
+  {"text": "The Law bars a Moabite from the assembly of the LORD (Deuteronomy 23:3). The Mishnah reads the ban as applying to Moabite men and not to women, which leaves room for Ruth.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Deut.23.3"}, {"kind": "primary", "title": "Mishnah, Yevamot 8:3", "url": "https://www.sefaria.org/Mishnah_Yevamot.8.3"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ruth.1.1-4.22"},
+  {"kind": "scripture", "ref": "Matt.1.5"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Philip_Hermogenes_Calderon_-_Ruth_and_Naomi_-_B2010.27.8_-_Yale_Center_for_British_Art.jpg/500px-Philip_Hermogenes_Calderon_-_Ruth_and_Naomi_-_B2010.27.8_-_Yale_Center_for_British_Art.jpg", "caption": "Ruth and Naomi (Ruth 1:16), Philip Hermogenes Calderon. Yale Center for British Art.", "credit": "Philip Hermogenes Calderon, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Philip_Hermogenes_Calderon_-_Ruth_and_Naomi_-_B2010.27.8_-_Yale_Center_for_British_Art.jpg", "license": "CC0"}
+ ]
+}

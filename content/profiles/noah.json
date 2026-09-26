@@ -1,0 +1,40 @@
+{
+ "id": "noah",
+ "name": "Noah",
+ "role": "Builder of the ark",
+ "people": ["noah_2210"],
+ "genealogy": "noah",
+ "summary": "Son of Lamech, “a righteous man, blameless in his generation,” who walked with God. Warned of a flood, he built an ark to the LORD's measurements and was saved in it with his family and the animals. Afterward he built an altar, received the covenant of the rainbow, planted a vineyard, and cursed Canaan after Ham saw him drunk and uncovered.",
+ "body": [
+  "His father names him Noah, hoping he will bring relief from the toil of the cursed ground. In a world filled with violence he finds favour in the eyes of the LORD, and is told to build an ark of gopher wood, three hundred cubits long, with rooms and pitch inside and out, and to bring his wife, his three sons and their wives, and the animals.",
+  "The rain falls forty days; the waters prevail on the earth 150 days. As they recede he sends out a raven and then a dove, which returns the second time with an olive leaf. Coming out, he builds an altar, and God makes a covenant with him and every living creature never again to destroy the earth by flood, setting the rainbow as its sign.",
+  "He plants a vineyard, drinks, and lies uncovered in his tent. Ham sees and tells his brothers, who cover their father walking backward. Waking, Noah curses Ham's son Canaan and blesses Shem and Japheth. He dies at 950. Jesus compares the days before the flood to the days before the coming of the Son of Man."
+ ],
+ "moments": [
+  {"ref": "Gen.5.29", "text": "Named for relief"},
+  {"ref": "Gen.6.8-9", "text": "Found favour; righteous and blameless"},
+  {"ref": "Gen.6.14-16", "text": "The ark's measurements"},
+  {"ref": "Gen.7.1", "text": "“Go into the ark”"},
+  {"ref": "Gen.7.11-12", "text": "The flood begins"},
+  {"ref": "Gen.8.11", "text": "The dove and the olive leaf"},
+  {"ref": "Gen.8.20", "text": "Builds an altar"},
+  {"ref": "Gen.9.12-13", "text": "The rainbow"},
+  {"ref": "Gen.9.20-21", "text": "The vineyard"},
+  {"ref": "Gen.9.25-27", "text": "Curses Canaan, blesses Shem and Japheth"},
+  {"ref": "Gen.9.29", "text": "Dies at 950"},
+  {"ref": "Matt.24.37-38", "text": "“As it was in the days of Noah”"},
+  {"ref": "Heb.11.7", "text": "By faith he built the ark"}
+ ],
+ "later": [
+  {"text": "Mesopotamian texts tell of a flood too. On the eleventh tablet of the Epic of Gilgamesh (British Museum K.3375, read by George Smith in 1872), Utnapishtim is warned by a god to build a boat, saves his family and the animals, and sends out a dove, a swallow and a raven. How these accounts and Genesis are related is argued.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Epic of Gilgamesh, Tablet XI (the Flood Tablet), British Museum K.3375", "note": "from the library of Ashurbanipal, Nineveh, 7th century BC"}, {"kind": "scholarship", "title": "The Babylonian Genesis; and The Gilgamesh Epic and Old Testament Parallels", "author": "Alexander Heidel", "year": 1949}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.5.28-9.29"},
+  {"kind": "scripture", "ref": "Matt.24.37-39"},
+  {"kind": "scripture", "ref": "Heb.11.7"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/008.A_Dove_Is_Sent_Forth_from_the_Ark.jpg/500px-008.A_Dove_Is_Sent_Forth_from_the_Ark.jpg", "caption": "A dove is sent forth from the ark (Genesis 8:8–11), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:008.A_Dove_Is_Sent_Forth_from_the_Ark.jpg", "license": "Public domain"}
+ ]
+}

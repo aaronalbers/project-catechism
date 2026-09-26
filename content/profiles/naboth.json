@@ -1,0 +1,29 @@
+{
+ "id": "naboth",
+ "name": "Naboth",
+ "role": "Jezreelite killed for his vineyard",
+ "people": ["naboth_2127"],
+ "when": "≈ 874–850 BC",
+ "whenBasis": "In the reigns of Ahab (≈874–853 BC in Thiele's reckoning) and his sons; the reckonings in the Reign tab differ by a few years.",
+ "summary": "A man of Jezreel whose vineyard lay beside Ahab's palace. When Ahab offered to buy or exchange it, he refused: the LORD forbid that he should give up the inheritance of his fathers. Jezebel had two worthless men accuse him of cursing God and the king, and he was stoned outside the city. Elijah pronounced judgment on Ahab's house for it, and Jehu later threw Ahab's son's body onto Naboth's field.",
+ "body": [
+  "His refusal rests on the Law's picture of the land as the LORD's, held by families as an inheritance. The elders and nobles of the city do exactly as Jezebel's letters say. 2 Kings adds that his sons were killed with him."
+ ],
+ "moments": [
+  {"ref": "1Kgs.21.1-2", "text": "Ahab wants his vineyard"},
+  {"ref": "1Kgs.21.3", "text": "“The LORD forbid”"},
+  {"ref": "1Kgs.21.11-13", "text": "Stoned"},
+  {"ref": "1Kgs.21.19", "text": "“Where the dogs licked up the blood of Naboth”"},
+  {"ref": "2Kgs.9.21", "text": "Jehu meets Joram at his field"},
+  {"ref": "2Kgs.9.25-26", "text": "The blood of Naboth and his sons"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.21.1-29"},
+  {"kind": "scripture", "ref": "2Kgs.9.21-26"},
+  {"kind": "scripture", "ref": "Lev.25.23"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/James_Smetham_%281821-1889%29_-_Naboth_in_his_Vineyard_-_N03203_-_National_Gallery.jpg/500px-James_Smetham_%281821-1889%29_-_Naboth_in_his_Vineyard_-_N03203_-_National_Gallery.jpg", "caption": "Naboth in his vineyard (1 Kings 21), James Smetham, 1856. Tate, London.", "credit": "James Smetham, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:James_Smetham_(1821-1889)_-_Naboth_in_his_Vineyard_-_N03203_-_National_Gallery.jpg", "license": "Public domain"}
+ ]
+}

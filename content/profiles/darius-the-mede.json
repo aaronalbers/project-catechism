@@ -1,0 +1,35 @@
+{
+ "id": "darius-the-mede",
+ "name": "Darius the Mede",
+ "role": "Ruler who put Daniel in the lions' den",
+ "people": ["darius_980"],
+ "when": "≈ 539 BC",
+ "whenBasis": "Daniel has him receive the kingdom the night Babylon fell (Daniel 5:30–31), which the Nabonidus Chronicle dates to 539 BC.",
+ "summary": "The Mede who received the kingdom of the Chaldeans at sixty-two, the night Belshazzar was killed. He set 120 satraps over the kingdom with three administrators, of whom Daniel was one, and meant to set Daniel over them all. His officials had him sign a decree that no one pray to any god or man but the king for thirty days. Bound by the law of the Medes and Persians, he had Daniel thrown to the lions, spent the night fasting, and rejoiced to find him alive in the morning.",
+ "body": [
+  "He labours until sundown to rescue Daniel, and says to him as he is thrown in, “May your God, whom you serve continually, deliver you!” He then throws in Daniel's accusers and decrees that everyone in his kingdom is to fear the God of Daniel. Daniel 9:1 calls him son of Xerxes."
+ ],
+ "moments": [
+  {"ref": "Dan.5.31", "text": "Receives the kingdom at sixty-two"},
+  {"ref": "Dan.6.1-3", "text": "The 120 satraps"},
+  {"ref": "Dan.6.8-9", "text": "Signs the decree"},
+  {"ref": "Dan.6.14", "text": "Labours to rescue Daniel"},
+  {"ref": "Dan.6.16", "text": "“May your God… deliver you!”"},
+  {"ref": "Dan.6.19-20", "text": "At the den at dawn"},
+  {"ref": "Dan.6.24", "text": "The accusers thrown in"},
+  {"ref": "Dan.6.26", "text": "His decree"},
+  {"ref": "Dan.9.1", "text": "Son of Xerxes"}
+ ],
+ "later": [
+  {"text": "No Darius the Mede is known outside Daniel; Cyrus took Babylon, and his general Gubaru (Gobryas) governed it. He has been identified with Gubaru, with Cyrus himself, reading Daniel 6:28 as “Darius, that is, Cyrus,” or taken as a figure drawn from later Persian kings.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Dan.6.28"}, {"kind": "scholarship", "title": "Darius the Mede", "author": "John C. Whitcomb", "year": 1959}, {"kind": "scholarship", "title": "Some Historical Problems in the Book of Daniel", "author": "D. J. Wiseman", "year": 1965}, {"kind": "scholarship", "title": "Darius the Mede and the Four World Empires in the Book of Daniel", "author": "H. H. Rowley", "year": 1935}], "traditions": ["Gubaru: John C. Whitcomb", "Cyrus: D. J. Wiseman", "a literary figure: H. H. Rowley and most historical-critical scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Dan.5.30-6.28"},
+  {"kind": "scripture", "ref": "Dan.9.1"},
+  {"kind": "scripture", "ref": "Dan.11.1"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/131.Daniel_in_the_Lions%27_Den.jpg/500px-131.Daniel_in_the_Lions%27_Den.jpg", "caption": "Daniel in the lions' den, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:131.Daniel_in_the_Lions%27_Den.jpg", "license": "Public domain"}
+ ]
+}

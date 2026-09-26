@@ -1,0 +1,34 @@
+{
+ "id": "thaddaeus",
+ "name": "Thaddaeus",
+ "role": "Apostle, also called Judas son of James",
+ "people": ["lebbaeus_1815"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "One of the Twelve, named Thaddaeus in Matthew and Mark, and Judas son of James in Luke and Acts. At the Last Supper Judas (not Iscariot) asked Jesus why he would reveal himself to the disciples and not to the world; Jesus answered that the Father and he would come and make their home with anyone who loves him and keeps his word.",
+ "body": [
+  "Some manuscripts of Matthew call him Lebbaeus."
+ ],
+ "moments": [
+  {"ref": "Matt.10.3", "text": "Thaddaeus"},
+  {"ref": "Luke.6.16", "text": "Judas son of James"},
+  {"ref": "John.14.22", "text": "“Why… not to the world?”"},
+  {"ref": "John.14.23", "text": "The Father and I will come"},
+  {"ref": "Acts.1.13", "text": "In the upper room"}
+ ],
+ "later": [
+  {"text": "Most readers take Thaddaeus and Judas son of James to be the same man under two names, since each list has one and not the other.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.3.18"}, {"kind": "scripture", "ref": "Luke.6.16"}], "traditions": ["most commentators"]},
+  {"text": "Eusebius tells how Thaddaeus, whom he counts one of the Seventy, was sent to King Abgar of Edessa; Western tradition joins him with Simon the Zealot in Persia.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 1.13"}], "traditions": ["Eusebius and Syriac tradition", "Western Catholic tradition"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.10.3"},
+  {"kind": "scripture", "ref": "Mark.3.18"},
+  {"kind": "scripture", "ref": "Luke.6.16"},
+  {"kind": "scripture", "ref": "John.14.22-24"},
+  {"kind": "scripture", "ref": "Acts.1.13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Brooklyn_Museum_-_Saint_Thaddeus_or_Saint_Jude_%28Saint_Thad%C3%A9e_ou_Saint_Jude%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_Saint_Thaddeus_or_Saint_Jude_%28Saint_Thad%C3%A9e_ou_Saint_Jude%29_-_James_Tissot_-_overall.jpg", "caption": "Saint Thaddeus or Saint Jude, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Saint_Thaddeus_or_Saint_Jude_(Saint_Thad%C3%A9e_ou_Saint_Jude)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

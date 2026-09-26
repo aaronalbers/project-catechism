@@ -1,0 +1,45 @@
+{
+ "id": "jeremiah",
+ "name": "Jeremiah",
+ "role": "Prophet of Judah's last days",
+ "people": ["jeremiah_853"],
+ "when": "≈ 627–580s BC",
+ "whenBasis": "From the thirteenth year of Josiah (Jeremiah 1:2), ≈627 BC in Thiele's reckoning, until after Jerusalem fell in 586 BC and he was taken to Egypt.",
+ "summary": "A priest's son from Anathoth, called as a youth in Josiah's reign, who prophesied for forty years that Judah would fall to Babylon. He was beaten, put in stocks, tried for his life, thrown into a muddy cistern, and imprisoned through the siege. His scroll was burned by Jehoiakim and dictated again to Baruch. He bought a field as a sign that houses and fields would again be bought in the land, promised a new covenant written on the heart, and was taken to Egypt after Jerusalem fell.",
+ "body": [
+  "When he protests that he is only a youth, the LORD touches his mouth. He is forbidden to marry, and preaches in the temple gate that the temple will not save them. His complaints to God are among the rawest words in Scripture: he curses the day he was born, and says the word is like a fire shut up in his bones.",
+  "He wears a yoke to tell the nations to serve Babylon, writes to the exiles to build houses and seek the city's welfare, and foretells seventy years. Charged with deserting, he is jailed; officials throw him into a cistern, and Ebed-melech pulls him out. Zedekiah consults him in secret.",
+  "After the fall the Babylonians free him, and he stays with Gedaliah. When the survivors decide to flee to Egypt, he warns them not to, and they take him along. His last words in the book are to the Judeans in Egypt."
+ ],
+ "moments": [
+  {"ref": "Jer.1.1-2", "text": "A priest of Anathoth"},
+  {"ref": "Jer.1.6-9", "text": "Called as a youth"},
+  {"ref": "Jer.7.2-4", "text": "The temple sermon"},
+  {"ref": "Jer.16.2", "text": "Not to marry"},
+  {"ref": "Jer.20.2", "text": "Put in stocks"},
+  {"ref": "Jer.20.9", "text": "A fire shut up in his bones"},
+  {"ref": "Jer.20.14", "text": "Curses the day he was born"},
+  {"ref": "Jer.26.8", "text": "Tried for his life"},
+  {"ref": "Jer.27.2", "text": "The yoke"},
+  {"ref": "Jer.29.4-7", "text": "Letter to the exiles"},
+  {"ref": "Jer.31.31-33", "text": "A new covenant"},
+  {"ref": "Jer.32.9-10", "text": "Buys a field"},
+  {"ref": "Jer.36.4", "text": "Dictates to Baruch"},
+  {"ref": "Jer.38.6", "text": "The cistern"},
+  {"ref": "Jer.43.6-7", "text": "Taken to Egypt"},
+  {"ref": "Matt.16.14", "text": "“Jeremiah or one of the prophets”"}
+ ],
+ "later": [
+  {"text": "Letter 4 of the Lachish ostraca, written as the Babylonians closed in, reports watching for the signal fires of Lachish, “for we cannot see Azekah”, the last two fortified cities Jeremiah 34:7 names as holding out.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Lachish ostraca, Letter 4", "note": "found at Tell ed-Duweir by J. L. Starkey, 1935; British Museum and Israel Museum"}, {"kind": "scripture", "ref": "Jer.34.7"}]},
+  {"text": "A clay seal impression of “Gemaryahu son of Shaphan,” the official in whose room Baruch read Jeremiah's scroll (36:10), was found in the City of David excavations in 1982.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Bulla of Gemaryahu son of Shaphan, City of David", "note": "Yigal Shiloh's excavations, 1982"}, {"kind": "scripture", "ref": "Jer.36.10"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Jer.1.1-52.34"},
+  {"kind": "scripture", "ref": "2Chr.35.25"},
+  {"kind": "scripture", "ref": "2Chr.36.21-22"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Jeremia_treurend_over_de_verwoesting_van_Jeruzalem_Rijksmuseum_SK-A-3276.jpeg/500px-Jeremia_treurend_over_de_verwoesting_van_Jeruzalem_Rijksmuseum_SK-A-3276.jpeg", "caption": "Jeremiah lamenting the destruction of Jerusalem, Rembrandt, 1630. Rijksmuseum, Amsterdam.", "credit": "Rembrandt, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jeremia_treurend_over_de_verwoesting_van_Jeruzalem_Rijksmuseum_SK-A-3276.jpeg", "license": "Public domain"}
+ ]
+}

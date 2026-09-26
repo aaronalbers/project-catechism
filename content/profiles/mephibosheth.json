@@ -1,0 +1,31 @@
+{
+ "id": "mephibosheth",
+ "name": "Mephibosheth",
+ "role": "Jonathan's lame son, cared for by David",
+ "people": ["mephibosheth_1999"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "Jonathan's son, lamed at five when his nurse dropped him fleeing at the news of Saul's and Jonathan's deaths. David, seeking someone of Saul's house to show kindness to for Jonathan's sake, restored Saul's land to him and had him eat at the king's table always. During Absalom's revolt his servant Ziba accused him of hoping for the throne; he met David on his return unwashed and unshaven, and David divided the land between them.",
+ "body": [
+  "Brought before David, he falls on his face: “What is your servant, that you should show regard for a dead dog like me?” He has a young son, Mica.",
+  "He says Ziba deceived him, leaving him behind when he wanted to go with the king. Told the land will be divided, he answers, “since my lord the king has safely come to his own house, let Ziba take it all!” David spares him when the Gibeonites demand Saul's descendants, because of his oath to Jonathan."
+ ],
+ "moments": [
+  {"ref": "2Sam.4.4", "text": "Lamed at five"},
+  {"ref": "2Sam.9.1-3", "text": "David seeks him"},
+  {"ref": "2Sam.9.6-8", "text": "“A dead dog like me”"},
+  {"ref": "2Sam.9.13", "text": "At the king's table"},
+  {"ref": "2Sam.16.3-4", "text": "Ziba's accusation"},
+  {"ref": "2Sam.19.24-27", "text": "Meets David"},
+  {"ref": "2Sam.19.29-30", "text": "“Let Ziba take it all!”"},
+  {"ref": "2Sam.21.7", "text": "Spared"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.4.4"},
+  {"kind": "scripture", "ref": "2Sam.9.1-13"},
+  {"kind": "scripture", "ref": "2Sam.16.1-4"},
+  {"kind": "scripture", "ref": "2Sam.19.24-30"},
+  {"kind": "scripture", "ref": "2Sam.21.7"}
+ ]
+}

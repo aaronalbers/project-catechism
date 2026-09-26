@@ -1,0 +1,33 @@
+{
+ "id": "samson",
+ "name": "Samson",
+ "role": "Nazirite judge, set against the Philistines",
+ "people": ["samson_2468"],
+ "when": "≈ 12th–11th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one. Samson's Philistines put him near the end of it.",
+ "summary": "Promised to the barren wife of Manoah of Zorah as a Nazirite from the womb, Samson fought the Philistines alone with a strength the text ties to the Spirit of the LORD. He judged Israel twenty years, told Delilah the secret of his hair, was blinded, and died pulling down the temple of Dagon.",
+ "body": [
+  "An angel tells his mother that no razor is to touch his head: he will be a Nazirite from the womb and “begin the deliverance of Israel from the hand of the Philistines.”",
+  "His feats come when “the Spirit of the LORD came powerfully upon him”: a lion torn apart, thirty men of Ashkelon struck down, a thousand killed with a donkey's jawbone. They also grow out of his own quarrels and desires, which the book does not hide.",
+  "Delilah, paid by the Philistine lords, asks him four times where his strength lies. He tells her at last, is shaved, seized and blinded, and set to grind grain in Gaza. At a feast to Dagon he prays for strength once more and brings the temple down, “So in his death he killed more than he had killed in his life.”"
+ ],
+ "moments": [
+  {"ref": "Judg.13.5", "text": "A Nazirite from the womb"},
+  {"ref": "Judg.14.5-6", "text": "Tears apart a lion"},
+  {"ref": "Judg.15.14-15", "text": "A thousand struck down with a jawbone"},
+  {"ref": "Judg.15.20", "text": "Judges Israel twenty years"},
+  {"ref": "Judg.16.4-5", "text": "Delilah, paid by the Philistines"},
+  {"ref": "Judg.16.17", "text": "Tells her the secret of his hair"},
+  {"ref": "Judg.16.21", "text": "Blinded and set to grind in Gaza"},
+  {"ref": "Judg.16.28-30", "text": "Pulls down the temple of Dagon"},
+  {"ref": "Heb.11.32", "text": "Named among the faithful"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.13.1-16.31"},
+  {"kind": "scripture", "ref": "Heb.11.32"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Samson_and_Delilah_by_Rubens.jpg/500px-Samson_and_Delilah_by_Rubens.jpg", "caption": "Samson and Delilah (Judges 16:19), Peter Paul Rubens, ≈1609–10. National Gallery, London.", "credit": "Peter Paul Rubens, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Samson_and_Delilah_by_Rubens.jpg", "license": "Public domain"}
+ ]
+}

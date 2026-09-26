@@ -1,0 +1,43 @@
+{
+ "id": "nehemiah",
+ "name": "Nehemiah",
+ "role": "Cupbearer who rebuilt Jerusalem's walls",
+ "people": ["nehemiah_2172"],
+ "when": "≈ 445–430s BC",
+ "whenBasis": "From the twentieth to the thirty-second year of Artaxerxes (Nehemiah 2:1, 13:6), taken as Artaxerxes I, and some time after. The Elephantine papyri of 407 BC fit a Sanballat of Nehemiah's generation.",
+ "summary": "Son of Hacaliah and cupbearer to Artaxerxes in Susa. Hearing that Jerusalem's wall was broken down, he wept, fasted and prayed, and when the king asked why his face was sad, he prayed to the God of heaven and asked to be sent to rebuild the city. He inspected the ruins by night, rallied the people, and finished the wall in fifty-two days against the mockery and plots of Sanballat and Tobiah. As governor he refused the governor's food allowance, cancelled the debts that were enslaving the poor, and on a second term threw Tobiah out of the temple storeroom and enforced the Sabbath.",
+ "body": [
+  "His book is largely his own memoir, punctuated with short prayers: “Remember me, O my God.” The builders work with a tool in one hand and a weapon in the other. When his enemies invite him to meet on the plain of Ono he answers that he is doing a great work and cannot come down.",
+  "With Ezra he leads the reading of the Law and the dedication of the wall, with two thanksgiving choirs on top of it. Returning after a time with the king, he finds Tobiah living in the temple, the Levites unpaid, trading on the Sabbath and marriages with foreign women, and puts a stop to each."
+ ],
+ "moments": [
+  {"ref": "Neh.1.1", "text": "In the citadel of Susa"},
+  {"ref": "Neh.1.4", "text": "Weeps and fasts"},
+  {"ref": "Neh.1.11", "text": "The king's cupbearer"},
+  {"ref": "Neh.2.2", "text": "“Why is your face sad?”"},
+  {"ref": "Neh.2.4-5", "text": "Prays, then asks"},
+  {"ref": "Neh.2.13", "text": "Inspects the walls by night"},
+  {"ref": "Neh.2.17", "text": "“Let us rebuild the wall”"},
+  {"ref": "Neh.4.17", "text": "A weapon in one hand"},
+  {"ref": "Neh.5.10-11", "text": "Cancels the debts"},
+  {"ref": "Neh.5.14", "text": "Refuses the governor's food"},
+  {"ref": "Neh.6.3", "text": "“I am doing a great work”"},
+  {"ref": "Neh.6.15", "text": "Finished in fifty-two days"},
+  {"ref": "Neh.8.9", "text": "With Ezra at the reading"},
+  {"ref": "Neh.12.31", "text": "The dedication"},
+  {"ref": "Neh.13.8", "text": "Throws out Tobiah's goods"},
+  {"ref": "Neh.13.15-19", "text": "The Sabbath kept"}
+ ],
+ "later": [
+  {"text": "A papyrus of 407 BC from the Jewish colony at Elephantine in Egypt names the sons of Sanballat governor of Samaria and Bagohi as governor of Judah by then.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Elephantine papyri, Cowley 30–31 (petition to Bagohi, governor of Judah, 407 BC)", "note": "names Johanan the high priest in Jerusalem and Delaiah and Shelemiah, sons of Sanballat governor of Samaria"}]},
+  {"text": "2 Maccabees credits him with recovering the altar fire hidden at the exile and founding a library of the books of the kings, prophets and David.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "2 Maccabees 1:18–36; 2:13"}], "traditions": ["2 Maccabees"]},
+  {"text": "Eilat Mazar identified a stretch of wall on the City of David's ridge as Nehemiah's; Israel Finkelstein and others dated it earlier and argue that Persian-period Jerusalem was small.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Wall That Nehemiah Built", "author": "Eilat Mazar", "year": 2009, "note": "Biblical Archaeology Review 35:2"}, {"kind": "scholarship", "title": "Jerusalem in the Persian (and Early Hellenistic) Period and the Wall of Nehemiah", "author": "Israel Finkelstein", "year": 2008, "note": "Journal for the Study of the Old Testament 32"}], "traditions": ["Eilat Mazar", "Israel Finkelstein and others, against"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Neh.1.1-13.31"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/108.Nehemiah_Views_the_Ruins_of_Jerusalem%27s_Walls.jpg/500px-108.Nehemiah_Views_the_Ruins_of_Jerusalem%27s_Walls.jpg", "caption": "Nehemiah views the ruins of Jerusalem's walls, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:108.Nehemiah_Views_the_Ruins_of_Jerusalem%27s_Walls.jpg", "license": "Public domain"}
+ ]
+}

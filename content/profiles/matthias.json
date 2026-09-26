@@ -1,0 +1,26 @@
+{
+ "id": "matthias",
+ "name": "Matthias",
+ "role": "Chosen by lot to replace Judas",
+ "people": ["matthias_1972"],
+ "when": "≈ AD 30–35",
+ "whenBasis": "The first years of the Jerusalem church, between the crucifixion (AD 30 or 33) and Saul's conversion, which Paul's own reckoning (Galatians 1:18; 2:1) and the Gallio date put ≈AD 33–35.",
+ "summary": "One of the men who had been with the apostles the whole time from John's baptism to the ascension. After Judas's death Peter called for one of them to become a witness of the resurrection. Two were put forward, Joseph called Barsabbas and Matthias; the disciples prayed, cast lots, and the lot fell to Matthias, who was added to the eleven apostles.",
+ "body": [
+  "Peter reads Judas's end in the Psalms: “May another take his position.” Matthias is not named again."
+ ],
+ "moments": [
+  {"ref": "Acts.1.21-22", "text": "A witness of the resurrection"},
+  {"ref": "Acts.1.23", "text": "Put forward"},
+  {"ref": "Acts.1.24-25", "text": "The prayer"},
+  {"ref": "Acts.1.26", "text": "The lot falls to him"},
+  {"ref": "Acts.1.20", "text": "“May another take his position”"}
+ ],
+ "later": [
+  {"text": "Eusebius reports that he had been one of the Seventy whom Jesus sent out. Traditions of his mission and death disagree.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 1.12.3"}], "traditions": ["Eusebius", "Catholic and Orthodox traditions, variously"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.1.15-26"}
+ ]
+}

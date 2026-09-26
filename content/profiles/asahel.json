@@ -1,0 +1,26 @@
+{
+ "id": "asahel",
+ "name": "Asahel",
+ "role": "Joab's youngest brother, killed by Abner",
+ "people": ["asahel_320"],
+ "when": "≈ 1000s BC",
+ "whenBasis": "In David's reign, ≈1010–970 BC, counted back from Solomon as Thiele and most chronologies do.",
+ "summary": "The youngest son of Zeruiah, as fleet-footed as a wild gazelle. In the battle at Gibeon he chased Abner and would not turn aside, though Abner twice warned him; Abner struck him with the butt of his spear, and he died where he fell. Joab later killed Abner in revenge.",
+ "body": [
+  "Abner tells him to take the armour of some young man instead: “How could I show my face to your brother Joab?” Everyone who comes to the place where Asahel lies stops there. He is buried in his father's tomb in Bethlehem, and is listed first among the Thirty."
+ ],
+ "moments": [
+  {"ref": "2Sam.2.18", "text": "Fleet as a gazelle"},
+  {"ref": "2Sam.2.19-22", "text": "Pursues Abner"},
+  {"ref": "2Sam.2.23", "text": "Killed"},
+  {"ref": "2Sam.2.32", "text": "Buried in Bethlehem"},
+  {"ref": "2Sam.3.27", "text": "Avenged"},
+  {"ref": "2Sam.23.24", "text": "Among the Thirty"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Sam.2.18-32"},
+  {"kind": "scripture", "ref": "2Sam.3.27-30"},
+  {"kind": "scripture", "ref": "2Sam.23.24"}
+ ]
+}

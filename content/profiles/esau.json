@@ -1,0 +1,36 @@
+{
+ "id": "esau",
+ "name": "Esau",
+ "role": "Isaac's firstborn, ancestor of Edom",
+ "people": ["esau_1216"],
+ "genealogy": "esau",
+ "summary": "The elder twin, red and hairy at birth, a skilful hunter and his father's favourite. He sold his birthright to Jacob for a bowl of stew and lost his father's blessing when Jacob deceived Isaac, and vowed to kill his brother. Twenty years later he ran to meet Jacob and embraced him. Genesis traces the chiefs and kings of Edom from him.",
+ "body": [
+  "Coming in exhausted from the field, he asks Jacob for some of the red stew, and is called Edom, red, for it. Jacob asks for his birthright in exchange, and Esau, saying he is about to die, swears it away: “Thus Esau despised his birthright.” He marries two Hittite women, a grief to his parents.",
+  "When he comes in with the game to find the blessing given, he cries out with a loud and bitter cry and asks if his father has only one blessing. He plans to kill Jacob once Isaac is dead. But when Jacob returns with gifts and bows seven times, Esau runs to meet him, embraces him and weeps, and the brothers bury Isaac together.",
+  "Hebrews calls him godless for selling his birthright for a single meal; Malachi and Paul contrast Jacob loved and Esau hated, of the two peoples."
+ ],
+ "moments": [
+  {"ref": "Gen.25.25", "text": "Born red and hairy"},
+  {"ref": "Gen.25.27-28", "text": "A hunter, loved by Isaac"},
+  {"ref": "Gen.25.29-34", "text": "Sells his birthright"},
+  {"ref": "Gen.26.34-35", "text": "Marries Hittite women"},
+  {"ref": "Gen.27.34", "text": "A loud and bitter cry"},
+  {"ref": "Gen.27.41", "text": "Vows to kill Jacob"},
+  {"ref": "Gen.33.4", "text": "Runs to embrace Jacob"},
+  {"ref": "Gen.35.29", "text": "Buries Isaac with Jacob"},
+  {"ref": "Gen.36.1", "text": "That is, Edom"},
+  {"ref": "Heb.12.16-17", "text": "Sold his birthright for a meal"},
+  {"ref": "Rom.9.13", "text": "“Esau I hated”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.25.19-36.43"},
+  {"kind": "scripture", "ref": "Heb.12.16-17"},
+  {"kind": "scripture", "ref": "Mal.1.2-3"},
+  {"kind": "scripture", "ref": "Rom.9.10-13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/025.Jacob_and_Esau_Meet.jpg/500px-025.Jacob_and_Esau_Meet.jpg", "caption": "Jacob and Esau meet (Genesis 33:4), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:025.Jacob_and_Esau_Meet.jpg", "license": "Public domain"}
+ ]
+}

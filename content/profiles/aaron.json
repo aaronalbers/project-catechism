@@ -1,0 +1,41 @@
+{
+ "id": "aaron",
+ "name": "Aaron",
+ "role": "Moses' brother, Israel's first high priest",
+ "people": ["aaron_1"],
+ "genealogy": "aaron",
+ "when": "≈ 15th or 13th century BC",
+ "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC; many historians put it under Ramesses II, ≈1270s–1250s BC. The text gives no date in a calendar we can fix.",
+ "summary": "Moses' elder brother, a Levite, sent to speak for him before Pharaoh. He held up Moses' hands with Hur while Israel fought Amalek, made the golden calf when the people asked for gods, and was consecrated with his sons as priest. His staff budded to confirm his priesthood; for the failure at Meribah he died on Mount Hor before Israel entered the land.",
+ "body": [
+  "When Moses protests that he is slow of speech, the LORD tells him that his brother Aaron speaks well and will be his mouth. Aaron meets him in the wilderness, speaks the LORD's words to the elders, and throws down his staff before Pharaoh, where it becomes a serpent and swallows the magicians' staffs.",
+  "While Moses is on the mountain, the people ask him to make them gods. He takes their gold earrings and makes a calf, and proclaims a feast to the LORD. Confronted, he tells Moses he threw the gold into the fire, and “out came this calf!”",
+  "He is anointed high priest and wears the garments made for glory and beauty. His sons Nadab and Abihu die offering unauthorized fire, and Aaron is silent. He and Miriam speak against Moses; he stands with a censer between the dead and the living to stop a plague; his staff alone of twelve buds, blossoms and bears almonds. Because Moses and Aaron did not treat the LORD as holy at Meribah, he dies on Mount Hor, at 123, after Moses dresses his son Eleazar in his garments."
+ ],
+ "moments": [
+  {"ref": "Exod.4.14-16", "text": "To be Moses' mouth"},
+  {"ref": "Exod.7.10-12", "text": "His staff before Pharaoh"},
+  {"ref": "Exod.17.12", "text": "Holds up Moses' hands"},
+  {"ref": "Exod.28.1", "text": "Chosen as priest"},
+  {"ref": "Exod.32.2-4", "text": "The golden calf"},
+  {"ref": "Exod.32.24", "text": "“Out came this calf!”"},
+  {"ref": "Lev.8.12", "text": "Anointed"},
+  {"ref": "Lev.10.1-3", "text": "Nadab and Abihu; Aaron is silent"},
+  {"ref": "Num.12.1-2", "text": "Speaks against Moses"},
+  {"ref": "Num.16.47-48", "text": "Between the dead and the living"},
+  {"ref": "Num.17.8", "text": "His staff buds"},
+  {"ref": "Num.20.12", "text": "Meribah"},
+  {"ref": "Num.20.28", "text": "Dies on Mount Hor"},
+  {"ref": "Heb.5.4", "text": "“Called by God, just as Aaron was”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Exod.4.14-40.38"},
+  {"kind": "scripture", "ref": "Lev.8.1-10.20"},
+  {"kind": "scripture", "ref": "Num.12.1-20.29"},
+  {"kind": "scripture", "ref": "Num.33.39"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/032.Moses_and_Aaron_Appear_before_Pharaoh.jpg/500px-032.Moses_and_Aaron_Appear_before_Pharaoh.jpg", "caption": "Moses and Aaron appear before Pharaoh (Exodus 7), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:032.Moses_and_Aaron_Appear_before_Pharaoh.jpg", "license": "Public domain"}
+ ]
+}

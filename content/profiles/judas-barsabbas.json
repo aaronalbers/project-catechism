@@ -1,0 +1,26 @@
+{
+ "id": "judas-barsabbas",
+ "name": "Judas Barsabbas",
+ "role": "Prophet sent from Jerusalem with the council's letter",
+ "people": ["judas_1759"],
+ "when": "≈ AD 48–49",
+ "whenBasis": "The Jerusalem council, before Paul's second journey, counting back from the Gallio date.",
+ "summary": "Judas called Barsabbas, one of two leaders among the brothers whom the apostles and elders chose, with Silas, to go to Antioch with Paul and Barnabas carrying the council's letter to the Gentile believers. He and Silas were to tell them in person what the letter said. Being prophets themselves, they said much to encourage and strengthen the brothers, and after some time were sent back in peace to those who had sent them.",
+ "body": [
+  "The letter calls Judas and Silas men who will confirm by word of mouth what it says: that the Gentiles need keep only a few necessary things. He is not named again."
+ ],
+ "moments": [
+  {"ref": "Acts.15.22", "text": "Chosen with Silas"},
+  {"ref": "Acts.15.23", "text": "The letter"},
+  {"ref": "Acts.15.27", "text": "To tell them in person"},
+  {"ref": "Acts.15.32", "text": "Prophets who encourage"},
+  {"ref": "Acts.15.33", "text": "Sent back in peace"}
+ ],
+ "later": [
+  {"text": "His surname is the same as that of Joseph Barsabbas, who stood with Matthias for Judas Iscariot's place, and some take the two to be brothers.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Acts.1.23"}], "traditions": ["some commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.15.22-35"}
+ ]
+}

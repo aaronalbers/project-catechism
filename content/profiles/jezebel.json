@@ -1,0 +1,38 @@
+{
+ "id": "jezebel",
+ "name": "Jezebel",
+ "role": "Queen of Israel, devotee of Baal",
+ "people": ["jezebel_1605"],
+ "when": "≈ 874–850 BC",
+ "whenBasis": "In the reigns of Ahab (≈874–853 BC in Thiele's reckoning) and his sons; the reckonings in the Reign tab differ by a few years.",
+ "summary": "Daughter of Ethbaal king of the Sidonians and wife of Ahab. She killed the prophets of the LORD and fed 850 prophets of Baal and Asherah at her table. After Carmel she swore to kill Elijah, who fled. She arranged Naboth's death by false witnesses in letters sealed with Ahab's seal, so Ahab could take his vineyard. When Jehu rode into Jezreel she painted her eyes and called down to him from a window; her servants threw her down, and the dogs ate her, as Elijah had said.",
+ "body": [
+  "When Ahab sulks over the vineyard she asks, “Do you not reign over Israel?” She proclaims a fast, seats Naboth prominently, sets two worthless men to accuse him of cursing God and the king, and has him stoned.",
+  "At Jehu's coup she greets him, “Have you come in peace, O Zimri, murderer of your master?”, recalling the usurper who reigned seven days. Kings says there was never anyone like Ahab, who sold himself to do evil, urged on by his wife. Revelation calls a false prophetess of Thyatira by her name."
+ ],
+ "moments": [
+  {"ref": "1Kgs.16.31", "text": "Daughter of Ethbaal"},
+  {"ref": "1Kgs.18.4", "text": "Kills the LORD's prophets"},
+  {"ref": "1Kgs.18.19", "text": "Prophets at her table"},
+  {"ref": "1Kgs.19.1-2", "text": "Swears to kill Elijah"},
+  {"ref": "1Kgs.21.7", "text": "“Do you not reign over Israel?”"},
+  {"ref": "1Kgs.21.8-10", "text": "The letters"},
+  {"ref": "1Kgs.21.23", "text": "Elijah's word against her"},
+  {"ref": "1Kgs.21.25", "text": "Urged on by his wife"},
+  {"ref": "2Kgs.9.30-31", "text": "Paints her eyes"},
+  {"ref": "2Kgs.9.33", "text": "Thrown down"},
+  {"ref": "2Kgs.9.36-37", "text": "The dogs"},
+  {"ref": "Rev.2.20", "text": "“That woman Jezebel”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.16.31"},
+  {"kind": "scripture", "ref": "1Kgs.18.4-19.2"},
+  {"kind": "scripture", "ref": "1Kgs.21.1-25"},
+  {"kind": "scripture", "ref": "2Kgs.9.30-37"},
+  {"kind": "scripture", "ref": "Rev.2.20"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/097.The_Death_of_Jezebel.jpg/500px-097.The_Death_of_Jezebel.jpg", "caption": "The death of Jezebel (2 Kings 9:33), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:097.The_Death_of_Jezebel.jpg", "license": "Public domain"}
+ ]
+}

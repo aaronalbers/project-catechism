@@ -1,0 +1,33 @@
+{
+ "id": "felix",
+ "name": "Felix",
+ "role": "Roman governor who kept Paul in prison two years",
+ "people": ["felix_1257"],
+ "when": "≈ AD 52–60 reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. Dates of his term vary by two or three years in the sources.",
+ "summary": "Antonius Felix, governor of Judea at Caesarea, to whom the commander Claudius Lysias sent Paul under guard. He heard the high priest's lawyer Tertullus and Paul's defence, and, well informed about the Way, adjourned the case. With his wife Drusilla he sent for Paul to hear him on faith in Christ, but when Paul spoke of righteousness, self-control and the coming judgment, Felix became frightened and sent him away. Hoping for a bribe, he sent for Paul often. After two years he was succeeded by Porcius Festus and left Paul in prison to please the Jews.",
+ "body": [
+  "Tertullus flatters him on the long peace and reforms he has brought the nation."
+ ],
+ "moments": [
+  {"ref": "Acts.23.24", "text": "Paul sent to him"},
+  {"ref": "Acts.23.26", "text": "Lysias's letter"},
+  {"ref": "Acts.24.2-3", "text": "Tertullus's flattery"},
+  {"ref": "Acts.24.10", "text": "Paul's defence"},
+  {"ref": "Acts.24.22", "text": "Adjourns the hearing"},
+  {"ref": "Acts.24.24", "text": "With Drusilla"},
+  {"ref": "Acts.24.25", "text": "Frightened"},
+  {"ref": "Acts.24.26", "text": "Hoping for a bribe"},
+  {"ref": "Acts.24.27", "text": "Leaves Paul in prison"}
+ ],
+ "later": [
+  {"text": "Felix was a freed slave, brother of Claudius's minister Pallas; Tacitus says he exercised the power of a king with the mind of a slave. Josephus says he persuaded Drusilla, a daughter of Agrippa I, to leave her husband and marry him.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Tacitus, Histories 5.9"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.141–144"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.23.23-24.27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Hogarth_-_Paul_Before_Felix%2C_1747-1751.jpg/500px-Hogarth_-_Paul_Before_Felix%2C_1747-1751.jpg", "caption": "Paul before Felix, William Hogarth, 1747–51.", "credit": "William Hogarth, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Hogarth_-_Paul_Before_Felix,_1747-1751.jpg", "license": "Public domain"}
+ ]
+}

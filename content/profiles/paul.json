@@ -1,0 +1,43 @@
+{
+ "id": "paul",
+ "name": "Paul",
+ "role": "Pharisee turned apostle to the Gentiles",
+ "people": ["paul_2479"],
+ "when": "≈ AD 33–60s",
+ "whenBasis": "From his conversion, a few years after the crucifixion, to his imprisonment in Rome where Acts leaves him. The Gallio inscription pins his time in Corinth (Acts 18:12) to ≈AD 51–52; see below.",
+ "summary": "Saul of Tarsus, a Pharisee of the tribe of Benjamin taught by Gamaliel, persecuted the church until the risen Jesus met him on the road to Damascus. As Paul he carried the gospel through Asia Minor and Greece, wrote letters that make up much of the New Testament, and was taken to Rome under guard.",
+ "body": [
+  "He first appears holding the coats of those who stone Stephen, then as one who “began to destroy the church.” On the road to Damascus a light from heaven throws him to the ground and a voice asks, “Saul, Saul, why do you persecute Me?” Blinded, he is healed and baptized by Ananias.",
+  "Sent out from Antioch with Barnabas, he travels through Cyprus, Asia Minor, Macedonia and Greece, preaching first in synagogues and then to Gentiles, founding churches and writing to them. Acts calls him Paul from Cyprus on. He argues in Athens at the Areopagus, stays eighteen months in Corinth, and is brought before the proconsul Gallio.",
+  "Arrested in the temple at Jerusalem, he defends himself before crowds, the council, the governors Felix and Festus and King Agrippa, appeals to Caesar, is shipwrecked on Malta, and reaches Rome, where Acts ends with him under guard, preaching freely."
+ ],
+ "moments": [
+  {"ref": "Acts.7.58", "text": "At Stephen's stoning"},
+  {"ref": "Acts.9.3-5", "text": "“Saul, Saul, why do you persecute Me?”"},
+  {"ref": "Acts.13.2-3", "text": "Sent out from Antioch"},
+  {"ref": "Acts.13.9", "text": "“Saul, who was also called Paul”"},
+  {"ref": "Acts.17.22", "text": "At the Areopagus in Athens"},
+  {"ref": "Acts.18.12", "text": "Before Gallio at Corinth"},
+  {"ref": "Acts.22.3", "text": "Taught by Gamaliel"},
+  {"ref": "Acts.27.41", "text": "Shipwrecked"},
+  {"ref": "Acts.28.16", "text": "In Rome, under guard"},
+  {"ref": "Phil.3.5", "text": "“A Hebrew of Hebrews”"},
+  {"ref": "2Tim.4.6-7", "text": "“I have finished the race”"}
+ ],
+ "later": [
+  {"text": "A letter of the emperor Claudius carved at Delphi names Gallio as proconsul of Achaia and is dated by Claudius's twenty-sixth acclamation as emperor, in AD 52. It sets Gallio's year in office, and so Paul's hearing before him, at ≈AD 51–52: the firmest date in Paul's life.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Delphi inscription of Claudius (the Gallio inscription)", "note": "Delphi Archaeological Museum; fragments first published by Émile Bourguet, 1905"}, {"kind": "scholarship", "title": "St. Paul's Corinth: Texts and Archaeology", "author": "Jerome Murphy-O'Connor", "year": 2002}]},
+  {"text": "He was beheaded in Rome under Nero, at about the time Peter died there.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "1 Clement 5"}, {"kind": "primary", "title": "Eusebius, Church History 2.25"}, {"kind": "primary", "title": "Tertullian, Prescription against Heretics 36"}]},
+  {"text": "Seven letters are accepted as his by nearly all scholars: Romans, 1 and 2 Corinthians, Galatians, Philippians, 1 Thessalonians and Philemon. Whether he wrote the other six that bear his name is disputed; tradition holds that he wrote them all.", "confidence": "consensus", "sources": [{"kind": "scholarship", "title": "An Introduction to the New Testament", "author": "Raymond E. Brown", "year": 1997}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.7.58-8.3"},
+  {"kind": "scripture", "ref": "Acts.9.1-30"},
+  {"kind": "scripture", "ref": "Acts.13.1-28.31"},
+  {"kind": "scripture", "ref": "Phil.3.4-6"},
+  {"kind": "scripture", "ref": "Gal.1.13-24"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Rembrandt_van_Rijn_%28and_Workshop%3F%29%2C_The_Apostle_Paul%2C_c._1657%2C_NGA_1198.jpg/500px-Rembrandt_van_Rijn_%28and_Workshop%3F%29%2C_The_Apostle_Paul%2C_c._1657%2C_NGA_1198.jpg", "caption": "The Apostle Paul, Rembrandt (and workshop?), ≈1657. National Gallery of Art, Washington.", "credit": "Rembrandt van Rijn (and workshop?), Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_(and_Workshop%3F),_The_Apostle_Paul,_c._1657,_NGA_1198.jpg", "license": "CC0"}
+ ]
+}

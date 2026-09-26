@@ -1,0 +1,37 @@
+{
+ "id": "silas",
+ "name": "Silas",
+ "role": "Leader of the Jerusalem church who travelled with Paul",
+ "people": ["silas_2740"],
+ "when": "≈ AD 49–52",
+ "whenBasis": "Paul's second journey, dated from the Gallio inscription, which puts him in Corinth ≈AD 50–52. See the card on the Gallio inscription.",
+ "summary": "A leader among the brothers in Jerusalem and a prophet, sent with Judas Barsabbas to carry the council's letter to Antioch. When Paul and Barnabas parted, Paul chose Silas. In Philippi the two were beaten and jailed, and at midnight were praying and singing hymns when an earthquake opened the doors; the jailer and his household believed. He went on with Paul to Thessalonica and Berea, and joined him in Corinth. Paul names him Silvanus as co-sender of both letters to the Thessalonians.",
+ "body": [
+  "At Philippi Paul tells the magistrates that they have beaten Roman citizens without a trial. Peter's first letter says it was written through Silvanus, a faithful brother."
+ ],
+ "moments": [
+  {"ref": "Acts.15.22", "text": "Chosen to carry the letter"},
+  {"ref": "Acts.15.32", "text": "A prophet"},
+  {"ref": "Acts.15.40", "text": "Chosen by Paul"},
+  {"ref": "Acts.16.22-24", "text": "Beaten and jailed"},
+  {"ref": "Acts.16.25", "text": "Hymns at midnight"},
+  {"ref": "Acts.16.37", "text": "Roman citizens"},
+  {"ref": "Acts.17.4", "text": "In Thessalonica"},
+  {"ref": "Acts.17.10", "text": "To Berea"},
+  {"ref": "Acts.18.5", "text": "In Corinth"},
+  {"ref": "2Cor.1.19", "text": "Silvanus preached"},
+  {"ref": "1Thess.1.1", "text": "Co-sender"},
+  {"ref": "1Pet.5.12", "text": "Through Silvanus"}
+ ],
+ "later": [
+  {"text": "Silas is the Greek short form and Silvanus the Latin name of the same man, most scholars agree.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Acts.15.22"}, {"kind": "scripture", "ref": "1Thess.1.1"}, {"kind": "lexicon", "title": "Greek Silas; Latin Silvanus"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.15.22-18.5"},
+  {"kind": "scripture", "ref": "2Cor.1.19"},
+  {"kind": "scripture", "ref": "1Thess.1.1"},
+  {"kind": "scripture", "ref": "2Thess.1.1"},
+  {"kind": "scripture", "ref": "1Pet.5.12"}
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "ananias-and-sapphira",
+ "name": "Ananias and Sapphira",
+ "role": "The couple who lied about the price of their land",
+ "people": ["ananias_258", "sapphira_2472"],
+ "when": "≈ AD 30–35",
+ "whenBasis": "The first years of the Jerusalem church, between the crucifixion (AD 30 or 33) and Saul's conversion, which Paul's own reckoning (Galatians 1:18; 2:1) and the Gallio date put ≈AD 33–35.",
+ "summary": "A husband and wife in the Jerusalem church who sold a piece of property and, with her knowledge, kept back part of the price while laying the rest at the apostles' feet as if it were all. Peter asked Ananias how Satan had filled his heart to lie to the Holy Spirit: the land had been his, and the money at his disposal; he had lied not to men but to God. Ananias fell down and died. Three hours later Sapphira came in, repeated the lie, and died at the door where the young men who had buried her husband were returning.",
+ "body": [
+  "Their story follows that of Barnabas, who sold a field and brought all the money. Great fear came over the whole church and all who heard."
+ ],
+ "moments": [
+  {"ref": "Acts.4.36-37", "text": "Barnabas's gift"},
+  {"ref": "Acts.5.1-2", "text": "Part of the price kept back"},
+  {"ref": "Acts.5.3", "text": "“To lie to the Holy Spirit”"},
+  {"ref": "Acts.5.4", "text": "“Not lied to men, but to God”"},
+  {"ref": "Acts.5.5", "text": "Ananias dies"},
+  {"ref": "Acts.5.7-8", "text": "Sapphira questioned"},
+  {"ref": "Acts.5.9", "text": "“How could you agree to test the Spirit”"},
+  {"ref": "Acts.5.10", "text": "Sapphira dies"},
+  {"ref": "Acts.5.11", "text": "Great fear"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.4.32-5.11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Raphael_-_The_Death_of_Ananias_c.1515-6.jpg/500px-Raphael_-_The_Death_of_Ananias_c.1515-6.jpg", "caption": "The death of Ananias, Raphael, cartoon for the Sistine Chapel tapestries, 1515–16, Royal Collection, on loan to the Victoria and Albert Museum.", "credit": "Raphael, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Death_of_Ananias_c.1515-6.jpg", "license": "Public domain"}
+ ]
+}

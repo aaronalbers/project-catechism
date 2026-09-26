@@ -1,0 +1,29 @@
+{
+ "id": "joanna",
+ "name": "Joanna",
+ "role": "Woman who followed Jesus and found the tomb empty",
+ "people": ["joanna_1629"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "Wife of Chuza, the manager of Herod Antipas's household, one of the women healed by Jesus who travelled with him and the Twelve and supported them out of their own means. She was among the women who went to the tomb with spices on the first day of the week, found it empty, and told the apostles.",
+ "body": [
+  "The apostles think the women's words nonsense and do not believe them."
+ ],
+ "moments": [
+  {"ref": "Luke.8.1-3", "text": "Supports Jesus from her means"},
+  {"ref": "Luke.24.1", "text": "To the tomb with spices"},
+  {"ref": "Luke.24.10", "text": "Tells the apostles"},
+  {"ref": "Luke.24.11", "text": "Not believed"}
+ ],
+ "later": [
+  {"text": "Richard Bauckham has argued that she is the Junia whom Paul calls outstanding among the apostles, Junia being a Latin name she could have taken.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Rom.16.7"}, {"kind": "scholarship", "title": "Gospel Women: Studies of the Named Women in the Gospels", "author": "Richard Bauckham", "year": 2002}], "traditions": ["Richard Bauckham"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.8.1-3"},
+  {"kind": "scripture", "ref": "Luke.23.55-24.11"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Brooklyn_Museum_-_The_Holy_Women_%28Les_femmes_saintes%29_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_The_Holy_Women_%28Les_femmes_saintes%29_-_James_Tissot_-_overall.jpg", "caption": "The holy women, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Holy_Women_(Les_femmes_saintes)_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

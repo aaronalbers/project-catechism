@@ -81,6 +81,41 @@ export interface Person {
   refs: Ref[]; notes?: string; sources?: Source[];
 }
 
+/** One of a named person's kin, as the generated people data gives them: an id to open and a name to show. */
+export interface Kin { id: string; name: string }
+/**
+ * Someone the Bible names, from Theographic Bible Metadata (public/data/people/): the verses naming them, their
+ * kin, and their Easton's Bible Dictionary entry, whose verse links are written `[[Judg.4.6|Judg. 4:6]]`.
+ * `title` tells namesakes apart by their kin ("son of Jesse").
+ */
+export interface BiblePerson {
+  id: string; name: string; title?: string; sex: 'male' | 'female'; also?: string[];
+  father?: Kin[]; mother?: Kin[]; spouses?: Kin[]; children?: Kin[]; siblings?: Kin[];
+  refs: Ref[]; easton?: string[];
+}
+/** Who each verse of a book names ("ch.v" → ids), and each one's [name, title, 'm' | 'f']. */
+export interface PeopleInBook { verses: Record<string, string[]>; people: Record<string, [string, string, 'm' | 'f']> }
+/** A moment in a curated profile: a verse and what happens there, in our words. */
+export interface ProfileMoment { ref: Ref; text: string }
+/** What a later tradition, a find or a reading adds to the text, with its own confidence and sources. */
+export interface ProfileNote { text: string; confidence: Confidence; traditions?: string[]; sources: Source[] }
+/**
+ * A hand-written profile of someone the Bible names (content/profiles.json). `people` are the ids of the
+ * generated person it covers, the first the main one (Theographic sometimes lists one person twice);
+ * `genealogy` is their id in people.json when the family tree has them. The body keeps to what the text
+ * says; `later` holds what tradition, archaeology or scholarship adds, each with its own badge. `when`
+ * is always ≈ and `whenBasis` says what it rests on. A picture, where a fitting one exists, is a depiction, credited in `media`.
+ */
+/** What the lists and the index show of a profile (`?index`, scripts/vite-profile-index.mjs); the rest loads when it is opened. */
+export type ProfileIndex = Pick<Profile, 'id' | 'name' | 'role' | 'people' | 'genealogy'> & { moments: { ref: Ref }[]; thumb?: string };
+export interface Profile {
+  id: string; name: string; role: string; people: string[]; genealogy?: string;
+  when?: string; whenBasis?: string;
+  summary: string; body: string[]; moments: ProfileMoment[]; later?: ProfileNote[];
+  confidence: Confidence; traditions?: string[]; sources: Source[]; media?: Media[];
+  /** Set when Theographic ties this person to the wrong Easton's entry (Lot to the lots that were cast): what the entry is about instead. */
+  eastonWrong?: string;
+}
 export interface Prophecy { id: string; title: string; given: Ref; fulfilled: Ref[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 export interface Quote { id: string; quoting: Ref; quoted: Ref; summary: string; sources?: Source[] }
 export interface Fragment { id: string; siglum: string; name: string; date: string; contents: Ref[]; held: string; summary: string; sources: Source[]; media?: Media[] }

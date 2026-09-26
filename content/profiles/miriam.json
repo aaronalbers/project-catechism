@@ -1,0 +1,38 @@
+{
+ "id": "miriam",
+ "name": "Miriam",
+ "role": "Prophetess, sister of Moses and Aaron",
+ "people": ["miriam_2087"],
+ "genealogy": "miriam-of-amram",
+ "when": "≈ 15th or 13th century BC",
+ "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC; many historians put it under Ramesses II, ≈1270s–1250s BC. The text gives no date in a calendar we can fix.",
+ "summary": "Called a prophetess and Aaron's sister, she took a tambourine and led the women in song after Israel crossed the sea. With Aaron she spoke against Moses over his Cushite wife and his authority, was struck with a skin disease, and was shut outside the camp seven days. She died at Kadesh. Micah names her with Moses and Aaron as those the LORD sent before Israel.",
+ "body": [
+  "Exodus 2 does not name the sister who watched the infant Moses among the reeds and offered Pharaoh's daughter a Hebrew nurse; Numbers 26:59 names Miriam as the only sister of Moses and Aaron.",
+  "At the sea she answers the men's song with the women's: “Sing to the LORD, for He is highly exalted; the horse and rider He has thrown into the sea.”",
+  "When she and Aaron ask, “Does the LORD speak only through Moses?”, the LORD rebukes them, and she is left leprous, white as snow. Aaron pleads, Moses prays, and the people do not move on until she is brought back after seven days. She dies and is buried at Kadesh in the Wilderness of Zin."
+ ],
+ "moments": [
+  {"ref": "Exod.2.4", "text": "The sister who watched"},
+  {"ref": "Exod.2.7-8", "text": "Fetches the child's mother"},
+  {"ref": "Exod.15.20-21", "text": "Leads the women in song"},
+  {"ref": "Num.12.1-2", "text": "Speaks against Moses"},
+  {"ref": "Num.12.10", "text": "Struck with leprosy"},
+  {"ref": "Num.12.15", "text": "Shut out seven days"},
+  {"ref": "Num.20.1", "text": "Dies at Kadesh"},
+  {"ref": "Num.26.59", "text": "Named as their sister"},
+  {"ref": "Mic.6.4", "text": "Sent before Israel"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Exod.2.1-10"},
+  {"kind": "scripture", "ref": "Exod.15.20-21"},
+  {"kind": "scripture", "ref": "Num.12.1-16"},
+  {"kind": "scripture", "ref": "Num.20.1"},
+  {"kind": "scripture", "ref": "Num.26.59"},
+  {"kind": "scripture", "ref": "Mic.6.4"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Anselm_Feuerbach_-_Miriam_-_WGA07870.jpg/500px-Anselm_Feuerbach_-_Miriam_-_WGA07870.jpg", "caption": "Miriam, Anselm Feuerbach, 1862. Alte Nationalgalerie, Berlin.", "credit": "Anselm Feuerbach, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Anselm_Feuerbach_-_Miriam_-_WGA07870.jpg", "license": "Public domain"}
+ ]
+}

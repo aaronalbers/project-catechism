@@ -1,0 +1,34 @@
+{
+ "id": "habakkuk",
+ "name": "Habakkuk",
+ "role": "Prophet who questioned God",
+ "people": ["habakkuk_1334"],
+ "when": "≈ 610–598 BC",
+ "whenBasis": "The LORD announces that He is raising up the Chaldeans (Habakkuk 1:6), which fits the rise of Babylon before its first attack on Jerusalem in ≈598 BC.",
+ "summary": "A prophet who complains to the LORD: how long must he cry “Violence!” and not be heard? The answer, that the LORD is raising up the Chaldeans, only sharpens the question: how can the Holy One use the wicked against those more righteous? He stations himself on the ramparts to wait, and is told that the vision will surely come, and that the righteous will live by faith. His book ends in a psalm: though the fig tree does not bud, he will rejoice in the God of his salvation.",
+ "body": [
+  "Paul quotes “The righteous will live by faith” twice, and Hebrews once. The book closes with a note for the choirmaster."
+ ],
+ "moments": [
+  {"ref": "Hab.1.2", "text": "“How long, O LORD?”"},
+  {"ref": "Hab.1.6", "text": "The Chaldeans raised up"},
+  {"ref": "Hab.1.13", "text": "How can You look on?"},
+  {"ref": "Hab.2.1", "text": "At his guard post"},
+  {"ref": "Hab.2.4", "text": "The righteous will live by faith"},
+  {"ref": "Hab.3.1", "text": "His prayer"},
+  {"ref": "Hab.3.17-18", "text": "Yet I will exult"},
+  {"ref": "Rom.1.17", "text": "Quoted by Paul"},
+  {"ref": "Gal.3.11", "text": "Quoted again"}
+ ],
+ "later": [
+  {"text": "A commentary on Habakkuk 1–2 found at Qumran (1QpHab) reads it of the community's own Teacher of Righteousness and the Wicked Priest.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Habakkuk Pesher (1QpHab), Shrine of the Book, Israel Museum"}]},
+  {"text": "Bel and the Dragon, in the Greek Daniel, tells how an angel carried Habakkuk by his hair to Babylon to feed Daniel in the lions' den.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Bel and the Dragon 33–39"}], "traditions": ["Bel and the Dragon (Greek Daniel)"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Hab.1.1-3.19"},
+  {"kind": "scripture", "ref": "Rom.1.17"},
+  {"kind": "scripture", "ref": "Gal.3.11"},
+  {"kind": "scripture", "ref": "Heb.10.38"}
+ ]
+}

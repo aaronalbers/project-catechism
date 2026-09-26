@@ -1,0 +1,32 @@
+{
+ "id": "cornelius",
+ "name": "Cornelius",
+ "role": "Roman centurion on whose household the Spirit fell",
+ "people": ["cornelius_956"],
+ "when": "≈ AD 35–40",
+ "whenBasis": "After Saul's conversion and before the church at Antioch and Herod Agrippa I's persecution (Acts 11–12, before AD 44).",
+ "summary": "A centurion of the Italian Regiment at Caesarea, devout and God-fearing with all his household, who gave generously and prayed to God regularly. An angel told him to send to Joppa for Peter. Peter, prepared by a vision of unclean animals, came and entered his house. As Peter spoke, the Holy Spirit fell on all who heard, and Peter had them baptised. The church in Jerusalem, hearing Peter's account, concluded that God had granted repentance unto life to the Gentiles too.",
+ "body": [
+  "Cornelius falls at Peter's feet to worship him; Peter lifts him up: “Stand up… I am only a man myself.” Peter begins, “I now truly understand that God does not show favoritism.”"
+ ],
+ "moments": [
+  {"ref": "Acts.10.1-2", "text": "A devout centurion"},
+  {"ref": "Acts.10.3", "text": "The angel's visit"},
+  {"ref": "Acts.10.9-16", "text": "Peter's vision"},
+  {"ref": "Acts.10.24", "text": "Gathers his household"},
+  {"ref": "Acts.10.25-26", "text": "“I am only a man myself”"},
+  {"ref": "Acts.10.34", "text": "“God does not show favoritism”"},
+  {"ref": "Acts.10.44", "text": "The Spirit falls"},
+  {"ref": "Acts.10.48", "text": "Baptised"},
+  {"ref": "Acts.11.18", "text": "Repentance for the Gentiles"},
+  {"ref": "Acts.15.7-9", "text": "Peter recalls it"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.10.1-11.18"},
+  {"kind": "scripture", "ref": "Acts.15.7-9"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bernardo_Cavallino_-_St_Peter_and_Cornelius_the_Centurion_-_WGA04598.jpg/500px-Bernardo_Cavallino_-_St_Peter_and_Cornelius_the_Centurion_-_WGA04598.jpg", "caption": "Saint Peter and Cornelius the centurion, Bernardo Cavallino, 1640s.", "credit": "Bernardo Cavallino, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Bernardo_Cavallino_-_St_Peter_and_Cornelius_the_Centurion_-_WGA04598.jpg", "license": "Public domain"}
+ ]
+}

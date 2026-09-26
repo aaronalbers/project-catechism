@@ -1,0 +1,34 @@
+{
+ "id": "haggai",
+ "name": "Haggai",
+ "role": "Prophet who roused the returned exiles to rebuild the temple",
+ "people": ["haggai_1349"],
+ "when": "≈ 520 BC",
+ "whenBasis": "Every oracle in his book is dated to the second year of Darius I, from the sixth to the ninth month.",
+ "summary": "Prophet who, with Zechariah, stirred Zerubbabel, the high priest Joshua and the people to resume the temple. His four short oracles all fall within four months: the people live in paneled houses while the LORD's house lies in ruins, and so their harvests fail. They obeyed, and within weeks the work began. He promised that the latter glory of the house would be greater than the former, and that Zerubbabel would be like the LORD's signet ring.",
+ "body": [
+  "He asks who is left who saw the first temple, and whether this one does not seem like nothing beside it; then tells governor, priest and people to be strong and work, for the LORD is with them. Hebrews quotes his promise to shake the heavens and the earth once more."
+ ],
+ "moments": [
+  {"ref": "Ezra.5.1", "text": "Prophesies with Zechariah"},
+  {"ref": "Hag.1.1", "text": "The first word"},
+  {"ref": "Hag.1.4", "text": "“Paneled houses”"},
+  {"ref": "Hag.1.12", "text": "The people obey"},
+  {"ref": "Hag.2.3", "text": "The former glory"},
+  {"ref": "Hag.2.4", "text": "“Be strong… Work!”"},
+  {"ref": "Hag.2.6", "text": "“Once more… I will shake”"},
+  {"ref": "Hag.2.9", "text": "The latter glory"},
+  {"ref": "Hag.2.23", "text": "The signet ring"},
+  {"ref": "Ezra.6.14", "text": "The building prospers"},
+  {"ref": "Heb.12.26", "text": "Quoted in Hebrews"}
+ ],
+ "later": [
+  {"text": "His first oracle, the first day of the sixth month of Darius's second year, converts to ≈29 August 520 BC by the Babylonian calendar tables; this is a conversion, not a date the text gives.", "confidence": "estimate", "sources": [{"kind": "scripture", "ref": "Hag.1.1"}, {"kind": "scholarship", "title": "Babylonian Chronology 626 B.C.–A.D. 75", "author": "Richard A. Parker and Waldo H. Dubberstein", "year": 1956}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Hag.1.1-2.23"},
+  {"kind": "scripture", "ref": "Ezra.5.1"},
+  {"kind": "scripture", "ref": "Ezra.6.14"}
+ ]
+}

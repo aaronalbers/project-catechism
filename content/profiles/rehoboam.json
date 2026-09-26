@@ -1,0 +1,39 @@
+{
+ "id": "rehoboam",
+ "name": "Rehoboam",
+ "role": "Solomon's son, under whom the kingdom split",
+ "people": ["rehoboam_2412"],
+ "genealogy": "rehoboam",
+ "when": "≈ 931–913 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Solomon and Naamah the Ammonite. At Shechem the people asked him to lighten the heavy yoke his father had laid on them. He rejected the old men's advice and followed the young men he had grown up with: “Whereas my father scourged you with whips, I will scourge you with scorpions.” The northern tribes broke away under Jeroboam. In his fifth year Shishak of Egypt came up against Jerusalem and carried off the temple treasures, and he replaced Solomon's gold shields with bronze.",
+ "body": [
+  "The elders tell him that if he serves the people today, they will serve him forever. His answer turns the assembly: “What portion do we have in David?” His taskmaster Adoram is stoned, and he flees to Jerusalem in his chariot. The prophet Shemaiah stops him from going to war to win the tribes back.",
+  "In his reign Judah builds high places and sacred pillars and Asherah poles. Chronicles adds that he fortified many cities, and that when Shishak came he and his officials humbled themselves, so the LORD did not destroy them. He reigns seventeen years."
+ ],
+ "moments": [
+  {"ref": "1Kgs.12.1", "text": "At Shechem"},
+  {"ref": "1Kgs.12.3-4", "text": "Asked to lighten the yoke"},
+  {"ref": "1Kgs.12.6-7", "text": "The old men's advice"},
+  {"ref": "1Kgs.12.10-11", "text": "The young men's advice"},
+  {"ref": "1Kgs.12.14", "text": "Whips and scorpions"},
+  {"ref": "1Kgs.12.16", "text": "“What portion do we have in David?”"},
+  {"ref": "1Kgs.12.18", "text": "Adoram stoned"},
+  {"ref": "1Kgs.12.21-24", "text": "Shemaiah stops the war"},
+  {"ref": "1Kgs.14.25-26", "text": "Shishak takes the treasures"},
+  {"ref": "1Kgs.14.27", "text": "Shields of bronze"},
+  {"ref": "2Chr.12.6-7", "text": "Humbles himself"}
+ ],
+ "later": [
+  {"text": "Shishak is Pharaoh Shoshenq I. His relief on the Bubastite Portal at Karnak lists the towns his campaign reached, many in Israel and some in Judah, and a fragment of a victory stele of his was found at Megiddo.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Bubastite Portal relief of Shoshenq I, temple of Amun, Karnak"}, {"kind": "archaeology", "title": "Shoshenq I stele fragment, Megiddo"}, {"kind": "scholarship", "title": "The Third Intermediate Period in Egypt (1100–650 BC)", "author": "Kenneth A. Kitchen", "year": 1973}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.11.43-12.24"},
+  {"kind": "scripture", "ref": "1Kgs.14.21-31"},
+  {"kind": "scripture", "ref": "2Chr.10.1-12.16"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Rehoboam%27s_Insolence%2C_by_Hans_Holbein_the_Younger.jpg/500px-Rehoboam%27s_Insolence%2C_by_Hans_Holbein_the_Younger.jpg", "caption": "Rehoboam's insolence (1 Kings 12:14), Hans Holbein the Younger, 1530, a design for Basel Town Hall.", "credit": "Hans Holbein the Younger, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Rehoboam%27s_Insolence,_by_Hans_Holbein_the_Younger.jpg", "license": "Public domain"}
+ ]
+}

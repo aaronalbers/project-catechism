@@ -1,0 +1,29 @@
+{
+ "id": "sergius-paulus",
+ "name": "Sergius Paulus",
+ "role": "Proconsul of Cyprus who believed",
+ "people": ["sergius_2502"],
+ "when": "≈ AD 46–48",
+ "whenBasis": "Paul and Barnabas's first journey, before the Jerusalem council of ≈AD 48–49, counting back from the Gallio date.",
+ "summary": "Proconsul of Cyprus at Paphos, a man of intelligence, who summoned Barnabas and Saul because he wanted to hear the word of God. His attendant, the sorcerer Elymas, tried to turn him from the faith. When Paul struck Elymas blind, the proconsul believed, astonished at the teaching about the Lord.",
+ "body": [
+  "At this point Acts first calls Saul Paul, the name he uses from then on."
+ ],
+ "moments": [
+  {"ref": "Acts.13.6-7", "text": "A man of intelligence"},
+  {"ref": "Acts.13.8", "text": "Elymas opposes"},
+  {"ref": "Acts.13.9", "text": "“Saul, who was also called Paul”"},
+  {"ref": "Acts.13.11", "text": "Elymas blinded"},
+  {"ref": "Acts.13.12", "text": "He believes"}
+ ],
+ "later": [
+  {"text": "An inscription from Rome names a Lucius Sergius Paullus among the curators of the Tiber under Claudius, and inscriptions from Pisidian Antioch, Paul's next stop, name the family; some identify him with the proconsul.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Inscription naming L. Sergius Paullus, curator of the Tiber, CIL VI 31545"}, {"kind": "scholarship", "title": "The Bearing of Recent Discovery on the Trustworthiness of the New Testament", "author": "William M. Ramsay", "year": 1915}], "traditions": ["William Ramsay and some later scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.13.4-12"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Raphael_-_The_Conversion_of_the_Proconsul_c.1515-6.jpg/500px-Raphael_-_The_Conversion_of_the_Proconsul_c.1515-6.jpg", "caption": "The conversion of the proconsul, Raphael, cartoon for the Sistine Chapel tapestries, 1515–16, Royal Collection, on loan to the Victoria and Albert Museum.", "credit": "Raphael, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Conversion_of_the_Proconsul_c.1515-6.jpg", "license": "Public domain"}
+ ]
+}

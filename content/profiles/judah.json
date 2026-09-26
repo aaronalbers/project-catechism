@@ -1,0 +1,38 @@
+{
+ "id": "judah",
+ "name": "Judah",
+ "role": "Son of Jacob and Leah, ancestor of the tribe and of David",
+ "people": ["judah_1751"],
+ "genealogy": "judah",
+ "summary": "Leah's fourth son. He proposed selling Joseph rather than killing him; after his sons Er and Onan died, he withheld his third son from their widow Tamar, and she, veiled, conceived twins by him. In Egypt he offered himself as a slave in place of Benjamin, and Jacob's blessing gave him the sceptre.",
+ "body": [
+  "When the brothers have Joseph in the pit, Judah asks what they gain by killing him, and they sell him to Ishmaelites instead. He then leaves his brothers, marries a Canaanite, and has three sons.",
+  "His dealings with Tamar end with his own verdict: “She is more righteous than I.” Her son Perez carries on his line.",
+  "In Egypt it is Judah who pledges himself for Benjamin to his father, and Judah who pleads before Joseph, not knowing who he is, offering to stay as a slave so the boy can go home. Jacob's blessing gives him the praise of his brothers and a sceptre that will not depart. Hebrews notes that Jesus descended from Judah."
+ ],
+ "moments": [
+  {"ref": "Gen.29.35", "text": "Born to Leah"},
+  {"ref": "Gen.37.26-27", "text": "“Let us sell him”"},
+  {"ref": "Gen.38.1-2", "text": "Marries a Canaanite"},
+  {"ref": "Gen.38.11", "text": "Sends Tamar home"},
+  {"ref": "Gen.38.18", "text": "Leaves his pledge"},
+  {"ref": "Gen.38.26", "text": "“She is more righteous than I”"},
+  {"ref": "Gen.43.8-9", "text": "Pledges himself for Benjamin"},
+  {"ref": "Gen.44.18", "text": "Pleads before Joseph"},
+  {"ref": "Gen.44.33", "text": "Offers to stay as a slave"},
+  {"ref": "Gen.49.8-10", "text": "The sceptre"},
+  {"ref": "Matt.1.2-3", "text": "In Jesus' genealogy"},
+  {"ref": "Heb.7.14", "text": "“Descended from Judah”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Gen.29.35"},
+  {"kind": "scripture", "ref": "Gen.37.26-27"},
+  {"kind": "scripture", "ref": "Gen.38.1-30"},
+  {"kind": "scripture", "ref": "Gen.43.1-44.34"},
+  {"kind": "scripture", "ref": "Gen.49.8-12"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Horace_Vernet_-_Judah_and_Tamar_-_WGA24755.jpg/500px-Horace_Vernet_-_Judah_and_Tamar_-_WGA24755.jpg", "caption": "Judah and Tamar (Genesis 38:15–18), Horace Vernet, 1840. Wallace Collection, London.", "credit": "Horace Vernet, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Horace_Vernet_-_Judah_and_Tamar_-_WGA24755.jpg", "license": "Public domain"}
+ ]
+}

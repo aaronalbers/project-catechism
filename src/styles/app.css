@@ -129,6 +129,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .marker.chiasm { background: var(--chiasm); }
 .marker.journey { background: var(--journey); }
 .marker.fragment { background: var(--fragment); }
+.marker.profile { background: var(--danger); }
 .verse .text { position: relative; }
 .verse .text .w { border-radius: 3px; }
 .verse.current .text .w:hover, .verse.current .text .w.active { background: var(--accent); color: var(--accent-ink); }
@@ -256,6 +257,42 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .person { padding: 8px 0; border-bottom: 1px solid var(--border); }
 .person .name { font-weight: 600; }
 .person .life { font-size: 13px; color: var(--muted); }
+.person.named { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--border); color: inherit; font: inherit; cursor: pointer; }
+.person.named:hover { background: var(--surface-2); }
+.person.named.here .name { color: var(--accent); }
+.person .who { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.person .who .life { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.person .count { flex: none; font-variant-numeric: tabular-nums; }
+.person .thumb { flex: none; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; object-position: 50% 25%; background: var(--surface-2); }
+.person .thumb.initial { display: grid; place-items: center; font-family: var(--serif); font-size: 17px; color: var(--accent-ink); background: var(--accent); opacity: 0.75; }
+.person .thumb.initial.female { background: var(--interpretation); }
+.chip.profiled { margin-left: 6px; font-size: 10px; padding: 0 6px; font-weight: 500; vertical-align: 2px; }
+.person-link { margin: 4px 0 8px; }
+.profile .profile-head { margin: 10px 0 8px; }
+.profile .portrait { margin: 0 0 10px; }
+.profile .portrait img { width: 100%; max-height: 360px; object-fit: contain; border-radius: 8px; display: block; background: var(--surface-2); }
+.profile .portrait figcaption { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.profile .portrait .depiction { display: block; font-style: italic; }
+.profile h2 { font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.2; }
+.profile .role { color: var(--muted); font-size: 15px; margin-top: 2px; }
+.profile .facts { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; font-size: 13px; color: var(--muted); margin-top: 6px; }
+.profile .when-basis, .profile .tree-note { font-size: 12px; color: var(--muted); margin: 6px 0; }
+.profile .kin { display: grid; gap: 4px; margin: 10px 0; font-size: 13px; }
+.profile .kin > div { display: grid; grid-template-columns: 70px 1fr; gap: 8px; align-items: baseline; }
+.profile .kin dt { color: var(--muted); }
+.profile .kin dd { margin: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.profile .appearances { margin: 12px 0; }
+.profile .appearances rect:hover { fill: var(--focus); }
+.profile .moments { list-style: none; padding: 0; margin: 10px 0 4px; display: grid; gap: 6px; }
+.profile .moments li { display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: baseline; font-size: 14px; padding: 2px 4px; border-radius: 6px; }
+.profile .moments li.current { background: var(--current); }
+.profile .later p { margin: 4px 0 0; }
+.profile .later-head { display: flex; justify-content: flex-end; }
+.profile .easton { margin: 12px 0; font-size: 14px; }
+.profile .easton summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: 13px; }
+.profile .easton p { margin: 8px 0; font-family: var(--serif); font-size: 15px; }
+.profile .easton small { font-size: 12px; color: var(--muted); }
+.inline-ref { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-decoration: underline dotted; text-underline-offset: 2px; }
 
 /* Models */
 .model-view { height: 300px; border-radius: var(--radius); overflow: hidden; background: radial-gradient(circle at 50% 30%, var(--surface-2), var(--bg)); border: 1px solid var(--border); position: relative; }

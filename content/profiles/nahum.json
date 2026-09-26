@@ -1,0 +1,28 @@
+{
+ "id": "nahum",
+ "name": "Nahum",
+ "role": "Prophet of Nineveh's fall",
+ "people": ["nahum_2145"],
+ "when": "≈ 663–612 BC",
+ "whenBasis": "He speaks of Thebes' fall as past (Nahum 3:8), which Assyria sacked in 663 BC, and of Nineveh's as coming, which fell in 612 BC.",
+ "summary": "Nahum the Elkoshite, whose book is a single burden against Nineveh, the capital of Assyria. The LORD is slow to anger but will not leave the guilty unpunished; Nineveh, the city of blood, will be flooded, plundered and laid waste, and no one will grieve for her. For Judah, it is good news: the feet of one who brings it are on the mountains.",
+ "body": [
+  "He asks Nineveh whether it is better than Thebes, stationed by the Nile, which also went into exile. His book is the counterpart of Jonah's: there Nineveh repents and is spared."
+ ],
+ "moments": [
+  {"ref": "Nah.1.1", "text": "The burden against Nineveh"},
+  {"ref": "Nah.1.3", "text": "Slow to anger"},
+  {"ref": "Nah.1.15", "text": "Feet on the mountains"},
+  {"ref": "Nah.2.8", "text": "Nineveh like a pool"},
+  {"ref": "Nah.3.1", "text": "The city of blood"},
+  {"ref": "Nah.3.7", "text": "“Who will grieve for her?”"},
+  {"ref": "Nah.3.8", "text": "Better than Thebes?"}
+ ],
+ "later": [
+  {"text": "A Babylonian chronicle records that the Medes and Babylonians took Nineveh in 612 BC.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian Chronicle of the fall of Nineveh, British Museum 21901"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Nah.1.1-3.19"}
+ ]
+}

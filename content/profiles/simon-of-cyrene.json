@@ -1,0 +1,30 @@
+{
+ "id": "simon-of-cyrene",
+ "name": "Simon of Cyrene",
+ "role": "The man made to carry Jesus' cross",
+ "people": ["simon_2749"],
+ "when": "≈ AD 30 or 33",
+ "whenBasis": "The crucifixion under Pilate (AD 26–36), usually dated to the Passover of AD 30 or 33 from the weekday the gospels give.",
+ "summary": "A man from Cyrene in North Africa, coming in from the country, whom the soldiers forced to carry Jesus' cross. Mark names his sons, Alexander and Rufus. Luke says they put the cross on him to carry behind Jesus.",
+ "body": [
+  "Mark names the sons as though his readers would know them."
+ ],
+ "moments": [
+  {"ref": "Matt.27.32", "text": "A man from Cyrene"},
+  {"ref": "Mark.15.21", "text": "Father of Alexander and Rufus"},
+  {"ref": "Luke.23.26", "text": "Behind Jesus"}
+ ],
+ "later": [
+  {"text": "Paul greets a Rufus in Rome, chosen in the Lord, and his mother; some take him to be Simon's son.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Rom.16.13"}], "traditions": ["many commentators"]},
+  {"text": "A burial cave of Cyrenian Jews in the Kidron Valley, excavated in 1941, held an ossuary inscribed “Alexander son of Simon”; the names were common, and the link is unproven.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Kidron Valley ossuaries of a Cyrenian family", "note": "published by Nahman Avigad, Israel Exploration Journal 12, 1962"}], "traditions": ["some scholars; doubted by others"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.27.32"},
+  {"kind": "scripture", "ref": "Mark.15.21"},
+  {"kind": "scripture", "ref": "Luke.23.26"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Brooklyn_Museum_-_Simon_the_Cyrenian_and_His_Two_Sons_Alexander_and_Rufus_%28Simon_de_Cyr%C3%A8ne_et_ses_deux_fils%2C_Alexandre_et_Rufus%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Simon_the_Cyrenian_and_His_Two_Sons_Alexander_and_Rufus_%28Simon_de_Cyr%C3%A8ne_et_ses_deux_fils%2C_Alexandre_et_Rufus%29_-_James_Tissot.jpg", "caption": "Simon of Cyrene and his two sons, Alexander and Rufus, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Simon_the_Cyrenian_and_His_Two_Sons_Alexander_and_Rufus_(Simon_de_Cyr%C3%A8ne_et_ses_deux_fils,_Alexandre_et_Rufus)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "apollos",
+ "name": "Apollos",
+ "role": "Eloquent teacher from Alexandria",
+ "people": ["apollos_276"],
+ "when": "≈ AD 52–55",
+ "whenBasis": "Paul's stay of about three years at Ephesus (Acts 19:10; 20:31), after Corinth and the Gallio date.",
+ "summary": "A Jew of Alexandria, eloquent and well versed in the Scriptures, who came to Ephesus and taught accurately about Jesus, though he knew only the baptism of John. Priscilla and Aquila took him aside and explained the way of God more accurately. He crossed to Achaia, where he was a great help to the believers and powerfully refuted the Jews in public debate. At Corinth some said, “I follow Apollos.” Paul wrote that he had planted and Apollos had watered, but God made it grow.",
+ "body": [
+  "Paul urged him to return to Corinth, but he was not inclined to go then. Titus is asked to equip him and Zenas the lawyer for their journey."
+ ],
+ "moments": [
+  {"ref": "Acts.18.24", "text": "From Alexandria"},
+  {"ref": "Acts.18.25", "text": "Only the baptism of John"},
+  {"ref": "Acts.18.26", "text": "Taught more accurately"},
+  {"ref": "Acts.18.27-28", "text": "In Achaia"},
+  {"ref": "Acts.19.1", "text": "At Corinth"},
+  {"ref": "1Cor.1.12", "text": "“I follow Apollos”"},
+  {"ref": "1Cor.3.6", "text": "“Apollos watered it”"},
+  {"ref": "1Cor.16.12", "text": "Not inclined to go now"},
+  {"ref": "Titus.3.13", "text": "Equipped for the journey"}
+ ],
+ "later": [
+  {"text": "Martin Luther suggested that Apollos wrote the letter to the Hebrews; many modern scholars count him a likely candidate.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Martin Luther and some modern scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.18.24-19.1"},
+  {"kind": "scripture", "ref": "1Cor.1.12"},
+  {"kind": "scripture", "ref": "1Cor.3.4-6"},
+  {"kind": "scripture", "ref": "1Cor.16.12"},
+  {"kind": "scripture", "ref": "Titus.3.13"}
+ ]
+}

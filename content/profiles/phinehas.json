@@ -1,0 +1,33 @@
+{
+ "id": "phinehas",
+ "name": "Phinehas",
+ "role": "Priest, grandson of Aaron",
+ "people": ["phinehas_2349"],
+ "genealogy": "phinehas-of-eleazar",
+ "summary": "Son of Eleazar and grandson of Aaron. When an Israelite brought a Midianite woman into his tent during the plague at Peor, Phinehas drove a spear through them both, and the plague stopped; the LORD gave him a covenant of lasting priesthood. He went with the army against Midian, led the inquiry into the altar the eastern tribes built by the Jordan, and served before the ark in the days of the judges.",
+ "body": [
+  "At Peor Israel joins in the worship of Baal with the women of Moab, and a plague kills 24,000. Phinehas acts before the whole congregation. The LORD says he was zealous for his God and made atonement, and grants him a covenant of peace.",
+  "When the tribes east of the Jordan build a great altar, Phinehas leads the delegation that fears it is rebellion; told it is a witness, not for sacrifice, he is satisfied. In the war against Benjamin he is the priest who inquires of the LORD at Bethel. Psalm 106 says his act was credited to him as righteousness."
+ ],
+ "moments": [
+  {"ref": "Exod.6.25", "text": "Son of Eleazar"},
+  {"ref": "Num.25.7-8", "text": "Acts at Peor"},
+  {"ref": "Num.25.11-13", "text": "A covenant of peace"},
+  {"ref": "Num.31.6", "text": "Goes with the army"},
+  {"ref": "Josh.22.13-14", "text": "Sent to the eastern tribes"},
+  {"ref": "Josh.22.30-31", "text": "Satisfied"},
+  {"ref": "Judg.20.27-28", "text": "Inquires of the LORD"},
+  {"ref": "Ps.106.30-31", "text": "“Phinehas stood and intervened”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Num.25.1-18"},
+  {"kind": "scripture", "ref": "Num.31.6"},
+  {"kind": "scripture", "ref": "Josh.22.9-34"},
+  {"kind": "scripture", "ref": "Judg.20.27-28"},
+  {"kind": "scripture", "ref": "Ps.106.28-31"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Jeremias_van_Winghe_-_Phinehas_slaying_Zimri_and_Kozbi_the_Midianite.jpg/500px-Jeremias_van_Winghe_-_Phinehas_slaying_Zimri_and_Kozbi_the_Midianite.jpg", "caption": "Phinehas slays Zimri and Cozbi (Numbers 25:7–8), Jeremias van Winghe.", "credit": "Jeremias van Winghe, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jeremias_van_Winghe_-_Phinehas_slaying_Zimri_and_Kozbi_the_Midianite.jpg", "license": "Public domain"}
+ ]
+}

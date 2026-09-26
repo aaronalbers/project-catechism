@@ -1,0 +1,42 @@
+{
+ "id": "zechariah-prophet",
+ "name": "Zechariah",
+ "role": "Prophet of the return, whose visions filled the night",
+ "people": ["zechariah_3016"],
+ "when": "≈ 520–518 BC",
+ "whenBasis": "His dated oracles run from the second to the fourth year of Darius I (Zechariah 1:1, 7:1).",
+ "summary": "Son of Berechiah, son of Iddo, a prophet who with Haggai encouraged the rebuilding of the temple. In one night he saw eight visions: a rider among the myrtles, horns and craftsmen, a man with a measuring line, the high priest Joshua reclothed, a lampstand between two olive trees, a flying scroll, a woman in a basket, and four chariots. His book goes on to the king coming to Zion on a donkey, thirty pieces of silver, and the one they have pierced, which the gospels read of Jesus.",
+ "body": [
+  "Asked whether to keep the fasts for the fall of Jerusalem, he answers with the LORD's call to justice and mercy, and with a picture of Jerusalem restored: old men and women sitting in its streets, and boys and girls playing there.",
+  "Ezra calls him son of Iddo, perhaps the priest of that name who returned with Zerubbabel."
+ ],
+ "moments": [
+  {"ref": "Ezra.5.1", "text": "Prophesies with Haggai"},
+  {"ref": "Zech.1.1", "text": "The first word"},
+  {"ref": "Zech.1.8", "text": "A rider among the myrtles"},
+  {"ref": "Zech.3.1", "text": "Joshua before the angel"},
+  {"ref": "Zech.4.6", "text": "“Not by might nor by power”"},
+  {"ref": "Zech.5.1", "text": "A flying scroll"},
+  {"ref": "Zech.7.1", "text": "His fourth year"},
+  {"ref": "Zech.8.4", "text": "Old men in the streets"},
+  {"ref": "Zech.9.9", "text": "The king on a donkey"},
+  {"ref": "Zech.11.12", "text": "Thirty pieces of silver"},
+  {"ref": "Zech.12.10", "text": "The one they have pierced"},
+  {"ref": "Matt.21.5", "text": "Read of Jesus' entry"},
+  {"ref": "John.19.37", "text": "Read of the cross"}
+ ],
+ "later": [
+  {"text": "Chapters 9–14 have no dates, visions or named figures of the return, and many scholars assign them to a later hand (Second Zechariah).", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Haggai, Zechariah 1–8 (Anchor Bible 25B)", "author": "Carol L. Meyers and Eric M. Meyers", "year": 1987}], "traditions": ["one author: traditional readers", "a later author for chapters 9–14: many historical-critical scholars"]},
+  {"text": "Jesus speaks of Zechariah son of Berechiah, murdered between the sanctuary and the altar. Some take him to be this prophet; others the priest Zechariah son of Jehoiada, stoned in the temple court.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.23.35"}, {"kind": "scripture", "ref": "2Chr.24.20-22"}], "traditions": ["this prophet: some ancient and modern readers", "son of Jehoiada: many commentators, and Theographic's data"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Zech.1.1-14.21"},
+  {"kind": "scripture", "ref": "Ezra.5.1"},
+  {"kind": "scripture", "ref": "Ezra.6.14"},
+  {"kind": "scripture", "ref": "Neh.12.16"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/140.Zechariah%27s_Vision_of_Four_Chariots.jpg/500px-140.Zechariah%27s_Vision_of_Four_Chariots.jpg", "caption": "Zechariah's vision of four chariots (Zechariah 6), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:140.Zechariah%27s_Vision_of_Four_Chariots.jpg", "license": "Public domain"}
+ ]
+}

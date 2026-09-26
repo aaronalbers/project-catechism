@@ -1,0 +1,43 @@
+{
+ "id": "elisha",
+ "name": "Elisha",
+ "role": "Prophet, Elijah's successor",
+ "people": ["elisha_1153"],
+ "when": "≈ 850–795 BC",
+ "whenBasis": "From his call under Ahab to his death under Jehoash of Israel (2 Kings 13:14–20), in Thiele's reckoning; the other readings in the Reign tab differ by a few years.",
+ "summary": "Son of Shaphat of Abel-meholah, called from ploughing when Elijah threw his cloak over him. He asked for a double portion of Elijah's spirit, saw him taken up, and parted the Jordan with his cloak. Kings tells more wonders of him than of any other prophet: the widow's oil, the Shunammite's son raised, Naaman healed, an axe head floating, an Aramean army struck blind. He had Jehu anointed and foretold Hazael's rule, and even his bones brought a dead man to life.",
+ "body": [
+  "He slaughters his oxen, burns the yoke to cook them, and follows Elijah. At the Jordan he will not leave him, and asks for the firstborn's double portion. He heals the spring at Jericho with salt; boys from Bethel who jeer “Go up, you baldhead!” are mauled by bears.",
+  "He multiplies a widow's oil to pay her debts. A Shunammite woman builds him a room; he promises her a son, and when the boy dies he stretches himself over him until he lives. He makes poisoned stew safe and feeds a hundred men with twenty loaves. He sends Naaman to wash in the Jordan, and his servant Gehazi is struck with Naaman's leprosy for his greed.",
+  "When the Arameans come to seize him at Dothan, his servant sees the hills full of horses and chariots of fire. In the siege of Samaria he foretells food at the gate the next day. In Damascus he weeps before Hazael, knowing what he will do. On his deathbed he tells King Jehoash to strike the ground with arrows. Jesus recalls that of the many lepers in Elisha's day only Naaman the Syrian was cleansed."
+ ],
+ "moments": [
+  {"ref": "1Kgs.19.19-21", "text": "Called from the plough"},
+  {"ref": "2Kgs.2.9", "text": "A double portion"},
+  {"ref": "2Kgs.2.12-14", "text": "Takes up Elijah's cloak"},
+  {"ref": "2Kgs.2.21-22", "text": "Heals the water"},
+  {"ref": "2Kgs.2.23-24", "text": "The bears"},
+  {"ref": "2Kgs.4.1-7", "text": "The widow's oil"},
+  {"ref": "2Kgs.4.32-35", "text": "Raises the Shunammite's son"},
+  {"ref": "2Kgs.4.42-44", "text": "Twenty loaves"},
+  {"ref": "2Kgs.5.10", "text": "Naaman sent to the Jordan"},
+  {"ref": "2Kgs.6.6", "text": "The axe head floats"},
+  {"ref": "2Kgs.6.17", "text": "Horses and chariots of fire"},
+  {"ref": "2Kgs.7.1", "text": "Food at the gate"},
+  {"ref": "2Kgs.8.11-13", "text": "Weeps before Hazael"},
+  {"ref": "2Kgs.9.1-3", "text": "Has Jehu anointed"},
+  {"ref": "2Kgs.13.18-19", "text": "The arrows"},
+  {"ref": "2Kgs.13.20-21", "text": "His bones"},
+  {"ref": "Luke.4.27", "text": "Naaman in Elisha's day"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.19.16-21"},
+  {"kind": "scripture", "ref": "2Kgs.2.1-9.3"},
+  {"kind": "scripture", "ref": "2Kgs.13.14-21"},
+  {"kind": "scripture", "ref": "Luke.4.27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Elisha_raises_son_BenjaminWest.jpg/500px-Elisha_raises_son_BenjaminWest.jpg", "caption": "Elisha raises the Shunammite's son (2 Kings 4:34–35), Benjamin West, 1766.", "credit": "Benjamin West, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Elisha_raises_son_BenjaminWest.jpg", "license": "Public domain"}
+ ]
+}

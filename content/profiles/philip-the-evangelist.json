@@ -1,0 +1,37 @@
+{
+ "id": "philip-the-evangelist",
+ "name": "Philip the evangelist",
+ "role": "One of the Seven, who preached in Samaria and baptised the Ethiopian",
+ "people": ["philip_2347"],
+ "when": "≈ AD 31–57",
+ "whenBasis": "From the choosing of the Seven in the first years of the Jerusalem church to Paul's stay in his house on the way to Jerusalem, ≈AD 57.",
+ "summary": "One of the seven chosen with Stephen. When persecution scattered the church, he went down to a city in Samaria and proclaimed the Christ; the crowds listened, unclean spirits came out, and many were baptised, Simon the sorcerer among them. An angel sent him to the desert road to Gaza, where he met an Ethiopian official of Queen Candace reading Isaiah in his chariot. Philip told him the good news about Jesus and baptised him, and the Spirit carried Philip away. He preached from Azotus to Caesarea, where Paul stayed with him years later.",
+ "body": [
+  "He runs up to the chariot and asks, “Do you understand what you are reading?” The eunuch asks what is to prevent him from being baptised; they go down into the water together. Luke calls him Philip the evangelist and says he had four unmarried daughters who prophesied."
+ ],
+ "moments": [
+  {"ref": "Acts.6.5", "text": "One of the Seven"},
+  {"ref": "Acts.8.5", "text": "Proclaims the Christ in Samaria"},
+  {"ref": "Acts.8.6-7", "text": "Signs in Samaria"},
+  {"ref": "Acts.8.13", "text": "Simon follows him"},
+  {"ref": "Acts.8.26", "text": "The desert road to Gaza"},
+  {"ref": "Acts.8.30", "text": "“Do you understand what you are reading?”"},
+  {"ref": "Acts.8.35", "text": "Tells him the good news"},
+  {"ref": "Acts.8.38", "text": "The eunuch baptised"},
+  {"ref": "Acts.8.39-40", "text": "Carried away to Azotus"},
+  {"ref": "Acts.21.8", "text": "Paul in his house"},
+  {"ref": "Acts.21.9", "text": "Four daughters who prophesied"}
+ ],
+ "later": [
+  {"text": "Papias, as quoted by Eusebius, knew his daughters at Hierapolis; later writers confused him with Philip the apostle.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.31.3–5; 3.39.9"}], "traditions": ["Papias and Polycrates, as reported by Eusebius"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.6.5"},
+  {"kind": "scripture", "ref": "Acts.8.4-40"},
+  {"kind": "scripture", "ref": "Acts.21.8-9"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rembrandt%2C_The_Baptism_of_the_Eunuch%2C_1626%2C_Museum_Catharijneconvent%2C_Utrecht.jpg/500px-Rembrandt%2C_The_Baptism_of_the_Eunuch%2C_1626%2C_Museum_Catharijneconvent%2C_Utrecht.jpg", "caption": "The baptism of the eunuch, Rembrandt, 1626, Museum Catharijneconvent, Utrecht.", "credit": "Rembrandt, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Rembrandt,_The_Baptism_of_the_Eunuch,_1626,_Museum_Catharijneconvent,_Utrecht.jpg", "license": "Public domain"}
+ ]
+}

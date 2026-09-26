@@ -2,6 +2,11 @@
 // and every card carries a citation and a confidence badge. These run in CI so a typo
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
+import { PROFILE_INDEX } from '@/lib/content';
+
+/** Every profile in full. */
+const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
+const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
@@ -13,7 +18,7 @@ import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import { quotedCount, tallySum } from '@/lib/tally';
 import { laneOf, statedBefore } from '@/lib/reign';
-import type { BibleBook, Model3D, Place, Source, Verdict } from '@/lib/types';
+import type { BibleBook, Model3D, Place, Profile, Source, Verdict } from '@/lib/types';
 
 /** A procedural model drawn as each of its readings (once, if it has none). */
 const drawings = (m: Model3D) => (m.readings?.map((r) => r.id) ?? [undefined]).map((reading) => ({ reading, model: buildProcedural(m.procedural!, reading), label: reading ? `${m.id} (${reading})` : m.id }));
@@ -23,7 +28,8 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors]
+  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors,
+    ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
 /** Every quotation a king's reign makes of the text, with the verse it must be found in. */
@@ -34,6 +40,9 @@ function reignQuotes(): { id: string; ref: string; quote?: string }[] {
     ...verdict(id, r.verdict), ...(r.chronicles ? [{ id, ref: r.chronicles.ref }, ...verdict(id, r.chronicles.verdict)] : []),
   ]);
 }
+
+/** The generated BSB text, for the checks that quote it; needs `npm run data`, which CI runs before testing. */
+const bibleDir = new URL('../../public/data/bible/', import.meta.url);
 
 /** Matches a wikipedia.org host only — wikisource (primary texts) and wikimedia (image credits) are fine. */
 const WIKIPEDIA = /^https?:\/\/[^/]*\bwikipedia\.org\b/i;
@@ -57,11 +66,12 @@ describe('content integrity', () => {
       MONARCHY.kings, MONARCHY.chronicles,
       ...MONARCHY.anchors.flatMap((a) => (a.ref ? [a.ref] : [])),
       ...MONARCHY.prophets.flatMap((p) => [...p.refs, p.sent]),
+      ...PROFILES.flatMap((p) => [...p.moments.map((m) => m.ref), ...[...p.sources, ...(p.later ?? []).flatMap((n) => n.sources)].map((s) => s.ref).filter((r): r is string => !!r)]),
     ];
     expect(bad(all)).toEqual([]);
   });
   it('ids are unique', () => {
-    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS, JOURNEYS, TALLIES]) {
+    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS, JOURNEYS, TALLIES, PROFILES]) {
       const ids = list.map((x) => x.id);
       expect(new Set(ids).size, `duplicate id in ${ids.find((id, i) => ids.indexOf(id) !== i)}`).toBe(ids.length);
     }
@@ -81,6 +91,71 @@ describe('content integrity', () => {
       if (p.estimated) expect(p.notes, `${p.id} is estimated but has no note explaining why`).toBeTruthy();
     }
   });
+  // A profile is held to an insight's standard, and what tradition adds is kept apart from what the text says.
+  it('profiles cite the text, badge every later addition, mark their dates and credit their pictures', () => {
+    for (const p of PROFILES) {
+      expect(p.sources.some((s) => evidential.has(s.kind)), `${p.id} has no evidential source`).toBe(true);
+      expect(['evidence', 'consensus', 'interpretation', 'estimate']).toContain(p.confidence);
+      if (p.confidence === 'interpretation') expect(p.traditions?.length, `${p.id} is an interpretation but lists no traditions`).toBeGreaterThan(0);
+      expect(p.people.length, `${p.id} covers no person`).toBeGreaterThan(0);
+      expect(PROFILE_FILES[`/content/profiles/${p.id}.json`], `${p.id} must be in content/profiles/${p.id}.json, where loadProfile looks`).toBe(p);
+      expect(p.moments.length, `${p.id} has no moments`).toBeGreaterThan(0);
+      if (p.genealogy) expect(PEOPLE_BY_ID.has(p.genealogy), `${p.id} → ${p.genealogy}`).toBe(true);
+      if (p.when || p.whenBasis) {
+        expect(p.when?.startsWith('≈'), `${p.id}: a date is always approximate, so mark it ≈`).toBe(true);
+        expect(p.whenBasis?.length, `${p.id}: say what the date rests on`).toBeGreaterThan(20);
+      }
+      for (const n of p.later ?? []) {
+        expect(n.sources.length, `${p.id}: "${n.text.slice(0, 40)}…" cites nothing`).toBeGreaterThan(0);
+        if (n.confidence === 'interpretation') expect(n.traditions?.length, `${p.id}: "${n.text.slice(0, 40)}…" names no one who holds it`).toBeGreaterThan(0);
+      }
+      for (const m of p.media ?? []) {
+        expect(m.creditUrl, `${p.id}: ${m.src}`).toMatch(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+        expect(m.credit && m.license, `${p.id}: ${m.src} needs its artist and licence`).toBeTruthy();
+        expect(m.src, `${p.id}: Wikimedia serves 500px thumbnails`).toMatch(/^https:\/\/upload\.wikimedia\.org\/.*\/500px-/);
+      }
+    }
+    const ids = PROFILES.flatMap((p) => p.people);
+    expect(new Set(ids).size, 'a person has two profiles').toBe(ids.length);
+    // The index the lists use is the same profiles, cut down.
+    expect(PROFILE_INDEX.map((p) => [p.id, p.name, p.people])).toEqual(PROFILES.map((p) => [p.id, p.name, p.people]));
+  });
+  it.skipIf(!existsSync(bibleDir))('profile quotations are the BSB wording of the passages they cite', () => {
+    const books = new Map<string, BibleBook>();
+    const read = (id: string) => books.get(id) ?? books.set(id, JSON.parse(readFileSync(new URL(`${id}.json`, bibleDir), 'utf8'))).get(id)!;
+    const textOf = (ref: string) => {
+      const r = parseRef(ref)!, out: string[] = [];
+      for (const b of BOOKS.slice(BOOKS.findIndex((x) => x.id === r.start.book), BOOKS.findIndex((x) => x.id === r.end.book) + 1)) {
+        read(b.id).chapters.forEach((ch, i) => ch.forEach((v) => {
+          const loc = { book: b.id, chapter: i + 1, verse: v.v };
+          if (compareLoc(loc, r.start) >= 0 && compareLoc(loc, r.end) <= 0) out.push(v.t);
+        }));
+      }
+      return out.join(' ');
+    };
+    const plain = (t: string) => t.replace(/[‘’]/g, "'").toLowerCase();
+    const misquoted: string[] = [];
+    for (const p of PROFILES) {
+      const refs = [...p.moments.map((m) => m.ref), ...[...p.sources, ...(p.later ?? []).flatMap((n) => n.sources)].flatMap((s) => (s.ref ? [s.ref] : []))];
+      const text = plain(refs.map(textOf).join(' '));
+      for (const t of [p.summary, ...p.body, ...p.moments.map((m) => m.text)]) {
+        for (const [, q] of t.matchAll(/“([^”]+)”/g)) {
+          for (const part of q.split('…').map((x) => x.trim().replace(/^[\s.,;:!?]+|[\s.,;:!?]+$/g, '')).filter(Boolean)) {
+            if (!text.includes(plain(part))) misquoted.push(`${p.id}: “${part}”`);
+          }
+        }
+      }
+    }
+    expect(misquoted, 'not the BSB wording of any passage the profile cites').toEqual([]);
+  });
+  const peopleDir = new URL('../../public/data/people/', import.meta.url);
+  it.skipIf(!existsSync(peopleDir))('profiles name people the people data has', () => {
+    for (const id of PROFILES.flatMap((p) => p.people)) {
+      const shard = JSON.parse(readFileSync(new URL(`${id[0]}.json`, peopleDir), 'utf8')) as Record<string, unknown>;
+      expect(shard[id], id).toBeTruthy();
+    }
+  });
+
   // Wikipedia is a finding aid, not a source. Trace the claim to the museum, the primary
   // text or the publication and cite that instead. Image credits in `media` are exempt —
   // the CC licences require naming Wikimedia Commons and the photographer.
@@ -138,7 +213,6 @@ describe('content integrity', () => {
       expect(here.length, `${b.id} ${ch}: ${here.join(', ')}`).toBeLessThan(2);
     }
   });
-  const bibleDir = new URL('../../public/data/bible/', import.meta.url);
   it.skipIf(!existsSync(bibleDir))('chiasm quotes are the BSB wording, in order', () => {
     for (const c of CHIASMS.filter(isPhrase)) {
       for (const ref of new Set(c.levels.map((l) => l.ref))) {

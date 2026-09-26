@@ -1,0 +1,30 @@
+{
+ "id": "jael",
+ "name": "Jael",
+ "role": "Killed Sisera in her tent",
+ "people": ["jael_689"],
+ "when": "≈ 12th century BC",
+ "whenBasis": "The period of the judges, which Judges does not date. Counting back from 1 Kings 6:1's 480 years gives the late 1400s–1100s BC for the whole period; an exodus under Ramesses II gives a later, shorter one.",
+ "summary": "Wife of Heber the Kenite, whose clan was at peace with Jabin king of Hazor. When the defeated Sisera fled to her tent, she invited him in, covered him and gave him milk, then drove a tent peg through his temple as he slept. Deborah's song calls her most blessed among women; Barak, pursuing, found Sisera dead in her tent, as Deborah had foretold.",
+ "body": [
+  "Heber had moved away from the other Kenites and pitched his tent near Kedesh. Jael goes out to meet Sisera: “Come in, my lord. Come in with me. Do not be afraid.” He asks for water and she gives him milk, and asks her to stand at the door and deny anyone is there.",
+  "The song in Judges 5 retells it in poetry: she reached for the tent peg and the workman's hammer, struck Sisera and crushed his head, and at her feet he sank, fell and lay still."
+ ],
+ "moments": [
+  {"ref": "Judg.4.11", "text": "Heber the Kenite"},
+  {"ref": "Judg.4.17-18", "text": "“Come in, my lord”"},
+  {"ref": "Judg.4.19", "text": "Milk"},
+  {"ref": "Judg.4.21", "text": "The tent peg"},
+  {"ref": "Judg.4.22", "text": "Shows Barak the body"},
+  {"ref": "Judg.5.24", "text": "“Most blessed among women”"},
+  {"ref": "Judg.5.26-27", "text": "In the song"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.4.11-22"},
+  {"kind": "scripture", "ref": "Judg.5.24-27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/052.Jael_Kills_Sisera.jpg/500px-052.Jael_Kills_Sisera.jpg", "caption": "Jael kills Sisera (Judges 4:21), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:052.Jael_Kills_Sisera.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "samuel",
+ "name": "Samuel",
+ "role": "Prophet and judge who anointed Israel's first kings",
+ "people": ["samuel_2469"],
+ "when": "≈ 11th century BC",
+ "whenBasis": "He anoints Saul and then David, and David's reign is dated ≈1010–970 BC by counting back from Solomon (see David). Samuel is an old man by Saul's accession (1 Samuel 8:1).",
+ "summary": "Hannah's son, asked of the LORD and given back to him at Shiloh. He grew up serving under Eli, was called by name in the night, judged Israel all his life, and anointed its first two kings, Saul and then David.",
+ "body": [
+  "Hannah prays for a son at Shiloh and vows him to the LORD; she names him Samuel, “Because I have asked for him from the LORD,” and leaves him with Eli the priest once he is weaned.",
+  "As a boy he hears his name called in the night, and at Eli's word answers, “Speak, for Your servant is listening.” The message is judgment on Eli's house. All Israel comes to recognise him as a prophet.",
+  "He judges Israel on a yearly circuit from Ramah. When the elders ask for a king, he warns them what a king will take, and at the LORD's word anoints Saul; after Saul's disobedience he anoints David, the youngest of Jesse's sons. He dies and is buried at Ramah, and once more speaks to Saul, called up by the medium at En-dor."
+ ],
+ "moments": [
+  {"ref": "1Sam.1.20", "text": "Born to Hannah and named"},
+  {"ref": "1Sam.1.27-28", "text": "Given to the LORD at Shiloh"},
+  {"ref": "1Sam.3.10", "text": "“Speak, for Your servant is listening”"},
+  {"ref": "1Sam.7.15-17", "text": "Judges Israel all his life, from Ramah"},
+  {"ref": "1Sam.8.4-7", "text": "The people ask for a king"},
+  {"ref": "1Sam.10.1", "text": "Anoints Saul"},
+  {"ref": "1Sam.16.13", "text": "Anoints David"},
+  {"ref": "1Sam.25.1", "text": "Dies and is buried at Ramah"},
+  {"ref": "1Sam.28.11-15", "text": "Called up at En-dor"}
+ ],
+ "later": [
+  {"text": "The Talmud says Samuel wrote his own book, Judges and Ruth. The book itself records his death halfway through (1 Samuel 25:1), and the Talmud gives the rest to Gad and Nathan.", "confidence": "interpretation", "traditions": ["Babylonian Talmud (Bava Batra 14b–15a)", "traditional Jewish and Christian readings"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b–15a", "url": "https://www.sefaria.org/Bava_Batra.14b"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Sam.1.1-25.1"},
+  {"kind": "scripture", "ref": "1Sam.28.11-19"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Eli_and_Samuel.jpg/500px-Eli_and_Samuel.jpg", "caption": "The boy Samuel tells Eli what the LORD has said (1 Samuel 3), John Singleton Copley, 1780.", "credit": "John Singleton Copley, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Eli_and_Samuel.jpg", "license": "Public domain"}
+ ]
+}

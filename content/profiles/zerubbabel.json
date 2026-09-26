@@ -1,0 +1,46 @@
+{
+ "id": "zerubbabel",
+ "name": "Zerubbabel",
+ "role": "Governor of Judah who rebuilt the temple",
+ "people": ["zerubbabel_3054"],
+ "genealogy": "zorobabel",
+ "when": "≈ 538–515 BC",
+ "whenBasis": "The first return under Cyrus (≈538 BC) to the temple's completion in the sixth year of Darius I (Ezra 6:15), ≈515 BC; Haggai 1:1 dates him as governor in Darius's second year, ≈520 BC.",
+ "summary": "Son of Shealtiel and grandson of King Jehoiachin, who led the first exiles home from Babylon with the high priest Jeshua. They rebuilt the altar and laid the temple's foundation, then refused the help of the people of the land, who stopped the work. In the second year of Darius, stirred by Haggai and Zechariah, Zerubbabel and Jeshua began again, and the temple was finished. Haggai called him the LORD's signet ring.",
+ "body": [
+  "As the foundation is laid, the old men who had seen the first temple weep aloud while others shout for joy. Zechariah's word to him is “Not by might nor by power, but by My Spirit”: his hands laid the foundation, and his hands will complete it.",
+  "Chronicles lists him as a son of Pedaiah, Shealtiel's brother; everywhere else he is son of Shealtiel. He stands in both Matthew's and Luke's genealogies of Jesus. Haggai's signet ring reverses Jeremiah's word to his grandfather Coniah (Jehoiachin), that the LORD would pull him off even if he were His signet ring."
+ ],
+ "moments": [
+  {"ref": "Ezra.2.2", "text": "Leads the returning exiles"},
+  {"ref": "Ezra.3.2", "text": "Builds the altar"},
+  {"ref": "Ezra.3.8", "text": "Begins the temple"},
+  {"ref": "Ezra.3.12", "text": "The old men weep"},
+  {"ref": "Ezra.4.2-3", "text": "Refuses help"},
+  {"ref": "Ezra.5.2", "text": "Begins again"},
+  {"ref": "Hag.1.1", "text": "Governor of Judah"},
+  {"ref": "Hag.1.12", "text": "Obeys the LORD"},
+  {"ref": "Hag.2.4", "text": "“Be strong, O Zerubbabel”"},
+  {"ref": "Hag.2.23", "text": "“Like My signet ring”"},
+  {"ref": "Zech.4.6", "text": "“Not by might nor by power”"},
+  {"ref": "Zech.4.9", "text": "His hands will complete it"},
+  {"ref": "1Chr.3.19", "text": "Son of Pedaiah"},
+  {"ref": "Jer.22.24", "text": "The signet ring reversed"},
+  {"ref": "Matt.1.12", "text": "In Jesus' genealogy"}
+ ],
+ "later": [
+  {"text": "Whether Sheshbazzar, the prince of Judah to whom Cyrus gave the vessels and who laid the foundation, is Zerubbabel under another name is disputed.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Ezra.1.8"}, {"kind": "scripture", "ref": "Ezra.5.14-16"}, {"kind": "scholarship", "title": "Ezra, Nehemiah (Word Biblical Commentary 16)", "author": "H. G. M. Williamson", "year": 1985}], "traditions": ["the same man: Theographic's data and older commentators", "two men: many modern scholars"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Ezra.2.1-6.22"},
+  {"kind": "scripture", "ref": "Hag.1.1-2.23"},
+  {"kind": "scripture", "ref": "Zech.4.1-10"},
+  {"kind": "scripture", "ref": "1Chr.3.17-19"},
+  {"kind": "scripture", "ref": "Matt.1.12-13"},
+  {"kind": "scripture", "ref": "Luke.3.27"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/105.The_Rebuilding_of_the_Temple_Is_Begun.jpg/500px-105.The_Rebuilding_of_the_Temple_Is_Begun.jpg", "caption": "The rebuilding of the temple is begun (Ezra 3), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:105.The_Rebuilding_of_the_Temple_Is_Begun.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "id": "jeroboam",
+ "name": "Jeroboam",
+ "role": "First king of the northern kingdom of Israel",
+ "people": ["jeroboam_872"],
+ "when": "≈ 931–910 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Nebat, an Ephraimite, put in charge of the forced labour of the house of Joseph. The prophet Ahijah tore his new cloak into twelve pieces and gave him ten, the tribes he would rule. He fled from Solomon to Shishak of Egypt, returned when Rehoboam refused to lighten the people's load, and was made king of Israel. To keep the people from going to Jerusalem he set up golden calves at Bethel and Dan, and the sins Jeroboam committed became the book's verdict on every northern king after him.",
+ "body": [
+  "Ahijah tells him that if he walks in the LORD's ways the LORD will build him a lasting house. Instead, fearing the kingdom will return to David's house, he makes two calves of gold: “Here, O Israel, are your gods, who brought you up out of the land of Egypt.” He appoints priests who are not Levites and a feast in the eighth month.",
+  "A man of God from Judah cries out against the altar at Bethel; when Jeroboam stretches out his hand to seize him, it withers. When his son Abijah falls sick, he sends his wife in disguise to the blind Ahijah, who tells her the boy will die as she enters the city and the house of Jeroboam will be cut off. He reigns twenty-two years."
+ ],
+ "moments": [
+  {"ref": "1Kgs.11.26", "text": "Son of Nebat"},
+  {"ref": "1Kgs.11.28", "text": "Over the forced labour"},
+  {"ref": "1Kgs.11.29-31", "text": "Ten pieces of the cloak"},
+  {"ref": "1Kgs.11.40", "text": "Flees to Shishak"},
+  {"ref": "1Kgs.12.20", "text": "Made king of Israel"},
+  {"ref": "1Kgs.12.28-29", "text": "The golden calves"},
+  {"ref": "1Kgs.12.31-32", "text": "His priests and feast"},
+  {"ref": "1Kgs.13.4", "text": "His hand withers"},
+  {"ref": "1Kgs.14.1-2", "text": "His wife in disguise"},
+  {"ref": "1Kgs.14.10", "text": "His house cut off"},
+  {"ref": "1Kgs.14.20", "text": "Twenty-two years"},
+  {"ref": "2Kgs.17.21-22", "text": "The sins of Jeroboam"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.11.26-14.20"},
+  {"kind": "scripture", "ref": "2Kgs.17.21-23"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Jean-Honor%C3%A9_Fragonard_-_Jeroboam_Offering_Sacrifice_for_the_Idol_-_WGA08049.jpg/500px-Jean-Honor%C3%A9_Fragonard_-_Jeroboam_Offering_Sacrifice_for_the_Idol_-_WGA08049.jpg", "caption": "Jeroboam offering sacrifice to the idol (1 Kings 12:32–33), Jean-Honoré Fragonard, 1752. École nationale supérieure des Beaux-Arts, Paris.", "credit": "Jean-Honoré Fragonard, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_-_Jeroboam_Offering_Sacrifice_for_the_Idol_-_WGA08049.jpg", "license": "Public domain"}
+ ]
+}

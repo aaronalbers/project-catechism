@@ -1,0 +1,31 @@
+{
+ "id": "simon-the-zealot",
+ "name": "Simon the Zealot",
+ "role": "Apostle",
+ "people": ["simon_2746"],
+ "when": "≈ AD 28–33",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "summary": "One of the Twelve, Simon the Zealot, named in every list of the apostles and nowhere else.",
+ "body": [
+  "Where Luke and Acts write the Greek zēlōtēs, Matthew and Mark write Kananaios, from the Aramaic word for zealous; older translations render it the Cananaean or the Canaanite, though it has nothing to do with Canaan or Cana."
+ ],
+ "moments": [
+  {"ref": "Matt.10.4", "text": "In Matthew's list"},
+  {"ref": "Luke.6.15", "text": "Simon called the Zealot"},
+  {"ref": "Mark.3.18", "text": "In Mark's list"},
+  {"ref": "Acts.1.13", "text": "In the upper room"}
+ ],
+ "later": [
+  {"text": "Whether Zealot means he belonged to the revolutionary party of that name, which Josephus describes only from the war of AD 66, or only that he was zealous for the Law, is debated.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Jewish War 4.160–161"}, {"kind": "lexicon", "title": "Aramaic qanʾānā, zealous"}], "traditions": ["commentators, variously"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.10.4"},
+  {"kind": "scripture", "ref": "Mark.3.18"},
+  {"kind": "scripture", "ref": "Luke.6.15"},
+  {"kind": "scripture", "ref": "Acts.1.13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Brooklyn_Museum_-_Saint_Simon_-_James_Tissot_-_overall.jpg/500px-Brooklyn_Museum_-_Saint_Simon_-_James_Tissot_-_overall.jpg", "caption": "Saint Simon, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Saint_Simon_-_James_Tissot_-_overall.jpg", "license": "Public domain"}
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "cyrus",
+ "name": "Cyrus",
+ "role": "King of Persia who let the exiles go home",
+ "people": ["cyrus_968"],
+ "when": "≈ 559–530 BC reigned",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible.",
+ "summary": "King of Persia whose first-year proclamation ends Chronicles and opens Ezra: the LORD, the God of heaven, had appointed him to build a house at Jerusalem, and any of His people might go up. He gave back the temple vessels Nebuchadnezzar had taken. Isaiah names him the LORD's shepherd and His anointed, whose right hand He had grasped to subdue nations.",
+ "body": [
+  "Ezra says the LORD stirred his spirit to fulfil the word spoken through Jeremiah. When the rebuilding was challenged under Darius, a memorandum of his decree was found at Ecbatana, giving the temple's dimensions and paying its costs from the royal treasury.",
+  "Daniel is said to have remained until his first year, and dates his last vision to Cyrus's third year."
+ ],
+ "moments": [
+  {"ref": "Isa.44.28", "text": "“My shepherd”"},
+  {"ref": "Isa.45.1", "text": "His anointed"},
+  {"ref": "2Chr.36.22-23", "text": "His proclamation"},
+  {"ref": "Ezra.1.1-2", "text": "The LORD stirred his spirit"},
+  {"ref": "Ezra.1.7-8", "text": "Returns the vessels"},
+  {"ref": "Ezra.4.3", "text": "The builders cite his decree"},
+  {"ref": "Ezra.6.2-3", "text": "The memorandum at Ecbatana"},
+  {"ref": "Dan.1.21", "text": "Daniel until his first year"},
+  {"ref": "Dan.10.1", "text": "Daniel's vision in his third year"}
+ ],
+ "later": [
+  {"text": "The Cyrus Cylinder, found at Babylon in 1879, is his own account of taking Babylon without a battle and returning the gods of other cities, and their peoples, to their homes. It does not mention the Jews.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Cyrus Cylinder, British Museum 90920"}]},
+  {"text": "The Nabonidus Chronicle records that Babylon fell to his army without a battle in 539 BC and that Cyrus entered it days later.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Nabonidus Chronicle, British Museum 35382"}]},
+  {"text": "His tomb stands at Pasargadae in Iran.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Tomb of Cyrus, Pasargadae", "note": "UNESCO World Heritage Site"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Chr.36.22-23"},
+  {"kind": "scripture", "ref": "Ezra.1.1-11"},
+  {"kind": "scripture", "ref": "Ezra.6.1-5"},
+  {"kind": "scripture", "ref": "Isa.44.28-45.13"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/104.Cyrus_Restores_the_Vessels_of_the_Temple.jpg/500px-104.Cyrus_Restores_the_Vessels_of_the_Temple.jpg", "caption": "Cyrus restores the vessels of the temple (Ezra 1:7), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:104.Cyrus_Restores_the_Vessels_of_the_Temple.jpg", "license": "Public domain"}
+ ]
+}

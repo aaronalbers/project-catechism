@@ -1,0 +1,35 @@
+{
+ "id": "ahaz",
+ "name": "Ahaz",
+ "role": "King of Judah who turned to Assyria",
+ "people": ["ahaz_118"],
+ "genealogy": "ahaz",
+ "when": "≈ 735–715 BC reigned",
+ "whenBasis": "The reign as the Reign tab dates it, from Thiele's reconstruction of the kings' stated lengths and synchronisms; the other readings there differ by a few years.",
+ "summary": "Son of Jotham, who did not do right like David: he made his son pass through the fire and sacrificed at the high places. When Rezin of Aram and Pekah of Israel besieged Jerusalem, he refused Isaiah's offer of a sign and sent the temple's silver and gold to Tiglath-pileser of Assyria, saying, “I am your servant and your son.” Visiting him at Damascus, he had a copy of the Assyrian altar built in the temple and stripped the temple's bronze stands.",
+ "body": [
+  "Isaiah tells him to be careful, keep calm and not be afraid of these two smouldering stubs of firebrands; when Ahaz says he will not ask a sign or test the LORD, Isaiah gives him the sign of Immanuel.",
+  "Assyria takes Damascus and kills Rezin. Ahaz moves the bronze altar aside for his new one, removes the panels of the stands and the Sea from the bronze oxen, all for the king of Assyria. Chronicles adds that he shut the doors of the temple. The stairway of Ahaz is where Hezekiah's sign of the shadow is given."
+ ],
+ "moments": [
+  {"ref": "2Kgs.16.2-3", "text": "His son through the fire"},
+  {"ref": "2Kgs.16.5", "text": "Besieged by Rezin and Pekah"},
+  {"ref": "2Kgs.16.7-8", "text": "“I am your servant and your son”"},
+  {"ref": "2Kgs.16.10-11", "text": "The altar from Damascus"},
+  {"ref": "2Kgs.16.17", "text": "Strips the stands and the Sea"},
+  {"ref": "Isa.7.3-4", "text": "Isaiah meets him"},
+  {"ref": "Isa.7.12", "text": "“I will not ask”"},
+  {"ref": "Isa.7.14", "text": "The sign"},
+  {"ref": "2Chr.28.24", "text": "Shuts the temple doors"},
+  {"ref": "2Kgs.20.11", "text": "The stairway of Ahaz"}
+ ],
+ "later": [
+  {"text": "An inscription of Tiglath-pileser III lists “Jehoahaz of Judah”, the fuller form of Ahaz's name, among the kings who paid him tribute.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Tiglath-pileser III, Summary Inscription 7 (Nimrud Tablet K.3751), British Museum"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.16.1-20"},
+  {"kind": "scripture", "ref": "2Chr.28.1-27"},
+  {"kind": "scripture", "ref": "Isa.7.1-17"}
+ ]
+}

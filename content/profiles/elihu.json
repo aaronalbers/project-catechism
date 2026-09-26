@@ -1,0 +1,28 @@
+{
+ "id": "elihu",
+ "name": "Elihu",
+ "role": "The young man who answered Job and his friends",
+ "people": ["elihu_1130"],
+ "summary": "Son of Barachel the Buzite, of the family of Ram, who had waited to speak because the others were older. He burned with anger against Job for justifying himself rather than God, and against the three friends for condemning Job without answering him. He speaks for six chapters, of God teaching through dreams and pain and of His power in the storm, and then the LORD answers Job out of the whirlwind.",
+ "body": [
+  "He says he is full of words, like wine about to burst a new wineskin, and must speak. He is not named in the prologue or among those the LORD rebukes at the end. Buz is named in Genesis as a son of Nahor, Abraham's brother."
+ ],
+ "moments": [
+  {"ref": "Job.32.2", "text": "Angry at Job"},
+  {"ref": "Job.32.3", "text": "Angry at the friends"},
+  {"ref": "Job.32.4", "text": "Waits because he is young"},
+  {"ref": "Job.32.19", "text": "Like a new wineskin"},
+  {"ref": "Job.33.14-16", "text": "God speaks in dreams"},
+  {"ref": "Job.37.1-5", "text": "God's voice in the storm"},
+  {"ref": "Job.38.1", "text": "The LORD answers from the whirlwind"},
+  {"ref": "Gen.22.21", "text": "Buz, son of Nahor"}
+ ],
+ "later": [
+  {"text": "Because he is absent from the prologue and epilogue and interrupts the move from Job's last words to God's answer, many scholars take his speeches as a later addition.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Job (Anchor Bible 15)", "author": "Marvin H. Pope", "year": 1965}], "traditions": ["a later addition: Marvin Pope and many historical-critical scholars", "integral to the book: many other readers"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Job.32.1-37.24"},
+  {"kind": "scripture", "ref": "Gen.22.21"}
+ ]
+}

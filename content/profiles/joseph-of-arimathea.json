@@ -1,0 +1,33 @@
+{
+ "id": "joseph-of-arimathea",
+ "name": "Joseph of Arimathea",
+ "role": "Council member who buried Jesus",
+ "people": ["joseph_1716"],
+ "when": "≈ AD 30 or 33",
+ "whenBasis": "The crucifixion under Pilate (AD 26–36), usually dated to the Passover of AD 30 or 33 from the weekday the gospels give.",
+ "summary": "A rich man from Arimathea, a respected member of the council who had not consented to its decision, and who was waiting for the kingdom of God; John says he was a disciple of Jesus, but secretly, for fear of the Jews. On the evening of the crucifixion he went boldly to Pilate and asked for the body. With Nicodemus he wrapped it in linen with spices and laid it in his own new tomb cut in the rock, and rolled a stone across the entrance.",
+ "body": [
+  "Pilate is surprised Jesus is already dead and checks with the centurion before giving him the body. The women from Galilee watch where it is laid."
+ ],
+ "moments": [
+  {"ref": "Matt.27.57", "text": "A rich man, a disciple"},
+  {"ref": "Mark.15.43", "text": "Goes boldly to Pilate"},
+  {"ref": "Luke.23.50-51", "text": "Did not consent"},
+  {"ref": "John.19.38", "text": "A secret disciple"},
+  {"ref": "John.19.39-40", "text": "With Nicodemus"},
+  {"ref": "Matt.27.60", "text": "His own new tomb"}
+ ],
+ "later": [
+  {"text": "Medieval English legend, first written down in the thirteenth century, brings him to Glastonbury with the Holy Grail.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Grail: From Celtic Myth to Christian Symbol", "author": "Roger Sherman Loomis", "year": 1963}], "traditions": ["medieval English and Arthurian legend"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.27.57-60"},
+  {"kind": "scripture", "ref": "Mark.15.42-46"},
+  {"kind": "scripture", "ref": "Luke.23.50-54"},
+  {"kind": "scripture", "ref": "John.19.38-42"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Brooklyn_Museum_-_Joseph_of_Arimathaea_%28Joseph_d%27Arimathie%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_Joseph_of_Arimathaea_%28Joseph_d%27Arimathie%29_-_James_Tissot.jpg", "caption": "Joseph of Arimathea, James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Joseph_of_Arimathaea_(Joseph_d%27Arimathie)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

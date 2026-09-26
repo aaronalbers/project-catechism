@@ -1,0 +1,27 @@
+{
+ "id": "delilah",
+ "name": "Delilah",
+ "role": "Woman of the Valley of Sorek who betrayed Samson",
+ "people": ["delilah_1005"],
+ "summary": "A woman of the Valley of Sorek whom Samson loved. The Philistine lords each promised her 1,100 pieces of silver to find the secret of his strength. Three times he lied and she tested him; at last, pressed day after day, he told her, and she had his head shaved while he slept on her knees and called in the Philistines.",
+ "body": [
+  "Judges does not say whether she was a Philistine. Each time she ties him as he says, with fresh bowstrings, new ropes, his hair woven into the loom, and calls, “Samson, the Philistines are here!”, and each time he breaks free.",
+  "“How can you say, ‘I love you,’” she asks, “when your heart is not with me?” When he tells her the truth she knows it, sends for the lords, and they come with the silver. The text says no more of her."
+ ],
+ "moments": [
+  {"ref": "Judg.16.4-5", "text": "The lords' offer"},
+  {"ref": "Judg.16.6-9", "text": "The fresh bowstrings"},
+  {"ref": "Judg.16.10-12", "text": "The new ropes"},
+  {"ref": "Judg.16.13-14", "text": "The loom"},
+  {"ref": "Judg.16.15-16", "text": "“Your heart is not with me”"},
+  {"ref": "Judg.16.17-19", "text": "Shaves his head"},
+  {"ref": "Judg.16.20", "text": "“The Philistines are here”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Judg.16.4-21"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/063.Samson_and_Delilah.jpg/500px-063.Samson_and_Delilah.jpg", "caption": "Samson and Delilah (Judges 16:19), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:063.Samson_and_Delilah.jpg", "license": "Public domain"}
+ ]
+}

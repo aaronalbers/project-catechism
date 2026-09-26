@@ -1,0 +1,44 @@
+{
+ "id": "isaiah",
+ "name": "Isaiah",
+ "role": "Prophet in Jerusalem under Uzziah, Ahaz and Hezekiah",
+ "people": ["isaiah_617"],
+ "when": "≈ 740–700 BC",
+ "whenBasis": "From the year King Uzziah died (Isaiah 6:1) into Hezekiah's reign, in Thiele's reckoning.",
+ "summary": "Son of Amoz, who saw the LORD high and lifted up in the temple in the year King Uzziah died, and answered, “Here am I. Send me!” He gave King Ahaz the sign of Immanuel, walked barefoot three years as a sign against Egypt, and assured Hezekiah that Sennacherib would not take Jerusalem. His book, the longest of the prophets, is the one the New Testament quotes most.",
+ "body": [
+  "The seraphim cry, “Holy, holy, holy is the LORD of Hosts,” and a coal from the altar touches his lips. He is sent to a people who will hear and not understand.",
+  "When Aram and Israel threaten Ahaz, Isaiah meets him with his son Shear-jashub, a remnant will return, and tells him to stand firm; when Ahaz will not ask a sign, Isaiah gives one: the young woman will conceive and bear a son and call him Immanuel. His own son is named Maher-shalal-hash-baz. Under Hezekiah he answers Assyria's threats, tells the sick king to set his house in order, then brings word of fifteen more years, and warns him after the Babylonian envoys' visit.",
+  "Jesus reads from the scroll of Isaiah in the synagogue at Nazareth; the Ethiopian official is reading Isaiah 53 when Philip meets him. Matthew reads the Immanuel sign of Jesus' birth."
+ ],
+ "moments": [
+  {"ref": "Isa.1.1", "text": "His vision"},
+  {"ref": "Isa.6.1-3", "text": "“Holy, holy, holy”"},
+  {"ref": "Isa.6.6-7", "text": "The coal"},
+  {"ref": "Isa.6.8", "text": "“Here am I. Send me!”"},
+  {"ref": "Isa.7.3-4", "text": "Meets Ahaz"},
+  {"ref": "Isa.7.14", "text": "Immanuel"},
+  {"ref": "Isa.8.3", "text": "Maher-shalal-hash-baz"},
+  {"ref": "Isa.20.2-3", "text": "Barefoot three years"},
+  {"ref": "2Kgs.19.20", "text": "Answers Hezekiah"},
+  {"ref": "2Kgs.20.1", "text": "“Put your house in order”"},
+  {"ref": "Isa.53.5", "text": "“Pierced for our transgressions”"},
+  {"ref": "Luke.4.17-18", "text": "Read at Nazareth"},
+  {"ref": "Acts.8.30", "text": "Read by the Ethiopian"}
+ ],
+ "later": [
+  {"text": "The Great Isaiah Scroll from Qumran Cave 1 (1QIsaᵃ), copied ≈125 BC, contains all 66 chapters and is the oldest complete manuscript of a book of the Hebrew Bible.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Great Isaiah Scroll (1QIsaᵃ), Shrine of the Book, Israel Museum"}]},
+  {"text": "Chapters 40–66 address the exiles in Babylon and name Cyrus. Most critical scholars assign them to later prophets in Isaiah's tradition (Second and Third Isaiah); traditional readers take the whole book as Isaiah's, prophesying ahead.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Isa.44.28-45.1"}, {"kind": "scholarship", "title": "Isaiah 40–55 (Anchor Bible 19A)", "author": "Joseph Blenkinsopp", "year": 2002}], "traditions": ["one author: traditional Jewish and Christian readings", "later authors for chapters 40–66: most historical-critical scholarship"]},
+  {"text": "Jewish and Christian tradition holds that he was killed under Manasseh, sawn in two.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Yevamot 49b", "url": "https://www.sefaria.org/Yevamot.49b"}, {"kind": "primary", "title": "Martyrdom and Ascension of Isaiah 5"}], "traditions": ["the Talmud", "the Ascension of Isaiah", "early Christian writers, who read Hebrews 11:37 of him"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Isa.1.1-66.24"},
+  {"kind": "scripture", "ref": "2Kgs.19.1-20.19"},
+  {"kind": "scripture", "ref": "Luke.4.16-21"},
+  {"kind": "scripture", "ref": "Acts.8.26-35"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/120.The_Prophet_Isaiah.jpg/500px-120.The_Prophet_Isaiah.jpg", "caption": "The prophet Isaiah, Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:120.The_Prophet_Isaiah.jpg", "license": "Public domain"}
+ ]
+}

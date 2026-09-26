@@ -1,0 +1,25 @@
+{
+ "id": "eutychus",
+ "name": "Eutychus",
+ "role": "Young man who fell from a window as Paul preached",
+ "people": ["eutychus_1230"],
+ "when": "≈ AD 57",
+ "whenBasis": "Paul's last journey to Jerusalem, a few years after he left Ephesus.",
+ "summary": "A young man at Troas who sat in the window as Paul talked until midnight on the first day of the week. Sinking into a deep sleep as Paul talked on and on, he fell from the third storey and was picked up dead. Paul went down, threw himself on him and embraced him: “Do not be alarmed!… He is still alive!” Paul went back up, broke bread, talked until daybreak and left; they took the boy home alive and were greatly relieved.",
+ "body": [
+  "There are many lamps in the upstairs room where they are gathered. His name means fortunate."
+ ],
+ "moments": [
+  {"ref": "Acts.20.7", "text": "Breaking bread at Troas"},
+  {"ref": "Acts.20.8", "text": "Many lamps"},
+  {"ref": "Acts.20.9", "text": "Falls from the window"},
+  {"ref": "Acts.20.10", "text": "“He is still alive!”"},
+  {"ref": "Acts.20.11", "text": "Until daybreak"},
+  {"ref": "Acts.20.12", "text": "Taken home alive"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Acts.20.6-12"},
+  {"kind": "lexicon", "title": "Greek eutychos, fortunate"}
+ ]
+}

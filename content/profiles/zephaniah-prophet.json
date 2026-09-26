@@ -1,0 +1,29 @@
+{
+ "id": "zephaniah-prophet",
+ "name": "Zephaniah",
+ "role": "Prophet of the Day of the LORD under Josiah",
+ "people": ["zephaniah_3040"],
+ "when": "≈ 640–609 BC",
+ "whenBasis": "In the days of Josiah (Zephaniah 1:1), whom Thiele dates 640–609 BC.",
+ "summary": "Son of Cushi, whose descent is traced four generations back to a Hezekiah, prophesying in the days of Josiah. He announced the great Day of the LORD, near and coming quickly, a day of wrath against Judah's worship of Baal and the host of heaven and against the nations around. It ends in joy: the LORD in Jerusalem's midst will rejoice over her with singing.",
+ "body": [
+  "He condemns those who bow on the rooftops to the stars and swear by Milcom, and the complacent who say the LORD will do nothing, good or bad. A meek and humble people will be left, who trust in the name of the LORD."
+ ],
+ "moments": [
+  {"ref": "Zeph.1.1", "text": "His lineage"},
+  {"ref": "Zeph.1.4-5", "text": "Against Baal and the host of heaven"},
+  {"ref": "Zeph.1.12", "text": "The complacent"},
+  {"ref": "Zeph.1.14", "text": "The great Day is near"},
+  {"ref": "Zeph.1.15", "text": "A day of wrath"},
+  {"ref": "Zeph.3.12", "text": "A meek and humble people"},
+  {"ref": "Zeph.3.17", "text": "He will rejoice over you"}
+ ],
+ "later": [
+  {"text": "The medieval hymn Dies irae takes its opening from Zephaniah 1:15 in the Latin Vulgate, “dies irae dies illa.”", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Vulgate, Sophonias 1:15"}, {"kind": "primary", "title": "Dies irae, sequence of the Latin Requiem Mass"}]},
+  {"text": "Many take the Hezekiah of his lineage to be the king, which would make him of royal blood; the text does not call him king.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Zeph.1.1"}], "traditions": ["many commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Zeph.1.1-3.20"}
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "annas",
+ "name": "Annas",
+ "role": "Former high priest, father-in-law of Caiaphas",
+ "people": ["annas_269"],
+ "when": "≈ AD 6–15 high priest",
+ "whenBasis": "Josephus has Quirinius appoint him and Valerius Gratus depose him (Antiquities 18.26, 18.34); he was still called high priest when Jesus was tried, ≈AD 30.",
+ "summary": "Father-in-law of Caiaphas, named with him as high priest when John began to preach. When Jesus was arrested he was brought first to Annas, who questioned him about his disciples and his teaching. Jesus answered that he had spoken openly, and an officer struck him. Annas sent him bound to Caiaphas. After Pentecost Annas presided with his family when Peter and John were questioned.",
+ "body": [
+  "Jesus asks the officer who struck him, “If I said something wrong, testify as to what was wrong. But if I spoke correctly, why did you strike Me?” Luke still calls Annas high priest years after he had been removed."
+ ],
+ "moments": [
+  {"ref": "Luke.3.2", "text": "High priest with Caiaphas"},
+  {"ref": "John.18.13", "text": "Jesus brought first to him"},
+  {"ref": "John.18.19", "text": "Questions Jesus"},
+  {"ref": "John.18.22-23", "text": "The officer strikes Jesus"},
+  {"ref": "John.18.24", "text": "Sends him to Caiaphas"},
+  {"ref": "Acts.4.6", "text": "Annas the high priest"}
+ ],
+ "later": [
+  {"text": "Josephus says five of his sons became high priest, which he counted unique; one of them, also Annas, had James the brother of Jesus stoned in AD 62.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.26, 20.197–203"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Luke.3.2"},
+  {"kind": "scripture", "ref": "John.18.12-24"},
+  {"kind": "scripture", "ref": "Acts.4.5-6"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Brooklyn_Museum_-_The_Tribunal_of_Annas_%28Le_tribunal_d%27Anne%29_-_James_Tissot.jpg/500px-Brooklyn_Museum_-_The_Tribunal_of_Annas_%28Le_tribunal_d%27Anne%29_-_James_Tissot.jpg", "caption": "The tribunal of Annas (John 18:19), James Tissot, 1886–94, Brooklyn Museum.", "credit": "James Tissot, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Tribunal_of_Annas_(Le_tribunal_d%27Anne)_-_James_Tissot.jpg", "license": "Public domain"}
+ ]
+}

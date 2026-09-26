@@ -1,0 +1,34 @@
+{
+ "id": "sennacherib",
+ "name": "Sennacherib",
+ "role": "King of Assyria who besieged Jerusalem",
+ "people": ["sennacherib_2489"],
+ "when": "≈ 705–681 BC reigned",
+ "whenBasis": "From the Assyrian king lists and eponym chronicles; his campaign against Judah is dated 701 BC.",
+ "summary": "King of Assyria who in Hezekiah's fourteenth year came up against all the fortified cities of Judah and took them. He sent his officials with an army to demand Jerusalem's surrender and a letter mocking the LORD. That night the angel of the LORD struck down 185,000 in the Assyrian camp; Sennacherib returned to Nineveh, where two of his sons killed him as he worshipped in the temple of Nisroch.",
+ "body": [
+  "He besieges Lachish, receives Hezekiah's tribute of silver and gold, and still sends the Rabshakeh to Jerusalem. His letter lists the gods of the nations that could not save their lands. Isaiah's oracle answers him: the virgin daughter of Zion despises him, and he will return by the way he came."
+ ],
+ "moments": [
+  {"ref": "2Kgs.18.13", "text": "Takes Judah's cities"},
+  {"ref": "2Kgs.18.14", "text": "Tribute at Lachish"},
+  {"ref": "2Kgs.18.17", "text": "Sends his officials"},
+  {"ref": "2Kgs.19.10-13", "text": "His letter"},
+  {"ref": "2Kgs.19.21-28", "text": "Isaiah's answer"},
+  {"ref": "2Kgs.19.35-36", "text": "The camp struck; he returns"},
+  {"ref": "2Kgs.19.37", "text": "Killed by his sons"}
+ ],
+ "later": [
+  {"text": "His palace at Nineveh was lined with reliefs of the siege and capture of Lachish, now in the British Museum.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Lachish reliefs, British Museum 124904–124915", "note": "from the South-West Palace, Nineveh, excavated by Austen Henry Layard"}]},
+  {"text": "Babylonian and Assyrian records confirm that he was murdered by a son in 681 BC.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian Chronicle 1, British Museum 92502"}]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.18.13-19.37"},
+  {"kind": "scripture", "ref": "2Chr.32.1-22"},
+  {"kind": "scripture", "ref": "Isa.36.1-37.38"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/101.Sennacherib%27s_Army_Is_Destroyed.jpg/500px-101.Sennacherib%27s_Army_Is_Destroyed.jpg", "caption": "Sennacherib's army is destroyed (2 Kings 19:35), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:101.Sennacherib%27s_Army_Is_Destroyed.jpg", "license": "Public domain"}
+ ]
+}

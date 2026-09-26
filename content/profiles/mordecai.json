@@ -1,0 +1,39 @@
+{
+ "id": "mordecai",
+ "name": "Mordecai",
+ "role": "Esther's cousin, who would not bow to Haman",
+ "people": ["mordecai_2107"],
+ "when": "≈ 480–470s BC",
+ "whenBasis": "From the seventh to the twelfth year of Xerxes (Esther 2:16, 3:7) and after, taking Ahasuerus as Xerxes I (486–465 BC).",
+ "summary": "A Benjamite of Susa, son of Jair, son of Shimei, son of Kish, who raised his orphaned cousin Hadassah, Esther. Sitting at the king's gate, he uncovered a plot to kill the king. He would not bow to Haman, who then plotted to destroy all the Jews. Mordecai mourned in sackcloth and urged Esther to go to the king: “And who knows if perhaps you have come to the kingdom for such a time as this?” Haman was forced to parade him through the city in the king's robe, and Mordecai ended second only to the king. He wrote to the Jews to keep Purim every year.",
+ "body": [
+  "He tells Esther not to reveal her people, and walks by the court every day to learn how she is. His service to the king goes unrewarded until the king, unable to sleep, has the chronicles read and asks what honour was given him.",
+  "Once Haman is hanged, the king gives Mordecai the signet ring taken from Haman, and he writes the decree that lets the Jews defend themselves. He goes out in royal robes of blue and white, and the city of Susa rejoices."
+ ],
+ "moments": [
+  {"ref": "Esth.2.5", "text": "A Benjamite in Susa"},
+  {"ref": "Esth.2.7", "text": "Raises Esther"},
+  {"ref": "Esth.2.10", "text": "Tells Esther to keep her people secret"},
+  {"ref": "Esth.2.21-22", "text": "Uncovers a plot"},
+  {"ref": "Esth.3.2", "text": "Will not bow"},
+  {"ref": "Esth.4.1", "text": "Sackcloth and ashes"},
+  {"ref": "Esth.4.14", "text": "“For such a time as this”"},
+  {"ref": "Esth.6.1-3", "text": "Remembered on a sleepless night"},
+  {"ref": "Esth.6.11", "text": "Paraded by Haman"},
+  {"ref": "Esth.8.2", "text": "The signet ring"},
+  {"ref": "Esth.8.15", "text": "Royal robes of blue and white"},
+  {"ref": "Esth.9.20-22", "text": "The letters for Purim"},
+  {"ref": "Esth.10.3", "text": "Second only to the king"}
+ ],
+ "later": [
+  {"text": "A tablet from the reign of Darius I or Xerxes names a Marduka as an official at Susa; some have taken him for Mordecai, but the name, meaning “of Marduk,” was common.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Keilinschriftliche Beiträge zum Buch Ezra und Esther", "author": "Arthur Ungnad", "year": 1941, "note": "Zeitschrift für die alttestamentliche Wissenschaft 58"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}], "traditions": ["Arthur Ungnad and some later scholars; doubted by others"]},
+  {"text": "The rabbis read his descent from Kish, Saul's father, against Haman's from Agag, whom Saul spared: the old war between Saul and Amalek finished.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "1Sam.15.8-9"}, {"kind": "scripture", "ref": "Esth.2.5"}, {"kind": "scripture", "ref": "Esth.3.1"}, {"kind": "primary", "title": "Babylonian Talmud, Megillah 12b–13a", "url": "https://www.sefaria.org/Megillah.13a"}], "traditions": ["the Talmud and rabbinic tradition", "many modern commentators"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "Esth.2.5-10.3"}
+ ],
+ "media": [
+  {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/116.The_Triumph_of_Mordecai.jpg/500px-116.The_Triumph_of_Mordecai.jpg", "caption": "The triumph of Mordecai (Esther 6:11), Gustave Doré, 1866.", "credit": "Gustave Doré, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:116.The_Triumph_of_Mordecai.jpg", "license": "Public domain"}
+ ]
+}
