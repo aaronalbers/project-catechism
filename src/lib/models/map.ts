@@ -1,6 +1,6 @@
-// The size reference for a model tens of kilometres across or more: the coasts, rivers, lakes and
-// cities round Jerusalem at the model's scale, laid flat on the ground. Built from public/data/map.json,
-// which the viewer loads only for such a model.
+// The size reference for a model kilometres across or more: the coasts, rivers, lakes and cities round
+// Jerusalem at the model's scale, laid flat on the ground, and closer in the places about the city itself.
+// Built from public/data/map.json, which the viewer loads only for such a model.
 import * as THREE from 'three';
 import type { MapData } from '@/lib/types';
 
@@ -35,26 +35,42 @@ function label(name: string): THREE.Sprite | null {
   return s;
 }
 
+/** Beyond this span of view (km) the cities are named, and within it the places round Jerusalem. */
+const CITIES_FROM_KM = 40;
+
 /**
- * The map in model units (`u` metres each), Jerusalem at the origin, north towards −z, lying just
- * below y = 0 so it shows through a model standing on the ground rather than fighting its floor.
+ * The map in model units (`u` metres each), north towards −z, lying `below` metres under y = 0 so it
+ * shows through a model standing on the ground rather than fighting its floor. Jerusalem is at the
+ * origin, or the place named `on` if given (the camp of Israel sets the tabernacle on Mount Moriah).
+ * `userData.fit(km)` names only the places meant for a view that many kilometres across.
  */
-export function mapReference(data: MapData, u: number): THREE.Group {
-  const g = new THREE.Group(), y = -100 / u;
+export function mapReference(data: MapData, u: number, { on, below = 100 }: { on?: string; below?: number } = {}): THREE.Group {
+  const g = new THREE.Group(), y = -below / u;
+  const places = [...data.cities.map((c) => ({ ...c, span: [CITIES_FROM_KM, Infinity] as [number, number] })), ...(data.near ?? [])];
+  const origin = places.find((p) => p.name === on);
+  const [ox, oz] = origin ? project(data.centre, origin.lon, origin.lat) : [0, 0];
+  const at = (lon: number, lat: number): [number, number] => { const [x, z] = project(data.centre, lon, lat); return [(x - ox) / u, (z - oz) / u]; };
   const lines = (runs: number[][], color: number) => {
     const pts: number[] = [];
     for (const run of runs) for (let i = 0; i + 3 < run.length; i += 2) {
-      const [ax, az] = project(data.centre, run[i], run[i + 1]), [bx, bz] = project(data.centre, run[i + 2], run[i + 3]);
-      pts.push(ax / u, y, az / u, bx / u, y, bz / u);
+      const [ax, az] = at(run[i], run[i + 1]), [bx, bz] = at(run[i + 2], run[i + 3]);
+      pts.push(ax, y, az, bx, y, bz);
     }
     const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
     return new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color }));
   };
   g.add(lines(data.coast, 0xd9c49a), lines([...data.rivers, ...data.lakes], 0x6fa8e8));
-  const at = data.cities.map((c) => { const [x, z] = project(data.centre, c.lon, c.lat); return new THREE.Vector3(x / u, y, z / u); });
-  const dots = new THREE.BufferGeometry().setFromPoints(at);
-  g.add(new THREE.Points(dots, new THREE.PointsMaterial({ color: 0xefe7d6, size: 6, sizeAttenuation: false })));
-  data.cities.forEach((c, i) => { const s = label(c.name); if (s) { s.position.copy(at[i]); g.add(s); } });
+  const dot = new THREE.PointsMaterial({ color: 0xefe7d6, size: 6, sizeAttenuation: false });
+  const named: { o: THREE.Object3D; span: [number, number] }[] = [];
+  for (const p of places) {
+    const [x, z] = at(p.lon, p.lat), o = new THREE.Group();
+    o.position.set(x, y, z);
+    o.add(new THREE.Points(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3()]), dot));
+    const s = label(p.name); if (s) o.add(s);
+    g.add(o); named.push({ o, span: p.span });
+  }
+  g.userData.fit = (km: number) => { for (const { o, span } of named) o.visible = km >= span[0] && km <= span[1]; };
+  g.userData.fit(Infinity);
   g.userData.radius = data.km * 1000 / u;
   return g;
 }

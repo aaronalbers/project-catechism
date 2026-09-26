@@ -274,10 +274,11 @@ function ModelView({ m, loc, readingId }: { m: Model3D; loc: VerseLoc; readingId
         reference.group.position.copy(o.position); reference.group.visible = showScaleRef.current;
         scene.add(reference.group); referenceRef.current = reference;
         // A model big enough for the map loads it, and the reference is placed afresh with it.
-        if (Math.max(...box.getSize(new THREE.Vector3()).toArray()) * m.scale!.metres >= MAP_FROM_M) {
+        if (Math.max(...box.getSize(new THREE.Vector3()).toArray()) * m.scale!.metres >= (m.scale!.map?.from ?? MAP_FROM_M)) {
           void Promise.all([loadMap(), import('@/lib/models/map')]).then(([data, { mapReference }]) => {
             if (disposed) return;
-            reference.setMap(mapReference(data, m.scale!.metres));
+            // Close in (the camp of Israel), the map lies just under the ground, not 100 m down.
+            reference.setMap(mapReference(data, m.scale!.metres, m.scale!.map ? { on: m.scale!.map.on, below: 1 } : {}));
             reference.group.userData.at = undefined;
             frameRef.current(false);
           }).catch(() => { /* no map data: the figure stays */ });
@@ -393,7 +394,9 @@ function ScaleNote({ m, kind, bar }: { m: Model3D; kind: ScaleKind; bar: string 
   const unit = m.scale?.unit;
   return (
     <p className="scale-note">
-      {kind === 'map'
+      {kind === 'map' && m.scale?.map?.on
+        ? <>Map: places round Jerusalem at the same scale, laid flat with {m.scale.map.on} at the model's centre, only to compare sizes; the model did not stand there. Distances and bearings are true (an azimuthal equidistant projection); nearer places are named as the camera closes in. Places from OpenBible.info. Where the text turns to a smaller part, the camera closes in and the figure stands there instead.</>
+        : kind === 'map'
         ? <>Map: the coasts, rivers and cities round Jerusalem at the same scale, laid flat with Jerusalem under the middle of the model, only to compare sizes. Distances and bearings from Jerusalem are true (an azimuthal equidistant projection). Coasts, rivers and lakes from Natural Earth (public domain); cities from OpenBible.info. Where the text turns to a smaller part (the New Jerusalem's wall and gates), the camera closes in and the figure stands there instead.</>
         : kind === 'figure'
         ? <>Figure ≈ {formatMetres(FIGURE_M)}{unit && m.scale && <> (≈ {(FIGURE_M / m.scale.metres).toFixed(1)} {unit}s)</>}: the average height of a Judaean man in the first century, from skeletal remains (J. E. Taylor, <i>What Did Jesus Look Like?</i>, 2018).</>

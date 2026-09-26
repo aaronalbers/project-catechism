@@ -240,6 +240,28 @@ describe('content integrity', () => {
     placedAt(ref, gate, new THREE.Vector3(S, 50, 0));
     expect(ref.kind).toBe('figure');
   });
+  // A model kilometres across (the camp of Israel) can bring the map in sooner, set on a place of its choosing.
+  it('a model can bring the map in at its own size, with a chosen place under a chosen point', () => {
+    const camp = new THREE.Box3(new THREE.Vector3(-9000, 0, -9000), new THREE.Vector3(9700, 1000, 9000));
+    const tent = new THREE.Box3(new THREE.Vector3(-50, 0, -25), new THREE.Vector3(50, 10, 25));
+    const ref = scaleReference({ metres: 0.445, unit: 'cubit', map: { from: 1000, on: 'Mount Moriah' } }, camp);
+    const map = new THREE.Group(), fitted: number[] = [];
+    map.userData.fit = (km: number) => fitted.push(km);
+    ref.setMap(map);
+    const p = ref.spot(camp);
+    expect([p.x, p.y, p.z]).toEqual([0, 0, 0]);
+    ref.place(p, camp);
+    expect(ref.kind).toBe('map');
+    expect(fitted[0]).toBeCloseTo(18700 * 0.445 / 1000, 3);
+    placedAt(ref, tent, new THREE.Vector3(100, 50, 100));
+    expect(ref.kind).toBe('figure');
+  });
+  const mapFile = new URL('../../public/data/map.json', import.meta.url);
+  it.skipIf(!existsSync(mapFile))('a model sets its map on a place the map has', () => {
+    const data = JSON.parse(readFileSync(mapFile, 'utf8')) as { cities: { name: string }[]; near?: { name: string }[] };
+    const names = new Set([...data.cities, ...(data.near ?? [])].map((p) => p.name));
+    for (const m of MODELS) if (m.scale?.map?.on) expect(names.has(m.scale.map.on), `${m.id}: no place '${m.scale.map.on}' on the map`).toBe(true);
+  });
   // A model drawn more than one way names each reading, says what it rests on and, for a reading of
   // contested text, who holds it; its estimates are for parts that reading draws.
   it('model readings are named, say what they rest on, and estimate only parts they draw', () => {
@@ -260,6 +282,27 @@ describe('content integrity', () => {
     for (const { model, label } of drawings(MODELS.find((m) => m.id === 'new-jerusalem')!)) {
       const size = new THREE.Box3().setFromObject(model.getObjectByName('city')!).getSize(new THREE.Vector3());
       expect(Math.abs(size.y / size.x - 1), `${label}: the city is ${Math.round(size.x / 1000)} km wide and ${Math.round(size.y / 1000)} km high`).toBeLessThan(0.01);
+    }
+  });
+  // The camp is drawn from the charts' figures, so the two cannot disagree: each tribe's ground is in
+  // proportion to its figure in Numbers 2, and each Levite clan's to its figure in Numbers 3.
+  it('the camp gives each tribe and clan ground in proportion to its figure, in each reading', () => {
+    const area = (o: THREE.Object3D) => {
+      let sum = 0;
+      o.traverse((x) => {
+        const g = (x as THREE.Mesh).geometry;
+        if (!g || !(x as THREE.Mesh).isMesh) return;
+        const p = g.getAttribute('position'), idx = g.getIndex()!, t = new THREE.Triangle(), [a, b, c] = [0, 1, 2].map(() => new THREE.Vector3());
+        for (let i = 0; i < idx.count; i += 3) { a.fromBufferAttribute(p, idx.getX(i)); b.fromBufferAttribute(p, idx.getX(i + 1)); c.fromBufferAttribute(p, idx.getX(i + 2)); sum += t.set(a, b, c).getArea(); }
+      });
+      return sum;
+    };
+    const rows = ['num2-camp', 'num3-levites'].flatMap((id) => TALLIES.find((t) => t.id === id)!.rows);
+    for (const { model, label, reading } of drawings(MODELS.find((m) => m.id === 'israels-camp')!)) {
+      // As a troop only the hundreds are men, Kohath read as 8,300 (Humphreys 1998, Table 3).
+      const figure = (r: (typeof rows)[number]) => reading === 'troops' ? (r.label === 'Kohath' ? 8300 : r.count) % 1000 : r.count;
+      const per = rows.map((r) => area(model.getObjectByName(r.label.toLowerCase())!) / figure(r));
+      for (const [i, r] of rows.entries()) expect(per[i] / per[0], `${label}: ${r.label}'s ground is out of proportion`).toBeCloseTo(1, 2);
     }
   });
   it('procedural models name a builder that exists', () => {

@@ -4,6 +4,7 @@
 import type * as THREE from 'three';
 import { alabastron } from './alabastron';
 import { galileeBoat } from './boat';
+import { israelsCamp } from './camp';
 import { coin, lepta } from './coins';
 import { ezekielsTemple } from './ezekiel';
 import { forestOfLebanon } from './forest';
@@ -25,6 +26,7 @@ const BUILDERS = {
   alabastron: () => alabastron(18),
   ark: () => ark(),
   tabernacle,
+  'israels-camp': israelsCamp,
   'noahs-ark': noahsArk,
   temple,
   'ezekiels-temple': ezekielsTemple,

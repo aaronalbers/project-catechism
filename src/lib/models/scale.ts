@@ -85,7 +85,8 @@ export function formatMetres(m: number) {
  * bar. The viewer moves it to stand beside whatever the camera frames, so `spot` says where it
  * would stand beside a box and `place` puts it there and lays a bar sized to that box. All
  * coordinates are the model's own, before the viewer centres it. Once `setMap` has given it the map,
- * a box at least MAP_FROM_M across gets the map instead, Jerusalem under the box's centre; `kind`
+ * a box at least MAP_FROM_M across (or the model's own `scale.map.from`) gets the map instead, Jerusalem
+ * under the box's centre (or the model's chosen place at its chosen point); `kind`
  * says which was placed last.
  */
 export type ScaleKind = 'figure' | 'hand' | 'map';
@@ -105,7 +106,8 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
   const local = new THREE.Box3().setFromObject(ref), half = local.getSize(new THREE.Vector3()).multiplyScalar(0.5);
   group.add(ref, bar);
   let map: THREE.Object3D | null = null, placed: ScaleKind = kind;
-  const mapFor = (box?: THREE.Box3) => !!map && !!box && !box.isEmpty() && Math.max(...box.getSize(new THREE.Vector3()).toArray()) * u >= MAP_FROM_M;
+  const span = (box: THREE.Box3) => Math.max(...box.getSize(new THREE.Vector3()).toArray()) * u;
+  const mapFor = (box?: THREE.Box3) => !!map && !!box && !box.isEmpty() && span(box) >= (scale.map?.from ?? MAP_FROM_M);
   return {
     group,
     get kind() { return placed; },
@@ -124,7 +126,7 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
     // A figure stands on the ground (y = 0) even beside a piece raised above it, such as a capital on
     // its pillar; a hand is held level with the piece.
     spot(box, at, toward) {
-      if (mapFor(box)) return box.getCenter(new THREE.Vector3()).setY(Math.min(box.min.y, 0));
+      if (mapFor(box)) return scale.map ? new THREE.Vector3(...(scale.map.at ?? [0, 0, 0])) : box.getCenter(new THREE.Vector3()).setY(Math.min(box.min.y, 0));
       if (at) return new THREE.Vector3(...at);
       const c = box.getCenter(new THREE.Vector3()), gap = kind === 'figure' ? 0.3 / u : half.x * 0.4;
       const y = kind === 'figure' ? Math.min(box.min.y, 0) : box.min.y;
@@ -140,7 +142,7 @@ export function scaleReference(scale: ModelScale, modelBox: THREE.Box3): ScaleRe
     place(p, box, toward) {
       const onMap = mapFor(box);
       placed = onMap ? 'map' : kind; ref.visible = !onMap;
-      if (map) { map.visible = onMap; map.position.copy(p); }
+      if (map) { map.visible = onMap; map.position.copy(p); if (onMap) map.userData.fit?.(span(box) / 1000); }
       ref.position.copy(p);
       for (const c of [...bar.children]) { const mesh = c as THREE.Mesh; mesh.geometry.dispose(); (mesh.material as THREE.Material).dispose(); bar.remove(c); }
       const all = box.clone().union(onMap ? box : local.clone().translate(p));

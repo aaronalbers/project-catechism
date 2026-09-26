@@ -273,6 +273,15 @@ const MAP_LAKES = new Set(['Dead Sea', 'Sea of Galilee']);
 // Few and far apart, so their names don't overlap at the scale the map is seen at.
 const MAP_CITIES = ['a15257a' /* Jerusalem */, 'afc8e7a' /* Rome */, 'a1fe6e7' /* Athens */, 'a217d18' /* Babylon */,
   'a70fd5d' /* Nineveh */];
+// Places round Jerusalem for a model a few kilometres across (the camp of Numbers 2), each with the span
+// of the view, in km, over which its name is shown, so names near the centre give way as the view widens
+// and those further out appear. The cities above show only beyond the widest of these.
+const MAP_NEAR = [
+  ['aac1fcf' /* Mount Moriah */, 0, 40], ['a84f426' /* City of David */, 0, 5], ['ac2c4c5' /* Mount of Olives */, 0, 5],
+  ['abff59d' /* Bethphage */, 0, 5], ['a4f35bc' /* Bethany */, 0, 40], ['ab34789' /* Anathoth */, 2, 40],
+  ['ac24f5f' /* Gibeah */, 2, 40], ['ae7274b' /* Emmaus */, 5, 40], ['a112427' /* Bethlehem */, 5, 40],
+  ['a6d57ed' /* Ramah */, 5, 40], ['aede336' /* Gibeon */, 5, 40], ['a736f6c' /* Mizpah */, 5, 40],
+  ['a9bba61' /* Kiriath-jearim */, 5, 40]];
 function kmFromCentre([lon, lat]) {
   const r = Math.PI / 180, [lon0, lat0] = MAP_CENTRE;
   const a = Math.sin((lat - lat0) * r / 2) ** 2 + Math.cos(lat * r) * Math.cos(lat0 * r) * Math.sin((lon - lon0) * r / 2) ** 2;
@@ -303,9 +312,11 @@ async function buildMap() {
   const rivers = lines((await geo('ne-rivers.geojson')).filter((f) => MAP_RIVERS.has(f.properties.name)));
   const lakes = lines((await geo('ne-lakes.geojson')).filter((f) => MAP_LAKES.has(f.properties.name)));
   const index = JSON.parse(await readFile(new URL('places/index.json', OUT), 'utf8'));
-  const cities = MAP_CITIES.map((id) => { const p = index.find((x) => x.id === id); if (!p) throw new Error(`map: no place ${id}`); return { name: p.name, lon: p.lon, lat: p.lat }; });
-  await writeJson('map.json', { centre: MAP_CENTRE, km: MAP_KM, coast, rivers, lakes, cities });
-  console.log('map     ', coast.length + rivers.length + lakes.length, 'lines,', cities.length, 'cities');
+  const place = (id) => { const p = index.find((x) => x.id === id); if (!p) throw new Error(`map: no place ${id}`); return { name: p.name, lon: p.lon, lat: p.lat }; };
+  const cities = MAP_CITIES.map(place);
+  const near = MAP_NEAR.map(([id, from, to]) => ({ ...place(id), span: [from, to] }));
+  await writeJson('map.json', { centre: MAP_CENTRE, km: MAP_KM, coast, rivers, lakes, cities, near });
+  console.log('map     ', coast.length + rivers.length + lakes.length, 'lines,', cities.length, 'cities,', near.length, 'places near Jerusalem');
 }
 
 await fetchAll();

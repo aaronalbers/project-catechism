@@ -28,11 +28,14 @@ export interface Place {
 /**
  * The lands round Jerusalem, for the size reference beside a model too big for a figure (public/data/map.json):
  * lines as flat [lon, lat, lon, lat, …] runs within `km` of `centre`, from Natural Earth, and cities from OpenBible.
+ * `near` are places round Jerusalem, also from OpenBible, for a model a few kilometres across; each is named
+ * only while the view spans `span` km (from, to), so names close together never crowd a wide view.
  */
 export interface MapData {
   centre: [number, number]; km: number;
   coast: number[][]; rivers: number[][]; lakes: number[][];
   cities: { name: string; lon: number; lat: number }[];
+  near?: { name: string; lon: number; lat: number; span: [number, number] }[];
 }
 
 /** Every claim in the curated content points at one or more of these. */
@@ -149,9 +152,14 @@ export interface ModelBuild { ref: Ref; steps: ModelStep[]; omits?: Record<strin
  * cubits of a cubit and a handbreadth (the scale bar is then marked in them). `at` is where the size figure or hand stands, in model units, on the
  * ground; without it the figure stands beside the model. `worn` says the figure wears the model (the
  * high priest's garments): it stays at `at` through a build, and the camera frames the parts being
- * added rather than the whole figure.
+ * added rather than the whole figure. `map` brings the map in for a model smaller than the New Jerusalem:
+ * from `from` metres across (the framed box), with the place named `on` (one of the map's places) at `at`
+ * (default the origin) rather than Jerusalem under the box's middle.
  */
-export interface ModelScale { metres: number; unit?: 'cubit' | 'long cubit'; at?: [number, number, number]; worn?: boolean }
+export interface ModelScale {
+  metres: number; unit?: 'cubit' | 'long cubit'; at?: [number, number, number]; worn?: boolean;
+  map?: { from: number; on?: string; at?: [number, number, number] };
+}
 /** One verse's change to a built model: the parts it removes and the alternates it adds. */
 export interface ModelChange { ref: Ref; hides?: string[]; shows?: string[]; view?: ModelAngle }
 /** One passage's account of a later state, its changes in reading order (as a build's steps). */

@@ -115,6 +115,13 @@ them in CI — read it before adding content.
   estimates and `via` waypoints need a `basis` saying what they rest on, and the map marks
   them ≈. The build flags OpenBible's "within 50 km of X" placeholders as `approx`.
 
+- Counts (`content/tallies.json`) are numbers the text lists group by group (a census). Each row quotes
+  the BSB's own figure in its verse, and the reader draws a bar under that verse on one scale, filled
+  once the verse is read. `groups` are subtotals the text gives (Numbers 2's camps), `compare` names an
+  earlier count of the same groups drawn behind each bar (Numbers 26 against 1), and the rows must add
+  up to `total` unless `discrepancy` says why not (Numbers 3's Levites). A model can size itself from
+  a tally's rows, as the camp of Israel does, so the two never disagree.
+
 - Chiasms (`content/chiasms.json`) come in two shapes, and the reader draws each on the text. A
   **phrase-level** chiasm gives every level a `quote`: the exact BSB words it covers, one verse per
   level, in reading order. The reader lays those out as an indented ladder, and a test fails the
@@ -154,6 +161,10 @@ them in CI — read it before adding content.
   Jerusalem under the framed box's middle (`src/lib/models/map.ts`, from `public/data/map.json`, loaded
   only for a model that big). The New Jerusalem is drawn to true scale in metres, so the camera goes from
   a 2,220 km cube to a figure at one gate; the viewer's logarithmic depth buffer and far plane allow it.
+  A model a few kilometres across (the camp of Israel) brings the map in sooner with `scale.map`: `from`
+  metres, and `on`, the map place set at the model's origin (the tabernacle on Mount Moriah). Close in,
+  the map names the places round Jerusalem (`near` in `map.json`, from OpenBible), each only while the
+  view spans the kilometres the data build gives it, so names never crowd.
 - A model the text allows more than one reading of lists `readings` (id, label, `basis`, `traditions`,
   and `estimates` that add to or replace the model's own); the first is the default and the viewer gives
   each a button. The builder takes the reading's id and draws every reading under the same part names, so

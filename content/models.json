@@ -1075,5 +1075,95 @@
   ],
   "confidence": "interpretation",
   "traditions": ["The wall as the city's face (shown first): 144 cubits as breadth after Aune and Sweet, the city on its foundations after Sweet and Bartsch, drawn together here from the text", "A wall at the city's foot: Beale; Blount"]
+ },
+ {
+  "id": "israels-camp",
+  "title": "The camp of Israel round the tabernacle",
+  "verses": ["Num.1.52-53", "Num.2.1-34", "Num.3.14-39", "Num.9.15-23", "Num.10.11-28"],
+  "summary": "'The Israelites are to camp around the Tent of Meeting at a distance from it, each man under his standard' (2:2). Numbers 2 sets the twelve tribes in four camps of three, one on each side: Judah's on the east, Reuben's on the south, Ephraim's on the west, Dan's on the north. Numbers 3 puts the Levites between them and the tent: Gershon behind it on the west, Kohath on the south, Merari on the north, and Moses, Aaron and Aaron's sons before the entrance on the east. Read or play through the two chapters and the camp is laid out tribe by tribe and clan by clan. The text gives the sides and the numbers; how much ground each took and how far out the tribes camped it does not, and the model reckons both, each saying what it rests on. Every tribe and clan is sized from the figures in the charts on the text, so the two cannot disagree. How big the camp was turns on one word. The figures are thousands, ʾeleph, and taken so, 603,550 men and 22,000 Levites make a people of about two million, and the camp is about 8 km across, the tabernacle's court a speck at its centre. But ʾeleph can also mean a clan or a troop, and some scholars read the figures as troops and men: 46,500 as 46 troops of 500 men. Then the people number about 20,000 and the camp is a ring of small blocks round a clear space 2,000 cubits wide. The buttons under the model draw both. So that a camp kilometres across still has something to be measured against, the places round Jerusalem are laid under it at the same scale, the tabernacle on Mount Moriah where the temple would later stand: only to compare sizes, since the camp was in the wilderness. As thousands, Judah's camp would cover the Mount of Olives and reach on past Bethany, ≈ 4 km out, and Dan's would take in Anathoth; as troops, the tribes would camp in a ring about a kilometre out, Judah's on the Mount of Olives. A pillar of cloud marks the tabernacle, as the text says it was marked, so it can be found however small it is. The tents are a pattern on the ground, not one per household, and the colours only tell the tribes apart: the text gives each tribe a banner (2:2) but not its colour.",
+  "kind": "procedural",
+  "procedural": "israels-camp",
+  "dimensions": "≈ 8 km across, taking ʾeleph as a thousand · ≈ 2.3 km as a troop · the tabernacle's court 100 × 50 cubits (≈ 44 × 22 m) at the centre",
+  "scale": {"metres": 0.445, "unit": "cubit", "at": [58, 0, 30], "map": {"from": 1000, "on": "Mount Moriah"}},
+  "view": [30, 45],
+  "builds": [
+   {
+    "ref": "Num.2.1-34",
+    "steps": [
+     {"ref": "Num.2.2", "parts": ["tabernacle", "cloud"], "frame": ["tabernacle"], "basis": "the Tent of Meeting in its court, as the tabernacle model draws it; the tribes camp 'at a distance from it'"},
+     {"ref": "Num.2.3", "parts": ["judah"], "view": [90, 60], "basis": "on the east, toward the sunrise"},
+     {"ref": "Num.2.5", "parts": ["issachar"], "view": [90, 60]},
+     {"ref": "Num.2.7", "parts": ["zebulun"], "view": [90, 60]},
+     {"ref": "Num.2.9", "parts": [], "frame": ["camp-judah"], "view": [90, 60], "basis": "the camp of Judah, 186,400; it sets out first"},
+     {"ref": "Num.2.10", "parts": ["reuben"], "view": [0, 60], "basis": "on the south"},
+     {"ref": "Num.2.12", "parts": ["simeon"], "view": [0, 60]},
+     {"ref": "Num.2.14", "parts": ["gad"], "view": [0, 60]},
+     {"ref": "Num.2.16", "parts": [], "frame": ["camp-reuben"], "view": [0, 60], "basis": "the camp of Reuben, 151,450; it sets out second"},
+     {"ref": "Num.2.17", "parts": ["levites"], "basis": "'in the middle of the camps'; where each clan camps is given in Numbers 3"},
+     {"ref": "Num.2.18", "parts": ["ephraim"], "view": [270, 60], "basis": "on the west"},
+     {"ref": "Num.2.20", "parts": ["manasseh"], "view": [270, 60]},
+     {"ref": "Num.2.22", "parts": ["benjamin"], "view": [270, 60]},
+     {"ref": "Num.2.24", "parts": [], "frame": ["camp-ephraim"], "view": [270, 60], "basis": "the camp of Ephraim, 108,100; it sets out third"},
+     {"ref": "Num.2.25", "parts": ["dan"], "view": [180, 60], "basis": "on the north"},
+     {"ref": "Num.2.27", "parts": ["asher"], "view": [180, 60]},
+     {"ref": "Num.2.29", "parts": ["naphtali"], "view": [180, 60]},
+     {"ref": "Num.2.31", "parts": [], "frame": ["camp-dan"], "view": [180, 60], "basis": "the camp of Dan, 157,600; it sets out last"},
+     {"ref": "Num.2.32", "parts": [], "frame": ["camp-judah", "camp-reuben", "camp-ephraim", "camp-dan"], "basis": "the whole camp, 603,550 men and their households, the Levites apart (2:33)"}
+    ]
+   },
+   {
+    "ref": "Num.3.21-38",
+    "steps": [
+     {"ref": "Num.3.21", "parts": ["tabernacle", "cloud", "camp-judah", "camp-reuben", "camp-ephraim", "camp-dan"], "frame": ["tabernacle"], "basis": "the tabernacle and the tribes' camps as Numbers 2 sets them out; this chapter places the Levites between them"},
+     {"ref": "Num.3.23", "parts": ["gershon"]},
+     {"ref": "Num.3.29", "parts": ["kohath"]},
+     {"ref": "Num.3.35", "parts": ["merari"]},
+     {"ref": "Num.3.38", "parts": ["priests"]}
+    ]
+   }
+  ],
+  "estimates": {
+   "tabernacle": "as the tabernacle model draws it, from Exodus 25–27; see that model for what its own details rest on. The camp is set round it, east toward the sunrise (2:3)",
+   "cloud": "the cloud that covered the tabernacle from the day it was set up and settled on it (Num 9:15-16; Exod 40:34-38), 'in the sight of all the house of Israel' (Exod 40:38). The text gives no size or shape: it is drawn as a column from just above the tent to 1,500 cubits (≈ 670 m), widening as it rises, so the tabernacle can be found from anywhere in the camp, and starts clear of the tent so as not to hide it. The fire seen in it by night is not drawn",
+   "camp-judah": "2,000 cubits (≈ 890 m) from the tabernacle, the distance the people kept from the ark in Josh 3:4, which Rashi applies to 'at a distance from it' (2:2). Where a Levite clan's ground reaches further (Kohath, on the south, taking ʾeleph as a thousand), the camp begins 50 cubits beyond it",
+   "camp-reuben": "2,000 cubits (≈ 890 m) from the tabernacle, the distance the people kept from the ark in Josh 3:4, which Rashi applies to 'at a distance from it' (2:2). Where a Levite clan's ground reaches further (Kohath, on the south, taking ʾeleph as a thousand), the camp begins 50 cubits beyond it",
+   "camp-ephraim": "2,000 cubits (≈ 890 m) from the tabernacle, the distance the people kept from the ark in Josh 3:4, which Rashi applies to 'at a distance from it' (2:2). Where a Levite clan's ground reaches further (Kohath, on the south, taking ʾeleph as a thousand), the camp begins 50 cubits beyond it",
+   "camp-dan": "2,000 cubits (≈ 890 m) from the tabernacle, the distance the people kept from the ark in Josh 3:4, which Rashi applies to 'at a distance from it' (2:2). Where a Levite clan's ground reaches further (Kohath, on the south, taking ʾeleph as a thousand), the camp begins 50 cubits beyond it",
+   "judah": "the leader's tribe is drawn in the middle of its side, under the camp's standard; the text says only that the other two camp 'next to it' (2:5, 7). Its ground is in proportion to its figure, as the reading shown takes it",
+   "reuben": "the leader's tribe is drawn in the middle of its side, under the camp's standard; the text says only that the other two camp 'next to it' (2:5, 7). Its ground is in proportion to its figure, as the reading shown takes it",
+   "ephraim": "the leader's tribe is drawn in the middle of its side, under the camp's standard; the text says only that the other two camp 'next to it' (2:5, 7). Its ground is in proportion to its figure, as the reading shown takes it",
+   "dan": "the leader's tribe is drawn in the middle of its side, under the camp's standard; the text says only that the other two camp 'next to it' (2:5, 7). Its ground is in proportion to its figure, as the reading shown takes it",
+   "issachar": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "zebulun": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "simeon": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "gad": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "manasseh": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "benjamin": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "asher": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "naphtali": "beside its camp's leader, 'next to it' (2:5, 7), on one hand or the other: the text does not say which. Its ground is in proportion to its figure, as the reading shown takes it",
+   "levites": "close round the court, beginning 60 cubits from the tabernacle's centre, each clan on the side Numbers 3 gives it; Rashi on 2:2 has Moses, Aaron and the Levites camped 'quite close' to the tabernacle. Each clan's ground is in proportion to its males counted, as the reading shown takes them",
+   "gershon": "on the west, 'behind the tabernacle' (3:23); its ground from its 7,500 males (3:22), as the reading shown takes them",
+   "kohath": "on the south (3:29); its ground from its 8,600 males (3:28), as the reading shown takes them",
+   "merari": "on the north (3:35); its ground from its 6,200 males (3:34), as the reading shown takes them",
+   "priests": "Moses, Aaron and Aaron's sons, 'to the east of the tabernacle… before the Tent of Meeting' (3:38). No number is given: the ground of ≈ 30 people, their households, at 30 m² each"
+  },
+  "readings": [
+   {"id": "thousands", "label": "ʾEleph as a thousand", "basis": "The figures as the BSB gives them: 603,550 men of twenty and older (2:32) and 22,000 Levite males (3:39). With wives and children Keil & Delitzsch reckon the people at about two million. Each figure's ground is its share of two million people at 30 m² a person, UNHCR's planning standard for a camp's roads, services and family plots, without gardens: ≈ 96 m² for every man or Levite counted. The tribes' camps then reach 3–4 km out, and the whole is ≈ 8 km across.", "traditions": ["the figures as thousands, a people of about two million: Keil & Delitzsch, on Exod 12:37"]},
+   {"id": "troops", "label": "ʾEleph as a troop", "basis": "ʾEleph also means a clan or a troop. Read so, Reuben's 46,500 (1:21) is 46 troops of 500 men, and only the hundreds are men: 5,550 in all. Humphreys reads the Levites the same way, Gershon 500, Kohath 300 (with some Septuagint manuscripts' 8,300) and Merari 200, and reckons the whole people at about 20,000. At the same 30 m² a person (≈ 92 m² for each man or Levite counted) each tribe is a block a few hundred metres across. The camps still stand 2,000 cubits out, so the whole is ≈ 2.3 km across, mostly open ground.", "traditions": ["ʾeleph as a troop or clan: Petrie (1906) and Mendenhall (1958), as Humphreys reports them", "598 troops of 5,550 men, the Levites 1,000, about 20,000 people in all: Humphreys, Vetus Testamentum 48 (1998), Tables 2–3"], "estimates": {"kohath": "on the south (3:29); its ground from 300 males, Humphreys' reading of the 8,300 some Septuagint manuscripts give for the Hebrew's 8,600 (3:28)"}}
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Num.2.1-34", "note": "the four camps, their sides, tribes, figures and marching order"},
+   {"kind": "scripture", "ref": "Num.3.21-39", "note": "the Levite clans, their figures and their sides of the tabernacle"},
+   {"kind": "scripture", "ref": "Num.1.52-53", "note": "'the Levites are to camp around the tabernacle of the Testimony'"},
+   {"kind": "scripture", "ref": "Num.9.15-17", "note": "the cloud over the tabernacle, fire by night; where it settled, the Israelites camped"},
+   {"kind": "scripture", "ref": "Exod.40.34-38", "note": "the cloud over the tabernacle 'in the sight of all the house of Israel'"},
+   {"kind": "scripture", "ref": "Josh.3.4", "note": "'keep a distance of about two thousand cubits between yourselves and the ark'"},
+   {"kind": "primary", "title": "Rashi on Numbers 2:2", "url": "https://www.sefaria.org/Rashi_on_Numbers.2.2", "note": "'at a distance of a mile (2000 cubits), for it is said (Joshua 3:4)…'; Moses, Aaron and the Levites 'encamped quite close to it'. Translation of M. Rosenbaum and A. M. Silbermann (1929–34)"},
+   {"kind": "data", "title": "Camp planning standards (planned settlements), UNHCR Emergency Handbook, 4th edition", "author": "UNHCR", "note": "'A minimum surface area of 45 Sqm per person including household gardening space'; of it, '30 Sqm per person will be necessary for roads, foot paths, educational facilities, sanitation, security, firebreaks, administration, water storage, distribution points, markets, storage of relief items and plots for shelter'"},
+   {"kind": "scholarship", "title": "Biblical Commentary on the Old Testament: The Pentateuch", "author": "C. F. Keil & F. Delitzsch", "url": "https://biblehub.com/commentaries/kad/exodus/12.htm", "note": "on Exod 12:37: 603,550 men and 22,000 Levites; 'if we add the wives and children, the total number of the people may have been about two million souls'"},
+   {"kind": "scholarship", "title": "'The Census Lists of Numbers 1 and 26'", "author": "George E. Mendenhall", "year": 1958, "note": "Journal of Biblical Literature 77, pp. 52–66; reads ʾeleph as a tribal subunit"},
+   {"kind": "scholarship", "title": "'The Number of People in the Exodus from Egypt: Decoding Mathematically the Very Large Numbers in Numbers I and XXVI'", "author": "Colin J. Humphreys", "year": 1998, "note": "Vetus Testamentum 48, pp. 196–213: 598 troops of 5,550 men (Table 2), the Levites 21 teams of 1,000 (Table 3), 'about 20,000' people in all"}
+  ],
+  "confidence": "estimate"
  }
 ]
