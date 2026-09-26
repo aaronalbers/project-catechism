@@ -386,9 +386,13 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .tally-note { margin: -2px 0 6px; font: 12px/1.5 var(--sans); color: var(--muted); }
 .tally-row { display: grid; grid-template-columns: 76px 1fr 64px; align-items: center; gap: 8px; margin: 4px 0 2px; font: 12px var(--sans); color: var(--muted); }
 .tally-row .lbl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tally-row .track { height: 12px; border-radius: 3px; background: color-mix(in oklab, var(--tally) 10%, transparent); overflow: hidden; }
-.tally-row .fill { display: block; height: 100%; width: calc(var(--share) * 100%); background: color-mix(in oklab, var(--tally) 65%, var(--surface)); border-radius: 3px; transition: width 0.7s ease-out; }
+.tally-row .track { position: relative; height: 12px; border-radius: 3px; background: color-mix(in oklab, var(--tally) 10%, transparent); overflow: hidden; }
+.tally-row .fill { position: relative; display: block; height: 100%; width: calc(var(--share) * 100%); background: color-mix(in oklab, var(--tally) 65%, var(--surface)); border-radius: 3px; transition: width 0.7s ease-out; }
 .tally-row .n { text-align: right; font-variant-numeric: tabular-nums; }
+.tally-row.compared { grid-template-columns: 76px 1fr 118px; }
+.tally-row .n small { display: inline-block; min-width: 52px; margin-left: 6px; font-size: 11px; font-weight: 400; color: var(--muted); }
+/* The earlier count: an outline the bar fills over, so growth overshoots it and loss falls short. */
+.tally-row .was { position: absolute; inset: 0 auto 0 0; width: calc(var(--share) * 100%); border: 1.5px dashed color-mix(in oklab, var(--text) 60%, transparent); border-radius: 3px; z-index: 1; pointer-events: auto; }
 .tally-row.current { color: var(--text); font-weight: 600; }
 .tally-row.current .fill { background: var(--tally); }
 .tally-total { margin: 6px 0 2px; font: 12px var(--sans); color: var(--muted); }

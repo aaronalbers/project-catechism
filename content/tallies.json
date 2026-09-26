@@ -27,5 +27,37 @@
    {"kind": "scholarship", "title": "'The Census Lists of Numbers 1 and 26'", "author": "George E. Mendenhall", "year": 1958, "note": "Journal of Biblical Literature 77, pp. 52–66; reads ʾeleph as a tribal subunit"},
    {"kind": "scholarship", "title": "'The Number of People in the Exodus from Egypt: Decoding Mathematically the Very Large Numbers in Numbers I and XXVI'", "author": "Colin J. Humphreys", "year": 1998, "note": "Vetus Testamentum 48, pp. 196–213"}
   ]
+ },
+ {
+  "id": "num26-census",
+  "title": "The second census",
+  "ref": "Num.26.5-51",
+  "unit": "men twenty and older able to serve",
+  "confidence": "evidence",
+  "compare": "num1-census",
+  "summary": "Numbered on the plains of Moab at the end of the wilderness years: not one man from the first census was left except Caleb and Joshua (26:64–65). The total barely moves, 1,820 fewer than the 603,550 of Numbers 1, but the tribes do. Simeon falls by 37,100 to 22,200, from the third largest to the smallest; Manasseh grows by 20,500 and now comes before Ephraim, which fell by 8,000. The text does not say why Simeon shrank. The plague at Peor had just killed 24,000 (25:9) and the man at its centre was a Simeonite chief (25:14), and readers often connect the two, but that is an inference. The Levites are counted apart again, 23,000 males a month old or more (26:62).",
+  "rows": [
+   {"ref": "Num.26.7", "label": "Reuben", "count": 43730, "quote": "43,730"},
+   {"ref": "Num.26.14", "label": "Simeon", "count": 22200, "quote": "22,200"},
+   {"ref": "Num.26.18", "label": "Gad", "count": 40500, "quote": "40,500"},
+   {"ref": "Num.26.22", "label": "Judah", "count": 76500, "quote": "76,500"},
+   {"ref": "Num.26.25", "label": "Issachar", "count": 64300, "quote": "64,300"},
+   {"ref": "Num.26.27", "label": "Zebulun", "count": 60500, "quote": "60,500"},
+   {"ref": "Num.26.34", "label": "Manasseh", "count": 52700, "quote": "52,700"},
+   {"ref": "Num.26.37", "label": "Ephraim", "count": 32500, "quote": "32,500"},
+   {"ref": "Num.26.41", "label": "Benjamin", "count": 45600, "quote": "45,600"},
+   {"ref": "Num.26.43", "label": "Dan", "count": 64400, "quote": "64,400"},
+   {"ref": "Num.26.47", "label": "Asher", "count": 53400, "quote": "53,400"},
+   {"ref": "Num.26.50", "label": "Naphtali", "count": 45400, "quote": "45,400"}
+  ],
+  "total": {"ref": "Num.26.51", "label": "All Israel", "count": 601730, "quote": "601,730"},
+  "sources": [
+   {"kind": "scripture", "ref": "Num.26.5-51"},
+   {"kind": "scripture", "ref": "Num.26.62-65", "note": "the Levites counted apart; none of the first census left but Caleb and Joshua"},
+   {"kind": "scripture", "ref": "Num.25.9", "note": "24,000 dead in the plague at Peor"},
+   {"kind": "scripture", "ref": "Num.25.14", "note": "Zimri, a leader of a Simeonite family"},
+   {"kind": "scholarship", "title": "'The Census Lists of Numbers 1 and 26'", "author": "George E. Mendenhall", "year": 1958, "note": "Journal of Biblical Literature 77, pp. 52–66; reads ʾeleph as a tribal subunit"},
+   {"kind": "scholarship", "title": "'The Number of People in the Exodus from Egypt: Decoding Mathematically the Very Large Numbers in Numbers I and XXVI'", "author": "Colin J. Humphreys", "year": 1998, "note": "Vetus Testamentum 48, pp. 196–213"}
+  ]
  }
 ]

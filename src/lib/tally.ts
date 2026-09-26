@@ -1,12 +1,26 @@
 // A tally as the reader draws it: one bar per group on a shared scale, filled once its verse is read.
-import { compareLoc, contains, parseRef, type VerseLoc } from './refs';
+import { TALLIES } from './content';
+import { book, compareLoc, contains, parseRef, type VerseLoc } from './refs';
 import type { Tally, TallyRow } from './types';
 
 /** The number a quote gives ("46,500" → 46500), or NaN when it holds none. */
 export const quotedCount = (quote: string) => Number(quote.replace(/[^\d]/g, '') || NaN);
 
-/** The longest bar, which every row is drawn against, so a bar never rescales as later rows appear. */
-export const tallyMax = (t: Tally) => Math.max(...t.rows.map((r) => r.count));
+/** The earlier tally `t` is compared with, if any. */
+export const comparedWith = (t: Tally) => (t.compare ? TALLIES.find((x) => x.id === t.compare) : undefined);
+/** The same group in the earlier tally. */
+export const earlierRow = (t: Tally, row: TallyRow) => comparedWith(t)?.rows.find((r) => r.label === row.label);
+/** A tally's short name for the reader: the book and chapter it opens in ("Numbers 1"). */
+export function tallyPlace(t: Tally) {
+  const r = parseRef(t.ref);
+  return r ? `${book(r.start.book)?.name ?? r.start.book} ${r.start.chapter}` : t.ref;
+}
+
+/**
+ * The longest bar, which every row is drawn against, so a bar never rescales as later rows appear;
+ * with a comparison, the longest of either list, so the earlier figures fit behind.
+ */
+export const tallyMax = (t: Tally) => Math.max(...[...t.rows, ...(comparedWith(t)?.rows ?? [])].map((r) => r.count));
 export const tallySum = (t: Tally) => t.rows.reduce((n, r) => n + r.count, 0);
 
 /** The rows in one verse. */

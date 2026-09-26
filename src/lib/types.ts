@@ -95,11 +95,12 @@ export interface TallyRow { ref: Ref; label: string; count: number; quote: strin
 /**
  * Numbers the text lists one group after another (a census, a muster), drawn as bars on one scale that
  * fill as each verse is read. `total` is the text's own sum; the rows must add up to it unless
- * `discrepancy` says why they do not.
+ * `discrepancy` says why they do not. `compare` names a tally of the same groups taken earlier (the
+ * census of Numbers 1 for Numbers 26), whose figures are drawn behind each bar, matched by label.
  */
 export interface Tally {
   id: string; title: string; ref: Ref; unit: string; summary: string; rows: TallyRow[];
-  total?: TallyRow; discrepancy?: string;
+  total?: TallyRow; discrepancy?: string; compare?: string;
   sources: Source[]; traditions?: string[]; confidence: Confidence;
 }
 export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string }

@@ -154,6 +154,12 @@ describe('content integrity', () => {
       expect(new Set(t.rows.map((r) => r.label)).size, `${t.id}: two rows share a label`).toBe(t.rows.length);
       if (t.total && tallySum(t) !== t.total.count) expect(t.discrepancy?.length, `${t.id}: rows add up to ${tallySum(t)}, not ${t.total.count}, and no discrepancy is given`).toBeGreaterThan(20);
       if (t.discrepancy) expect(t.total && tallySum(t) !== t.total.count, `${t.id}: a discrepancy is given but the rows add up`).toBe(true);
+      if (t.compare) {
+        const before = TALLIES.find((x) => x.id === t.compare);
+        expect(before, `${t.id} compares with unknown ${t.compare}`).toBeTruthy();
+        // Bars are matched by label, so both lists must name the same groups.
+        expect(t.rows.map((r) => r.label).sort(), `${t.id} and ${t.compare} count different groups`).toEqual(before!.rows.map((r) => r.label).sort());
+      }
     }
   });
   it.skipIf(!existsSync(bibleDir))('tally quotes are the BSB wording', () => {
