@@ -1,7 +1,7 @@
 // A tally as the reader draws it: one bar per group on a shared scale, filled once its verse is read.
 import { TALLIES } from './content';
 import { book, compareLoc, contains, parseRef, type VerseLoc } from './refs';
-import type { Tally, TallyRow } from './types';
+import type { Tally, TallyGroup, TallyRow } from './types';
 
 /** The number a quote gives ("46,500" → 46500), or NaN when it holds none. */
 export const quotedCount = (quote: string) => Number(quote.replace(/[^\d]/g, '') || NaN);
@@ -22,6 +22,13 @@ export function tallyPlace(t: Tally) {
  */
 export const tallyMax = (t: Tally) => Math.max(...[...t.rows, ...(comparedWith(t)?.rows ?? [])].map((r) => r.count));
 export const tallySum = (t: Tally) => t.rows.reduce((n, r) => n + r.count, 0);
+
+/** A group's rows, in the tally's order. */
+export const groupRows = (t: Tally, g: TallyGroup) => t.rows.filter((r) => g.members.includes(r.label));
+/** The largest group, which every group's stacked bar is drawn against. */
+export const groupMax = (t: Tally) => Math.max(...(t.groups ?? []).map((g) => g.count));
+/** The group a row belongs to, if any. */
+export const groupOf = (t: Tally, row: TallyRow) => t.groups?.find((g) => g.members.includes(row.label));
 
 /** The rows in one verse. */
 export const rowsAt = (t: Tally, loc: VerseLoc) => t.rows.filter((r) => contains(r.ref, loc));

@@ -42,7 +42,7 @@ describe('content integrity', () => {
       ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)]), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => [a.ref, ...a.changes.map((c) => c.ref)])) ]),
       ...VIDEOS.flatMap((v) => v.verses ?? []),
       ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
-      ...TALLIES.flatMap((t) => [t.ref, ...t.rows.map((r) => r.ref), ...(t.total ? [t.total.ref] : [])]),
+      ...TALLIES.flatMap((t) => [t.ref, ...[...t.rows, ...(t.groups ?? [])].map((r) => r.ref), ...(t.total ? [t.total.ref] : [])]),
     ];
     expect(bad(all)).toEqual([]);
   });
@@ -143,7 +143,7 @@ describe('content integrity', () => {
       expect(t.sources.some((s) => evidential.has(s.kind)), `${t.id} has no evidential source`).toBe(true);
       if (t.confidence === 'interpretation') expect(t.traditions?.length, `${t.id} is an interpretation but lists no traditions`).toBeGreaterThan(0);
       expect(t.rows.length, t.id).toBeGreaterThan(1);
-      const rows = [...t.rows, ...(t.total ? [t.total] : [])];
+      const rows = [...t.rows, ...(t.groups ?? []), ...(t.total ? [t.total] : [])];
       for (const r of rows) {
         const at = parseRef(r.ref)!;
         expect(at.start, `${t.id} ${r.label}: a row is one verse`).toEqual(at.end);
@@ -154,6 +154,15 @@ describe('content integrity', () => {
       expect(new Set(t.rows.map((r) => r.label)).size, `${t.id}: two rows share a label`).toBe(t.rows.length);
       if (t.total && tallySum(t) !== t.total.count) expect(t.discrepancy?.length, `${t.id}: rows add up to ${tallySum(t)}, not ${t.total.count}, and no discrepancy is given`).toBeGreaterThan(20);
       if (t.discrepancy) expect(t.total && tallySum(t) !== t.total.count, `${t.id}: a discrepancy is given but the rows add up`).toBe(true);
+      // A subtotal sums its own members, which it follows, and no row is counted in two.
+      for (const g of t.groups ?? []) {
+        const members = t.rows.filter((r) => g.members.includes(r.label));
+        expect(members.map((r) => r.label).sort(), `${t.id} ${g.label}: unknown member`).toEqual([...g.members].sort());
+        expect(members.reduce((n, r) => n + r.count, 0), `${t.id} ${g.label}: members do not add up`).toBe(g.count);
+        for (const r of members) expect(compareLoc(parseRef(r.ref)!.start, parseRef(g.ref)!.start), `${t.id} ${g.label}: ${r.label} comes after it`).toBeLessThanOrEqual(0);
+      }
+      const grouped = (t.groups ?? []).flatMap((g) => g.members);
+      expect(new Set(grouped).size, `${t.id}: a row is in two groups`).toBe(grouped.length);
       if (t.compare) {
         const before = TALLIES.find((x) => x.id === t.compare);
         expect(before, `${t.id} compares with unknown ${t.compare}`).toBeTruthy();
@@ -164,7 +173,7 @@ describe('content integrity', () => {
   });
   it.skipIf(!existsSync(bibleDir))('tally quotes are the BSB wording', () => {
     for (const t of TALLIES) {
-      for (const r of [...t.rows, ...(t.total ? [t.total] : [])]) {
+      for (const r of [...t.rows, ...(t.groups ?? []), ...(t.total ? [t.total] : [])]) {
         const loc = parseRef(r.ref)!.start;
         const book = JSON.parse(readFileSync(new URL(`${loc.book}.json`, bibleDir), 'utf8')) as BibleBook;
         const text = book.chapters[loc.chapter - 1].find((v) => v.v === loc.verse)!.t;

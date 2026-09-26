@@ -9,7 +9,7 @@ import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
 import { alignVerse, tokenize } from '@/lib/align';
 import { readStored, writeStored } from '@/lib/storage';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
-import { TallyBar, TallyCaption, TallyTotal } from './Tally';
+import { TallyBar, TallyCaption, TallyGroupBar, TallyTotal } from './Tally';
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
@@ -128,6 +128,7 @@ export function Reader() {
         const first = li >= 0 && at(-1) !== li, last = li >= 0 && at(1) !== li;
         const tallyOpens = tallies.find((t) => { const r = parseRef(t.ref); return r?.start.chapter === loc.chapter && r.start.verse === v.v; });
         const bars = charts ? tallies.flatMap((t) => rowsAt(t, vloc).map((row) => ({ t, row }))) : [];
+        const subtotals = charts ? tallies.flatMap((t) => (t.groups ?? []).filter((g) => contains(g.ref, vloc)).map((g) => ({ t, g }))) : [];
         const totals = charts ? tallies.filter((t) => t.total && contains(t.total.ref, vloc)) : [];
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
@@ -142,6 +143,7 @@ export function Reader() {
               <div>
                 <VerseText text={v.t} verse={v.v} current={current} il={ilv} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />
                 {bars.map(({ t, row }) => <TallyBar key={`${t.id}:${row.label}`} t={t} row={row} loc={loc} current={current} />)}
+                {subtotals.map(({ t, g }) => <TallyGroupBar key={`${t.id}:${g.label}`} t={t} g={g} loc={loc} current={current} />)}
                 {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}
                 {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
               </div>

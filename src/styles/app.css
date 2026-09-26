@@ -395,10 +395,18 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .tally-row .was { position: absolute; inset: 0 auto 0 0; width: calc(var(--share) * 100%); border: 1.5px dashed color-mix(in oklab, var(--text) 60%, transparent); border-radius: 3px; z-index: 1; pointer-events: auto; }
 .tally-row.current { color: var(--text); font-weight: 600; }
 .tally-row.current .fill { background: var(--tally); }
+.tally-group { grid-template-columns: 136px 1fr 64px; }
+.tally-group .track { height: 20px; background: none; }
+.tally-group .stack { display: flex; gap: 1px; height: 100%; width: calc(var(--share) * 100%); border-radius: 3px; overflow: hidden; }
+.tally-group .seg, .tally-total .seg { flex-basis: 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 3px; font-size: 10px; font-weight: 400; color: var(--text); background: color-mix(in oklab, var(--tally) var(--tone), var(--surface)); transition: background 0.4s; }
+.tally-group .seg { line-height: 20px; }
+.tally-group .seg.empty, .tally-total .seg.empty { background: color-mix(in oklab, var(--tally) 10%, transparent); color: transparent; }
 .tally-total { margin: 6px 0 2px; font: 12px var(--sans); color: var(--muted); }
 .tally-total .stack { display: flex; gap: 1px; height: 22px; border-radius: 4px; overflow: hidden; }
-.tally-total .seg { flex-basis: 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 3px; font-size: 10px; line-height: 22px; color: var(--text); background: color-mix(in oklab, var(--tally) var(--tone), var(--surface)); transition: background 0.4s; }
-.tally-total .seg.empty { background: color-mix(in oklab, var(--tally) 10%, transparent); color: transparent; }
+.tally-total .seg { line-height: 22px; }
+.tally-total .seg.group-start { margin-left: 3px; }
+.tally-total .groups { display: flex; gap: 4px; margin-bottom: 2px; }
+.tally-total .groups span { flex-basis: 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 3px; border-left: 2px solid color-mix(in oklab, var(--tally) 55%, var(--surface)); font-size: 11px; }
 .tally-total .sum { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; margin-top: 4px; }
 .tally-total .sum b { color: var(--text); font-variant-numeric: tabular-nums; }
 .tally-total .ok { color: var(--evidence); }

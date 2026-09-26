@@ -59,5 +59,38 @@
    {"kind": "scholarship", "title": "'The Census Lists of Numbers 1 and 26'", "author": "George E. Mendenhall", "year": 1958, "note": "Journal of Biblical Literature 77, pp. 52–66; reads ʾeleph as a tribal subunit"},
    {"kind": "scholarship", "title": "'The Number of People in the Exodus from Egypt: Decoding Mathematically the Very Large Numbers in Numbers I and XXVI'", "author": "Colin J. Humphreys", "year": 1998, "note": "Vetus Testamentum 48, pp. 196–213"}
   ]
+ },
+ {
+  "id": "num2-camp",
+  "title": "The camp round the tabernacle",
+  "ref": "Num.2.3-32",
+  "unit": "men twenty and older able to serve",
+  "confidence": "evidence",
+  "summary": "The twelve figures of the census in Numbers 1, unchanged, arranged into four camps of three tribes, one on each side of the Tent of Meeting, with the Levites camped round the tent in the middle (2:2, 2:17). Each camp has its own total and marches in its own turn: Judah's camp on the east, the largest at 186,400, sets out first (2:9); Reuben's on the south second; Ephraim's on the west, the smallest at 108,100, third; Dan's on the north last. The four totals add up to the 603,550 of 2:32. The order of the list follows the camps rather than Numbers 1: Judah, Issachar and Zebulun, fourth to sixth in the census, now come first.",
+  "rows": [
+   {"ref": "Num.2.4", "label": "Judah", "count": 74600, "quote": "74,600"},
+   {"ref": "Num.2.6", "label": "Issachar", "count": 54400, "quote": "54,400"},
+   {"ref": "Num.2.8", "label": "Zebulun", "count": 57400, "quote": "57,400"},
+   {"ref": "Num.2.11", "label": "Reuben", "count": 46500, "quote": "46,500"},
+   {"ref": "Num.2.13", "label": "Simeon", "count": 59300, "quote": "59,300"},
+   {"ref": "Num.2.15", "label": "Gad", "count": 45650, "quote": "45,650"},
+   {"ref": "Num.2.19", "label": "Ephraim", "count": 40500, "quote": "40,500"},
+   {"ref": "Num.2.21", "label": "Manasseh", "count": 32200, "quote": "32,200"},
+   {"ref": "Num.2.23", "label": "Benjamin", "count": 35400, "quote": "35,400"},
+   {"ref": "Num.2.26", "label": "Dan", "count": 62700, "quote": "62,700"},
+   {"ref": "Num.2.28", "label": "Asher", "count": 41500, "quote": "41,500"},
+   {"ref": "Num.2.30", "label": "Naphtali", "count": 53400, "quote": "53,400"}
+  ],
+  "groups": [
+   {"ref": "Num.2.9", "label": "Judah’s camp (east)", "count": 186400, "quote": "186,400", "members": ["Judah", "Issachar", "Zebulun"]},
+   {"ref": "Num.2.16", "label": "Reuben’s camp (south)", "count": 151450, "quote": "151,450", "members": ["Reuben", "Simeon", "Gad"]},
+   {"ref": "Num.2.24", "label": "Ephraim’s camp (west)", "count": 108100, "quote": "108,100", "members": ["Ephraim", "Manasseh", "Benjamin"]},
+   {"ref": "Num.2.31", "label": "Dan’s camp (north)", "count": 157600, "quote": "157,600", "members": ["Dan", "Asher", "Naphtali"]}
+  ],
+  "total": {"ref": "Num.2.32", "label": "All Israel", "count": 603550, "quote": "603,550"},
+  "sources": [
+   {"kind": "scripture", "ref": "Num.2.1-34"},
+   {"kind": "scripture", "ref": "Num.1.20-46", "note": "the same twelve figures in the census"}
+  ]
  }
 ]
