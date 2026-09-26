@@ -56,7 +56,7 @@ describe('content integrity', () => {
       ...reignQuotes().map((q) => q.ref),
       MONARCHY.kings, MONARCHY.chronicles,
       ...MONARCHY.anchors.flatMap((a) => (a.ref ? [a.ref] : [])),
-      ...MONARCHY.prophets.flatMap((p) => p.refs),
+      ...MONARCHY.prophets.flatMap((p) => [...p.refs, p.sent]),
     ];
     expect(bad(all)).toEqual([]);
   });
@@ -229,6 +229,8 @@ describe('content integrity', () => {
     }
     for (const p of MONARCHY.prophets) {
       expect(p.from <= p.to && p.basis.length > 20, p.id).toBe(true);
+      expect(['israel', 'judah', 'both'], p.id).toContain(p.sentTo);
+      expect(p.refs.some((r) => contains(r, parseRef(p.sent)!.start)), `${p.id}: ${p.sent}, the verse that shows whom he spoke to, is not one of his refs`).toBe(true);
       for (const k of p.kings) expect(ids.has(k), `${p.id}: unknown king ${k}`).toBe(true);
     }
     // Thiele's reading is the rulers' own dates; every other reading dates every king, and its overlaps say what they rest on.

@@ -163,11 +163,13 @@ export const reckoningAt = (kingdom: Kingdom, year: number) => MONARCHY.reckonin
 export const anchorFits = (a: MonarchyAnchor, mode: DateMode) =>
   a.kings.every((id) => { const k = kingById.get(id); if (!k) return false; const [s, e] = span(k, mode); return a.year >= s - 1 && a.year <= e + 1; });
 
-/** The prophets active in a span of years, each given the first row where its band and name fit. */
-export function prophetRows(from: number, to: number): { p: (typeof MONARCHY.prophets)[number]; row: number }[] {
+/** The kingdom whose lane a prophet is drawn beside: the one he spoke to, and Judah for one who spoke to both. */
+export const prophetKingdom = (p: (typeof MONARCHY.prophets)[number]): Kingdom => (p.sentTo === 'israel' ? 'israel' : 'judah');
+/** The prophets to one kingdom active in a span of years, each given the first row where its band and name fit. */
+export function prophetRows(from: number, to: number, kingdom: Kingdom): { p: (typeof MONARCHY.prophets)[number]; row: number }[] {
   const label = (to - from) * 0.14; // room for a name, in years
   const ends: number[] = [];
-  return MONARCHY.prophets.filter((p) => p.to >= from && p.from <= to).sort((a, b) => a.from - b.from).map((p) => {
+  return MONARCHY.prophets.filter((p) => prophetKingdom(p) === kingdom && p.to >= from && p.from <= to).sort((a, b) => a.from - b.from).map((p) => {
     const left = Math.max(p.from, from);
     let row = ends.findIndex((e) => e < left);
     if (row < 0) { row = ends.length; ends.push(0); }

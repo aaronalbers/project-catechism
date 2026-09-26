@@ -59,10 +59,12 @@ describe('reign chart', () => {
     expect([...reignsInChapter('2Kgs', 15)].sort(([a], [b]) => a - b).map(([, r]) => r.k.id)).toEqual(['uzziah', 'zechariah-i', 'shallum', 'menahem', 'pekahiah', 'pekah', 'jotham']);
     expect(reignsInChapter('2Chr', 36).get(9)).toMatchObject({ account: 'chronicles' });
   });
-  it('stacks prophets so no two share a row where they overlap', () => {
-    const rows = prophetRows(-800, -680);
-    for (const a of rows) for (const b of rows) if (a !== b && a.row === b.row) expect(a.p.to < b.p.from || b.p.to < a.p.from).toBe(true);
-    expect(rows.map((r) => r.p.id)).toContain('isaiah');
+  it('stacks each kingdom’s prophets beside its lane, so no two share a row where they overlap', () => {
+    const israel = prophetRows(-800, -680, 'israel'), judah = prophetRows(-800, -680, 'judah');
+    for (const rows of [israel, judah]) for (const a of rows) for (const b of rows) if (a !== b && a.row === b.row) expect(a.p.to < b.p.from || b.p.to < a.p.from).toBe(true);
+    expect(israel.map((r) => r.p.id)).toEqual(expect.arrayContaining(['amos', 'hosea', 'jonah']));
+    expect(judah.map((r) => r.p.id)).toEqual(expect.arrayContaining(['isaiah', 'micah'])); // Micah spoke to both, and is drawn with Judah
+    expect(israel.map((r) => r.p.id)).not.toContain('isaiah');
   });
   it('pins a date outside the Bible to a reign, where the view allows', () => {
     const pin = (id: string) => MONARCHY.anchors.find((a) => a.id === id)!;

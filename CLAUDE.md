@@ -127,7 +127,8 @@ them in CI — read it before adding content.
   under in Kings, the length and synchronism as the BSB words them, Kings' verdict, and Chronicles' own chart
   verse and verdict for Judah's kings). A verdict is `right`, `evil` or `none`, with `but` for the qualification
   the text adds (the high places not removed). The chart-wide pieces are in `content/monarchy.json`: the
-  reckoning Thiele reconstructs, pins dated outside the Bible, and the prophets. The reader draws only the
+  reckoning Thiele reconstructs, pins dated outside the Bible, and the prophets, each with `sentTo` (the kingdom he
+  spoke to, shown by the verse `sent`; `both` is drawn with Judah) and drawn beside that kingdom's lane. The reader draws only the
   chart under each accession verse; the Reign tab (shown only in Kings and Chronicles) holds the date toggle
   (a reading, or the stated lengths laid end to end), the legend and the facts. `readings` in `monarchy.json`
   are reconstructions: Thiele's first, from the rulers' own `from`–`to` and `overlap`, then McFall and Young's

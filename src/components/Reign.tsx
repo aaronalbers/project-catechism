@@ -8,14 +8,14 @@ import { MONARCHY } from '@/lib/content';
 import { formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import {
   DOMAIN, KINGDOM_NAME, KINGDOMS, READINGS, VERDICT_LABEL, anchorFits, bc, chartRef, datesIn, dynasties, kingById, laneOf, modeLabel, overlapSpan,
-  prophetRows, reached, readingOf, reckoningAt, span, statedBefore, synchronism, verdictClass, verdictIn, windowFor, type Account, type DateMode, type King,
+  prophetKingdom, prophetRows, reached, readingOf, reckoningAt, span, statedBefore, synchronism, verdictClass, verdictIn, windowFor, type Account, type DateMode, type King,
 } from '@/lib/reign';
 import type { Verdict } from '@/lib/types';
 import { RefChip } from './SourceList';
 
-// Rows of the plot, in pixels: the SVG overlay uses the same numbers.
-const LANE = 18, ISRAEL = 0, HOUSES = 21, JUDAH = 33, PROPHETS = 57, PROPHET_ROW = 14;
-const laneY: Record<King['reign']['kingdom'], number> = { israel: ISRAEL, judah: JUDAH };
+// Rows of the plot, in pixels, from the top of Israel's lane: the SVG overlay uses the same numbers. Israel's
+// prophets stack upward above its lane and Judah's downward below its own, so each sits by the kingdom he spoke to.
+const LANE = 18, HOUSES = 21, JUDAH = 33, PROPHET_ROW = 14, PROPHET_GAP = 6;
 
 const go = (ref: string | undefined) => { const r = ref && parseRef(ref); if (r) goTo(r.start); };
 const stop = (f: () => void) => (e: { stopPropagation: () => void }) => { e.stopPropagation(); f(); };
@@ -62,10 +62,19 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
   const x = (y: number) => ((y - w0) / (w1 - w0)) * 100;
   const ox = (y: number) => ((y - DOMAIN[0]) / (DOMAIN[1] - DOMAIN[0])) * 100;
   // The prophets' years are set by Thiele's dates, so they are drawn only with them.
-  const rows = readingOf(mode) === READINGS[0] ? prophetRows(w0, w1) : [];
-  const height = PROPHETS + (rows.length ? (Math.max(...rows.map((r) => r.row)) + 1) * PROPHET_ROW : 0);
+  const thiele = readingOf(mode) === READINGS[0];
+  const above = thiele ? prophetRows(w0, w1, 'israel') : [], below = thiele ? prophetRows(w0, w1, 'judah') : [];
+  const depth = (rows: typeof above) => (rows.length ? Math.max(...rows.map((r) => r.row)) + 1 : 0);
+  const top = depth(above) ? depth(above) * PROPHET_ROW + PROPHET_GAP : 0;
+  const laneY: Record<King['reign']['kingdom'], number> = { israel: top, judah: top + JUDAH };
+  const belowY = top + JUDAH + LANE + PROPHET_GAP;
+  const height = belowY + (depth(below) ? depth(below) * PROPHET_ROW : -PROPHET_GAP);
+  const prophets = [
+    ...above.map(({ p, row }) => ({ p, y: top - PROPHET_GAP - (row + 1) * PROPHET_ROW })),
+    ...below.map(({ p, row }) => ({ p, y: belowY + row * PROPHET_ROW })),
+  ];
   const sync = synchronism(k, mode);
-  const pins = MONARCHY.anchors.filter((p) => p.year >= w0 && p.year <= w1);
+  const pins = MONARCHY.anchors.filter((p) => x(p.year) >= 1 && x(p.year) <= 99); // clear of the edges, where the diamond would be cut
   const step = w1 - w0 <= 100 ? 10 : w1 - w0 <= 200 ? 25 : 50;
   const ticks: number[] = [];
   for (let t = Math.ceil(w0 / step) * step; t <= w1; t += step) if (x(t) > 3 && x(t) < 97) ticks.push(t); // clear of the edges, where a label would spill
@@ -86,18 +95,19 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
       </div>
       <div className="reign-grid">
         <div className="reign-labels" aria-hidden="true" style={{ height }}>
-          <span style={{ top: ISRAEL }}>Israel</span>
-          <span style={{ top: JUDAH }}>Judah</span>
-          {rows.length > 0 && <span style={{ top: PROPHETS }}>Prophets</span>}
+          {above.length > 0 && <span className="sub" style={{ top: top - PROPHET_GAP - PROPHET_ROW - 3 }}>Prophets</span>}
+          <span style={{ top: laneY.israel }}>Israel</span>
+          <span style={{ top: laneY.judah }}>Judah</span>
+          {below.length > 0 && <span className="sub" style={{ top: belowY - 3 }}>Prophets</span>}
         </div>
         <div className="reign-plot" style={{ height }}>
           {pins.map((p) => {
             const fits = anchorFits(p, mode);
-            return <span key={p.id} className={`pin${fits ? '' : ' misses'}`} style={{ left: `${x(p.year)}%` }}
+            return <span key={p.id} className={`pin${fits ? '' : ' misses'}`} style={{ left: `${x(p.year)}%`, top: laneY.israel, height: JUDAH + LANE }}
               title={`${p.estimated ? '≈' : ''}${bc(p.year)} BC, ${p.label}: ${p.note}${fits ? '' : ` In this view that year falls outside ${p.kings.map((id) => kingById.get(id)?.name).join(' and ')}’s reign.`}`} />;
           })}
           {dynasties('israel', mode).map((d) => (
-            <span key={d.name + d.from} className="house" style={{ ...at(d.from, d.to), top: HOUSES }} title={`House of ${d.name}`}>{x(clip(d.to)) - x(clip(d.from)) > 8 ? d.name : ''}</span>
+            <span key={d.name + d.from} className="house" style={{ ...at(d.from, d.to), top: laneY.israel + HOUSES }} title={`House of ${d.name}`}>{x(clip(d.to)) - x(clip(d.from)) > 8 ? d.name : ''}</span>
           ))}
           {KINGDOMS.flatMap((kd) => laneOf(kd).map((o) => {
             const [s, e] = span(o, mode);
@@ -115,9 +125,9 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
               </button>
             );
           }))}
-          {rows.map(({ p, row }) => (
-            <button key={p.id} className="prophet" style={{ ...at(p.from, Math.max(p.to, p.from + 0.5)), top: PROPHETS + row * PROPHET_ROW }}
-              title={`${p.name}, ${years(p.from, p.to)}: ${p.basis}`} onClick={stop(() => go(p.refs[0]))}><span className="nm">{p.name}</span></button>
+          {prophets.map(({ p, y }) => (
+            <button key={p.id} className="prophet" style={{ ...at(p.from, Math.max(p.to, p.from + 0.5)), top: y }}
+              title={prophetTitle(p)} onClick={stop(() => go(p.refs[0]))}><span className="nm">{p.name}</span></button>
           ))}
           {sync && (
             <svg className="sync" viewBox={`0 0 100 ${height}`} preserveAspectRatio="none" aria-hidden="true">
@@ -137,6 +147,12 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
       </div>
     </div>
   );
+}
+
+/** A prophet's tooltip: whom he spoke to, where he came from if elsewhere, his years and what they rest on. */
+function prophetTitle(p: (typeof MONARCHY.prophets)[number]) {
+  const to = p.sentTo === 'both' ? 'Israel and Judah' : KINGDOM_NAME[p.sentTo];
+  return `${p.name}, prophet to ${to} (${formatRef(p.sent)})${p.origin ? `, from ${p.origin}` : ''}. ${years(p.from, p.to)}: ${p.basis}${p.note ? ` ${p.note}` : ''}`;
 }
 
 /** What the synchronism line says, for its tooltip: the verse's words, and whether the dates in view meet it. */
@@ -234,11 +250,14 @@ export function Facts({ k, account, mode }: { k: King; account: Account; mode: D
           ))}.
         </Row>
       )}
-      {prophets.length > 0 && (
-        <Row label="Prophets">
-          {prophets.map((p) => <button key={p.id} className="chip link" title={p.basis} onClick={stop(() => go(p.refs[0]))}>{p.name}</button>)}
-        </Row>
-      )}
+      {KINGDOMS.map((kd) => {
+        const here = prophets.filter((p) => prophetKingdom(p) === kd);
+        return here.length > 0 && (
+          <Row key={kd} label={`Prophets to ${KINGDOM_NAME[kd]}`}>
+            {here.map((p) => <button key={p.id} className="chip link" title={prophetTitle(p)} onClick={stop(() => go(p.refs[0]))}>{p.name}{p.sentTo === 'both' ? ' (and Israel)' : ''}</button>)}
+          </Row>
+        );
+      })}
       {pins.map((p) => (
         <Row key={p.id} label="Dated">
           <b>{p.estimated ? '≈' : ''}{bc(p.year)} BC</b>, {p.label}. {p.note} {p.ref && <RefChip r={p.ref} />}

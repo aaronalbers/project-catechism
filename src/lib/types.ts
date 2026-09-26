@@ -140,8 +140,15 @@ export interface Reign {
 export interface Reckoning { kingdom: Kingdom; from: number; to: number; method: 'accession' | 'non-accession'; year: 'Nisan' | 'Tishri'; basis: string }
 /** A year fixed outside the Bible (an Assyrian or Babylonian record) that names or dates one of the kings. */
 export interface MonarchyAnchor { id: string; year: number; label: string; kings: string[]; ref?: Ref; estimated?: boolean; note: string; sources: Source[] }
-/** A prophet the text sets in named reigns; `from`–`to` are the years that puts him in, and `basis` says how. */
-export interface MonarchyProphet { id: string; name: string; from: number; to: number; kings: string[]; refs: Ref[]; basis: string }
+/**
+ * A prophet the text sets in named reigns; `from`–`to` are the years that puts him in, and `basis` says how.
+ * `sentTo` is the kingdom he spoke to, shown by the verse `sent` (one of his `refs`); `both` is drawn with
+ * Judah. `origin` is where he came from, when that is not the kingdom he spoke to (Amos, from Tekoa).
+ */
+export interface MonarchyProphet {
+  id: string; name: string; from: number; to: number; kings: string[]; sentTo: Kingdom | 'both'; sent: Ref; origin?: string;
+  refs: Ref[]; basis: string; note?: string;
+}
 /** One king's years in a reading: `from`–`to`, and an `overlap` with another's reign where the reading has one. */
 export interface ReadingDates { from: number; to: number; overlap?: Reign['overlap'] }
 /**
