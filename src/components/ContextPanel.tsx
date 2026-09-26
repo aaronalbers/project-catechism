@@ -5,6 +5,8 @@ import { InsightsPanel } from '@/panels/InsightsPanel';
 import { WordsPanel } from '@/panels/WordsPanel';
 import { LinksPanel } from '@/panels/LinksPanel';
 import { VideosPanel } from '@/panels/VideosPanel';
+import { ReignsPanel } from '@/panels/ReignsPanel';
+import { accountAt } from '@/lib/reign';
 
 // Map, graph and 3D libraries are only fetched when their tab is opened.
 const PlacesPanel = lazy(() => import('@/panels/PlacesPanel').then((m) => ({ default: m.PlacesPanel })));
@@ -17,6 +19,7 @@ const TABS: { id: PanelTab; label: string }[] = [
   { id: 'places', label: 'Places' },
   { id: 'people', label: 'People' },
   { id: 'links', label: 'Links' },
+  { id: 'reigns', label: 'Reign' },
   { id: 'models', label: 'Models' },
   { id: 'videos', label: 'Videos' },
 ];
@@ -32,10 +35,12 @@ export function ContextPanel() {
     videos: videosFor(loc).length,
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc]);
+  // The Reign tab is only for Kings and Chronicles, where the kings are charted.
+  const tabs = accountAt(loc) || tab === 'reigns' ? TABS : TABS.filter((t) => t.id !== 'reigns');
   return (
     <>
       <div className="tabs" role="tablist">
-        {TABS.map((t) => {
+        {tabs.map((t) => {
           const n = counts[t.id];
           return (
             <button key={t.id} role="tab" className="tab" aria-selected={tab === t.id && open} onClick={() => setState({ tab: t.id, panelOpen: tab === t.id ? !open : true })}>
@@ -53,6 +58,7 @@ export function ContextPanel() {
           {tab === 'links' && <LinksPanel />}
           {tab === 'models' && <ModelsPanel />}
           {tab === 'videos' && <VideosPanel />}
+          {tab === 'reigns' && <ReignsPanel />}
         </Suspense>
       )}
     </>

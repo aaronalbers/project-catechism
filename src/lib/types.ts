@@ -114,7 +114,50 @@ export interface Tally {
   groups?: TallyGroup[]; total?: TallyRow; discrepancy?: string; compare?: string; alone?: string[];
   sources: Source[]; traditions?: string[]; confidence: Confidence;
 }
-export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string }
+export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string; reign?: Reign }
+export type Kingdom = 'israel' | 'judah';
+/**
+ * What a book says of a king: `right` or `evil`, in the BSB's own words at `ref`, with `but` the
+ * qualification it adds (the high places not removed), or no verdict at all (`none`, saying so in `note`).
+ */
+export interface Verdict { kind: 'right' | 'evil' | 'none'; ref?: Ref; quote?: string; but?: { ref: Ref; quote: string }; note?: string }
+/**
+ * A king of the divided kingdoms as Kings tells his reign. `ref` is where the reader draws the chart (his
+ * accession, or the reign formula), and `chronicles.ref` the same in Chronicles, with Chronicles' own verdict.
+ * `length` and `synchronism` quote the text ("twenty-two years", Asa's "thirty-eighth year"). `overlap` is a
+ * coregency or rival reign in the reconstruction, from the ruler's `from` to `until`, saying what it rests on.
+ */
+export interface Reign {
+  kingdom: Kingdom; ref: Ref;
+  length: { ref: Ref; quote: string; years: number };
+  synchronism?: { king: string; year: number; ref: Ref; quote: string };
+  verdict: Verdict;
+  chronicles?: { ref: Ref; verdict: Verdict };
+  overlap?: { until: number; kind: 'coregency' | 'rival'; with: string; basis: string };
+  dynasty?: string; note?: string; discrepancy?: string;
+}
+/** How a kingdom counted its kings' years over a span: whether a king's first part-year was his year one, and the month its year began. */
+export interface Reckoning { kingdom: Kingdom; from: number; to: number; method: 'accession' | 'non-accession'; year: 'Nisan' | 'Tishri'; basis: string }
+/** A year fixed outside the Bible (an Assyrian or Babylonian record) that names or dates one of the kings. */
+export interface MonarchyAnchor { id: string; year: number; label: string; kings: string[]; ref?: Ref; estimated?: boolean; note: string; sources: Source[] }
+/** A prophet the text sets in named reigns; `from`–`to` are the years that puts him in, and `basis` says how. */
+export interface MonarchyProphet { id: string; name: string; from: number; to: number; kings: string[]; refs: Ref[]; basis: string }
+/** One king's years in a reading: `from`–`to`, and an `overlap` with another's reign where the reading has one. */
+export interface ReadingDates { from: number; to: number; overlap?: Reign['overlap'] }
+/**
+ * A reconstruction of the kings' dates. The first is Thiele's, whose dates are the rulers' own `from`–`to`;
+ * the others give `dates` for every king, and say in `basis` how they differ.
+ */
+export interface MonarchyReading { id: string; label: string; basis: string; dates?: Record<string, ReadingDates>; notes?: Record<string, string>; sources: Source[] }
+/**
+ * The chart of the divided kingdoms drawn under each king's accession: `kings` and `chronicles` are the
+ * passages it is drawn in, `from` the division, `stated` what the stated-lengths view shows.
+ */
+export interface Monarchy {
+  id: string; title: string; kings: Ref; chronicles: Ref; from: number; summary: string; stated: string;
+  reckoning: Reckoning[]; anchors: MonarchyAnchor[]; prophets: MonarchyProphet[]; readings: MonarchyReading[];
+  sources: Source[]; traditions?: string[]; confidence: Confidence;
+}
 /** One camp in an itinerary. Its position is OpenBible's identification of `place` unless `estimate` overrides it. */
 export interface Station {
   verse: Ref; name: string; place?: string;

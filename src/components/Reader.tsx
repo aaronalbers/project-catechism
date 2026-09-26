@@ -4,12 +4,14 @@ import { loadBook, loadInterlinear } from '@/lib/data';
 import { CHIASMS, markersForChapter, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
 import { rowsAt } from '@/lib/tally';
+import { reignsInChapter } from '@/lib/reign';
 import { BOOKS, book, bookIndex, contains, parseRef, touchesChapter } from '@/lib/refs';
 import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
 import { alignVerse, tokenize } from '@/lib/align';
 import { readStored, writeStored } from '@/lib/storage';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
 import { TallyBar, TallyCaption, TallyGroupBar, TallyTotal } from './Tally';
+import { ReignChart } from './Reign';
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
@@ -72,9 +74,12 @@ export function Reader() {
   const tallies = useMemo(() => talliesInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const [charts, setCharts] = useStoredFlag('tallies', true);
   const toggleCharts = () => setCharts();
+  const reigns = useMemo(() => reignsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
+  const [reignCharts, setReignCharts] = useStoredFlag('reigns', true);
+  const toggleReigns = () => setReignCharts();
   const reveal = useStore((s) => s.reveal);
-  // Arriving from the index at a chiasm or a count: show it even if the reader had hidden it.
-  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Arriving from the index at a chiasm, a count or a reign: show it even if the reader had hidden it.
+  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep the current verse in view, gently, when it changes (audio, links, hash).
   const lastScrolled = useRef<string>('');
@@ -130,6 +135,7 @@ export function Reader() {
         const bars = charts ? tallies.flatMap((t) => rowsAt(t, vloc).map((row) => ({ t, row }))) : [];
         const subtotals = charts ? tallies.flatMap((t) => (t.groups ?? []).filter((g) => contains(g.ref, vloc)).map((g) => ({ t, g }))) : [];
         const totals = charts ? tallies.filter((t) => t.total && contains(t.total.ref, vloc)) : [];
+        const reign = reigns.get(v.v);
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
@@ -145,6 +151,7 @@ export function Reader() {
                 {bars.map(({ t, row }) => <TallyBar key={`${t.id}:${row.label}`} t={t} row={row} loc={loc} current={current} />)}
                 {subtotals.map(({ t, g }) => <TallyGroupBar key={`${t.id}:${g.label}`} t={t} g={g} loc={loc} current={current} />)}
                 {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}
+                {reign && <ReignChart k={reign.k} account={reign.account} loc={loc} show={reignCharts} onToggle={toggleReigns} />}
                 {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
               </div>
             </div>

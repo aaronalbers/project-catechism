@@ -2,7 +2,9 @@ import { useEffect, useSyncExternalStore } from 'react';
 import { hashFromLoc, locFromHash, sameLoc, type VerseLoc } from '@/lib/refs';
 import { readStored, writeStored } from '@/lib/storage';
 
-export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos';
+export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos' | 'reigns';
+/** Which reconstruction dates the kings (a reading's id, 'thiele' first), or 'stated' for the stated lengths laid end to end. */
+export type ReignDates = string;
 export type Theme = 'system' | 'light' | 'dark';
 
 export interface State {
@@ -20,8 +22,10 @@ export interface State {
   reveal: Reveal | null;
   /** Element id of the panel card a link goes to (`model-temple`), for the panel to scroll to; cleared once it has, or by the next `goTo`. */
   feature: string | null;
+  /** How the reign charts date the kings, inline and in the Reign tab alike. */
+  reignDates: ReignDates;
 }
-export type Reveal = 'chiasm' | 'tally';
+export type Reveal = 'chiasm' | 'tally' | 'reign';
 
 /** Route hash for the index: #/index or #/index/models. */
 function indexFromHash(hash: string): string | null {
@@ -40,6 +44,7 @@ let state: State = {
   index: indexFromHash(location.hash),
   reveal: null,
   feature: null,
+  reignDates: readStored<ReignDates>('reign-dates', 'thiele'),
 };
 
 const listeners = new Set<() => void>();
@@ -57,6 +62,7 @@ export function setState(patch: Partial<State> | ((s: State) => Partial<State>))
   }
   if (p.tab) writeStored('tab', state.tab);
   if (p.theme) writeStored('theme', state.theme);
+  if (p.reignDates) writeStored('reign-dates', state.reignDates);
   emit();
 }
 

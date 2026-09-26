@@ -3,7 +3,7 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -12,7 +12,8 @@ import { cutParts } from '@/lib/models/view';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import { quotedCount, tallySum } from '@/lib/tally';
-import type { BibleBook, Model3D, Place, Source } from '@/lib/types';
+import { laneOf, statedBefore } from '@/lib/reign';
+import type { BibleBook, Model3D, Place, Source, Verdict } from '@/lib/types';
 
 /** A procedural model drawn as each of its readings (once, if it has none). */
 const drawings = (m: Model3D) => (m.readings?.map((r) => r.id) ?? [undefined]).map((reading) => ({ reading, model: buildProcedural(m.procedural!, reading), label: reading ? `${m.id} (${reading})` : m.id }));
@@ -22,8 +23,17 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES]
+  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
+
+/** Every quotation a king's reign makes of the text, with the verse it must be found in. */
+function reignQuotes(): { id: string; ref: string; quote?: string }[] {
+  const verdict = (id: string, v: Verdict) => [...(v.ref ? [{ id, ref: v.ref, quote: v.quote }] : []), ...(v.but ? [{ id, ...v.but }] : [])];
+  return KINGS.flatMap(({ id, reign: r }) => [
+    { id, ref: r.ref }, { id, ...r.length }, ...(r.synchronism ? [{ id, ref: r.synchronism.ref, quote: r.synchronism.quote }] : []),
+    ...verdict(id, r.verdict), ...(r.chronicles ? [{ id, ref: r.chronicles.ref }, ...verdict(id, r.chronicles.verdict)] : []),
+  ]);
+}
 
 /** Matches a wikipedia.org host only — wikisource (primary texts) and wikimedia (image credits) are fine. */
 const WIKIPEDIA = /^https?:\/\/[^/]*\bwikipedia\.org\b/i;
@@ -43,6 +53,10 @@ describe('content integrity', () => {
       ...VIDEOS.flatMap((v) => v.verses ?? []),
       ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
       ...TALLIES.flatMap((t) => [t.ref, ...[...t.rows, ...(t.groups ?? [])].map((r) => r.ref), ...(t.total ? [t.total.ref] : [])]),
+      ...reignQuotes().map((q) => q.ref),
+      MONARCHY.kings, MONARCHY.chronicles,
+      ...MONARCHY.anchors.flatMap((a) => (a.ref ? [a.ref] : [])),
+      ...MONARCHY.prophets.flatMap((p) => p.refs),
     ];
     expect(bad(all)).toEqual([]);
   });
@@ -172,6 +186,81 @@ describe('content integrity', () => {
           .toEqual(before!.rows.filter((r) => !alone.has(r.label)).map((r) => r.label).sort());
         for (const a of alone) expect([...t.rows, ...before!.rows].some((r) => r.label === a), `${t.id}: '${a}' is alone but in neither list`).toBe(true);
       }
+    }
+  });
+  // A reign's chart stands at its accession and quotes the text for its length, its date and its verdict.
+  it('every king of the divided kingdoms has a reign, charted inside its account, and the reigns hold together', () => {
+    const divided = RULERS.filter((r) => r.from >= MONARCHY.from && r.to <= -586 && /^(Judah|Israel \(northern kingdom\))$/.test(r.realm));
+    expect(KINGS.map((k) => k.id).sort()).toEqual(divided.map((r) => r.id).sort());
+    const ids = new Set(KINGS.map((k) => k.id));
+    for (const { id, from, to, realm, reign: r } of KINGS) {
+      expect(r.kingdom, id).toBe(realm === 'Judah' ? 'judah' : 'israel');
+      expect(contains(MONARCHY.kings, parseRef(r.ref)!.start), `${id}: ${r.ref} is outside Kings`).toBe(true);
+      if (r.chronicles) expect(contains(MONARCHY.chronicles, parseRef(r.chronicles.ref)!.start), `${id}: ${r.chronicles.ref} is outside Chronicles`).toBe(true);
+      expect(r.length.years, id).toBeGreaterThan(0);
+      if (r.synchronism) {
+        const other = KINGS.find((k) => k.id === r.synchronism!.king);
+        expect(other && other.reign.kingdom !== r.kingdom, `${id}: synchronism with ${r.synchronism.king}, not a king of the other kingdom`).toBe(true);
+      }
+      for (const v of [r.verdict, ...(r.chronicles ? [r.chronicles.verdict] : [])]) {
+        if (v.kind === 'none') expect(!v.quote && !v.but && !!v.note, `${id}: no verdict, and a note to say so`).toBe(true);
+        else expect(!!v.quote && !!v.ref, `${id}: a verdict quotes its verse`).toBe(true);
+      }
+      if (r.overlap) expect(r.overlap.until > from && r.overlap.until <= to && r.overlap.basis.length > 40, `${id}: overlap`).toBe(true);
+      if (r.dynasty) expect(r.kingdom, id).toBe('israel');
+    }
+    for (const q of reignQuotes()) { const at = parseRef(q.ref)!; expect(at.start, `${q.id}: ${q.ref} is one verse`).toEqual(at.end); }
+    // Each kingdom's reigns follow one another and do not run backwards; an overlap is the only way two meet.
+    for (const kd of ['israel', 'judah'] as const) {
+      const lane = laneOf(kd);
+      for (let i = 1; i < lane.length; i++) expect(lane[i].reign.overlap?.until ?? lane[i].from, `${lane[i].id} begins before ${lane[i - 1].id}`).toBeGreaterThanOrEqual(lane[i - 1].from);
+      for (let i = 1; i < lane.length; i++) expect(compareLoc(parseRef(lane[i - 1].reign.ref)!.start, parseRef(lane[i].reign.ref)!.start), `${lane[i].id} charted before ${lane[i - 1].id}`).toBeLessThan(0);
+    }
+    // Jehu's note rests on these sums: Joram and Ahaziah die the same day, 98 stated years from Jeroboam and 95 from Rehoboam.
+    const jehu = KINGS.find((k) => k.id === 'jehu')!, athaliah = KINGS.find((k) => k.id === 'athaliah')!;
+    expect(Math.round(statedBefore(jehu))).toBe(98);
+    expect(statedBefore(athaliah)).toBe(95);
+    expect(Math.round(statedBefore(jehu)) - laneOf('israel').slice(0, laneOf('israel').indexOf(jehu)).filter((k) => k.reign.length.years >= 1).length, 'one year less per northern reign counted in years').toBe(90);
+    // The chart's pins, prophets and ways of counting name real kings and say what they rest on.
+    expect(MONARCHY.traditions?.length).toBeGreaterThan(0);
+    for (const a of MONARCHY.anchors) {
+      expect(a.sources.some((x) => evidential.has(x.kind)), `${a.id}: no evidential source`).toBe(true);
+      for (const k of a.kings) expect(ids.has(k), `${a.id}: unknown king ${k}`).toBe(true);
+    }
+    for (const p of MONARCHY.prophets) {
+      expect(p.from <= p.to && p.basis.length > 20, p.id).toBe(true);
+      for (const k of p.kings) expect(ids.has(k), `${p.id}: unknown king ${k}`).toBe(true);
+    }
+    // Thiele's reading is the rulers' own dates; every other reading dates every king, and its overlaps say what they rest on.
+    expect(MONARCHY.readings[0].id).toBe('thiele');
+    expect(MONARCHY.readings[0].dates).toBeUndefined();
+    for (const reading of MONARCHY.readings.slice(1)) {
+      expect(Object.keys(reading.dates ?? {}).sort(), reading.id).toEqual([...ids].sort());
+      expect(reading.sources.length, reading.id).toBeGreaterThan(0);
+      for (const [id, d] of Object.entries(reading.dates!)) {
+        expect(d.from <= d.to, `${reading.id} ${id}`).toBe(true);
+        if (d.overlap) expect(d.overlap.until > d.from && d.overlap.until <= d.to && d.overlap.basis.length > 20, `${reading.id} ${id}: overlap`).toBe(true);
+      }
+      for (const kd of ['israel', 'judah'] as const) {
+        const lane = laneOf(kd).map((k) => ({ id: k.id, ...reading.dates![k.id] }));
+        for (let i = 1; i < lane.length; i++) expect(lane[i].overlap?.until ?? lane[i].from, `${reading.id}: ${lane[i].id} begins before ${lane[i - 1].id}`).toBeGreaterThanOrEqual(lane[i - 1].from);
+      }
+      for (const id of Object.keys(reading.notes ?? {})) expect(ids.has(id), `${reading.id}: note for unknown ${id}`).toBe(true);
+    }
+    for (const kd of ['israel', 'judah'] as const) {
+      const spans = MONARCHY.reckoning.filter((r) => r.kingdom === kd);
+      expect(spans[0].from, kd).toBe(MONARCHY.from);
+      for (let i = 1; i < spans.length; i++) expect(spans[i].from, `${kd}: a gap in the reckoning`).toBe(spans[i - 1].to);
+      const last = laneOf(kd).at(-1)!;
+      expect(spans.at(-1)!.to, `${kd}: the reckoning stops before ${last.id}`).toBeGreaterThanOrEqual(last.to);
+    }
+  });
+  it.skipIf(!existsSync(bibleDir))('reign quotes are the BSB wording', () => {
+    for (const q of reignQuotes().filter((x) => x.quote)) {
+      const loc = parseRef(q.ref)!.start;
+      const book = JSON.parse(readFileSync(new URL(`${loc.book}.json`, bibleDir), 'utf8')) as BibleBook;
+      const text = book.chapters[loc.chapter - 1].find((v) => v.v === loc.verse)!.t;
+      expect(text, `${q.id} at ${q.ref}`).toContain(q.quote);
     }
   });
   it.skipIf(!existsSync(bibleDir))('tally quotes are the BSB wording', () => {

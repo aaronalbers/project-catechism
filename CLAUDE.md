@@ -123,6 +123,21 @@ them in CI — read it before adding content.
   up to `total` unless `discrepancy` says why not (Numbers 3's Levites). A model can size itself from
   a tally's rows, as the camp of Israel does, so the two never disagree.
 
+- Reigns: each king of Israel and Judah in `content/rulers.json` has a `reign` (the verse his chart stands
+  under in Kings, the length and synchronism as the BSB words them, Kings' verdict, and Chronicles' own chart
+  verse and verdict for Judah's kings). A verdict is `right`, `evil` or `none`, with `but` for the qualification
+  the text adds (the high places not removed). The chart-wide pieces are in `content/monarchy.json`: the
+  reckoning Thiele reconstructs, pins dated outside the Bible, and the prophets. The reader draws only the
+  chart under each accession verse; the Reign tab (shown only in Kings and Chronicles) holds the date toggle
+  (a reading, or the stated lengths laid end to end), the legend and the facts. `readings` in `monarchy.json`
+  are reconstructions: Thiele's first, from the rulers' own `from`–`to` and `overlap`, then McFall and Young's
+  and Galil's, each dating every king, with overlaps saying what they rest on and `notes` for a synchronism
+  the reading explains another way. Dates are rounded to the year and marked ≈. A synchronism a reading's
+  dates miss by more than two years is drawn out of line and flagged (Thiele's own admission is the king's
+  `discrepancy`); `src/__tests__/reign.test.ts` pins which ones each reading misses. A test fails the build if a quote is
+  not verbatim in its verse, a synchronism names a king of the same kingdom, or the stated sums behind Jehu's
+  note (98 and 95 years) change.
+
 - Chiasms (`content/chiasms.json`) come in two shapes, and the reader draws each on the text. A
   **phrase-level** chiasm gives every level a `quote`: the exact BSB words it covers, one verse per
   level, in reading order. The reader lays those out as an indented ladder, and a test fails the

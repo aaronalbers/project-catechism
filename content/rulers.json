@@ -109,7 +109,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "solomon"
+  "predecessor": "solomon",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "1Kgs.14.21",
+   "length": {"ref": "1Kgs.14.21", "quote": "seventeen years", "years": 17},
+   "verdict": {"kind": "evil", "ref": "1Kgs.14.22", "quote": "Judah did evil in the sight of the LORD", "note": "Kings lays the verdict on Judah; Chronicles lays it on Rehoboam himself."},
+   "chronicles": {
+    "ref": "2Chr.12.13",
+    "verdict": {"kind": "evil", "ref": "2Chr.12.14", "quote": "Rehoboam did evil because he did not set his heart to seek the LORD"}
+   }
+  }
  },
  {
   "id": "abijah",
@@ -135,7 +145,18 @@
    }
   ],
   "estimated": true,
-  "predecessor": "rehoboam"
+  "predecessor": "rehoboam",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "1Kgs.15.1",
+   "length": {"ref": "1Kgs.15.2", "quote": "three years", "years": 3},
+   "synchronism": {"king": "jeroboam1", "year": 18, "ref": "1Kgs.15.1", "quote": "eighteenth year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.15.3", "quote": "Abijam walked in all the sins that his father before him had committed"},
+   "chronicles": {
+    "ref": "2Chr.13.1",
+    "verdict": {"kind": "none", "note": "Chronicles gives him no verdict, but a speech for the temple and the priests against Jeroboam (13:4–12), and a victory."}
+   }
+  }
  },
  {
   "id": "asa",
@@ -161,7 +182,29 @@
    }
   ],
   "estimated": true,
-  "predecessor": "abijah"
+  "predecessor": "abijah",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "1Kgs.15.9",
+   "length": {"ref": "1Kgs.15.10", "quote": "forty-one years", "years": 41},
+   "synchronism": {"king": "jeroboam1", "year": 20, "ref": "1Kgs.15.9", "quote": "twentieth year"},
+   "verdict": {
+    "kind": "right",
+    "ref": "1Kgs.15.11",
+    "quote": "Asa did what was right in the eyes of the LORD, as his father David had done",
+    "but": {"ref": "1Kgs.15.14", "quote": "The high places were not removed"}
+   },
+   "chronicles": {
+    "ref": "2Chr.14.1",
+    "verdict": {
+     "kind": "right",
+     "ref": "2Chr.14.2",
+     "quote": "Asa did what was good and right in the eyes of the LORD his God",
+     "but": {"ref": "2Chr.16.12", "quote": "he did not seek the LORD, but only the physicians"},
+     "note": "Chronicles adds his last years: a treaty with Aram against Israel, a seer jailed (16:1–10), and his disease."
+    }
+   }
+  }
  },
  {
   "id": "jehoshaphat",
@@ -187,7 +230,29 @@
    }
   ],
   "estimated": true,
-  "predecessor": "asa"
+  "predecessor": "asa",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "1Kgs.22.41",
+   "length": {"ref": "1Kgs.22.42", "quote": "twenty-five years", "years": 25},
+   "synchronism": {"king": "ahab", "year": 4, "ref": "1Kgs.22.41", "quote": "fourth year"},
+   "verdict": {
+    "kind": "right",
+    "ref": "1Kgs.22.43",
+    "quote": "did what was right in the eyes of the LORD",
+    "but": {"ref": "1Kgs.22.43", "quote": "The high places, however, were not removed"}
+   },
+   "chronicles": {
+    "ref": "2Chr.17.1",
+    "verdict": {
+     "kind": "right",
+     "ref": "2Chr.20.32",
+     "quote": "he did what was right in the eyes of the LORD",
+     "but": {"ref": "2Chr.20.33", "quote": "The high places, however, were not removed"}
+    }
+   },
+   "overlap": {"until": -870, "kind": "coregency", "with": "Asa", "basis": "Ahab’s 4th year is 871 or 870 in Thiele’s dates, yet Jehoshaphat’s 25 years must end by 848. Thiele begins them in 872, beside Asa, who was diseased in his feet from his 39th year (2 Chr 16:12)."}
+  }
  },
  {
   "id": "jehoram-j",
@@ -213,7 +278,20 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jehoshaphat"
+  "predecessor": "jehoshaphat",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.8.16",
+   "length": {"ref": "2Kgs.8.17", "quote": "eight years", "years": 8},
+   "synchronism": {"king": "joram-i", "year": 5, "ref": "2Kgs.8.16", "quote": "fifth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.8.18", "quote": "did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.21.5",
+    "verdict": {"kind": "evil", "ref": "2Chr.21.6", "quote": "did evil in the sight of the LORD"}
+   },
+   "overlap": {"until": -848, "kind": "coregency", "with": "Jehoshaphat", "basis": "Joram of Israel began in Jehoshaphat’s 18th year (3:1) and also in the 2nd year of Jehoram son of Jehoshaphat (1:17), so Jehoram was already reigning while his father lived. His eight years are counted from his father’s death, in Joram’s 5th year (8:16)."},
+   "note": "Married to Ahab’s daughter (8:18). Thiele reconstructs Judah counting like Israel from his reign, the first part-year as year one, until Amaziah."
+  }
  },
  {
   "id": "ahaziah-j",
@@ -239,7 +317,19 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jehoram-j"
+  "predecessor": "jehoram-j",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.8.25",
+   "length": {"ref": "2Kgs.8.26", "quote": "one year", "years": 1},
+   "synchronism": {"king": "joram-i", "year": 12, "ref": "2Kgs.8.25", "quote": "twelfth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.8.27", "quote": "did evil in the sight of the LORD like the house of Ahab"},
+   "chronicles": {
+    "ref": "2Chr.22.2",
+    "verdict": {"kind": "evil", "ref": "2Chr.22.4", "quote": "he did evil in the sight of the LORD, as the house of Ahab had done"}
+   },
+   "note": "9:29 puts his accession in Joram’s 11th year, not the 12th: a year apart, as two ways of counting Joram’s years would put it."
+  }
  },
  {
   "id": "athaliah",
@@ -265,7 +355,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "ahaziah-j"
+  "predecessor": "ahaziah-j",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.11.3",
+   "length": {"ref": "2Kgs.11.3", "quote": "six years", "years": 6},
+   "verdict": {"kind": "none", "note": "Kings gives her no reign formula and no verdict. She is Ahab’s daughter and the only ruler of Judah not descended from David; she killed the royal heirs but for Joash (11:1–2)."},
+   "chronicles": {
+    "ref": "2Chr.22.12",
+    "verdict": {"kind": "none", "note": "Chronicles, too, gives her no verdict."}
+   }
+  }
  },
  {
   "id": "joash-j",
@@ -291,7 +391,29 @@
    }
   ],
   "estimated": true,
-  "predecessor": "athaliah"
+  "predecessor": "athaliah",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.12.1",
+   "length": {"ref": "2Kgs.12.1", "quote": "forty years", "years": 40},
+   "synchronism": {"king": "jehu", "year": 7, "ref": "2Kgs.12.1", "quote": "seventh year"},
+   "verdict": {
+    "kind": "right",
+    "ref": "2Kgs.12.2",
+    "quote": "Joash did what was right in the eyes of the LORD all the days he was instructed by Jehoiada the priest",
+    "but": {"ref": "2Kgs.12.3", "quote": "the high places were not removed"}
+   },
+   "chronicles": {
+    "ref": "2Chr.24.1",
+    "verdict": {
+     "kind": "right",
+     "ref": "2Chr.24.2",
+     "quote": "Joash did what was right in the eyes of the LORD all the days of Jehoiada the priest",
+     "but": {"ref": "2Chr.24.18", "quote": "They abandoned the house of the LORD"},
+     "note": "After Jehoiada died Joash turned to idols and had Jehoiada’s son Zechariah stoned (24:17–22)."
+    }
+   }
+  }
  },
  {
   "id": "amaziah",
@@ -317,7 +439,29 @@
    }
   ],
   "estimated": true,
-  "predecessor": "joash-j"
+  "predecessor": "joash-j",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.14.1",
+   "length": {"ref": "2Kgs.14.2", "quote": "twenty-nine years", "years": 29},
+   "synchronism": {"king": "jehoash-i", "year": 2, "ref": "2Kgs.14.1", "quote": "second year"},
+   "verdict": {
+    "kind": "right",
+    "ref": "2Kgs.14.3",
+    "quote": "he did what was right in the eyes of the LORD",
+    "but": {"ref": "2Kgs.14.3", "quote": "but not as his father David had done"}
+   },
+   "chronicles": {
+    "ref": "2Chr.25.1",
+    "verdict": {
+     "kind": "right",
+     "ref": "2Chr.25.2",
+     "quote": "he did what was right in the eyes of the LORD",
+     "but": {"ref": "2Chr.25.2", "quote": "but not wholeheartedly"},
+     "note": "Chronicles adds that he set up the gods of Edom and bowed to them (25:14)."
+    }
+   }
+  }
  },
  {
   "id": "uzziah",
@@ -344,7 +488,31 @@
    }
   ],
   "estimated": true,
-  "predecessor": "amaziah"
+  "predecessor": "amaziah",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.15.1",
+   "length": {"ref": "2Kgs.15.2", "quote": "fifty-two years", "years": 52},
+   "synchronism": {"king": "jeroboam2", "year": 27, "ref": "2Kgs.15.1", "quote": "twenty-seventh year"},
+   "verdict": {
+    "kind": "right",
+    "ref": "2Kgs.15.3",
+    "quote": "he did what was right in the eyes of the LORD",
+    "but": {"ref": "2Kgs.15.4", "quote": "the high places were not taken away"}
+   },
+   "chronicles": {
+    "ref": "2Chr.26.3",
+    "verdict": {
+     "kind": "right",
+     "ref": "2Chr.26.4",
+     "quote": "he did what was right in the eyes of the LORD",
+     "but": {"ref": "2Chr.26.16", "quote": "his arrogance led to his own destruction"},
+     "note": "Chronicles tells why he became leprous: he burned incense in the temple, which only priests might do (26:16–21)."
+    }
+   },
+   "overlap": {"until": -767, "kind": "coregency", "with": "Amaziah", "basis": "Amaziah outlived Jehoash of Israel by fifteen years (14:17), to 767, but Azariah’s 52 years must end by 740, when Isaiah saw his vision (Isa 6:1) and Pekah, from Azariah’s 52nd year, began in Samaria. Thiele starts them in 792, perhaps when Amaziah was captured at Beth-shemesh and “all the people of Judah” made Azariah king (14:13, 21)."},
+   "note": "Called Azariah in Kings and Uzziah in Chronicles, Isaiah and 2 Kings 15:13, 30–34."
+  }
  },
  {
   "id": "jotham",
@@ -370,7 +538,24 @@
    }
   ],
   "estimated": true,
-  "predecessor": "uzziah"
+  "predecessor": "uzziah",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.15.32",
+   "length": {"ref": "2Kgs.15.33", "quote": "sixteen years", "years": 16},
+   "synchronism": {"king": "pekah", "year": 2, "ref": "2Kgs.15.32", "quote": "second year"},
+   "verdict": {
+    "kind": "right",
+    "ref": "2Kgs.15.34",
+    "quote": "he did what was right in the eyes of the LORD",
+    "but": {"ref": "2Kgs.15.35", "quote": "the high places were not taken away"}
+   },
+   "chronicles": {
+    "ref": "2Chr.27.1",
+    "verdict": {"kind": "right", "ref": "2Chr.27.2", "quote": "he did what was right in the eyes of the LORD"}
+   },
+   "overlap": {"until": -740, "kind": "coregency", "with": "Uzziah", "basis": "Uzziah was a leper until he died, and Jotham “governed the people of the land” (15:5). Thiele counts Jotham’s sixteen years from 750, when he took charge."}
+  }
  },
  {
   "id": "ahaz",
@@ -396,7 +581,19 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jotham"
+  "predecessor": "jotham",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.16.1",
+   "length": {"ref": "2Kgs.16.2", "quote": "sixteen years", "years": 16},
+   "synchronism": {"king": "pekah", "year": 17, "ref": "2Kgs.16.1", "quote": "seventeenth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.16.2", "quote": "he did not do what was right in the eyes of the LORD his God"},
+   "chronicles": {
+    "ref": "2Chr.28.1",
+    "verdict": {"kind": "evil", "ref": "2Chr.28.1", "quote": "he did not do what was right in the eyes of the LORD"}
+   },
+   "overlap": {"until": -732, "kind": "coregency", "with": "Jotham", "basis": "Pekah’s 17th year, counted from 752, is 736 or 735, while Jotham’s reign runs, by 15:30, to his 20th year, 732. Thiele has Ahaz reign beside him from 735."}
+  }
  },
  {
   "id": "hezekiah",
@@ -427,7 +624,19 @@
    }
   ],
   "estimated": false,
-  "predecessor": "ahaz"
+  "predecessor": "ahaz",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.18.1",
+   "length": {"ref": "2Kgs.18.2", "quote": "twenty-nine years", "years": 29},
+   "synchronism": {"king": "hoshea", "year": 3, "ref": "2Kgs.18.1", "quote": "third year"},
+   "verdict": {"kind": "right", "ref": "2Kgs.18.3", "quote": "he did what was right in the eyes of the LORD, just as his father David had done"},
+   "chronicles": {
+    "ref": "2Chr.29.1",
+    "verdict": {"kind": "right", "ref": "2Chr.29.2", "quote": "he did what was right in the eyes of the LORD, just as his father David had done"}
+   },
+   "discrepancy": "Hoshea’s 3rd year (18:1) and Samaria’s fall in Hezekiah’s 6th (18:10) put his accession near 729, but Sennacherib’s invasion, 701 by the Assyrian records, fell in his 14th year (18:13), which puts it in 715. Thiele took the synchronisms with Hoshea to be a later editor’s reckoning, twelve years out; McFall and Young instead give Hezekiah a coregency with Ahaz from 729."
+  }
  },
  {
   "id": "manasseh",
@@ -453,7 +662,24 @@
    }
   ],
   "estimated": true,
-  "predecessor": "hezekiah"
+  "predecessor": "hezekiah",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.21.1",
+   "length": {"ref": "2Kgs.21.1", "quote": "fifty-five years", "years": 55},
+   "verdict": {"kind": "evil", "ref": "2Kgs.21.2", "quote": "he did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.33.1",
+    "verdict": {
+     "kind": "evil",
+     "ref": "2Chr.33.2",
+     "quote": "he did evil in the sight of the LORD",
+     "but": {"ref": "2Chr.33.12", "quote": "Manasseh sought the favor of the LORD his God and earnestly humbled himself"},
+     "note": "Kings blames the exile on his sins (2 Kgs 23:26; 24:3). Chronicles adds his captivity in Babylon, his repentance and his return (33:11–16)."
+    }
+   },
+   "overlap": {"until": -686, "kind": "coregency", "with": "Hezekiah", "basis": "Fifty-five years back from 642 begin in 697, eleven years before Hezekiah died. Thiele suggests Hezekiah named his heir after his illness, when he was given fifteen more years (20:6)."}
+  }
  },
  {
   "id": "amon",
@@ -479,7 +705,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "manasseh"
+  "predecessor": "manasseh",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.21.19",
+   "length": {"ref": "2Kgs.21.19", "quote": "two years", "years": 2},
+   "verdict": {"kind": "evil", "ref": "2Kgs.21.20", "quote": "he did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.33.21",
+    "verdict": {"kind": "evil", "ref": "2Chr.33.22", "quote": "he did evil in the sight of the LORD"}
+   }
+  }
  },
  {
   "id": "josiah",
@@ -505,7 +741,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "amon"
+  "predecessor": "amon",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.22.1",
+   "length": {"ref": "2Kgs.22.1", "quote": "thirty-one years", "years": 31},
+   "verdict": {"kind": "right", "ref": "2Kgs.22.2", "quote": "he did what was right in the eyes of the LORD and walked in all the ways of his father David"},
+   "chronicles": {
+    "ref": "2Chr.34.1",
+    "verdict": {"kind": "right", "ref": "2Chr.34.2", "quote": "he did what was right in the eyes of the LORD and walked in the ways of his father David"}
+   }
+  }
  },
  {
   "id": "jehoahaz-j",
@@ -531,7 +777,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "josiah"
+  "predecessor": "josiah",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.23.31",
+   "length": {"ref": "2Kgs.23.31", "quote": "three months", "years": 0.25},
+   "verdict": {"kind": "evil", "ref": "2Kgs.23.32", "quote": "he did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.36.2",
+    "verdict": {"kind": "none", "note": "Chronicles gives no verdict for his three months."}
+   }
+  }
  },
  {
   "id": "jehoiakim",
@@ -557,7 +813,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jehoahaz-j"
+  "predecessor": "jehoahaz-j",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.23.36",
+   "length": {"ref": "2Kgs.23.36", "quote": "eleven years", "years": 11},
+   "verdict": {"kind": "evil", "ref": "2Kgs.23.37", "quote": "he did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.36.5",
+    "verdict": {"kind": "evil", "ref": "2Chr.36.5", "quote": "he did evil in the sight of the LORD his God"}
+   }
+  }
  },
  {
   "id": "jehoiachin",
@@ -588,7 +854,18 @@
    }
   ],
   "estimated": false,
-  "predecessor": "jehoiakim"
+  "predecessor": "jehoiakim",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.24.8",
+   "length": {"ref": "2Kgs.24.8", "quote": "three months", "years": 0.25},
+   "verdict": {"kind": "evil", "ref": "2Kgs.24.9", "quote": "he did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.36.9",
+    "verdict": {"kind": "evil", "ref": "2Chr.36.9", "quote": "he did evil in the sight of the LORD"}
+   },
+   "note": "Chronicles gives three months and ten days (2 Chr 36:9)."
+  }
  },
  {
   "id": "zedekiah",
@@ -620,7 +897,17 @@
   ],
   "estimated": true,
   "predecessor": "jehoiachin",
-  "notes": "The fall of Jerusalem in 586 (or 587) BC is fixed by the Babylonian Chronicle and 2 Kings 25:8."
+  "notes": "The fall of Jerusalem in 586 (or 587) BC is fixed by the Babylonian Chronicle and 2 Kings 25:8.",
+  "reign": {
+   "kingdom": "judah",
+   "ref": "2Kgs.24.18",
+   "length": {"ref": "2Kgs.24.18", "quote": "eleven years", "years": 11},
+   "verdict": {"kind": "evil", "ref": "2Kgs.24.19", "quote": "Zedekiah did evil in the sight of the LORD"},
+   "chronicles": {
+    "ref": "2Chr.36.11",
+    "verdict": {"kind": "evil", "ref": "2Chr.36.12", "quote": "he did evil in the sight of the LORD his God"}
+   }
+  }
  },
  {
   "id": "jeroboam1",
@@ -646,7 +933,14 @@
     "note": "reconstruction using coregencies and two calendars; other schemes (e.g. Galil 1996) differ by up to a decade"
    }
   ],
-  "estimated": true
+  "estimated": true,
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.12.20",
+   "length": {"ref": "1Kgs.14.20", "quote": "twenty-two years", "years": 22},
+   "verdict": {"kind": "evil", "ref": "1Kgs.14.9", "quote": "You have done more evil than all who came before you", "note": "Ahijah’s word to him; the calves at Bethel and Dan (12:28–33) become “the sins of Jeroboam” by which Kings judges every northern king after him."},
+   "dynasty": "Jeroboam"
+  }
  },
  {
   "id": "nadab",
@@ -672,7 +966,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jeroboam1"
+  "predecessor": "jeroboam1",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.15.25",
+   "length": {"ref": "1Kgs.15.25", "quote": "two years", "years": 2},
+   "synchronism": {"king": "asa", "year": 2, "ref": "1Kgs.15.25", "quote": "second year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.15.26", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Jeroboam"
+  }
  },
  {
   "id": "baasha",
@@ -698,7 +1000,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "nadab"
+  "predecessor": "nadab",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.15.33",
+   "length": {"ref": "1Kgs.15.33", "quote": "twenty-four years", "years": 24},
+   "synchronism": {"king": "asa", "year": 3, "ref": "1Kgs.15.33", "quote": "third year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.15.34", "quote": "Baasha did evil in the sight of the LORD"},
+   "dynasty": "Baasha"
+  }
  },
  {
   "id": "elah",
@@ -724,7 +1034,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "baasha"
+  "predecessor": "baasha",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.16.8",
+   "length": {"ref": "1Kgs.16.8", "quote": "two years", "years": 2},
+   "synchronism": {"king": "asa", "year": 26, "ref": "1Kgs.16.8", "quote": "twenty-sixth year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.16.13", "quote": "the sins Baasha and his son Elah had committed", "note": "Kings gives Elah no verdict of his own; he is judged with his father."},
+   "dynasty": "Baasha"
+  }
  },
  {
   "id": "zimri",
@@ -750,7 +1068,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "elah"
+  "predecessor": "elah",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.16.15",
+   "length": {"ref": "1Kgs.16.15", "quote": "seven days", "years": 0.019178082191780823},
+   "synchronism": {"king": "asa", "year": 27, "ref": "1Kgs.16.15", "quote": "twenty-seventh year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.16.19", "quote": "doing evil in the sight of the LORD"},
+   "dynasty": "Zimri"
+  }
  },
  {
   "id": "omri",
@@ -781,7 +1107,17 @@
    }
   ],
   "estimated": true,
-  "predecessor": "zimri"
+  "predecessor": "zimri",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.16.23",
+   "length": {"ref": "1Kgs.16.23", "quote": "twelve years", "years": 12},
+   "synchronism": {"king": "asa", "year": 31, "ref": "1Kgs.16.23", "quote": "thirty-first year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.16.25", "quote": "Omri did evil in the sight of the LORD and acted more wickedly than all who were before him"},
+   "overlap": {"until": -880, "kind": "rival", "with": "Tibni", "basis": "Zimri’s seven days fall in Asa’s 27th year (1 Kgs 16:15) and Omri reigns alone from Asa’s 31st (16:23), after half the people had followed Tibni (16:21–22). Thiele counts Omri’s twelve years from Zimri’s death, so the first four or so are shared with Tibni."},
+   "dynasty": "Omri",
+   "note": "The twelve years are counted from Asa’s 27th year, when Zimri died, though the verse names the 31st, when Tibni died and Omri reigned alone."
+  }
  },
  {
   "id": "ahab",
@@ -812,7 +1148,15 @@
    }
   ],
   "estimated": false,
-  "predecessor": "omri"
+  "predecessor": "omri",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.16.29",
+   "length": {"ref": "1Kgs.16.29", "quote": "twenty-two years", "years": 22},
+   "synchronism": {"king": "asa", "year": 38, "ref": "1Kgs.16.29", "quote": "thirty-eighth year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.16.30", "quote": "did evil in the sight of the LORD, more than all who were before him"},
+   "dynasty": "Omri"
+  }
  },
  {
   "id": "ahaziah-i",
@@ -838,7 +1182,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "ahab"
+  "predecessor": "ahab",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "1Kgs.22.51",
+   "length": {"ref": "1Kgs.22.51", "quote": "two years", "years": 2},
+   "synchronism": {"king": "jehoshaphat", "year": 17, "ref": "1Kgs.22.51", "quote": "seventeenth year"},
+   "verdict": {"kind": "evil", "ref": "1Kgs.22.52", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Omri"
+  }
  },
  {
   "id": "joram-i",
@@ -864,7 +1216,21 @@
    }
   ],
   "estimated": true,
-  "predecessor": "ahaziah-i"
+  "predecessor": "ahaziah-i",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.3.1",
+   "length": {"ref": "2Kgs.3.1", "quote": "twelve years", "years": 12},
+   "synchronism": {"king": "jehoshaphat", "year": 18, "ref": "2Kgs.3.1", "quote": "eighteenth year"},
+   "verdict": {
+    "kind": "evil",
+    "ref": "2Kgs.3.2",
+    "quote": "he did evil in the sight of the LORD",
+    "but": {"ref": "2Kgs.3.2", "quote": "but not as his father and mother had done"}
+   },
+   "dynasty": "Omri",
+   "note": "Kings dates his accession twice: in Jehoshaphat’s 18th year (3:1) and in the 2nd year of Jehoram son of Jehoshaphat (1:17). Both hold if Jehoram of Judah was already reigning beside his father, as Thiele reconstructs."
+  }
  },
  {
   "id": "jehu",
@@ -895,7 +1261,21 @@
    }
   ],
   "estimated": false,
-  "predecessor": "joram-i"
+  "predecessor": "joram-i",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.9.13",
+   "length": {"ref": "2Kgs.10.36", "quote": "twenty-eight years", "years": 28},
+   "verdict": {
+    "kind": "right",
+    "ref": "2Kgs.10.30",
+    "quote": "you have done well in carrying out what is right in My sight",
+    "but": {"ref": "2Kgs.10.31", "quote": "Jehu was not careful to follow the instruction of the LORD"},
+    "note": "The one northern king Kings commends, for destroying the house of Ahab and Baal’s temple; the calves at Bethel and Dan stayed (10:29)."
+   },
+   "dynasty": "Jehu",
+   "note": "Jehu killed Joram of Israel and Ahaziah of Judah on the same day (9:24, 27), so both kingdoms reach this point together. Laid end to end, Israel’s stated reigns from Jeroboam come to 98 years and Judah’s from Rehoboam to 95. Take one year from each northern reign counted in years (all but Zimri’s seven days), as a kingdom does that counts a king’s first part-year as his first year and his predecessor’s last, and Israel’s come to 90; count Judah’s the same way from Jehoram on, as Thiele does, and so do Judah’s."
+  }
  },
  {
   "id": "jehoahaz-i",
@@ -921,7 +1301,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jehu"
+  "predecessor": "jehu",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.13.1",
+   "length": {"ref": "2Kgs.13.1", "quote": "seventeen years", "years": 17},
+   "synchronism": {"king": "joash-j", "year": 23, "ref": "2Kgs.13.1", "quote": "twenty-third year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.13.2", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Jehu"
+  }
  },
  {
   "id": "jehoash-i",
@@ -947,7 +1335,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jehoahaz-i"
+  "predecessor": "jehoahaz-i",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.13.10",
+   "length": {"ref": "2Kgs.13.10", "quote": "sixteen years", "years": 16},
+   "synchronism": {"king": "joash-j", "year": 37, "ref": "2Kgs.13.10", "quote": "thirty-seventh year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.13.11", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Jehu"
+  }
  },
  {
   "id": "jeroboam2",
@@ -973,7 +1369,16 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jehoash-i"
+  "predecessor": "jehoash-i",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.14.23",
+   "length": {"ref": "2Kgs.14.23", "quote": "forty-one years", "years": 41},
+   "synchronism": {"king": "amaziah", "year": 15, "ref": "2Kgs.14.23", "quote": "fifteenth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.14.24", "quote": "he did evil in the sight of the LORD"},
+   "overlap": {"until": -782, "kind": "coregency", "with": "Jehoash", "basis": "His 41 years run to 753, but Amaziah’s 15th year, when he “became king” (14:23), is 782, and Azariah’s accession in his 27th year (15:1) needs a start near 793. Thiele takes the eleven years between as a coregency with his father Jehoash."},
+   "dynasty": "Jehu"
+  }
  },
  {
   "id": "zechariah-i",
@@ -999,7 +1404,16 @@
    }
   ],
   "estimated": true,
-  "predecessor": "jeroboam2"
+  "predecessor": "jeroboam2",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.15.8",
+   "length": {"ref": "2Kgs.15.8", "quote": "six months", "years": 0.5},
+   "synchronism": {"king": "uzziah", "year": 38, "ref": "2Kgs.15.8", "quote": "thirty-eighth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.15.9", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Jehu",
+   "note": "The fourth generation of Jehu’s sons, as 10:30 promised (15:12)."
+  }
  },
  {
   "id": "shallum",
@@ -1025,7 +1439,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "zechariah-i"
+  "predecessor": "zechariah-i",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.15.13",
+   "length": {"ref": "2Kgs.15.13", "quote": "one full month", "years": 0.08333333333333333},
+   "synchronism": {"king": "uzziah", "year": 39, "ref": "2Kgs.15.13", "quote": "thirty-ninth year"},
+   "verdict": {"kind": "none", "note": "Kings gives no verdict for his one month (15:13–15)."},
+   "dynasty": "Shallum"
+  }
  },
  {
   "id": "menahem",
@@ -1051,7 +1473,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "shallum"
+  "predecessor": "shallum",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.15.17",
+   "length": {"ref": "2Kgs.15.17", "quote": "ten years", "years": 10},
+   "synchronism": {"king": "uzziah", "year": 39, "ref": "2Kgs.15.17", "quote": "thirty-ninth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.15.18", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Menahem"
+  }
  },
  {
   "id": "pekahiah",
@@ -1077,7 +1507,15 @@
    }
   ],
   "estimated": true,
-  "predecessor": "menahem"
+  "predecessor": "menahem",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.15.23",
+   "length": {"ref": "2Kgs.15.23", "quote": "two years", "years": 2},
+   "synchronism": {"king": "uzziah", "year": 50, "ref": "2Kgs.15.23", "quote": "fiftieth year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.15.24", "quote": "he did evil in the sight of the LORD"},
+   "dynasty": "Menahem"
+  }
  },
  {
   "id": "pekah",
@@ -1103,7 +1541,16 @@
    }
   ],
   "estimated": true,
-  "predecessor": "pekahiah"
+  "predecessor": "pekahiah",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.15.27",
+   "length": {"ref": "2Kgs.15.27", "quote": "twenty years", "years": 20},
+   "synchronism": {"king": "uzziah", "year": 52, "ref": "2Kgs.15.27", "quote": "fifty-second year"},
+   "verdict": {"kind": "evil", "ref": "2Kgs.15.28", "quote": "he did evil in the sight of the LORD"},
+   "overlap": {"until": -740, "kind": "rival", "with": "Menahem and Pekahiah", "basis": "Twenty years (15:27) cannot fit between Azariah’s 52nd year, 740, and Hoshea’s accession, which Tiglath-pileser III’s annals put in 732/731. Thiele counts them from 752, a rival reign east of the Jordan (the men of Gilead are with him, 15:25) while Menahem and Pekahiah held Samaria; Hosea 5:5 sets “Israel” beside “Ephraim”."},
+   "dynasty": "Pekah"
+  }
  },
  {
   "id": "hoshea",
@@ -1135,7 +1582,22 @@
    }
   ],
   "estimated": false,
-  "predecessor": "pekah"
+  "predecessor": "pekah",
+  "reign": {
+   "kingdom": "israel",
+   "ref": "2Kgs.17.1",
+   "length": {"ref": "2Kgs.17.1", "quote": "nine years", "years": 9},
+   "synchronism": {"king": "ahaz", "year": 12, "ref": "2Kgs.17.1", "quote": "twelfth year"},
+   "verdict": {
+    "kind": "evil",
+    "ref": "2Kgs.17.2",
+    "quote": "he did evil in the sight of the LORD",
+    "but": {"ref": "2Kgs.17.2", "quote": "but not like the kings of Israel who preceded him"}
+   },
+   "dynasty": "Hoshea",
+   "note": "15:30 dates his coup to Jotham’s 20th year, though Jotham reigned sixteen (15:33): counted from the start of Jotham’s coregency, 750, it is 732 or 731.",
+   "discrepancy": "Ahaz’s 12th year (17:1) is 732 only if Ahaz’s years run from 743 or 744, eight or nine years before Thiele puts his reign. Thiele judged this synchronism, and those tying Hoshea to Hezekiah (18:1, 9–10), to be a later editor’s reckoning that missed Pekah’s overlap, twelve years out."
+  }
  },
  {
   "id": "nebuchadnezzar",

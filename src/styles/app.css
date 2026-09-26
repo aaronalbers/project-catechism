@@ -441,3 +441,84 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .ix-summary { margin: 4px 0 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .ix-line { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin-top: 8px; }
 .ix-label { font-size: 12px; color: var(--muted); margin-right: 2px; }
+
+/* Reigns: both kingdoms on one time line under each king's accession, coloured by the verdict. */
+:root { --reign: #7d7a1c; --v-right: #2a66b8; --v-right-but: #6f9fe0; --v-evil: #c2391e; --v-evil-but: #ec8c6c; --v-none: #a39a8a; --v-ink: #fff; --v-but-ink: #2b2418; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --reign: #cbc56a; --v-right: #5b90d8; --v-right-but: #2f5ea4; --v-evil: #db7056; --v-evil-but: #a4432e; --v-none: #6d665b; --v-ink: #17140f; --v-but-ink: #ece4d6; }
+.marker.reign { background: var(--reign); }
+.reign-block { margin: 8px 0 4px; font: 12px/1.45 var(--sans); color: var(--muted); cursor: default; }
+.reign-cap { margin: 0 0 6px; }
+.reign-cap .kind::before { background: var(--reign); }
+.reign-cap .when { font-variant-numeric: tabular-nums; }
+.reign-modes { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin-bottom: 8px; }
+.reign-modes button { padding: 2px 9px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 12px; }
+.reign-modes button[aria-pressed=true] { border-color: var(--accent); color: var(--accent); }
+.reign-modes .reign-note { flex: 1 1 260px; }
+
+.v-right { --fill: var(--v-right); --ink: var(--v-ink); }
+.v-right-but { --fill: var(--v-right-but); --ink: var(--v-but-ink); }
+.v-evil { --fill: var(--v-evil); --ink: var(--v-ink); }
+.v-evil-but { --fill: var(--v-evil-but); --ink: var(--v-but-ink); }
+.v-none, .v-untold { --fill: var(--v-none); --ink: var(--v-but-ink); }
+.v-untold { --fill: color-mix(in oklab, var(--v-none) 45%, var(--surface)); }
+.v-ahead { --fill: transparent; --ink: var(--muted); }
+
+.reign-overview { position: relative; display: grid; gap: 2px; margin: 0 0 6px 58px; }
+.reign-overview .lane { position: relative; height: 5px; border-radius: 2px; background: color-mix(in oklab, var(--text) 6%, transparent); }
+.reign-overview .bar { position: absolute; top: 0; bottom: 0; background: var(--fill); }
+.reign-overview .bar.v-ahead { background: none; }
+.reign-overview .window { position: absolute; top: -2px; bottom: -2px; border: 1.5px solid var(--text); border-radius: 3px; transition: left 0.5s, width 0.5s; }
+
+.reign-grid { display: grid; grid-template-columns: 52px 1fr; column-gap: 6px; }
+.reign-labels { position: relative; }
+.reign-labels span { position: absolute; right: 0; line-height: 18px; font-size: 11px; }
+.reign-plot { position: relative; overflow: hidden; }
+.reign-bar, .prophet, .house { position: absolute; display: block; min-width: 3px; padding: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; transition: left 0.5s ease, width 0.5s ease; }
+.reign-bar { height: 18px; border-radius: 4px; background: var(--fill); color: var(--ink); box-shadow: 0 0 0 1px var(--surface); font-size: 11px; line-height: 18px; text-align: left; }
+.reign-bar.v-ahead { box-shadow: inset 0 0 0 1px var(--border); }
+.reign-bar .nm { position: relative; padding: 0 4px; }
+.reign-bar.current { box-shadow: 0 0 0 1px var(--surface), 0 0 0 3px var(--text); font-weight: 600; overflow: visible; }
+.reign-bar .overlap { position: absolute; inset: 0 auto 0 0; background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--surface) 70%, transparent) 0 2px, transparent 2px 5px); border-radius: 4px 0 0 4px; }
+.reign-bar:hover, .prophet:hover { filter: brightness(1.08); outline: 1px solid var(--text); }
+.house { height: 10px; font-size: 9px; line-height: 10px; padding-left: 3px; border-left: 1.5px solid var(--muted); color: var(--muted); }
+.prophet { height: 11px; border-radius: 3px; background: color-mix(in oklab, var(--reign) 30%, var(--surface)); border: 1px solid color-mix(in oklab, var(--reign) 60%, var(--surface)); font-size: 10px; line-height: 9px; color: var(--text); overflow: visible; text-align: left; }
+.prophet .nm { position: relative; left: 2px; }
+.pin { position: absolute; top: 0; height: 51px; width: 0; border-left: 1.5px dotted var(--text); opacity: 0.55; z-index: 4; }
+.pin::before { content: ''; position: absolute; left: -5px; top: -1px; width: 7px; height: 7px; transform: rotate(45deg); background: var(--text); }
+.pin.misses { border-left-color: var(--danger); opacity: 0.9; }
+.pin.misses::before { background: var(--danger); }
+.pin:hover { opacity: 1; }
+.sync { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; overflow: visible; }
+.sync line { stroke: var(--text); stroke-width: 1.5; stroke-dasharray: 3 2; }
+.sync line.tick { stroke-width: 2.5; stroke-dasharray: none; }
+.sync line.hit { stroke: transparent; stroke-width: 10; stroke-dasharray: none; pointer-events: stroke; cursor: help; }
+.sw.sync-key { width: 14px; height: 0; border-top: 1.5px dashed var(--text); border-radius: 0; background: none; }
+.reign-axis { position: relative; height: 16px; border-top: 1px solid var(--border); font-size: 10px; font-variant-numeric: tabular-nums; }
+.reign-axis span { position: absolute; top: 1px; transform: translateX(-50%); white-space: nowrap; }
+.reign-axis-unit { text-align: right; font-size: 10px; padding-top: 2px; }
+
+.reign-legend { display: flex; flex-wrap: wrap; gap: 3px 12px; margin: 6px 0 8px 58px; font-size: 11px; }
+.reign-legend span, .reign-facts .verdict { display: inline-flex; align-items: center; gap: 5px; }
+.sw { display: inline-block; width: 12px; height: 10px; border-radius: 2px; background: var(--fill); flex: none; }
+.sw.v-ahead { box-shadow: inset 0 0 0 1px var(--border); }
+.sw.hatch { background: repeating-linear-gradient(135deg, var(--muted) 0 2px, transparent 2px 5px); }
+.sw.pin-key { width: 7px; height: 7px; transform: rotate(45deg); background: var(--text); margin: 0 2px; }
+
+.reign-facts { display: grid; gap: 5px; margin-left: 0; }
+.reign-fact { display: grid; grid-template-columns: 76px 1fr; gap: 8px; }
+.reign-fact .k { text-transform: uppercase; letter-spacing: 0.06em; font-size: 10px; padding-top: 2px; }
+.reign-fact > div { color: var(--text); }
+.reign-fact .sub { color: var(--muted); }
+.reign-fact .chip { margin: 0 2px; }
+.reign-fact .verdict { font-weight: 600; margin-right: 4px; }
+.reign-fact .off, .reign-fact.off > div { color: var(--danger); }
+@media (max-width: 600px) { .reign-fact { grid-template-columns: 1fr; gap: 0; } .reign-grid { grid-template-columns: 44px 1fr; } .reign-overview, .reign-legend { margin-left: 50px; } }
+.reign-cap .verdict { display: inline-flex; align-items: center; gap: 5px; }
+.reign-cap + .reign-chart { margin-top: 2px; }
+.reign-modes p { margin: 0; flex: 1 1 100%; font-size: 12px; line-height: 1.45; color: var(--muted); }
+.reign-pane .reign-modes { margin-top: 10px; }
+.reign-pane .reign-chart { margin-bottom: 4px; }
+.reign-pane .reign-overview, .reign-pane .reign-legend { margin-left: 50px; }
+.reign-pane .reign-grid { grid-template-columns: 44px 1fr; }
+.reign-pane .reign-fact { grid-template-columns: 70px 1fr; }
+.reign-pane .reign-fact > div { font-size: 13px; }

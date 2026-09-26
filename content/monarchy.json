@@ -1,0 +1,196 @@
+{
+ "id": "divided-monarchy",
+ "title": "The kings of Israel and Judah",
+ "kings": "1Kgs.12.1-2Kgs.25.30",
+ "chronicles": "2Chr.10.1-2Chr.36.23",
+ "from": -931,
+ "summary": "Kings gives every king of the divided kingdoms a length of reign, and dates most accessions by the other kingdom’s king (“in the thirty-eighth year of Asa…”). Added up as they stand the figures disagree, with each other and with the Assyrian and Babylonian records that date some of these kings to the year. Edwin Thiele reconciled almost all of them with three observations: some reigns overlap, as coregencies or rivals; the kingdoms counted a king’s first part-year differently, and each changed its practice; and Israel began its year in the spring (Nisan), Judah in the autumn (Tishri). His dates are drawn by default, with two later reconstructions beside them: McFall and Young’s revision of Thiele, and Galil’s. They give dates as pairs (931/930), because a regnal year straddles two of ours; the chart rounds to the first. The pins are what anchors them: dates fixed outside the Bible, through the Assyrian eponym list, whose eclipse is dated astronomically to 15 June 763 BC.",
+ "stated": "Each kingdom’s reigns laid end to end at the lengths Kings gives, from 931 BC, with no overlaps and every year counted once. The kingdoms drift apart, and away from the dated pins: this is the arithmetic Thiele’s overlaps and ways of counting account for.",
+ "reckoning": [
+  {"kingdom": "israel", "from": -931, "to": -798, "method": "non-accession", "year": "Nisan", "basis": "Thiele’s reconstruction: a king’s first part-year counted as his year one (and as his predecessor’s last), which is why Israel’s stated reigns to Jehu come to 98 years against Judah’s 95."},
+  {"kingdom": "israel", "from": -798, "to": -722, "method": "accession", "year": "Nisan", "basis": "Thiele’s reconstruction: from Jehoash, Israel’s synchronisms fit only when a king’s first part-year is left uncounted."},
+  {"kingdom": "judah", "from": -931, "to": -848, "method": "accession", "year": "Tishri", "basis": "Thiele’s reconstruction: a king’s part-year before the first new year left uncounted (his “accession year”)."},
+  {"kingdom": "judah", "from": -848, "to": -796, "method": "non-accession", "year": "Tishri", "basis": "Thiele’s reconstruction: Judah took up Israel’s way of counting with Jehoram, Ahab’s son-in-law, and kept it through Athaliah and Joash."},
+  {"kingdom": "judah", "from": -796, "to": -586, "method": "accession", "year": "Tishri", "basis": "Thiele’s reconstruction: from Amaziah, Judah went back to accession-year counting."}
+ ],
+ "anchors": [
+  {"id": "shishak", "year": -925, "label": "Shishak’s campaign", "kings": ["rehoboam"], "ref": "1Kgs.14.25", "estimated": true, "note": "Rehoboam’s fifth year (1 Kgs 14:25). The Bubastite Portal at Karnak lists the towns Shoshenq I took; its date rests on Egyptian chronology, which is itself worked out partly from this synchronism.", "sources": [
+   {"kind": "archaeology", "title": "Bubastite Portal, Temple of Amun, Karnak", "note": "Shoshenq I’s list of conquered towns in Judah and Israel"},
+   {"kind": "scholarship", "title": "The Third Intermediate Period in Egypt (1100–650 BC)", "author": "K. A. Kitchen", "year": 1986, "note": "2nd ed.; dates the campaign c. 925"}
+  ]},
+  {"id": "qarqar", "year": -853, "label": "Battle of Qarqar", "kings": ["ahab"], "note": "Shalmaneser III’s sixth year. ‘Ahab the Israelite’ fields 2,000 chariots and 10,000 soldiers against him. Kings does not mention the battle.", "sources": [
+   {"kind": "archaeology", "title": "Kurkh Monolith of Shalmaneser III (British Museum ME 118884)", "note": "names ‘Ahab the Israelite’"}
+  ]},
+  {"id": "jehu-tribute", "year": -841, "label": "Jehu’s tribute", "kings": ["jehu"], "note": "Shalmaneser III’s eighteenth year. Twelve years after Qarqar: Ahab’s last year and Jehu’s first are twelve years apart in Kings too, Ahaziah’s two and Joram’s twelve counted the non-accession way.", "sources": [
+   {"kind": "archaeology", "title": "Black Obelisk of Shalmaneser III (British Museum ME 118885)", "note": "shows ‘Jehu son of Omri’ bowing with tribute"}
+  ]},
+  {"id": "menahem-tribute", "year": -738, "label": "Menahem’s tribute", "kings": ["menahem"], "ref": "2Kgs.15.19", "estimated": true, "note": "Kings has Menahem pay a thousand talents to ‘Pul’, Tiglath-pileser III (15:19). Tiglath-pileser’s annals and a stele of his found in Iran list ‘Menahem of Samaria’ among his tributaries, but the annals lump his western campaigns of 743–738 together, so the year is uncertain: it has usually been put in 738, from the ninth-year section that follows it, and some argue for 740. Either falls after Thiele’s end for Menahem, 742.", "sources": [
+   {"kind": "primary", "title": "Annals and Iran stele of Tiglath-pileser III", "note": "list ‘Menahem of Samaria’ among tributaries"},
+   {"kind": "scholarship", "title": "The Royal Inscriptions of Tiglath-pileser III (744–727 BC) and Shalmaneser V (726–722 BC), Kings of Assyria", "author": "Hayim Tadmor and Shigeo Yamada", "year": 2011, "note": "Royal Inscriptions of the Neo-Assyrian Period 1 (Winona Lake: Eisenbrauns)"},
+   {"kind": "scholarship", "title": "'Menahem and Tiglath-Pileser: A New Synchronism'", "author": "Louis D. Levine", "year": 1972, "url": "https://www.jstor.org/stable/1356356", "note": "Bulletin of the American Schools of Oriental Research 206, pp. 40–42; publishes the Iran stele"},
+   {"kind": "scholarship", "title": "'The Last Years of Samaria'", "year": 1980, "url": "https://www.ministrymagazine.org/archive/1980/01/the-last-years-of-samaria", "note": "Ministry, January 1980; the campaigns of 743–738 undivided in the annals, and a case for 740"}
+  ]},
+  {"id": "hoshea-installed", "year": -732, "label": "Hoshea installed", "kings": ["pekah", "hoshea"], "ref": "2Kgs.15.30", "estimated": true, "note": "Tiglath-pileser III claims that Israel overthrew Pekah and that he set Hoshea over them; his campaigns against Damascus and Israel are dated 733–732.", "sources": [
+   {"kind": "primary", "title": "Summary inscriptions of Tiglath-pileser III", "note": "‘they overthrew Pekah their king and I placed Hoshea as king over them’"}
+  ]},
+  {"id": "samaria-falls", "year": -722, "label": "Samaria falls", "kings": ["hoshea"], "ref": "2Kgs.17.6", "estimated": true, "note": "The Babylonian Chronicle has Shalmaneser V ravage Samaria in his last full year; Sargon II later claims the city. Hoshea’s ninth year (17:6). Some date the fall to 721.", "sources": [
+   {"kind": "primary", "title": "Babylonian Chronicle 1 (British Museum 92502)", "note": "Shalmaneser V ‘ravaged Samaria’"},
+   {"kind": "archaeology", "title": "Annals of Sargon II, Khorsabad", "note": "claims the capture of Samaria and 27,290 captives"}
+  ]},
+  {"id": "sennacherib", "year": -701, "label": "Sennacherib’s campaign", "kings": ["hezekiah"], "ref": "2Kgs.18.13", "note": "Hezekiah’s fourteenth year (18:13). Sennacherib says he shut Hezekiah up in Jerusalem ‘like a bird in a cage’. Counting back fourteen years gives Hezekiah’s accession in 715.", "sources": [
+   {"kind": "archaeology", "title": "Taylor Prism of Sennacherib (British Museum ME 91032)"}
+  ]},
+  {"id": "carchemish", "year": -605, "label": "Battle of Carchemish", "kings": ["jehoiakim"], "ref": "Jer.46.2", "note": "Nebuchadnezzar defeats Egypt ‘in the fourth year of Jehoiakim’ (Jer 46:2).", "sources": [
+   {"kind": "primary", "title": "Babylonian Chronicle 5 (British Museum 21946)", "note": "Nabopolassar’s 21st year"}
+  ]},
+  {"id": "jerusalem-597", "year": -597, "label": "Jerusalem taken", "kings": ["jehoiachin"], "ref": "2Kgs.24.12", "note": "The Babylonian Chronicle dates it to 2 Adar in Nebuchadnezzar’s seventh year: March 597 (the 15th, 16th or 17th, depending on how the Babylonian calendar is converted). Kings counts it as his eighth (24:12).", "sources": [
+   {"kind": "primary", "title": "Babylonian Chronicle 5 (British Museum 21946)", "note": "‘he seized the city and captured the king’"}
+  ]},
+  {"id": "jerusalem-586", "year": -586, "label": "Jerusalem burned", "kings": ["zedekiah"], "ref": "2Kgs.25.8", "estimated": true, "note": "Nebuchadnezzar’s nineteenth year (25:8). The Babylonian Chronicle breaks off before it, so the year is counted from 597; scholars divide between 587 and 586, on how Zedekiah’s years were reckoned.", "sources": [
+   {"kind": "scripture", "ref": "2Kgs.25.8"}
+  ]}
+ ],
+ "prophets": [
+  {"id": "ahijah", "name": "Ahijah", "from": -931, "to": -910, "kings": ["jeroboam1"], "refs": ["1Kgs.11.29-39", "1Kgs.14.1-18"], "basis": "Foretells the division to Jeroboam before it happens (1 Kgs 11:29–39) and his house’s end, near the end of his reign (14:1–18)."},
+  {"id": "elijah", "name": "Elijah", "from": -874, "to": -850, "kings": ["ahab", "ahaziah-i", "jehoram-j"], "refs": ["1Kgs.17.1", "2Kgs.1.17", "2Kgs.2.11", "2Chr.21.12"], "basis": "First appears to Ahab (1 Kgs 17:1), undated within his reign; taken up after Ahaziah of Israel dies (2 Kgs 1:17; 2:11) and before Elisha is named his successor in Jehoshaphat’s lifetime (3:11). His letter to Jehoram of Judah (2 Chr 21:12) fits the years Jehoram reigned beside his father."},
+  {"id": "micaiah", "name": "Micaiah", "from": -853, "to": -853, "kings": ["ahab", "jehoshaphat"], "refs": ["1Kgs.22.8-28"], "basis": "Foretells Ahab’s death at Ramoth-gilead, in his last year (1 Kgs 22)."},
+  {"id": "elisha", "name": "Elisha", "from": -850, "to": -795, "kings": ["joram-i", "jehu", "jehoahaz-i", "jehoash-i"], "refs": ["2Kgs.2.9-15", "2Kgs.13.14-20"], "basis": "From Elijah’s taking up (2 Kgs 2) to his death in the reign of Jehoash of Israel (13:14–20), which began in 798."},
+  {"id": "jonah", "name": "Jonah", "from": -793, "to": -753, "kings": ["jeroboam2"], "refs": ["2Kgs.14.25", "Jonah.1.1"], "basis": "Foretold Jeroboam II’s recovery of Israel’s borders (2 Kgs 14:25). Kings does not say whether before or during his reign; the band is the reign."},
+  {"id": "amos", "name": "Amos", "from": -792, "to": -753, "kings": ["uzziah", "jeroboam2"], "refs": ["Amos.1.1"], "basis": "‘In the days when Uzziah was king of Judah and Jeroboam son of Jehoash was king of Israel’ (Amos 1:1): the years both reigned. He dates his words ‘two years before the earthquake’, which the text does not date."},
+  {"id": "hosea", "name": "Hosea", "from": -755, "to": -715, "kings": ["jeroboam2", "uzziah", "jotham", "ahaz", "hezekiah"], "refs": ["Hos.1.1"], "basis": "Hosea 1:1 names Jeroboam II, who died in 753, and Hezekiah, who reigned alone from 715: at least those years. The start is a guess a little before Jeroboam’s death."},
+  {"id": "isaiah", "name": "Isaiah", "from": -740, "to": -701, "kings": ["uzziah", "jotham", "ahaz", "hezekiah"], "refs": ["Isa.1.1", "Isa.6.1", "Isa.36.1", "2Kgs.20.1"], "basis": "His call ‘in the year that King Uzziah died’ (Isa 6:1), 740, to Sennacherib’s invasion in 701 (Isa 36–37). Isaiah 1:1 sets some of his visions in Uzziah’s reign, and 37:38 records Sennacherib’s death, in 681."},
+  {"id": "micah", "name": "Micah", "from": -750, "to": -686, "kings": ["jotham", "ahaz", "hezekiah"], "refs": ["Mic.1.1", "Jer.26.18"], "basis": "‘In the days of Jotham, Ahaz, and Hezekiah’ (Mic 1:1): the band is those reigns. Jeremiah 26:18 quotes him prophesying in Hezekiah’s days."},
+  {"id": "zephaniah", "name": "Zephaniah", "from": -640, "to": -609, "kings": ["josiah"], "refs": ["Zeph.1.1"], "basis": "‘In the days of Josiah son of Amon’ (Zeph 1:1): the band is the reign."},
+  {"id": "huldah", "name": "Huldah", "from": -622, "to": -622, "kings": ["josiah"], "refs": ["2Kgs.22.14-20"], "basis": "Consulted over the book of the law found in Josiah’s eighteenth year (2 Kgs 22:3, 14)."},
+  {"id": "jeremiah", "name": "Jeremiah", "from": -627, "to": -586, "kings": ["josiah", "jehoiakim", "zedekiah"], "refs": ["Jer.1.2-3"], "basis": "From Josiah’s thirteenth year to the exile in Zedekiah’s eleventh (Jer 1:2–3); he went on prophesying after the fall, in Judah and Egypt (Jer 40–44)."}
+ ],
+ "readings": [
+  {
+   "id": "thiele",
+   "label": "Thiele",
+   "basis": "Edwin Thiele’s reconstruction (1951; 3rd ed. 1983): coregencies and rival reigns, two ways of counting a king’s first year, and the two new years. It reconciles the figures in Kings but for the synchronisms of Hoshea with Ahaz and Hezekiah (2 Kgs 17:1; 18:1, 9–10).",
+   "sources": [
+    {"kind": "scholarship", "title": "The Mysterious Numbers of the Hebrew Kings (3rd ed.)", "author": "Edwin R. Thiele", "year": 1983},
+    {"kind": "scholarship", "title": "'A Solution to the Chronological Problems of the Hebrew Kings'", "author": "Edwin R. Thiele", "year": 1978, "url": "https://www.ministrymagazine.org/archive/1978/01/a-solution-to-the-chronological-problems-of-the-hebrew-kings", "note": "Ministry, January 1978; his systems of reckoning in brief"}
+   ]
+  },
+  {
+   "id": "young",
+   "label": "Young",
+   "basis": "Thiele revised by Leslie McFall and Rodger Young: Solomon’s death between spring and late summer 931, in Judah’s regnal year that began in the autumn of 932, which moves Judah’s first kings back a year, and a coregency of Hezekiah with Ahaz from 729, which lets Kings’ synchronisms for Hezekiah stand. Jerusalem falls in 587. Young’s own tables are drawn here; McFall’s chart differs in details (a coregency for Ahaziah and one for Jehoiachin, the fall in 586).",
+   "dates": {
+    "jeroboam1": {"from": -931, "to": -910},
+    "nadab": {"from": -910, "to": -909},
+    "baasha": {"from": -909, "to": -886},
+    "elah": {"from": -886, "to": -885},
+    "zimri": {"from": -885, "to": -885},
+    "omri": {"from": -885, "to": -874, "overlap": {"until": -880, "kind": "rival", "with": "Tibni", "basis": "As Thiele: Omri’s twelve years counted from Zimri’s death, the first shared with Tibni (1 Kgs 16:21–23)."}},
+    "ahab": {"from": -874, "to": -853},
+    "ahaziah-i": {"from": -853, "to": -852},
+    "joram-i": {"from": -852, "to": -841},
+    "jehu": {"from": -841, "to": -814},
+    "jehoahaz-i": {"from": -814, "to": -798},
+    "jehoash-i": {"from": -798, "to": -782},
+    "jeroboam2": {"from": -793, "to": -753, "overlap": {"until": -782, "kind": "coregency", "with": "Jehoash", "basis": "As Thiele: his 41 years counted from 793, beside his father until 782."}},
+    "zechariah-i": {"from": -753, "to": -752},
+    "shallum": {"from": -752, "to": -752},
+    "menahem": {"from": -752, "to": -742},
+    "pekahiah": {"from": -742, "to": -740},
+    "pekah": {"from": -752, "to": -732, "overlap": {"until": -740, "kind": "rival", "with": "Menahem and Pekahiah", "basis": "As Thiele: a rival reign from 752, counted in Pekah’s twenty years."}},
+    "hoshea": {"from": -732, "to": -723},
+    "rehoboam": {"from": -932, "to": -914},
+    "abijah": {"from": -914, "to": -912},
+    "asa": {"from": -912, "to": -871},
+    "jehoshaphat": {"from": -873, "to": -848, "overlap": {"until": -871, "kind": "coregency", "with": "Asa", "basis": "As Thiele, a year earlier: with Solomon’s death in 931 before the autumn new year, Judah’s first kings move back a year."}},
+    "jehoram-j": {"from": -854, "to": -841, "overlap": {"until": -848, "kind": "coregency", "with": "Jehoshaphat", "basis": "As Thiele, a year earlier: beside his father from 854 (2 Kgs 1:17; 8:16)."}},
+    "ahaziah-j": {"from": -841, "to": -841},
+    "athaliah": {"from": -841, "to": -835},
+    "joash-j": {"from": -835, "to": -796},
+    "amaziah": {"from": -796, "to": -767},
+    "uzziah": {"from": -791, "to": -740, "overlap": {"until": -767, "kind": "coregency", "with": "Amaziah", "basis": "As Thiele, a year later: from 791."}},
+    "jotham": {"from": -750, "to": -732, "overlap": {"until": -740, "kind": "coregency", "with": "Uzziah", "basis": "From 750, when Uzziah’s leprosy put him in charge (2 Kgs 15:5). Young has Jotham’s sixteen years end in 735, when Ahaz was installed, though he lived to 732, his twentieth year (15:30)."}},
+    "ahaz": {"from": -735, "to": -716, "overlap": {"until": -732, "kind": "coregency", "with": "Jotham", "basis": "From 735, installed by a pro-Assyrian party while Jotham still lived."}},
+    "hezekiah": {"from": -729, "to": -687, "overlap": {"until": -716, "kind": "coregency", "with": "Ahaz", "basis": "From 729: this is what lets Hoshea’s third year (2 Kgs 18:1) and Samaria’s fall in Hezekiah’s sixth (18:10) stand beside Sennacherib’s invasion in his fourteenth year of sole reign (18:13). The coregency is McFall’s and Young’s answer to the problem Thiele left unresolved."}},
+    "manasseh": {"from": -697, "to": -643, "overlap": {"until": -687, "kind": "coregency", "with": "Hezekiah", "basis": "As Thiele: from 697, eleven years before Hezekiah died."}},
+    "amon": {"from": -643, "to": -641},
+    "josiah": {"from": -641, "to": -609},
+    "jehoahaz-j": {"from": -609, "to": -609},
+    "jehoiakim": {"from": -609, "to": -598},
+    "jehoiachin": {"from": -598, "to": -597},
+    "zedekiah": {"from": -597, "to": -587}
+   },
+   "notes": {
+    "hoshea": "McFall translates 2 Kings 17:1 as dating the end of Hoshea’s reign, not its start: “in the 12th year from the coregency of Ahaz… Hoshea had reigned nine years”. Counted from Ahaz’s coregency in 735, that is 724/723, when Hoshea’s reign ends, so the line from Ahaz’s twelfth year meets the end of his bar, not its start."
+   },
+   "sources": [
+    {"kind": "data", "title": "Tables 1 and 2: Chronology of the Kings of Israel and of Judah", "author": "Rodger C. Young", "url": "https://www.rcyoung.org/CTables/Table2.html"},
+    {"kind": "scholarship", "title": "'When Did Solomon Die?'", "author": "Rodger C. Young", "year": 2003, "url": "https://www.rcyoung.org/articles/solomon.pdf", "note": "Journal of the Evangelical Theological Society 46, pp. 589–603"},
+    {"kind": "scholarship", "title": "'A Translation Guide to the Chronological Data in Kings and Chronicles'", "author": "Leslie McFall", "year": 1991, "url": "https://lmf12.wordpress.com/wp-content/uploads/2012/11/transguide.pdf", "note": "Bibliotheca Sacra 148, pp. 3–45"},
+    {"kind": "data", "title": "Chronology of the Hebrew Kings (McFall’s chart, revised 2008)", "author": "Leslie McFall, reproduced by Richard P. Aschmann", "url": "https://aschmann.net/BibleChronology/McFallChronology.html"}
+   ]
+  },
+  {
+   "id": "galil",
+   "label": "Galil",
+   "basis": "Gershon Galil (1996) keeps Thiele’s coregencies, two new years and two ways of counting, but not his idea that each kingdom recorded the other’s kings by its own system, and he emends some of the text’s figures. His dates agree with Thiele’s at the start and end and differ by up to a decade in between: Hezekiah from 726, eleven years before Thiele’s 715, and Joash’s forty years counted from Ahaziah’s death, over Athaliah’s six.",
+   "dates": {
+    "jeroboam1": {"from": -931, "to": -909},
+    "nadab": {"from": -909, "to": -908},
+    "baasha": {"from": -908, "to": -885},
+    "elah": {"from": -885, "to": -884},
+    "zimri": {"from": -884, "to": -884},
+    "omri": {"from": -884, "to": -873, "overlap": {"until": -880, "kind": "rival", "with": "Tibni", "basis": "Galil, like Thiele, has Tibni reign from 884 to 880 beside Omri."}},
+    "ahab": {"from": -873, "to": -852},
+    "ahaziah-i": {"from": -852, "to": -851},
+    "joram-i": {"from": -851, "to": -842},
+    "jehu": {"from": -842, "to": -815},
+    "jehoahaz-i": {"from": -819, "to": -804, "overlap": {"until": -815, "kind": "coregency", "with": "Jehu", "basis": "In Galil’s table Jehoahaz begins in 819, four years before Jehu’s reign ends in 815."}},
+    "jehoash-i": {"from": -805, "to": -790, "overlap": {"until": -804, "kind": "coregency", "with": "Jehoahaz", "basis": "In Galil’s table Jehoash begins in 805, a year before Jehoahaz’s reign ends."}},
+    "jeroboam2": {"from": -790, "to": -750},
+    "zechariah-i": {"from": -750, "to": -749},
+    "shallum": {"from": -749, "to": -749},
+    "menahem": {"from": -749, "to": -738},
+    "pekahiah": {"from": -738, "to": -736},
+    "pekah": {"from": -750, "to": -732, "overlap": {"until": -736, "kind": "rival", "with": "Menahem and Pekahiah", "basis": "In Galil’s table Pekah’s twenty years run from 750, beside Menahem and Pekahiah, to 732."}},
+    "hoshea": {"from": -732, "to": -722},
+    "rehoboam": {"from": -931, "to": -914},
+    "abijah": {"from": -914, "to": -911},
+    "asa": {"from": -911, "to": -870},
+    "jehoshaphat": {"from": -870, "to": -845},
+    "jehoram-j": {"from": -851, "to": -843, "overlap": {"until": -845, "kind": "coregency", "with": "Jehoshaphat", "basis": "In Galil’s table Jehoram begins in 851, six years before Jehoshaphat’s reign ends in 845."}},
+    "ahaziah-j": {"from": -843, "to": -842},
+    "athaliah": {"from": -842, "to": -835},
+    "joash-j": {"from": -842, "to": -802, "overlap": {"until": -835, "kind": "rival", "with": "Athaliah", "basis": "In Galil’s table Joash’s forty years run from 842, Ahaziah’s death, so they take in Athaliah’s six (2 Kgs 11:3)."}},
+    "amaziah": {"from": -805, "to": -776, "overlap": {"until": -802, "kind": "coregency", "with": "Joash", "basis": "In Galil’s table Amaziah begins in 805, three years before Joash’s reign ends in 802."}},
+    "uzziah": {"from": -788, "to": -736, "overlap": {"until": -776, "kind": "coregency", "with": "Amaziah", "basis": "In Galil’s table Uzziah begins in 788, twelve years before Amaziah’s reign ends in 776."}},
+    "jotham": {"from": -758, "to": -742, "overlap": {"until": -742, "kind": "coregency", "with": "Uzziah", "basis": "In Galil’s table Jotham reigns from 758 to 742, all of it while Uzziah lived (to 736): the years he governed for his leprous father (2 Kgs 15:5)."}},
+    "ahaz": {"from": -742, "to": -726, "overlap": {"until": -736, "kind": "coregency", "with": "Uzziah", "basis": "In Galil’s table Ahaz begins in 742, while Uzziah still lived (to 736)."}},
+    "hezekiah": {"from": -726, "to": -697},
+    "manasseh": {"from": -697, "to": -642},
+    "amon": {"from": -642, "to": -640},
+    "josiah": {"from": -640, "to": -609},
+    "jehoahaz-j": {"from": -609, "to": -609},
+    "jehoiakim": {"from": -609, "to": -598},
+    "jehoiachin": {"from": -598, "to": -597},
+    "zedekiah": {"from": -597, "to": -586}
+   },
+   "sources": [
+    {"kind": "scholarship", "title": "The Chronology of the Kings of Israel and Judah", "author": "Gershon Galil", "year": 1996, "note": "Studies in the History and Culture of the Ancient Near East 9 (Leiden: Brill); table 1"},
+    {"kind": "data", "title": "Galil, Chronology: his tables transcribed", "url": "https://biblerefshelf.sudalyph.org/ot-chronologies/galil-chronology.html"},
+    {"kind": "scholarship", "title": "Review of Galil, The Chronology of the Kings of Israel and Judah", "author": "Leslie McFall", "year": 1999, "note": "Vetus Testamentum 49, pp. 572–574: Galil “alters the biblical data to achieve harmony” at several points"}
+   ]
+  }
+ ],
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.12.1-2Kgs.25.30", "note": "every king’s length of reign, most accessions dated by the other kingdom’s king, and a verdict on each"},
+  {"kind": "scripture", "ref": "2Chr.10.1-2Chr.36.23", "note": "Judah’s kings again, with verdicts of its own"},
+  {"kind": "primary", "title": "Assyrian eponym list", "note": "dates each Assyrian year by an official; the eclipse in the year of Bur-Sagale is 15 June 763 BC"},
+  {"kind": "primary", "title": "Assyrian and Babylonian Chronicles", "author": "A. Kirk Grayson", "year": 1975, "note": "the Babylonian Chronicles for Samaria (722) and Jerusalem (605, 597)"}
+ ],
+ "traditions": [
+  "Edwin Thiele, the most widely used reconstruction (drawn by default)",
+  "Leslie McFall and Rodger Young, revising Thiele (Hezekiah’s coregency, the 587 fall)",
+  "Gershon Galil and others, with different overlaps and counting"
+ ],
+ "confidence": "interpretation"
+}

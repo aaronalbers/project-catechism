@@ -1,5 +1,5 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PROPHECIES, QUOTES, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PROPHECIES, QUOTES, TALLIES } from './content';
 import { BOOKS, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
@@ -8,7 +8,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'journey' | 'prophecy' | 'quote' | 'fragment' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'journey' | 'prophecy' | 'quote' | 'fragment' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -73,6 +73,16 @@ export const CATALOG: CatalogSection[] = [
     entries: sorted(TALLIES.map((t) => ({
       id: t.id, kind: 'tally', title: t.title, summary: t.summary,
       go: t.ref, lines: [{ label: `${t.rows.length} groups`, refs: [t.ref] }],
+    }))),
+  },
+  {
+    id: 'reigns', kind: 'reign', title: 'Reigns', tab: 'reigns', reveal: 'reign',
+    blurb: 'Every king of Israel and Judah charted under his accession: both kingdoms on one time line, each reign coloured by the verdict the book gives it.',
+    entries: sorted(KINGS.map((k) => ({
+      id: k.id, kind: 'reign', title: `${k.name} of ${k.reign.kingdom === 'israel' ? 'Israel' : 'Judah'}`,
+      summary: `≈${-k.from}–${-k.to} BC, ${k.reign.length.quote}. ${k.reign.verdict.kind === 'right' ? 'Did right' : k.reign.verdict.kind === 'evil' ? 'Did evil' : 'No verdict'}${k.reign.verdict.but ? ', but…' : ''}`,
+      go: k.reign.ref,
+      lines: [{ label: 'Kings', refs: [k.reign.ref] }, ...(k.reign.chronicles ? [{ label: 'Chronicles', refs: [k.reign.chronicles.ref] }] : [])],
     }))),
   },
   {

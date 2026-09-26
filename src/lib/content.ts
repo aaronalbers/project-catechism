@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Journey, Model3D, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
+import type { Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -17,6 +17,7 @@ import models from '@content/models.json';
 import videos from '@content/videos.json';
 import journeys from '@content/journeys.json';
 import tallies from '@content/tallies.json';
+import monarchy from '@content/monarchy.json';
 
 export const PEOPLE = people as unknown as Person[];
 export const PROPHECIES = prophecies as unknown as Prophecy[];
@@ -30,6 +31,9 @@ export const MODELS = models as unknown as Model3D[];
 export const VIDEOS = videos as unknown as Video[];
 export const JOURNEYS = journeys as unknown as Journey[];
 export const TALLIES = tallies as unknown as Tally[];
+export const MONARCHY = monarchy as unknown as Monarchy;
+/** The kings of the divided kingdoms, whose reigns the reader charts, in the order `rulers.json` gives them. */
+export const KINGS = RULERS.filter((r): r is Ruler & { reign: NonNullable<Ruler['reign']> } => !!r.reign);
 
 export const PEOPLE_BY_ID = new Map(PEOPLE.map((p) => [p.id, p]));
 export const INSIGHT_BY_ID = new Map(INSIGHTS.map((i) => [i.id, i]));
@@ -52,7 +56,7 @@ export function fragmentsFor(loc: VerseLoc) { return FRAGMENTS.filter((f) => any
 export function writersFor(book: string) { return WRITERS.filter((w) => w.books.some((b) => b.book === book)); }
 export function speakerFor(loc: VerseLoc) { return SPEAKERS.filter((s) => contains(s.ref, loc)); }
 export function chiasmsFor(loc: VerseLoc) { return CHIASMS.filter((c) => contains(c.ref, loc) || c.levels.some((l) => contains(l.ref, loc))); }
-export function rulersFor(loc: VerseLoc) { return RULERS.filter((r) => anyContains(r.refs, loc)); }
+export function rulersFor(loc: VerseLoc) { return RULERS.filter((r) => anyContains([...r.refs, ...(r.reign ? [r.reign.ref, ...(r.reign.chronicles ? [r.reign.chronicles.ref] : [])] : [])], loc)); }
 export function talliesFor(loc: VerseLoc) { return TALLIES.filter((t) => contains(t.ref, loc)); }
 export function talliesInChapter(book: string, chapter: number) { return TALLIES.filter((t) => touchesChapter(t.ref, book, chapter)); }
 export function journeysInChapter(book: string, chapter: number) { return JOURNEYS.filter((j) => touchesChapter(j.ref, book, chapter)); }
@@ -180,6 +184,7 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
     ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
     ['chiasm', here(CHIASMS.map((c) => c.ref))],
     ['tally', here(TALLIES.map((t) => t.ref))],
+    ['reign', here(KINGS.flatMap((k) => [k.reign.ref, ...(k.reign.chronicles ? [k.reign.chronicles.ref] : [])]))],
   ];
   for (let v = 1; v <= LONGEST_CHAPTER; v++) {
     const loc = { book, chapter, verse: v };
