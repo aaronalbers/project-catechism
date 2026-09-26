@@ -377,6 +377,30 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .rung.centre > span:last-child { font-weight: 600; }
 .rung.paired { background: color-mix(in oklab, var(--chiasm) 16%, transparent); }
 
+/* Counts on the text: a bar under each verse that gives one, on a scale shared by the whole list,
+   empty until the verse is read; the verse with the total stacks them all. */
+:root { --tally: #5a5fb0; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --tally: #9a9ef0; }
+.marker.tally { background: var(--tally); }
+.tally-cap .kind::before { background: var(--tally); }
+.tally-note { margin: -2px 0 6px; font: 12px/1.5 var(--sans); color: var(--muted); }
+.tally-row { display: grid; grid-template-columns: 76px 1fr 64px; align-items: center; gap: 8px; margin: 4px 0 2px; font: 12px var(--sans); color: var(--muted); }
+.tally-row .lbl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tally-row .track { height: 12px; border-radius: 3px; background: color-mix(in oklab, var(--tally) 10%, transparent); overflow: hidden; }
+.tally-row .fill { display: block; height: 100%; width: calc(var(--share) * 100%); background: color-mix(in oklab, var(--tally) 65%, var(--surface)); border-radius: 3px; transition: width 0.7s ease-out; }
+.tally-row .n { text-align: right; font-variant-numeric: tabular-nums; }
+.tally-row.current { color: var(--text); font-weight: 600; }
+.tally-row.current .fill { background: var(--tally); }
+.tally-total { margin: 6px 0 2px; font: 12px var(--sans); color: var(--muted); }
+.tally-total .stack { display: flex; gap: 1px; height: 22px; border-radius: 4px; overflow: hidden; }
+.tally-total .seg { flex-basis: 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 3px; font-size: 10px; line-height: 22px; color: var(--text); background: color-mix(in oklab, var(--tally) var(--tone), var(--surface)); transition: background 0.4s; }
+.tally-total .seg.empty { background: color-mix(in oklab, var(--tally) 10%, transparent); color: transparent; }
+.tally-total .sum { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; margin-top: 4px; }
+.tally-total .sum b { color: var(--text); font-variant-numeric: tabular-nums; }
+.tally-total .ok { color: var(--evidence); }
+.tally-total .ok::before { content: '✓ '; }
+.tally-total .off { color: var(--danger); }
+
 /* ---------- Index (#/index) ---------- */
 .ix { overflow-y: auto; min-height: 0; }
 .ix-inner { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }

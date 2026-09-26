@@ -1,13 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { CATALOG, chaptersOf, featuresInBook } from '@/lib/catalog';
-import { CHIASMS, INSIGHTS, MODELS } from '@/lib/content';
+import { CHIASMS, INSIGHTS, MODELS, TALLIES } from '@/lib/content';
 import { parseRef } from '@/lib/refs';
 
 describe('catalog', () => {
-  it('lists every model, chiasm and insight once', () => {
+  it('lists every model, chiasm, count and insight once', () => {
     const ids = (kind: string) => CATALOG.find((s) => s.kind === kind)!.entries.map((e) => e.id).sort();
     expect(ids('model')).toEqual(MODELS.map((m) => m.id).sort());
     expect(ids('chiasm')).toEqual(CHIASMS.map((c) => c.id).sort());
+    expect(ids('tally')).toEqual(TALLIES.map((t) => t.id).sort());
     expect(ids('insight')).toEqual(INSIGHTS.map((i) => i.id).sort());
   });
   it('goes somewhere that parses, and every ref on an entry parses', () => {

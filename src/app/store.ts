@@ -21,7 +21,7 @@ export interface State {
   /** Element id of the panel card a link goes to (`model-temple`), for the panel to scroll to; cleared once it has, or by the next `goTo`. */
   feature: string | null;
 }
-export type Reveal = 'chiasm';
+export type Reveal = 'chiasm' | 'tally';
 
 /** Route hash for the index: #/index or #/index/models. */
 function indexFromHash(hash: string): string | null {

@@ -3,7 +3,7 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -11,6 +11,7 @@ import { scaleReference } from '@/lib/models/scale';
 import { cutParts } from '@/lib/models/view';
 import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
+import { quotedCount, tallySum } from '@/lib/tally';
 import type { BibleBook, Model3D, Place, Source } from '@/lib/types';
 
 /** A procedural model drawn as each of its readings (once, if it has none). */
@@ -21,7 +22,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS]
+  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
 /** Matches a wikipedia.org host only — wikisource (primary texts) and wikimedia (image credits) are fine. */
@@ -41,11 +42,12 @@ describe('content integrity', () => {
       ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)]), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => [a.ref, ...a.changes.map((c) => c.ref)])) ]),
       ...VIDEOS.flatMap((v) => v.verses ?? []),
       ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
+      ...TALLIES.flatMap((t) => [t.ref, ...t.rows.map((r) => r.ref), ...(t.total ? [t.total.ref] : [])]),
     ];
     expect(bad(all)).toEqual([]);
   });
   it('ids are unique', () => {
-    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS, JOURNEYS]) {
+    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS, JOURNEYS, TALLIES]) {
       const ids = list.map((x) => x.id);
       expect(new Set(ids).size, `duplicate id in ${ids.find((id, i) => ids.indexOf(id) !== i)}`).toBe(ids.length);
     }
@@ -130,6 +132,37 @@ describe('content integrity', () => {
         const book = JSON.parse(readFileSync(new URL(`${loc.book}.json`, bibleDir), 'utf8')) as BibleBook;
         const text = book.chapters[loc.chapter - 1].find((v) => v.v === loc.verse)!.t;
         expect(ladder(c, loc, text), `${c.id} at ${ref}: a quote is not in "${text}"`).not.toBeNull();
+      }
+    }
+  });
+
+
+  // A count is drawn from the text's own numbers, so each must be the verse's words and the sum must check.
+  it('tallies cite evidence, run in order inside their passage, and add up', () => {
+    for (const t of TALLIES) {
+      expect(t.sources.some((s) => evidential.has(s.kind)), `${t.id} has no evidential source`).toBe(true);
+      if (t.confidence === 'interpretation') expect(t.traditions?.length, `${t.id} is an interpretation but lists no traditions`).toBeGreaterThan(0);
+      expect(t.rows.length, t.id).toBeGreaterThan(1);
+      const rows = [...t.rows, ...(t.total ? [t.total] : [])];
+      for (const r of rows) {
+        const at = parseRef(r.ref)!;
+        expect(at.start, `${t.id} ${r.label}: a row is one verse`).toEqual(at.end);
+        expect(contains(t.ref, at.start), `${t.id} ${r.label}: ${r.ref} is outside ${t.ref}`).toBe(true);
+        expect(quotedCount(r.quote), `${t.id} ${r.label}: "${r.quote}" is not ${r.count}`).toBe(r.count);
+      }
+      for (let i = 1; i < t.rows.length; i++) expect(compareLoc(parseRef(t.rows[i - 1].ref)!.start, parseRef(t.rows[i].ref)!.start), `${t.id}: ${t.rows[i].label} out of order`).toBeLessThanOrEqual(0);
+      expect(new Set(t.rows.map((r) => r.label)).size, `${t.id}: two rows share a label`).toBe(t.rows.length);
+      if (t.total && tallySum(t) !== t.total.count) expect(t.discrepancy?.length, `${t.id}: rows add up to ${tallySum(t)}, not ${t.total.count}, and no discrepancy is given`).toBeGreaterThan(20);
+      if (t.discrepancy) expect(t.total && tallySum(t) !== t.total.count, `${t.id}: a discrepancy is given but the rows add up`).toBe(true);
+    }
+  });
+  it.skipIf(!existsSync(bibleDir))('tally quotes are the BSB wording', () => {
+    for (const t of TALLIES) {
+      for (const r of [...t.rows, ...(t.total ? [t.total] : [])]) {
+        const loc = parseRef(r.ref)!.start;
+        const book = JSON.parse(readFileSync(new URL(`${loc.book}.json`, bibleDir), 'utf8')) as BibleBook;
+        const text = book.chapters[loc.chapter - 1].find((v) => v.v === loc.verse)!.t;
+        expect(text, `${t.id} ${r.label}`).toContain(r.quote);
       }
     }
   });

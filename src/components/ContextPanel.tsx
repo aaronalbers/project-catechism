@@ -1,6 +1,6 @@
 import { lazy, Suspense, useMemo } from 'react';
 import { setState, useStore, type PanelTab } from '@/app/store';
-import { insightsFor, modelsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor } from '@/lib/content';
+import { insightsFor, modelsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
 import { InsightsPanel } from '@/panels/InsightsPanel';
 import { WordsPanel } from '@/panels/WordsPanel';
 import { LinksPanel } from '@/panels/LinksPanel';
@@ -30,7 +30,7 @@ export function ContextPanel() {
     models: modelsFor(loc).length,
     people: peopleInChapter(loc.book, loc.chapter).length,
     videos: videosFor(loc).length,
-    links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length,
+    links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc]);
   return (
     <>

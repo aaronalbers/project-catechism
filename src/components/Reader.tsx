@@ -1,13 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, setState, useStore } from '@/app/store';
 import { loadBook, loadInterlinear } from '@/lib/data';
-import { CHIASMS, markersForChapter } from '@/lib/content';
+import { CHIASMS, markersForChapter, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
+import { rowsAt } from '@/lib/tally';
 import { BOOKS, book, bookIndex, contains, parseRef, touchesChapter } from '@/lib/refs';
 import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
 import { alignVerse, tokenize } from '@/lib/align';
 import { readStored, writeStored } from '@/lib/storage';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
+import { TallyBar, TallyCaption, TallyTotal } from './Tally';
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
@@ -67,9 +69,12 @@ export function Reader() {
   const [structure, setStructure] = useStoredFlag('structure', true);
   const toggleStructure = () => setStructure();
   const [pair, setPair] = useState<string | null>(null);
+  const tallies = useMemo(() => talliesInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
+  const [charts, setCharts] = useStoredFlag('tallies', true);
+  const toggleCharts = () => setCharts();
   const reveal = useStore((s) => s.reveal);
-  // Arriving from the index at a chiasm: show its structure even if the reader had hidden it.
-  useEffect(() => { if (reveal === 'chiasm') setStructure(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Arriving from the index at a chiasm or a count: show it even if the reader had hidden it.
+  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep the current verse in view, gently, when it changes (audio, links, hash).
   const lastScrolled = useRef<string>('');
@@ -121,17 +126,23 @@ export function Reader() {
         const li = structure && passage ? levelAt(passage, vloc) : -1;
         const at = (d: number) => chapter[k + d] && passage ? levelAt(passage, { ...vloc, verse: chapter[k + d].v }) : -1;
         const first = li >= 0 && at(-1) !== li, last = li >= 0 && at(1) !== li;
+        const tallyOpens = tallies.find((t) => { const r = parseRef(t.ref); return r?.start.chapter === loc.chapter && r.start.verse === v.v; });
+        const bars = charts ? tallies.flatMap((t) => rowsAt(t, vloc).map((row) => ({ t, row }))) : [];
+        const totals = charts ? tallies.filter((t) => t.total && contains(t.total.ref, vloc)) : [];
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
             {ilv?.h && <div className="heading">{ilv.h}</div>}
             {opens && <ChiasmCaption c={opens} show={structure} onToggle={toggleStructure} />}
+            {tallyOpens && <TallyCaption t={tallyOpens} show={charts} onToggle={toggleCharts} />}
             <div id={`v-${v.v}`} className={`verse${current ? ' current' : ''}`} onClick={() => goTo({ ...loc, verse: v.v })} role="button" tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo({ ...loc, verse: v.v }); } }} aria-current={current || undefined}>
               {m && <div className="markers" aria-hidden="true">{[...m].map((k) => <span key={k} className={`marker ${k}`} title={k} />)}</div>}
               <span className="num">{v.v}</span>
               <div>
                 <VerseText text={v.t} verse={v.v} current={current} il={ilv} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />
+                {bars.map(({ t, row }) => <TallyBar key={`${t.id}:${row.label}`} t={t} row={row} loc={loc} current={current} />)}
+                {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}
                 {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
               </div>
             </div>

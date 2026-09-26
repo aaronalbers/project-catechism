@@ -1,14 +1,14 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PROPHECIES, QUOTES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, MODELS, PROPHECIES, QUOTES, TALLIES } from './content';
 import { BOOKS, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
 /**
- * The index of curated features that only some passages have: where the models, chiasms, journeys
+ * The index of curated features that only some passages have: where the models, chiasms, counts, journeys
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'journey' | 'prophecy' | 'quote' | 'fragment' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'journey' | 'prophecy' | 'quote' | 'fragment' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -65,6 +65,14 @@ export const CATALOG: CatalogSection[] = [
     entries: sorted(CHIASMS.map((c) => ({
       id: c.id, kind: 'chiasm', title: c.title, summary: c.summary,
       go: c.ref, lines: [{ label: c.levels.some((l) => l.quote) ? 'Phrase' : 'Passage', refs: [c.ref] }],
+    }))),
+  },
+  {
+    id: 'counts', kind: 'tally', title: 'Counts', tab: 'links', reveal: 'tally',
+    blurb: 'Numbers the text lists group by group, such as a census, drawn as bars on one scale that fill verse by verse.',
+    entries: sorted(TALLIES.map((t) => ({
+      id: t.id, kind: 'tally', title: t.title, summary: t.summary,
+      go: t.ref, lines: [{ label: `${t.rows.length} groups`, refs: [t.ref] }],
     }))),
   },
   {

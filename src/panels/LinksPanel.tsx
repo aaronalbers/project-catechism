@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { goTo, useFeatureInView, useStore } from '@/app/store';
 import { loadVerseText, loadXrefs } from '@/lib/data';
-import { chiasmsFor, fragmentsFor, propheciesFor, quotesFor, speakerFor, writersFor, rulersFor } from '@/lib/content';
+import { chiasmsFor, fragmentsFor, propheciesFor, quotesFor, speakerFor, talliesFor, writersFor, rulersFor } from '@/lib/content';
 import { formatRef, parseRef } from '@/lib/refs';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Xrefs } from '@/lib/types';
@@ -40,6 +40,7 @@ export function LinksPanel() {
   const quotes = quotesFor(loc);
   const fragments = fragmentsFor(loc);
   const chiasms = chiasmsFor(loc);
+  const tallies = talliesFor(loc);
   const speakers = speakerFor(loc);
   const writers = writersFor(loc.book);
   const rulers = rulersFor(loc);
@@ -87,6 +88,17 @@ export function LinksPanel() {
               </div>
             ))}
             <SourceList sources={c.sources} traditions={c.traditions} />
+          </div>
+        ))}
+      </>}
+      {tallies.length > 0 && <>
+        <div className="panel-title">Counts</div>
+        {tallies.map((t) => (
+          <div className="card" key={t.id} id={cardId({ kind: 'tally', id: t.id })}>
+            <h3><span style={{ flex: 1 }}>{t.title}</span><ConfidenceBadge c={t.confidence} /></h3>
+            <p className="summary">{t.summary}</p>
+            <div className="verses"><span className="badge kind">Drawn on the text</span><RefChip r={t.ref} /></div>
+            <SourceList sources={t.sources} traditions={t.traditions} />
           </div>
         ))}
       </>}

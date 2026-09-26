@@ -1,0 +1,31 @@
+[
+ {
+  "id": "num1-census",
+  "title": "The first census",
+  "ref": "Num.1.20-46",
+  "unit": "men twenty and older able to serve",
+  "confidence": "evidence",
+  "summary": "Numbered in the Wilderness of Sinai in the second year after the Exodus. Levi is left out (1:47–49), and Joseph is counted as two tribes, Ephraim and Manasseh, so there are still twelve. The twelve figures add up exactly to the 603,550 of 1:46, and the same total is given for the tabernacle's silver in Exodus 38:26. Every figure but Gad's (45,650) is a round hundred. How large the numbers are is debated: 'thousand' translates the Hebrew ʾeleph, which some scholars read here as a clan or military unit rather than a thousand.",
+  "rows": [
+   {"ref": "Num.1.21", "label": "Reuben", "count": 46500, "quote": "46,500"},
+   {"ref": "Num.1.23", "label": "Simeon", "count": 59300, "quote": "59,300"},
+   {"ref": "Num.1.25", "label": "Gad", "count": 45650, "quote": "45,650"},
+   {"ref": "Num.1.27", "label": "Judah", "count": 74600, "quote": "74,600"},
+   {"ref": "Num.1.29", "label": "Issachar", "count": 54400, "quote": "54,400"},
+   {"ref": "Num.1.31", "label": "Zebulun", "count": 57400, "quote": "57,400"},
+   {"ref": "Num.1.33", "label": "Ephraim", "count": 40500, "quote": "40,500"},
+   {"ref": "Num.1.35", "label": "Manasseh", "count": 32200, "quote": "32,200"},
+   {"ref": "Num.1.37", "label": "Benjamin", "count": 35400, "quote": "35,400"},
+   {"ref": "Num.1.39", "label": "Dan", "count": 62700, "quote": "62,700"},
+   {"ref": "Num.1.41", "label": "Asher", "count": 41500, "quote": "41,500"},
+   {"ref": "Num.1.43", "label": "Naphtali", "count": 53400, "quote": "53,400"}
+  ],
+  "total": {"ref": "Num.1.46", "label": "All Israel", "count": 603550, "quote": "603,550"},
+  "sources": [
+   {"kind": "scripture", "ref": "Num.1.20-46"},
+   {"kind": "scripture", "ref": "Exod.38.26", "note": "the same 603,550, each paying half a shekel"},
+   {"kind": "scholarship", "title": "'The Census Lists of Numbers 1 and 26'", "author": "George E. Mendenhall", "year": 1958, "note": "Journal of Biblical Literature 77, pp. 52–66; reads ʾeleph as a tribal subunit"},
+   {"kind": "scholarship", "title": "'The Number of People in the Exodus from Egypt: Decoding Mathematically the Very Large Numbers in Numbers I and XXVI'", "author": "Colin J. Humphreys", "year": 1998, "note": "Vetus Testamentum 48, pp. 196–213"}
+  ]
+ }
+]
