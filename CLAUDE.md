@@ -128,7 +128,9 @@ them in CI — read it before adding content.
   verse and verdict for Judah's kings). A verdict is `right`, `evil` or `none`, with `but` for the qualification
   the text adds (the high places not removed). The chart-wide pieces are in `content/monarchy.json`: the
   reckoning Thiele reconstructs, pins dated outside the Bible, and the prophets, each with `sentTo` (the kingdom he
-  spoke to, shown by the verse `sent`; `both` is drawn with Judah) and drawn beside that kingdom's lane. The reader draws only the
+  spoke to, shown by the verse `sent`; `both` is drawn with Judah) and drawn beside that kingdom's lane. A
+  prophet's `from`–`to` are Thiele years; each end keeps its place within the reign it falls in, so the band
+  moves with the kings in every reading (`prophetSpan` in `src/lib/reign.ts`). The reader draws only the
   chart under each accession verse; the Reign tab (shown only in Kings and Chronicles) holds the date toggle
   (a reading, or the stated lengths laid end to end), the legend and the facts. `readings` in `monarchy.json`
   are reconstructions: Thiele's first, from the rulers' own `from`–`to` and `overlap`, then McFall and Young's

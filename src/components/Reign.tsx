@@ -8,7 +8,7 @@ import { MONARCHY } from '@/lib/content';
 import { formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import {
   DOMAIN, KINGDOM_NAME, KINGDOMS, READINGS, VERDICT_LABEL, anchorFits, bc, chartRef, datesIn, dynasties, kingById, laneOf, modeLabel, overlapSpan,
-  prophetKingdom, prophetRows, reached, readingOf, reckoningAt, span, statedBefore, synchronism, verdictClass, verdictIn, windowFor, type Account, type DateMode, type King,
+  prophetKingdom, prophetRows, prophetSpan, reached, readingOf, reckoningAt, span, statedBefore, synchronism, verdictClass, verdictIn, windowFor, type Account, type DateMode, type King,
 } from '@/lib/reign';
 import type { Verdict } from '@/lib/types';
 import { RefChip } from './SourceList';
@@ -61,17 +61,15 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
   const [w0, w1] = windowFor(k, mode);
   const x = (y: number) => ((y - w0) / (w1 - w0)) * 100;
   const ox = (y: number) => ((y - DOMAIN[0]) / (DOMAIN[1] - DOMAIN[0])) * 100;
-  // The prophets' years are set by Thiele's dates, so they are drawn only with them.
-  const thiele = readingOf(mode) === READINGS[0];
-  const above = thiele ? prophetRows(w0, w1, 'israel') : [], below = thiele ? prophetRows(w0, w1, 'judah') : [];
+  const above = prophetRows(w0, w1, 'israel', mode), below = prophetRows(w0, w1, 'judah', mode);
   const depth = (rows: typeof above) => (rows.length ? Math.max(...rows.map((r) => r.row)) + 1 : 0);
   const top = depth(above) ? depth(above) * PROPHET_ROW + PROPHET_GAP : 0;
   const laneY: Record<King['reign']['kingdom'], number> = { israel: top, judah: top + JUDAH };
   const belowY = top + JUDAH + LANE + PROPHET_GAP;
   const height = belowY + (depth(below) ? depth(below) * PROPHET_ROW : -PROPHET_GAP);
   const prophets = [
-    ...above.map(({ p, row }) => ({ p, y: top - PROPHET_GAP - (row + 1) * PROPHET_ROW })),
-    ...below.map(({ p, row }) => ({ p, y: belowY + row * PROPHET_ROW })),
+    ...above.map(({ p, row, span: sp }) => ({ p, sp, y: top - PROPHET_GAP - (row + 1) * PROPHET_ROW })),
+    ...below.map(({ p, row, span: sp }) => ({ p, sp, y: belowY + row * PROPHET_ROW })),
   ];
   const sync = synchronism(k, mode);
   const pins = MONARCHY.anchors.filter((p) => x(p.year) >= 1 && x(p.year) <= 99); // clear of the edges, where the diamond would be cut
@@ -125,9 +123,9 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
               </button>
             );
           }))}
-          {prophets.map(({ p, y }) => (
-            <button key={p.id} className="prophet" style={{ ...at(p.from, Math.max(p.to, p.from + 0.5)), top: y }}
-              title={prophetTitle(p)} onClick={stop(() => go(p.refs[0]))}><span className="nm">{p.name}</span></button>
+          {prophets.map(({ p, sp, y }) => (
+            <button key={p.id} className="prophet" style={{ ...at(sp[0], Math.max(sp[1], sp[0] + 0.5)), top: y }}
+              title={prophetTitle(p, mode)} onClick={stop(() => go(p.refs[0]))}><span className="nm">{p.name}</span></button>
           ))}
           {sync && (
             <svg className="sync" viewBox={`0 0 100 ${height}`} preserveAspectRatio="none" aria-hidden="true">
@@ -150,9 +148,10 @@ export function Plot({ k, account, loc, mode }: { k: King; account: Account; loc
 }
 
 /** A prophet's tooltip: whom he spoke to, where he came from if elsewhere, his years and what they rest on. */
-function prophetTitle(p: (typeof MONARCHY.prophets)[number]) {
+function prophetTitle(p: (typeof MONARCHY.prophets)[number], mode: DateMode) {
   const to = p.sentTo === 'both' ? 'Israel and Judah' : KINGDOM_NAME[p.sentTo];
-  return `${p.name}, prophet to ${to} (${formatRef(p.sent)})${p.origin ? `, from ${p.origin}` : ''}. ${years(p.from, p.to)}: ${p.basis}${p.note ? ` ${p.note}` : ''}`;
+  const [s, e] = prophetSpan(p, mode);
+  return `${p.name}, prophet to ${to} (${formatRef(p.sent)})${p.origin ? `, from ${p.origin}` : ''}. ${years(s, e)} in ${modeLabel(mode)}: ${p.basis}${p.note ? ` ${p.note}` : ''}`;
 }
 
 /** What the synchronism line says, for its tooltip: the verse's words, and whether the dates in view meet it. */
@@ -207,7 +206,7 @@ function house(k: King) {
 export function Facts({ k, account, mode }: { k: King; account: Account; mode: DateMode }) {
   const r = k.reign;
   const reading = readingOf(mode), thiele = reading === READINGS[0];
-  const [a, b] = span(k, READINGS[0].id), [ma, mb] = span(k, mode);
+  const [a] = span(k, READINGS[0].id), [ma, mb] = span(k, mode);
   const s = r.synchronism, other = s && kingById.get(s.king);
   const sync = synchronism(k, mode);
   const drift = Math.round(ma - a);
@@ -215,7 +214,7 @@ export function Facts({ k, account, mode }: { k: King; account: Account; mode: D
   // Why a reading's dates miss the synchronism: Thiele's own admission, a reading's note, or just how far out it is.
   const unmet = sync?.off && reading && (thiele ? r.discrepancy : reading.notes?.[k.id]);
   const reckon = thiele ? KINGDOMS.map((kd) => ({ kd, rk: reckoningAt(kd, a) })).filter((x) => x.rk) : [];
-  const prophets = MONARCHY.prophets.filter((p) => p.to >= a && p.from <= b);
+  const prophets = MONARCHY.prophets.filter((p) => { const [s, e] = prophetSpan(p, mode); return e >= ma && s <= mb; });
   const pins = MONARCHY.anchors.filter((p) => p.kings.includes(k.id));
   return (
     <div className="reign-facts">
@@ -254,7 +253,7 @@ export function Facts({ k, account, mode }: { k: King; account: Account; mode: D
         const here = prophets.filter((p) => prophetKingdom(p) === kd);
         return here.length > 0 && (
           <Row key={kd} label={`Prophets to ${KINGDOM_NAME[kd]}`}>
-            {here.map((p) => <button key={p.id} className="chip link" title={prophetTitle(p)} onClick={stop(() => go(p.refs[0]))}>{p.name}{p.sentTo === 'both' ? ' (and Israel)' : ''}</button>)}
+            {here.map((p) => <button key={p.id} className="chip link" title={prophetTitle(p, mode)} onClick={stop(() => go(p.refs[0]))}>{p.name}{p.sentTo === 'both' ? ' (and Israel)' : ''}</button>)}
           </Row>
         );
       })}

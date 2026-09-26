@@ -165,17 +165,41 @@ export const anchorFits = (a: MonarchyAnchor, mode: DateMode) =>
 
 /** The kingdom whose lane a prophet is drawn beside: the one he spoke to, and Judah for one who spoke to both. */
 export const prophetKingdom = (p: (typeof MONARCHY.prophets)[number]): Kingdom => (p.sentTo === 'israel' ? 'israel' : 'judah');
-/** The prophets to one kingdom active in a span of years, each given the first row where its band and name fit. */
-export function prophetRows(from: number, to: number, kingdom: Kingdom): { p: (typeof MONARCHY.prophets)[number]; row: number }[] {
+type Prophet = (typeof MONARCHY.prophets)[number];
+/**
+ * The king whose reign a prophet's year falls in, in Thiele's dates (which his years are written against):
+ * one of the kings the text sets him under, else any king then reigning.
+ */
+export function prophetAnchor(p: Prophet, year: number): King | undefined {
+  const reigning = (k: King) => { const [s, e] = span(k, 'thiele'); return s <= year && year <= e; };
+  return p.kings.map((id) => kingById.get(id)!).find(reigning) ?? KINGS.find(reigning);
+}
+/**
+ * A prophet's years in a view. Each end keeps its place within the reign it falls in (the year Uzziah died
+ * stays at the end of Uzziah's reign), so the band moves with the kings in any reading, or as stated.
+ */
+export function prophetSpan(p: Prophet, mode: DateMode): [number, number] {
+  const place = (year: number) => {
+    const k = prophetAnchor(p, year);
+    if (!k) return year;
+    const [s, e] = span(k, 'thiele'), [s2, e2] = span(k, mode);
+    return e > s ? s2 + ((year - s) / (e - s)) * (e2 - s2) : s2;
+  };
+  const [a, b] = [place(p.from), place(p.to)];
+  return [Math.min(a, b), Math.max(a, b)];
+}
+/** The prophets to one kingdom active in a span of years in a view, each given the first row where its band and name fit. */
+export function prophetRows(from: number, to: number, kingdom: Kingdom, mode: DateMode): { p: Prophet; row: number; span: [number, number] }[] {
   const label = (to - from) * 0.14; // room for a name, in years
   const ends: number[] = [];
-  return MONARCHY.prophets.filter((p) => prophetKingdom(p) === kingdom && p.to >= from && p.from <= to).sort((a, b) => a.from - b.from).map((p) => {
-    const left = Math.max(p.from, from);
-    let row = ends.findIndex((e) => e < left);
-    if (row < 0) { row = ends.length; ends.push(0); }
-    ends[row] = Math.max(p.to, left + label);
-    return { p, row };
-  });
+  return MONARCHY.prophets.filter((p) => prophetKingdom(p) === kingdom).map((p) => ({ p, span: prophetSpan(p, mode) }))
+    .filter(({ span: [s, e] }) => e >= from && s <= to).sort((a, b) => a.span[0] - b.span[0]).map(({ p, span: sp }) => {
+      const left = Math.max(sp[0], from);
+      let row = ends.findIndex((e) => e < left);
+      if (row < 0) { row = ends.length; ends.push(0); }
+      ends[row] = Math.max(sp[1], left + label);
+      return { p, row, span: sp };
+    });
 }
 
 /** A kingdom's runs of kings of one house, in a view, for the band under Israel's lane. */

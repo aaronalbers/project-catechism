@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DOMAIN, kingById, prophetRows, reached, reignsInChapter, span, synchronism, verdictClass, verdictIn, windowFor, anchorFits } from '@/lib/reign';
+import { DOMAIN, kingById, prophetAnchor, prophetRows, prophetSpan, reached, reignsInChapter, span, synchronism, verdictClass, verdictIn, windowFor, anchorFits } from '@/lib/reign';
 import { MONARCHY } from '@/lib/content';
 
 const king = (id: string) => kingById.get(id)!;
@@ -60,11 +60,24 @@ describe('reign chart', () => {
     expect(reignsInChapter('2Chr', 36).get(9)).toMatchObject({ account: 'chronicles' });
   });
   it('stacks each kingdom’s prophets beside its lane, so no two share a row where they overlap', () => {
-    const israel = prophetRows(-800, -680, 'israel'), judah = prophetRows(-800, -680, 'judah');
+    const israel = prophetRows(-800, -680, 'israel', 'thiele'), judah = prophetRows(-800, -680, 'judah', 'thiele');
     for (const rows of [israel, judah]) for (const a of rows) for (const b of rows) if (a !== b && a.row === b.row) expect(a.p.to < b.p.from || b.p.to < a.p.from).toBe(true);
     expect(israel.map((r) => r.p.id)).toEqual(expect.arrayContaining(['amos', 'hosea', 'jonah']));
     expect(judah.map((r) => r.p.id)).toEqual(expect.arrayContaining(['isaiah', 'micah'])); // Micah spoke to both, and is drawn with Judah
     expect(israel.map((r) => r.p.id)).not.toContain('isaiah');
+  });
+  it('moves each prophet with the reigns he is set in, in every view', () => {
+    const isaiah = MONARCHY.prophets.find((p) => p.id === 'isaiah')!;
+    expect(prophetSpan(isaiah, 'thiele')).toEqual([-740, -701]);
+    expect(prophetSpan(isaiah, 'galil')[0]).toBe(-736); // the year Uzziah died, which Galil puts in 736
+    for (const mode of ['thiele', 'young', 'galil', 'stated']) {
+      for (const p of MONARCHY.prophets) {
+        const [s, e] = prophetSpan(p, mode);
+        expect(s <= e, `${p.id} ${mode}`).toBe(true);
+      }
+    }
+    // Every end of every prophet's years falls in some reign, so it has a place to move with.
+    for (const p of MONARCHY.prophets) for (const y of [p.from, p.to]) expect(prophetAnchor(p, y), `${p.id} ${y}`).toBeTruthy();
   });
   it('pins a date outside the Bible to a reign, where the view allows', () => {
     const pin = (id: string) => MONARCHY.anchors.find((a) => a.id === id)!;
