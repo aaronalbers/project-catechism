@@ -93,20 +93,25 @@ export interface Speaker { id: string; ref: Ref; speaker: string; summary?: stri
  */
 export interface ChiasmLevel { label: string; ref: Ref; text: string; quote?: string }
 export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
-/** One group in a tally: `quote` is the BSB's own words for its count, in the one verse `ref` names. */
-export interface TallyRow { ref: Ref; label: string; count: number; quote: string }
+/**
+ * One group in a tally: `quote` is the BSB's own words for its count, in the one verse `ref` names.
+ * `same` is the label of this group in the compared tally, when the two lists name it differently
+ * (Nehemiah's Hariph, Ezra's Jorah).
+ */
+export interface TallyRow { ref: Ref; label: string; count: number; quote: string; same?: string }
 /** A subtotal the text gives for some of the rows (a camp of three tribes): its verse, words and count, and the rows it sums. */
 export interface TallyGroup extends TallyRow { members: string[] }
 /**
  * Numbers the text lists one group after another (a census, a muster), drawn as bars on one scale that
  * fill as each verse is read. `total` is the text's own sum; the rows must add up to it unless
  * `discrepancy` says why they do not. `compare` names a tally of the same groups taken earlier (the
- * census of Numbers 1 for Numbers 26), whose figures are drawn behind each bar, matched by label.
+ * census of Numbers 1 for Numbers 26), whose figures are drawn behind each bar, matched by label; `alone`
+ * names the groups, in either list, that the other does not have.
  * `groups` are subtotals the text gives along the way, each stacked from its members under its verse.
  */
 export interface Tally {
   id: string; title: string; ref: Ref; unit: string; summary: string; rows: TallyRow[];
-  groups?: TallyGroup[]; total?: TallyRow; discrepancy?: string; compare?: string;
+  groups?: TallyGroup[]; total?: TallyRow; discrepancy?: string; compare?: string; alone?: string[];
   sources: Source[]; traditions?: string[]; confidence: Confidence;
 }
 export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string }

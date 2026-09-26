@@ -8,8 +8,10 @@ export const quotedCount = (quote: string) => Number(quote.replace(/[^\d]/g, '')
 
 /** The earlier tally `t` is compared with, if any. */
 export const comparedWith = (t: Tally) => (t.compare ? TALLIES.find((x) => x.id === t.compare) : undefined);
-/** The same group in the earlier tally. */
-export const earlierRow = (t: Tally, row: TallyRow) => comparedWith(t)?.rows.find((r) => r.label === row.label);
+/** The same group in the earlier tally, under its own name there. */
+export const earlierRow = (t: Tally, row: TallyRow) => comparedWith(t)?.rows.find((r) => r.label === (row.same ?? row.label));
+/** Whether a tally's names are too long for the narrow label column. */
+export const wideLabels = (t: Tally) => [...t.rows, ...(t.groups ?? [])].some((r) => r.label.length > 11);
 /** A tally's short name for the reader: the book and chapter it opens in ("Numbers 1"). */
 export function tallyPlace(t: Tally) {
   const r = parseRef(t.ref);

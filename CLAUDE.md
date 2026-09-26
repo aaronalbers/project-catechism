@@ -118,7 +118,8 @@ them in CI — read it before adding content.
 - Counts (`content/tallies.json`) are numbers the text lists group by group (a census). Each row quotes
   the BSB's own figure in its verse, and the reader draws a bar under that verse on one scale, filled
   once the verse is read. `groups` are subtotals the text gives (Numbers 2's camps), `compare` names an
-  earlier count of the same groups drawn behind each bar (Numbers 26 against 1), and the rows must add
+  earlier count of the same groups drawn behind each bar (Numbers 26 against 1; a row's `same` gives its
+  name there when the lists differ, and `alone` lists groups only one list has), and the rows must add
   up to `total` unless `discrepancy` says why not (Numbers 3's Levites). A model can size itself from
   a tally's rows, as the camp of Israel does, so the two never disagree.
 

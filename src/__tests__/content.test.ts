@@ -166,8 +166,11 @@ describe('content integrity', () => {
       if (t.compare) {
         const before = TALLIES.find((x) => x.id === t.compare);
         expect(before, `${t.id} compares with unknown ${t.compare}`).toBeTruthy();
-        // Bars are matched by label, so both lists must name the same groups.
-        expect(t.rows.map((r) => r.label).sort(), `${t.id} and ${t.compare} count different groups`).toEqual(before!.rows.map((r) => r.label).sort());
+        // Bars are matched by label (or `same`), so both lists must name the same groups, but for those `alone` names.
+        const alone = new Set(t.alone ?? []);
+        expect(t.rows.filter((r) => !alone.has(r.label)).map((r) => r.same ?? r.label).sort(), `${t.id} and ${t.compare} count different groups`)
+          .toEqual(before!.rows.filter((r) => !alone.has(r.label)).map((r) => r.label).sort());
+        for (const a of alone) expect([...t.rows, ...before!.rows].some((r) => r.label === a), `${t.id}: '${a}' is alone but in neither list`).toBe(true);
       }
     }
   });

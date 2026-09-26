@@ -3,7 +3,7 @@
 // stacked under the verse that gives the total.
 import type { CSSProperties } from 'react';
 import { setState } from '@/app/store';
-import { comparedWith, earlierRow, groupMax, groupOf, groupRows, rowReached, tallyMax, tallyPlace, tallySum } from '@/lib/tally';
+import { comparedWith, earlierRow, groupMax, groupOf, groupRows, rowReached, tallyMax, tallyPlace, tallySum, wideLabels } from '@/lib/tally';
 import type { VerseLoc } from '@/lib/refs';
 import type { Tally, TallyGroup, TallyRow } from '@/lib/types';
 import { ConfidenceBadge } from './SourceList';
@@ -26,7 +26,7 @@ export function TallyCaption({ t, show, onToggle }: { t: Tally; show: boolean; o
         <ConfidenceBadge c={t.confidence} />
         <button className="chiasm-toggle" aria-pressed={show} onClick={(e) => { e.stopPropagation(); onToggle(); }}>{show ? 'Hide chart' : 'Show chart'}</button>
       </div>
-      {show && <p className="tally-note">{t.rows.length} groups of {t.unit}, each drawn under its verse on one scale: the longest bar is {max.label}’s {fmt(max.count)}.{before && <> The outline behind each bar is the same tribe in {tallyPlace(before)}, with the change beside the figure.</>}{biggest && <> The {t.groups!.length} subtotals are stacked from their groups under their own verses, on a scale of their own: the largest is {biggest.label}, {fmt(biggest.count)}.</>}</p>}
+      {show && <p className="tally-note">{t.rows.length} groups of {t.unit}, each drawn under its verse on one scale{t.rows.every((r) => r.count === max.count) ? <>: every one is {fmt(max.count)}.</> : <>: the longest bar is {max.label}’s {fmt(max.count)}.</>}{before && <> The outline behind each bar is the same group in {tallyPlace(before)}, with the change beside the figure{t.alone?.length ? '; a bar without one has no match there' : ''}.</>}{biggest && <> The {t.groups!.length} subtotals are stacked from their groups under their own verses, on a scale of their own: the largest is {biggest.label}, {fmt(biggest.count)}.</>}</p>}
     </div>
   );
 }
@@ -37,8 +37,8 @@ export function TallyBar({ t, row, loc, current }: { t: Tally; row: TallyRow; lo
   const max = tallyMax(t), before = comparedWith(t), was = earlierRow(t, row);
   const said = `${row.label}: ${fmt(row.count)} ${t.unit}${was && before ? `, ${fmt(was.count)} in ${tallyPlace(before)}` : ''}`;
   return (
-    <div className={`tally-row${current ? ' current' : ''}${before ? ' compared' : ''}`} role="img" aria-label={said}>
-      <span className="lbl">{row.label}</span>
+    <div className={`tally-row${current ? ' current' : ''}${before ? ' compared' : ''}${wideLabels(t) ? ' wide' : ''}`} role="img" aria-label={said}>
+      <span className="lbl" title={row.same ? `${row.label} (${row.same} in ${tallyPlace(before!)})` : row.label}>{row.label}</span>
       <span className="track">
         {was && <span className="was" style={{ '--share': was.count / max } as CSSProperties} title={before && `${tallyPlace(before)}: ${fmt(was.count)}`} />}
         <span className="fill" style={{ '--share': reached ? row.count / max : 0 } as CSSProperties} />
