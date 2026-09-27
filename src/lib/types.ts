@@ -200,6 +200,37 @@ export interface Monarchy {
   reckoning: Reckoning[]; anchors: MonarchyAnchor[]; prophets: MonarchyProphet[]; readings: MonarchyReading[];
   sources: Source[]; traditions?: string[]; confidence: Confidence;
 }
+/**
+ * A moment of the three days: `day` counts civil days from the crucifixion's (0; −1 is the evening before),
+ * or 'sunday' for the first day of the week, whatever the reading; `hour` is on the clock (a negative hour
+ * on 'sunday' is Saturday evening). `basis` says what it rests on.
+ */
+export interface PassionTime { day: number | 'sunday'; hour: number; basis?: string }
+/** A verse of an account that says when something happened, in its own words (`quote`), drawn as a pin; `until` ends a span that day. */
+export interface PassionEvent { ref: Ref; label: string; quote: string; at: PassionTime; until?: number; basis: string }
+/** A saying about the three days ("on the third day"), where the chart is drawn whole. */
+export interface PassionSaying { ref: Ref; quote: string }
+/**
+ * A reading of the weekday: `weekday` of the crucifixion (0 Sunday … 6 Saturday), `high` the day after it
+ * that is John's High Sabbath, when the resurrection fell (`rose`, a range when the text leaves it open),
+ * how it counts 'the third day' and 'three nights', and `moves` for an event it places elsewhere, by ref.
+ */
+export interface PassionReading {
+  id: string; label: string; weekday: number; high: number;
+  rose: { from: PassionTime; to: PassionTime; basis: string };
+  basis: string; thirdDay: string; nights: string;
+  moves?: Record<Ref, PassionTime>;
+  sources: Source[]; traditions: string[]; confidence: Confidence;
+}
+/** The days from the Last Supper to the empty tomb, drawn under each verse that dates them, in each gospel. */
+export interface Passion {
+  id: string; title: string; summary: string; clock: string;
+  died: PassionTime; buried: PassionTime;
+  sayings: PassionSaying[];
+  accounts: { id: string; label: string; ref: Ref; events: PassionEvent[] }[];
+  readings: PassionReading[];
+  sources: Source[]; confidence: Confidence;
+}
 /** One camp in an itinerary. Its position is OpenBible's identification of `place` unless `estimate` overrides it. */
 export interface Station {
   verse: Ref; name: string; place?: string;

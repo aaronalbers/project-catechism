@@ -8,7 +8,7 @@ import { PROFILE_INDEX } from '@/lib/content';
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
 const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -28,7 +28,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors,
+  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings,
     ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 

@@ -1,0 +1,151 @@
+{
+ "id": "three-days",
+ "title": "The three days",
+ "confidence": "estimate",
+ "summary": "Each gospel sets the crucifixion on the day of Preparation and has the women find the tomb empty early on the first day of the week, a Sunday. Two ways of counting explain how that makes 'the third day'. A Jewish day ran from sunset to sunset, so the Sabbath began on Friday evening (Luke 23:54). And a part of a day was counted as a day: Esther's fast of 'three days, night or day' ends 'on the third day' (Esth 4:16–5:1), and Matthew has the chief priests treat 'after three days' and 'until the third day' as the same (27:63–64). The weekday of the crucifixion is itself read three ways, and the chart draws whichever is chosen in the Days tab.",
+ "clock": "Clock times are ≈. In Jerusalem near the spring equinox, when Passover falls, sunrise and sunset are close to 6 a.m. and 6 p.m., and the gospels count the hours of the day from sunrise, so 'the third hour' is about 9 a.m. and 'the ninth hour' about 3 p.m. These are derived figures: an hour was a twelfth of the daylight, near the equinox about a clock hour.",
+ "died": {"day": 0, "hour": 15, "basis": "Jesus cries out 'at the ninth hour' and then breathes his last (Mark 15:34–37); the ninth hour is ≈3 p.m."},
+ "buried": {"day": 0, "hour": 17.5, "basis": "Buried when 'it was already evening' on the day before the Sabbath (Mark 15:42–46), as 'the Sabbath was beginning' (Luke 23:54): before sunset, ≈6 p.m."},
+ "sayings": [
+  {"ref": "Matt.12.40", "quote": "three days and three nights in the heart of the earth"},
+  {"ref": "Matt.16.21", "quote": "on the third day be raised to life"},
+  {"ref": "Matt.17.23", "quote": "on the third day He will be raised to life"},
+  {"ref": "Matt.20.19", "quote": "on the third day He will be raised to life"},
+  {"ref": "Matt.26.61", "quote": "rebuild it in three days"},
+  {"ref": "Matt.27.40", "quote": "rebuild it in three days"},
+  {"ref": "Matt.27.63", "quote": "After three days I will rise again"},
+  {"ref": "Matt.27.64", "quote": "until the third day"},
+  {"ref": "Mark.8.31", "quote": "after three days rise again"},
+  {"ref": "Mark.9.31", "quote": "after three days He will rise"},
+  {"ref": "Mark.10.34", "quote": "after three days He will rise again"},
+  {"ref": "Luke.9.22", "quote": "on the third day be raised to life"},
+  {"ref": "Luke.18.33", "quote": "on the third day He will rise again"},
+  {"ref": "Luke.24.7", "quote": "on the third day rise again"},
+  {"ref": "Luke.24.46", "quote": "rise from the dead on the third day"},
+  {"ref": "John.2.19", "quote": "in three days I will raise it up again"},
+  {"ref": "Acts.10.40", "quote": "God raised Him up on the third day"},
+  {"ref": "1Cor.15.4", "quote": "raised on the third day according to the Scriptures"}
+ ],
+ "accounts": [
+  {
+   "id": "matt", "label": "Matthew", "ref": "Matt.26.20-28.1",
+   "events": [
+    {"ref": "Matt.26.20", "label": "The Last Supper", "quote": "When evening came", "at": {"day": -1, "hour": 19}, "basis": "After sunset, so already the day of the crucifixion as a Jewish day is counted."},
+    {"ref": "Matt.27.1", "label": "Handed over to Pilate", "quote": "When morning came", "at": {"day": 0, "hour": 6}, "basis": "At first light, ≈6 a.m."},
+    {"ref": "Matt.27.45", "label": "Darkness", "quote": "From the sixth hour until the ninth hour", "at": {"day": 0, "hour": 12}, "until": 15, "basis": "The sixth and ninth hours counted from sunrise: ≈noon to ≈3 p.m."},
+    {"ref": "Matt.27.50", "label": "He dies", "quote": "He yielded up His spirit", "at": {"day": 0, "hour": 15}, "basis": "Soon after he cries out 'about the ninth hour' (27:46), ≈3 p.m."},
+    {"ref": "Matt.27.57", "label": "Joseph of Arimathea comes", "quote": "When it was evening", "at": {"day": 0, "hour": 17}, "basis": "Late afternoon, before the Sabbath began at sunset."},
+    {"ref": "Matt.27.60", "label": "Buried", "quote": "placed it in his own new tomb", "at": {"day": 0, "hour": 17.5}, "basis": "Before sunset, ≈6 p.m., when the Sabbath began."},
+    {"ref": "Matt.27.62", "label": "The tomb sealed and guarded", "quote": "The next day, the one after Preparation Day", "at": {"day": 1, "hour": 9}, "basis": "The day after the crucifixion; the hour is not given, and ≈9 a.m. only places it in the daylight."},
+    {"ref": "Matt.28.1", "label": "The women come to the tomb", "quote": "at dawn on the first day of the week", "at": {"day": "sunday", "hour": 5.5}, "basis": "Dawn, just before sunrise at ≈6 a.m."}
+   ]
+  },
+  {
+   "id": "mark", "label": "Mark", "ref": "Mark.14.17-16.2",
+   "events": [
+    {"ref": "Mark.14.17", "label": "The Last Supper", "quote": "When evening came", "at": {"day": -1, "hour": 19}, "basis": "After sunset, so already the day of the crucifixion as a Jewish day is counted."},
+    {"ref": "Mark.15.1", "label": "Handed over to Pilate", "quote": "Early in the morning", "at": {"day": 0, "hour": 6}, "basis": "At first light, ≈6 a.m."},
+    {"ref": "Mark.15.25", "label": "Crucified", "quote": "It was the third hour when they crucified Him", "at": {"day": 0, "hour": 9}, "basis": "The third hour counted from sunrise, ≈9 a.m."},
+    {"ref": "Mark.15.33", "label": "Darkness", "quote": "From the sixth hour until the ninth hour", "at": {"day": 0, "hour": 12}, "until": 15, "basis": "The sixth and ninth hours counted from sunrise: ≈noon to ≈3 p.m."},
+    {"ref": "Mark.15.37", "label": "He dies", "quote": "breathed His last", "at": {"day": 0, "hour": 15}, "basis": "After he cries out 'at the ninth hour' (15:34), ≈3 p.m."},
+    {"ref": "Mark.15.42", "label": "Evening of Preparation Day", "quote": "Now it was already evening", "at": {"day": 0, "hour": 17}, "basis": "Late afternoon: still Preparation Day, 'the day before the Sabbath', so before sunset."},
+    {"ref": "Mark.15.46", "label": "Buried", "quote": "placed it in a tomb", "at": {"day": 0, "hour": 17.5}, "basis": "Before sunset, ≈6 p.m., when the Sabbath began."},
+    {"ref": "Mark.16.1", "label": "The women buy spices", "quote": "When the Sabbath was over", "at": {"day": "sunday", "hour": -5}, "basis": "After sunset on Saturday, when the Sabbath ended and the shops could open; the hour is not given."},
+    {"ref": "Mark.16.2", "label": "The women come to the tomb", "quote": "just after sunrise", "at": {"day": "sunday", "hour": 6.25}, "basis": "Just after sunrise, ≈6 a.m."}
+   ]
+  },
+  {
+   "id": "luke", "label": "Luke", "ref": "Luke.22.14-24.29",
+   "events": [
+    {"ref": "Luke.22.14", "label": "The Last Supper", "quote": "When the hour had come", "at": {"day": -1, "hour": 19}, "basis": "The Passover meal was eaten after sunset (Exod 12:6–8), so already the day of the crucifixion as a Jewish day is counted."},
+    {"ref": "Luke.22.66", "label": "Before the council", "quote": "At daybreak", "at": {"day": 0, "hour": 6}, "basis": "At first light, ≈6 a.m."},
+    {"ref": "Luke.23.44", "label": "Darkness", "quote": "about the sixth hour", "at": {"day": 0, "hour": 12}, "until": 15, "basis": "The sixth and ninth hours counted from sunrise: ≈noon to ≈3 p.m."},
+    {"ref": "Luke.23.46", "label": "He dies", "quote": "He breathed His last", "at": {"day": 0, "hour": 15}, "basis": "At the end of the darkness 'until the ninth hour' (23:44), ≈3 p.m."},
+    {"ref": "Luke.23.53", "label": "Buried", "quote": "placed it in a tomb cut into the rock", "at": {"day": 0, "hour": 17.5}, "basis": "Before sunset, ≈6 p.m., when the Sabbath began (23:54)."},
+    {"ref": "Luke.23.54", "label": "The Sabbath begins", "quote": "the Sabbath was beginning", "at": {"day": 0, "hour": 17.75}, "basis": "At sunset, ≈6 p.m."},
+    {"ref": "Luke.23.56", "label": "Spices prepared; the Sabbath rest", "quote": "they rested on the Sabbath", "at": {"day": 0, "hour": 17.9}, "basis": "Prepared as the Sabbath began and then set aside; the verse may also mean they finished after it ended."},
+    {"ref": "Luke.24.1", "label": "The women come to the tomb", "quote": "very early in the morning", "at": {"day": "sunday", "hour": 5.5}, "basis": "Before or at sunrise, ≈6 a.m."},
+    {"ref": "Luke.24.21", "label": "The road to Emmaus", "quote": "it is the third day since these things took place", "at": {"day": "sunday", "hour": 14}, "basis": "'That same day' (24:13), before 'it is nearly evening' (24:29); the afternoon is a guess."},
+    {"ref": "Luke.24.29", "label": "At Emmaus", "quote": "it is nearly evening and the day is almost over", "at": {"day": "sunday", "hour": 17}, "basis": "Before sunset, ≈6 p.m."}
+   ]
+  },
+  {
+   "id": "john", "label": "John", "ref": "John.18.28-20.1",
+   "events": [
+    {"ref": "John.18.28", "label": "To Pilate’s Praetorium", "quote": "By now it was early morning", "at": {"day": 0, "hour": 6}, "basis": "At first light, ≈6 a.m."},
+    {"ref": "John.19.14", "label": "“Here is your King!”", "quote": "about the sixth hour", "at": {"day": 0, "hour": 12}, "basis": "Counted from sunrise, as the other gospels count, the sixth hour is ≈noon, three hours after Mark's 'third hour' crucifixion (Mark 15:25). Some read John as counting from midnight, which would make it ≈6 a.m.; others take one of the figures as a copyist's slip. Drawn here at noon."},
+    {"ref": "John.19.30", "label": "He dies", "quote": "He yielded up His spirit", "at": {"day": 0, "hour": 15}, "basis": "John gives no hour; ≈3 p.m. from the other gospels' 'ninth hour'."},
+    {"ref": "John.19.31", "label": "Before the High Sabbath", "quote": "the next day was a High Sabbath", "at": {"day": 0, "hour": 16}, "basis": "The bodies were to be taken down before the Sabbath began at sunset; the hour is a guess."},
+    {"ref": "John.19.42", "label": "Buried", "quote": "they placed Jesus there", "at": {"day": 0, "hour": 17.5}, "basis": "Before sunset, ≈6 p.m., because 'it was the Jewish day of Preparation'."},
+    {"ref": "John.20.1", "label": "Mary Magdalene at the tomb", "quote": "while it was still dark", "at": {"day": "sunday", "hour": 5}, "basis": "Before sunrise, ≈6 a.m."}
+   ]
+  }
+ ],
+ "readings": [
+  {
+   "id": "friday", "label": "Friday", "weekday": 5, "high": 1,
+   "confidence": "interpretation",
+   "rose": {"from": {"day": "sunday", "hour": -6}, "to": {"day": "sunday", "hour": 5}, "basis": "The text never says when he rose. The tomb was already empty when Mary Magdalene came 'while it was still dark' (John 20:1), and 'the third day' begins at sunset on Saturday, so the chart shades that night."},
+   "basis": "Mark calls the day of the crucifixion 'Preparation Day (that is, the day before the Sabbath)' (15:42), and Luke has the women rest on the Sabbath and come to the tomb on the first day of the week with no day between (23:54–24:1). John's 'High Sabbath' (19:31) is then the weekly Sabbath falling in the Passover week.",
+   "thirdDay": "Friday is the first day, the Sabbath the second, Sunday the third: counted inclusively, as Esther's 'three days' end 'on the third day' (Esth 4:16–5:1).",
+   "nights": "Only two nights, Friday's and Saturday's. The reading takes 'three days and three nights' as an idiom for the same inclusive span, a part of a day counting as a whole day and night; Matthew himself sets 'after three days' beside 'until the third day' (27:63–64).",
+   "traditions": ["The church's observance of Good Friday and Easter since the early centuries", "Most commentators, among them Harold Hoehner"],
+   "sources": [
+    {"kind": "scripture", "ref": "Mark.15.42"},
+    {"kind": "scripture", "ref": "Luke.23.54-24.1"},
+    {"kind": "scripture", "ref": "Matt.27.63-64", "note": "'after three days' and 'until the third day' used of the same promise"},
+    {"kind": "scripture", "ref": "Esth.4.16-5.1", "note": "'three days, night or day', ending 'on the third day'"},
+    {"kind": "scripture", "ref": "1Sam.30.12-13", "note": "'three days and three nights' beside 'three days ago'"},
+    {"kind": "primary", "title": "Babylonian Talmud, Pesachim 4a", "url": "https://www.sefaria.org/Pesachim.4a", "note": "'the legal status of part of the day is like that of an entire day' (William Davidson translation)"},
+    {"kind": "primary", "title": "Jerusalem Talmud, Shabbat 9:3", "url": "https://www.sefaria.org/Jerusalem_Talmud_Shabbat.9.3", "note": "Eleazar ben Azariah: 'day and night each are a term, and part of a term is like the whole' (Guggenheimer's translation); the rendering usually quoted for Matthew 12:40 makes a day and a night one term"},
+    {"kind": "scholarship", "title": "Chronological Aspects of the Life of Christ", "author": "Harold W. Hoehner", "year": 1977, "note": "ch. 4, 'The Day of Christ's Crucifixion', weighs the Wednesday, Thursday and Friday views and holds Friday"}
+   ]
+  },
+  {
+   "id": "thursday", "label": "Thursday", "weekday": 4, "high": 1,
+   "confidence": "interpretation",
+   "rose": {"from": {"day": "sunday", "hour": -6}, "to": {"day": "sunday", "hour": 5}, "basis": "As in the Friday reading: after sunset on Saturday, and before Mary Magdalene came 'while it was still dark' (John 20:1)."},
+   "basis": "John's 'High Sabbath' (19:31) is taken as the first day of Unleavened Bread, a day of rest whatever its weekday (Lev 23:6–7), falling on Friday, with the weekly Sabbath after it. Two Sabbaths in a row leave Thursday for the crucifixion.",
+   "thirdDay": "Counted inclusively from Thursday, Sunday is the fourth day. The reading has to count 'the third day' from the day after the crucifixion: Friday, Saturday, Sunday.",
+   "nights": "Thursday, Friday and Saturday nights: three nights, and three daylights (Thursday's last hours, Friday, Saturday), before a rising on Sunday before dawn.",
+   "traditions": ["Roger Rusk, 'The Day He Died' (1974)", "Some evangelical writers since"],
+   "sources": [
+    {"kind": "scripture", "ref": "John.19.31"},
+    {"kind": "scripture", "ref": "Lev.23.5-7", "note": "the first day of Unleavened Bread a day of rest"},
+    {"kind": "scripture", "ref": "Matt.12.40"},
+    {"kind": "scholarship", "title": "'The Day He Died'", "author": "Roger Rusk", "year": 1974, "note": "Christianity Today, 29 March 1974"},
+    {"kind": "scholarship", "title": "Chronological Aspects of the Life of Christ", "author": "Harold W. Hoehner", "year": 1977, "note": "ch. 4 sets out the Thursday view and argues against it"}
+   ]
+  },
+  {
+   "id": "wednesday", "label": "Wednesday", "weekday": 3, "high": 1,
+   "confidence": "interpretation",
+   "rose": {"from": {"day": "sunday", "hour": -6.5}, "to": {"day": "sunday", "hour": -6.5}, "basis": "The reading has him rise just before sunset on Saturday, 72 hours after a burial just before sunset on Wednesday; the tomb was already empty when the women came on Sunday."},
+   "basis": "John's 'High Sabbath' (19:31) is the first day of Unleavened Bread (Lev 23:6–7), on Thursday, and the weekly Sabbath follows on Saturday with Friday between. The reading finds that working day in Mark and Luke: the women buy spices 'when the Sabbath was over' (Mark 16:1), prepare them, and then rest 'on the Sabbath, according to the commandment' (Luke 23:56).",
+   "thirdDay": "Counted inclusively from Wednesday, Sunday is the fifth day. The reading counts 'the third day since these things took place' (Luke 24:21) from something later, such as the guard set at the tomb the next day (Matt 27:62–66).",
+   "nights": "Wednesday, Thursday and Friday nights, and Thursday, Friday and Saturday daylight: three days and three nights taken literally, 72 hours.",
+   "moves": {
+    "Mark.16.1": {"day": 1, "hour": 19, "basis": "After the High Sabbath ended at sunset on Thursday; the reading has them buy spices then or on Friday."},
+    "Luke.23.56": {"day": 2, "hour": 10, "basis": "The spices prepared on Friday, the working day between the two Sabbaths, and the rest kept on Saturday."}
+   },
+   "traditions": ["R. A. Torrey (1907)", "E. W. Bullinger's Companion Bible", "Sabbath-keeping Churches of God"],
+   "sources": [
+    {"kind": "scripture", "ref": "Matt.12.40"},
+    {"kind": "scripture", "ref": "John.19.31"},
+    {"kind": "scripture", "ref": "Mark.16.1"},
+    {"kind": "scripture", "ref": "Luke.23.56"},
+    {"kind": "scholarship", "title": "Difficulties and Alleged Errors and Contradictions in the Bible", "author": "R. A. Torrey", "year": 1907, "note": "argues for a Wednesday crucifixion from Matthew 12:40"},
+    {"kind": "scholarship", "title": "The Companion Bible", "author": "E. W. Bullinger", "year": "1909–1922", "note": "appendices on 'three days and three nights' and the days of the Passion week"},
+    {"kind": "scholarship", "title": "Chronological Aspects of the Life of Christ", "author": "Harold W. Hoehner", "year": 1977, "note": "ch. 4 sets out the Wednesday view and argues against it"}
+   ]
+  }
+ ],
+ "sources": [
+  {"kind": "scripture", "ref": "Mark.15.25-16.2"},
+  {"kind": "scripture", "ref": "Luke.23.54"},
+  {"kind": "scripture", "ref": "Esth.4.16-5.1"},
+  {"kind": "scripture", "ref": "Matt.27.63-64"},
+  {"kind": "primary", "title": "Babylonian Talmud, Pesachim 4a", "url": "https://www.sefaria.org/Pesachim.4a", "note": "'the legal status of part of the day is like that of an entire day' (William Davidson translation)"},
+  {"kind": "scholarship", "title": "Chronological Aspects of the Life of Christ", "author": "Harold W. Hoehner", "year": 1977}
+ ]
+}

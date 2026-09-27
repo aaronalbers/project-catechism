@@ -2,7 +2,7 @@ import { useEffect, useSyncExternalStore } from 'react';
 import { hashFromLoc, locFromHash, sameLoc, type VerseLoc } from '@/lib/refs';
 import { readStored, writeStored } from '@/lib/storage';
 
-export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos' | 'reigns';
+export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos' | 'reigns' | 'days';
 /** Which reconstruction dates the kings (a reading's id, 'thiele' first), or 'stated' for the stated lengths laid end to end. */
 export type ReignDates = string;
 export type Theme = 'system' | 'light' | 'dark';
@@ -24,10 +24,12 @@ export interface State {
   feature: string | null;
   /** How the reign charts date the kings, inline and in the Reign tab alike. */
   reignDates: ReignDates;
+  /** Which weekday the three days' charts put the crucifixion on (a reading's id in `passion.json`), inline and in the Days tab alike. */
+  passionReading: string;
   /** The person whose profile the People tab shows (a generated person's id), or null for the chapter's list. It outlives `goTo`, so a verse in a profile can be read with the profile still open. */
   person: string | null;
 }
-export type Reveal = 'chiasm' | 'tally' | 'reign';
+export type Reveal = 'chiasm' | 'tally' | 'reign' | 'passion';
 
 /** Route hash for the index: #/index or #/index/models. */
 function indexFromHash(hash: string): string | null {
@@ -47,6 +49,7 @@ let state: State = {
   reveal: null,
   feature: null,
   reignDates: readStored<ReignDates>('reign-dates', 'thiele'),
+  passionReading: readStored<string>('passion-reading', 'friday'),
   person: null,
 };
 
@@ -66,6 +69,7 @@ export function setState(patch: Partial<State> | ((s: State) => Partial<State>))
   if (p.tab) writeStored('tab', state.tab);
   if (p.theme) writeStored('theme', state.theme);
   if (p.reignDates) writeStored('reign-dates', state.reignDates);
+  if (p.passionReading) writeStored('passion-reading', state.passionReading);
   emit();
 }
 

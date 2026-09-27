@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
+import type { Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -18,6 +18,7 @@ import videos from '@content/videos.json';
 import journeys from '@content/journeys.json';
 import tallies from '@content/tallies.json';
 import monarchy from '@content/monarchy.json';
+import passion from '@content/passion.json';
 
 export const PEOPLE = people as unknown as Person[];
 export const PROPHECIES = prophecies as unknown as Prophecy[];
@@ -32,6 +33,7 @@ export const VIDEOS = videos as unknown as Video[];
 export const JOURNEYS = journeys as unknown as Journey[];
 export const TALLIES = tallies as unknown as Tally[];
 export const MONARCHY = monarchy as unknown as Monarchy;
+export const PASSION = passion as unknown as Passion;
 /** The kings of the divided kingdoms, whose reigns the reader charts, in the order `rulers.json` gives them. */
 export const KINGS = RULERS.filter((r): r is Ruler & { reign: NonNullable<Ruler['reign']> } => !!r.reign);
 
@@ -188,6 +190,7 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
     ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
     ['chiasm', here(CHIASMS.map((c) => c.ref))],
     ['tally', here(TALLIES.map((t) => t.ref))],
+    ['passion', here([...PASSION.accounts.flatMap((a) => a.events.map((e) => e.ref)), ...PASSION.sayings.map((x) => x.ref)])],
     ['reign', here(KINGS.flatMap((k) => [k.reign.ref, ...(k.reign.chronicles ? [k.reign.chronicles.ref] : [])]))],
   ];
   for (let v = 1; v <= LONGEST_CHAPTER; v++) {

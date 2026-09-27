@@ -7,6 +7,8 @@ import { LinksPanel } from '@/panels/LinksPanel';
 import { VideosPanel } from '@/panels/VideosPanel';
 import { ReignsPanel } from '@/panels/ReignsPanel';
 import { accountAt } from '@/lib/reign';
+import { passionInChapter } from '@/lib/passion';
+import { DaysPanel } from '@/panels/DaysPanel';
 import { namedInChapter, usePeopleInBook } from '@/lib/people';
 
 // Map, graph and 3D libraries are only fetched when their tab is opened.
@@ -21,6 +23,7 @@ const TABS: { id: PanelTab; label: string }[] = [
   { id: 'people', label: 'People' },
   { id: 'links', label: 'Links' },
   { id: 'reigns', label: 'Reign' },
+  { id: 'days', label: 'Days' },
   { id: 'models', label: 'Models' },
   { id: 'videos', label: 'Videos' },
 ];
@@ -38,8 +41,8 @@ export function ContextPanel() {
     videos: videosFor(loc).length,
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc, named]);
-  // The Reign tab is only for Kings and Chronicles, where the kings are charted.
-  const tabs = accountAt(loc) || tab === 'reigns' ? TABS : TABS.filter((t) => t.id !== 'reigns');
+  // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date the three days.
+  const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || tab === 'reigns') && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || tab === 'days'));
   return (
     <>
       <div className="tabs" role="tablist">
@@ -62,6 +65,7 @@ export function ContextPanel() {
           {tab === 'models' && <ModelsPanel />}
           {tab === 'videos' && <VideosPanel />}
           {tab === 'reigns' && <ReignsPanel />}
+          {tab === 'days' && <DaysPanel />}
         </Suspense>
       )}
     </>

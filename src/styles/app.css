@@ -560,3 +560,47 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .reign-pane .reign-grid { grid-template-columns: 44px 1fr; }
 .reign-pane .reign-fact { grid-template-columns: 70px 1fr; }
 .reign-pane .reign-fact > div { font-size: 13px; }
+
+/* The three days: Jewish days (sunset to sunset) over civil days, the tomb across them, a pin per dated verse. */
+:root { --passion: #8a4f9e; --night: color-mix(in oklab, #2a3560 16%, transparent); --sabbath: color-mix(in oklab, #c79a2e 22%, transparent); }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --passion: #c48ad6; --night: color-mix(in oklab, #000 34%, transparent); --sabbath: color-mix(in oklab, #d6ab45 20%, transparent); }
+.marker.passion { background: var(--passion); }
+.days-block { margin: 8px 0 4px; font: 12px/1.45 var(--sans); color: var(--muted); cursor: default; }
+.days-cap { margin: 0 0 6px; }
+.days-cap .kind::before { background: var(--passion); }
+.days-cap .when { font-variant-numeric: tabular-nums; }
+.days-chart { margin: 0 0 4px; }
+.days-row { position: relative; }
+.days-row.jewish { height: 44px; border-radius: 4px; overflow: hidden; box-shadow: inset 0 0 0 1px var(--border); }
+.days-row .day { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--border); }
+.days-row .day:first-child { border-left: 0; }
+.days-row .day.sabbath { background: var(--sabbath); }
+.days-row .day .night { position: absolute; top: 0; bottom: 0; left: 0; width: 50%; background: var(--night); }
+.days-row .day .nm { position: absolute; top: 2px; left: 4px; right: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 10px; color: var(--text); }
+.days-row .day .n { position: absolute; top: 2px; left: 4px; min-width: 14px; height: 14px; border-radius: 7px; background: var(--passion); color: var(--surface); font-size: 10px; font-weight: 700; line-height: 14px; text-align: center; }
+.days-row .tomb, .days-row .cross { position: absolute; bottom: 5px; height: 7px; transition: left 0.5s ease, width 0.5s ease; }
+.days-row .tomb { background: var(--text); border-radius: 2px 0 0 2px; opacity: 0.75; }
+.days-row .tomb.rising { border-radius: 0 2px 2px 0; background: linear-gradient(90deg, var(--text), transparent); }
+.days-row .cross { height: 0; bottom: 8px; border-top: 1.5px dashed var(--text); opacity: 0.6; }
+.days-row .rose { position: absolute; bottom: 2px; width: 2px; height: 13px; margin-left: -1px; background: var(--passion); }
+.days-row .dpin { position: absolute; top: 21px; width: 9px; height: 9px; margin-left: -4.5px; padding: 0; border-radius: 50%; background: var(--passion); box-shadow: 0 0 0 1.5px var(--surface); transition: left 0.5s ease; }
+.days-row .dpin.span { height: 5px; top: 23px; margin-left: 0; border-radius: 3px; opacity: 0.8; transition: left 0.5s ease, width 0.5s ease; }
+.days-row .dpin.ahead { background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--passion); }
+.days-row .dpin.current { width: 13px; height: 13px; margin-left: -6.5px; top: 19px; box-shadow: 0 0 0 2px var(--surface), 0 0 0 3.5px var(--passion); z-index: 2; }
+.days-row .dpin.span.current { height: 7px; top: 22px; margin-left: 0; }
+.days-row.civil { height: 16px; margin-top: 2px; }
+.days-row.civil span { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--border); padding-left: 3px; font-size: 10px; line-height: 16px; overflow: hidden; white-space: nowrap; }
+.days-legend { margin-left: 0; }
+.reign-pane .days-legend { margin-left: 0; }
+.sw.night-key { background: var(--night); box-shadow: inset 0 0 0 1px var(--border); }
+.sw.sabbath-key { background: var(--sabbath); box-shadow: inset 0 0 0 1px var(--border); }
+.sw.tomb-key { height: 6px; background: var(--text); opacity: 0.75; }
+.sw.rising-key { height: 6px; background: linear-gradient(90deg, var(--text), transparent); }
+.sw.dpin-key { width: 9px; height: 9px; border-radius: 50%; background: var(--passion); }
+.sw.count-key { width: 14px; height: 14px; border-radius: 7px; background: var(--passion); }
+.days-compare { width: 100%; border-collapse: collapse; margin: 4px 0 8px; font: 12px var(--sans); font-variant-numeric: tabular-nums; }
+.days-compare th, .days-compare td { padding: 3px 6px; border-bottom: 1px solid var(--border); text-align: left; }
+.days-compare th { font-weight: 600; color: var(--muted); font-size: 11px; }
+.days-compare tr.current td { color: var(--text); font-weight: 600; }
+.days-compare tr.current td:first-child { box-shadow: inset 3px 0 0 var(--passion); }
+.days-row .day.counted .nm { left: 22px; }

@@ -1,5 +1,5 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PROFILE_INDEX, PROPHECIES, QUOTES, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PROFILE_INDEX, PROPHECIES, QUOTES, TALLIES } from './content';
 import { BOOKS, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
@@ -8,7 +8,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -84,6 +84,20 @@ export const CATALOG: CatalogSection[] = [
       go: k.reign.ref,
       lines: [{ label: 'Kings', refs: [k.reign.ref] }, ...(k.reign.chronicles ? [{ label: 'Chronicles', refs: [k.reign.chronicles.ref] }] : [])],
     }))),
+  },
+  {
+    id: 'three-days', kind: 'passion', title: 'The three days', tab: 'days', reveal: 'passion',
+    blurb: 'From the Last Supper to the empty tomb on one strip: Jewish days from sunset to sunset over ours, a pin for each verse that says when, and the Friday, Thursday and Wednesday readings.',
+    entries: [
+      ...PASSION.accounts.map((a) => ({
+        id: a.id, kind: 'passion' as const, title: `As ${a.label} tells it`, summary: a.events.map((e) => e.label).join(', '),
+        go: a.events[0].ref, lines: [{ label: 'Dated', refs: a.events.map((e) => e.ref) }],
+      })),
+      {
+        id: 'sayings', kind: 'passion', title: '“On the third day”', summary: 'Where the three days are foretold or counted.',
+        go: PASSION.sayings[0].ref, lines: [{ refs: PASSION.sayings.map((s) => s.ref) }],
+      },
+    ],
   },
   {
     id: 'journeys', kind: 'journey', title: 'Journeys and borders', tab: 'places',
