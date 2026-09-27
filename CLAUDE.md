@@ -95,9 +95,11 @@ suite enforces it.
 ### Panels
 
 `src/components/ContextPanel.tsx` owns the tab strips and shows per-tab counts derived from
-`loc`. On a wide screen the panel holds up to three panes (`layout` in the store; the rules are
+`loc`. On a wide screen the panel holds as many panes as fit (`layout` in the store; the rules are
 pure functions in `src/lib/panes.ts`), stacked or side by side, resized by grips, each showing one
-tab; a narrow screen shows only the pane in use. A tab is in at most one pane. Ask for a tab with
+tab, so never more panes than tabs; a narrow screen shows only the pane in use. When a window holds
+fewer panes than the layout has, the ones used least recently are hidden, not closed. A tab is in at
+most one pane. Ask for a tab with
 `openTab(tab)` or `goTo(loc, { openTab })`, never by setting state: it brings forward the pane
 already showing it, or replaces the pane used least recently. The layout lives in localStorage,
 not the URL. Places, People and Models are `lazy()` imports so Leaflet, the graph library and

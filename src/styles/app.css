@@ -168,6 +168,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .iconbtn.small { width: 28px; height: 28px; }
 .iconbtn.small svg { width: 16px; height: 16px; }
 .tab.elsewhere { opacity: 0.5; }
+.pane-hidden { font-size: 12px; color: var(--muted); padding: 0 6px; white-space: nowrap; cursor: help; }
 .grip { flex: none; position: relative; z-index: 3; background: var(--border); touch-action: none; }
 .grip::before { content: ''; position: absolute; }
 .grip-x { width: 1px; cursor: col-resize; }

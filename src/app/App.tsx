@@ -35,7 +35,7 @@ export function App() {
   // nor so narrow that panes side by side would have to stack.
   const least = layout.split === 'cols' ? Math.max(PANEL_MIN_PX, layout.panes.length * PANE_MIN_PX) : PANEL_MIN_PX;
   const resize = (d: number, done: boolean) => {
-    const w = Math.round(Math.max(least, Math.min(width - d, viewport - READER_MIN_PX)));
+    const w = Math.round(Math.min(Math.max(least, width - d), Math.max(PANEL_MIN_PX, viewport - READER_MIN_PX)));
     if (done) setLayout({ width: w }); else main.current?.style.setProperty('--panel-w', `${w}px`);
   };
   const reset = () => setLayout({ width: layout.split === 'cols' ? Math.max(DEFAULT_LAYOUT.width, layout.panes.length * PANE_MIN_PX) : DEFAULT_LAYOUT.width });

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { choose, effectiveSplit, panelWidth, place, readLayout, type Layout, type Pane } from '@/lib/panes';
+import { choose, fitting, panelWidth, place, readLayout, visible, type Layout, type Pane } from '@/lib/panes';
 
 const panes = (...tabs: Pane['tab'][]): Pane[] => tabs.map((tab) => ({ tab, size: 1 }));
 const tabs = (ps: Pane[]) => ps.map((p) => p.tab);
@@ -36,10 +36,27 @@ describe('layout', () => {
     expect(tabs(readLayout(null, 'words').panes)).toEqual(['words']);
     expect(tabs(readLayout({ panes: [] }, null).panes)).toEqual(['insights']);
   });
-  it('keeps the reader from being squeezed, and stacks panes too narrow to sit side by side', () => {
+  it('refuses a stored layout that shows a tab twice', () => {
+    expect(tabs(readLayout({ panes: panes('links', 'links') }, null).panes)).toEqual(['insights']);
+  });
+  it('keeps the reader from being squeezed', () => {
     const l: Layout = { panes: panes('links', 'words', 'insights'), split: 'cols', width: 1000 };
     expect(panelWidth(l, 1200)).toBe(760);
-    expect(effectiveSplit(l, 1200)).toBe('rows');
-    expect(effectiveSplit(l, 1600)).toBe('cols');
+  });
+  it('fits panes by width side by side and by height stacked', () => {
+    expect(fitting('cols', 760, 800)).toBe(2);
+    expect(fitting('cols', 3000, 800)).toBe(10);
+    expect(fitting('rows', 3000, 800)).toBe(4);
+    expect(fitting('rows', 3000, 100)).toBe(1);
+  });
+});
+
+describe('visible', () => {
+  it('shows every pane that fits', () => {
+    expect(visible(3, [], 0, 5)).toEqual([0, 1, 2]);
+  });
+  it('shows the panes used most recently, the one in use always, in layout order', () => {
+    expect(visible(4, [4, 1, 3, 2], 1, 2)).toEqual([0, 1]);
+    expect(visible(4, [1, 2, 3, 4], 0, 2)).toEqual([0, 3]);
   });
 });

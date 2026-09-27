@@ -1,7 +1,7 @@
-// The context panel's panes: on a wide screen it can hold up to three, stacked or side by side, each
-// showing one tab. Every panel derives its contents from the location alone, so panes need no
-// coordinating; this only decides which tab shows where. The layout is a per-device preference, kept
-// in localStorage, not in the URL.
+// The context panel's panes: on a wide screen it holds as many as fit, stacked or side by side, each
+// showing one tab (so never more panes than tabs). Every panel derives its contents from the location
+// alone, so panes need no coordinating; this only decides which tab shows where. The layout is a
+// per-device preference, kept in localStorage, not in the URL.
 import { useSyncExternalStore } from 'react';
 import type { PanelTab } from '@/app/store';
 
@@ -18,19 +18,20 @@ export interface Layout {
   width: number;
 }
 
-export const MAX_PANES = 3;
 /** Narrower than this and the panel sits under the reader and shows one pane (the CSS breakpoint). */
 export const NARROW_PX = 900;
 /** The least the reader keeps beside the panel, and the least a pane side by side gets. */
 export const READER_MIN_PX = 440;
 export const PANEL_MIN_PX = 320;
 export const PANE_MIN_PX = 300;
+/** The least a stacked pane gets in height, tab strip included. */
+export const PANE_MIN_H_PX = 200;
 export const DEFAULT_LAYOUT: Layout = { panes: [{ tab: 'insights', size: 1 }], split: 'rows', width: 420 };
 
 /** A stored layout, or the default when it is missing or malformed; `tab` is the single tab older versions kept. */
 export function readLayout(stored: unknown, tab: PanelTab | null): Layout {
   const l = stored as Partial<Layout> | null;
-  if (l && Array.isArray(l.panes) && l.panes.length && l.panes.length <= MAX_PANES && l.panes.every((p) => typeof p?.tab === 'string' && p.size > 0))
+  if (l && Array.isArray(l.panes) && l.panes.length && l.panes.every((p) => typeof p?.tab === 'string' && p.size > 0) && new Set(l.panes.map((p) => p.tab)).size === l.panes.length)
     return { panes: l.panes, split: l.split === 'cols' ? 'cols' : 'rows', width: typeof l.width === 'number' ? l.width : DEFAULT_LAYOUT.width };
   return tab ? { ...DEFAULT_LAYOUT, panes: [{ tab, size: 1 }] } : DEFAULT_LAYOUT;
 }
@@ -59,9 +60,24 @@ export function panelWidth(layout: Layout, viewport: number): number {
   return Math.max(PANEL_MIN_PX, Math.min(layout.width, viewport - READER_MIN_PX));
 }
 
-/** Side by side only when every pane gets its minimum width; otherwise stacked. */
-export function effectiveSplit(layout: Layout, viewport: number): Layout['split'] {
-  return layout.split === 'cols' && panelWidth(layout, viewport) / layout.panes.length >= PANE_MIN_PX ? 'cols' : 'rows';
+/**
+ * How many panes fit: side by side in `width` px, or stacked in `height` px. Pass the panel's width to
+ * learn how many it shows, or the most it could widen to (`viewport - READER_MIN_PX`) for how many it could hold.
+ */
+export function fitting(split: Layout['split'], width: number, height: number): number {
+  return Math.max(1, Math.floor(split === 'cols' ? width / PANE_MIN_PX : height / PANE_MIN_H_PX));
+}
+
+/**
+ * The panes shown when only `fits` of them fit (one on a narrow screen): the ones used most recently,
+ * the pane in use always among them, in their layout order. The rest are kept, not closed; a link to a
+ * tab one of them holds brings it back.
+ */
+export function visible(count: number, used: number[], focus: number, fits: number): number[] {
+  const all = [...Array(count).keys()];
+  if (fits >= count) return all;
+  const rank = (i: number) => (i === focus ? Infinity : used[i] ?? 0);
+  return all.sort((a, b) => rank(b) - rank(a) || a - b).slice(0, fits).sort((a, b) => a - b);
 }
 
 const subscribe = (cb: () => void) => { addEventListener('resize', cb); return () => removeEventListener('resize', cb); };

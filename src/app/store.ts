@@ -1,7 +1,7 @@
 import { useEffect, useSyncExternalStore } from 'react';
 import { hashFromLoc, locFromHash, sameLoc, type VerseLoc } from '@/lib/refs';
 import { readStored, writeStored } from '@/lib/storage';
-import { choose, isNarrow, MAX_PANES, place, readLayout, type Layout } from '@/lib/panes';
+import { choose, isNarrow, place, readLayout, type Layout } from '@/lib/panes';
 
 export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos' | 'reigns' | 'days';
 /** Which reconstruction dates the kings (a reading's id, 'thiele' first), or 'stated' for the stated lengths laid end to end. */
@@ -112,7 +112,7 @@ export function focusPane(i: number) { if (state.focus !== i) setState((s) => fo
 export function addPane(tab: PanelTab) {
   setState((s) => {
     const panes = s.layout.panes;
-    if (panes.length >= MAX_PANES) return {};
+    if (panes.some((p) => p.tab === tab)) return {};
     const size = panes.reduce((a, p) => a + p.size, 0) / panes.length;
     return { layout: { ...s.layout, panes: [...panes, { tab, size }] }, ...focusing(s, panes.length) };
   });

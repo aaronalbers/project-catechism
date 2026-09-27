@@ -1,7 +1,7 @@
 import { lazy, memo, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { addPane, closePane, focusPane, getState, pickTab, setLayout, useStore, type PanelTab } from '@/app/store';
 import { insightsFor, modelsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
-import { effectiveSplit, isNarrow, MAX_PANES, PANE_MIN_PX, useViewportWidth, type Pane } from '@/lib/panes';
+import { fitting, isNarrow, PANE_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth, visible, type Pane } from '@/lib/panes';
 import { InsightsPanel } from '@/panels/InsightsPanel';
 import { WordsPanel } from '@/panels/WordsPanel';
 import { LinksPanel } from '@/panels/LinksPanel';
@@ -53,11 +53,20 @@ const PanelBody = memo(function PanelBody({ tab }: { tab: PanelTab }) {
 export function ContextPanel() {
   const layout = useStore((s) => s.layout);
   const focus = useStore((s) => s.focus);
+  const used = useStore((s) => s.used);
   const loc = useStore((s) => s.loc);
   const open = useStore((s) => s.panelOpen);
   const viewport = useViewportWidth();
   const named = usePeopleInBook(loc.book);
   const box = useRef<HTMLDivElement>(null);
+  // The panel's height, for how many stacked panes fit.
+  const [height, setHeight] = useState(() => innerHeight - 120);
+  useEffect(() => {
+    if (!box.current) return;
+    const ro = new ResizeObserver(([e]) => setHeight(e.contentRect.height));
+    ro.observe(box.current);
+    return () => ro.disconnect();
+  }, []);
   const counts = useMemo((): Partial<Record<PanelTab, number>> => ({
     insights: insightsFor(loc).length,
     models: modelsFor(loc).length,
@@ -68,12 +77,15 @@ export function ContextPanel() {
   }), [loc, named]);
   const { panes } = layout;
   const narrow = isNarrow(viewport);
-  const split = effectiveSplit(layout, viewport);
+  const split = layout.split;
   const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date the three days.
   const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || showing('reigns')) && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || showing('days')));
-  // A narrow screen shows only the pane in use.
-  const shown = narrow ? [Math.min(focus, panes.length - 1)] : panes.map((_, i) => i);
+  // As many panes as fit, the ones used most recently; a narrow screen shows only the pane in use.
+  const shown = visible(panes.length, used, Math.min(focus, panes.length - 1), narrow ? 1 : fitting(split, panelWidth(layout, viewport), height));
+  const hidden = panes.length - shown.length;
+  // Another pane fits if the panel could widen to hold it beside the reader (or has the height, stacked).
+  const room = fitting(split, viewport - READER_MIN_PX, height) > panes.length;
 
   const add = () => {
     const free = tabs.filter((t) => !showing(t.id));
@@ -86,18 +98,17 @@ export function ContextPanel() {
     const cols = split !== 'cols';
     setLayout(cols ? { split: 'cols', width: Math.max(layout.width, panes.length * PANE_MIN_PX) } : { split: 'rows' });
   };
-  // Dragging the grip between panes a and a + 1 moves share from one to the other, each keeping a minimum.
-  const resize = (a: number) => (d: number, done: boolean) => {
+  // Dragging the grip between shown panes a and b moves share from one to the other, each keeping a minimum.
+  const resize = (a: number, b: number) => (d: number, done: boolean) => {
     const els = box.current ? [...box.current.querySelectorAll<HTMLElement>(':scope > .pane')] : [];
-    if (els.length !== panes.length) return;
+    if (els.length !== shown.length) return;
     const px = (el: HTMLElement) => (split === 'cols' ? el.offsetWidth : el.offsetHeight);
-    const total = panes.reduce((t, p) => t + p.size, 0);
-    const perPx = total / els.reduce((t, el) => t + px(el), 0);
-    const pair = panes[a].size + panes[a + 1].size, min = (split === 'cols' ? 200 : 90) * perPx;
+    const perPx = shown.reduce((t, i) => t + panes[i].size, 0) / els.reduce((t, el) => t + px(el), 0);
+    const pair = panes[a].size + panes[b].size, min = (split === 'cols' ? 200 : 90) * perPx;
     const sa = Math.max(min, Math.min(pair - min, panes[a].size + d * perPx));
-    const sizes = panes.map((p, i) => (i === a ? sa : i === a + 1 ? pair - sa : p.size));
+    const sizes = panes.map((p, i) => (i === a ? sa : i === b ? pair - sa : p.size));
     if (done) setLayout({ panes: panes.map((p, i) => ({ ...p, size: sizes[i] })) });
-    else els.forEach((el, i) => { el.style.flexGrow = String(sizes[i]); });
+    else els.forEach((el, k) => { el.style.flexGrow = String(sizes[shown[k]]); });
   };
   const even = () => setLayout({ panes: panes.map((p) => ({ ...p, size: 1 })) });
 
@@ -105,15 +116,16 @@ export function ContextPanel() {
     <div ref={box} className={`panes ${split}`}>
       {shown.map((i, k) => (
         <PaneBox key={panes[i].tab} i={i} pane={panes[i]} lone={shown.length === 1} open={open} narrow={narrow}
-          grip={k > 0 && <Grip axis={split === 'cols' ? 'x' : 'y'} label="Resize panes" onDrag={resize(i - 1)} onReset={even} />}
-          strip={tabs.map((t) => ({ ...t, n: counts[t.id], elsewhere: !narrow && panes.some((p, j) => j !== i && p.tab === t.id) }))}
+          grip={k > 0 && <Grip axis={split === 'cols' ? 'x' : 'y'} label="Resize panes" onDrag={resize(shown[k - 1], i)} onReset={even} />}
+          strip={tabs.map((t) => ({ ...t, n: counts[t.id], elsewhere: !narrow && shown.some((j) => j !== i && panes[j].tab === t.id) }))}
           tools={!narrow && <>
-            {i === 0 && panes.length > 1 && (
+            {k === 0 && hidden > 0 && <span className="pane-hidden" title={`${hidden} more ${hidden === 1 ? 'pane does' : 'panes do'} not fit: widen the window${split === 'cols' ? ' or stack the panes' : ''}, or pick a tab to bring its pane back`}>{hidden} hidden</span>}
+            {k === 0 && panes.length > 1 && (
               <button className="iconbtn small" onClick={toggleSplit} title={split === 'cols' ? 'Stack the panes' : 'Put the panes side by side'} aria-label={split === 'cols' ? 'Stack the panes' : 'Put the panes side by side'}>
                 {split === 'cols' ? <Icon.Rows /> : <Icon.Cols />}
               </button>
             )}
-            {i === 0 && panes.length < MAX_PANES && <button className="iconbtn small" onClick={add} title="Open another pane" aria-label="Open another pane"><Icon.Plus /></button>}
+            {k === 0 && room && panes.length < tabs.length && <button className="iconbtn small" onClick={add} title="Open another pane" aria-label="Open another pane"><Icon.Plus /></button>}
             {panes.length > 1 && <button className="iconbtn small" onClick={() => closePane(i)} title="Close this pane" aria-label="Close this pane"><Icon.Close /></button>}
           </>} />
       ))}
