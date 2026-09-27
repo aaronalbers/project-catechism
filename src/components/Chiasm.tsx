@@ -1,7 +1,7 @@
 // Chiastic structure drawn on the text: a ladder inside the verse for phrase-level chiasms, and a
 // margin rail with level headers and a structure strip for passage-level ones.
 import type { CSSProperties, ReactNode } from 'react';
-import { goTo, setState } from '@/app/store';
+import { goTo, openTab } from '@/app/store';
 import { depth, levelAt, levelStart, levelTouches, partner, tone } from '@/lib/chiasm';
 import { formatRef, type VerseLoc } from '@/lib/refs';
 import type { Chiasm } from '@/lib/types';
@@ -12,7 +12,7 @@ export const label = (s: string) => s.replace(/'/g, '′');
 
 export const levelStyle = (c: Chiasm, i: number) => ({ '--depth': depth(c, i), '--tone': tone(c, i) }) as CSSProperties;
 
-const showSources = () => setState({ tab: 'links', panelOpen: true });
+const showSources = () => openTab('links');
 
 function Toggle({ show, onToggle }: { show: boolean; onToggle: () => void }) {
   return <button className="chiasm-toggle" aria-pressed={show} onClick={(e) => { e.stopPropagation(); onToggle(); }}>{show ? 'Hide structure' : 'Show structure'}</button>;

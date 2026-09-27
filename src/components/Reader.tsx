@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { getState, goTo, setState, useStore } from '@/app/store';
+import { getState, goTo, openTab, useStore } from '@/app/store';
 import { loadBook, loadInterlinear } from '@/lib/data';
 import { CANON_BY_ID, CHIASMS, NARROWED, TEXT_BY_ID, markersForChapter, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
@@ -35,7 +35,7 @@ function VerseText({ text, verse, current, il, ladder, marks }: { text: string; 
         const w = ilIndex !== null ? il!.w[ilIndex] : null;
         const study = narrowed && w ? narrowedToken(t, w, il!) : undefined;
         if (!current && !study) return t;
-        const open = () => { if (ilIndex !== null) setState({ wordIndex: ilIndex, tab: 'words', panelOpen: true }); };
+        const open = () => { if (ilIndex !== null) openTab('words', { wordIndex: ilIndex }); };
         return (
           <span key={i} className={`w${ilIndex !== null && ilIndex === wordIndex ? ' active' : ''}${study ? ' narrow' : ''}`}
             title={study ? narrowTitle(t, w!, study) : w ? `${w[0]} (${w[4]})` : undefined}

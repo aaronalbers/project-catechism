@@ -3,7 +3,7 @@
 // prophets of the time, in one of the reconstructions or with the stated lengths end to end. The reader draws the chart
 // alone under each accession; the Reign tab adds the date toggle, the legend and the facts.
 import type { CSSProperties, ReactNode } from 'react';
-import { goTo, setState, useStore } from '@/app/store';
+import { goTo, openTab, setState, useStore } from '@/app/store';
 import { MONARCHY } from '@/lib/content';
 import { formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import {
@@ -33,7 +33,7 @@ export function ReignChart({ k, account, loc, show, onToggle }: { k: King; accou
     <div className="reign-block" onClick={(e) => e.stopPropagation()}>
       <div className="chiasm-cap reign-cap">
         <span className="kind">Reign</span>
-        <button className="name" onClick={() => setState({ tab: 'reigns', panelOpen: true })} title="Details, dates and sources in the Reign tab">
+        <button className="name" onClick={() => openTab('reigns')} title="Details, dates and sources in the Reign tab">
           {k.name}, {k.title.toLowerCase()} of {KINGDOM_NAME[k.reign.kingdom]}
         </button>
         <span className="when">{years(a, b)}{modeSuffix(mode)}</span>

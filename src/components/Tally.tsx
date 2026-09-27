@@ -2,13 +2,13 @@
 // count, all on one scale, each subtotal the text gives stacked from its rows, and the whole list
 // stacked under the verse that gives the total.
 import type { CSSProperties } from 'react';
-import { setState } from '@/app/store';
+import { openTab } from '@/app/store';
 import { comparedWith, earlierRow, groupMax, groupOf, groupRows, rowReached, tallyMax, tallyPlace, tallySum, wideLabels } from '@/lib/tally';
 import type { VerseLoc } from '@/lib/refs';
 import type { Tally, TallyGroup, TallyRow } from '@/lib/types';
 import { ConfidenceBadge } from './SourceList';
 
-const showSources = () => setState({ tab: 'links', panelOpen: true });
+const showSources = () => openTab('links');
 const fmt = (n: number) => n.toLocaleString('en-US');
 /** A change with its sign: +20,500, −37,100. */
 const delta = (n: number) => `${n > 0 ? '+' : n < 0 ? '−' : '±'}${fmt(Math.abs(n))}`;

@@ -1,0 +1,72 @@
+// The context panel's panes: on a wide screen it can hold up to three, stacked or side by side, each
+// showing one tab. Every panel derives its contents from the location alone, so panes need no
+// coordinating; this only decides which tab shows where. The layout is a per-device preference, kept
+// in localStorage, not in the URL.
+import { useSyncExternalStore } from 'react';
+import type { PanelTab } from '@/app/store';
+
+export interface Pane {
+  tab: PanelTab;
+  /** Its share of the panel, relative to the other panes' (flex-grow). */
+  size: number;
+}
+export interface Layout {
+  panes: Pane[];
+  /** Stacked (`rows`) or side by side (`cols`). */
+  split: 'rows' | 'cols';
+  /** The panel column's width in px, beside the reader. */
+  width: number;
+}
+
+export const MAX_PANES = 3;
+/** Narrower than this and the panel sits under the reader and shows one pane (the CSS breakpoint). */
+export const NARROW_PX = 900;
+/** The least the reader keeps beside the panel, and the least a pane side by side gets. */
+export const READER_MIN_PX = 440;
+export const PANEL_MIN_PX = 320;
+export const PANE_MIN_PX = 300;
+export const DEFAULT_LAYOUT: Layout = { panes: [{ tab: 'insights', size: 1 }], split: 'rows', width: 420 };
+
+/** A stored layout, or the default when it is missing or malformed; `tab` is the single tab older versions kept. */
+export function readLayout(stored: unknown, tab: PanelTab | null): Layout {
+  const l = stored as Partial<Layout> | null;
+  if (l && Array.isArray(l.panes) && l.panes.length && l.panes.length <= MAX_PANES && l.panes.every((p) => typeof p?.tab === 'string' && p.size > 0))
+    return { panes: l.panes, split: l.split === 'cols' ? 'cols' : 'rows', width: typeof l.width === 'number' ? l.width : DEFAULT_LAYOUT.width };
+  return tab ? { ...DEFAULT_LAYOUT, panes: [{ tab, size: 1 }] } : DEFAULT_LAYOUT;
+}
+
+/**
+ * Where a tab goes when a link asks for it: the pane already showing it, or else, on a wide screen,
+ * the pane used least recently (so the one being read is left alone), and on a narrow screen the one
+ * pane shown. Returns the panes and the index of the pane that now shows the tab.
+ */
+export function place(panes: Pane[], tab: PanelTab, used: number[], focus: number, narrow: boolean): { panes: Pane[]; at: number } {
+  const at = panes.findIndex((p) => p.tab === tab);
+  if (at >= 0) return { panes, at };
+  let lru = Math.min(focus, panes.length - 1);
+  if (!narrow) panes.forEach((_, i) => { if ((used[i] ?? 0) < (used[lru] ?? 0)) lru = i; });
+  return { panes: panes.map((p, i) => (i === lru ? { ...p, tab } : p)), at: lru };
+}
+
+/** A tab picked in pane `i`: shown there, and if another pane had it, that pane takes this one's tab instead. */
+export function choose(panes: Pane[], i: number, tab: PanelTab): Pane[] {
+  const j = panes.findIndex((p) => p.tab === tab);
+  return panes.map((p, k) => (k === i ? { ...p, tab } : k === j ? { ...p, tab: panes[i].tab } : p));
+}
+
+/** The panel's width on this viewport: the chosen width, kept from squeezing the reader. */
+export function panelWidth(layout: Layout, viewport: number): number {
+  return Math.max(PANEL_MIN_PX, Math.min(layout.width, viewport - READER_MIN_PX));
+}
+
+/** Side by side only when every pane gets its minimum width; otherwise stacked. */
+export function effectiveSplit(layout: Layout, viewport: number): Layout['split'] {
+  return layout.split === 'cols' && panelWidth(layout, viewport) / layout.panes.length >= PANE_MIN_PX ? 'cols' : 'rows';
+}
+
+const subscribe = (cb: () => void) => { addEventListener('resize', cb); return () => removeEventListener('resize', cb); };
+/** The viewport's width, kept current on resize. */
+export function useViewportWidth(): number {
+  return useSyncExternalStore(subscribe, () => innerWidth, () => innerWidth);
+}
+export const isNarrow = (viewport = innerWidth) => viewport <= NARROW_PX;

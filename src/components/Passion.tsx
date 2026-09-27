@@ -2,7 +2,7 @@
 // time in the tomb across them, and a pin for each verse of the account being read that says when. The reader
 // draws the strip under each such verse; the Days tab adds the reading toggle, the legend and the counts.
 import type { CSSProperties } from 'react';
-import { goTo, setState, useStore } from '@/app/store';
+import { goTo, openTab, setState, useStore } from '@/app/store';
 import { PASSION } from '@/lib/content';
 import { parseRef, type VerseLoc } from '@/lib/refs';
 import {
@@ -32,7 +32,7 @@ export function PassionChart({ event, saying, account, loc, show, onToggle }: {
     <div className="days-block" onClick={(e) => e.stopPropagation()}>
       <div className="chiasm-cap days-cap">
         <span className="kind">Days</span>
-        <button className="name" onClick={() => setState({ tab: 'days', panelOpen: true })} title="Readings, counts and sources in the Days tab">
+        <button className="name" onClick={() => openTab('days')} title="Readings, counts and sources in the Days tab">
           {event ? event.label : `“${saying!.quote}”`}
         </button>
         <span className="when">
