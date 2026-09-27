@@ -51,6 +51,9 @@ export async function nextVerse(loc: VerseLoc): Promise<VerseLoc | null> {
 /** A verse's text as it is spoken: its whitespace collapsed, and empty for a verse the BSB omits. */
 const verseText = async (loc: VerseLoc) => (await loadVerseText(loc.book, loc.chapter, loc.verse) ?? '').replace(/\s+/g, ' ').trim();
 
+/** How many verses ahead playback asks the engine to make, so a pool of Kokoro workers has work waiting. */
+const AHEAD = 4;
+
 /** Whether reading goes on from `loc` to `next`: always when continuous, otherwise only within the chapter. */
 const readsOn = (loc: VerseLoc, next: VerseLoc) => rs.continuous || (next.book === loc.book && next.chapter === loc.chapter);
 
@@ -80,7 +83,7 @@ export async function play(from?: VerseLoc) {
     while (!ctl.signal.aborted) {
       const text = await verseText(loc);
       const next = await nextVerse(loc);
-      if (next && readsOn(loc, next)) void verseText(next).then((t) => engine.prefetch(t, { voice: rs.voice, speed: rs.speed }));
+      void prefetchFrom(engine, loc, next, ctl.signal);
       set({ status: 'playing' });
       if (text) await engine.speak(text, { voice: rs.voice, speed: rs.speed, signal: ctl.signal });
       if (ctl.signal.aborted) break;
@@ -96,8 +99,20 @@ export async function play(from?: VerseLoc) {
   }
 }
 
+/** Asks the engine for the `AHEAD` verses after `loc`, in reading order; ones already made come from its cache. */
+async function prefetchFrom(engine: Engine, loc: VerseLoc, next: VerseLoc | null, signal: AbortSignal) {
+  for (let i = 0; i < AHEAD && next && readsOn(loc, next); i++) {
+    const text = await verseText(next);
+    if (signal.aborted) return;
+    engine.prefetch(text, { voice: rs.voice, speed: rs.speed });
+    loc = next;
+    next = await nextVerse(loc);
+  }
+}
+
 export function stop() {
   abort?.abort();
+  for (const e of Object.values(engines)) e.cancel();
   abort = null;
   if (rs.status !== 'idle') set({ status: 'idle' });
   if (getState().playing) setState({ playing: false });
