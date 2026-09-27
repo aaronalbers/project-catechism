@@ -1,7 +1,8 @@
 // Builds public/data/ from the cached sources. Output layout:
 //   bible/<Book>.json            BSB text, one file per book
 //   interlinear/<Book>/<ch>.json Hebrew/Greek words with Strong's, morphology and BSB gloss
-//   strongs/H/<n>.json, G/<n>.json  Strong's dictionary in shards of 100 entries
+//                                (and where each word's rendering stands among its renderings)
+//   strongs/H/<n>.json, G/<n>.json  Strong's dictionary in shards of 100 entries, with how the BSB renders each word
 //   xrefs/<Book>.json            cross references keyed by "ch.v"
 //   circle.json                  verse counts per chapter, plus the better-attested cross
 //                                references as running verse indices, for the Links circle
@@ -16,6 +17,7 @@ import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { fileURLToPath } from 'node:url';
 import { CACHE, fetchAll } from './fetch-sources.mjs';
+import { RARE, core, fold, isContentWord } from './renderings.mjs';
 
 const OUT = new URL('../public/data/', import.meta.url);
 /** A cached file's path on disk (URL.pathname would keep %20 for a space). */
@@ -83,11 +85,11 @@ async function buildInterlinear() {
   let current = null; // { key, chapter: [verse...] }
   let verse = null;
   let count = 0;
-  const pending = [];
+  const chapters = [];
 
   const flushChapter = () => {
     if (!current) return;
-    pending.push(writeJson(`interlinear/${current.book}/${current.ch}.json`, current.verses));
+    chapters.push(current);
     current = null;
   };
 
@@ -143,8 +145,46 @@ async function buildInterlinear() {
     proc.on('error', reject);
   });
   flushChapter();
-  await Promise.all(pending);
-  console.log('interlin', count, 'words');
+  countRenderings(chapters);
+  await Promise.all(chapters.map((c) => writeJson(`interlinear/${c.book}/${c.ch}.json`, c.verses)));
+  console.log('interlin', count, 'words;', renderings.size, "Strong's numbers rendered");
+}
+
+/** Strong's number → { list: [rendering, uses][], uses, bare } for the dictionary, filled by countRenderings. */
+const renderings = new Map();
+
+/**
+ * Counts how the BSB renders each Strong's number across the Bible and tags every word with its rendering's
+ * index in that list (word[8]), or -1 where the BSB gives it no English of its own; word[9] is 1 on a noun
+ * or adjective rendered here in a way it rarely is elsewhere.
+ */
+function countRenderings(chapters) {
+  const words = chapters.flatMap((c) => c.verses.flatMap((v) => v.w)).filter((w) => w[4]);
+  const counts = new Map();
+  // The casings each word's cores are written in, to show each in its commonest ("LORD", not "lord").
+  const casings = new Map();
+  const tally = (map, key) => map.set(key, (map.get(key) ?? 0) + 1);
+  for (const w of words) {
+    const byCore = counts.get(w[4]) ?? counts.set(w[4], new Map()).get(w[4]);
+    const k = core(w[5]);
+    tally(byCore, k);
+    const byId = casings.get(w[4]) ?? casings.set(w[4], new Map()).get(w[4]);
+    tally(byId.get(k) ?? byId.set(k, new Map()).get(k), core(w[5], true));
+  }
+  const commonest = (c) => [...c].sort((a, b) => b[1] - a[1])[0][0];
+  const folded = new Map();
+  for (const [id, byCore] of counts) {
+    const f = fold(byCore, new Map([...casings.get(id)].map(([k, c]) => [k, commonest(c)])));
+    folded.set(id, f);
+    renderings.set(id, { list: f.list, uses: [...byCore.values()].reduce((a, b) => a + b, 0), bare: byCore.get('') ?? 0 });
+  }
+  for (const w of words) {
+    const { list, at } = folded.get(w[4]);
+    const i = at.get(core(w[5])) ?? -1;
+    w.push(i);
+    const rendered = list.reduce((a, [, n]) => a + n, 0);
+    if (i >= 0 && rendered >= RARE.minUses && list[i][1] / rendered < RARE.share && isContentWord(w[2], w[4])) w.push(1);
+  }
 }
 
 // ---------- 3. Strong's ----------
@@ -162,6 +202,7 @@ async function buildStrongs() {
       shards.get(shard)[key] = {
         lemma: entry.lemma, xlit: entry.xlit ?? entry.translit, pron: entry.pron,
         derivation: entry.derivation, def: (entry.strongs_def ?? '').trim(), kjv: entry.kjv_def,
+        ...(renderings.has(key) && { r: renderings.get(key).list, n: renderings.get(key).uses, bare: renderings.get(key).bare }),
       };
     }
     for (const [shard, data] of shards) await writeJson(`strongs/${lang}/${shard}.json`, data);
@@ -394,6 +435,6 @@ async function buildPeople() {
 
 await fetchAll();
 await buildBible();
-await Promise.all([buildInterlinear(), buildStrongs(), buildXrefs().then(buildCircle), buildPlaces().then(buildMap), buildPeople()]);
+await Promise.all([buildInterlinear().then(buildStrongs), buildXrefs().then(buildCircle), buildPlaces().then(buildMap), buildPeople()]);
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');

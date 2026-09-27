@@ -9,10 +9,21 @@ export interface Verse { v: number; t: string }
 export interface BibleBook { id: string; name: string; chapters: Verse[][] }
 
 /** [original, transliteration, morph code, morph long, strongs, gloss, original-order index, punctuation] */
-export type InterlinearWord = [string, string, string, string, string, string, number, string];
+/**
+ * [original, transliteration, morphology code, morphology long, Strong's, BSB gloss, original-order index, punctuation,
+ * the gloss's place among the word's renderings (`StrongsEntry.r`; -1 where the BSB gives it no English of its own),
+ * 1 on a noun or adjective the BSB renders here in a way it rarely does elsewhere].
+ */
+export type InterlinearWord = [string, string, string, string, string, string, number, string, number?, 1?];
 export interface InterlinearVerse { v: number; w: InterlinearWord[]; h?: string; f?: string[] }
 
-export interface StrongsEntry { lemma: string; xlit?: string; pron?: string; derivation?: string; def: string; kjv?: string }
+export interface StrongsEntry {
+  lemma: string; xlit?: string; pron?: string; derivation?: string; def: string; kjv?: string;
+  /** How the BSB renders the word across the Bible, commonest first, as [rendering, uses]. */
+  r?: [string, number][];
+  /** Its uses in all, and how many of them the BSB gives no English of their own (carried by the words round it). */
+  n?: number; bare?: number;
+}
 
 export type Xrefs = Record<string, [Ref, number][]>;
 
@@ -65,6 +76,14 @@ export type InsightKind = 'money' | 'culture' | 'archaeology' | 'history' | 'geo
 export interface Insight {
   id: string; title: string; kind: InsightKind; verses: Ref[]; summary: string; body: string[];
   sources: Source[]; traditions?: string[]; confidence: Confidence; media?: Media[]; related?: string[];
+  /** A word card's Strong's numbers, when it studies more than the one its id is named for (`word-h7307-…`). */
+  strongs?: string[];
+  /**
+   * Where the English is narrower than the word: the BSB renderings that narrow it ("earth", not "land"), in the
+   * singular, and what the word covers. The reader marks the word wherever the BSB renders it so, not only in the
+   * card's verses.
+   */
+  narrows?: { rendered: string[]; means: string };
 }
 
 export interface Person {

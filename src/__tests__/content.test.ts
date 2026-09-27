@@ -8,7 +8,7 @@ import { PROFILE_INDEX } from '@/lib/content';
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
 const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -18,7 +18,7 @@ import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import { quotedCount, tallySum } from '@/lib/tally';
 import { laneOf, statedBefore } from '@/lib/reign';
-import type { BibleBook, Model3D, Place, Profile, Source, Verdict } from '@/lib/types';
+import type { BibleBook, Model3D, Place, Profile, Source, StrongsEntry, Verdict } from '@/lib/types';
 
 /** A procedural model drawn as each of its readings (once, if it has none). */
 const drawings = (m: Model3D) => (m.readings?.map((r) => r.id) ?? [undefined]).map((reading) => ({ reading, model: buildProcedural(m.procedural!, reading), label: reading ? `${m.id} (${reading})` : m.id }));
@@ -82,6 +82,33 @@ describe('content integrity', () => {
       expect(['evidence', 'consensus', 'interpretation', 'estimate']).toContain(i.confidence);
       if (i.confidence === 'interpretation') expect(i.traditions?.length, `${i.id} is an interpretation but lists no traditions`).toBeGreaterThan(0);
       for (const r of i.related ?? []) expect(INSIGHT_BY_ID.has(r), `${i.id} relates to unknown ${r}`).toBe(true);
+    }
+  });
+  // The reader marks a narrowed word wherever it occurs, so the card must say which word, and only one card may claim it.
+  it('word cards that narrow a word name its Strong\'s numbers, and no number has two', () => {
+    const claimed = new Map<string, string>();
+    for (const i of INSIGHTS) {
+      if (i.strongs) expect(i.kind, `${i.id} has strongs but is not a word card`).toBe('word');
+      for (const n of i.strongs ?? []) expect(n, `${i.id}: ${n}`).toMatch(/^[HG]\d+$/);
+      if (!i.narrows) continue;
+      expect(i.kind, `${i.id} narrows but is not a word card`).toBe('word');
+      expect(wordStrongs(i).length, `${i.id} narrows but names no Strong's number`).toBeGreaterThan(0);
+      expect(i.narrows.rendered.length && i.narrows.means, `${i.id} narrows without renderings or a meaning`).toBeTruthy();
+      for (const n of wordStrongs(i)) {
+        expect(claimed.get(n), `${n} is narrowed by both ${claimed.get(n)} and ${i.id}`).toBeUndefined();
+        claimed.set(n, i.id);
+      }
+    }
+  });
+  const strongsDir = new URL('../../public/data/strongs/', import.meta.url);
+  it.skipIf(!existsSync(strongsDir))('a narrowed rendering is one the BSB uses for the word', () => {
+    const entry = (n: string): StrongsEntry | undefined =>
+      JSON.parse(readFileSync(new URL(`${n[0]}/${Math.floor(+n.slice(1) / 100)}.json`, strongsDir), 'utf8'))[n];
+    for (const i of INSIGHTS.filter((x) => x.narrows)) {
+      const labels = wordStrongs(i).flatMap((n) => (entry(n)?.r ?? []).map(([l]) => l.toLowerCase()));
+      for (const r of i.narrows!.rendered) {
+        expect(labels.some((l) => l.split(/[\s/()]+/).includes(r.toLowerCase())), `${i.id}: the BSB never renders ${wordStrongs(i).join('/')} '${r}'`).toBe(true);
+      }
     }
   });
   it('people link to existing parents and every person has a reference', () => {

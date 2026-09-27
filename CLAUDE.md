@@ -109,6 +109,18 @@ them in CI — read it before adding content.
 - `related` ids must resolve to an existing insight, and links read better added in both
   directions.
 
+- Word cards (`kind: 'word'`) are named for their Strong's number (`word-h5775-oph`), or list several in
+  `strongs`. `narrows` marks a word the English is narrower than: `rendered` names the BSB renderings that
+  narrow it, in the singular ("earth", not "land"), and `means` says what the word covers. The reader
+  underlines the word wherever the BSB renders it so, in every verse, and the Words tab says why. Only one
+  card may narrow a Strong's number, and a test fails the build if a `rendered` is not one of the BSB's
+  renderings of the word. Cite a public-domain lexicon: BDB on Sefaria for Hebrew, Thayer for Greek. The
+  Words tab links BibleProject videos by the `strongs` in `videos.json`, and the card links them too.
+- The data build counts how the BSB renders every Strong's number (`scripts/renderings.mjs`, shared with the
+  app through `renderings.d.mts`). Each Strong's entry gets `r`, `n` and `bare`, and each interlinear word
+  gets its rendering's index (`w[8]`) and a rare flag (`w[9]`). The flag is set only on nouns and adjectives
+  used 20 times or more and rendered this way under 3% of the time; a looser rule marked a fifth of all words.
+
 - Profiles (`content/profiles/<id>.json`, one file per person, the file name its id) are written for people the
   People tab lists from the generated data, keyed by Theographic id in `people` (more than one when Theographic
   lists someone twice, or for a group the text treats as one, such as Job's three friends) and by people.json id in

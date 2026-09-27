@@ -1,14 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { goTo, setState, useStore } from '@/app/store';
+import { getState, goTo, setState, useStore } from '@/app/store';
 import { loadBook, loadInterlinear } from '@/lib/data';
-import { CHIASMS, markersForChapter, talliesInChapter } from '@/lib/content';
+import { CHIASMS, NARROWED, markersForChapter, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
 import { rowsAt } from '@/lib/tally';
 import { reignsInChapter } from '@/lib/reign';
 import { passionAt } from '@/lib/passion';
 import { BOOKS, book, bookIndex, contains, parseRef, touchesChapter } from '@/lib/refs';
-import type { BibleBook, Chiasm, InterlinearVerse } from '@/lib/types';
+import type { BibleBook, Chiasm, Insight, InterlinearVerse, InterlinearWord } from '@/lib/types';
 import { alignVerse, tokenize } from '@/lib/align';
+import { narrowedToken, narrowedWord } from '@/lib/words';
 import { readStored, writeStored } from '@/lib/storage';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
 import { TallyBar, TallyCaption, TallyGroupBar, TallyTotal } from './Tally';
@@ -17,17 +18,32 @@ import { PassionChart } from './Passion';
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
-function VerseText({ text, verse, current, il, ladder }: { text: string; verse: number; current: boolean; il?: InterlinearVerse; ladder?: LadderProps }) {
+/** The hover text for a word whose English is narrower than it: "‘birds’ — ʿôp: anything that flies…". */
+const narrowTitle = (t: string, w: InterlinearWord, i: Insight) => `‘${t.replace(/^[^\p{L}]+|[^\p{L}]+$/gu, '')}’ — ${w[1]} (${w[4]}): ${i.narrows!.means}. Tap for the word study.`;
+
+function VerseText({ text, verse, current, il, ladder, marks }: { text: string; verse: number; current: boolean; il?: InterlinearVerse; ladder?: LadderProps; marks: boolean }) {
   const wordIndex = useStore((s) => s.wordIndex);
-  const aligned = useMemo(() => current ? alignVerse(text, il) : [], [current, text, il]);
+  // Words whose English is narrower than the Hebrew or Greek are marked in every verse, not just the current one.
+  const narrowed = marks && !!il?.w.some((w) => NARROWED.has(w[4]));
+  const aligned = useMemo(() => current || narrowed ? alignVerse(text, il) : [], [current, narrowed, text, il]);
   let n = 0;
   // Word positions run across the whole verse, so a ladder's words match the interlinear as prose does.
-  const words = (s: string) => !current ? s : tokenize(s).map((t, i) => {
+  const words = (s: string) => !current && !narrowed ? s : tokenize(s).map((t, i) => {
         if (!t.trim()) return t;
         const ilIndex = aligned[n++] ?? null;
+        const w = ilIndex !== null ? il!.w[ilIndex] : null;
+        const study = narrowed && w ? narrowedToken(t, w) : undefined;
+        if (!current && !study) return t;
+        const open = () => { if (ilIndex !== null) setState({ wordIndex: ilIndex, tab: 'words', panelOpen: true }); };
         return (
-          <span key={i} className={`w${ilIndex !== null && ilIndex === wordIndex ? ' active' : ''}`} title={ilIndex !== null ? `${il!.w[ilIndex][0]} (${il!.w[ilIndex][4]})` : undefined}
-            onClick={(e) => { e.stopPropagation(); if (ilIndex !== null) setState({ wordIndex: ilIndex, tab: 'words', panelOpen: true }); }}
+          <span key={i} className={`w${ilIndex !== null && ilIndex === wordIndex ? ' active' : ''}${study ? ' narrow' : ''}`}
+            title={study ? narrowTitle(t, w!, study) : w ? `${w[0]} (${w[4]})` : undefined}
+            onClick={(e) => {
+              e.stopPropagation();
+              // A marked word in another verse moves the reader there first; goTo clears the word, so pick it after.
+              if (!current) goTo({ ...getState().loc, verse });
+              open();
+            }}
             data-verse={verse}>{t}</span>
         );
       });
@@ -81,6 +97,8 @@ export function Reader() {
   const toggleReigns = () => setReignCharts();
   const [dayCharts, setDayCharts] = useStoredFlag('passion', true);
   const toggleDays = () => setDayCharts();
+  const [wordMarks, setWordMarks] = useStoredFlag('word-marks', true);
+  const markable = useMemo(() => (il ?? []).some((v) => v.w.some((w) => narrowedWord(w))), [il]);
   const reveal = useStore((s) => s.reveal);
   // Arriving from the index at a chiasm, a count or a reign: show it even if the reader had hidden it.
   useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -119,7 +137,10 @@ export function Reader() {
   return (
     <article className="reader" aria-label={`${data.name} ${loc.chapter}`}>
       <h1>{data.name} {loc.chapter}</h1>
-      <div className="attribution">Berean Standard Bible (public domain). Tap a verse to explore it; tap a word in the current verse for its Hebrew or Greek.</div>
+      <div className="attribution">
+        Berean Standard Bible (public domain). Tap a verse to explore it; tap a word in the current verse for its Hebrew or Greek.
+        {markable && <> <span className="w narrow">Dotted</span> words translate something broader than the English. <button className="marks-toggle" aria-pressed={wordMarks} onClick={() => setWordMarks()}>{wordMarks ? 'Hide' : 'Show'} them</button></>}
+      </div>
       {passage && <ChiasmStrip c={passage} loc={loc} show={structure} onToggle={toggleStructure} />}
       {chapter.map((v, k) => {
         const ilv = ilByVerse.get(v.v);
@@ -152,7 +173,7 @@ export function Reader() {
               {m && <div className="markers" aria-hidden="true">{[...m].map((k) => <span key={k} className={`marker ${k}`} title={k} />)}</div>}
               <span className="num">{v.v}</span>
               <div>
-                <VerseText text={v.t} verse={v.v} current={current} il={ilv} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />
+                <VerseText text={v.t} verse={v.v} current={current} il={ilv} marks={wordMarks} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />
                 {bars.map(({ t, row }) => <TallyBar key={`${t.id}:${row.label}`} t={t} row={row} loc={loc} current={current} />)}
                 {subtotals.map(({ t, g }) => <TallyGroupBar key={`${t.id}:${g.label}`} t={t} g={g} loc={loc} current={current} />)}
                 {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}

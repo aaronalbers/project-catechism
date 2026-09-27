@@ -133,6 +133,10 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .verse .text { position: relative; }
 .verse .text .w { border-radius: 3px; }
 .verse.current .text .w:hover, .verse.current .text .w.active { background: var(--accent); color: var(--accent-ink); }
+.w.narrow { text-decoration: underline dotted var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; cursor: pointer; }
+.verse:not(.current) .text .w.narrow:hover { background: var(--surface-2); }
+.marks-toggle { color: var(--accent); font-size: 12px; }
+.marks-toggle:hover { text-decoration: underline; }
 .verse .fn { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 4px; }
 .chapter-nav { display: flex; justify-content: space-between; margin-top: 40px; font-family: var(--sans); }
 .chapter-nav button { padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
@@ -194,6 +198,25 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .il-word .orig.heb { font-family: var(--hebrew); font-size: 20px; direction: rtl; }
 .il-word .xlit { font-size: 11px; color: var(--muted); font-style: italic; }
 .il-word .gloss { font-size: 12px; margin-top: 2px; }
+.il-word.narrow .gloss { text-decoration: underline dotted var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.il-word.rare { position: relative; }
+.il-word.rare::after { content: ''; position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.renderings { list-style: none; margin: 4px 0 0; padding: 0; font-size: 13px; }
+.renderings li { display: grid; grid-template-columns: minmax(0, 11em) 1fr auto; align-items: center; gap: 8px; padding: 1px 4px; border-radius: 4px; }
+.renderings li.here { background: var(--surface-2); font-weight: 600; }
+.renderings .bar { height: 6px; border-radius: 3px; background: var(--accent); opacity: 0.55; min-width: 2px; }
+.renderings li.here .bar { opacity: 1; }
+.renderings .n { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px; }
+.renderings-note { font-size: 13px; margin: 6px 0 0; }
+.rare-note { border-left: 3px solid var(--accent); padding: 4px 8px; margin: 8px 0; font-size: 13px; background: var(--surface-2); border-radius: 0 6px 6px 0; }
+.narrow-note { border-left: 3px solid var(--accent); padding: 6px 10px; margin: 10px 0; background: var(--surface-2); border-radius: 0 6px 6px 0; }
+.narrow-note strong { font-weight: 600; }
+.roots { margin: 4px 0 0; padding: 0; list-style: none; }
+.roots button { text-align: left; color: inherit; }
+.roots button:hover .root-lemma { color: var(--accent); }
+.root-lemma { font-family: var(--serif); font-size: 16px; margin-right: 6px; }
+.root-lemma.heb { font-family: var(--hebrew); }
+.lexicon-back { color: var(--accent); font-size: 12px; margin-bottom: 4px; }
 .il-grid.rtl { flex-direction: row-reverse; }
 .lexicon { margin-top: 14px; }
 .lexicon .lemma { font-size: 24px; font-family: var(--serif); }

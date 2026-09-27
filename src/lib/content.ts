@@ -43,6 +43,16 @@ export const PROFILE_INDEX = Object.values(import.meta.glob<ProfileIndex>('@cont
 export const PROFILE_BY_PERSON = new Map(PROFILE_INDEX.flatMap((p) => p.people.map((id) => [id, p] as const)));
 export const PEOPLE_BY_ID = new Map(PEOPLE.map((p) => [p.id, p]));
 export const INSIGHT_BY_ID = new Map(INSIGHTS.map((i) => [i.id, i]));
+/** The Strong's numbers a word card studies: its `strongs`, or the number its id is named for (`word-g211-alabastron`). */
+export function wordStrongs(i: Insight): string[] {
+  if (i.kind !== 'word') return [];
+  const named = /^word-([hg]\d+)-/.exec(i.id)?.[1].toUpperCase();
+  return i.strongs ?? (named ? [named] : []);
+}
+/** Word cards by the Strong's numbers they study. */
+export function wordCardsFor(strongs: string) { return INSIGHTS.filter((i) => wordStrongs(i).includes(strongs)); }
+/** The word cards whose English is narrower than the word, by Strong's number: the reader marks these words wherever they occur. */
+export const NARROWED = new Map(INSIGHTS.filter((i) => i.narrows).flatMap((i) => wordStrongs(i).map((s) => [s, i] as const)));
 
 const anyContains = (refs: string[] | undefined, loc: VerseLoc) => (refs ?? []).some((r) => contains(r, loc));
 
