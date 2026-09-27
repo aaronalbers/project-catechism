@@ -29,6 +29,11 @@ export const SOURCES = {
   // Every named person, the verses naming them, their kin, and Easton's Bible Dictionary (1897, public domain).
   'theo-people.json': THEO + 'people.json',
   'theo-verses.json': THEO + 'verses.json',
+  // Books beyond the 66. The World English Bible's deuterocanon (USFM) — public domain. https://ebible.org/find/details.php?id=engwebu
+  'engwebu_usfm.zip': 'https://ebible.org/Scriptures/engwebu_usfm.zip',
+  // R. H. Charles's 1 Enoch and Jubilees (1913) — public domain, as CrossWire's SWORD modules. https://www.crosswire.org/sword/
+  'sword-enoch.zip': 'https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Enoch.zip',
+  'sword-jubilees.zip': 'https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Jubilees.zip',
   // Natural Earth 1:50m coastlines, lakes and rivers — public domain. https://www.naturalearthdata.com/
   'ne-coastline.geojson': NE + 'ne_50m_coastline.geojson',
   'ne-lakes.geojson': NE + 'ne_50m_lakes.geojson',

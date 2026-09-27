@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { contains, formatRef, locFromHash, parseRef, touchesChapter } from '@/lib/refs';
+import { BEYOND, bookByName, contains, formatRef, locFromHash, neighbourBook, parseRef, touchesChapter } from '@/lib/refs';
 
 describe('parseRef', () => {
   it('parses single verses, ranges and chapters', () => {
@@ -30,5 +30,27 @@ describe('parseRef', () => {
     expect(locFromHash('#/1Cor/13/4')).toEqual({ book: '1Cor', chapter: 13, verse: 4 });
     expect(locFromHash('#/Matt')).toEqual({ book: 'Matt', chapter: 1, verse: 1 });
     expect(locFromHash('#/foo')).toBeNull();
+  });
+});
+
+describe('books beyond the 66', () => {
+  it('parse, format and route like any other book', () => {
+    expect(parseRef('2Macc.6.18-7.42')).toEqual({ start: { book: '2Macc', chapter: 6, verse: 18 }, end: { book: '2Macc', chapter: 7, verse: 42 } });
+    expect(formatRef('1En.1.9')).toBe('1 Enoch 1:9');
+    expect(locFromHash('#/EsthGr/1/1')).toEqual({ book: 'EsthGr', chapter: 1, verse: 1 });
+    expect(bookByName('Ecclesiasticus')?.id).toBe('Sir');
+    expect(bookByName('1 Enoch')?.id).toBe('1En');
+  });
+  it('lie outside every range between books of the 66', () => {
+    expect(contains('Mal.4.5-Matt.1.2', { book: 'Tob', chapter: 1, verse: 1 })).toBe(false);
+    expect(contains('Mal.4.5-Matt.1.2', { book: 'Matt', chapter: 1, verse: 1 })).toBe(true);
+    expect(touchesChapter('Mal.4-Matt.1', 'Jub', 1)).toBe(false);
+  });
+  it('are read on among themselves, never into the 66', () => {
+    expect(neighbourBook('Mal', 1)?.id).toBe('Matt');
+    expect(neighbourBook('Matt', -1)?.id).toBe('Mal');
+    expect(neighbourBook(BEYOND[0].id, -1)).toBeUndefined();
+    expect(neighbourBook(BEYOND[0].id, 1)?.id).toBe(BEYOND[1].id);
+    expect(neighbourBook(BEYOND.at(-1)!.id, 1)).toBeUndefined();
   });
 });

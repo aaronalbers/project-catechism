@@ -94,6 +94,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .nav-head > svg { width: 20px; height: 20px; flex: none; color: var(--muted); }
 .nav-body { padding: 12px 16px 16px; overflow-y: auto; max-height: calc(86vh - 60px); }
 .nav-testament { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 10px 0 6px; }
+.nav-blurb { font-size: 12px; color: var(--muted); margin: -2px 0 6px; }
 .nav-books { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px; }
 .nav-books button { text-align: left; padding: 6px 8px; border-radius: 6px; }
 .nav-books button:hover, .nav-books button[aria-current='true'] { background: var(--surface-2); }
@@ -114,6 +115,11 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .reader { max-width: 720px; margin: 0 auto; padding: 28px 24px 120px; font-family: var(--serif); }
 .reader h1 { font-size: 30px; font-weight: 600; margin-bottom: 4px; }
 .reader .attribution { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.reader .beyond-note p { margin: 0 0 6px; }
+.reader .beyond-note strong { color: var(--text); }
+.reader .book-intro { font-size: 0.92em; color: var(--muted); border-left: 2px solid var(--border); padding-left: 12px; margin: 0 0 24px; }
+.reader .book-intro p { margin: 0 0 10px; }
+.verse .text.omitted { font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: italic; }
 .reader .heading { font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--muted); margin: 26px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; }
 .vblock, .chiasm-strip { scroll-margin-top: 16px; }
 .verse { display: grid; grid-template-columns: 34px 1fr; gap: 6px; padding: 5px 8px; margin: 0 -8px; border-radius: 8px; font-size: 18.5px; line-height: 1.65; scroll-margin: 90px; cursor: pointer; position: relative; }
@@ -383,8 +389,10 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .progress span { display: block; height: 100%; background: var(--accent); transition: width 0.2s; }
 
 /* Whole-Bible link circle (Links tab). Chart colours validated as a categorical set against each surface. */
-:root { --link-prophecy: #2f7d4f; --link-quote: #2b6cb0; --link-xref: #b7791f; }
-:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --link-prophecy: #48a26f; --link-quote: #5a8ecb; --link-xref: #b98628; }
+:root { --link-prophecy: #2f7d4f; --link-quote: #2b6cb0; --link-xref: #b7791f; --link-parallel: #8a4fa3; --link-beyond: #9b5d9e; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --link-prophecy: #48a26f; --link-quote: #5a8ecb; --link-xref: #b98628; --link-parallel: #b57fcc; --link-beyond: #c08ac3; }
+.circle-note { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.circle-note .swatch.beyond { display: inline-block; width: 18px; height: 0; border-top: 3px dashed var(--link-beyond); vertical-align: middle; margin-right: 4px; }
 .circle { margin-bottom: 18px; }
 .circle-filters { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-bottom: 8px; font-size: 12px; color: var(--muted); }
 .circle-filters .chip { gap: 6px; }

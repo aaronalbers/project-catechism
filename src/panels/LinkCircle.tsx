@@ -1,24 +1,28 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, useStore } from '@/app/store';
 import { PROPHECIES, QUOTES } from '@/lib/content';
-import { loadCircle } from '@/lib/data';
+import { loadCircle, loadParallels } from '@/lib/data';
 import { readStored, writeStored } from '@/lib/storage';
-import { buildCanon, refIndex, type Canon, type CircleData } from '@/lib/circle';
+import { buildCanon, circleChapters, refIndex, type Canon, type CircleData } from '@/lib/circle';
 import { book, formatRef, parseRef, toRef, touchesChapter } from '@/lib/refs';
 
-type Kind = 'prophecy' | 'quote' | 'xref';
-/** One line across the circle. `a` and `b` are running verse indices; curated chords keep their refs, cross references derive them. */
-interface Chord { kind: Kind; a: number; b: number; refs?: [string, string]; title?: string; votes?: number }
+type Kind = 'prophecy' | 'quote' | 'xref' | 'parallel';
+/**
+ * One line across the circle. `a` and `b` are running verse indices; curated chords keep their refs, cross references
+ * derive them. `echo` marks a quotation chord that is an allusion.
+ */
+interface Chord { kind: Kind; a: number; b: number; refs?: [string, string]; title?: string; votes?: number; echo?: boolean }
 
-const KINDS: { id: Kind; label: string }[] = [
+const KINDS: { id: Kind; label: string; beyond?: true }[] = [
   { id: 'prophecy', label: 'Prophecies' },
   { id: 'quote', label: 'Quotations' },
   { id: 'xref', label: 'Cross references' },
+  { id: 'parallel', label: 'Charles on 1 Enoch', beyond: true },
 ];
-const KIND_NAME: Record<Kind, string> = { prophecy: 'Prophecy', quote: 'Quotation', xref: 'Cross reference' };
+const KIND_NAME: Record<Kind, string> = { prophecy: 'Prophecy', quote: 'Quotation', xref: 'Cross reference', parallel: 'R. H. Charles’s cross reference' };
 
-interface Filters { prophecy: boolean; quote: boolean; xref: boolean; minVotes: number; chapterOnly: boolean }
-const DEFAULT_FILTERS: Filters = { prophecy: true, quote: true, xref: true, minVotes: 100, chapterOnly: false };
+interface Filters { prophecy: boolean; quote: boolean; xref: boolean; parallel: boolean; beyond: boolean; minVotes: number; chapterOnly: boolean }
+const DEFAULT_FILTERS: Filters = { prophecy: true, quote: true, xref: true, parallel: true, beyond: true, minVotes: 100, chapterOnly: false };
 const loadFilters = (): Filters => ({ ...DEFAULT_FILTERS, ...readStored<Partial<Filters>>('circle', {}) });
 
 // Cross references are batched by vote count so thousands of chords stroke as a handful of paths.
@@ -40,14 +44,17 @@ function useThemeVersion() {
 export function LinkCircle() {
   const loc = useStore((s) => s.loc);
   const [data, setData] = useState<CircleData | null>(null);
+  const [parallels, setParallels] = useState<[string, string][]>([]);
   const [failed, setFailed] = useState(false);
-  useEffect(() => { loadCircle().then(setData, () => setFailed(true)); }, []);
-  const canon = useMemo(() => data && buildCanon(data.chapters), [data]);
+  useEffect(() => { loadCircle().then(setData, () => setFailed(true)); loadParallels().then(setParallels); }, []);
 
   const [filters, setFilters] = useState(loadFilters);
   const setF = (p: Partial<Filters>) => setFilters((f) => { const n = { ...f, ...p }; writeStored('circle', n); return n; });
+  const hasBeyond = !!data?.beyond?.length;
+  const layout = useMemo(() => data && circleChapters(data, filters.beyond), [data, filters.beyond]);
+  const canon = useMemo(() => layout && buildCanon(layout.chapters), [layout]);
 
-  const chords = useMemo(() => (canon && data ? allChords(canon, data) : []), [canon, data]);
+  const chords = useMemo(() => (canon && data && layout ? allChords(canon, data, layout.shift, parallels) : []), [canon, data, layout, parallels]);
   const chapter = canon?.chapterRange(loc.book, loc.chapter);
   const touches = (c: Chord) => c.refs
     ? c.refs.some((r) => touchesChapter(r, loc.book, loc.chapter))
@@ -58,7 +65,7 @@ export function LinkCircle() {
   );
   const focused = useMemo(() => visible.filter(touches), [visible, loc.book, loc.chapter]); // eslint-disable-line react-hooks/exhaustive-deps
   const counts = useMemo(() => {
-    const n: Record<Kind, number> = { prophecy: 0, quote: 0, xref: 0 };
+    const n: Record<Kind, number> = { prophecy: 0, quote: 0, xref: 0, parallel: 0 };
     for (const c of visible) n[c.kind]++;
     return n;
   }, [visible]);
@@ -77,7 +84,7 @@ export function LinkCircle() {
   const colors = useMemo(() => {
     const cs = wrap.current ? getComputedStyle(wrap.current) : null;
     const v = (n: string) => cs?.getPropertyValue(n).trim() || '#888';
-    return { prophecy: v('--link-prophecy'), quote: v('--link-quote'), xref: v('--link-xref'), surface: v('--surface'), border: v('--border'), muted: v('--muted'), accent: v('--accent'), text: v('--text') };
+    return { prophecy: v('--link-prophecy'), quote: v('--link-quote'), xref: v('--link-xref'), parallel: v('--link-parallel'), beyond: v('--link-beyond'), surface: v('--surface'), border: v('--border'), muted: v('--muted'), accent: v('--accent'), text: v('--text') };
   }, [theme, size]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const geo = useMemo(() => (canon && size ? geometry(canon, size) : null), [canon, size]);
@@ -94,8 +101,12 @@ export function LinkCircle() {
       for (const c of visible) if (c.kind === 'xref' && c.votes! >= b.min && c.votes! < b.max) geo.trace(ctx, c);
       ctx.globalAlpha = b.alpha; ctx.lineWidth = b.width; ctx.strokeStyle = colors.xref; ctx.stroke();
     }
+    // Charles's references are a dataset too, not a curated few, so they are drawn faint beneath the curated links.
+    ctx.beginPath();
+    for (const c of visible) if (c.kind === 'parallel') geo.trace(ctx, c);
+    ctx.globalAlpha = 0.22; ctx.lineWidth = 0.8; ctx.strokeStyle = colors.parallel; ctx.stroke();
     ctx.globalAlpha = 1;
-    for (const c of visible) if (c.kind !== 'xref') strokeChord(ctx, geo, c, colors[c.kind], colors.surface, 1.6);
+    for (const c of visible) if (c.kind !== 'xref' && c.kind !== 'parallel') strokeChord(ctx, geo, c, colors[c.kind], colors.surface, 1.6);
   }, [geo, visible, colors]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -105,7 +116,7 @@ export function LinkCircle() {
       ctx.beginPath(); ctx.arc(geo.c, geo.c, geo.R + 5, geo.theta(chapter[0]) - geo.halfVerse - Math.PI / 2, geo.theta(chapter[1] - 1) + geo.halfVerse - Math.PI / 2);
       ctx.lineWidth = 10; ctx.strokeStyle = colors.accent; ctx.lineCap = 'butt'; ctx.stroke();
     }
-    for (const c of focused) strokeChord(ctx, geo, c, colors[c.kind], colors.surface, c.kind === 'xref' ? 1.3 : 2.4);
+    for (const c of focused) strokeChord(ctx, geo, c, colors[c.kind], colors.surface, c.kind === 'xref' || c.kind === 'parallel' ? 1.3 : 2.4);
     const here = canon.indexOf(loc);
     if (here !== undefined) dot(ctx, geo.point(here), 4, colors.accent, colors.surface);
     if (hover && 'chord' in hover) {
@@ -133,7 +144,7 @@ export function LinkCircle() {
     }
     let best = -1, bestD = 8;
     for (let k = 0; k < visible.length; k++) {
-      const d = polylineDist(samples, k * SAMPLES * 2, x, y) + (visible[k].kind === 'xref' ? 3 : 0);
+      const d = polylineDist(samples, k * SAMPLES * 2, x, y) + (visible[k].kind === 'xref' || visible[k].kind === 'parallel' ? 3 : 0);
       if (d < bestD) { bestD = d; best = k; }
     }
     return best < 0 ? null : { chord: visible[best], x, y };
@@ -153,7 +164,7 @@ export function LinkCircle() {
   return (
     <div className="circle">
       <div className="circle-filters" role="group" aria-label="Link types">
-        {KINDS.map((k) => (
+        {KINDS.filter((k) => !k.beyond || (hasBeyond && filters.beyond)).map((k) => (
           <button key={k.id} className="chip link" aria-pressed={filters[k.id]} onClick={() => setF({ [k.id]: !filters[k.id] })}>
             <span className="swatch" style={{ background: `var(--link-${k.id})` }} />{k.label}<span className="n">{counts[k.id].toLocaleString()}</span>
           </button>
@@ -164,10 +175,11 @@ export function LinkCircle() {
           Min. votes <input type="range" min={data?.minVotes ?? 20} max={400} step={10} value={filters.minVotes} disabled={!filters.xref} onChange={(e) => setF({ minVotes: +e.target.value })} /> <span className="n">{filters.minVotes}</span>
         </label>
         <label><input type="checkbox" checked={filters.chapterOnly} onChange={(e) => setF({ chapterOnly: e.target.checked })} /> Only {book(loc.book)?.name} {loc.chapter}</label>
+        {hasBeyond && <label title="The books some churches read as scripture beyond the 66, as a dashed arc between the Testaments"><input type="checkbox" checked={filters.beyond} onChange={(e) => setF({ beyond: e.target.checked })} /> Books beyond the 66</label>}
       </div>
       <div className="circle-wrap" ref={wrap}>
         {!canon ? <div className="loading">Loading…</div> : <div className="circle-stage" style={{ width: size, height: size }}>
-          <canvas ref={base} role="img" aria-label={`Circle of the whole Bible, Genesis to Revelation clockwise from the top, with ${visible.length} links drawn across it`} />
+          <canvas ref={base} role="img" aria-label={`Circle of the whole Bible, Genesis to Revelation clockwise from the top${filters.beyond && hasBeyond ? ', with the books beyond the 66 between the Testaments' : ''}, with ${visible.length} links drawn across it`} />
           <canvas ref={overlay}
             onPointerMove={(e) => { if (e.pointerType === 'mouse') setHover(at(e)); }}
             onPointerLeave={(e) => { if (e.pointerType === 'mouse') setHover(null); }}
@@ -179,6 +191,7 @@ export function LinkCircle() {
           {hover && <Tooltip hover={hover} canon={canon} size={size} />}
         </div>}
       </div>
+      {filters.beyond && hasBeyond && <p className="circle-note"><span className="swatch beyond" aria-hidden="true" /> The dashed arc is the books beyond the 66, Tobit to Jubilees. OpenBible’s cross references cover only the 66, so the lines that reach it are the echoes curated here and, from 1 Enoch, R. H. Charles’s own references: a gap in the data, not in the books.</p>}
     </div>
   );
 }
@@ -191,22 +204,25 @@ function Tooltip({ hover, canon, size }: { hover: NonNullable<Hover>; canon: Can
     <div className="circle-tip" style={style}>
       <span className="kind"><span className="swatch" style={{ background: `var(--link-${c.kind})` }} />{KIND_NAME[c.kind]}</span>
       {c.title && <strong>{c.title}</strong>}
-      <span>{formatRef(from)} {c.kind === 'prophecy' ? '→' : c.kind === 'quote' ? 'quoted in' : '↔'} {formatRef(to)}</span>
+      <span>{formatRef(from)} {c.kind === 'prophecy' ? '→' : c.kind === 'quote' ? (c.echo ? 'echoed in' : 'quoted in') : '↔'} {formatRef(to)}</span>
       {c.votes !== undefined && <small>{c.votes} reader votes on OpenBible.info</small>}
+      {c.kind === 'parallel' && <small>From his notes to 1 Enoch (1913)</small>}
     </div>
   );
 }
 
-function allChords(canon: Canon, data: CircleData): Chord[] {
+function allChords(canon: Canon, data: CircleData, shift: (i: number) => number, parallels: [string, string][]): Chord[] {
   const out: Chord[] = [];
-  const add = (kind: Kind, from: string, to: string, title?: string) => {
+  // A ref in a book the circle is not drawing has no index, so its chord is left out.
+  const add = (kind: Kind, from: string, to: string, extra: Partial<Chord> = {}) => {
     const a = refIndex(canon, from), b = refIndex(canon, to);
-    if (a !== undefined && b !== undefined && a !== b) out.push({ kind, a, b, refs: [from, to], title });
+    if (a !== undefined && b !== undefined && a !== b) out.push({ kind, a, b, refs: [from, to], ...extra });
   };
-  // Drawn bottom to top: cross references, then quotations, then prophecies.
-  for (let i = 0; i < data.xrefs.length; i += 3) out.push({ kind: 'xref', a: data.xrefs[i], b: data.xrefs[i + 1], votes: data.xrefs[i + 2] });
-  for (const q of QUOTES) add('quote', q.quoted, q.quoting);
-  for (const p of PROPHECIES) for (const f of p.fulfilled) add('prophecy', p.given, f, p.title.replace(/^'(.*)'$/, '$1'));
+  // Drawn bottom to top: cross references, then Charles's, then quotations, then prophecies.
+  for (let i = 0; i < data.xrefs.length; i += 3) out.push({ kind: 'xref', a: shift(data.xrefs[i]), b: shift(data.xrefs[i + 1]), votes: data.xrefs[i + 2] });
+  for (const [en, to] of parallels) add('parallel', en, to);
+  for (const q of QUOTES) add('quote', q.quoted, q.quoting, q.allusion ? { echo: true } : {});
+  for (const p of PROPHECIES) for (const f of p.fulfilled) add('prophecy', p.given, f, { title: p.title.replace(/^'(.*)'$/, '$1') });
   return out;
 }
 const chordRefs = (canon: Canon, c: Chord): [string, string] => c.refs ?? [toRef(canon.locAt(c.a)), toRef(canon.locAt(c.b))];
@@ -266,13 +282,17 @@ function prepare(canvas: HTMLCanvasElement | null, size: number) {
   return ctx;
 }
 
-type Colors = Record<Kind | 'surface' | 'border' | 'muted' | 'accent' | 'text', string>;
+type Colors = Record<Kind | 'beyond' | 'surface' | 'border' | 'muted' | 'accent' | 'text', string>;
 function drawRing(ctx: CanvasRenderingContext2D, canon: Canon, geo: Geo, colors: Colors) {
   ctx.lineCap = 'butt';
   canon.books.forEach((b, k) => {
     const t0 = geo.theta(b.start) - geo.halfVerse, t1 = geo.theta(b.end - 1) + geo.halfVerse;
     ctx.beginPath(); ctx.arc(geo.c, geo.c, geo.R + 5, t0 - Math.PI / 2, t1 - Math.PI / 2);
-    ctx.lineWidth = 6; ctx.strokeStyle = k % 2 ? colors.muted : colors.border; ctx.globalAlpha = k % 2 ? 0.6 : 1; ctx.stroke();
+    // The books beyond the 66 are dashed in their own colour, so the arc reads as apart from the 66 without colour alone.
+    if (b.beyond) { ctx.setLineDash([4, 2]); ctx.lineWidth = 6; ctx.strokeStyle = colors.beyond; ctx.globalAlpha = k % 2 ? 0.7 : 1; }
+    else { ctx.lineWidth = 6; ctx.strokeStyle = k % 2 ? colors.muted : colors.border; ctx.globalAlpha = k % 2 ? 0.6 : 1; }
+    ctx.stroke();
+    ctx.setLineDash([]);
     ctx.globalAlpha = 1;
     // Radial labels for books wide enough to hold one.
     if ((t1 - t0) * geo.R < 10) return;
@@ -280,7 +300,7 @@ function drawRing(ctx: CanvasRenderingContext2D, canon: Canon, geo: Geo, colors:
     ctx.save();
     ctx.translate(geo.c, geo.c); ctx.rotate(tm - Math.PI / 2 + (flip ? Math.PI : 0));
     ctx.font = '10px ' + getComputedStyle(document.body).getPropertyValue('--sans');
-    ctx.fillStyle = colors.muted; ctx.textBaseline = 'middle'; ctx.textAlign = flip ? 'right' : 'left';
+    ctx.fillStyle = b.beyond ? colors.beyond : colors.muted; ctx.textBaseline = 'middle'; ctx.textAlign = flip ? 'right' : 'left';
     ctx.fillText(b.id, flip ? -(geo.R + 11) : geo.R + 11, 0);
     ctx.restore();
   });

@@ -2,8 +2,13 @@ import booksJson from '@content/books.json';
 import type { Book, Ref } from './types';
 
 export const BOOKS: Book[] = booksJson as Book[];
+/** The 66 books every church reads, and the books beyond them that some do, which sit between Malachi and Matthew. */
+export const THE_66 = BOOKS.filter((b) => !b.beyond);
+export const BEYOND = BOOKS.filter((b) => b.beyond);
+/** The order ranges and sorting follow: the 66, then the books beyond them, so a range from Malachi to Matthew takes in none of them. */
+export const READING_ORDER = [...THE_66, ...BEYOND];
 const byId = new Map(BOOKS.map((b) => [b.id, b]));
-const indexOf = new Map(BOOKS.map((b, i) => [b.id, i]));
+const indexOf = new Map(READING_ORDER.map((b, i) => [b.id, i]));
 const byName = new Map(BOOKS.flatMap((b) => [[b.name.toLowerCase(), b], [(b.bsbName ?? b.name).toLowerCase(), b], [b.id.toLowerCase(), b]]));
 
 // Common abbreviations accepted by the "Go to" box, in addition to full names, OSIS ids and unambiguous prefixes.
@@ -15,11 +20,24 @@ const ABBREV: Record<string, string> = {
   mt: 'Matt', mk: 'Mark', mr: 'Mark', lk: 'Luke', jn: 'John', jhn: 'John', ac: 'Acts', ro: 'Rom', rm: 'Rom', '1co': '1Cor', '2co': '2Cor', ga: 'Gal', ep: 'Eph', php: 'Phil', pp: 'Phil', co: 'Col', cl: 'Col',
   '1th': '1Thess', '2th': '2Thess', '1ti': '1Tim', '2ti': '2Tim', '1tm': '1Tim', '2tm': '2Tim', tit: 'Titus', ti: 'Titus', phm: 'Phlm', pm: 'Phlm', he: 'Heb', hb2: 'Heb', jas: 'Jas', jm: 'Jas',
   '1pe': '1Pet', '2pe': '2Pet', '1pt': '1Pet', '2pt': '2Pet', '1jn': '1John', '2jn': '2John', '3jn': '3John', '1jo': '1John', '2jo': '2John', '3jo': '3John', jud: 'Jude', jd: 'Jude', re: 'Rev', rv: 'Rev',
+  tb: 'Tob', jdt: 'Jdt', jth: 'Jdt', addesth: 'EsthGr', esg: 'EsthGr', wisdom: 'Wis', ws: 'Wis', wisdomofsolomon: 'Wis', ecclesiasticus: 'Sir', ecclus: 'Sir', bensira: 'Sir', siracides: 'Sir', greekesther: 'EsthGr', greekdaniel: 'DanGr',
+  letterofjeremiah: 'Bar', epjer: 'Bar', susanna: 'DanGr', sus: 'DanGr', bel: 'DanGr', belandthedragon: 'DanGr', prazar: 'DanGr', dag: 'DanGr',
+  '1mac': '1Macc', '2mac': '2Macc', '3mac': '3Macc', '4mac': '4Macc', '1ma': '1Macc', '2ma': '2Macc', '3ma': '3Macc', '4ma': '4Macc', '1es': '1Esd', '2es': '2Esd', '3esdras': '1Esd', '4esdras': '2Esd', '4ezra': '2Esd',
+  man: 'PrMan', manasseh: 'PrMan', ps151: 'AddPs', psalm151: 'AddPs', enoch: '1En', '1enoch': '1En', jubilees: 'Jub',
 };
 
 export function book(id: string): Book | undefined { return byId.get(id); }
-/** A book's position in the canon, or -1 for an unknown id. */
+/** A book's position in `READING_ORDER`, or -1 for an unknown id. */
 export function bookIndex(id: string): number { return indexOf.get(id) ?? -1; }
+/**
+ * The book before (-1) or after (+1) this one among its own kind: the 66 run from Malachi straight to
+ * Matthew, and the books beyond them follow one another, so reading on never crosses from one to the other.
+ */
+export function neighbourBook(id: string, step: 1 | -1): Book | undefined {
+  const list = byId.get(id)?.beyond ? BEYOND : THE_66;
+  const i = list.findIndex((b) => b.id === id);
+  return i < 0 ? undefined : list[i + step];
+}
 export function bookByName(name: string): Book | undefined {
   const key = name.trim().toLowerCase().replace(/\.$/, '');
   return byName.get(key) ?? byName.get(key.replace(/^([1-3]) /, '$1')) ?? byId.get(ABBREV[key.replace(/\s+/g, '')] ?? '');

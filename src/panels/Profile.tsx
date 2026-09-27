@@ -1,7 +1,7 @@
 import { goTo, openPerson, setState, useStore } from '@/app/store';
 import { genealogyOf, usePerson, useProfile } from '@/lib/profiles';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
-import { BOOKS, book as bookOf, contains, formatRef, parseRef } from '@/lib/refs';
+import { THE_66, book as bookOf, contains, formatRef, parseRef } from '@/lib/refs';
 import { formatYear } from '@/lib/format';
 import { eastonParts, perBook } from '@/lib/people';
 import type { BiblePerson, Kin, Person, Profile as ProfileT } from '@/lib/types';
@@ -31,7 +31,7 @@ function Appearances({ refs }: { refs: string[] }) {
   const books = perBook(refs);
   if (!books.length) return null;
   const max = Math.max(...books.map((b) => b.count));
-  const W = 380, H = 46, n = BOOKS.length, bw = W / n, ntStart = BOOKS.findIndex((b) => b.testament === 'NT');
+  const W = 380, H = 46, n = THE_66.length, bw = W / n, ntStart = THE_66.findIndex((b) => b.testament === 'NT');
   return (
     <div className="appearances">
       <div className="panel-title">Named in {refs.length} verse{refs.length === 1 ? '' : 's'}, in {books.length} book{books.length === 1 ? '' : 's'}</div>
@@ -41,7 +41,7 @@ function Appearances({ refs }: { refs: string[] }) {
         <text x={ntStart * bw + 2} y={H + 10} fontSize={9} fill="var(--muted)">Matthew</text>
         <text x={W - 2} y={H + 10} fontSize={9} fill="var(--muted)" textAnchor="end">Revelation</text>
         {books.map((b) => {
-          const i = BOOKS.findIndex((x) => x.id === b.book), h = Math.max(2, (Math.sqrt(b.count) / Math.sqrt(max)) * H);
+          const i = THE_66.findIndex((x) => x.id === b.book), h = Math.max(2, (Math.sqrt(b.count) / Math.sqrt(max)) * H);
           return (
             <rect key={b.book} x={i * bw + 0.5} y={H - h} width={Math.max(1.5, bw - 1)} height={h} rx={1} fill="var(--accent)" style={{ cursor: 'pointer' }}
               onClick={() => { const r = parseRef(b.first); if (r) goTo(r.start); }}>

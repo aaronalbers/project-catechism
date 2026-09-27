@@ -26,7 +26,7 @@ export function SourceList({ sources, traditions }: { sources: Source[]; traditi
           {sources.map((s, i) => (
             <li key={i}>
               <span className="skind">{KIND_LABEL[s.kind]}</span>
-              {s.kind === 'scripture' && s.ref ? <RefChip r={s.ref} /> : null}
+              {s.ref ? <RefChip r={s.ref} /> : null}
               {s.title && (s.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.title} <Icon.External /></a> : <span>{s.title}</span>)}
               {s.author && <>, {s.author}</>}
               {s.year && <> ({s.year})</>}

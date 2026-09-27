@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { openPerson, setState, useStore } from '@/app/store';
 import { loadInterlinear, loadStrongs } from '@/lib/data';
 import type { InterlinearVerse, StrongsEntry } from '@/lib/types';
-import { NARROWED, videosForStrongs, wordCardsFor } from '@/lib/content';
+import { NARROWED, TEXT_BY_ID, videosForStrongs, wordCardsFor } from '@/lib/content';
+import { book } from '@/lib/refs';
 import { InsightCard } from './InsightsPanel';
 import { VideoCard } from './VideosPanel';
 import { usePeopleInBook } from '@/lib/people';
@@ -129,6 +130,8 @@ export function WordsPanel() {
     return () => { live = false; };
   }, [loc.book, loc.chapter, loc.verse]);
 
+  const beyond = book(loc.book)?.beyond;
+  if (beyond) return <div className="panel-body"><div className="empty">No interlinear for {book(loc.book)!.name}: its text here is {TEXT_BY_ID.get(beyond.text)!.name}, and the Hebrew and Greek words, Strong's numbers and word studies come from the Berean Standard Bible's interlinear, which covers only the 66 books.</div></div>;
   if (verse === undefined) return <div className="loading">Loading interlinear…</div>;
   if (!verse || !verse.w.length) return <div className="panel-body"><div className="empty">No interlinear data for this verse.</div></div>;
   const heb = verse.w[0][4].startsWith('H');

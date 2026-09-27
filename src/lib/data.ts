@@ -1,5 +1,6 @@
 import type { CircleData } from './circle';
-import type { BibleBook, BiblePerson, InterlinearVerse, MapData, PeopleInBook, Place, StrongsEntry, Xrefs } from './types';
+import { book } from './refs';
+import type { BibleBook, BiblePerson, InterlinearVerse, MapData, PeopleInBook, Place, Ref, StrongsEntry, Xrefs } from './types';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const cache = new Map<string, Promise<unknown>>();
@@ -15,9 +16,12 @@ function get<T>(path: string): Promise<T> {
 }
 
 export const loadBook = (id: string) => get<BibleBook>(`bible/${id}.json`);
-export const loadInterlinear = (book: string, chapter: number) => get<InterlinearVerse[]>(`interlinear/${book}/${chapter}.json`);
+/** A book beyond the 66 has no interlinear, so it is not asked for. */
+export const loadInterlinear = (b: string, chapter: number) => book(b)?.beyond ? Promise.reject(new Error(`${b} has no interlinear`)) : get<InterlinearVerse[]>(`interlinear/${b}/${chapter}.json`);
 export const loadXrefs = (book: string) => get<Xrefs>(`xrefs/${book}.json`).catch(() => ({} as Xrefs));
 export const loadCircle = () => get<CircleData>('circle.json');
+/** R. H. Charles's cross references from 1 Enoch to the 66, as [1 Enoch ref, ref]. */
+export const loadParallels = () => get<[Ref, Ref][]>('parallels.json').catch(() => [] as [Ref, Ref][]);
 export const loadPlaces = () => get<Place[]>('places/index.json');
 export const loadPlacesForBook = (book: string) => get<Record<string, string[]>>(`places/by-book/${book}.json`).catch(() => ({}));
 

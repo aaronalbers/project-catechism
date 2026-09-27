@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { getState, goTo, setState, useStore } from '@/app/store';
 import { loadBook, loadInterlinear } from '@/lib/data';
-import { CHIASMS, NARROWED, markersForChapter, talliesInChapter } from '@/lib/content';
+import { CANON_BY_ID, CHIASMS, NARROWED, TEXT_BY_ID, markersForChapter, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
 import { rowsAt } from '@/lib/tally';
 import { reignsInChapter } from '@/lib/reign';
 import { passionAt } from '@/lib/passion';
-import { BOOKS, book, bookIndex, contains, parseRef, touchesChapter } from '@/lib/refs';
-import type { BibleBook, Chiasm, Insight, InterlinearVerse, InterlinearWord } from '@/lib/types';
+import { book, contains, neighbourBook, parseRef, touchesChapter } from '@/lib/refs';
+import type { Beyond, BibleBook, Chiasm, Insight, InterlinearVerse, InterlinearWord } from '@/lib/types';
+import { cardId } from '@/lib/catalog';
 import { alignVerse, tokenize } from '@/lib/align';
 import { narrowedToken, narrowedWord } from '@/lib/words';
 import { readStored, writeStored } from '@/lib/storage';
@@ -62,6 +63,22 @@ function useStoredFlag(key: string, initial: boolean): [boolean, (to?: boolean) 
   const [v, setV] = useState(() => readStored(key, initial));
   return [v, (to) => setV((x) => { const y = to ?? !x; writeStored(key, y); return y; })];
 }
+
+/** Above a book beyond the 66: who reads it as scripture, what its text is, and anything odd about its numbering. */
+function BeyondNote({ book: id, beyond }: { book: string; beyond: Beyond }) {
+  const churches = beyond.canons.filter((c) => c !== 'anglican').map((c) => CANON_BY_ID.get(c)!.name);
+  const text = TEXT_BY_ID.get(beyond.text)!;
+  const why = () => goTo({ book: id, chapter: 1, verse: 1 }, { openTab: 'insights', feature: cardId({ kind: 'insight', id: 'canon-books-beyond-the-66' }) });
+  return (
+    <div className="attribution beyond-note">
+      <p><strong>Beyond the 66.</strong> {churches.length ? <>Scripture in the {listed(churches)} {churches.length === 1 ? 'church' : 'churches'}{beyond.canons.includes('anglican') ? '; Anglicans read it “for example of life,” not for doctrine' : ''}.</> : 'Read, but not as scripture.'}{' '}
+        <button className="marks-toggle" onClick={why}>Which churches read which books</button></p>
+      {beyond.note && <p>{beyond.note}</p>}
+      <p>Text: <a href={text.url} target="_blank" rel="noreferrer">{text.name}</a> ({text.license}), not the Berean Standard Bible, so it has no interlinear or word study. {text.summary}</p>
+    </div>
+  );
+}
+const listed = (xs: string[]) => xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs.at(-1)}`;
 
 export function Reader() {
   const loc = useStore((s) => s.loc);
@@ -130,17 +147,18 @@ export function Reader() {
   if (error) return <div className="loading">Could not load {b?.name}. Run <code>npm run data</code> first. <br /><small>{error}</small></div>;
   if (!data || data.id !== loc.book) return <div className="loading">Loading {b?.name}…</div>;
   const chapter = data.chapters[loc.chapter - 1] ?? [];
-  const bi = bookIndex(loc.book);
-  const prev = loc.chapter > 1 ? { book: loc.book, chapter: loc.chapter - 1, verse: 1 } : bi > 0 ? { book: BOOKS[bi - 1].id, chapter: BOOKS[bi - 1].chapters, verse: 1 } : null;
-  const next = loc.chapter < data.chapters.length ? { book: loc.book, chapter: loc.chapter + 1, verse: 1 } : bi + 1 < BOOKS.length ? { book: BOOKS[bi + 1].id, chapter: 1, verse: 1 } : null;
+  const before = neighbourBook(loc.book, -1), after = neighbourBook(loc.book, 1);
+  const prev = loc.chapter > 1 ? { book: loc.book, chapter: loc.chapter - 1, verse: 1 } : before ? { book: before.id, chapter: before.chapters, verse: 1 } : null;
+  const next = loc.chapter < data.chapters.length ? { book: loc.book, chapter: loc.chapter + 1, verse: 1 } : after ? { book: after.id, chapter: 1, verse: 1 } : null;
 
   return (
     <article className="reader" aria-label={`${data.name} ${loc.chapter}`}>
       <h1>{data.name} {loc.chapter}</h1>
-      <div className="attribution">
+      {b?.beyond ? <BeyondNote book={b.id} beyond={b.beyond} /> : <div className="attribution">
         Berean Standard Bible (public domain). Tap a verse to explore it; tap a word in the current verse for its Hebrew or Greek.
         {markable && <> <span className="w narrow">Dotted</span> words translate something broader than the English. <button className="marks-toggle" aria-pressed={wordMarks} onClick={() => setWordMarks()}>{wordMarks ? 'Hide' : 'Show'} them</button></>}
-      </div>
+      </div>}
+      {loc.chapter === 1 && data.intro && <div className="book-intro">{data.intro.map((p, i) => <p key={i}>{p}</p>)}</div>}
       {passage && <ChiasmStrip c={passage} loc={loc} show={structure} onToggle={toggleStructure} />}
       {chapter.map((v, k) => {
         const ilv = ilByVerse.get(v.v);
@@ -165,21 +183,23 @@ export function Reader() {
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
-            {ilv?.h && <div className="heading">{ilv.h}</div>}
+            {(ilv?.h ?? v.h) && <div className="heading">{ilv?.h ?? v.h}</div>}
             {opens && <ChiasmCaption c={opens} show={structure} onToggle={toggleStructure} />}
             {tallyOpens && <TallyCaption t={tallyOpens} show={charts} onToggle={toggleCharts} />}
             <div id={`v-${v.v}`} className={`verse${current ? ' current' : ''}`} onClick={() => goTo({ ...loc, verse: v.v })} role="button" tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo({ ...loc, verse: v.v }); } }} aria-current={current || undefined}>
               {m && <div className="markers" aria-hidden="true">{[...m].map((k) => <span key={k} className={`marker ${k}`} title={k} />)}</div>}
-              <span className="num">{v.v}</span>
+              <span className="num">{v.l ?? v.v}</span>
               <div>
-                <VerseText text={v.t} verse={v.v} current={current} il={ilv} marks={wordMarks} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />
+                {!v.t && v.f ? <span className="text omitted">{v.f.join(' ')}</span>
+                  : <VerseText text={v.t} verse={v.v} current={current} il={ilv} marks={wordMarks} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} />}
                 {bars.map(({ t, row }) => <TallyBar key={`${t.id}:${row.label}`} t={t} row={row} loc={loc} current={current} />)}
                 {subtotals.map(({ t, g }) => <TallyGroupBar key={`${t.id}:${g.label}`} t={t} g={g} loc={loc} current={current} />)}
                 {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}
                 {(days.event || days.saying) && <PassionChart event={days.event} saying={days.saying} account={days.account} loc={loc} show={dayCharts} onToggle={toggleDays} />}
                 {reign && <ReignChart k={reign.k} account={reign.account} loc={loc} show={reignCharts} onToggle={toggleReigns} />}
                 {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
+                {current && v.t && v.f?.length ? <div className="fn">{v.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
               </div>
             </div>
           </div>

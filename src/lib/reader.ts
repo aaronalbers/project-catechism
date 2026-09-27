@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from 'react';
 import { BrowserEngine, KokoroEngine, canUseKokoroGPU, type Engine, type KokoroDevice } from './tts';
 import { loadBook, loadVerseText } from './data';
-import { BOOKS, bookIndex, type VerseLoc } from './refs';
+import { neighbourBook, type VerseLoc } from './refs';
 import { getState, setState } from '@/app/store';
 import { readStored, writeStored } from './storage';
 
@@ -43,9 +43,8 @@ export async function nextVerse(loc: VerseLoc): Promise<VerseLoc | null> {
   const idx = chapter.findIndex((v) => v.v === loc.verse);
   if (idx >= 0 && idx + 1 < chapter.length) return { ...loc, verse: chapter[idx + 1].v };
   if (loc.chapter < book.chapters.length) return { book: loc.book, chapter: loc.chapter + 1, verse: book.chapters[loc.chapter][0]?.v ?? 1 };
-  const bi = bookIndex(loc.book);
-  if (bi + 1 < BOOKS.length) return { book: BOOKS[bi + 1].id, chapter: 1, verse: 1 };
-  return null;
+  const after = neighbourBook(loc.book, 1);
+  return after ? { book: after.id, chapter: 1, verse: 1 } : null;
 }
 
 /** A verse's text as it is spoken: its whitespace collapsed, and empty for a verse the BSB omits. */

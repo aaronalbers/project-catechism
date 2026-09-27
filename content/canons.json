@@ -1,0 +1,62 @@
+{
+ "canons": [
+  {
+   "id": "catholic",
+   "name": "Catholic",
+   "summary": "Scripture for the Catholic Church since the Council of Trent (1546), which listed Tobit, Judith, Wisdom, Sirach, Baruch and 1–2 Maccabees among the Old Testament's books, and required Esther and Daniel 'entire with all their parts', the Greek additions included.",
+   "sources": [
+    {"kind": "primary", "title": "Council of Trent, Session IV, Decree concerning the Canonical Scriptures (1546)", "author": "tr. T. A. Buckley", "year": 1851, "url": "https://en.wikisource.org/wiki/Canons_and_Decrees_of_the_Council_of_Trent/Session_IV/Canonical_Scriptures"}
+   ]
+  },
+  {
+   "id": "orthodox",
+   "name": "Eastern Orthodox",
+   "summary": "Read as part of the Old Testament, which the Orthodox Church receives in the Greek Septuagint. The Synod of Jerusalem (1672) named Wisdom, Judith, Tobit, Susanna, Bel and the Dragon, the Maccabees and Sirach as scripture; editions differ on 1 Esdras, 3 and 4 Maccabees, the Prayer of Manasseh and Psalm 151, and Slavonic Bibles add 2 Esdras.",
+   "sources": [
+    {"kind": "primary", "title": "Confession of Dositheus (Synod of Jerusalem, 1672), Question 3", "author": "tr. J. N. W. B. Robertson, ed. D. Bratcher", "url": "http://www.crivoice.org/creeddositheus.html"},
+    {"kind": "scholarship", "title": "What books are in the Orthodox Old Testament?", "author": "St. Michael Antiochian Orthodox Church", "url": "https://stmichaeltx.org/orthodox-101/scripture-tradition/what-books-are-in-the-orthodox-old-testament/", "note": "'Some editions also include 3 Maccabees, 4 Maccabees, Psalm 151, 1 Esdras, and the Prayer of Manasseh'"},
+    {"kind": "scholarship", "title": "World English Bible, preface: 'Does the World English Bible include the Apocrypha?'", "url": "https://ebible.org/find/details.php?id=engwebu", "note": "the Slavonic Bible includes 2 Esdras as 3 Esdras"}
+   ]
+  },
+  {
+   "id": "ethiopian",
+   "name": "Ethiopian Orthodox",
+   "summary": "The Ethiopian Orthodox Tewahedo Church counts 81 books, among them Jubilees and Enoch, which survive whole only in Ge'ez, and the third and fourth Esdras. Its three books of Meqabyan are not 1–2 Maccabees, and lists of the 81 vary.",
+   "sources": [
+    {"kind": "primary", "title": "The Bible", "author": "Ethiopian Orthodox Tewahedo Church", "url": "https://www.ethiopianorthodox.org/english/canonical/books.html", "note": "the church's list of its 46 Old Testament and 35 New Testament books"}
+   ]
+  },
+  {
+   "id": "anglican",
+   "name": "Anglican: read, not canon",
+   "summary": "The Church of England's Article VI lists these among the books the Church 'doth read for example of life and instruction of manners; but yet doth it not apply them to establish any doctrine'. The 1611 King James Bible printed them as their own section between Malachi and Matthew.",
+   "sources": [
+    {"kind": "primary", "title": "Articles of Religion (1571), Article VI", "author": "Church of England", "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"},
+    {"kind": "primary", "title": "The Holy Bible, conteyning the Old Testament and the New (London: Robert Barker, 1611)", "url": "https://archive.org/details/bim_early-english-books-1475-1640_the-holy-bible-conteyni_bible-english_1611_0", "note": "the Apocrypha printed between Malachi and Matthew"}
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "id": "web",
+   "name": "World English Bible",
+   "license": "public domain",
+   "url": "https://ebible.org/find/details.php?id=engwebu",
+   "summary": "An ecumenical modern English translation. Its footnotes are shown with the verse."
+  },
+  {
+   "id": "charles-enoch",
+   "name": "R. H. Charles, The Book of Enoch",
+   "license": "public domain",
+   "url": "https://archive.org/details/apocryphapseudep02charuoft",
+   "summary": "Charles's translation from the Ethiopic, as printed in The Apocrypha and Pseudepigrapha of the Old Testament (Oxford, 1913), vol. 2, from CrossWire's edition. Brackets are his: ( ) words he supplies, ┌ ┐ words in the Greek but not the Ethiopic, ╓ ╖ words in the Ethiopic but not the Greek, † † a corrupt reading. His cross references are shown in the Links tab."
+  },
+  {
+   "id": "charles-jubilees",
+   "name": "R. H. Charles, The Book of Jubilees",
+   "license": "public domain",
+   "url": "https://archive.org/details/apocryphapseudep02charuoft",
+   "summary": "Charles's translation from the Ethiopic, as printed in The Apocrypha and Pseudepigrapha of the Old Testament (Oxford, 1913), vol. 2, from CrossWire's edition."
+  }
+ ]
+}

@@ -61,5 +61,38 @@
   "confidence": "interpretation",
   "traditions": ["Most critical scholarship (Brown, Schürer, Fitzmyer) treats Luke 2:2 as a historical error", "Conservative Protestant and Catholic scholarship commonly adopts the 'before Quirinius' translation or an earlier commission", "No major creed or confession depends on the census date"],
   "related": ["herod-death-4bc", "tiberius-15th-year"]
+ },
+ {
+  "id": "canon-books-beyond-the-66",
+  "title": "Which books are scripture? The churches' four answers",
+  "kind": "history",
+  "verses": ["Luke.24.44", "Jude.1.14-15", "Tob.1", "Jdt.1", "EsthGr.1", "Wis.1", "Sir.1", "Bar.1", "DanGr.1", "1Macc.1", "2Macc.1", "1Esd.1", "PrMan.1", "AddPs.1", "3Macc.1", "4Macc.1", "2Esd.1", "1En.1", "Jub.1"],
+  "summary": "Every church reads the 66 books. They differ over the Jewish writings of the last centuries BC and the first AD that the Hebrew Bible does not contain: Catholics count seven of them and the Greek parts of Esther and Daniel as scripture, Orthodox churches more, the Ethiopian church more again, including 1 Enoch and Jubilees; Protestants read them, if at all, as useful but not scripture.",
+  "body": [
+   "Jesus speaks of 'the Law of Moses, the Prophets, and the Psalms' (Luke 24:44). Sirach's translator, who came to Egypt 'in the thirty-eighth year' of King Euergetes (≈132 BC, taking the king to be Ptolemy VIII), writes of what was handed down 'by the law and the prophets, and by the others that have followed in their steps'. Josephus, writing about AD 95, counts 'only twenty-two books' held divine, and says the histories written after Artaxerxes are not 'esteemed of the like authority'; most scholars take his 22 to be the Hebrew Bible's books counted another way. None of these names the books one by one.",
+   "The Greek-speaking churches read their Old Testament in the Septuagint, which also held books the Hebrew Bible does not: Tobit, Judith, Wisdom, Sirach, Baruch, the Maccabees and longer forms of Esther and Daniel. The councils of North Africa (Hippo 393, repeated at Carthage in 419) listed Tobit, Judith, two books of Maccabees and 'five books of Solomon', usually taken to include Wisdom and Sirach. The Council of Trent (1546) made the Catholic list binding: those books and Baruch, with every book received 'entire with all their parts', the Greek parts of Esther and Daniel among them.",
+   "The Orthodox Synod of Jerusalem (1672) named Wisdom, Judith, Tobit, Susanna, Bel and the Dragon, the Maccabees and Sirach as genuine parts of scripture, refusing them the name Apocrypha. Orthodox editions differ on 1 Esdras, 3 and 4 Maccabees, the Prayer of Manasseh and Psalm 151, and Slavonic Bibles add 2 Esdras. The Ethiopian Orthodox Tewahedo Church counts 81 books, among them 1 Enoch and Jubilees, which survive whole only in Ge'ez. Jude 14–15 quotes 1 Enoch 1:9, and Aramaic fragments of 1 Enoch were found at Qumran.",
+   "The Reformers kept the books but set them apart. The 1611 King James Bible printed them as the Apocrypha between Malachi and Matthew, and the Church of England's Article VI lists them as books the Church 'doth read for example of life and instruction of manners; but yet doth it not apply them to establish any doctrine'. The Westminster Confession (1646) went further: they are 'no part of the canon of the Scripture', not to be 'made use of' otherwise 'than other human writings'. Most Protestant Bibles since have left them out.",
+   "A popular account says a rabbinic council at Jamnia (Yavneh), around AD 90, closed the Hebrew canon and shut these books out. The sources do not show it. The Mishnah records a dispute over whether the Song of Songs and Ecclesiastes 'defile the hands', settled by a tradition from 'the day when they appointed Rabbi Elazar ben Azariah head of the academy': a ruling on two books already read, not a council fixing a list. Jack P. Lewis's study of the evidence (1964) found nothing to support a canon-closing council at Jamnia.",
+   "Here the books beyond the 66 have their own section of the book list, and on the Links circle their own arc, set between the Testaments where the 1611 King James put them. Each is marked with the churches that read it. The text is the World English Bible's or R. H. Charles's, not the BSB, so there is no interlinear or word study for them."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.24.44"},
+   {"kind": "scripture", "ref": "Jude.1.14-15"},
+   {"kind": "primary", "title": "1 Enoch 1:9", "ref": "1En.1.9"},
+   {"kind": "primary", "title": "Sirach, the translator's prologue", "note": "'by the law and the prophets, and by the others that have followed in their steps'; it stands before chapter 1 in this reader"},
+   {"kind": "primary", "title": "Josephus, Against Apion 1.38–41", "author": "Flavius Josephus", "year": "c. AD 95", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0216:book=1:section=38", "note": "tr. William Whiston"},
+   {"kind": "primary", "title": "Code of Canons of the African Church (419), canon 24", "url": "https://www.ccel.org/ccel/schaff/npnf214.xv.iv.iv.xxv.html", "note": "repeating the list of Hippo (393)"},
+   {"kind": "primary", "title": "Council of Trent, Session IV, Decree concerning the Canonical Scriptures (1546)", "url": "https://en.wikisource.org/wiki/Canons_and_Decrees_of_the_Council_of_Trent/Session_IV/Canonical_Scriptures"},
+   {"kind": "primary", "title": "Confession of Dositheus (Synod of Jerusalem, 1672), Question 3", "url": "http://www.crivoice.org/creeddositheus.html"},
+   {"kind": "primary", "title": "The Bible", "author": "Ethiopian Orthodox Tewahedo Church", "url": "https://www.ethiopianorthodox.org/english/canonical/books.html"},
+   {"kind": "archaeology", "title": "Aramaic fragments of 1 Enoch, Qumran Cave 4 (4QEnᶜ)"},
+   {"kind": "primary", "title": "The Holy Bible, conteyning the Old Testament and the New (London: Robert Barker, 1611)", "url": "https://archive.org/details/bim_early-english-books-1475-1640_the-holy-bible-conteyni_bible-english_1611_0", "note": "the Apocrypha printed between Malachi and Matthew"},
+   {"kind": "primary", "title": "Articles of Religion (1571), Article VI", "author": "Church of England", "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"},
+   {"kind": "primary", "title": "Westminster Confession of Faith (1646), 1.3", "url": "https://www.opc.org/wcf.html"},
+   {"kind": "primary", "title": "Mishnah Yadayim 3:5", "url": "https://www.sefaria.org/Mishnah_Yadayim.3.5", "note": "tr. Joshua Kulp"},
+   {"kind": "scholarship", "title": "What Do We Mean by Jabneh?", "author": "Jack P. Lewis", "year": 1964, "url": "https://academic.oup.com/jaar/article-abstract/XXXII/2/125/700440", "note": "Journal of Bible and Religion 32, 125–132"}
+  ],
+  "confidence": "consensus"
  }
 ]

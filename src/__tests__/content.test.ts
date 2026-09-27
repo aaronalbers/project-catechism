@@ -8,8 +8,8 @@ import { PROFILE_INDEX } from '@/lib/content';
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
 const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
-import { compareLoc, contains, parseRef, touchesChapter, BOOKS } from '@/lib/refs';
+import { CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { compareLoc, contains, parseRef, touchesChapter, BOOKS, BEYOND, READING_ORDER } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
 import { scaleReference } from '@/lib/models/scale';
@@ -28,7 +28,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings,
+  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings,
     ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
@@ -154,7 +154,7 @@ describe('content integrity', () => {
     const read = (id: string) => books.get(id) ?? books.set(id, JSON.parse(readFileSync(new URL(`${id}.json`, bibleDir), 'utf8'))).get(id)!;
     const textOf = (ref: string) => {
       const r = parseRef(ref)!, out: string[] = [];
-      for (const b of BOOKS.slice(BOOKS.findIndex((x) => x.id === r.start.book), BOOKS.findIndex((x) => x.id === r.end.book) + 1)) {
+      for (const b of READING_ORDER.slice(READING_ORDER.findIndex((x) => x.id === r.start.book), READING_ORDER.findIndex((x) => x.id === r.end.book) + 1)) {
         read(b.id).chapters.forEach((ch, i) => ch.forEach((v) => {
           const loc = { book: b.id, chapter: i + 1, verse: v.v };
           if (compareLoc(loc, r.start) >= 0 && compareLoc(loc, r.end) <= 0) out.push(v.t);
@@ -672,6 +672,37 @@ describe('content integrity', () => {
     expect(modelViewAt(temple, { book: '2Kgs', chapter: 25, verse: 9 }, null)).toBeNull(); // the reader picked the temple as built
     const angles = MODELS.flatMap((m) => [m.view, ...(m.builds ?? []).flatMap((b) => b.steps.map((st) => st.view)), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => a.changes.map((c) => c.view)))]);
     for (const v of angles) if (v) expect(v.length === 2 && Math.abs(v[1]) < 90, `bad view ${JSON.stringify(v)}`).toBe(true);
+  });
+  it('every source that names a passage names one that parses', () => {
+    expect(bad(citations().flatMap(({ s }) => (s.ref ? [s.ref] : [])))).toEqual([]);
+  });
+  it('a book beyond the 66 says which churches read it and whose translation it is, and each church cites its own statement', () => {
+    for (const b of BEYOND) {
+      expect(b.beyond!.canons.length, b.id).toBeGreaterThan(0);
+      for (const c of b.beyond!.canons) expect(CANON_BY_ID.has(c), `${b.id}: ${c}`).toBe(true);
+      expect(TEXT_BY_ID.has(b.beyond!.text), `${b.id}: ${b.beyond!.text}`).toBe(true);
+    }
+    for (const c of CANONS) expect(c.sources.some((x) => evidential.has(x.kind)), `${c.id} cites no primary statement`).toBe(true);
+  });
+  it('an echo, which is a judgement and not a quotation, cites who records it', () => {
+    for (const q of QUOTES.filter((q) => q.allusion)) expect(q.sources?.length, q.id).toBeGreaterThan(0);
+  });
+  it.skipIf(!existsSync(bibleDir))('the books beyond the 66 are built whole, and what the content cites in them is there', () => {
+    const texts = new Map(BEYOND.map((b) => [b.id, JSON.parse(readFileSync(new URL(`${b.id}.json`, bibleDir), 'utf8')) as BibleBook]));
+    for (const [id, t] of texts) {
+      expect(t.chapters.length, id).toBe(BEYOND.find((b) => b.id === id)!.chapters);
+      t.chapters.forEach((ch, i) => expect(ch.length, `${id} ${i + 1}`).toBeGreaterThan(0));
+    }
+    const cited = [...QUOTES.flatMap((q) => [q.quoted, q.quoting]), ...INSIGHTS.flatMap((i) => i.verses), ...citations().flatMap(({ s }) => (s.ref ? [s.ref] : []))];
+    for (const ref of cited) {
+      const r = parseRef(ref)!;
+      for (const end of [r.start, r.end]) {
+        const t = texts.get(end.book);
+        if (!t || end.verse === 999) continue;
+        const v = t.chapters[end.chapter - 1]?.find((x) => x.v === end.verse);
+        expect(v && (v.t || v.f), `${ref}: ${end.book} ${end.chapter}:${end.verse} is not in the text`).toBeTruthy();
+      }
+    }
   });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);

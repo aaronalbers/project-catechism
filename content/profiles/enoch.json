@@ -18,7 +18,7 @@
   {"ref": "Jude.1.14-15", "text": "“The seventh from Adam”"}
  ],
  "later": [
-  {"text": "The book Jude quotes is 1 Enoch, a collection of Jewish apocalyptic writings from about the 3rd century BC to the turn of the era: Jude 14–15 follows 1 Enoch 1:9. Fragments of it were found among the Dead Sea Scrolls, and the Ethiopian Orthodox Church counts it as Scripture.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "1 Enoch 1:9"}, {"kind": "scholarship", "title": "1 Enoch 1 (Hermeneia)", "author": "George W. E. Nickelsburg", "year": 2001}]}
+  {"text": "The book Jude quotes is 1 Enoch, a collection of Jewish apocalyptic writings from about the 3rd century BC to the turn of the era: Jude 14–15 follows 1 Enoch 1:9. Fragments of it were found among the Dead Sea Scrolls, and the Ethiopian Orthodox Church counts it as Scripture.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "1 Enoch 1:9", "ref": "1En.1.9"}, {"kind": "scholarship", "title": "1 Enoch 1 (Hermeneia)", "author": "George W. E. Nickelsburg", "year": 2001}]}
  ],
  "confidence": "evidence",
  "sources": [

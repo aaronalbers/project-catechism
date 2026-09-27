@@ -48,7 +48,10 @@ sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/da
 (which memoises promises per path). It is sharded so a chapter costs one or two small
 requests: `bible/<Book>.json`, `interlinear/<Book>/<ch>.json`, `strongs/<H|G>/<shard>.json`
 (100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<a-z>.json` (everyone the Bible names, from Theographic, with their Easton's entry), and `map.json` (Natural Earth coasts, rivers and
-lakes round Jerusalem, for the models' map scale).
+lakes round Jerusalem, for the models' map scale). The books beyond the 66 get `bible/<Book>.json` too, built by
+`scripts/beyond.mjs` from the World English Bible's deuterocanon (USFM) and R. H. Charles's 1 Enoch and Jubilees
+(CrossWire's SWORD genbook modules), with `parallels.json` (Charles's cross references from 1 Enoch to the 66) and
+their verse counts in `circle.json`'s `beyond`.
 
 Never commit anything under `public/data/` or `.cache/`, and never hand-edit files there —
 regenerate with `npm run data`.
@@ -68,6 +71,17 @@ store for playback settings and calls into `src/lib/tts.ts`, which puts two engi
 one `Engine` interface — the Web Speech API, the default, which needs no download, and Kokoro
 (neural, runs in a Web Worker, fp32/WebGPU ≈330 MB or q8/WASM ≈90 MB, user's choice), which
 is slower to start. If Kokoro fails to load, playback falls back to the browser's voice.
+
+### Books beyond the 66
+
+`content/books.json` sets the books some churches read beyond the 66 (Tobit to Jubilees) between Malachi and
+Matthew, each with `beyond`: the churches that read it (`canons`, described with their own statements in
+`content/canons.json`), whose translation it is (`text`), and a `note` on anything odd about its numbering. `BOOKS`
+keeps that order (the picker and the circle); `THE_66` and `BEYOND` split it; `READING_ORDER` puts the 66 first, so a
+range from Malachi to Matthew takes in none of them; `neighbourBook` keeps chapter navigation and continuous audio
+within one group. They have no interlinear, Strong's, OpenBible cross references, people or places, and each panel
+says so rather than showing nothing. Jubilees' verse numbers are CrossWire's editor's, not Charles's (its `note`
+says where they drift), so do not cite a Jubilees verse without checking it against Charles's 1913 printing.
 
 ### References are strings, parsed everywhere
 
@@ -108,6 +122,10 @@ them in CI — read it before adding content.
   widths; 500px is what existing cards use.
 - `related` ids must resolve to an existing insight, and links read better added in both
   directions.
+
+- A quote (`content/quotes.json`) marked `allusion` is an echo, not a quotation, and reads "echoes" / "echoed in";
+  it cites who records the parallel (the Nestle–Aland index). Links between the 66 and the books beyond them are
+  curated here, from that index, each checked against the WEB or Charles numbering of the verse.
 
 - Word cards (`kind: 'word'`) are named for their Strong's number (`word-h5775-oph`), or list several in
   `strongs`. `narrows` marks a word the English is narrower than: `rendered` names the BSB renderings that

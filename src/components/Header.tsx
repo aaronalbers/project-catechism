@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { goTo, setState, useStore } from '@/app/store';
-import { BOOKS, book, bookByName } from '@/lib/refs';
+import { BEYOND, BOOKS, THE_66, book, bookByName } from '@/lib/refs';
+import { CANON_BY_ID } from '@/lib/content';
+import type { Beyond } from '@/lib/types';
 import { FEATURE_LABEL, featuresInBook, orderKinds, type FeatureKind } from '@/lib/catalog';
 import { Icon } from './Icons';
 
@@ -11,8 +13,17 @@ function parseInput(s: string) {
   const name = m[1].replace(/\s+/g, ' ');
   const b = bookByName(name) ?? BOOKS.find((b) => b.name.toLowerCase().startsWith(name.toLowerCase()));
   if (!b) return null;
+  // The Psalter has 150; the Greek's 151st is a book of its own here.
+  if (b.id === 'Ps' && m[2] === '151') return { book: 'AddPs', chapter: 1, verse: +(m[3] ?? 1) || 1 };
   return { book: b.id, chapter: Math.min(+(m[2] ?? 1), b.chapters) || 1, verse: +(m[3] ?? 1) || 1 };
 }
+
+const GROUPS = [
+  { label: 'Old Testament', books: THE_66.filter((b) => b.testament === 'OT') },
+  { label: 'New Testament', books: THE_66.filter((b) => b.testament === 'NT') },
+  { label: 'Beyond the 66', books: BEYOND, blurb: 'Books other churches read as scripture, and Anglicans “for example of life.” Their text is not the BSB’s.' },
+];
+const readBy = (b: Beyond) => `Read as scripture by: ${b.canons.filter((c) => c !== 'anglican').map((c) => CANON_BY_ID.get(c)!.name).join(', ')}`;
 
 function Dots({ kinds }: { kinds: FeatureKind[] }) {
   return <span className="nav-dots" aria-hidden="true">{kinds.map((k) => <span key={k} className={`marker ${k}`} />)}</span>;
@@ -47,12 +58,13 @@ function Navigator({ onClose }: { onClose: () => void }) {
         {parsed && <button className="refbtn" onClick={submit}>{book(parsed.book)?.name} {parsed.chapter}:{parsed.verse}</button>}
       </div>
       <div className="nav-body">
-        {(['OT', 'NT'] as const).map((t) => (
-          <div key={t}>
-            <div className="nav-testament">{t === 'OT' ? 'Old Testament' : 'New Testament'}</div>
+        {GROUPS.map((g) => (
+          <div key={g.label}>
+            <div className="nav-testament">{g.label}</div>
+            {g.blurb && <p className="nav-blurb">{g.blurb}</p>}
             <div className="nav-books">
-              {BOOKS.filter((x) => x.testament === t).map((x) => (
-                <button key={x.id} aria-current={x.id === bookId} onClick={() => pickBook(x.id)} title={describe(inBook(x.id)) || undefined}>{x.name}<Dots kinds={inBook(x.id)} /></button>
+              {g.books.map((x) => (
+                <button key={x.id} aria-current={x.id === bookId} onClick={() => pickBook(x.id)} title={[x.beyond && readBy(x.beyond), describe(inBook(x.id))].filter(Boolean).join(' — ') || undefined}>{x.name}<Dots kinds={inBook(x.id)} /></button>
               ))}
             </div>
           </div>

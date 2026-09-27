@@ -16,7 +16,7 @@
   {"ref": "Jude.1.14", "text": "Enoch's prophecy"}
  ],
  "later": [
-  {"text": "Jude 14–15 quotes 1 Enoch 1:9, a Jewish apocalypse known in full only in Ethiopic, with Aramaic fragments at Qumran.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "1 Enoch 1:9"}, {"kind": "archaeology", "title": "Aramaic fragments of 1 Enoch, Qumran Cave 4 (4QEnᶜ)"}]},
+  {"text": "Jude 14–15 quotes 1 Enoch 1:9, a Jewish apocalypse known in full only in Ethiopic, with Aramaic fragments at Qumran.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "1 Enoch 1:9", "ref": "1En.1.9"}, {"kind": "archaeology", "title": "Aramaic fragments of 1 Enoch, Qumran Cave 4 (4QEnᶜ)"}]},
   {"text": "Hegesippus, as quoted by Eusebius, tells how Jude's grandsons, poor farmers, were brought before the emperor Domitian as descendants of David and released.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.19–20"}], "traditions": ["Hegesippus"]}
  ],
  "confidence": "evidence",

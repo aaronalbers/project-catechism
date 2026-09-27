@@ -3,10 +3,18 @@ import type { ProceduralKind } from './models';
 /** OSIS-style reference: "Matt.1.1", a range "Matt.1.1-Matt.1.5", or a chapter "Matt.1". */
 export type Ref = string;
 
-export interface Book { id: string; name: string; bsbName?: string; chapters: number; testament: 'OT' | 'NT' }
+export interface Book { id: string; name: string; bsbName?: string; chapters: number; testament: 'OT' | 'NT'; beyond?: Beyond }
 
-export interface Verse { v: number; t: string }
-export interface BibleBook { id: string; name: string; chapters: Verse[][] }
+/** The churches that read a book outside the 66 as scripture (content/canons.json), and whose translation the reader shows. */
+export type CanonId = 'catholic' | 'orthodox' | 'ethiopian' | 'anglican';
+export interface Beyond { canons: CanonId[]; text: string; note?: string }
+export interface ChurchCanon { id: CanonId; name: string; summary: string; sources: Source[] }
+export interface TextSource { id: string; name: string; license: string; url: string; summary: string }
+
+/** A verse; `l` labels one that stands for several ("15-16"), and `h` and `f` are a book beyond the 66's heading above it and footnotes (the BSB's are in the interlinear). */
+export interface Verse { v: number; t: string; l?: string; h?: string; f?: string[] }
+/** `intro` is what a book beyond the 66 prints before chapter 1: Sirach's prologue, its translator's notes. */
+export interface BibleBook { id: string; name: string; chapters: Verse[][]; intro?: string[] }
 
 /** [original, transliteration, morph code, morph long, strongs, gloss, original-order index, punctuation] */
 /**
@@ -53,7 +61,7 @@ export interface MapData {
 export type SourceKind = 'scripture' | 'archaeology' | 'primary' | 'scholarship' | 'lexicon' | 'image' | 'video' | 'data';
 export interface Source {
   kind: SourceKind;
-  /** Scripture reference (kind = scripture). */
+  /** The passage cited: always for scripture, and for a primary text the reader holds (1 Enoch, the Maccabees). */
   ref?: Ref;
   title?: string; author?: string; year?: string | number; url?: string; note?: string; license?: string;
 }
@@ -144,7 +152,8 @@ export interface Profile {
   eastonWrong?: string;
 }
 export interface Prophecy { id: string; title: string; given: Ref; fulfilled: Ref[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
-export interface Quote { id: string; quoting: Ref; quoted: Ref; summary: string; sources?: Source[] }
+/** `allusion` marks an echo rather than a quotation: a phrase or an image taken up, not words cited. */
+export interface Quote { id: string; quoting: Ref; quoted: Ref; summary: string; sources?: Source[]; allusion?: true }
 export interface Fragment { id: string; siglum: string; name: string; date: string; contents: Ref[]; held: string; summary: string; sources: Source[]; media?: Media[] }
 export interface Writer { id: string; name: string; books: { book: string; refs?: Ref[] }[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 export interface Speaker { id: string; ref: Ref; speaker: string; summary?: string; sources?: Source[] }

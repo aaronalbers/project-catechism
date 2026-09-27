@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Prophecy, Quote, Ruler, Speaker, Tally, Video, VideoKind, Writer } from './types';
+import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Prophecy, Quote, Ruler, Speaker, Tally, TextSource, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -19,6 +19,7 @@ import journeys from '@content/journeys.json';
 import tallies from '@content/tallies.json';
 import monarchy from '@content/monarchy.json';
 import passion from '@content/passion.json';
+import canons from '@content/canons.json';
 
 export const PEOPLE = people as unknown as Person[];
 export const PROPHECIES = prophecies as unknown as Prophecy[];
@@ -34,6 +35,11 @@ export const JOURNEYS = journeys as unknown as Journey[];
 export const TALLIES = tallies as unknown as Tally[];
 export const MONARCHY = monarchy as unknown as Monarchy;
 export const PASSION = passion as unknown as Passion;
+/** The churches that read books beyond the 66, and the translations those books are shown in. */
+export const CANONS = canons.canons as unknown as ChurchCanon[];
+export const TEXTS = canons.texts as unknown as TextSource[];
+export const CANON_BY_ID = new Map(CANONS.map((c) => [c.id, c]));
+export const TEXT_BY_ID = new Map(TEXTS.map((t) => [t.id, t]));
 /** The kings of the divided kingdoms, whose reigns the reader charts, in the order `rulers.json` gives them. */
 export const KINGS = RULERS.filter((r): r is Ruler & { reign: NonNullable<Ruler['reign']> } => !!r.reign);
 

@@ -4945,6 +4945,17 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "Tob",
+   "Jdt",
+   "EsthGr",
+   "Wis",
+   "Sir",
+   "Bar",
+   "DanGr",
+   "1Macc",
+   "2Macc"
+  ],
   "summary": "What are the books known as the Deuterocanon or Apocrypha, and what can they teach us?"
  },
  {
@@ -4956,6 +4967,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "Jdt"
+  ],
   "summary": "How does God’s Kingdom overturn the violent kingdoms of our world?"
  },
  {
@@ -4967,6 +4981,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "Tob"
+  ],
   "summary": "How can one man’s suffering offer hope to future generations?"
  },
  {
@@ -4978,6 +4995,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "1Macc"
+  ],
   "summary": "How can we distinguish God’s Kingdom from human kingdoms? 1 Maccabees chronicles the Israelite rebellion against the Greeks and Syrians, leading to the Hasmonean dynasty."
  },
  {
@@ -4989,6 +5009,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "2Macc"
+  ],
   "summary": "Does God respond to the prayers of suffering people?"
  },
  {
@@ -5001,7 +5024,8 @@
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
   "books": [
-   "Esth"
+   "Esth",
+   "EsthGr"
   ],
   "summary": "Where is God in the midst of oppression? Both editions of Esther contain the same core message: God is always at work behind the scenes to fulfill his promises."
  },
@@ -5014,6 +5038,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "Wis"
+  ],
   "summary": "Which path to wisdom will we choose? Written for Jewish people living in ancient Greek and Roman culture, this book promotes the path to life found in the wisdom of the Torah."
  },
  {
@@ -5025,6 +5052,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "Sir"
+  ],
   "summary": "What does it look like to be wise and fear the Lord? Ben Sira immersed himself in the Hebrew Scriptures in order to pass down God’s wisdom to future generations."
  },
  {
@@ -5037,7 +5067,8 @@
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
   "books": [
-   "Dan"
+   "Dan",
+   "DanGr"
   ],
   "summary": "Widely read by Jesus’ early followers and included in Catholic and Orthodox Bibles, the second edition of Daniel makes further connections to the major themes of the Hebrew Bible."
  },
@@ -5050,6 +5081,9 @@
   "channel": "BibleProject",
   "series": "Deuterocanon / Apocrypha",
   "kind": "overview",
+  "books": [
+   "Bar"
+  ],
   "summary": "How do we respond when God seems far away and slow to act? Written for Jewish people in exile, these poems issue a call to repentance and trust in God’s coming Kingdom."
  },
  {

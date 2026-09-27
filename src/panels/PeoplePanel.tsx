@@ -167,7 +167,7 @@ export function PeoplePanel() {
       <div className="people-list">
         {selected && <button className="chip link" onClick={() => setSelected(null)}>← all in this chapter</button>}
         {!selected && byBook === undefined && <div className="loading">Loading people…</div>}
-        {!selected && byBook && !named.length && <div className="empty"><p>No one is named in {bookOf(loc.book)?.name} {loc.chapter}.</p></div>}
+        {!selected && byBook && !named.length && <div className="empty"><p>{bookOf(loc.book)?.beyond ? `The people list comes from Theographic's data, which covers only the 66 books, so it lists no one in ${bookOf(loc.book)?.name}.` : `No one is named in ${bookOf(loc.book)?.name} ${loc.chapter}.`}</p></div>}
         {!selected && hereNamed.length > 0 && <><div className="panel-title">In verse {loc.verse}</div>{hereNamed.map((n) => <NamedRow key={n.id} n={n} here />)}</>}
         {!selected && restNamed.length > 0 && <><div className="panel-title">{hereNamed.length ? 'Elsewhere in' : 'Named in'} {bookOf(loc.book)?.name} {loc.chapter}</div>{restNamed.map((n) => <NamedRow key={n.id} n={n} />)}</>}
         {list.map((p) => (

@@ -1,5 +1,7 @@
 // Builds public/data/ from the cached sources. Output layout:
-//   bible/<Book>.json            BSB text, one file per book
+//   bible/<Book>.json            BSB text, one file per book; the books beyond the 66 from the World
+//                                English Bible and R. H. Charles (scripts/beyond.mjs)
+//   parallels.json               Charles's cross references from 1 Enoch to the 66, [1 Enoch ref, ref]
 //   interlinear/<Book>/<ch>.json Hebrew/Greek words with Strong's, morphology and BSB gloss
 //                                (and where each word's rendering stands among its renderings)
 //   strongs/H/<n>.json, G/<n>.json  Strong's dictionary in shards of 100 entries, with how the BSB renders each word
@@ -11,13 +13,14 @@
 //   people/<a-z>.json            everyone named in the Bible, keyed by id, in shards by first letter
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
 //                                size reference drawn beside models too big for a figure
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { spawn, execFileSync } from 'node:child_process';
 import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { fileURLToPath } from 'node:url';
 import { CACHE, fetchAll } from './fetch-sources.mjs';
 import { RARE, core, fold, isContentWord } from './renderings.mjs';
+import { USFM_BOOKS, parseEnoch, parseJubilees, parseUsfm, unpackModule } from './beyond.mjs';
 
 const OUT = new URL('../public/data/', import.meta.url);
 /** A cached file's path on disk (URL.pathname would keep %20 for a space). */
@@ -62,6 +65,37 @@ async function buildBible() {
     await writeJson(`bible/${id}.json`, { id, name: book.name, chapters });
   }
   console.log('bible   ', verseIndex.length, 'verses');
+}
+
+// ---------- 1b. Books beyond the 66 ----------
+/** [bookId, verses per chapter] for each, in books.json order, for the Links circle. */
+const beyondChapters = [];
+async function buildBeyond() {
+  const texts = new Map();
+  const web = fileURLToPath(new URL('engwebu/', CACHE));
+  execFileSync('unzip', ['-o', '-q', cached('engwebu_usfm.zip'), '-d', web]);
+  for (const file of (await readdir(web)).filter((f) => f.endsWith('.usfm'))) {
+    const id = USFM_BOOKS[/^\d+-(\w+?)engwebu/.exec(file)?.[1]];
+    if (id) texts.set(id, parseUsfm(await readFile(`${web}${file}`, 'utf8')));
+  }
+  const sword = fileURLToPath(new URL('sword/', CACHE));
+  const enoch = parseEnoch(unpackModule(cached('sword-enoch.zip'), sword, 'enoch'));
+  texts.set('1En', enoch);
+  texts.set('Jub', parseJubilees(unpackModule(cached('sword-jubilees.zip'), sword, 'jubilees')));
+  let verses = 0;
+  for (const book of books.filter((b) => b.beyond)) {
+    const { chapters, intro } = texts.get(book.id) ?? {};
+    if (!chapters) throw new Error(`No text for ${book.id}`);
+    if (chapters.length !== book.chapters || chapters.some((c) => !c?.length)) throw new Error(`${book.id}: ${chapters.length} chapters, books.json says ${book.chapters}`);
+    await writeJson(`bible/${book.id}.json`, { id: book.id, name: book.name, chapters, ...(intro?.length ? { intro } : {}) });
+    beyondChapters.push([book.id, chapters.map((c) => c.length)]);
+    verses += chapters.reduce((n, c) => n + c.length, 0);
+  }
+  // Charles's references run from a verse of 1 Enoch to one of the 66 (a few to other books he cites, dropped here).
+  const the66 = new Set(books.filter((b) => !b.beyond).map((b) => b.id));
+  const parallels = enoch.refs.filter(([, to]) => the66.has(to.split('.')[0]));
+  await writeJson('parallels.json', parallels);
+  console.log('beyond  ', beyondChapters.length, 'books,', verses, 'verses,', parallels.length, 'of Charles\'s', enoch.refs.length, 'references');
 }
 
 // ---------- 2. Interlinear (streamed from the xlsx) ----------
@@ -254,7 +288,7 @@ async function buildCircle() {
     pairs.set(key, Math.max(pairs.get(key) ?? 0, +votes));
   }
   const xrefs = [...pairs].sort((x, y) => x[1] - y[1]).flatMap(([k, v]) => [...k.split('.').map(Number), v]);
-  await writeJson('circle.json', { minVotes: CIRCLE_MIN_VOTES, chapters, xrefs });
+  await writeJson('circle.json', { minVotes: CIRCLE_MIN_VOTES, chapters, beyond: beyondChapters, xrefs });
   console.log('circle  ', pairs.size, 'chords');
 }
 
@@ -435,6 +469,7 @@ async function buildPeople() {
 
 await fetchAll();
 await buildBible();
+await buildBeyond();
 await Promise.all([buildInterlinear().then(buildStrongs), buildXrefs().then(buildCircle), buildPlaces().then(buildMap), buildPeople()]);
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');

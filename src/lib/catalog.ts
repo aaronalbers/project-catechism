@@ -1,6 +1,6 @@
 import type { PanelTab, Reveal } from '@/app/store';
 import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PROFILE_INDEX, PROPHECIES, QUOTES, TALLIES } from './content';
-import { BOOKS, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
+import { READING_ORDER, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
 /**
@@ -124,10 +124,10 @@ export const CATALOG: CatalogSection[] = [
     }))),
   },
   {
-    id: 'quotes', kind: 'quote', title: 'The Old Testament quoted', tab: 'links',
-    blurb: 'Where a New Testament writer quotes an earlier passage.',
+    id: 'quotes', kind: 'quote', title: 'Quotations and echoes', tab: 'links',
+    blurb: 'Where a New Testament writer quotes an earlier passage, or echoes one from a book beyond the 66.',
     entries: sorted(QUOTES.map((q) => ({
-      id: q.id, kind: 'quote', title: `${formatRef(q.quoting)} quotes ${formatRef(q.quoted)}`, summary: q.summary,
+      id: q.id, kind: 'quote', title: `${formatRef(q.quoting)} ${q.allusion ? 'echoes' : 'quotes'} ${formatRef(q.quoted)}`, summary: q.summary,
       go: q.quoting, lines: [{ refs: [q.quoting, q.quoted] }],
     }))),
   },
@@ -159,7 +159,7 @@ export function chaptersOf(ref: Ref): { book: string; chapter: number }[] {
   const out: { book: string; chapter: number }[] = [];
   const first = bookIndex(r.start.book), last = bookIndex(r.end.book);
   for (let bi = first; bi <= last; bi++) {
-    const b = BOOKS[bi];
+    const b = READING_ORDER[bi];
     const from = bi === first ? r.start.chapter : 1, to = bi === last ? Math.min(r.end.chapter, b.chapters) : b.chapters;
     for (let c = from; c <= to; c++) out.push({ book: b.id, chapter: c });
   }
