@@ -83,7 +83,15 @@ export interface Insight {
    * singular, and what the word covers. The reader marks the word wherever the BSB renders it so, not only in the
    * card's verses.
    */
-  narrows?: { rendered: string[]; means: string };
+  narrows?: {
+    rendered: string[]; means: string;
+    /**
+     * Mark only some uses of a common word: where it is a command ("Hear, O Israel"), or where the next word in
+     * the original is this Strong's number carrying a preposition (shāmaʿ before "to the voice of", H6963: obey).
+     * Either one marks it.
+     */
+    only?: { command?: boolean; before?: string };
+  };
 }
 
 export interface Person {

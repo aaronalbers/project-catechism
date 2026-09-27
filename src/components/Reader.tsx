@@ -32,7 +32,7 @@ function VerseText({ text, verse, current, il, ladder, marks }: { text: string; 
         if (!t.trim()) return t;
         const ilIndex = aligned[n++] ?? null;
         const w = ilIndex !== null ? il!.w[ilIndex] : null;
-        const study = narrowed && w ? narrowedToken(t, w) : undefined;
+        const study = narrowed && w ? narrowedToken(t, w, il!) : undefined;
         if (!current && !study) return t;
         const open = () => { if (ilIndex !== null) setState({ wordIndex: ilIndex, tab: 'words', panelOpen: true }); };
         return (
@@ -98,7 +98,7 @@ export function Reader() {
   const [dayCharts, setDayCharts] = useStoredFlag('passion', true);
   const toggleDays = () => setDayCharts();
   const [wordMarks, setWordMarks] = useStoredFlag('word-marks', true);
-  const markable = useMemo(() => (il ?? []).some((v) => v.w.some((w) => narrowedWord(w))), [il]);
+  const markable = useMemo(() => (il ?? []).some((v) => v.w.some((w) => narrowedWord(w, v))), [il]);
   const reveal = useStore((s) => s.reveal);
   // Arriving from the index at a chiasm, a count or a reign: show it even if the reader had hidden it.
   useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps

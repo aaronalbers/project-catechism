@@ -143,8 +143,8 @@ export function WordsPanel() {
       <div className="panel-title">{heb ? 'Hebrew' : 'Greek'} — tap a word</div>
       <div className={`il-grid${heb ? ' rtl' : ''}`} dir={heb ? 'rtl' : 'ltr'}>
         {ordered.map(({ w, i }) => (
-          <button key={i} className={`il-word${i === wordIndex ? ' active' : ''}${w[9] ? ' rare' : ''}${narrowedWord(w) ? ' narrow' : ''}`} onClick={() => setState({ wordIndex: i })} dir={heb ? 'rtl' : 'ltr'}
-            title={w[9] ? 'Rendered here in a way the BSB rarely renders it elsewhere' : narrowedWord(w) ? 'The English here is narrower than this word' : undefined}>
+          <button key={i} className={`il-word${i === wordIndex ? ' active' : ''}${w[9] ? ' rare' : ''}${narrowedWord(w, verse) ? ' narrow' : ''}`} onClick={() => setState({ wordIndex: i })} dir={heb ? 'rtl' : 'ltr'}
+            title={w[9] ? 'Rendered here in a way the BSB rarely renders it elsewhere' : narrowedWord(w, verse) ? 'The English here is narrower than this word' : undefined}>
             <div className={`orig${heb ? ' heb' : ''}`}>{w[0]}</div>
             <div className="xlit">{w[1]}</div>
             <div className="gloss" dir="ltr">{w[5] || '—'}</div>

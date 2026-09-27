@@ -112,7 +112,9 @@ them in CI — read it before adding content.
 - Word cards (`kind: 'word'`) are named for their Strong's number (`word-h5775-oph`), or list several in
   `strongs`. `narrows` marks a word the English is narrower than: `rendered` names the BSB renderings that
   narrow it, in the singular ("earth", not "land"), and `means` says what the word covers. The reader
-  underlines the word wherever the BSB renders it so, in every verse, and the Words tab says why. Only one
+  underlines the word wherever the BSB renders it so, in every verse, and the Words tab says why. For a very
+  common word, `only` limits the marks to commands (`command`) and/or uses followed in the original by
+  a word with a preposition (`before`: shāmaʿ before "to the voice of", H6963, the idiom for obey). Only one
   card may narrow a Strong's number, and a test fails the build if a `rendered` is not one of the BSB's
   renderings of the word. Cite a public-domain lexicon: BDB on Sefaria for Hebrew, Thayer for Greek. The
   Words tab links BibleProject videos by the `strongs` in `videos.json`, and the card links them too.

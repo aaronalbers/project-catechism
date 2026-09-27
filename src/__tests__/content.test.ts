@@ -94,6 +94,8 @@ describe('content integrity', () => {
       expect(i.kind, `${i.id} narrows but is not a word card`).toBe('word');
       expect(wordStrongs(i).length, `${i.id} narrows but names no Strong's number`).toBeGreaterThan(0);
       expect(i.narrows.rendered.length && i.narrows.means, `${i.id} narrows without renderings or a meaning`).toBeTruthy();
+      const only = i.narrows.only;
+      if (only) expect(only.command || /^[HG]\d+$/.test(only.before ?? ''), `${i.id}: 'only' needs command or a Strong's number in before`).toBe(true);
       for (const n of wordStrongs(i)) {
         expect(claimed.get(n), `${n} is narrowed by both ${claimed.get(n)} and ${i.id}`).toBeUndefined();
         claimed.set(n, i.id);

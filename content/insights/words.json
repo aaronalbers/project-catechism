@@ -396,7 +396,7 @@
   "id": "word-h8085-shama",
   "title": "שָׁמַע (shāmaʿ) — 'hear', or hear and do",
   "kind": "word",
-  "narrows": {"rendered": ["hear", "heard", "hearing", "listen", "listened", "listening"], "means": "to hear so as to heed: to listen, understand and act on what is heard; 'hear the voice of' is the Hebrew way of saying 'obey'"},
+  "narrows": {"rendered": ["hear", "heard", "hearing", "listen", "listened", "listening"], "means": "to hear so as to heed: to listen, understand and act on what is heard; 'hear the voice of' is the Hebrew way of saying 'obey'", "only": {"command": true, "before": "H6963"}},
   "verses": ["Deut.6.4", "Exod.19.5", "Gen.22.18", "1Sam.15.22", "Jer.7.23-24", "Gen.3.17", "1Kgs.3.9", "Gen.11.7", "Exod.2.24"],
   "summary": "Biblical Hebrew has no everyday word of its own for 'obey'. Where the BSB says 'obey', the Hebrew usually says 'hear the voice of'. So the Shema's first word, 'Hear, O Israel', asks for more than attention: it asks Israel to hear and do.",
   "body": [
@@ -404,7 +404,8 @@
    "The same Hebrew runs through these verses. 'If you will indeed obey My voice' (Exodus 19:5) is 'if you will surely hear My voice'. Abraham is blessed 'because you have obeyed My voice' (Genesis 22:18), and Adam is cursed 'because you have listened to the voice of your wife' (3:17). Samuel's 'obedience is better than sacrifice' (1 Samuel 15:22) is 'to hear is better than sacrifice'. Jeremiah 7:23–24 sets 'Obey Me' against 'they did not listen', and both are the same verb.",
    "Hearing is also understanding. God confuses the builders' language 'so that they will not understand one another's speech' (Genesis 11:7): they will not 'hear' it. Solomon asks for 'an understanding heart' (1 Kings 3:9), in Hebrew a lēv shōmēaʿ, 'a hearing heart'.",
    "When God hears, he acts. 'God heard their groaning, and He remembered His covenant' (Exodus 2:24), and the rescue from Egypt follows. BDB's 'hear and answer' names that sense.",
-   "The word does not always mean obedience. It is also the ordinary verb for simply hearing: 'I heard Your voice in the garden,' Adam says, 'and I was afraid' (Genesis 3:10). Context decides how much is meant. What English 'hear' cannot show is that the step from hearing to doing is inside the one Hebrew word. That is why 'Hear, O Israel' (Deuteronomy 6:4) is followed straight away by what Israel is to do."
+   "The word does not always mean obedience. It is also the ordinary verb for simply hearing: 'I heard Your voice in the garden,' Adam says, 'and I was afraid' (Genesis 3:10). Context decides how much is meant. What English 'hear' cannot show is that the step from hearing to doing is inside the one Hebrew word. That is why 'Hear, O Israel' (Deuteronomy 6:4) is followed straight away by what Israel is to do.",
+   "Because the verb is so common, this reader dots it only where the fuller sense is clearest: where it is a command ('Hear!', 'Listen!'), and where it is followed by 'to the voice of', the phrase BDB defines as 'obey'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), שָׁמַע", "url": "https://www.sefaria.org/BDB,_%D7%A9%D6%B8%D7%81%D7%9E%D6%B7%D7%A2", "note": "'hear'; 'listen, give heed'; 'understand (language)', Gn 11:7; 'hear and answer'; 'שׁ׳ בְּקוֹל = obey', 'very often'; לֵב שֹׁמֵעַ, 1 K 3:9"},
