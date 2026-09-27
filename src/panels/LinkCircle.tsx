@@ -116,13 +116,17 @@ export function LinkCircle() {
       ctx.beginPath(); ctx.arc(geo.c, geo.c, geo.R + 5, geo.theta(chapter[0]) - geo.halfVerse - Math.PI / 2, geo.theta(chapter[1] - 1) + geo.halfVerse - Math.PI / 2);
       ctx.lineWidth = 10; ctx.strokeStyle = colors.accent; ctx.lineCap = 'butt'; ctx.stroke();
     }
-    for (const c of focused) strokeChord(ctx, geo, c, colors[c.kind], colors.surface, c.kind === 'xref' || c.kind === 'parallel' ? 1.3 : 2.4);
+    // While one link is looked at, everything else steps back (the base layer fades in CSS), so it stands alone.
+    const picked = hover && 'chord' in hover ? hover.chord : null;
+    ctx.globalAlpha = picked ? 0.2 : 1;
+    for (const c of focused) if (c !== picked) strokeChord(ctx, geo, c, colors[c.kind], colors.surface, c.kind === 'xref' || c.kind === 'parallel' ? 1.3 : 2.4);
+    ctx.globalAlpha = 1;
     const here = canon.indexOf(loc);
     if (here !== undefined) dot(ctx, geo.point(here), 4, colors.accent, colors.surface);
-    if (hover && 'chord' in hover) {
-      strokeChord(ctx, geo, hover.chord, colors[hover.chord.kind], colors.surface, 3.2);
-      for (const i of [hover.chord.a, hover.chord.b]) dot(ctx, geo.point(i), 3.5, colors[hover.chord.kind], colors.surface);
-    } else if (hover) {
+    if (picked) {
+      strokeChord(ctx, geo, picked, colors[picked.kind], colors.surface, 4, 3);
+      for (const i of [picked.a, picked.b]) dot(ctx, geo.point(i), 4.5, colors[picked.kind], colors.surface);
+    } else if (hover && 'verse' in hover) {
       const [x0, y0] = geo.point(hover.verse, geo.R - 6), [x1, y1] = geo.point(hover.verse, geo.R + 12);
       ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.lineWidth = 2; ctx.strokeStyle = colors.text; ctx.stroke();
     }
@@ -179,7 +183,7 @@ export function LinkCircle() {
       </div>
       <div className="circle-wrap" ref={wrap}>
         {!canon ? <div className="loading">Loading…</div> : <div className="circle-stage" style={{ width: size, height: size }}>
-          <canvas ref={base} role="img" aria-label={`Circle of the whole Bible, Genesis to Revelation clockwise from the top${filters.beyond && hasBeyond ? ', with the books beyond the 66 between the Testaments' : ''}, with ${visible.length} links drawn across it`} />
+          <canvas ref={base} className={hover && 'chord' in hover ? 'muted' : undefined} role="img" aria-label={`Circle of the whole Bible, Genesis to Revelation clockwise from the top${filters.beyond && hasBeyond ? ', with the books beyond the 66 between the Testaments' : ''}, with ${visible.length} links drawn across it`} />
           <canvas ref={overlay}
             onPointerMove={(e) => { if (e.pointerType === 'mouse') setHover(at(e)); }}
             onPointerLeave={(e) => { if (e.pointerType === 'mouse') setHover(null); }}
@@ -202,7 +206,7 @@ function Tooltip({ hover, canon, size }: { hover: NonNullable<Hover>; canon: Can
   const c = hover.chord, [from, to] = chordRefs(canon, c);
   return (
     <div className="circle-tip" style={style}>
-      <span className="kind"><span className="swatch" style={{ background: `var(--link-${c.kind})` }} />{KIND_NAME[c.kind]}</span>
+      <span className="kind"><span className="swatch" style={{ background: `var(--link-${c.kind})` }} />{c.echo ? 'Echo' : KIND_NAME[c.kind]}</span>
       {c.title && <strong>{c.title}</strong>}
       <span>{formatRef(from)} {c.kind === 'prophecy' ? '→' : c.kind === 'quote' ? (c.echo ? 'echoed in' : 'quoted in') : '↔'} {formatRef(to)}</span>
       {c.votes !== undefined && <small>{c.votes} reader votes on OpenBible.info</small>}
@@ -307,9 +311,10 @@ function drawRing(ctx: CanvasRenderingContext2D, canon: Canon, geo: Geo, colors:
   ctx.lineCap = 'round';
 }
 
-function strokeChord(ctx: CanvasRenderingContext2D, geo: Geo, c: Chord, color: string, halo: string, width: number) {
+/** Draws a chord over a halo of the surface colour, `haloWidth` wider on each side, so it reads across the lines beneath it. */
+function strokeChord(ctx: CanvasRenderingContext2D, geo: Geo, c: Chord, color: string, halo: string, width: number, haloWidth = 1) {
   ctx.beginPath(); geo.trace(ctx, c);
-  ctx.globalAlpha = 1; ctx.lineWidth = width + 2; ctx.strokeStyle = halo; ctx.stroke();
+  ctx.lineWidth = width + 2 * haloWidth; ctx.strokeStyle = halo; ctx.stroke();
   ctx.lineWidth = width; ctx.strokeStyle = color; ctx.stroke();
 }
 

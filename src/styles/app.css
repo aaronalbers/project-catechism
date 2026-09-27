@@ -404,6 +404,9 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .circle-wrap { width: 100%; display: flex; justify-content: center; }
 .circle-stage { position: relative; }
 .circle-stage canvas { position: absolute; inset: 0; }
+.circle-stage canvas:first-child { transition: opacity 0.15s; }
+.circle-stage canvas.muted { opacity: 0.2; }
+@media (prefers-reduced-motion: reduce) { .circle-stage canvas:first-child { transition: none; } }
 .circle-stage canvas + canvas { cursor: pointer; touch-action: manipulation; }
 .circle-tip { position: absolute; z-index: 2; max-width: 220px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; font-size: 12px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); }
 .circle-tip .kind { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
