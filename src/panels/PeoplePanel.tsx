@@ -30,6 +30,8 @@ function neighbourhood(seed: Person[], depth = 2): Person[] {
   return [...seen.values()];
 }
 
+/** The least zoom the family tree frames a verse's people at; below it the names cannot be read. */
+const MIN_FRAME_SCALE = 0.6;
 const life = (p: Person) => {
   const est = p.estimated ? <span className="est" title="Estimated — see the person's notes">≈ </span> : null;
   if (p.bornAM !== undefined) return <>{est}{p.bornAM}{p.diedAM !== undefined ? `–${p.diedAM} AM (lived ${p.diedAM - p.bornAM})` : ' AM'}</>;
@@ -156,16 +158,31 @@ export function PeoplePanel() {
     if (!n || !nodes) return;
     const css = getComputedStyle(document.documentElement);
     const ids = new Set(tree.nodes.map((x) => x.id));
-    const hereIds = new Set([...here.map((p) => p.id), ...named.filter((x) => x.verses.includes(loc.verse)).map((x) => ids.has(x.id) ? x.id : curatedFor(x.id))].filter((x): x is string => !!x));
+    // The people the verse itself names; only a verse that names no one falls back on the curated passages
+    // (Abijah's 1 Kings 15:1–8), which would otherwise pull the frame away from David in 15:5.
+    const inVerse = named.filter((x) => x.verses.includes(loc.verse)).map((x) => ids.has(x.id) ? x.id : curatedFor(x.id)).filter((x): x is string => !!x && ids.has(x));
+    const hereIds = new Set(inVerse.length ? inVerse : here.map((p) => p.id));
     nodes.update(tree.nodes.map((p) => ({
       id: p.id, borderWidth: hereIds.has(p.id) ? 3 : 1,
       color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: hereIds.has(p.id) ? css.getPropertyValue('--danger') : css.getPropertyValue('--border') },
     })));
     // Frame the verse's people with their parents (children the verse names are among them already; a clan's
-    // father may have twenty others); the rest of the tree is a pan away.
-    const frame = new Set(hereIds);
-    for (const e of tree.edges) if (e.kind !== 'spouse' && hereIds.has(e.to)) frame.add(e.from);
-    n.fit({ nodes: [...frame].filter((x) => ids.has(x)), maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
+    // father may have twenty others), as many as still read: someone the curated tree gives no generation
+    // (Uriah in 1 Kings 15:5) can stand far from the rest, and framing both would shrink every box to a dash.
+    // The curated come first; whoever is left out is still outlined, a pan away.
+    const withParents = (id: string) => [id, ...tree.edges.filter((e) => e.kind !== 'spouse' && e.to === id).map((e) => e.from)];
+    const readable = (group: string[]) => {
+      const bb = group.map((id) => n.getBoundingBox(id)).filter((b) => b);
+      const w = Math.max(...bb.map((b) => b.right)) - Math.min(...bb.map((b) => b.left)), h = Math.max(...bb.map((b) => b.bottom)) - Math.min(...bb.map((b) => b.top));
+      return Math.min(el.current!.clientWidth / w, el.current!.clientHeight / h) >= MIN_FRAME_SCALE;
+    };
+    const curatedFirst = [...hereIds].sort((a, b) => Number(!tree.nodes.find((x) => x.id === a)?.person) - Number(!tree.nodes.find((x) => x.id === b)?.person));
+    let frame: string[] = [];
+    for (const id of curatedFirst) {
+      const next = [...new Set([...frame, ...withParents(id)])];
+      if (!frame.length || readable(next)) frame = next;
+    }
+    n.fit({ nodes: frame.filter((x) => ids.has(x)), maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
     fresh.current = false;
   }, [tree, here, named, loc.verse, person]);
 
