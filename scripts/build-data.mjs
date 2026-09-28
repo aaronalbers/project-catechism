@@ -10,8 +10,8 @@
 //   circle.json                  verse counts per chapter, plus the better-attested cross
 //                                references as running verse indices, for the Links circle
 //   places/index.json, places/by-book/<Book>.json
-//   people/by-book/<Book>.json  who each verse names ("ch.v" → ids), with each one's name, kin title, sex,
-//                                and parents and spouses for the family tree
+//   people/by-book/<Book>.json  who each verse names ("ch.v" → ids), with each one's name, kin title and sex
+//   people/families.json         every family, the curated tree and TIPNR's merged, laid out with dagre
 //   people/<H|G>/<n>.json        everyone named in the Bible (STEPBible's TIPNR), keyed by their Strong's
 //                                number, in shards of a hundred numbers
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
@@ -23,6 +23,7 @@ import { createInterface } from 'node:readline';
 import { fileURLToPath } from 'node:url';
 import { CACHE, fetchAll } from './fetch-sources.mjs';
 import { RARE, core, fold, isContentWord } from './renderings.mjs';
+import { families, familyGraph, layout } from './families.mjs';
 import { kinList, otherNames, parseTipnr, personShard, tagWords, unnamed } from './people.mjs';
 import { USFM_BOOKS, parseEnoch, parseJubilees, parseUsfm, unpackModule } from './beyond.mjs';
 
@@ -414,6 +415,19 @@ const SEPARATE = {
   // Luke names one of the two on the road to Emmaus Cleopas; TIPNR takes him for Alphaeus and for Clopas, as a tradition does.
   G2810: 'Cleopas',
 };
+/**
+ * Links TIPNR makes that the text does not, taken out of both people's records: [person, the people they are not
+ * kin to]. Each is a change to TIPNR's data, listed where the People tab credits it.
+ */
+const NOT_KIN = [
+  // 2 Samuel 17:25 names Abigail "daughter of Nahash"; TIPNR makes Nahash Jesse's wife and the mother of all his children.
+  ['H5176I', ['H3448', 'H1732', 'H0446I', 'H0041I', 'H8093', 'H5417H', 'H7288', 'H0684G', 'H0453J', 'H6870G']],
+  // Luke 3:23 makes Joseph "son of Heli"; TIPNR reads the genealogy as Mary's, making Heli and his wife her parents.
+  ['G2242G', ['G3137G', 'G4539']], ['G2242H', ['G3137G', 'G4539']],
+  // Ezra 4:5–7 names Darius, Ahasuerus and Artaxerxes as kings in turn, not father and son; Vashti is Ahasuerus's
+  // queen, no one's mother. (Daniel 9:1 does make Darius the Mede "son of Ahasuerus".)
+  ['H0325', ['H0783A', 'H1867H']], ['H2060', ['H0783A', 'H1867I']], ['H0783A', ['H1867I']],
+];
 let tipnr;
 async function loadTipnr() {
   if (tipnr) return tipnr;
@@ -513,7 +527,6 @@ async function buildPeople() {
   const listed = (r) => LISTED_AS[r.id] ?? r.unique.replace(/@.*$/, '').replace(/^.*\|/, '').replace(/_/g, ' ');
   const taggedFor = new Map();
   for (const [ref, ids] of tagged) for (const id of ids) (taggedFor.get(id) ?? taggedFor.set(id, new Set()).get(id)).add(ref);
-  // The verses naming each person first, so each of their kin can be checked against the text.
   const refsOf = new Map(people.map((r) => {
     const refs = new Set(taggedFor.get(r.id) ?? []);
     for (const f of r.forms) if (f.naming) for (const { ref } of f.refs) {
@@ -523,44 +536,21 @@ async function buildPeople() {
     }
     return [r.id, [...refs].sort((a, b) => order.get(a) - order.get(b))];
   }));
-  const byChapter = new Map([...refsOf].map(([id, refs]) => {
-    const m = new Map();
-    for (const ref of refs) { const i = ref.lastIndexOf('.'); (m.get(ref.slice(0, i)) ?? m.set(ref.slice(0, i), []).get(ref.slice(0, i))).push(+ref.slice(i + 1)); }
-    return [id, m];
-  }));
-  const kinWord = /\b(sons?|daughters?|father(ed)?|fathers|mother|wife|wives|husband|brothers?|sisters?|bore|birth|born|child(ren)?|descendants?|married|begot)\b/i;
-  /**
-   * Where the text ties two people: the same verse, or verses at most two apart, naming both and using a word of
-   * kinship (Gen 4:1–2 for Eve and Abel). TIPNR links some people no verse ties (Mary to Heli, from Luke 3:23),
-   * and those are shown as its reading.
-   */
-  const tie = (a, b) => {
-    let best;
-    const B = byChapter.get(b);
-    for (const [ch, vs] of byChapter.get(a) ?? []) for (const va of vs) for (const vb of B?.get(ch) ?? []) {
-      const d = Math.abs(va - vb);
-      if (d > 2 || (best && best.d <= d)) continue;
-      const lo = Math.min(va, vb), hi = Math.max(va, vb);
-      let text = '';
-      for (let v = lo; v <= hi; v++) text += ' ' + (bsbText.get(`${ch}.${v}`) ?? '');
-      if (kinWord.test(text)) best = { d, ref: lo === hi ? `${ch}.${lo}` : `${ch}.${lo}-${hi}` };
-    }
-    return best?.ref;
-  };
-  const kin = (self, list) => kinList(list).map(({ unique, uncertain }) => {
+  const unlinked = (a, b) => NOT_KIN.some(([x, ys]) => (x === a && ys.includes(b)) || (x === b && ys.includes(a)));
+  const kin = (self, list) => kinList(list).flatMap(({ unique, uncertain }) => {
     const r = byUnique.get(unique);
-    if (!r || !isPerson.has(r.id)) return { name: unnamed(unique), ...(uncertain ? { uncertain: true } : {}) };
-    const ref = tie(self, r.id);
-    return { id: r.id, name: listed(r), ...(ref ? { ref } : {}), ...(uncertain ? { uncertain: true } : {}) };
+    if (r && unlinked(self, r.id)) return [];
+    const k = r && isPerson.has(r.id) ? { id: r.id, name: listed(r) } : { name: unnamed(unique) };
+    return [uncertain ? { ...k, uncertain: true } : k];
   });
   const out = people.map((r) => {
     const name = listed(r);
     const sex = r.type === 'Female' ? 'female' : 'male';
     const [fa = '', mo = ''] = r.parents.split('+');
     const family = { father: kin(r.id, fa), mother: kin(r.id, mo), spouses: kin(r.id, r.partners), children: kin(r.id, r.offspring), siblings: kin(r.id, r.siblings) };
-    // Namesakes are told apart by kin the text ties to them: "son of Jesse", "wife of Lapidoth". (TIPNR's tribe
-    // is often inferred through a parent the text does not name, so it is not used.)
-    const sure = (k) => k.id && k.ref && !k.uncertain;
+    // Namesakes are told apart by their kin: "son of Jesse", "wife of Lapidoth". (TIPNR's tribe is often
+    // inferred through a parent the text does not name, so it is not used.)
+    const sure = (k) => k.id && !k.uncertain;
     const parent = family.father.find(sure) ?? family.mother.find(sure), spouse = family.spouses.find(sure);
     const title = parent ? `${sex === 'female' ? 'daughter' : 'son'} of ${parent.name}` : spouse ? `${sex === 'female' ? 'wife' : 'husband'} of ${spouse.name}` : undefined;
     const also = otherNames(r, name);
@@ -570,23 +560,7 @@ async function buildPeople() {
       refs: refsOf.get(r.id),
     };
   }).filter((p) => p.refs.length);
-  // Brothers and sisters listed far apart (the sons of a clan in 1 Chronicles) are tied by a parent the text ties
-  // to both; the verse given is the one naming this person with that parent.
-  const byId = new Map(out.map((p) => [p.id, p]));
-  const parentsOf = (p) => [...(p.father ?? []), ...(p.mother ?? [])].filter((k) => k.id && k.ref && !k.uncertain);
-  for (const p of out) for (const sib of p.siblings ?? []) {
-    if (sib.ref || !sib.id || !byId.has(sib.id)) continue;
-    const theirs = new Set(parentsOf(byId.get(sib.id)).map((k) => k.id));
-    const shared = parentsOf(p).find((k) => theirs.has(k.id));
-    if (shared) sib.ref = shared.ref;
-  }
   const easton = await eastonFor(out);
-  // For the family tree: parents and spouses as [id, name, 1 when the text ties them], trailing empties dropped.
-  const treeTie = (k) => [k.id, k.name, k.ref && !k.uncertain ? 1 : 0];
-  const ties = (p) => {
-    const parents = [...(p.father ?? []), ...(p.mother ?? [])].filter((k) => k.id).map(treeTie), spouses = (p.spouses ?? []).filter((k) => k.id).map(treeTie);
-    return spouses.length ? [parents, spouses] : parents.length ? [parents] : [];
-  };
   const shards = new Map();
   const perBook = new Map();
   for (const p of out) {
@@ -598,13 +572,29 @@ async function buildPeople() {
       if (!perBook.has(book)) perBook.set(book, { verses: {}, people: {} });
       const b = perBook.get(book);
       (b.verses[`${ch}.${v}`] ??= []).push(p.id);
-      b.people[p.id] ??= [p.name, p.title ?? '', p.sex === 'female' ? 'f' : 'm', ...ties(p)];
+      b.people[p.id] ??= [p.name, p.title ?? '', p.sex === 'female' ? 'f' : 'm'];
     }
   }
   await rm(new URL('people/', OUT), { recursive: true, force: true });
   for (const [shard, data] of shards) await writeJson(`people/${shard}.json`, data);
   for (const [book, data] of perBook) await writeJson(`people/by-book/${book}.json`, data);
   console.log('people  ', out.length, 'people,', easton.size, "with Easton's entries");
+  await buildFamilies(out);
+}
+
+/**
+ * people/families.json: every family (people joined by a parent or a marriage), largest first, laid out once here.
+ * Each is { n: [id, name, 'm' | 'f', x, y, curated id?][], e: [from, to, kind, note?][] }.
+ */
+async function buildFamilies(people) {
+  const curated = JSON.parse(await readFile(new URL('../content/people.json', import.meta.url), 'utf8'));
+  const start = Date.now();
+  const all = families(familyGraph(curated, people)).map((f) => ({
+    n: layout(f).map((n) => [n.id, n.name, n.sex === 'female' ? 'f' : 'm', n.x, n.y, ...(n.curated && n.curated !== n.id ? [n.curated] : [])]),
+    e: f.edges,
+  }));
+  await writeJson('people/families.json', all);
+  console.log('families', all.length, 'families, the largest', all[0].n.length, 'people, laid out in', ((Date.now() - start) / 1000).toFixed(1), 's');
 }
 
 await fetchAll();

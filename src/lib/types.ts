@@ -126,27 +126,33 @@ export interface Person {
 
 /**
  * One of a named person's kin, as TIPNR gives them: an id to open (none for someone the text leaves unnamed,
- * "wife of Heli") and a name to show. `ref` is where the text ties the two (the same verse, or verses at most two
- * apart, naming both with a word of kinship; for a sibling, the verse naming this person with the parent they
- * share); without one the link is TIPNR's reading. `uncertain` is TIPNR's own "(?)": its reading of a passage
- * that could be read another way.
+ * "husband of Zeruiah") and a name to show. `uncertain` is TIPNR's own "(?)": its reading of a passage that could
+ * be read another way.
  */
-export interface Kin { id?: string; name: string; ref?: Ref; uncertain?: true }
+export interface Kin { id?: string; name: string; uncertain?: true }
 /**
  * Someone the Bible names, from STEPBible's TIPNR (public/data/people/): their id is TIPNR's Strong's number for
  * them ("H0175", Aaron), with the verses naming them, their kin, and their Easton's Bible Dictionary entry (from
- * Theographic), whose verse links are written `[[Judg.4.6|Judg. 4:6]]`. `title` tells namesakes apart by kin the
- * text ties to them ("son of Jesse").
+ * Theographic), whose verse links are written `[[Judg.4.6|Judg. 4:6]]`. `title` tells namesakes apart by their
+ * kin ("son of Jesse").
  */
 export interface BiblePerson {
   id: string; name: string; title?: string; sex: 'male' | 'female'; also?: string[];
   father?: Kin[]; mother?: Kin[]; spouses?: Kin[]; children?: Kin[]; siblings?: Kin[];
   refs: Ref[]; easton?: string[];
 }
-/** A parent or spouse for the family tree: [id, name, 1 when the text ties them (Kin's `ref`), else 0]. */
-export type Tie = [string, string, 0 | 1];
-/** Who each verse of a book names ("ch.v" → ids), and each one's [name, title, 'm' | 'f', parents, spouses]. */
-export interface PeopleInBook { verses: Record<string, string[]>; people: Record<string, [string, string, 'm' | 'f', Tie[]?, Tie[]?]> }
+/** Who each verse of a book names ("ch.v" → ids), and each one's [name, title, 'm' | 'f']. */
+export interface PeopleInBook { verses: Record<string, string[]>; people: Record<string, [string, string, 'm' | 'f']> }
+/**
+ * A family link: `parent`, `alt` (the curated tree's other parentage, Matthew 1 against Luke 3), `uncertain`
+ * (TIPNR's "(?)"), `differs` (TIPNR reading a curated person's parent otherwise), `spouse`; the note says so on hover.
+ */
+export type FamilyEdge = [string, string, 'parent' | 'alt' | 'uncertain' | 'differs' | 'spouse', string?];
+/**
+ * A family (people/families.json, laid out at build time by scripts/families.mjs): each person as [id (their TIPNR
+ * id, or the curated id of someone the text leaves unnamed), name, 'm' | 'f', x, y, their curated id when it differs].
+ */
+export interface Family { n: [string, string, 'm' | 'f', number, number, string?][]; e: FamilyEdge[] }
 /** A moment in a curated profile: a verse and what happens there, in our words. */
 export interface ProfileMoment { ref: Ref; text: string }
 /** What a later tradition, a find or a reading adds to the text, with its own confidence and sources. */

@@ -40,13 +40,19 @@ describe.skipIf(!existsSync(new URL('people/', data)))('people', () => {
     expect(person('G2810').name).toBe('Cleopas');
     expect(person('G0256').refs).not.toContain('Luke.24.18');
   });
-  it('marks kin the text does not tie', () => {
-    const aaron = person('H0175');
-    expect(aaron.father).toEqual([{ id: 'H6019G', name: 'Amram', ref: 'Exod.6.20' }]);
-    // TIPNR makes Heli Mary's father, reading Luke 3:23 that way; no verse says so.
-    expect(person('G3137G').father?.[0]).toMatchObject({ id: 'G2242G', name: 'Heli' });
-    expect(person('G3137G').father?.[0].ref).toBeUndefined();
+  it('gives TIPNR’s kin, less the links the text does not make', () => {
+    expect(person('H0175').father).toEqual([{ id: 'H6019G', name: 'Amram' }]);
+    // TIPNR makes Nahash Jesse's wife and mother of his sons; 2 Samuel 17:25 names only Abigail her daughter.
+    expect(person('H1732').mother).toBeUndefined();
+    expect(person('H1732').father).toEqual([{ id: 'H3448', name: 'Jesse' }]);
+    expect(person('H5176I').children?.map((k) => k.id)).toEqual(['H0026H']);
+    expect(person('H5176I').spouses).toBeUndefined();
+    // Luke 3:23 makes Joseph "son of Heli", not Mary.
+    expect(person('G3137G').father).toBeUndefined();
     expect(person('G3137G').title).toBe('wife of Joseph');
+    // Daniel 9:1 makes Darius the Mede "son of Ahasuerus"; Ezra 4 does not make Artaxerxes one.
+    expect(person('H1867I').father).toEqual([{ id: 'H0325', name: 'Ahasuerus' }]);
+    expect(person('H0783A').father).toBeUndefined();
   });
   it('ties each curated family-tree entry to a person of that name', () => {
     const wrong: string[] = [];
@@ -76,7 +82,6 @@ describe.skipIf(!existsSync(new URL('people/', data)))('people', () => {
           if (!p?.refs.includes(`${book}.${ch}.${v.v}`)) problems.push(`${book} ${ch}:${v.v} ${w[5]} → ${id} lacks the verse`);
           for (const k of [...(p?.father ?? []), ...(p?.mother ?? []), ...(p?.spouses ?? []), ...(p?.children ?? []), ...(p?.siblings ?? [])]) {
             if (k.id && !person(k.id)) problems.push(`${id} → kin ${k.id} missing`);
-            if (k.ref && !parseRef(k.ref)) problems.push(`${id} → kin ref ${k.ref} does not parse`);
           }
         }
       }

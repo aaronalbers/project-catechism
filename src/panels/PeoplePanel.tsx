@@ -5,12 +5,12 @@ import { goTo, openPerson, setState, useStore } from '@/app/store';
 import { PEOPLE, PEOPLE_BY_ID, PROFILE_BY_PERSON, PROFILE_INDEX, peopleFor, peopleInChapter } from '@/lib/content';
 import { RefChip, SourceList } from '@/components/SourceList';
 import { book as bookOf, parseRef } from '@/lib/refs';
-import type { Person } from '@/lib/types';
+import type { Family, Person } from '@/lib/types';
+import { loadFamilies } from '@/lib/data';
 import { formatYear } from '@/lib/format';
-import { namedFor, namedInChapter, usePeopleInBook, type Named } from '@/lib/people';
+import { namedInChapter, usePeopleInBook, type Named } from '@/lib/people';
 import { cardId } from '@/lib/catalog';
 import { Profile } from './Profile';
-import { curatedFor, familyTree } from '@/lib/tree';
 import { PeopleSources } from './PeopleSources';
 
 /** People named in this chapter plus their close kin, so the graph has context without becoming the whole Bible. */
@@ -102,89 +102,97 @@ export function PeoplePanel() {
   const feature = useStore((s) => s.feature);
   const byBook = usePeopleInBook(loc.book);
   const named = useMemo(() => byBook ? namedInChapter(byBook, loc.chapter) : [], [byBook, loc.chapter]);
-  // A tree node opens that person's profile when the chapter names them; otherwise their genealogy card.
-  const pick = useRef((_p: Person | null) => {});
-  pick.current = (p) => {
-    const n = p && namedFor(p, named, loc.book, loc.chapter);
-    if (n) openPerson(n.id); else setSelected(p);
-  };
   // A link from the index goes to a profile by its card id.
   useEffect(() => {
     const prof = feature && PROFILE_INDEX.find((p) => cardId({ kind: 'profile', id: p.id }) === feature);
     if (prof) setState({ person: prof.people[0], feature: null });
   }, [feature]);
 
-  // The curated tree and, around it, everyone else the chapter names with the parents and spouses TIPNR gives them.
-  const tree = useMemo(() => familyTree(graphPeople, byBook, loc.chapter), [graphPeople, byBook, loc.chapter]);
+  // Every family, laid out at build time; the tab draws the one the verse's people belong to.
+  const [families, setFamilies] = useState<Family[]>();
+  useEffect(() => { loadFamilies().then(setFamilies).catch(() => setFamilies([])); }, []);
+  const familyOf = useMemo(() => new Map((families ?? []).flatMap((f, i) => f.n.map((x) => [x[0], i] as const))), [families]);
+  // A curated entry is drawn as the TIPNR person it is; the few the text leaves unnamed keep their curated id.
+  const nodeOf = (p: Person) => p.tipnr ?? p.id;
+  // The people the verse itself names; only a verse that names no one falls back on the curated passages
+  // (Abijah's 1 Kings 15:1–8), which would otherwise pull the frame away from David in 15:5.
+  const inVerse = named.filter((x) => x.verses.includes(loc.verse)).map((x) => x.id).filter((id) => familyOf.has(id));
+  const focus = inVerse.length ? inVerse : here.map(nodeOf).filter((id) => familyOf.has(id));
+  // The family to draw: the verse's, else the first the chapter names someone in.
+  const familyIndex = focus.length ? familyOf.get(focus[0]) : named.map((x) => familyOf.get(x.id)).find((i) => i !== undefined);
+  const family = familyIndex === undefined ? undefined : families![familyIndex];
+  const focusKey = focus.filter((id) => familyOf.get(id) === familyIndex).join('|');
 
-  // Build the tree only when its node set changes; verse-to-verse updates restyle and pan it below.
+  // Draw the family only when it changes (it is already laid out); verse-to-verse updates restyle and glide below.
   useEffect(() => {
-    if (!el.current) return;
+    if (!el.current || !family) return;
     const css = getComputedStyle(document.documentElement);
-    const nodes = new DataSet<Node>(tree.nodes.map((n) => ({
-      id: n.id, label: n.name, level: n.level,
-      color: { background: n.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: css.getPropertyValue('--border') },
+    const nodes = new DataSet<Node>(family.n.map(([id, name, sex, x, y]) => ({
+      id, label: name, x, y,
+      color: { background: sex === 'f' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: css.getPropertyValue('--border') },
       borderWidth: 1, font: { color: css.getPropertyValue('--accent-ink'), size: 13 }, shape: 'box', margin: { top: 6, right: 8, bottom: 6, left: 8 },
     })));
     const muted = css.getPropertyValue('--muted'), estimate = css.getPropertyValue('--estimate'), border = css.getPropertyValue('--border');
-    const edges = new DataSet<Edge>(tree.edges.map((e) => ({
-      id: `${e.kind}-${e.from}-${e.to}`, from: e.from, to: e.to, title: e.note,
-      ...(e.kind === 'spouse' ? { dashes: [2, 4], color: { color: border, opacity: 0.9 } }
-        // Alternate parentage (the two NT genealogies disagree), TIPNR's links no verse makes, and TIPNR reading a
+    const edges = new DataSet<Edge>(family.e.map(([from, to, kind, note]) => ({
+      id: `${kind}-${from}-${to}`, from, to, title: note,
+      ...(kind === 'spouse' ? { dashes: [2, 4], color: { color: border, opacity: 0.9 } }
+        // Alternate parentage (the two NT genealogies disagree), TIPNR's uncertain links, and TIPNR reading a
         // parent otherwise are drawn dashed, with what they rest on on hover.
-        : e.kind === 'parent' ? { arrows: 'to', color: { color: muted, opacity: 0.6 } }
-        : { arrows: 'to', dashes: e.kind === 'reading' ? [4, 4] : true, color: { color: estimate, opacity: e.kind === 'reading' ? 0.6 : 0.9 } }),
+        : kind === 'parent' ? { arrows: 'to', color: { color: muted, opacity: 0.6 } }
+        : { arrows: 'to', dashes: kind === 'uncertain' ? [4, 4] : true, color: { color: estimate, opacity: kind === 'uncertain' ? 0.6 : 0.9 } }),
     })));
     net.current?.destroy();
     net.current = new Network(el.current, { nodes, edges }, {
-      layout: { hierarchical: { direction: 'UD', sortMethod: 'directed', levelSeparation: 70, nodeSpacing: 110 } },
-      physics: false, interaction: { hover: true, zoomView: true, dragView: true },
-      nodes: { shape: 'box' },
+      layout: { hierarchical: false }, physics: false,
+      interaction: { hover: true, zoomView: true, dragView: true, dragNodes: false },
+      edges: { smooth: false }, nodes: { shape: 'box' },
     });
     nodeSet.current = nodes;
     fresh.current = true;
-    const byId = new Map(tree.nodes.map((n) => [n.id, n]));
+    // A node opens that person's profile; one of the few the text leaves unnamed, their genealogy card.
     net.current.on('click', (params: { nodes: string[] }) => {
-      const n = params.nodes[0] ? byId.get(params.nodes[0]) : undefined;
-      if (n && !n.person) openPerson(n.id); else pick.current(n?.person ?? null);
+      const id = params.nodes[0];
+      if (!id) return;
+      const curated = PEOPLE_BY_ID.get(id);
+      if (curated) setSelected(curated); else openPerson(id);
     });
     return () => { net.current?.destroy(); net.current = null; nodeSet.current = null; };
     // Rebuilt on leaving a profile too, which unmounts the graph's container.
-  }, [tree, person]);
+  }, [family, person]);
 
-  // Highlight the verse's people and glide the viewport to them. Colour/border updates don't trigger a relayout in vis-network.
+  // Highlight the verse's people, outline the chapter's, and glide to them. Restyling does not move anyone.
   useEffect(() => {
     const n = net.current, nodes = nodeSet.current;
-    if (!n || !nodes) return;
+    if (!n || !nodes || !family) return;
     const css = getComputedStyle(document.documentElement);
-    const ids = new Set(tree.nodes.map((x) => x.id));
-    // The people the verse itself names; only a verse that names no one falls back on the curated passages
-    // (Abijah's 1 Kings 15:1–8), which would otherwise pull the frame away from David in 15:5.
-    const inVerse = named.filter((x) => x.verses.includes(loc.verse)).map((x) => ids.has(x.id) ? x.id : curatedFor(x.id)).filter((x): x is string => !!x && ids.has(x));
-    const hereIds = new Set(inVerse.length ? inVerse : here.map((p) => p.id));
-    nodes.update(tree.nodes.map((p) => ({
-      id: p.id, borderWidth: hereIds.has(p.id) ? 3 : 1,
-      color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: hereIds.has(p.id) ? css.getPropertyValue('--danger') : css.getPropertyValue('--border') },
+    const hereIds = new Set(focusKey ? focusKey.split('|') : []);
+    const chapterIds = new Set(named.map((x) => x.id));
+    nodes.update(family.n.map(([id, , sex]) => ({
+      id, borderWidth: hereIds.has(id) ? 3 : chapterIds.has(id) ? 2 : 1,
+      color: { background: sex === 'f' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: hereIds.has(id) ? css.getPropertyValue('--danger') : chapterIds.has(id) ? css.getPropertyValue('--accent-ink') : css.getPropertyValue('--border') },
     })));
-    // Frame the verse's people with their parents (children the verse names are among them already; a clan's
-    // father may have twenty others), as many as still read: someone the curated tree gives no generation
-    // (Uriah in 1 Kings 15:5) can stand far from the rest, and framing both would shrink every box to a dash.
-    // The curated come first; whoever is left out is still outlined, a pan away.
-    const withParents = (id: string) => [id, ...tree.edges.filter((e) => e.kind !== 'spouse' && e.to === id).map((e) => e.from)];
+    // Frame the verse's first person, then add their parents and the verse's others, each with theirs, while all
+    // still read: in a family of a thousand a parent can stand far along the row from a child (Jesse from David,
+    // across Judah's clans), and framing both would shrink every box to a dash. The curated come first; whoever
+    // is left out is still outlined, a pan away. A verse that names no one in the family frames the chapter's.
+    const parentsOf = (id: string) => family.e.filter(([, to, kind]) => kind !== 'spouse' && to === id).map(([from]) => from);
     const readable = (group: string[]) => {
       const bb = group.map((id) => n.getBoundingBox(id)).filter((b) => b);
       const w = Math.max(...bb.map((b) => b.right)) - Math.min(...bb.map((b) => b.left)), h = Math.max(...bb.map((b) => b.bottom)) - Math.min(...bb.map((b) => b.top));
       return Math.min(el.current!.clientWidth / w, el.current!.clientHeight / h) >= MIN_FRAME_SCALE;
     };
-    const curatedFirst = [...hereIds].sort((a, b) => Number(!tree.nodes.find((x) => x.id === a)?.person) - Number(!tree.nodes.find((x) => x.id === b)?.person));
+    const curatedIds = new Set(family.n.filter((x) => x[5] || PEOPLE_BY_ID.has(x[0])).map((x) => x[0]));
+    const seeds = hereIds.size ? [...hereIds] : family.n.map((x) => x[0]).filter((id) => chapterIds.has(id));
     let frame: string[] = [];
-    for (const id of curatedFirst) {
-      const next = [...new Set([...frame, ...withParents(id)])];
-      if (!frame.length || readable(next)) frame = next;
+    for (const id of seeds.sort((a, b) => Number(!curatedIds.has(a)) - Number(!curatedIds.has(b)))) {
+      for (const add of [[id], parentsOf(id)]) {
+        const next = [...new Set([...frame, ...add])];
+        if (!frame.length || readable(next)) frame = next;
+      }
     }
-    n.fit({ nodes: frame.filter((x) => ids.has(x)), maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
+    if (frame.length) n.fit({ nodes: frame, maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
     fresh.current = false;
-  }, [tree, here, named, loc.verse, person]);
+  }, [family, focusKey, named, person]);
 
   if (person) return <Profile id={person} />;
   const list = selected ? [selected] : [];
@@ -193,7 +201,7 @@ export function PeoplePanel() {
   return (
     <div className="panel-body flush">
       {/* Distinct keys: vis-network wipes its container on destroy, which would erase React's children if the div were reused. */}
-      {tree.nodes.length ? <div key="graph" className="graph" ref={el} role="img" aria-label="Family relationships" /> : null}
+      {family ? <div key="graph" className="graph" ref={el} role="img" aria-label="Family relationships" /> : null}
       <Lifespans people={graphPeople} />
       <div className="people-list">
         {selected && <button className="chip link" onClick={() => setSelected(null)}>← all in this chapter</button>}

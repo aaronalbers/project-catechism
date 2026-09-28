@@ -167,15 +167,19 @@ them in CI — read it before adding content.
   the interlinear carries the person it names (`w[10]`), from TIPNR's verse lists (its "a", "b" say which of two
   namesakes in a verse is which), so the Words tab links a name to its person even where the English says "him".
   Its gentilic forms ("the Levites") never tag the ancestor, and `EPONYMS` keeps a tribe named for him (Judah,
-  Israel) to his own story and the genealogies. Kin a verse ties (both named within two verses, with a word of
-  kinship) carry that `ref`; the rest are TIPNR's reading and are marked ≈, its "(?)" as `uncertain`, and only tied
-  kin title a namesake ("son of Jesse"). TIPNR's `@Brief`/`@Short`/`@Article` were drafted by an AI model and are
-  never read. Where TIPNR files someone under a person the text does not say they are, `SEPARATE` keeps them apart
-  (Cleopas from Alphaeus), and `PeopleSources.tsx` lists every such change, as TIPNR's licence asks. Easton's
+  Israel) to his own story and the genealogies. Kin are TIPNR's, credited to it, with its "(?)" as `uncertain`;
+  TIPNR cites no verse for a link, and telling a stated link from an inferred one by the wording proved unreliable,
+  so none is claimed. Where TIPNR links people the text does not (Nahash as Jesse's wife, Heli as Mary's father),
+  `NOT_KIN` takes the link out of both records, and where it files someone under a person the text does not say
+  they are, `SEPARATE` keeps them apart (Cleopas from Alphaeus); `PeopleSources.tsx` lists every such change, as
+  TIPNR's licence asks. TIPNR's `@Brief`/`@Short`/`@Article` were drafted by an AI model and are never read. Easton's
   entries come from Theographic, paired with TIPNR's people by the verses naming them. The curated family tree
-  (`content/people.json`) gives each entry its `tipnr` id, and the People tab draws, round it, everyone the chapter
-  names that it leaves out, with TIPNR's parents and spouses (`src/lib/tree.ts`), dashed where no verse ties them
-  or where TIPNR reads a curated parent otherwise.
+  (`content/people.json`) gives each entry its `tipnr` id. `scripts/families.mjs` merges it with TIPNR's parents
+  and spouses (the curated tree's first; TIPNR's dashed where it is unsure or reads a curated parent otherwise),
+  splits the result into families (one of about a thousand, from Adam through David to Jesus) and lays each out
+  once with dagre (a build-only dependency) into `people/families.json`. The People tab draws the family of the
+  verse's people as laid out, highlights them, outlines the chapter's, and frames as many of them (and their
+  parents) as still read; moving verse only glides the view.
 
 - Itineraries and boundaries (`content/journeys.json`; `kind: 'border'` for a boundary, drawn
   a stretch per verse and filled when `closed`) take each station's position from OpenBible unless

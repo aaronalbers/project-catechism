@@ -12,19 +12,13 @@ const KIN: [keyof BiblePerson, string, string][] = [
   ['children', 'Child', 'Children'], ['siblings', 'Sibling', 'Siblings'],
 ];
 
-/**
- * One of someone's kin. A link the text makes names its verse on hover; one it does not is TIPNR's reading, marked
- * ≈, and one TIPNR itself marks as a reading of an ambiguous passage is marked ?.
- */
+/** One of someone's kin; ? marks TIPNR's own reading of a passage that could be read another way. */
 function KinChip({ k }: { k: Kin }) {
-  const why = [
-    k.ref ? `Where the text ties them: ${formatRef(k.ref)}` : 'TIPNR links them, but no verse near names both with a word of kinship: its reading, not the text’s',
-    k.uncertain ? 'TIPNR marks this as its reading of a passage that could be read another way' : '',
-  ].filter(Boolean).join('. ');
-  const mark = <>{!k.ref && <span className="est">≈ </span>}{k.name}{k.uncertain && <span className="est"> ?</span>}</>;
+  const why = k.uncertain ? 'TIPNR marks this as its reading of a passage that could be read another way' : undefined;
+  const mark = <>{k.name}{k.uncertain && <span className="est"> ?</span>}</>;
   return k.id
     ? <button className="chip link" title={why} onClick={() => openPerson(k.id!)}>{mark}</button>
-    : <span className="chip" title={`Not named in the text. ${why}`}>{mark}</span>;
+    : <span className="chip" title={['Not named in the text', why].filter(Boolean).join('. ')}>{mark}</span>;
 }
 
 function Family({ p }: { p: BiblePerson }) {
