@@ -4,12 +4,28 @@ import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
 import { THE_66, book as bookOf, contains, formatRef, parseRef } from '@/lib/refs';
 import { formatYear } from '@/lib/format';
 import { eastonParts, perBook } from '@/lib/people';
+import { PeopleSources } from './PeopleSources';
 import type { BiblePerson, Kin, Person, Profile as ProfileT } from '@/lib/types';
 
 const KIN: [keyof BiblePerson, string, string][] = [
   ['father', 'Father', 'Father'], ['mother', 'Mother', 'Mother'], ['spouses', 'Spouse', 'Spouses'],
   ['children', 'Child', 'Children'], ['siblings', 'Sibling', 'Siblings'],
 ];
+
+/**
+ * One of someone's kin. A link the text makes names its verse on hover; one it does not is TIPNR's reading, marked
+ * ≈, and one TIPNR itself marks as a reading of an ambiguous passage is marked ?.
+ */
+function KinChip({ k }: { k: Kin }) {
+  const why = [
+    k.ref ? `Where the text ties them: ${formatRef(k.ref)}` : 'TIPNR links them, but no verse near names both with a word of kinship: its reading, not the text’s',
+    k.uncertain ? 'TIPNR marks this as its reading of a passage that could be read another way' : '',
+  ].filter(Boolean).join('. ');
+  const mark = <>{!k.ref && <span className="est">≈ </span>}{k.name}{k.uncertain && <span className="est"> ?</span>}</>;
+  return k.id
+    ? <button className="chip link" title={why} onClick={() => openPerson(k.id!)}>{mark}</button>
+    : <span className="chip" title={`Not named in the text. ${why}`}>{mark}</span>;
+}
 
 function Family({ p }: { p: BiblePerson }) {
   const rows = KIN.map(([k, one, many]) => ({ label: (p[k] as Kin[] | undefined)?.length === 1 ? one : many, kin: p[k] as Kin[] | undefined })).filter((r) => r.kin?.length);
@@ -19,7 +35,7 @@ function Family({ p }: { p: BiblePerson }) {
       {rows.map((r) => (
         <div key={r.label}>
           <dt>{r.label}</dt>
-          <dd>{r.kin!.map((k) => <button key={k.id} className="chip link" onClick={() => openPerson(k.id)}>{k.name}</button>)}</dd>
+          <dd>{r.kin!.map((k, i) => <KinChip key={k.id ?? i} k={k} />)}</dd>
         </div>
       ))}
     </dl>
@@ -140,7 +156,7 @@ export function Profile({ id }: { id: string }) {
       {p.easton && !prof?.eastonWrong && <Easton text={p.easton} open={!prof} />}
       {prof?.eastonWrong && <p className="tree-note">The people data links {prof.name} to Easton's entry on {prof.eastonWrong}, so it is left out here.</p>}
       {!prof && !p.easton && <div className="empty"><p>Nothing more is written about {p.name} here yet.</p><small>Only the verses that name them are known.</small></div>}
-      <div className="sources"><ol><li><span className="skind">Dataset</span>Verses, kin and dictionary entry from <a href="https://github.com/robertrouse/theographic-bible-metadata" target="_blank" rel="noreferrer">Theographic Bible Metadata</a> (Robert Rouse, CC BY-SA 4.0), which is a work in progress; its links between namesakes are sometimes wrong.</li></ol></div>
+      <PeopleSources />
     </div>
   );
 }

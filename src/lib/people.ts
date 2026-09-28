@@ -36,6 +36,7 @@ export function namedInChapter(data: PeopleInBook, chapter: number): Named[] {
 
 /** The people-data id for a family-tree entry, among the people a chapter names. */
 export function namedFor(p: Person, named: Named[], book: string, chapter: number): Named | undefined {
+  if (p.tipnr) return named.find((n) => n.id === p.tipnr);
   return named.find((n) => n.name === p.name && n.verses.some((v) => p.refs.some((r) => contains(r, { book, chapter, verse: v }))));
 }
 

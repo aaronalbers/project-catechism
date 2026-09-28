@@ -27,8 +27,9 @@ export const loadPlacesForBook = (book: string) => get<Record<string, string[]>>
 
 const NO_PEOPLE: PeopleInBook = { verses: {}, people: {} };
 export const loadPeopleForBook = (book: string) => get<PeopleInBook>(`people/by-book/${book}.json`).catch(() => NO_PEOPLE);
-/** Everyone named in the Bible is sharded by the first letter of their id. */
-export const loadPerson = (id: string) => get<Record<string, BiblePerson>>(`people/${id[0]}.json`).then((s) => s[id]).catch(() => undefined);
+/** Where a person is stored: people/<H|G>/<hundreds>.json by their Strong's number, as scripts/people.mjs writes them. */
+export const personShard = (id: string) => `${id[0]}/${Math.floor(parseInt(id.slice(1), 10) / 100)}`;
+export const loadPerson = (id: string) => get<Record<string, BiblePerson>>(`people/${personShard(id)}.json`).then((s) => s[id]).catch(() => undefined);
 
 export const loadMap = () => get<MapData>('map.json');
 

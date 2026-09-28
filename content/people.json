@@ -2,6 +2,7 @@
  {
   "id": "adam",
   "name": "Adam",
+  "tipnr": "H0121G",
   "sex": "male",
   "generation": 0,
   "bornAM": 0,
@@ -15,6 +16,7 @@
  {
   "id": "eve",
   "name": "Eve",
+  "tipnr": "H2332",
   "sex": "female",
   "generation": 0,
   "refs": [
@@ -27,6 +29,7 @@
  {
   "id": "abel-of-adam",
   "name": "Abel",
+  "tipnr": "H1893",
   "sex": "male",
   "generation": 1,
   "father": "adam",
@@ -38,6 +41,7 @@
  {
   "id": "seth",
   "name": "Seth",
+  "tipnr": "H8352",
   "sex": "male",
   "generation": 1,
   "father": "adam",
@@ -53,6 +57,7 @@
  {
   "id": "cain",
   "name": "Cain",
+  "tipnr": "H7014B",
   "sex": "male",
   "generation": 1,
   "father": "adam",
@@ -64,6 +69,7 @@
  {
   "id": "enosh",
   "name": "Enosh",
+  "tipnr": "H0583",
   "sex": "male",
   "generation": 2,
   "father": "seth",
@@ -78,6 +84,7 @@
  {
   "id": "enoch",
   "name": "Enoch",
+  "tipnr": "H2585G",
   "sex": "male",
   "generation": 2,
   "father": "cain",
@@ -88,6 +95,7 @@
  {
   "id": "kenan",
   "name": "Kenan",
+  "tipnr": "H7018",
   "sex": "male",
   "generation": 3,
   "father": "enosh",
@@ -101,6 +109,7 @@
  {
   "id": "irad",
   "name": "Irad",
+  "tipnr": "H5897",
   "sex": "male",
   "generation": 3,
   "father": "enoch",
@@ -111,6 +120,7 @@
  {
   "id": "mahalalel",
   "name": "Mahalalel",
+  "tipnr": "H4111G",
   "sex": "male",
   "generation": 4,
   "father": "kenan",
@@ -124,6 +134,7 @@
  {
   "id": "mehujael",
   "name": "Mehujael",
+  "tipnr": "H4232",
   "sex": "male",
   "generation": 4,
   "father": "irad",
@@ -134,6 +145,7 @@
  {
   "id": "jared",
   "name": "Jared",
+  "tipnr": "H3382G",
   "sex": "male",
   "generation": 5,
   "father": "mahalalel",
@@ -147,6 +159,7 @@
  {
   "id": "methushael",
   "name": "Methushael",
+  "tipnr": "H4967",
   "sex": "male",
   "generation": 5,
   "father": "mehujael",
@@ -157,6 +170,7 @@
  {
   "id": "enoch-of-jared",
   "name": "Enoch",
+  "tipnr": "H2585H",
   "sex": "male",
   "generation": 6,
   "father": "jared",
@@ -172,6 +186,7 @@
  {
   "id": "adah",
   "name": "Adah",
+  "tipnr": "H5711G",
   "sex": "female",
   "generation": 6,
   "refs": [
@@ -181,6 +196,7 @@
  {
   "id": "lamech",
   "name": "Lamech",
+  "tipnr": "H3929G",
   "sex": "male",
   "generation": 6,
   "father": "methushael",
@@ -191,6 +207,7 @@
  {
   "id": "zillah",
   "name": "Zillah",
+  "tipnr": "H6741",
   "sex": "female",
   "generation": 6,
   "refs": [
@@ -200,6 +217,7 @@
  {
   "id": "methuselah",
   "name": "Methuselah",
+  "tipnr": "H4968",
   "sex": "male",
   "generation": 7,
   "father": "enoch-of-jared",
@@ -213,6 +231,7 @@
  {
   "id": "jabal-of-lamech",
   "name": "Jabal",
+  "tipnr": "H2989",
   "sex": "male",
   "generation": 7,
   "father": "lamech",
@@ -224,6 +243,7 @@
  {
   "id": "jubal-of-lamech",
   "name": "Jubal",
+  "tipnr": "H3106",
   "sex": "male",
   "generation": 7,
   "father": "lamech",
@@ -235,6 +255,7 @@
  {
   "id": "tubal-cain-of-lamech",
   "name": "Tubal-Cain",
+  "tipnr": "H8423",
   "sex": "male",
   "generation": 7,
   "father": "lamech",
@@ -246,6 +267,7 @@
  {
   "id": "naamah-of-lamech",
   "name": "Naamah",
+  "tipnr": "H5279G",
   "sex": "female",
   "generation": 7,
   "father": "lamech",
@@ -257,6 +279,7 @@
  {
   "id": "lamech-of-methuselah",
   "name": "Lamech",
+  "tipnr": "H3929H",
   "sex": "male",
   "generation": 8,
   "father": "methuselah",
@@ -270,6 +293,7 @@
  {
   "id": "noah",
   "name": "Noah",
+  "tipnr": "H5146",
   "sex": "male",
   "generation": 9,
   "father": "lamech-of-methuselah",
@@ -284,6 +308,7 @@
  {
   "id": "japheth-of-noah",
   "name": "Japheth",
+  "tipnr": "H3315",
   "sex": "male",
   "generation": 10,
   "father": "noah",
@@ -295,6 +320,7 @@
  {
   "id": "shem",
   "name": "Shem",
+  "tipnr": "H8035",
   "sex": "male",
   "generation": 10,
   "father": "noah",
@@ -310,6 +336,7 @@
  {
   "id": "ham-of-noah",
   "name": "Ham",
+  "tipnr": "H2526G",
   "sex": "male",
   "generation": 10,
   "father": "noah",
@@ -321,6 +348,7 @@
  {
   "id": "elam-of-shem",
   "name": "Elam",
+  "tipnr": "H5867C",
   "sex": "male",
   "generation": 11,
   "father": "shem",
@@ -331,6 +359,7 @@
  {
   "id": "asshur-of-shem",
   "name": "Asshur",
+  "tipnr": "H0804H",
   "sex": "male",
   "generation": 11,
   "father": "shem",
@@ -341,6 +370,7 @@
  {
   "id": "arphaxad",
   "name": "Arphaxad",
+  "tipnr": "H0775",
   "sex": "male",
   "generation": 11,
   "father": "shem",
@@ -355,6 +385,7 @@
  {
   "id": "lud-of-shem",
   "name": "Lud",
+  "tipnr": "H3865",
   "sex": "male",
   "generation": 11,
   "father": "shem",
@@ -365,6 +396,7 @@
  {
   "id": "aram",
   "name": "Aram",
+  "tipnr": "H0758G",
   "sex": "male",
   "generation": 11,
   "father": "shem",
@@ -375,6 +407,7 @@
  {
   "id": "shelah",
   "name": "Shelah",
+  "tipnr": "H7974",
   "sex": "male",
   "generation": 12,
   "father": "arphaxad",
@@ -389,6 +422,7 @@
  {
   "id": "uz-of-aram",
   "name": "Uz",
+  "tipnr": "H5780G",
   "sex": "male",
   "generation": 12,
   "father": "aram",
@@ -399,6 +433,7 @@
  {
   "id": "hul-of-aram",
   "name": "Hul",
+  "tipnr": "H2343",
   "sex": "male",
   "generation": 12,
   "father": "aram",
@@ -409,6 +444,7 @@
  {
   "id": "gether-of-aram",
   "name": "Gether",
+  "tipnr": "H1666",
   "sex": "male",
   "generation": 12,
   "father": "aram",
@@ -419,6 +455,7 @@
  {
   "id": "meshech-of-aram",
   "name": "Meshech",
+  "tipnr": "H4851",
   "sex": "male",
   "generation": 12,
   "father": "aram",
@@ -429,6 +466,7 @@
  {
   "id": "eber",
   "name": "Eber",
+  "tipnr": "H5677G",
   "sex": "male",
   "generation": 13,
   "father": "shelah",
@@ -443,6 +481,7 @@
  {
   "id": "peleg",
   "name": "Peleg",
+  "tipnr": "H6389",
   "sex": "male",
   "generation": 14,
   "father": "eber",
@@ -457,6 +496,7 @@
  {
   "id": "joktan",
   "name": "Joktan",
+  "tipnr": "H3355",
   "sex": "male",
   "generation": 14,
   "father": "eber",
@@ -467,6 +507,7 @@
  {
   "id": "reu",
   "name": "Reu",
+  "tipnr": "H7466",
   "sex": "male",
   "generation": 15,
   "father": "peleg",
@@ -480,6 +521,7 @@
  {
   "id": "almodad-of-joktan",
   "name": "Almodad",
+  "tipnr": "H0486",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -490,6 +532,7 @@
  {
   "id": "sheleph-of-joktan",
   "name": "Sheleph",
+  "tipnr": "H8026",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -500,6 +543,7 @@
  {
   "id": "hazarmaveth-of-joktan",
   "name": "Hazarmaveth",
+  "tipnr": "H2700",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -510,6 +554,7 @@
  {
   "id": "jerah-of-joktan",
   "name": "Jerah",
+  "tipnr": "H3392",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -520,6 +565,7 @@
  {
   "id": "hadoram-of-joktan",
   "name": "Hadoram",
+  "tipnr": "H1913A",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -530,6 +576,7 @@
  {
   "id": "uzal-of-joktan",
   "name": "Uzal",
+  "tipnr": "H0187G",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -540,6 +587,7 @@
  {
   "id": "diklah-of-joktan",
   "name": "Diklah",
+  "tipnr": "H1853",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -550,6 +598,7 @@
  {
   "id": "obal-of-joktan",
   "name": "Obal",
+  "tipnr": "H5745",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -560,6 +609,7 @@
  {
   "id": "abimael-of-joktan",
   "name": "Abimael",
+  "tipnr": "H0039",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -570,6 +620,7 @@
  {
   "id": "sheba-of-joktan",
   "name": "Sheba",
+  "tipnr": "H7614H",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -580,6 +631,7 @@
  {
   "id": "ophir-of-joktan",
   "name": "Ophir",
+  "tipnr": "H0211G",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -590,6 +642,7 @@
  {
   "id": "havilah-of-joktan",
   "name": "Havilah",
+  "tipnr": "H2341I",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -600,6 +653,7 @@
  {
   "id": "jobab-of-joktan",
   "name": "Jobab",
+  "tipnr": "H3103G",
   "sex": "male",
   "generation": 15,
   "father": "joktan",
@@ -610,6 +664,7 @@
  {
   "id": "serug",
   "name": "Serug",
+  "tipnr": "H8286",
   "sex": "male",
   "generation": 16,
   "father": "reu",
@@ -623,6 +678,7 @@
  {
   "id": "nahor",
   "name": "Nahor",
+  "tipnr": "H5152G",
   "sex": "male",
   "generation": 17,
   "father": "serug",
@@ -636,6 +692,7 @@
  {
   "id": "terah",
   "name": "Terah",
+  "tipnr": "H8646G",
   "sex": "male",
   "generation": 18,
   "father": "nahor",
@@ -649,6 +706,7 @@
  {
   "id": "nahor-of-terah",
   "name": "Nahor",
+  "tipnr": "H5152H",
   "sex": "male",
   "generation": 19,
   "father": "terah",
@@ -660,6 +718,7 @@
  {
   "id": "haran",
   "name": "Haran",
+  "tipnr": "H2039G",
   "sex": "male",
   "generation": 19,
   "father": "terah",
@@ -670,6 +729,7 @@
  {
   "id": "sarai",
   "name": "Sarai",
+  "tipnr": "H8283",
   "sex": "female",
   "generation": 19,
   "father": "terah",
@@ -686,6 +746,7 @@
  {
   "id": "hagar",
   "name": "Hagar",
+  "tipnr": "H1904",
   "sex": "female",
   "generation": 19,
   "refs": [
@@ -696,6 +757,7 @@
  {
   "id": "abraham",
   "name": "Abraham",
+  "tipnr": "H0085",
   "sex": "male",
   "generation": 19,
   "father": "terah",
@@ -715,6 +777,7 @@
  {
   "id": "keturah",
   "name": "Keturah",
+  "tipnr": "H6989",
   "sex": "female",
   "generation": 19,
   "refs": [
@@ -724,6 +787,7 @@
  {
   "id": "reumah",
   "name": "Reumah",
+  "tipnr": "H7208",
   "sex": "female",
   "generation": 20,
   "refs": [
@@ -733,6 +797,7 @@
  {
   "id": "milcah",
   "name": "Milcah",
+  "tipnr": "H4435G",
   "sex": "female",
   "generation": 20,
   "father": "haran",
@@ -753,6 +818,7 @@
  {
   "id": "lot",
   "name": "Lot",
+  "tipnr": "H3876G",
   "sex": "male",
   "generation": 20,
   "father": "haran",
@@ -765,6 +831,7 @@
  {
   "id": "isaac",
   "name": "Isaac",
+  "tipnr": "H3327",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -783,6 +850,7 @@
  {
   "id": "ishmael",
   "name": "Ishmael",
+  "tipnr": "H3458G",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -799,6 +867,7 @@
  {
   "id": "zimran-of-abraham",
   "name": "Zimran",
+  "tipnr": "H2175",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -810,6 +879,7 @@
  {
   "id": "jokshan-of-abraham",
   "name": "Jokshan",
+  "tipnr": "H3370",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -821,6 +891,7 @@
  {
   "id": "medan-of-abraham",
   "name": "Medan",
+  "tipnr": "H4091",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -832,6 +903,7 @@
  {
   "id": "midian",
   "name": "Midian",
+  "tipnr": "H4080G",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -844,6 +916,7 @@
  {
   "id": "ishbak-of-abraham",
   "name": "Ishbak",
+  "tipnr": "H3435",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -855,6 +928,7 @@
  {
   "id": "shuah-of-abraham",
   "name": "Shuah",
+  "tipnr": "H7744",
   "sex": "male",
   "generation": 20,
   "father": "abraham",
@@ -866,6 +940,7 @@
  {
   "id": "seir",
   "name": "Seir",
+  "tipnr": "H8165B",
   "sex": "male",
   "generation": 20,
   "refs": [
@@ -875,6 +950,7 @@
  {
   "id": "tebah-of-nahor-of-terah",
   "name": "Tebah",
+  "tipnr": "H2875",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -886,6 +962,7 @@
  {
   "id": "gaham-of-nahor-of-terah",
   "name": "Gaham",
+  "tipnr": "H1514",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -897,6 +974,7 @@
  {
   "id": "tahash-of-nahor-of-terah",
   "name": "Tahash",
+  "tipnr": "H8477",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -908,6 +986,7 @@
  {
   "id": "maacah-of-nahor-of-terah",
   "name": "Maacah",
+  "tipnr": "H4601G",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -919,6 +998,7 @@
  {
   "id": "uz-of-nahor-of-terah",
   "name": "Uz",
+  "tipnr": "H5780H",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -930,6 +1010,7 @@
  {
   "id": "buz-of-nahor-of-terah",
   "name": "Buz",
+  "tipnr": "H0938G",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -941,6 +1022,7 @@
  {
   "id": "kemuel",
   "name": "Kemuel",
+  "tipnr": "H7055G",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -952,6 +1034,7 @@
  {
   "id": "kesed-of-nahor-of-terah",
   "name": "Kesed",
+  "tipnr": "H3777",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -963,6 +1046,7 @@
  {
   "id": "hazo-of-nahor-of-terah",
   "name": "Hazo",
+  "tipnr": "H2375",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -974,6 +1058,7 @@
  {
   "id": "pildash-of-nahor-of-terah",
   "name": "Pildash",
+  "tipnr": "H6394",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -985,6 +1070,7 @@
  {
   "id": "jidlaph-of-nahor-of-terah",
   "name": "Jidlaph",
+  "tipnr": "H3044",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -996,6 +1082,7 @@
  {
   "id": "bethuel",
   "name": "Bethuel",
+  "tipnr": "H1328A",
   "sex": "male",
   "generation": 21,
   "father": "nahor-of-terah",
@@ -1030,6 +1117,7 @@
  {
   "id": "nebaioth-of-ishmael",
   "name": "Nebaioth",
+  "tipnr": "H5032",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1040,6 +1128,7 @@
  {
   "id": "kedar-of-ishmael",
   "name": "Kedar",
+  "tipnr": "H6938",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1050,6 +1139,7 @@
  {
   "id": "adbeel-of-ishmael",
   "name": "Adbeel",
+  "tipnr": "H0110",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1060,6 +1150,7 @@
  {
   "id": "mibsam-of-ishmael",
   "name": "Mibsam",
+  "tipnr": "H4017G",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1070,6 +1161,7 @@
  {
   "id": "mishma-of-ishmael",
   "name": "Mishma",
+  "tipnr": "H4927G",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1080,6 +1172,7 @@
  {
   "id": "dumah-of-ishmael",
   "name": "Dumah",
+  "tipnr": "H1746G",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1090,6 +1183,7 @@
  {
   "id": "massa-of-ishmael",
   "name": "Massa",
+  "tipnr": "H4854",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1100,6 +1194,7 @@
  {
   "id": "hadad-of-ishmael",
   "name": "Hadad",
+  "tipnr": "H2301",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1110,6 +1205,7 @@
  {
   "id": "tema-of-ishmael",
   "name": "Tema",
+  "tipnr": "H8485G",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1120,6 +1216,7 @@
  {
   "id": "jetur-of-ishmael",
   "name": "Jetur",
+  "tipnr": "H3195G",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1130,6 +1227,7 @@
  {
   "id": "naphish-of-ishmael",
   "name": "Naphish",
+  "tipnr": "H5305",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1140,6 +1238,7 @@
  {
   "id": "kedemah-of-ishmael",
   "name": "Kedemah",
+  "tipnr": "H6929",
   "sex": "male",
   "generation": 21,
   "father": "ishmael",
@@ -1150,6 +1249,7 @@
  {
   "id": "mahalath",
   "name": "Mahalath (Basemath)",
+  "tipnr": "H4258G",
   "sex": "female",
   "generation": 21,
   "father": "ishmael",
@@ -1161,6 +1261,7 @@
  {
   "id": "ephah-of-midian",
   "name": "Ephah",
+  "tipnr": "H5891G",
   "sex": "male",
   "generation": 21,
   "father": "midian",
@@ -1171,6 +1272,7 @@
  {
   "id": "epher-of-midian",
   "name": "Epher",
+  "tipnr": "H6081G",
   "sex": "male",
   "generation": 21,
   "father": "midian",
@@ -1181,6 +1283,7 @@
  {
   "id": "hanoch-of-midian",
   "name": "Hanoch",
+  "tipnr": "H2585I",
   "sex": "male",
   "generation": 21,
   "father": "midian",
@@ -1191,6 +1294,7 @@
  {
   "id": "abida-of-midian",
   "name": "Abida",
+  "tipnr": "H0028",
   "sex": "male",
   "generation": 21,
   "father": "midian",
@@ -1201,6 +1305,7 @@
  {
   "id": "eldaah-of-midian",
   "name": "Eldaah",
+  "tipnr": "H0420",
   "sex": "male",
   "generation": 21,
   "father": "midian",
@@ -1211,6 +1316,7 @@
  {
   "id": "zibeon",
   "name": "Zibeon",
+  "tipnr": "H6649",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1222,6 +1328,7 @@
  {
   "id": "timna",
   "name": "Timna",
+  "tipnr": "H8555",
   "sex": "female",
   "generation": 21,
   "father": "seir",
@@ -1233,6 +1340,7 @@
  {
   "id": "lotan",
   "name": "Lotan",
+  "tipnr": "H3877",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1244,6 +1352,7 @@
  {
   "id": "shobal",
   "name": "Shobal",
+  "tipnr": "H7732G",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1255,6 +1364,7 @@
  {
   "id": "anah-of-seir",
   "name": "Anah",
+  "tipnr": "H6034",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1265,6 +1375,7 @@
  {
   "id": "dishon-of-seir",
   "name": "Dishon",
+  "tipnr": "H1787G",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1275,6 +1386,7 @@
  {
   "id": "ezer",
   "name": "Ezer",
+  "tipnr": "H0687",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1286,6 +1398,7 @@
  {
   "id": "dishan",
   "name": "Dishan",
+  "tipnr": "H1789G",
   "sex": "male",
   "generation": 21,
   "father": "seir",
@@ -1297,6 +1410,7 @@
  {
   "id": "aram-of-kemuel",
   "name": "Aram",
+  "tipnr": "H0758H",
   "sex": "male",
   "generation": 22,
   "father": "kemuel",
@@ -1307,6 +1421,7 @@
  {
   "id": "laban",
   "name": "Laban",
+  "tipnr": "H3837A",
   "sex": "male",
   "generation": 22,
   "father": "bethuel",
@@ -1318,6 +1433,7 @@
  {
   "id": "moab-of-lot",
   "name": "Moab",
+  "tipnr": "H4124H",
   "sex": "male",
   "generation": 22,
   "father": "lot",
@@ -1329,6 +1445,7 @@
  {
   "id": "ben-ammi-of-lot",
   "name": "Ben-Ammi",
+  "tipnr": "H1151",
   "sex": "male",
   "generation": 22,
   "father": "lot",
@@ -1340,6 +1457,7 @@
  {
   "id": "rebekah",
   "name": "Rebekah",
+  "tipnr": "H7259",
   "sex": "female",
   "generation": 22,
   "father": "bethuel",
@@ -1352,6 +1470,7 @@
  {
   "id": "elon",
   "name": "Elon",
+  "tipnr": "H0356G",
   "sex": "male",
   "generation": 22,
   "refs": [
@@ -1362,6 +1481,7 @@
  {
   "id": "anah",
   "name": "Anah",
+  "tipnr": "H6034",
   "sex": "male",
   "generation": 22,
   "father": "zibeon",
@@ -1373,6 +1493,7 @@
  {
   "id": "aiah-of-zibeon",
   "name": "Aiah",
+  "tipnr": "H0345G",
   "sex": "male",
   "generation": 22,
   "father": "zibeon",
@@ -1383,6 +1504,7 @@
  {
   "id": "hori-of-lotan",
   "name": "Hori",
+  "tipnr": "H2753H",
   "sex": "male",
   "generation": 22,
   "father": "lotan",
@@ -1393,6 +1515,7 @@
  {
   "id": "homam-hemam-of-lotan",
   "name": "Hemam (Homam)",
+  "tipnr": "H1950",
   "sex": "male",
   "generation": 22,
   "father": "lotan",
@@ -1403,6 +1526,7 @@
  {
   "id": "alvan-of-shobal",
   "name": "Alvan",
+  "tipnr": "H5935",
   "sex": "male",
   "generation": 22,
   "father": "shobal",
@@ -1413,6 +1537,7 @@
  {
   "id": "manahath-of-shobal",
   "name": "Manahath",
+  "tipnr": "H4506B",
   "sex": "male",
   "generation": 22,
   "father": "shobal",
@@ -1423,6 +1548,7 @@
  {
   "id": "ebal-of-shobal",
   "name": "Ebal",
+  "tipnr": "H5858B",
   "sex": "male",
   "generation": 22,
   "father": "shobal",
@@ -1433,6 +1559,7 @@
  {
   "id": "shepho-of-shobal",
   "name": "Shepho",
+  "tipnr": "H8195",
   "sex": "male",
   "generation": 22,
   "father": "shobal",
@@ -1443,6 +1570,7 @@
  {
   "id": "onam-of-shobal",
   "name": "Onam",
+  "tipnr": "H0208G",
   "sex": "male",
   "generation": 22,
   "father": "shobal",
@@ -1453,6 +1581,7 @@
  {
   "id": "bilhan-of-ezer",
   "name": "Bilhan",
+  "tipnr": "H1092G",
   "sex": "male",
   "generation": 22,
   "father": "ezer",
@@ -1463,6 +1592,7 @@
  {
   "id": "zaavan-of-ezer",
   "name": "Zaavan",
+  "tipnr": "H2190",
   "sex": "male",
   "generation": 22,
   "father": "ezer",
@@ -1473,6 +1603,7 @@
  {
   "id": "akan-of-ezer",
   "name": "Akan",
+  "tipnr": "H3292",
   "sex": "male",
   "generation": 22,
   "father": "ezer",
@@ -1483,6 +1614,7 @@
  {
   "id": "uz-of-dishan",
   "name": "Uz",
+  "tipnr": "H5780I",
   "sex": "male",
   "generation": 22,
   "father": "dishan",
@@ -1493,6 +1625,7 @@
  {
   "id": "aran-of-dishan",
   "name": "Aran",
+  "tipnr": "H0765",
   "sex": "male",
   "generation": 22,
   "father": "dishan",
@@ -1503,6 +1636,7 @@
  {
   "id": "leah",
   "name": "Leah",
+  "tipnr": "H3812",
   "sex": "female",
   "generation": 23,
   "father": "laban",
@@ -1513,6 +1647,7 @@
  {
   "id": "shua",
   "name": "Shua",
+  "tipnr": "H7770",
   "sex": "male",
   "generation": 23,
   "refs": [
@@ -1522,6 +1657,7 @@
  {
   "id": "rachel",
   "name": "Rachel",
+  "tipnr": "H7354",
   "sex": "female",
   "generation": 23,
   "father": "laban",
@@ -1533,6 +1669,7 @@
  {
   "id": "jacob",
   "name": "Jacob",
+  "tipnr": "H3478",
   "sex": "male",
   "generation": 23,
   "father": "isaac",
@@ -1552,6 +1689,7 @@
  {
   "id": "potiphera",
   "name": "Potiphera",
+  "tipnr": "H6319",
   "sex": "male",
   "generation": 23,
   "refs": [
@@ -1561,6 +1699,7 @@
  {
   "id": "bilhah",
   "name": "Bilhah",
+  "tipnr": "H1090A",
   "sex": "female",
   "generation": 23,
   "refs": [
@@ -1571,6 +1710,7 @@
  {
   "id": "zilpah",
   "name": "Zilpah",
+  "tipnr": "H2153",
   "sex": "female",
   "generation": 23,
   "refs": [
@@ -1581,6 +1721,7 @@
  {
   "id": "esau",
   "name": "Esau",
+  "tipnr": "H6215G",
   "sex": "male",
   "generation": 23,
   "father": "isaac",
@@ -1596,6 +1737,7 @@
  {
   "id": "oholibamah",
   "name": "Oholibamah",
+  "tipnr": "H0173",
   "sex": "female",
   "generation": 23,
   "father": "anah",
@@ -1607,6 +1749,7 @@
  {
   "id": "basemath",
   "name": "Basemath (Adah)",
+  "tipnr": "H5711H",
   "sex": "female",
   "generation": 23,
   "father": "elon",
@@ -1618,6 +1761,7 @@
  {
   "id": "dishon",
   "name": "Dishon",
+  "tipnr": "H1787H",
   "sex": "male",
   "generation": 23,
   "father": "anah",
@@ -1628,6 +1772,7 @@
  {
   "id": "simeon",
   "name": "Simeon",
+  "tipnr": "H8095G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1640,6 +1785,7 @@
  {
   "id": "levi",
   "name": "Levi",
+  "tipnr": "H3878",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1653,6 +1799,7 @@
  {
   "id": "judah",
   "name": "Judah",
+  "tipnr": "H3063G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1678,6 +1825,7 @@
  {
   "id": "tamar",
   "name": "Tamar",
+  "tipnr": "H8559G",
   "sex": "female",
   "generation": 24,
   "refs": [
@@ -1688,6 +1836,7 @@
  {
   "id": "issachar",
   "name": "Issachar",
+  "tipnr": "H3485G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1700,6 +1849,7 @@
  {
   "id": "zebulun",
   "name": "Zebulun",
+  "tipnr": "H2074",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1712,6 +1862,7 @@
  {
   "id": "dinah-of-jacob",
   "name": "Dinah",
+  "tipnr": "H1783",
   "sex": "female",
   "generation": 24,
   "father": "jacob",
@@ -1724,6 +1875,7 @@
  {
   "id": "reuben",
   "name": "Reuben",
+  "tipnr": "H7205",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1736,6 +1888,7 @@
  {
   "id": "joseph",
   "name": "Joseph",
+  "tipnr": "H3130G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1753,6 +1906,7 @@
  {
   "id": "asenath",
   "name": "Asenath",
+  "tipnr": "H0621",
   "sex": "female",
   "generation": 24,
   "father": "potiphera",
@@ -1764,6 +1918,7 @@
  {
   "id": "benjamin",
   "name": "Benjamin",
+  "tipnr": "H1144G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1776,6 +1931,7 @@
  {
   "id": "dan",
   "name": "Dan",
+  "tipnr": "H1835H",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1788,6 +1944,7 @@
  {
   "id": "naphtali",
   "name": "Naphtali",
+  "tipnr": "H5321G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1800,6 +1957,7 @@
  {
   "id": "gad",
   "name": "Gad",
+  "tipnr": "H1410G",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1812,6 +1970,7 @@
  {
   "id": "asher",
   "name": "Asher",
+  "tipnr": "H0836",
   "sex": "male",
   "generation": 24,
   "father": "jacob",
@@ -1824,6 +1983,7 @@
  {
   "id": "jeush-of-esau",
   "name": "Jeush",
+  "tipnr": "H3266G",
   "sex": "male",
   "generation": 24,
   "father": "esau",
@@ -1835,6 +1995,7 @@
  {
   "id": "jalam-of-esau",
   "name": "Jalam",
+  "tipnr": "H3281",
   "sex": "male",
   "generation": 24,
   "father": "esau",
@@ -1846,6 +2007,7 @@
  {
   "id": "korah-of-esau",
   "name": "Korah",
+  "tipnr": "H7141G",
   "sex": "male",
   "generation": 24,
   "father": "esau",
@@ -1857,6 +2019,7 @@
  {
   "id": "reuel",
   "name": "Reuel",
+  "tipnr": "H7467G",
   "sex": "male",
   "generation": 24,
   "father": "esau",
@@ -1869,6 +2032,7 @@
  {
   "id": "eliphaz",
   "name": "Eliphaz",
+  "tipnr": "H0464G",
   "sex": "male",
   "generation": 24,
   "father": "esau",
@@ -1881,6 +2045,7 @@
  {
   "id": "hemdan-of-dishon",
   "name": "Hemdan",
+  "tipnr": "H2533",
   "sex": "male",
   "generation": 24,
   "father": "dishon",
@@ -1891,6 +2056,7 @@
  {
   "id": "eshban-of-dishon",
   "name": "Eshban",
+  "tipnr": "H0790",
   "sex": "male",
   "generation": 24,
   "father": "dishon",
@@ -1901,6 +2067,7 @@
  {
   "id": "ithran-of-dishon",
   "name": "Ithran",
+  "tipnr": "H3506G",
   "sex": "male",
   "generation": 24,
   "father": "dishon",
@@ -1911,6 +2078,7 @@
  {
   "id": "keran-of-dishon",
   "name": "Keran",
+  "tipnr": "H3763",
   "sex": "male",
   "generation": 24,
   "father": "dishon",
@@ -1921,6 +2089,7 @@
  {
   "id": "jemuel-of-simeon",
   "name": "Jemuel",
+  "tipnr": "H3223",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1931,6 +2100,7 @@
  {
   "id": "jamin-of-simeon",
   "name": "Jamin",
+  "tipnr": "H3226G",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1941,6 +2111,7 @@
  {
   "id": "ohad-of-simeon",
   "name": "Ohad",
+  "tipnr": "H0161",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1951,6 +2122,7 @@
  {
   "id": "jakin-of-simeon",
   "name": "Jakin",
+  "tipnr": "H3199G",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1961,6 +2133,7 @@
  {
   "id": "zohar-of-simeon",
   "name": "Zohar",
+  "tipnr": "H2226L",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1971,6 +2144,7 @@
  {
   "id": "shaul-of-simeon",
   "name": "Shaul",
+  "tipnr": "H7586H",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1981,6 +2155,7 @@
  {
   "id": "zerah-of-simeon",
   "name": "Zerah",
+  "tipnr": "H2226L",
   "sex": "male",
   "generation": 25,
   "father": "simeon",
@@ -1991,6 +2166,7 @@
  {
   "id": "jochebed",
   "name": "Jochebed",
+  "tipnr": "H3115",
   "sex": "female",
   "generation": 25,
   "father": "levi",
@@ -2002,6 +2178,7 @@
  {
   "id": "gershon",
   "name": "Gershon",
+  "tipnr": "H1648",
   "sex": "male",
   "generation": 25,
   "father": "levi",
@@ -2013,6 +2190,7 @@
  {
   "id": "kohath",
   "name": "Kohath",
+  "tipnr": "H6955",
   "sex": "male",
   "generation": 25,
   "father": "levi",
@@ -2025,6 +2203,7 @@
  {
   "id": "merari",
   "name": "Merari",
+  "tipnr": "H4847",
   "sex": "male",
   "generation": 25,
   "father": "levi",
@@ -2037,6 +2216,7 @@
  {
   "id": "er-of-judah",
   "name": "Er",
+  "tipnr": "H6147G",
   "sex": "male",
   "generation": 25,
   "father": "judah",
@@ -2049,6 +2229,7 @@
  {
   "id": "onan-of-judah",
   "name": "Onan",
+  "tipnr": "H0209",
   "sex": "male",
   "generation": 25,
   "father": "judah",
@@ -2061,6 +2242,7 @@
  {
   "id": "shelah-of-judah",
   "name": "Shelah",
+  "tipnr": "H7956",
   "sex": "male",
   "generation": 25,
   "father": "judah",
@@ -2072,6 +2254,7 @@
  {
   "id": "perez",
   "name": "Perez",
+  "tipnr": "H6557",
   "sex": "male",
   "generation": 25,
   "father": "judah",
@@ -2086,6 +2269,7 @@
  {
   "id": "zerah-of-judah",
   "name": "Zerah",
+  "tipnr": "H2226I",
   "sex": "male",
   "generation": 25,
   "father": "judah",
@@ -2098,6 +2282,7 @@
  {
   "id": "tola-of-issachar",
   "name": "Tola",
+  "tipnr": "H8439G",
   "sex": "male",
   "generation": 25,
   "father": "issachar",
@@ -2108,6 +2293,7 @@
  {
   "id": "puah-of-issachar",
   "name": "Puah",
+  "tipnr": "H6312G",
   "sex": "male",
   "generation": 25,
   "father": "issachar",
@@ -2118,6 +2304,7 @@
  {
   "id": "jashub-of-issachar",
   "name": "Jashub",
+  "tipnr": "H3437H",
   "sex": "male",
   "generation": 25,
   "father": "issachar",
@@ -2128,6 +2315,7 @@
  {
   "id": "shimron-of-issachar",
   "name": "Shimron",
+  "tipnr": "H8110B",
   "sex": "male",
   "generation": 25,
   "father": "issachar",
@@ -2138,6 +2326,7 @@
  {
   "id": "sered-of-zebulun",
   "name": "Sered",
+  "tipnr": "H5624",
   "sex": "male",
   "generation": 25,
   "father": "zebulun",
@@ -2148,6 +2337,7 @@
  {
   "id": "elon-of-zebulun",
   "name": "Elon",
+  "tipnr": "H0356H",
   "sex": "male",
   "generation": 25,
   "father": "zebulun",
@@ -2158,6 +2348,7 @@
  {
   "id": "jahleel-of-zebulun",
   "name": "Jahleel",
+  "tipnr": "H3177",
   "sex": "male",
   "generation": 25,
   "father": "zebulun",
@@ -2168,6 +2359,7 @@
  {
   "id": "hanoch-of-reuben",
   "name": "Hanoch",
+  "tipnr": "H2585J",
   "sex": "male",
   "generation": 25,
   "father": "reuben",
@@ -2178,6 +2370,7 @@
  {
   "id": "pallu",
   "name": "Pallu",
+  "tipnr": "H6396",
   "sex": "male",
   "generation": 25,
   "father": "reuben",
@@ -2189,6 +2382,7 @@
  {
   "id": "hezron-of-reuben",
   "name": "Hezron",
+  "tipnr": "H2696G",
   "sex": "male",
   "generation": 25,
   "father": "reuben",
@@ -2199,6 +2393,7 @@
  {
   "id": "carmi-of-reuben",
   "name": "Carmi",
+  "tipnr": "H3756G",
   "sex": "male",
   "generation": 25,
   "father": "reuben",
@@ -2209,6 +2404,7 @@
  {
   "id": "manasseh",
   "name": "Manasseh",
+  "tipnr": "H4519G",
   "sex": "male",
   "generation": 25,
   "father": "joseph",
@@ -2221,6 +2417,7 @@
  {
   "id": "ephraim",
   "name": "Ephraim",
+  "tipnr": "H0669G",
   "sex": "male",
   "generation": 25,
   "father": "joseph",
@@ -2233,6 +2430,7 @@
  {
   "id": "bela",
   "name": "Bela",
+  "tipnr": "H1106A",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2244,6 +2442,7 @@
  {
   "id": "beker-of-benjamin",
   "name": "Beker",
+  "tipnr": "H1071G",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2254,6 +2453,7 @@
  {
   "id": "ashbel-of-benjamin",
   "name": "Ashbel",
+  "tipnr": "H0788",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2264,6 +2464,7 @@
  {
   "id": "gera-of-benjamin",
   "name": "Gera",
+  "tipnr": "H1617G",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2274,6 +2475,7 @@
  {
   "id": "naaman-of-benjamin",
   "name": "Naaman",
+  "tipnr": "H5283G",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2284,6 +2486,7 @@
  {
   "id": "ehi-of-benjamin",
   "name": "Ehi",
+  "tipnr": "H0297",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2294,6 +2497,7 @@
  {
   "id": "rosh-of-benjamin",
   "name": "Rosh",
+  "tipnr": "H7220",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2304,6 +2508,7 @@
  {
   "id": "muppim-of-benjamin",
   "name": "Muppim",
+  "tipnr": "H4649",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2314,6 +2519,7 @@
  {
   "id": "huppim-of-benjamin",
   "name": "Huppim",
+  "tipnr": "H2650H",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2324,6 +2530,7 @@
  {
   "id": "ard-of-benjamin",
   "name": "Ard",
+  "tipnr": "H0714G",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2334,6 +2541,7 @@
  {
   "id": "ahiram-of-benjamin",
   "name": "Ahiram",
+  "tipnr": "H0297",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2344,6 +2552,7 @@
  {
   "id": "shupham-of-benjamin",
   "name": "Shupham",
+  "tipnr": "H4649",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2354,6 +2563,7 @@
  {
   "id": "hupham-of-benjamin",
   "name": "Hupham",
+  "tipnr": "H2650H",
   "sex": "male",
   "generation": 25,
   "father": "benjamin",
@@ -2364,6 +2574,7 @@
  {
   "id": "hushim-of-dan",
   "name": "Hushim",
+  "tipnr": "H2366B",
   "sex": "male",
   "generation": 25,
   "father": "dan",
@@ -2374,6 +2585,7 @@
  {
   "id": "shuham-of-dan",
   "name": "Shuham",
+  "tipnr": "H2366B",
   "sex": "male",
   "generation": 25,
   "father": "dan",
@@ -2384,6 +2596,7 @@
  {
   "id": "jahziel-of-naphtali",
   "name": "Jahziel",
+  "tipnr": "H3183",
   "sex": "male",
   "generation": 25,
   "father": "naphtali",
@@ -2394,6 +2607,7 @@
  {
   "id": "guni-of-naphtali",
   "name": "Guni",
+  "tipnr": "H1476G",
   "sex": "male",
   "generation": 25,
   "father": "naphtali",
@@ -2404,6 +2618,7 @@
  {
   "id": "jezer-of-naphtali",
   "name": "Jezer",
+  "tipnr": "H3337",
   "sex": "male",
   "generation": 25,
   "father": "naphtali",
@@ -2414,6 +2629,7 @@
  {
   "id": "shillem-of-naphtali",
   "name": "Shillem",
+  "tipnr": "H8006",
   "sex": "male",
   "generation": 25,
   "father": "naphtali",
@@ -2424,6 +2640,7 @@
  {
   "id": "zephon-of-gad",
   "name": "Zephon",
+  "tipnr": "H6837",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2434,6 +2651,7 @@
  {
   "id": "haggi-of-gad",
   "name": "Haggi",
+  "tipnr": "H2291",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2444,6 +2662,7 @@
  {
   "id": "shuni-of-gad",
   "name": "Shuni",
+  "tipnr": "H7764",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2454,6 +2673,7 @@
  {
   "id": "ezbon-of-gad",
   "name": "Ezbon",
+  "tipnr": "H0675G",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2464,6 +2684,7 @@
  {
   "id": "eri-of-gad",
   "name": "Eri",
+  "tipnr": "H6179",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2474,6 +2695,7 @@
  {
   "id": "arodi-of-gad",
   "name": "Arodi",
+  "tipnr": "H0720",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2484,6 +2706,7 @@
  {
   "id": "areli-of-gad",
   "name": "Areli",
+  "tipnr": "H0692",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2494,6 +2717,7 @@
  {
   "id": "ozni-of-gad",
   "name": "Ozni",
+  "tipnr": "H0675G",
   "sex": "male",
   "generation": 25,
   "father": "gad",
@@ -2504,6 +2728,7 @@
  {
   "id": "imnah-of-asher",
   "name": "Imnah",
+  "tipnr": "H3232G",
   "sex": "male",
   "generation": 25,
   "father": "asher",
@@ -2514,6 +2739,7 @@
  {
   "id": "ishvah-of-asher",
   "name": "Ishvah",
+  "tipnr": "H3438",
   "sex": "male",
   "generation": 25,
   "father": "asher",
@@ -2524,6 +2750,7 @@
  {
   "id": "ishvi-of-asher",
   "name": "Ishvi",
+  "tipnr": "H3440G",
   "sex": "male",
   "generation": 25,
   "father": "asher",
@@ -2534,6 +2761,7 @@
  {
   "id": "beriah",
   "name": "Beriah",
+  "tipnr": "H1283G",
   "sex": "male",
   "generation": 25,
   "father": "asher",
@@ -2544,6 +2772,7 @@
  {
   "id": "serah-of-asher",
   "name": "Serah",
+  "tipnr": "H8294",
   "sex": "female",
   "generation": 25,
   "father": "asher",
@@ -2554,6 +2783,7 @@
  {
   "id": "nahath-of-reuel",
   "name": "Nahath",
+  "tipnr": "H5184G",
   "sex": "male",
   "generation": 25,
   "father": "reuel",
@@ -2564,6 +2794,7 @@
  {
   "id": "zerah",
   "name": "Zerah",
+  "tipnr": "H2226G",
   "sex": "male",
   "generation": 25,
   "father": "reuel",
@@ -2574,6 +2805,7 @@
  {
   "id": "shammah-of-reuel",
   "name": "Shammah",
+  "tipnr": "H8048G",
   "sex": "male",
   "generation": 25,
   "father": "reuel",
@@ -2584,6 +2816,7 @@
  {
   "id": "mizzah-of-reuel",
   "name": "Mizzah",
+  "tipnr": "H4199",
   "sex": "male",
   "generation": 25,
   "father": "reuel",
@@ -2594,6 +2827,7 @@
  {
   "id": "teman-of-eliphaz",
   "name": "Teman",
+  "tipnr": "H8487G",
   "sex": "male",
   "generation": 25,
   "father": "eliphaz",
@@ -2604,6 +2838,7 @@
  {
   "id": "omar-of-eliphaz",
   "name": "Omar",
+  "tipnr": "H0201",
   "sex": "male",
   "generation": 25,
   "father": "eliphaz",
@@ -2614,6 +2849,7 @@
  {
   "id": "zepho-of-eliphaz",
   "name": "Zepho",
+  "tipnr": "H6825",
   "sex": "male",
   "generation": 25,
   "father": "eliphaz",
@@ -2624,6 +2860,7 @@
  {
   "id": "gatam-of-eliphaz",
   "name": "Gatam",
+  "tipnr": "H1609",
   "sex": "male",
   "generation": 25,
   "father": "eliphaz",
@@ -2634,6 +2871,7 @@
  {
   "id": "kenaz-of-eliphaz",
   "name": "Kenaz",
+  "tipnr": "H7073G",
   "sex": "male",
   "generation": 25,
   "father": "eliphaz",
@@ -2644,6 +2882,7 @@
  {
   "id": "amalek-of-eliphaz",
   "name": "Amalek",
+  "tipnr": "H6002H",
   "sex": "male",
   "generation": 25,
   "father": "eliphaz",
@@ -2655,6 +2894,7 @@
  {
   "id": "amminadab",
   "name": "Amminadab",
+  "tipnr": "H5992G",
   "sex": "male",
   "generation": 26,
   "father": "ram",
@@ -2668,6 +2908,7 @@
  {
   "id": "libni-of-gershon",
   "name": "Libni",
+  "tipnr": "H3845G",
   "sex": "male",
   "generation": 26,
   "father": "gershon",
@@ -2678,6 +2919,7 @@
  {
   "id": "shimei-of-gershon",
   "name": "Shimei",
+  "tipnr": "H8096G",
   "sex": "male",
   "generation": 26,
   "father": "gershon",
@@ -2688,6 +2930,7 @@
  {
   "id": "amram",
   "name": "Amram",
+  "tipnr": "H6019G",
   "sex": "male",
   "generation": 26,
   "father": "kohath",
@@ -2699,6 +2942,7 @@
  {
   "id": "reuel-of-midian",
   "name": "Reuel",
+  "tipnr": "H3503",
   "sex": "male",
   "generation": 26,
   "refs": [
@@ -2710,6 +2954,7 @@
  {
   "id": "izhar",
   "name": "Izhar",
+  "tipnr": "H3324",
   "sex": "male",
   "generation": 26,
   "father": "kohath",
@@ -2721,6 +2966,7 @@
  {
   "id": "hebron-of-kohath",
   "name": "Hebron",
+  "tipnr": "H2275B",
   "sex": "male",
   "generation": 26,
   "father": "kohath",
@@ -2731,6 +2977,7 @@
  {
   "id": "uzziel",
   "name": "Uzziel",
+  "tipnr": "H5816G",
   "sex": "male",
   "generation": 26,
   "father": "kohath",
@@ -2742,6 +2989,7 @@
  {
   "id": "mahli-of-merari",
   "name": "Mahli",
+  "tipnr": "H4249G",
   "sex": "male",
   "generation": 26,
   "father": "merari",
@@ -2752,6 +3000,7 @@
  {
   "id": "mushi-of-merari",
   "name": "Mushi",
+  "tipnr": "H4187",
   "sex": "male",
   "generation": 26,
   "father": "merari",
@@ -2762,6 +3011,7 @@
  {
   "id": "hezron",
   "name": "Hezron",
+  "tipnr": "H2696H",
   "sex": "male",
   "generation": 26,
   "father": "perez",
@@ -2775,6 +3025,7 @@
  {
   "id": "hamul-of-perez",
   "name": "Hamul",
+  "tipnr": "H2538",
   "sex": "male",
   "generation": 26,
   "father": "perez",
@@ -2785,6 +3036,7 @@
  {
   "id": "eliab",
   "name": "Eliab",
+  "tipnr": "H0446H",
   "sex": "male",
   "generation": 26,
   "father": "pallu",
@@ -2796,6 +3048,7 @@
  {
   "id": "makir",
   "name": "Makir",
+  "tipnr": "H4353G",
   "sex": "male",
   "generation": 26,
   "father": "manasseh",
@@ -2807,6 +3060,7 @@
  {
   "id": "shuthelah",
   "name": "Shuthelah",
+  "tipnr": "H7803G",
   "sex": "male",
   "generation": 26,
   "father": "ephraim",
@@ -2817,6 +3071,7 @@
  {
   "id": "beker-of-ephraim",
   "name": "Beker",
+  "tipnr": "H1071H",
   "sex": "male",
   "generation": 26,
   "father": "ephraim",
@@ -2827,6 +3082,7 @@
  {
   "id": "tahan-of-ephraim",
   "name": "Tahan",
+  "tipnr": "H8465G",
   "sex": "male",
   "generation": 26,
   "father": "ephraim",
@@ -2837,6 +3093,7 @@
  {
   "id": "ard-of-bela",
   "name": "Ard",
+  "tipnr": "H0714H",
   "sex": "male",
   "generation": 26,
   "father": "bela",
@@ -2847,6 +3104,7 @@
  {
   "id": "naaman-of-bela",
   "name": "Naaman",
+  "tipnr": "H5283H",
   "sex": "male",
   "generation": 26,
   "father": "bela",
@@ -2857,6 +3115,7 @@
  {
   "id": "heber-of-beriah",
   "name": "Heber",
+  "tipnr": "H2268G",
   "sex": "male",
   "generation": 26,
   "father": "beriah",
@@ -2867,6 +3126,7 @@
  {
   "id": "malkiel-of-beriah",
   "name": "Malkiel",
+  "tipnr": "H4439",
   "sex": "male",
   "generation": 26,
   "father": "beriah",
@@ -2877,6 +3137,7 @@
  {
   "id": "jobab-of-zerah",
   "name": "Jobab",
+  "tipnr": "H3103H",
   "sex": "male",
   "generation": 26,
   "father": "zerah",
@@ -2887,6 +3148,7 @@
  {
   "id": "nahshon-of-amminadab",
   "name": "Nahshon",
+  "tipnr": "H5177",
   "sex": "male",
   "generation": 27,
   "father": "amminadab",
@@ -2901,6 +3163,7 @@
  {
   "id": "elisheba",
   "name": "Elisheba",
+  "tipnr": "H0472",
   "sex": "female",
   "generation": 27,
   "father": "amminadab",
@@ -2911,6 +3174,7 @@
  {
   "id": "aaron",
   "name": "Aaron",
+  "tipnr": "H0175",
   "sex": "male",
   "generation": 27,
   "father": "amram",
@@ -2924,6 +3188,7 @@
  {
   "id": "putiel",
   "name": "Putiel",
+  "tipnr": "H6317G",
   "sex": "male",
   "generation": 27,
   "refs": [
@@ -2933,6 +3198,7 @@
  {
   "id": "miriam-of-amram",
   "name": "Miriam",
+  "tipnr": "H4813G",
   "sex": "female",
   "generation": 27,
   "father": "amram",
@@ -2945,6 +3211,7 @@
  {
   "id": "moses",
   "name": "Moses",
+  "tipnr": "H4872",
   "sex": "male",
   "generation": 27,
   "father": "amram",
@@ -2963,6 +3230,7 @@
  {
   "id": "zipporah",
   "name": "Zipporah",
+  "tipnr": "H6855",
   "sex": "female",
   "generation": 27,
   "father": "reuel-of-midian",
@@ -2974,6 +3242,7 @@
  {
   "id": "hobab-of-reuel-of-midian",
   "name": "Hobab",
+  "tipnr": "H2246",
   "sex": "male",
   "generation": 27,
   "father": "reuel-of-midian",
@@ -2984,6 +3253,7 @@
  {
   "id": "korah",
   "name": "Korah",
+  "tipnr": "H7141I",
   "sex": "male",
   "generation": 27,
   "father": "izhar",
@@ -2995,6 +3265,7 @@
  {
   "id": "nepheg-of-izhar",
   "name": "Nepheg",
+  "tipnr": "H5298G",
   "sex": "male",
   "generation": 27,
   "father": "izhar",
@@ -3005,6 +3276,7 @@
  {
   "id": "zicri-of-izhar",
   "name": "Zicri",
+  "tipnr": "H2147G",
   "sex": "male",
   "generation": 27,
   "father": "izhar",
@@ -3015,6 +3287,7 @@
  {
   "id": "mishael-of-uzziel",
   "name": "Mishael",
+  "tipnr": "H4332G",
   "sex": "male",
   "generation": 27,
   "father": "uzziel",
@@ -3025,6 +3298,7 @@
  {
   "id": "elizaphan-of-uzziel",
   "name": "Elizaphan",
+  "tipnr": "H0469G",
   "sex": "male",
   "generation": 27,
   "father": "uzziel",
@@ -3035,6 +3309,7 @@
  {
   "id": "sithri-of-uzziel",
   "name": "Sithri",
+  "tipnr": "H5644",
   "sex": "male",
   "generation": 27,
   "father": "uzziel",
@@ -3045,6 +3320,7 @@
  {
   "id": "ram",
   "name": "Ram",
+  "tipnr": "H7410G",
   "sex": "male",
   "generation": 27,
   "father": "hezron",
@@ -3058,6 +3334,7 @@
  {
   "id": "nemuel-of-eliab",
   "name": "Nemuel",
+  "tipnr": "H5241G",
   "sex": "male",
   "generation": 27,
   "father": "eliab",
@@ -3069,6 +3346,7 @@
  {
   "id": "dathan-of-eliab",
   "name": "Dathan",
+  "tipnr": "H1885",
   "sex": "male",
   "generation": 27,
   "father": "eliab",
@@ -3080,6 +3358,7 @@
  {
   "id": "abiram-of-eliab",
   "name": "Abiram",
+  "tipnr": "H0048G",
   "sex": "male",
   "generation": 27,
   "father": "eliab",
@@ -3091,6 +3370,7 @@
  {
   "id": "gilead",
   "name": "Gilead",
+  "tipnr": "H1568H",
   "sex": "male",
   "generation": 27,
   "father": "makir",
@@ -3101,6 +3381,7 @@
  {
   "id": "eran-of-shuthelah",
   "name": "Eran",
+  "tipnr": "H6197",
   "sex": "male",
   "generation": 27,
   "father": "shuthelah",
@@ -3111,6 +3392,7 @@
  {
   "id": "nadab-of-aaron",
   "name": "Nadab",
+  "tipnr": "H5070G",
   "sex": "male",
   "generation": 28,
   "father": "aaron",
@@ -3123,6 +3405,7 @@
  {
   "id": "abihu-of-aaron",
   "name": "Abihu",
+  "tipnr": "H0030",
   "sex": "male",
   "generation": 28,
   "father": "aaron",
@@ -3135,6 +3418,7 @@
  {
   "id": "eleazar",
   "name": "Eleazar",
+  "tipnr": "H0499G",
   "sex": "male",
   "generation": 28,
   "father": "aaron",
@@ -3148,6 +3432,7 @@
  {
   "id": "ithamar-of-aaron",
   "name": "Ithamar",
+  "tipnr": "H0385",
   "sex": "male",
   "generation": 28,
   "father": "aaron",
@@ -3169,6 +3454,7 @@
  {
   "id": "gershom-of-moses",
   "name": "Gershom",
+  "tipnr": "H1647G",
   "sex": "male",
   "generation": 28,
   "father": "moses",
@@ -3181,6 +3467,7 @@
  {
   "id": "eliezer-of-moses",
   "name": "Eliezer",
+  "tipnr": "H0461H",
   "sex": "male",
   "generation": 28,
   "father": "moses",
@@ -3193,6 +3480,7 @@
  {
   "id": "assir-of-korah",
   "name": "Assir",
+  "tipnr": "H0617G",
   "sex": "male",
   "generation": 28,
   "father": "korah",
@@ -3203,6 +3491,7 @@
  {
   "id": "elkanah-of-korah",
   "name": "Elkanah",
+  "tipnr": "H0511G",
   "sex": "male",
   "generation": 28,
   "father": "korah",
@@ -3213,6 +3502,7 @@
  {
   "id": "abiasaph-of-korah",
   "name": "Abiasaph",
+  "tipnr": "H0043",
   "sex": "male",
   "generation": 28,
   "father": "korah",
@@ -3223,6 +3513,7 @@
  {
   "id": "iezer-of-gilead",
   "name": "Iezer",
+  "tipnr": "H0044I",
   "sex": "male",
   "generation": 28,
   "father": "gilead",
@@ -3233,6 +3524,7 @@
  {
   "id": "helek-of-gilead",
   "name": "Helek",
+  "tipnr": "H2507",
   "sex": "male",
   "generation": 28,
   "father": "gilead",
@@ -3243,6 +3535,7 @@
  {
   "id": "asriel-of-gilead",
   "name": "Asriel",
+  "tipnr": "H0844G",
   "sex": "male",
   "generation": 28,
   "father": "gilead",
@@ -3253,6 +3546,7 @@
  {
   "id": "shechem-of-gilead",
   "name": "Shechem",
+  "tipnr": "H7928G",
   "sex": "male",
   "generation": 28,
   "father": "gilead",
@@ -3263,6 +3557,7 @@
  {
   "id": "shemida-of-gilead",
   "name": "Shemida",
+  "tipnr": "H8061",
   "sex": "male",
   "generation": 28,
   "father": "gilead",
@@ -3273,6 +3568,7 @@
  {
   "id": "hepher",
   "name": "Hepher",
+  "tipnr": "H2660A",
   "sex": "male",
   "generation": 28,
   "father": "gilead",
@@ -3284,6 +3580,7 @@
  {
   "id": "phinehas-of-eleazar",
   "name": "Phinehas",
+  "tipnr": "H6372G",
   "sex": "male",
   "generation": 29,
   "father": "eleazar",
@@ -3296,6 +3593,7 @@
  {
   "id": "zelophehad",
   "name": "Zelophehad",
+  "tipnr": "H6765",
   "sex": "male",
   "generation": 29,
   "father": "hepher",
@@ -3307,6 +3605,7 @@
  {
   "id": "salmon",
   "name": "Salmon",
+  "tipnr": "H8007G",
   "sex": "male",
   "generation": 30,
   "father": "nahshon-of-amminadab",
@@ -3319,6 +3618,7 @@
  {
   "id": "mahlah-of-zelophehad",
   "name": "Mahlah",
+  "tipnr": "H4244G",
   "sex": "female",
   "generation": 30,
   "father": "zelophehad",
@@ -3330,6 +3630,7 @@
  {
   "id": "noah-of-zelophehad",
   "name": "Noah",
+  "tipnr": "H5270",
   "sex": "female",
   "generation": 30,
   "father": "zelophehad",
@@ -3341,6 +3642,7 @@
  {
   "id": "hoglah-of-zelophehad",
   "name": "Hoglah",
+  "tipnr": "H2295",
   "sex": "female",
   "generation": 30,
   "father": "zelophehad",
@@ -3352,6 +3654,7 @@
  {
   "id": "milcah-of-zelophehad",
   "name": "Milcah",
+  "tipnr": "H4435H",
   "sex": "female",
   "generation": 30,
   "father": "zelophehad",
@@ -3363,6 +3666,7 @@
  {
   "id": "tirzah-of-zelophehad",
   "name": "Tirzah",
+  "tipnr": "H8656G",
   "sex": "female",
   "generation": 30,
   "father": "zelophehad",
@@ -3374,6 +3678,7 @@
  {
   "id": "boaz",
   "name": "Boaz",
+  "tipnr": "H1162G",
   "sex": "male",
   "generation": 31,
   "father": "salmon",
@@ -3389,6 +3694,7 @@
  {
   "id": "obed",
   "name": "Obed",
+  "tipnr": "H5744G",
   "sex": "male",
   "generation": 32,
   "father": "boaz",
@@ -3403,6 +3709,7 @@
  {
   "id": "jesse",
   "name": "Jesse",
+  "tipnr": "H3448",
   "sex": "male",
   "generation": 33,
   "father": "obed",
@@ -3416,6 +3723,7 @@
  {
   "id": "david",
   "name": "David",
+  "tipnr": "H1732",
   "sex": "male",
   "generation": 34,
   "father": "jesse",
@@ -3431,6 +3739,7 @@
  {
   "id": "nathan",
   "name": "Nathan",
+  "tipnr": "H5416G",
   "sex": "male",
   "generation": 35,
   "father": "david",
@@ -3442,6 +3751,7 @@
  {
   "id": "mattatha",
   "name": "Mattatha",
+  "tipnr": "G3160",
   "sex": "male",
   "generation": 36,
   "father": "nathan",
@@ -3452,6 +3762,7 @@
  {
   "id": "menan",
   "name": "Menna",
+  "tipnr": "G3104",
   "sex": "male",
   "generation": 37,
   "father": "mattatha",
@@ -3462,6 +3773,7 @@
  {
   "id": "melea",
   "name": "Melea",
+  "tipnr": "G3190",
   "sex": "male",
   "generation": 38,
   "father": "menan",
@@ -3472,6 +3784,7 @@
  {
   "id": "eliakim",
   "name": "Eliakim",
+  "tipnr": "G1662H",
   "sex": "male",
   "generation": 39,
   "father": "melea",
@@ -3482,6 +3795,7 @@
  {
   "id": "jonan",
   "name": "Jonam",
+  "tipnr": "G2494",
   "sex": "male",
   "generation": 40,
   "father": "eliakim",
@@ -3492,6 +3806,7 @@
  {
   "id": "joseph-of-jonan",
   "name": "Joseph",
+  "tipnr": "G2501L",
   "sex": "male",
   "generation": 41,
   "father": "jonan",
@@ -3502,6 +3817,7 @@
  {
   "id": "juda",
   "name": "Judah",
+  "tipnr": "G2455J",
   "sex": "male",
   "generation": 42,
   "father": "joseph-of-jonan",
@@ -3512,6 +3828,7 @@
  {
   "id": "simeon-of-juda",
   "name": "Simeon",
+  "tipnr": "G4826H",
   "sex": "male",
   "generation": 43,
   "father": "juda",
@@ -3522,6 +3839,7 @@
  {
   "id": "levi-of-simeon",
   "name": "Levi",
+  "tipnr": "G3017H",
   "sex": "male",
   "generation": 44,
   "father": "simeon-of-juda",
@@ -3532,6 +3850,7 @@
  {
   "id": "matthat-of-levi",
   "name": "Matthat",
+  "tipnr": "G3158H",
   "sex": "male",
   "generation": 45,
   "father": "levi-of-simeon",
@@ -3542,6 +3861,7 @@
  {
   "id": "jorim",
   "name": "Jorim",
+  "tipnr": "G2497",
   "sex": "male",
   "generation": 46,
   "father": "matthat-of-levi",
@@ -3552,6 +3872,7 @@
  {
   "id": "eliezer",
   "name": "Eliezer",
+  "tipnr": "G1663",
   "sex": "male",
   "generation": 47,
   "father": "jorim",
@@ -3562,6 +3883,7 @@
  {
   "id": "jose",
   "name": "Joshua",
+  "tipnr": "G2424K",
   "sex": "male",
   "generation": 48,
   "father": "eliezer",
@@ -3572,6 +3894,7 @@
  {
   "id": "er",
   "name": "Er",
+  "tipnr": "G2262",
   "sex": "male",
   "generation": 49,
   "father": "jose",
@@ -3582,6 +3905,7 @@
  {
   "id": "elmodam",
   "name": "Elmadam",
+  "tipnr": "G1678",
   "sex": "male",
   "generation": 50,
   "father": "er",
@@ -3592,6 +3916,7 @@
  {
   "id": "cosam",
   "name": "Cosam",
+  "tipnr": "G2973",
   "sex": "male",
   "generation": 51,
   "father": "elmodam",
@@ -3602,6 +3927,7 @@
  {
   "id": "addi",
   "name": "Addi",
+  "tipnr": "G0078",
   "sex": "male",
   "generation": 52,
   "father": "cosam",
@@ -3612,6 +3938,7 @@
  {
   "id": "melchi",
   "name": "Melchi",
+  "tipnr": "G3197H",
   "sex": "male",
   "generation": 53,
   "father": "addi",
@@ -3622,6 +3949,7 @@
  {
   "id": "neri",
   "name": "Neri",
+  "tipnr": "G3518",
   "sex": "male",
   "generation": 54,
   "father": "melchi",
@@ -3632,6 +3960,7 @@
  {
   "id": "salathiel",
   "name": "Shealtiel",
+  "tipnr": "H7597A",
   "sex": "male",
   "generation": 55,
   "father": "neri",
@@ -3651,6 +3980,7 @@
  {
   "id": "zorobabel",
   "name": "Zerubbabel",
+  "tipnr": "H2216",
   "sex": "male",
   "generation": 56,
   "father": "salathiel",
@@ -3665,6 +3995,7 @@
  {
   "id": "rhesa",
   "name": "Rhesa",
+  "tipnr": "G4488",
   "sex": "male",
   "generation": 57,
   "father": "zorobabel",
@@ -3675,6 +4006,7 @@
  {
   "id": "joanna",
   "name": "Joanan",
+  "tipnr": "G2490",
   "sex": "male",
   "generation": 58,
   "father": "rhesa",
@@ -3685,6 +4017,7 @@
  {
   "id": "juda-of-joanna",
   "name": "Joda",
+  "tipnr": "G6043",
   "sex": "male",
   "generation": 59,
   "father": "joanna",
@@ -3695,6 +4028,7 @@
  {
   "id": "joseph-of-juda",
   "name": "Josech",
+  "tipnr": "G6044",
   "sex": "male",
   "generation": 60,
   "father": "juda-of-joanna",
@@ -3705,6 +4039,7 @@
  {
   "id": "semei",
   "name": "Semein",
+  "tipnr": "G4584",
   "sex": "male",
   "generation": 61,
   "father": "joseph-of-juda",
@@ -3715,6 +4050,7 @@
  {
   "id": "mattathias",
   "name": "Mattathias",
+  "tipnr": "G3161H",
   "sex": "male",
   "generation": 62,
   "father": "semei",
@@ -3725,6 +4061,7 @@
  {
   "id": "maath",
   "name": "Maath",
+  "tipnr": "G3092",
   "sex": "male",
   "generation": 63,
   "father": "mattathias",
@@ -3735,6 +4072,7 @@
  {
   "id": "nagge",
   "name": "Naggai",
+  "tipnr": "G3477",
   "sex": "male",
   "generation": 64,
   "father": "maath",
@@ -3745,6 +4083,7 @@
  {
   "id": "elsi",
   "name": "Esli",
+  "tipnr": "G2069",
   "sex": "male",
   "generation": 65,
   "father": "nagge",
@@ -3755,6 +4094,7 @@
  {
   "id": "naum",
   "name": "Nahum",
+  "tipnr": "G3486",
   "sex": "male",
   "generation": 66,
   "father": "elsi",
@@ -3765,6 +4105,7 @@
  {
   "id": "amos",
   "name": "Amos",
+  "tipnr": "G0301G",
   "sex": "male",
   "generation": 67,
   "father": "naum",
@@ -3775,6 +4116,7 @@
  {
   "id": "mattathias-of-amos",
   "name": "Mattathias",
+  "tipnr": "G3161G",
   "sex": "male",
   "generation": 68,
   "father": "amos",
@@ -3785,6 +4127,7 @@
  {
   "id": "joseph-of-mattathias",
   "name": "Joseph",
+  "tipnr": "G2501J",
   "sex": "male",
   "generation": 69,
   "father": "mattathias-of-amos",
@@ -3795,6 +4138,7 @@
  {
   "id": "janna",
   "name": "Jannai",
+  "tipnr": "G2388",
   "sex": "male",
   "generation": 70,
   "father": "joseph-of-mattathias",
@@ -3805,6 +4149,7 @@
  {
   "id": "melchi-of-janna",
   "name": "Melchi",
+  "tipnr": "G3197G",
   "sex": "male",
   "generation": 71,
   "father": "janna",
@@ -3815,6 +4160,7 @@
  {
   "id": "levi-of-melchi",
   "name": "Levi",
+  "tipnr": "G3017G",
   "sex": "male",
   "generation": 72,
   "father": "melchi-of-janna",
@@ -3825,6 +4171,7 @@
  {
   "id": "matthat",
   "name": "Matthat",
+  "tipnr": "G3158G",
   "sex": "male",
   "generation": 73,
   "father": "levi-of-melchi",
@@ -3835,6 +4182,7 @@
  {
   "id": "heli",
   "name": "Heli",
+  "tipnr": "G2242G",
   "sex": "male",
   "generation": 74,
   "father": "matthat",
@@ -3846,6 +4194,7 @@
  {
   "id": "mary",
   "name": "Mary",
+  "tipnr": "G3137G",
   "sex": "female",
   "generation": 75,
   "spouses": [
@@ -3862,6 +4211,7 @@
  {
   "id": "jesus",
   "name": "Jesus",
+  "tipnr": "G2424G",
   "sex": "male",
   "generation": 76,
   "mother": "mary",
@@ -3879,6 +4229,7 @@
  {
   "id": "rahab",
   "name": "Rahab",
+  "tipnr": "H7343",
   "sex": "female",
   "generation": 0,
   "refs": [
@@ -3892,6 +4243,7 @@
  {
   "id": "ruth",
   "name": "Ruth",
+  "tipnr": "H7327",
   "sex": "female",
   "generation": 0,
   "refs": [
@@ -3903,6 +4255,7 @@
  {
   "id": "bathsheba",
   "name": "Bathsheba (Uriah’s wife)",
+  "tipnr": "H1339",
   "sex": "female",
   "generation": 0,
   "refs": [
@@ -3915,6 +4268,7 @@
  {
   "id": "solomon",
   "name": "Solomon",
+  "tipnr": "H8010",
   "sex": "male",
   "generation": 35,
   "father": "david",
@@ -3929,6 +4283,7 @@
  {
   "id": "rehoboam",
   "name": "Rehoboam",
+  "tipnr": "H7346",
   "sex": "male",
   "generation": 36,
   "father": "solomon",
@@ -3941,6 +4296,7 @@
  {
   "id": "abijah",
   "name": "Abijah (Abijam)",
+  "tipnr": "H0029I",
   "sex": "male",
   "generation": 37,
   "father": "rehoboam",
@@ -3954,6 +4310,7 @@
  {
   "id": "asa",
   "name": "Asa",
+  "tipnr": "H0609G",
   "sex": "male",
   "generation": 38,
   "father": "abijah",
@@ -3965,6 +4322,7 @@
  {
   "id": "jehoshaphat",
   "name": "Jehoshaphat",
+  "tipnr": "H3092I",
   "sex": "male",
   "generation": 39,
   "father": "asa",
@@ -3977,6 +4335,7 @@
  {
   "id": "joram",
   "name": "Joram (Jehoram)",
+  "tipnr": "H3088G",
   "sex": "male",
   "generation": 40,
   "father": "jehoshaphat",
@@ -3989,6 +4348,7 @@
  {
   "id": "uzziah",
   "name": "Uzziah (Azariah)",
+  "tipnr": "H5818G",
   "sex": "male",
   "generation": 41,
   "father": "joram",
@@ -4002,6 +4362,7 @@
  {
   "id": "jotham",
   "name": "Jotham",
+  "tipnr": "H3147H",
   "sex": "male",
   "generation": 42,
   "father": "uzziah",
@@ -4014,6 +4375,7 @@
  {
   "id": "ahaz",
   "name": "Ahaz",
+  "tipnr": "H0271G",
   "sex": "male",
   "generation": 43,
   "father": "jotham",
@@ -4027,6 +4389,7 @@
  {
   "id": "hezekiah",
   "name": "Hezekiah",
+  "tipnr": "H2396G",
   "sex": "male",
   "generation": 44,
   "father": "ahaz",
@@ -4039,6 +4402,7 @@
  {
   "id": "manasseh-king",
   "name": "Manasseh",
+  "tipnr": "H4519H",
   "sex": "male",
   "generation": 45,
   "father": "hezekiah",
@@ -4051,6 +4415,7 @@
  {
   "id": "amon",
   "name": "Amon",
+  "tipnr": "H0526H",
   "sex": "male",
   "generation": 46,
   "father": "manasseh-king",
@@ -4062,6 +4427,7 @@
  {
   "id": "josiah",
   "name": "Josiah",
+  "tipnr": "H2977G",
   "sex": "male",
   "generation": 47,
   "father": "amon",
@@ -4074,6 +4440,7 @@
  {
   "id": "jeconiah",
   "name": "Jeconiah (Jehoiachin)",
+  "tipnr": "H3078",
   "sex": "male",
   "generation": 48,
   "father": "josiah",
@@ -4088,6 +4455,7 @@
  {
   "id": "abiud",
   "name": "Abiud",
+  "tipnr": "G0010",
   "sex": "male",
   "generation": 57,
   "father": "zorobabel",
@@ -4098,6 +4466,7 @@
  {
   "id": "eliakim-of-abiud",
   "name": "Eliakim",
+  "tipnr": "G1662G",
   "sex": "male",
   "generation": 58,
   "father": "abiud",
@@ -4108,6 +4477,7 @@
  {
   "id": "azor",
   "name": "Azor",
+  "tipnr": "G0107",
   "sex": "male",
   "generation": 59,
   "father": "eliakim-of-abiud",
@@ -4118,6 +4488,7 @@
  {
   "id": "zadok-of-azor",
   "name": "Zadok",
+  "tipnr": "G4524",
   "sex": "male",
   "generation": 60,
   "father": "azor",
@@ -4128,6 +4499,7 @@
  {
   "id": "achim",
   "name": "Achim",
+  "tipnr": "G0885",
   "sex": "male",
   "generation": 61,
   "father": "zadok-of-azor",
@@ -4138,6 +4510,7 @@
  {
   "id": "eliud",
   "name": "Eliud",
+  "tipnr": "G1664",
   "sex": "male",
   "generation": 62,
   "father": "achim",
@@ -4148,6 +4521,7 @@
  {
   "id": "eleazar-of-eliud",
   "name": "Eleazar",
+  "tipnr": "G1648",
   "sex": "male",
   "generation": 63,
   "father": "eliud",
@@ -4158,6 +4532,7 @@
  {
   "id": "matthan",
   "name": "Matthan",
+  "tipnr": "G3157",
   "sex": "male",
   "generation": 64,
   "father": "eleazar-of-eliud",
@@ -4168,6 +4543,7 @@
  {
   "id": "jacob-of-matthan",
   "name": "Jacob",
+  "tipnr": "G2384G",
   "sex": "male",
   "generation": 65,
   "father": "matthan",
@@ -4178,6 +4554,7 @@
  {
   "id": "joseph-of-jacob",
   "name": "Joseph (husband of Mary)",
+  "tipnr": "G2501G",
   "sex": "male",
   "generation": 66,
   "father": "jacob-of-matthan",

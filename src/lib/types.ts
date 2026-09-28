@@ -22,7 +22,12 @@ export interface BibleBook { id: string; name: string; chapters: Verse[][]; intr
  * the gloss's place among the word's renderings (`StrongsEntry.r`; -1 where the BSB gives it no English of its own),
  * 1 on a noun or adjective the BSB renders here in a way it rarely does elsewhere].
  */
-export type InterlinearWord = [string, string, string, string, string, string, number, string, number?, 1?];
+/**
+ * [original, transliteration, morphology code, morphology long, Strong's, gloss, original-order index, punctuation,
+ * rendering's index among the word's renderings, 1 on a rare rendering (0 when only a person follows),
+ * the id of the person a name names (TIPNR's Strong's number for them)].
+ */
+export type InterlinearWord = [string, string, string, string, string, string, number, string, number?, (0 | 1)?, string?];
 export interface InterlinearVerse { v: number; w: InterlinearWord[]; h?: string; f?: string[] }
 
 export interface StrongsEntry {
@@ -103,7 +108,10 @@ export interface Insight {
 }
 
 export interface Person {
-  id: string; name: string; sex?: 'male' | 'female'; father?: string; mother?: string; spouses?: string[];
+  id: string; name: string;
+  /** Their id in the generated people data (TIPNR's Strong's number for them), for the few the text leaves unnamed none. */
+  tipnr?: string;
+  sex?: 'male' | 'female'; father?: string; mother?: string; spouses?: string[];
   /** Where two passages give different parents (e.g. Matthew 1 vs Luke 3), the other one goes here and is drawn dashed. */
   altParents?: { id: string; note: string }[];
   generation: number;
@@ -116,27 +124,36 @@ export interface Person {
   refs: Ref[]; notes?: string; sources?: Source[];
 }
 
-/** One of a named person's kin, as the generated people data gives them: an id to open and a name to show. */
-export interface Kin { id: string; name: string }
 /**
- * Someone the Bible names, from Theographic Bible Metadata (public/data/people/): the verses naming them, their
- * kin, and their Easton's Bible Dictionary entry, whose verse links are written `[[Judg.4.6|Judg. 4:6]]`.
- * `title` tells namesakes apart by their kin ("son of Jesse").
+ * One of a named person's kin, as TIPNR gives them: an id to open (none for someone the text leaves unnamed,
+ * "wife of Heli") and a name to show. `ref` is where the text ties the two (the same verse, or verses at most two
+ * apart, naming both with a word of kinship; for a sibling, the verse naming this person with the parent they
+ * share); without one the link is TIPNR's reading. `uncertain` is TIPNR's own "(?)": its reading of a passage
+ * that could be read another way.
+ */
+export interface Kin { id?: string; name: string; ref?: Ref; uncertain?: true }
+/**
+ * Someone the Bible names, from STEPBible's TIPNR (public/data/people/): their id is TIPNR's Strong's number for
+ * them ("H0175", Aaron), with the verses naming them, their kin, and their Easton's Bible Dictionary entry (from
+ * Theographic), whose verse links are written `[[Judg.4.6|Judg. 4:6]]`. `title` tells namesakes apart by kin the
+ * text ties to them ("son of Jesse").
  */
 export interface BiblePerson {
   id: string; name: string; title?: string; sex: 'male' | 'female'; also?: string[];
   father?: Kin[]; mother?: Kin[]; spouses?: Kin[]; children?: Kin[]; siblings?: Kin[];
   refs: Ref[]; easton?: string[];
 }
-/** Who each verse of a book names ("ch.v" → ids), and each one's [name, title, 'm' | 'f']. */
-export interface PeopleInBook { verses: Record<string, string[]>; people: Record<string, [string, string, 'm' | 'f']> }
+/** A parent or spouse for the family tree: [id, name, 1 when the text ties them (Kin's `ref`), else 0]. */
+export type Tie = [string, string, 0 | 1];
+/** Who each verse of a book names ("ch.v" → ids), and each one's [name, title, 'm' | 'f', parents, spouses]. */
+export interface PeopleInBook { verses: Record<string, string[]>; people: Record<string, [string, string, 'm' | 'f', Tie[]?, Tie[]?]> }
 /** A moment in a curated profile: a verse and what happens there, in our words. */
 export interface ProfileMoment { ref: Ref; text: string }
 /** What a later tradition, a find or a reading adds to the text, with its own confidence and sources. */
 export interface ProfileNote { text: string; confidence: Confidence; traditions?: string[]; sources: Source[] }
 /**
- * A hand-written profile of someone the Bible names (content/profiles.json). `people` are the ids of the
- * generated person it covers, the first the main one (Theographic sometimes lists one person twice);
+ * A hand-written profile of someone the Bible names (content/profiles/<id>.json). `people` are the TIPNR ids of
+ * the generated people it covers, the first the main one (more than one for a group, such as Job's three friends);
  * `genealogy` is their id in people.json when the family tree has them. The body keeps to what the text
  * says; `later` holds what tradition, archaeology or scholarship adds, each with its own badge. `when`
  * is always ≈ and `whenBasis` says what it rests on. A picture, where a fitting one exists, is a depiction, credited in `media`.
@@ -148,7 +165,7 @@ export interface Profile {
   when?: string; whenBasis?: string;
   summary: string; body: string[]; moments: ProfileMoment[]; later?: ProfileNote[];
   confidence: Confidence; traditions?: string[]; sources: Source[]; media?: Media[];
-  /** Set when Theographic ties this person to the wrong Easton's entry (Lot to the lots that were cast): what the entry is about instead. */
+  /** Set when the Easton's entry matched to this person is the wrong one (Lot to the lots that were cast): what the entry is about instead. */
   eastonWrong?: string;
 }
 export interface Prophecy { id: string; title: string; given: Ref; fulfilled: Ref[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }

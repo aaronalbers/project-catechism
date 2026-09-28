@@ -10,6 +10,8 @@ import { formatYear } from '@/lib/format';
 import { namedFor, namedInChapter, usePeopleInBook, type Named } from '@/lib/people';
 import { cardId } from '@/lib/catalog';
 import { Profile } from './Profile';
+import { curatedFor, familyTree } from '@/lib/tree';
+import { PeopleSources } from './PeopleSources';
 
 /** People named in this chapter plus their close kin, so the graph has context without becoming the whole Bible. */
 function neighbourhood(seed: Person[], depth = 2): Person[] {
@@ -110,22 +112,27 @@ export function PeoplePanel() {
     if (prof) setState({ person: prof.people[0], feature: null });
   }, [feature]);
 
+  // The curated tree and, around it, everyone else the chapter names with the parents and spouses TIPNR gives them.
+  const tree = useMemo(() => familyTree(graphPeople, byBook, loc.chapter), [graphPeople, byBook, loc.chapter]);
+
   // Build the tree only when its node set changes; verse-to-verse updates restyle and pan it below.
   useEffect(() => {
     if (!el.current) return;
-    const ids = new Set(graphPeople.map((p) => p.id));
     const css = getComputedStyle(document.documentElement);
-    const nodes = new DataSet<Node>(graphPeople.map((p) => ({
-      id: p.id, label: p.name, level: p.generation,
-      color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: css.getPropertyValue('--border') },
+    const nodes = new DataSet<Node>(tree.nodes.map((n) => ({
+      id: n.id, label: n.name, level: n.level,
+      color: { background: n.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: css.getPropertyValue('--border') },
       borderWidth: 1, font: { color: css.getPropertyValue('--accent-ink'), size: 13 }, shape: 'box', margin: { top: 6, right: 8, bottom: 6, left: 8 },
     })));
-    const edges = new DataSet<Edge>(graphPeople.flatMap((p) => [
-      ...[p.father, p.mother].filter((x): x is string => !!x && ids.has(x)).map((par) => ({ id: `${par}-${p.id}`, from: par, to: p.id, arrows: 'to', color: { color: css.getPropertyValue('--muted'), opacity: 0.6 } })),
-      // Alternate parentage (the two NT genealogies disagree) is drawn dashed with its citation on hover.
-      ...(p.altParents ?? []).filter((a) => ids.has(a.id)).map((a) => ({ id: `alt-${a.id}-${p.id}`, from: a.id, to: p.id, arrows: 'to', dashes: true, title: `Alternate: ${a.note}`, color: { color: css.getPropertyValue('--estimate'), opacity: 0.9 } })),
-      ...(p.spouses ?? []).filter((s) => ids.has(s) && s > p.id).map((s) => ({ id: `sp-${p.id}-${s}`, from: p.id, to: s, dashes: [2, 4], color: { color: css.getPropertyValue('--border'), opacity: 0.9 } })),
-    ]));
+    const muted = css.getPropertyValue('--muted'), estimate = css.getPropertyValue('--estimate'), border = css.getPropertyValue('--border');
+    const edges = new DataSet<Edge>(tree.edges.map((e) => ({
+      id: `${e.kind}-${e.from}-${e.to}`, from: e.from, to: e.to, title: e.note,
+      ...(e.kind === 'spouse' ? { dashes: [2, 4], color: { color: border, opacity: 0.9 } }
+        // Alternate parentage (the two NT genealogies disagree), TIPNR's links no verse makes, and TIPNR reading a
+        // parent otherwise are drawn dashed, with what they rest on on hover.
+        : e.kind === 'parent' ? { arrows: 'to', color: { color: muted, opacity: 0.6 } }
+        : { arrows: 'to', dashes: e.kind === 'reading' ? [4, 4] : true, color: { color: estimate, opacity: e.kind === 'reading' ? 0.6 : 0.9 } }),
+    })));
     net.current?.destroy();
     net.current = new Network(el.current, { nodes, edges }, {
       layout: { hierarchical: { direction: 'UD', sortMethod: 'directed', levelSeparation: 70, nodeSpacing: 110 } },
@@ -134,26 +141,33 @@ export function PeoplePanel() {
     });
     nodeSet.current = nodes;
     fresh.current = true;
-    net.current.on('click', (params: { nodes: string[] }) => { const id = params.nodes[0]; pick.current(id ? PEOPLE_BY_ID.get(id) ?? null : null); });
+    const byId = new Map(tree.nodes.map((n) => [n.id, n]));
+    net.current.on('click', (params: { nodes: string[] }) => {
+      const n = params.nodes[0] ? byId.get(params.nodes[0]) : undefined;
+      if (n && !n.person) openPerson(n.id); else pick.current(n?.person ?? null);
+    });
     return () => { net.current?.destroy(); net.current = null; nodeSet.current = null; };
     // Rebuilt on leaving a profile too, which unmounts the graph's container.
-  }, [graphPeople, person]);
+  }, [tree, person]);
 
   // Highlight the verse's people and glide the viewport to them. Colour/border updates don't trigger a relayout in vis-network.
   useEffect(() => {
     const n = net.current, nodes = nodeSet.current;
     if (!n || !nodes) return;
     const css = getComputedStyle(document.documentElement);
-    const hereIds = new Set(here.map((p) => p.id));
-    nodes.update(graphPeople.map((p) => ({
+    const ids = new Set(tree.nodes.map((x) => x.id));
+    const hereIds = new Set([...here.map((p) => p.id), ...named.filter((x) => x.verses.includes(loc.verse)).map((x) => ids.has(x.id) ? x.id : curatedFor(x.id))].filter((x): x is string => !!x));
+    nodes.update(tree.nodes.map((p) => ({
       id: p.id, borderWidth: hereIds.has(p.id) ? 3 : 1,
       color: { background: p.sex === 'female' ? css.getPropertyValue('--interpretation') : css.getPropertyValue('--accent'), border: hereIds.has(p.id) ? css.getPropertyValue('--danger') : css.getPropertyValue('--border') },
     })));
-    // Frame the verse's people with their immediate kin; the rest of the neighbourhood is a pan away.
-    const frame = graphPeople.filter((p) => hereIds.has(p.id) || (p.father && hereIds.has(p.father)) || (p.mother && hereIds.has(p.mother)) || (p.father && here.some((h) => h.father === p.father))).map((p) => p.id);
-    n.fit({ nodes: frame, maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
+    // Frame the verse's people with their parents (children the verse names are among them already; a clan's
+    // father may have twenty others); the rest of the tree is a pan away.
+    const frame = new Set(hereIds);
+    for (const e of tree.edges) if (e.kind !== 'spouse' && hereIds.has(e.to)) frame.add(e.from);
+    n.fit({ nodes: [...frame].filter((x) => ids.has(x)), maxZoomLevel: 1.2, animation: fresh.current ? false : { duration: 450, easingFunction: 'easeInOutQuad' } });
     fresh.current = false;
-  }, [graphPeople, here, person]);
+  }, [tree, here, named, loc.verse, person]);
 
   if (person) return <Profile id={person} />;
   const list = selected ? [selected] : [];
@@ -162,12 +176,12 @@ export function PeoplePanel() {
   return (
     <div className="panel-body flush">
       {/* Distinct keys: vis-network wipes its container on destroy, which would erase React's children if the div were reused. */}
-      {graphPeople.length ? <div key="graph" className="graph" ref={el} role="img" aria-label="Family relationships" /> : null}
+      {tree.nodes.length ? <div key="graph" className="graph" ref={el} role="img" aria-label="Family relationships" /> : null}
       <Lifespans people={graphPeople} />
       <div className="people-list">
         {selected && <button className="chip link" onClick={() => setSelected(null)}>← all in this chapter</button>}
         {!selected && byBook === undefined && <div className="loading">Loading people…</div>}
-        {!selected && byBook && !named.length && <div className="empty"><p>{bookOf(loc.book)?.beyond ? `The people list comes from Theographic's data, which covers only the 66 books, so it lists no one in ${bookOf(loc.book)?.name}.` : `No one is named in ${bookOf(loc.book)?.name} ${loc.chapter}.`}</p></div>}
+        {!selected && byBook && !named.length && <div className="empty"><p>{bookOf(loc.book)?.beyond ? `The people list comes from STEPBible's names data, which covers only the 66 books, so it lists no one in ${bookOf(loc.book)?.name}.` : `No one is named in ${bookOf(loc.book)?.name} ${loc.chapter}.`}</p></div>}
         {!selected && hereNamed.length > 0 && <><div className="panel-title">In verse {loc.verse}</div>{hereNamed.map((n) => <NamedRow key={n.id} n={n} here />)}</>}
         {!selected && restNamed.length > 0 && <><div className="panel-title">{hereNamed.length ? 'Elsewhere in' : 'Named in'} {bookOf(loc.book)?.name} {loc.chapter}</div>{restNamed.map((n) => <NamedRow key={n.id} n={n} />)}</>}
         {list.map((p) => (
@@ -184,7 +198,8 @@ export function PeoplePanel() {
             {p.sources && <SourceList sources={p.sources} />}
           </div>
         ))}
-        <div className="sources"><ol><li><span className="skind">Dataset</span>Who each verse names, and each person's kin, from <a href="https://github.com/robertrouse/theographic-bible-metadata" target="_blank" rel="noreferrer">Theographic Bible Metadata</a> (Robert Rouse, CC BY-SA 4.0).</li><li><span className="skind">Scripture</span>The family tree follows the genealogies cited on each person (Genesis 5, 10–11, 25, 36, 46; Exodus 6; 1 Chronicles 1–2; Matthew 1; Luke 3). Anno Mundi years are simple sums of the ages given in Genesis 5 and 11, which assumes no generational gaps — a reading, not a measurement.</li></ol></div>
+        <PeopleSources />
+        <div className="sources"><ol><li><span className="skind">Scripture</span>The family tree follows the genealogies cited on each person (Genesis 5, 10–11, 25, 36, 46; Exodus 6; 1 Chronicles 1–2; Matthew 1; Luke 3). Anno Mundi years are simple sums of the ages given in Genesis 5 and 11, which assumes no generational gaps — a reading, not a measurement.</li></ol></div>
       </div>
     </div>
   );

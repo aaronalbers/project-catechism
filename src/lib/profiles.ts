@@ -40,12 +40,15 @@ export function usePerson(id: string): BiblePerson | null | undefined {
 }
 
 /**
- * The family-tree entry for a named person: the one a profile names, or else one of the same name whose
- * references take in a verse naming this person, so the two Enochs and the many Zechariahs stay apart.
+ * The family-tree entry for a named person: the one a profile names, the one with their TIPNR id, or else one of
+ * the same name whose references take in a verse naming this person, so the two Enochs and the many Zechariahs
+ * stay apart.
  */
 export function genealogyOf(id: string, name: string, refs: Ref[]): Person | undefined {
   const curated = PROFILE_BY_PERSON.get(id)?.genealogy;
   if (curated) return PEOPLE.find((p) => p.id === curated);
+  const same = PEOPLE.find((p) => p.tipnr === id);
+  if (same) return same;
   const verses = refs.map((r) => parseRef(r)?.start).filter((l) => !!l);
   return PEOPLE.find((p) => p.name === name && p.refs.some((r) => verses.some((l) => contains(r, l))));
 }

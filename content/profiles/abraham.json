@@ -2,7 +2,7 @@
  "id": "abraham",
  "name": "Abraham",
  "role": "Patriarch, called from Ur, father of Israel",
- "people": ["abraham_58"],
+ "people": ["H0085"],
  "genealogy": "abraham",
  "when": "≈ 2000 BC in the Bible's own reckoning",
  "whenBasis": "Genesis gives ages but no dates in any calendar we can fix. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; many historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",

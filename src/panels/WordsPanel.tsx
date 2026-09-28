@@ -138,16 +138,15 @@ export function WordsPanel() {
   // Show words in original-language order; glosses reveal the English mapping.
   const ordered = verse.w.map((w, i) => ({ w, i })).sort((a, b) => a.w[6] - b.w[6]);
   const sel = wordIndex !== null ? verse.w[wordIndex] : null;
-  // A name in the verse that is someone the verse names: offer their profile beside the word's lexicon entry.
-  const glossWords = sel ? sel[5].split(/[^\p{L}-]+/u) : [];
-  const person = named && (named.verses[`${loc.chapter}.${loc.verse}`] ?? []).find((id) => glossWords.includes(named.people[id]?.[0]));
+  // A word that names someone (word[10], from TIPNR, even where the English says "him"): offer their profile beside its lexicon entry.
+  const person = sel?.[10] && named?.people[sel[10]] ? sel[10] : undefined;
   return (
     <div className="panel-body">
       <div className="panel-title">{heb ? 'Hebrew' : 'Greek'} — tap a word</div>
       <div className={`il-grid${heb ? ' rtl' : ''}`} dir={heb ? 'rtl' : 'ltr'}>
         {ordered.map(({ w, i }) => (
           <button key={i} className={`il-word${i === wordIndex ? ' active' : ''}${w[9] ? ' rare' : ''}${narrowedWord(w, verse) ? ' narrow' : ''}`} onClick={() => setState({ wordIndex: i })} dir={heb ? 'rtl' : 'ltr'}
-            title={w[9] ? 'Rendered here in a way the BSB rarely renders it elsewhere' : narrowedWord(w, verse) ? 'The English here is narrower than this word' : undefined}>
+            title={w[9] ? 'Rendered here in a way the BSB rarely renders it elsewhere' : narrowedWord(w, verse) ? 'The English here is narrower than this word' : w[10] && named?.people[w[10]] ? `Names ${named.people[w[10]][0]}` : undefined}>
             <div className={`orig${heb ? ' heb' : ''}`}>{w[0]}</div>
             <div className="xlit">{w[1]}</div>
             <div className="gloss" dir="ltr">{w[5] || '—'}</div>

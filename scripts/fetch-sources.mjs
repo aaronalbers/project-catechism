@@ -25,8 +25,13 @@ export const SOURCES = {
   // Strong's dictionaries (Open Scriptures JSON edition) — CC-BY-SA.
   'strongs-hebrew.js': 'https://raw.githubusercontent.com/openscriptures/strongs/master/hebrew/strongs-hebrew-dictionary.js',
   'strongs-greek.js': 'https://raw.githubusercontent.com/openscriptures/strongs/master/greek/strongs-greek-dictionary.js',
+  // STEPBible TIPNR — CC BY 4.0, Tyndale House / STEPBible.org. https://github.com/STEPBible/STEPBible-Data
+  // Every named person with their own Strong's number, every verse naming them, and their kin. Pinned to a
+  // commit (in the file name too, so a new pin downloads afresh): the people's ids are TIPNR's numbers, and
+  // the profiles are keyed on them.
+  'tipnr-b99716b.txt': 'https://raw.githubusercontent.com/STEPBible/STEPBible-Data/b99716b0cddb648ddb95cc786a197180f2f97d48/Proper%20Nouns/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt',
   // Theographic Bible Metadata — CC-BY-SA 4.0. https://github.com/robertrouse/theographic-bible-metadata
-  // Every named person, the verses naming them, their kin, and Easton's Bible Dictionary (1897, public domain).
+  // Easton's Bible Dictionary (1897, public domain), matched to TIPNR's people by the verses naming them.
   'theo-people.json': THEO + 'people.json',
   'theo-verses.json': THEO + 'verses.json',
   // Books beyond the 66. The World English Bible's deuterocanon (USFM) — public domain. https://ebible.org/find/details.php?id=engwebu

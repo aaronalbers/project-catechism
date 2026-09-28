@@ -3,23 +3,27 @@
 //                                English Bible and R. H. Charles (scripts/beyond.mjs)
 //   parallels.json               Charles's cross references from 1 Enoch to the 66, [1 Enoch ref, ref]
 //   interlinear/<Book>/<ch>.json Hebrew/Greek words with Strong's, morphology and BSB gloss
-//                                (and where each word's rendering stands among its renderings)
+//                                (and where each word's rendering stands among its renderings, and
+//                                the person a name names)
 //   strongs/H/<n>.json, G/<n>.json  Strong's dictionary in shards of 100 entries, with how the BSB renders each word
 //   xrefs/<Book>.json            cross references keyed by "ch.v"
 //   circle.json                  verse counts per chapter, plus the better-attested cross
 //                                references as running verse indices, for the Links circle
 //   places/index.json, places/by-book/<Book>.json
-//   people/by-book/<Book>.json  who each verse names ("ch.v" → ids), with each one's name, kin title and sex
-//   people/<a-z>.json            everyone named in the Bible, keyed by id, in shards by first letter
+//   people/by-book/<Book>.json  who each verse names ("ch.v" → ids), with each one's name, kin title, sex,
+//                                and parents and spouses for the family tree
+//   people/<H|G>/<n>.json        everyone named in the Bible (STEPBible's TIPNR), keyed by their Strong's
+//                                number, in shards of a hundred numbers
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
 //                                size reference drawn beside models too big for a figure
-import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { spawn, execFileSync } from 'node:child_process';
 import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { fileURLToPath } from 'node:url';
 import { CACHE, fetchAll } from './fetch-sources.mjs';
 import { RARE, core, fold, isContentWord } from './renderings.mjs';
+import { kinList, otherNames, parseTipnr, personShard, tagWords, unnamed } from './people.mjs';
 import { USFM_BOOKS, parseEnoch, parseJubilees, parseUsfm, unpackModule } from './beyond.mjs';
 
 const OUT = new URL('../public/data/', import.meta.url);
@@ -180,6 +184,7 @@ async function buildInterlinear() {
   });
   flushChapter();
   countRenderings(chapters);
+  await tagPeople(chapters);
   await Promise.all(chapters.map((c) => writeJson(`interlinear/${c.book}/${c.ch}.json`, c.verses)));
   console.log('interlin', count, 'words;', renderings.size, "Strong's numbers rendered");
 }
@@ -399,77 +404,212 @@ async function buildMap() {
   console.log('map     ', coast.length + rivers.length + lakes.length, 'lines,', cities.length, 'cities,', near.length, 'places near Jerusalem');
 }
 
-// ---------- People: Theographic's persons, with their Easton's entries ----------
-// The divine names are not people to profile; God alone is tagged in 8,500 verses.
-const NOT_PEOPLE = new Set(['god_1324', 'holy_spirit_7400']);
-/** Easton's links `[Judg. 4:6](/judg#Judg.4.6)` become `[[Judg.4.6|Judg. 4:6]]`, for the app to draw as verse links. */
-const eastonText = (t) => t.replace(/\[([^\]]+)\]\(\/?[a-z0-9]*\/?#([1-3]?[A-Za-z]+\.\d+(?:\.\d+)?)\)/g, '[[$2|$1]]').replace(/\s+/g, ' ').trim();
+// ---------- People: TIPNR's persons, with their Easton's entries from Theographic ----------
+const TIPNR = 'tipnr-b99716b.txt';
 /**
- * Theographic tags a tribe or nation to the ancestor it is named for: Judah in all of Kings, Moab in Jeremiah,
- * Israel in every book. These ancestors keep only the verses about the man himself: his own story in Genesis
- * (Exodus 1 and 6 list the sons who went down to Egypt), the genealogies of 1 Chronicles 1–9, Matthew 1 and
- * Luke 3, and, where a later verse uses his personal name for him (Jacob, Esau), that verse.
+ * Forms TIPNR files under someone the text does not say they are, kept apart as people of their own (the form's
+ * number becomes their id). Each is a change to TIPNR's data, and the People tab says so where it credits TIPNR.
+ */
+const SEPARATE = {
+  // Luke names one of the two on the road to Emmaus Cleopas; TIPNR takes him for Alphaeus and for Clopas, as a tradition does.
+  G2810: 'Cleopas',
+};
+let tipnr;
+async function loadTipnr() {
+  if (tipnr) return tipnr;
+  tipnr = parseTipnr(await readFile(new URL(TIPNR, CACHE), 'utf8'), books.filter((b) => !b.beyond).map((b) => b.id));
+  for (const [dStrong, name] of Object.entries(SEPARATE)) {
+    const from = tipnr.people.find((r) => r.forms.some((f) => f.dStrong === dStrong));
+    if (!from) throw new Error(`SEPARATE: no form ${dStrong} in TIPNR`);
+    const forms = from.forms.filter((f) => f.dStrong === dStrong).map((f) => ({ ...f, sig: 'Named', names: [name] }));
+    from.forms = from.forms.filter((f) => f.dStrong !== dStrong);
+    const rec = { ...from, id: dStrong, unique: `${name}@${dStrong}`, parents: '', siblings: '', partners: '', offspring: '', tribe: '', forms };
+    tipnr.records.push(rec);
+    tipnr.people.push(rec);
+  }
+  return tipnr;
+}
+/**
+ * TIPNR files a tribe or nation under the ancestor it is named for: "the tribe of Judah", "all Israel". These
+ * ancestors keep only the words about the man himself: his own story in Genesis (Exodus 1 and 6 list the sons who
+ * went down to Egypt), the genealogies of 1 Chronicles 1–9, Matthew 1 and Luke 3, and, where a later word is his
+ * personal name (Jacob, Esau), that word. Its gentilics ("the Levites") are separate forms and never tag him.
  */
 const EPONYMS = {
-  israel_682: 'Jacob', esau_1216: 'Esau', judah_1751: null, benjamin_463: null, ephraim_1206: null, manasseh_1928: null,
-  reuben_2429: null, simeon_2741: null, levi_1820: null, dan_973: null, naphtali_2149: null, gad_1262: null,
-  asher_337: null, issachar_645: null, zebulun_3002: null, canaan_914: null, moab_2103: null, midian_2075: null, amalek_197: null,
+  H3478: 'Jacob', H6215G: 'Esau', H3063G: null, H1144G: null, H0669G: null, H4519G: null, H7205: null, H8095G: null,
+  H3878: null, H1835H: null, H5321G: null, H1410G: null, H0836: null, H3485G: null, H2074: null, H2845: null,
 };
-function ancestorsOwn(ref, personal) {
+/** The name a person is listed under when TIPNR's commonest form is not the one a reader looks for. */
+const LISTED_AS = { H3478: 'Jacob' };
+function ancestorsOwn(ref, personal, english) {
   const [book, ch] = ref.split('.');
   if (book === 'Gen' || (book === 'Exod' && (+ch === 1 || +ch === 6)) || (book === '1Chr' && +ch <= 9)
     || (book === 'Matt' && +ch === 1) || (book === 'Luke' && +ch === 3)) return true;
   // Outside those, only the New Testament uses the personal name for the man rather than the nation ("the God of Jacob" aside).
   const nt = books.findIndex((b) => b.id === book) >= books.findIndex((b) => b.id === 'Matt');
-  return !!personal && nt && new RegExp(`\\b${personal}\\b`).test(bsbText.get(ref) ?? '');
+  return !!personal && nt && new RegExp(`\\b${personal}\\b`).test(english ?? '');
 }
-async function buildPeople() {
+/** Word tags from the interlinear build: ref → ids tagged there, and "id|ref" where a tag was refused. */
+let peopleTags;
+async function tagPeople(chapters) {
+  const { records, people } = await loadTipnr();
+  const refused = new Set();
+  const keep = (id, ref, w) => {
+    if (!(id in EPONYMS) || ancestorsOwn(ref, EPONYMS[id], w[5])) return true;
+    refused.add(`${id}|${ref}`);
+    return false;
+  };
+  const { tagged, words, ambiguous, filled } = tagWords(chapters, records, people, keep);
+  peopleTags = { tagged, refused };
+  console.log('names   ', words, 'words tagged with the person they name (', filled, 'where TIPNR leaves the verse out);', ambiguous, 'left untagged where two share a verse unsorted');
+}
+
+// The divine names are not people to profile.
+const NOT_PEOPLE = new Set(['god_1324', 'holy_spirit_7400']);
+/** Easton's links `[Judg. 4:6](/judg#Judg.4.6)` become `[[Judg.4.6|Judg. 4:6]]`, for the app to draw as verse links. */
+const eastonText = (t) => t.replace(/\[([^\]]+)\]\(\/?[a-z0-9]*\/?#([1-3]?[A-Za-z]+\.\d+(?:\.\d+)?)\)/g, '[[$2|$1]]').replace(/\s+/g, ' ').trim();
+/**
+ * Easton's entries, from Theographic, for TIPNR's people. A Theographic person and a TIPNR person are paired when
+ * each shares more verses with the other than with anyone else, and either their names agree or they share three
+ * verses; Theographic merges some namesakes, so a looser match would hand one man's entry to another.
+ */
+async function eastonFor(people) {
   const raw = JSON.parse(await readFile(new URL('theo-people.json', CACHE), 'utf8'));
   const verses = JSON.parse(await readFile(new URL('theo-verses.json', CACHE), 'utf8'));
   const osisOf = new Map(verses.map((v) => [v.id, v.fields.osisRef]));
-  const rec = new Map(raw.map((r) => [r.id, r.fields]));
-  const slug = new Map(raw.map((r) => [r.id, r.fields.slug]));
-  const kin = (ids) => (ids ?? []).filter((id) => rec.has(id) && !NOT_PEOPLE.has(slug.get(id))).map((id) => ({ id: slug.get(id), name: rec.get(id).name }));
+  const theo = raw.map((r) => r.fields).filter((f) => !NOT_PEOPLE.has(f.slug));
+  const theoAt = new Map();
+  for (const f of theo) for (const v of f.verses ?? []) { const ref = osisOf.get(v); if (ref) (theoAt.get(ref) ?? theoAt.set(ref, []).get(ref)).push(f); }
+  const names = new Map(people.map((p) => [p.id, new Set([p.name, ...(p.also ?? [])].map((n) => n.toLowerCase()))]));
+  const shared = new Map(); // theo slug → Map(person id → verses shared)
+  for (const p of people) for (const ref of p.refs) for (const f of theoAt.get(ref) ?? []) {
+    const m = shared.get(f.slug) ?? shared.set(f.slug, new Map()).get(f.slug);
+    m.set(p.id, (m.get(p.id) ?? 0) + 1);
+  }
+  const bySlug = new Map(theo.map((f) => [f.slug, f]));
+  const score = (slug, id, n) => n + (names.get(id).has(bySlug.get(slug).name.toLowerCase()) ? 0.5 : 0);
+  const bestPerson = new Map(), bestTheo = new Map();
+  for (const [slug, m] of shared) for (const [id, n] of m) {
+    const s = score(slug, id, n);
+    if (s > (bestPerson.get(slug)?.[1] ?? 0)) bestPerson.set(slug, [id, s, n]);
+    if (s > (bestTheo.get(id)?.[1] ?? 0)) bestTheo.set(id, [slug, s, n]);
+  }
+  const out = new Map();
+  for (const [id, [slug, , n]] of bestTheo) {
+    const f = bySlug.get(slug);
+    if (bestPerson.get(slug)?.[0] !== id || !f.dictText?.length) continue;
+    if (!names.get(id).has(f.name.toLowerCase()) && n < 3) continue;
+    out.set(id, f.dictText.map(eastonText));
+  }
+  return out;
+}
+
+async function buildPeople() {
+  const { records, people } = await loadTipnr();
+  const { tagged, refused } = peopleTags;
+  const order = new Map(verseIndex.map(([b, c, v], i) => [`${b}.${c}.${v}`, i]));
+  const byUnique = new Map(records.map((r) => [r.unique, r]));
+  const isPerson = new Set(people.map((p) => p.id));
+  const listed = (r) => LISTED_AS[r.id] ?? r.unique.replace(/@.*$/, '').replace(/^.*\|/, '').replace(/_/g, ' ');
+  const taggedFor = new Map();
+  for (const [ref, ids] of tagged) for (const id of ids) (taggedFor.get(id) ?? taggedFor.set(id, new Set()).get(id)).add(ref);
+  // The verses naming each person first, so each of their kin can be checked against the text.
+  const refsOf = new Map(people.map((r) => {
+    const refs = new Set(taggedFor.get(r.id) ?? []);
+    for (const f of r.forms) if (f.naming) for (const { ref } of f.refs) {
+      if (refs.has(ref) || refused.has(`${r.id}|${ref}`) || !order.has(ref)) continue;
+      if (r.id in EPONYMS && !ancestorsOwn(ref, EPONYMS[r.id], bsbText.get(ref))) continue;
+      refs.add(ref);
+    }
+    return [r.id, [...refs].sort((a, b) => order.get(a) - order.get(b))];
+  }));
+  const byChapter = new Map([...refsOf].map(([id, refs]) => {
+    const m = new Map();
+    for (const ref of refs) { const i = ref.lastIndexOf('.'); (m.get(ref.slice(0, i)) ?? m.set(ref.slice(0, i), []).get(ref.slice(0, i))).push(+ref.slice(i + 1)); }
+    return [id, m];
+  }));
+  const kinWord = /\b(sons?|daughters?|father(ed)?|fathers|mother|wife|wives|husband|brothers?|sisters?|bore|birth|born|child(ren)?|descendants?|married|begot)\b/i;
+  /**
+   * Where the text ties two people: the same verse, or verses at most two apart, naming both and using a word of
+   * kinship (Gen 4:1–2 for Eve and Abel). TIPNR links some people no verse ties (Mary to Heli, from Luke 3:23),
+   * and those are shown as its reading.
+   */
+  const tie = (a, b) => {
+    let best;
+    const B = byChapter.get(b);
+    for (const [ch, vs] of byChapter.get(a) ?? []) for (const va of vs) for (const vb of B?.get(ch) ?? []) {
+      const d = Math.abs(va - vb);
+      if (d > 2 || (best && best.d <= d)) continue;
+      const lo = Math.min(va, vb), hi = Math.max(va, vb);
+      let text = '';
+      for (let v = lo; v <= hi; v++) text += ' ' + (bsbText.get(`${ch}.${v}`) ?? '');
+      if (kinWord.test(text)) best = { d, ref: lo === hi ? `${ch}.${lo}` : `${ch}.${lo}-${hi}` };
+    }
+    return best?.ref;
+  };
+  const kin = (self, list) => kinList(list).map(({ unique, uncertain }) => {
+    const r = byUnique.get(unique);
+    if (!r || !isPerson.has(r.id)) return { name: unnamed(unique), ...(uncertain ? { uncertain: true } : {}) };
+    const ref = tie(self, r.id);
+    return { id: r.id, name: listed(r), ...(ref ? { ref } : {}), ...(uncertain ? { uncertain: true } : {}) };
+  });
+  const out = people.map((r) => {
+    const name = listed(r);
+    const sex = r.type === 'Female' ? 'female' : 'male';
+    const [fa = '', mo = ''] = r.parents.split('+');
+    const family = { father: kin(r.id, fa), mother: kin(r.id, mo), spouses: kin(r.id, r.partners), children: kin(r.id, r.offspring), siblings: kin(r.id, r.siblings) };
+    // Namesakes are told apart by kin the text ties to them: "son of Jesse", "wife of Lapidoth". (TIPNR's tribe
+    // is often inferred through a parent the text does not name, so it is not used.)
+    const sure = (k) => k.id && k.ref && !k.uncertain;
+    const parent = family.father.find(sure) ?? family.mother.find(sure), spouse = family.spouses.find(sure);
+    const title = parent ? `${sex === 'female' ? 'daughter' : 'son'} of ${parent.name}` : spouse ? `${sex === 'female' ? 'wife' : 'husband'} of ${spouse.name}` : undefined;
+    const also = otherNames(r, name);
+    return {
+      id: r.id, name, ...(title ? { title } : {}), sex, ...(also.length ? { also } : {}),
+      ...Object.fromEntries(Object.entries(family).filter(([, v]) => v.length)),
+      refs: refsOf.get(r.id),
+    };
+  }).filter((p) => p.refs.length);
+  // Brothers and sisters listed far apart (the sons of a clan in 1 Chronicles) are tied by a parent the text ties
+  // to both; the verse given is the one naming this person with that parent.
+  const byId = new Map(out.map((p) => [p.id, p]));
+  const parentsOf = (p) => [...(p.father ?? []), ...(p.mother ?? [])].filter((k) => k.id && k.ref && !k.uncertain);
+  for (const p of out) for (const sib of p.siblings ?? []) {
+    if (sib.ref || !sib.id || !byId.has(sib.id)) continue;
+    const theirs = new Set(parentsOf(byId.get(sib.id)).map((k) => k.id));
+    const shared = parentsOf(p).find((k) => theirs.has(k.id));
+    if (shared) sib.ref = shared.ref;
+  }
+  const easton = await eastonFor(out);
+  // For the family tree: parents and spouses as [id, name, 1 when the text ties them], trailing empties dropped.
+  const treeTie = (k) => [k.id, k.name, k.ref && !k.uncertain ? 1 : 0];
+  const ties = (p) => {
+    const parents = [...(p.father ?? []), ...(p.mother ?? [])].filter((k) => k.id).map(treeTie), spouses = (p.spouses ?? []).filter((k) => k.id).map(treeTie);
+    return spouses.length ? [parents, spouses] : parents.length ? [parents] : [];
+  };
   const shards = new Map();
   const perBook = new Map();
-  for (const r of raw) {
-    const f = r.fields;
-    if (NOT_PEOPLE.has(f.slug)) continue;
-    // Theographic's own disambiguation titles are unreliable (John the Baptist's reads "son of Zebedee"),
-    // so namesakes are told apart by their kin: "son of Jesse", "wife of Lapidoth".
-    const sex = f.gender === 'Female' ? 'female' : 'male';
-    const parent = kin(f.father)[0] ?? kin(f.mother)[0], spouse = kin(f.partners)[0];
-    const title = parent ? `${sex === 'female' ? 'daughter' : 'son'} of ${parent.name}` : spouse ? `${sex === 'female' ? 'wife' : 'husband'} of ${spouse.name}` : undefined;
-    const refs = (f.verses ?? []).map((id) => osisOf.get(id)).filter(Boolean)
-      .filter((ref) => !(f.slug in EPONYMS) || ancestorsOwn(ref, EPONYMS[f.slug]));
-    const person = {
-      id: f.slug, name: f.name, ...(title ? { title } : {}), sex,
-      ...(f.alsoCalled ? { also: f.alsoCalled.split(',').map((s) => s.trim()).filter(Boolean) } : {}),
-      ...Object.fromEntries([['father', f.father], ['mother', f.mother], ['spouses', f.partners], ['children', f.children], ['siblings', f.siblings]]
-        .map(([k, ids]) => [k, kin(ids)]).filter(([, v]) => v.length)),
-      // Theographic's minYear/maxYear are only the span of the verses naming them, on an Ussher timeline, not a lifespan, so they are left out.
-      refs,
-      ...(f.dictText?.length ? { easton: f.dictText.map(eastonText) } : {}),
-    };
-    const letter = f.slug[0].toLowerCase();
-    if (!shards.has(letter)) shards.set(letter, {});
-    shards.get(letter)[f.slug] = person;
-    for (const ref of refs) {
+  for (const p of out) {
+    if (easton.has(p.id)) p.easton = easton.get(p.id);
+    const shard = personShard(p.id);
+    (shards.get(shard) ?? shards.set(shard, {}).get(shard))[p.id] = p;
+    for (const ref of p.refs) {
       const [book, ch, v] = ref.split('.');
       if (!perBook.has(book)) perBook.set(book, { verses: {}, people: {} });
       const b = perBook.get(book);
-      (b.verses[`${ch}.${v}`] ??= []).push(f.slug);
-      b.people[f.slug] ??= [f.name, title ?? '', sex === 'female' ? 'f' : 'm'];
+      (b.verses[`${ch}.${v}`] ??= []).push(p.id);
+      b.people[p.id] ??= [p.name, p.title ?? '', p.sex === 'female' ? 'f' : 'm', ...ties(p)];
     }
   }
-  for (const [letter, data] of shards) await writeJson(`people/${letter}.json`, data);
+  await rm(new URL('people/', OUT), { recursive: true, force: true });
+  for (const [shard, data] of shards) await writeJson(`people/${shard}.json`, data);
   for (const [book, data] of perBook) await writeJson(`people/by-book/${book}.json`, data);
-  console.log('people  ', [...shards.values()].reduce((n, s) => n + Object.keys(s).length, 0), 'people');
+  console.log('people  ', out.length, 'people,', easton.size, "with Easton's entries");
 }
 
 await fetchAll();
 await buildBible();
 await buildBeyond();
-await Promise.all([buildInterlinear().then(buildStrongs), buildXrefs().then(buildCircle), buildPlaces().then(buildMap), buildPeople()]);
+await Promise.all([buildInterlinear().then(() => Promise.all([buildStrongs(), buildPeople()])), buildXrefs().then(buildCircle), buildPlaces().then(buildMap)]);
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');

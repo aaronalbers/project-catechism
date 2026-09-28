@@ -3,6 +3,7 @@
 // in content/ fails the build rather than silently dropping a card.
 import { describe, expect, it } from 'vitest';
 import { PROFILE_INDEX } from '@/lib/content';
+import { personShard } from '@/lib/data';
 
 /** Every profile in full. */
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
@@ -178,10 +179,13 @@ describe('content integrity', () => {
     expect(misquoted, 'not the BSB wording of any passage the profile cites').toEqual([]);
   });
   const peopleDir = new URL('../../public/data/people/', import.meta.url);
+  // Profiles are keyed on TIPNR's numbers, and TIPNR is pinned (scripts/fetch-sources.mjs): a new pin that
+  // renumbers someone fails here.
   it.skipIf(!existsSync(peopleDir))('profiles name people the people data has', () => {
-    for (const id of PROFILES.flatMap((p) => p.people)) {
-      const shard = JSON.parse(readFileSync(new URL(`${id[0]}.json`, peopleDir), 'utf8')) as Record<string, unknown>;
-      expect(shard[id], id).toBeTruthy();
+    for (const p of PROFILES) for (const id of p.people) {
+      const file = new URL(`${personShard(id)}.json`, peopleDir);
+      const shard = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown> : {};
+      expect(shard[id], `${p.id} → ${id}`).toBeTruthy();
     }
   });
 

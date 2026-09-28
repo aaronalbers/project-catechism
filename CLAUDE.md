@@ -47,7 +47,7 @@ new *kind* of sparse content needs a section in `CATALOG`.
 sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/data.ts`
 (which memoises promises per path). It is sharded so a chapter costs one or two small
 requests: `bible/<Book>.json`, `interlinear/<Book>/<ch>.json`, `strongs/<H|G>/<shard>.json`
-(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<a-z>.json` (everyone the Bible names, from Theographic, with their Easton's entry), and `map.json` (Natural Earth coasts, rivers and
+(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<H|G>/<n>.json` (everyone the Bible names, from STEPBible's TIPNR, keyed by its Strong's number for them, with their Easton's entry), and `map.json` (Natural Earth coasts, rivers and
 lakes round Jerusalem, for the models' map scale). The books beyond the 66 get `bible/<Book>.json` too, built by
 `scripts/beyond.mjs` from the World English Bible's deuterocanon (USFM) and R. H. Charles's 1 Enoch and Jubilees
 (CrossWire's SWORD genbook modules), with `parallels.json` (Charles's cross references from 1 Enoch to the 66) and
@@ -149,17 +149,33 @@ them in CI — read it before adding content.
   used 20 times or more and rendered this way under 3% of the time; a looser rule marked a fifth of all words.
 
 - Profiles (`content/profiles/<id>.json`, one file per person, the file name its id) are written for people the
-  People tab lists from the generated data, keyed by Theographic id in `people` (more than one when Theographic
-  lists someone twice, or for a group the text treats as one, such as Job's three friends) and by people.json id in
+  People tab lists from the generated data, keyed by TIPNR id in `people` (more than one for a group the text
+  treats as one, such as Job's three friends) and by people.json id in
   `genealogy`. The chapter list and the index bundle only the fields `scripts/vite-profile-index.mjs` picks out
   (`?index`); the full profile is a lazy chunk loaded when opened. The summary, body and moments keep to what the
   text says; what tradition, archaeology or scholarship adds goes in `later`, each with its own confidence and
   sources (and `traditions` when it is an interpretation). A `when` starts with ≈ and `whenBasis` says what it rests
   on; a king's comes from `rulers.json` so it agrees with the Reign tab, and someone the text does not date has none.
   `media` is optional: a Commons painting, credited from the Commons API, shown as a depiction, not a likeness.
-  `eastonWrong` hides an Easton's entry Theographic attached to the wrong person, saying what it is about instead.
+  `eastonWrong` hides an Easton's entry matched to the wrong person, saying what it is about instead.
   A test fails the build if a quotation (“…”) in the summary, body or moments is not the BSB wording of a passage
-  the profile cites. Theographic's own disambiguation titles and year spans are unreliable and are not shown.
+  the profile cites.
+
+- The people data (`scripts/people.mjs`, run by `build-data.mjs`) comes from STEPBible's TIPNR, pinned to a commit
+  in `fetch-sources.mjs` (and in the cached file's name), because a person's id is TIPNR's Strong's number for them
+  ("H0175", Aaron) and the profiles are keyed on it; a test fails if a profile's id stops resolving. Every name in
+  the interlinear carries the person it names (`w[10]`), from TIPNR's verse lists (its "a", "b" say which of two
+  namesakes in a verse is which), so the Words tab links a name to its person even where the English says "him".
+  Its gentilic forms ("the Levites") never tag the ancestor, and `EPONYMS` keeps a tribe named for him (Judah,
+  Israel) to his own story and the genealogies. Kin a verse ties (both named within two verses, with a word of
+  kinship) carry that `ref`; the rest are TIPNR's reading and are marked ≈, its "(?)" as `uncertain`, and only tied
+  kin title a namesake ("son of Jesse"). TIPNR's `@Brief`/`@Short`/`@Article` were drafted by an AI model and are
+  never read. Where TIPNR files someone under a person the text does not say they are, `SEPARATE` keeps them apart
+  (Cleopas from Alphaeus), and `PeopleSources.tsx` lists every such change, as TIPNR's licence asks. Easton's
+  entries come from Theographic, paired with TIPNR's people by the verses naming them. The curated family tree
+  (`content/people.json`) gives each entry its `tipnr` id, and the People tab draws, round it, everyone the chapter
+  names that it leaves out, with TIPNR's parents and spouses (`src/lib/tree.ts`), dashed where no verse ties them
+  or where TIPNR reads a curated parent otherwise.
 
 - Itineraries and boundaries (`content/journeys.json`; `kind: 'border'` for a boundary, drawn
   a stretch per verse and filled when `closed`) take each station's position from OpenBible unless
