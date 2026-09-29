@@ -174,7 +174,12 @@ export interface Profile {
   /** Set when the Easton's entry matched to this person is the wrong one (Lot to the lots that were cast): what the entry is about instead. */
   eastonWrong?: string;
 }
-export interface Prophecy { id: string; title: string; given: Ref; fulfilled: Ref[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
+/**
+ * One place a prophecy is fulfilled: `ref` is where the text says so (Matthew's "to fulfill what was spoken"),
+ * `event` the passage telling what happened, when that is somewhere else (the birth, Matt 1:18-25).
+ */
+export interface Fulfilment { ref: Ref; event?: Ref }
+export interface Prophecy { id: string; title: string; foretold: Ref; fulfilled: Fulfilment[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 /** `allusion` marks an echo rather than a quotation: a phrase or an image taken up, not words cited. */
 export interface Quote { id: string; quoting: Ref; quoted: Ref; summary: string; sources?: Source[]; allusion?: true }
 export interface Fragment { id: string; siglum: string; name: string; date: string; contents: Ref[]; held: string; summary: string; sources: Source[]; media?: Media[] }

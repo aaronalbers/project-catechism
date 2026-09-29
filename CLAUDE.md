@@ -130,6 +130,13 @@ them in CI — read it before adding content.
 - `related` ids must resolve to an existing insight, and links read better added in both
   directions.
 
+- A prophecy (`content/prophecies.json`) runs from where it is `foretold` to each of its `fulfilled`: `ref` is where
+  the text says it is fulfilled ("to fulfill what was spoken"), and `event` the passage telling what happened, when
+  that is told apart from the note (the birth, Matt 1:18-25, noted at 1:22-23). A claim the text makes without
+  narrating the event (Acts 4:11 on the rejected stone) has no `event`. The reader marks a foretelling with a ring
+  and a fulfilment with a dot, the card and the link circle draw the same direction, and each `event` is checked
+  against the BSB wording before it is added.
+
 - A quote (`content/quotes.json`) marked `allusion` is an echo, not a quotation, and reads "echoes" / "echoed in";
   it cites who records the parallel (the Nestle–Aland index). Links between the 66 and the books beyond them are
   curated here, from that index, each checked against the WEB or Charles numbering of the verse.

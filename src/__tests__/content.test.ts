@@ -53,7 +53,7 @@ describe('content integrity', () => {
     const all = [
       ...INSIGHTS.flatMap((i) => [...i.verses, ...i.sources.map((s) => s.ref).filter((r): r is string => !!r)]),
       ...PEOPLE.flatMap((p) => p.refs),
-      ...PROPHECIES.flatMap((p) => [p.given, ...p.fulfilled]),
+      ...PROPHECIES.flatMap((p) => [p.foretold, ...p.fulfilled.flatMap((f) => [f.ref, ...(f.event ? [f.event] : [])])]),
       ...QUOTES.flatMap((q) => [q.quoting, q.quoted]),
       ...FRAGMENTS.flatMap((f) => f.contents),
       ...SPEAKERS.map((s) => s.ref),
@@ -691,6 +691,15 @@ describe('content integrity', () => {
   });
   it('an echo, which is a judgement and not a quotation, cites who records it', () => {
     for (const q of QUOTES.filter((q) => q.allusion)) expect(q.sources?.length, q.id).toBeGreaterThan(0);
+  });
+  it('a prophecy is fulfilled away from where it is foretold, and names an event only where it is told apart from the note', () => {
+    for (const p of PROPHECIES) {
+      expect(p.fulfilled.length, p.id).toBeGreaterThan(0);
+      for (const f of p.fulfilled) {
+        expect(f.event, `${p.id}: ${f.ref} gives itself as its event`).not.toBe(f.ref);
+        for (const r of [f.ref, ...(f.event ? [f.event] : [])]) expect(contains(p.foretold, parseRef(r)!.start), `${p.id}: ${r} is inside ${p.foretold}`).toBe(false);
+      }
+    }
   });
   it.skipIf(!existsSync(bibleDir))('the books beyond the 66 are built whole, and what the content cites in them is there', () => {
     const texts = new Map(BEYOND.map((b) => [b.id, JSON.parse(readFileSync(new URL(`${b.id}.json`, bibleDir), 'utf8')) as BibleBook]));

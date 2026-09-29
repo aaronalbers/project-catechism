@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { goTo, useFeatureInView, useStore } from '@/app/store';
 import { loadParallels, loadVerseText, loadXrefs } from '@/lib/data';
-import { chiasmsFor, fragmentsFor, propheciesFor, quotesFor, speakerFor, talliesFor, writersFor, rulersFor } from '@/lib/content';
-import { book, contains, formatRef, parseRef } from '@/lib/refs';
+import { chiasmsFor, fragmentsFor, fulfilmentRefs, propheciesFor, quotesFor, speakerFor, talliesFor, writersFor, rulersFor } from '@/lib/content';
+import { book, contains, formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
-import type { Xrefs } from '@/lib/types';
+import type { Fulfilment, Prophecy, Xrefs } from '@/lib/types';
 import { LinkCircle } from './LinkCircle';
 import { label } from '@/components/Chiasm';
 import { depth } from '@/lib/chiasm';
@@ -29,6 +29,38 @@ function useParallels(loc: { book: string; chapter: number; verse: number }) {
   const [all, setAll] = useState<[string, string][]>([]);
   useEffect(() => { loadParallels().then(setAll); }, []);
   return all.flatMap(([en, to]) => contains(en, loc) ? [to] : contains(to, loc) ? [en] : []);
+}
+
+/**
+ * Foretold, then fulfilled, as two labelled steps joined by a line: a ring where it is foretold and a dot where it
+ * comes true, as the reader's margin marks them. A fulfilment told apart from the verse that names it (Matthew's
+ * birth narrative and his "to fulfill what was spoken") shows the event, noted at that verse. The step holding the
+ * verse being read is marked.
+ */
+function ProphecyPath({ p, role, loc }: { p: Prophecy; role: 'foretold' | 'fulfilled'; loc: VerseLoc }) {
+  const hereIn = (f: Fulfilment) => fulfilmentRefs(f).some((r) => contains(r, loc));
+  // Where the event and the note overlap (Matt 1:18-25 and 1:22-23), the note is the closer match.
+  const noteHere = (f: Fulfilment) => contains(f.ref, loc);
+  return (
+    <div className="prophecy-path">
+      <div className={`pp-step foretold${role === 'foretold' ? ' here' : ''}`}>
+        <span className="pp-label">Foretold</span>
+        <div className="pp-refs"><div className="pp-ref"><RefChip r={p.foretold} here={role === 'foretold'} />{role === 'foretold' && <span className="pp-here">here</span>}</div></div>
+      </div>
+      <div className={`pp-step fulfilled${role === 'fulfilled' ? ' here' : ''}`}>
+        <span className="pp-label">Fulfilled</span>
+        <div className="pp-refs">
+          {p.fulfilled.map((f) => (
+            <div key={f.ref} className="pp-ref">
+              <RefChip r={f.event ?? f.ref} here={hereIn(f) && !(f.event && noteHere(f))} />
+              {f.event && <span className="pp-note">noted at <RefChip r={f.ref} here={noteHere(f)} /></span>}
+              {hereIn(f) && <span className="pp-here">here</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 const fmtYear = (y: number, est?: boolean) => <>{est && <span className="est" title="Estimated">≈</span>}{formatYear(y)}</>;
@@ -68,8 +100,7 @@ export function LinksPanel() {
           <div className="card" key={p.id} id={cardId({ kind: 'prophecy', id: p.id })}>
             <h3><span style={{ flex: 1 }}>{p.title}</span><ConfidenceBadge c={p.confidence} /></h3>
             <p className="summary">{p.summary}</p>
-            <div className="verses"><span className="badge kind">{role === 'given' ? 'Given here' : 'Fulfilled here'}</span>
-              <span className="chip">given</span><RefChip r={p.given} /><span className="chip">fulfilled</span>{p.fulfilled.map((r) => <RefChip key={r} r={r} />)}</div>
+            <ProphecyPath p={p} role={role} loc={loc} />
             <SourceList sources={p.sources} traditions={p.traditions} />
           </div>
         ))}

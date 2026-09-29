@@ -125,7 +125,9 @@ export function LinkCircle() {
     if (here !== undefined) dot(ctx, geo.point(here), 4, colors.accent, colors.surface);
     if (picked) {
       strokeChord(ctx, geo, picked, colors[picked.kind], colors.surface, 4, 3);
-      for (const i of [picked.a, picked.b]) dot(ctx, geo.point(i), 4.5, colors[picked.kind], colors.surface);
+      // A prophecy's foretelling is a ring and its fulfilment a dot, as in the reader's margin.
+      dot(ctx, geo.point(picked.a), 4.5, picked.kind === 'prophecy' ? colors.surface : colors[picked.kind], picked.kind === 'prophecy' ? colors.prophecy : colors.surface);
+      dot(ctx, geo.point(picked.b), 4.5, colors[picked.kind], colors.surface);
     } else if (hover && 'verse' in hover) {
       const [x0, y0] = geo.point(hover.verse, geo.R - 6), [x1, y1] = geo.point(hover.verse, geo.R + 12);
       ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.lineWidth = 2; ctx.strokeStyle = colors.text; ctx.stroke();
@@ -208,7 +210,9 @@ function Tooltip({ hover, canon, size }: { hover: NonNullable<Hover>; canon: Can
     <div className="circle-tip" style={style}>
       <span className="kind"><span className="swatch" style={{ background: `var(--link-${c.kind})` }} />{c.echo ? 'Echo' : KIND_NAME[c.kind]}</span>
       {c.title && <strong>{c.title}</strong>}
-      <span>{formatRef(from)} {c.kind === 'prophecy' ? '→' : c.kind === 'quote' ? (c.echo ? 'echoed in' : 'quoted in') : '↔'} {formatRef(to)}</span>
+      {c.kind === 'prophecy'
+        ? <span className="tip-steps"><span><em>Foretold</em> {formatRef(from)}</span><span><em>Fulfilled</em> {formatRef(to)}</span></span>
+        : <span>{formatRef(from)} {c.kind === 'quote' ? (c.echo ? 'echoed in' : 'quoted in') : '↔'} {formatRef(to)}</span>}
       {c.votes !== undefined && <small>{c.votes} reader votes on OpenBible.info</small>}
       {c.kind === 'parallel' && <small>From his notes to 1 Enoch (1913)</small>}
     </div>
@@ -226,7 +230,8 @@ function allChords(canon: Canon, data: CircleData, shift: (i: number) => number,
   for (let i = 0; i < data.xrefs.length; i += 3) out.push({ kind: 'xref', a: shift(data.xrefs[i]), b: shift(data.xrefs[i + 1]), votes: data.xrefs[i + 2] });
   for (const [en, to] of parallels) add('parallel', en, to);
   for (const q of QUOTES) add('quote', q.quoted, q.quoting, q.allusion ? { echo: true } : {});
-  for (const p of PROPHECIES) for (const f of p.fulfilled) add('prophecy', p.given, f, { title: p.title.replace(/^'(.*)'$/, '$1') });
+  // A prophecy runs from where it is foretold (`a`) to where the text says it is fulfilled (`b`), which the arrowhead marks.
+  for (const p of PROPHECIES) for (const f of p.fulfilled) add('prophecy', p.foretold, f.ref, { title: p.title.replace(/^'(.*)'$/, '$1') });
   return out;
 }
 const chordRefs = (canon: Canon, c: Chord): [string, string] => c.refs ?? [toRef(canon.locAt(c.a)), toRef(canon.locAt(c.b))];
@@ -248,6 +253,12 @@ function geometry(canon: Canon, size: number) {
   return {
     c, R, theta, point,
     halfVerse: Math.PI / canon.total,
+    /** Where the chord meets the rim at `b`, and the unit direction it arrives in. */
+    arrival(ch: Chord): [number, number, number, number] {
+      const [x1, y1] = point(ch.b), [cx, cy] = control(ch);
+      const dx = x1 - cx, dy = y1 - cy, len = Math.hypot(dx, dy) || 1;
+      return [x1, y1, dx / len, dy / len];
+    },
     trace(ctx: CanvasRenderingContext2D, ch: Chord) {
       const [x0, y0] = point(ch.a), [x1, y1] = point(ch.b), [cx, cy] = control(ch);
       ctx.moveTo(x0, y0); ctx.quadraticCurveTo(cx, cy, x1, y1);
@@ -316,6 +327,16 @@ function strokeChord(ctx: CanvasRenderingContext2D, geo: Geo, c: Chord, color: s
   ctx.beginPath(); geo.trace(ctx, c);
   ctx.lineWidth = width + 2 * haloWidth; ctx.strokeStyle = halo; ctx.stroke();
   ctx.lineWidth = width; ctx.strokeStyle = color; ctx.stroke();
+  if (c.kind === 'prophecy') arrowhead(ctx, geo, c, color, halo, width, haloWidth);
+}
+
+/** A prophecy's direction: an arrowhead where the chord reaches its fulfilment, sized to the line. */
+function arrowhead(ctx: CanvasRenderingContext2D, geo: Geo, c: Chord, color: string, halo: string, width: number, haloWidth: number) {
+  const [x, y, dx, dy] = geo.arrival(c), len = 3 + width * 2.2, half = len * 0.55;
+  const bx = x - dx * len, by = y - dy * len;
+  ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(bx - dy * half, by + dx * half); ctx.lineTo(bx + dy * half, by - dx * half); ctx.closePath();
+  ctx.lineJoin = 'round'; ctx.lineWidth = 2 * haloWidth; ctx.strokeStyle = halo; ctx.stroke();
+  ctx.fillStyle = color; ctx.fill();
 }
 
 function dot(ctx: CanvasRenderingContext2D, [x, y]: [number, number], r: number, fill: string, ring: string) {

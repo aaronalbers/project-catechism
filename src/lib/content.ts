@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Prophecy, Quote, Ruler, Speaker, Tally, TextSource, Video, VideoKind, Writer } from './types';
+import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Speaker, Tally, TextSource, Video, VideoKind, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -66,9 +66,11 @@ export function insightsFor(loc: VerseLoc) { return INSIGHTS.filter((i) => anyCo
 export function insightsInChapter(book: string, chapter: number) { return INSIGHTS.filter((i) => i.verses.some((r) => touchesChapter(r, book, chapter))); }
 export function peopleFor(loc: VerseLoc) { return PEOPLE.filter((p) => anyContains(p.refs, loc)); }
 export function peopleInChapter(book: string, chapter: number) { return PEOPLE.filter((p) => p.refs.some((r) => touchesChapter(r, book, chapter))); }
+/** Every ref a fulfilment covers: where the text says so, and the event if told elsewhere. */
+export const fulfilmentRefs = (f: Fulfilment) => (f.event ? [f.event, f.ref] : [f.ref]);
 export function propheciesFor(loc: VerseLoc) {
-  return PROPHECIES.map((p) => ({ p, role: contains(p.given, loc) ? 'given' as const : anyContains(p.fulfilled, loc) ? 'fulfilled' as const : null }))
-    .filter((x): x is { p: Prophecy; role: 'given' | 'fulfilled' } => x.role !== null);
+  return PROPHECIES.map((p) => ({ p, role: contains(p.foretold, loc) ? 'foretold' as const : anyContains(p.fulfilled.flatMap(fulfilmentRefs), loc) ? 'fulfilled' as const : null }))
+    .filter((x): x is { p: Prophecy; role: 'foretold' | 'fulfilled' } => x.role !== null);
 }
 export function quotesFor(loc: VerseLoc) {
   return QUOTES.map((q) => ({ q, role: contains(q.quoting, loc) ? 'quoting' as const : contains(q.quoted, loc) ? 'quoted' as const : null }))
@@ -203,7 +205,9 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
   const kinds: [string, string[]][] = [
     ['insight', here(INSIGHTS.flatMap((i) => i.verses))],
     ['model', here(MODELS.flatMap((m) => m.verses))],
-    ['prophecy', here(PROPHECIES.flatMap((p) => [p.given, ...p.fulfilled]))],
+    // Foretold and fulfilled are told apart in the margin: a ring where it is foretold, a dot where it comes true.
+    ['prophecy foretold', here(PROPHECIES.map((p) => p.foretold))],
+    ['prophecy fulfilled', here(PROPHECIES.flatMap((p) => p.fulfilled.flatMap(fulfilmentRefs)))],
     ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
     ['chiasm', here(CHIASMS.map((c) => c.ref))],
     ['tally', here(TALLIES.map((t) => t.ref))],

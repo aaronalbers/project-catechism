@@ -131,6 +131,8 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .marker.insight { background: var(--interpretation); }
 .marker.model { background: var(--consensus); }
 .marker.prophecy { background: var(--evidence); }
+/* Where a prophecy is foretold the mark is a ring, where it comes true a dot: the card's steps use the same two. */
+.marker.prophecy.foretold { background: none; box-shadow: inset 0 0 0 1.5px var(--evidence); }
 .marker.quote { background: var(--muted); }
 .marker.chiasm { background: var(--chiasm); }
 .marker.journey { background: var(--journey); }
@@ -195,6 +197,20 @@ body.resizing-y { cursor: row-resize; }
 .card details { margin-top: 6px; }
 .card summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: 13px; }
 .card .verses { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.prophecy-path { margin: 4px 0 10px; }
+.pp-step { position: relative; display: grid; grid-template-columns: 72px 1fr; gap: 8px; padding: 3px 0 3px 18px; }
+.pp-step::before { content: ''; position: absolute; left: 1px; top: 8px; width: 9px; height: 9px; border-radius: 50%; box-sizing: border-box; }
+.pp-step.foretold::before { border: 2px solid var(--evidence); background: var(--surface-2); }
+.pp-step.fulfilled::before { background: var(--evidence); }
+/* The line from the foretelling down to its fulfilments. */
+.pp-step.foretold::after { content: ''; position: absolute; left: 5px; top: 19px; bottom: -8px; width: 0; border-left: 1.5px solid var(--evidence); opacity: 0.5; }
+.pp-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding-top: 5px; }
+.pp-step.here .pp-label { color: var(--evidence); }
+.pp-refs { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.pp-ref { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.prophecy-path .chip.here { border-color: var(--evidence); color: var(--text); }
+.pp-note { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); }
+.pp-here { font-size: 11px; font-weight: 600; color: var(--evidence); }
 .chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
 .chip.link { cursor: pointer; }
 .chip.link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
@@ -435,6 +451,8 @@ body.resizing-y { cursor: row-resize; }
 .circle-tip { position: absolute; z-index: 2; max-width: 220px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; font-size: 12px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); }
 .circle-tip .kind { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
 .circle-tip small { color: var(--muted); }
+.circle-tip .tip-steps { display: flex; flex-direction: column; }
+.circle-tip .tip-steps em { font-style: normal; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); display: inline-block; width: 64px; }
 
 /* Chiastic structure on the text. One hue, faint at the outer levels and full at the centre;
    letters carry the pairing, so colour is never the only cue. */

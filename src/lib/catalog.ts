@@ -14,7 +14,7 @@ export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'passion' | '
 export interface CatalogLine { label?: string; refs: Ref[] }
 export interface CatalogEntry {
   id: string; kind: FeatureKind; title: string; summary: string;
-  /** Where clicking the entry goes: a model's first build step, a prophecy's giving. */
+  /** Where clicking the entry goes: a model's first build step, where a prophecy is foretold. */
   go: Ref;
   lines: CatalogLine[];
   /** A sub-heading within the section (an insight's kind). */
@@ -117,10 +117,10 @@ export const CATALOG: CatalogSection[] = [
   },
   {
     id: 'prophecies', kind: 'prophecy', title: 'Prophecies', tab: 'links',
-    blurb: 'Where a prophecy is given, and where the text says it is fulfilled.',
+    blurb: 'Where a prophecy is foretold, and where the text says it is fulfilled.',
     entries: sorted(PROPHECIES.map((p) => ({
       id: p.id, kind: 'prophecy', title: p.title, summary: p.summary,
-      go: p.given, lines: [{ label: 'Given', refs: [p.given] }, { label: 'Fulfilled', refs: p.fulfilled }],
+      go: p.foretold, lines: [{ label: 'Foretold', refs: [p.foretold] }, { label: 'Fulfilled', refs: p.fulfilled.map((f) => f.event ?? f.ref) }],
     }))),
   },
   {
