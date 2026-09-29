@@ -311,6 +311,12 @@ them in CI — read it before adding content.
   model (the temple's stands, seen from under the house). A model whose raised floors the
   size figure should stand on flags them `userData.ground` (Ezekiel's courts).
 
+When a feature falls short of complete or correct (a source that could not be found or verified, a claim dropped
+or left vague for want of one, a citation not checked, a piece its neighbours have missing), record it in
+`FOLLOWUPS.md` with why and what is needed, and remove the entry once it is done. Once built, a feature should be
+as complete as it can be, so anything the text describes of it that it leaves undrawn is a follow-up. Ideas for new things (another
+model, another view) go in `IDEAS.md` instead, and one turned down moves to its Declined section with why.
+
 JSON files use one-space indent with `sources`/`media`/`body` entries one per line — match
 the surrounding file.
 
