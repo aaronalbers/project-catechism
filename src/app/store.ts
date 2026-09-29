@@ -3,7 +3,7 @@ import { hashFromLoc, locFromHash, sameLoc, type VerseLoc } from '@/lib/refs';
 import { readStored, writeStored } from '@/lib/storage';
 import { choose, isNarrow, place, readLayout, type Layout } from '@/lib/panes';
 
-export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos' | 'reigns' | 'days';
+export type PanelTab = 'insights' | 'words' | 'places' | 'people' | 'links' | 'models' | 'videos' | 'reigns' | 'days' | 'scrolls';
 /** Which reconstruction dates the kings (a reading's id, 'thiele' first), or 'stated' for the stated lengths laid end to end. */
 export type ReignDates = string;
 export type Theme = 'system' | 'light' | 'dark';

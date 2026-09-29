@@ -1,5 +1,6 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PROFILE_INDEX, PROPHECIES, QUOTES, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, TALLIES } from './content';
+import { HEBREW } from './scrolls';
 import { READING_ORDER, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
 
@@ -8,7 +9,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -138,6 +139,20 @@ export const CATALOG: CatalogSection[] = [
       id: f.id, kind: 'fragment', title: `${f.siglum} — ${f.name}`, summary: `${f.date}. ${f.held}.`,
       go: f.contents[0], lines: [{ label: 'Preserves', refs: f.contents }],
     }))),
+  },
+  {
+    id: 'scrolls', kind: 'scroll', title: 'Scrolls', tab: 'scrolls',
+    blurb: 'Where the Hebrew Bible has no break between two English books, or copies several on one scroll, and where one book ends with the words the next begins with.',
+    entries: sorted([
+      ...HEBREW.filter((h) => h.kind).map((h) => ({
+        id: h.id, kind: 'scroll' as const, title: `${h.name}: ${h.kind === 'book' ? 'one book' : 'one scroll'}`, summary: h.summary ?? '',
+        go: `${h.books[1]}.1.1`, lines: [{ label: h.kind === 'book' ? 'Split at' : 'Books begin', refs: h.books.slice(1).map((id) => `${id}.1.1`) }],
+      })),
+      ...SCROLLS.overlaps.map((o) => ({
+        id: o.id, kind: 'scroll' as const, title: `${formatRef(o.a)} and ${formatRef(o.b)}`, summary: o.summary,
+        go: o.a, lines: [{ refs: [o.a, o.b] }],
+      })),
+    ]),
   },
   {
     id: 'insights', kind: 'insight', title: 'Insights', tab: 'insights',

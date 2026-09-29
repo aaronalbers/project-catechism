@@ -16,6 +16,8 @@ import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chi
 import { TallyBar, TallyCaption, TallyGroupBar, TallyTotal } from './Tally';
 import { ReignChart } from './Reign';
 import { PassionChart } from './Passion';
+import { OverlapNote, SeamNote } from './Scrolls';
+import { overlapsInChapter, seamsInChapter } from '@/lib/scrolls';
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
@@ -117,6 +119,8 @@ export function Reader() {
   const [wordMarks, setWordMarks] = useStoredFlag('word-marks', true);
   const markable = useMemo(() => (il ?? []).some((v) => v.w.some((w) => narrowedWord(w, v))), [il]);
   const reveal = useStore((s) => s.reveal);
+  const seams = useMemo(() => seamsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
+  const overlaps = useMemo(() => overlapsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   // Arriving from the index at a chiasm, a count or a reign: show it even if the reader had hidden it.
   useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -135,7 +139,9 @@ export function Reader() {
     // otherwise take in what sits above the verse: its heading, a chiasm's caption, a level's header.
     const opens = passage && parseRef(passage.ref)?.start;
     const strip = reveal === 'chiasm' && opens?.chapter === loc.chapter && opens.verse === loc.verse ? document.querySelector('.chiasm-strip') : null;
-    (strip ?? el.parentElement ?? el).scrollIntoView({ block: 'start', behavior: 'smooth' });
+    // At the first verse, a note that the Hebrew runs on from the book before stands above the heading: take it in too.
+    const seam = loc.verse === 1 ? document.querySelector('.seam.before') : null;
+    (strip ?? seam ?? el.parentElement ?? el).scrollIntoView({ block: 'start', behavior: 'smooth' });
   }, [loc, playing, data, il, reveal]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Bring a word picked in the Words tab into view; 'nearest' leaves it alone when it is already showing.
@@ -159,6 +165,7 @@ export function Reader() {
         {markable && <> <span className="w narrow">Dotted</span> words translate something broader than the English. <button className="marks-toggle" aria-pressed={wordMarks} onClick={() => setWordMarks()}>{wordMarks ? 'Hide' : 'Show'} them</button></>}
       </div>}
       {loc.chapter === 1 && data.intro && <div className="book-intro">{data.intro.map((p, i) => <p key={i}>{p}</p>)}</div>}
+      {seams.before && <SeamNote seam={seams.before} side="before" />}
       {passage && <ChiasmStrip c={passage} loc={loc} show={structure} onToggle={toggleStructure} />}
       {chapter.map((v, k) => {
         const ilv = ilByVerse.get(v.v);
@@ -180,6 +187,7 @@ export function Reader() {
         const totals = charts ? tallies.filter((t) => t.total && contains(t.total.ref, vloc)) : [];
         const reign = reigns.get(v.v);
         const days = passionAt(vloc);
+        const repeated = overlaps.filter((e) => parseRef(e.here)!.start.verse === v.v);
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
@@ -197,6 +205,7 @@ export function Reader() {
                 {subtotals.map(({ t, g }) => <TallyGroupBar key={`${t.id}:${g.label}`} t={t} g={g} loc={loc} current={current} />)}
                 {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}
                 {(days.event || days.saying) && <PassionChart event={days.event} saying={days.saying} account={days.account} loc={loc} show={dayCharts} onToggle={toggleDays} />}
+                {repeated.map((e) => <OverlapNote key={e.o.id} end={e} />)}
                 {reign && <ReignChart k={reign.k} account={reign.account} loc={loc} show={reignCharts} onToggle={toggleReigns} />}
                 {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
                 {current && v.t && v.f?.length ? <div className="fn">{v.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
@@ -205,6 +214,7 @@ export function Reader() {
           </div>
         );
       })}
+      {seams.after && <SeamNote seam={seams.after} side="after" />}
       <nav className="chapter-nav" aria-label="Chapter navigation">
         {prev ? <button onClick={() => goTo(prev)}>← {book(prev.book)?.name} {prev.chapter}</button> : <span />}
         {next ? <button onClick={() => goTo(next)}>{book(next.book)?.name} {next.chapter} →</button> : <span />}

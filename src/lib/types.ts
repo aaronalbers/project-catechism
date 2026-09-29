@@ -389,3 +389,24 @@ export interface Video {
   id: string; title: string; provider: 'youtube' | 'bibleproject'; videoId?: string; channel: string; url: string; page?: string;
   series: string; kind: VideoKind; books?: string[]; verses?: Ref[]; strongs?: string[]; summary?: string; duration?: number;
 }
+
+/**
+ * One of the Hebrew Bible's twenty-four books (content/scrolls.json), in the Talmud's order (Bava Batra 14b), and the
+ * English books it covers. `kind` is set when it covers more than one: `book` for one book the Greek split (Samuel),
+ * `scroll` for separate books copied on one scroll with `gap` blank lines between them (the Torah, the Twelve).
+ */
+export interface HebrewBook {
+  id: string; name: string; part: 'Torah' | 'Prophets' | 'Writings'; books: string[];
+  kind?: 'book' | 'scroll'; gap?: number; summary?: string; sources?: Source[];
+}
+/** The same words at the end of one book and the start of another (Cyrus's decree), and what is made of it. */
+export interface ScrollOverlap { id: string; a: Ref; b: Ref; summary: string; confidence: Confidence; traditions?: string[]; sources: Source[] }
+/** When chapters and verse numbers were added. */
+export interface Numbering { id: string; label: string; when: string; summary: string; confidence: Confidence; sources: Source[] }
+export interface Scrolls {
+  id: string; title: string; summary: string; confidence: Confidence; sources: Source[];
+  hebrew: HebrewBook[];
+  /** The Greek names of the books the Greek split, where they differ from the English. */
+  greek: Record<string, string>;
+  overlaps: ScrollOverlap[]; numbering: Numbering[];
+}

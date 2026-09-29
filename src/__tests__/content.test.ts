@@ -9,8 +9,8 @@ import { personShard } from '@/lib/data';
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
 const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
-import { CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
-import { compareLoc, contains, parseRef, touchesChapter, BOOKS, BEYOND, READING_ORDER } from '@/lib/refs';
+import { CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, SCROLLS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { compareLoc, contains, parseRef, touchesChapter, BOOKS, BEYOND, READING_ORDER, THE_66 } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
 import { scaleReference } from '@/lib/models/scale';
@@ -29,7 +29,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings,
+  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings, SCROLLS, ...SCROLLS.hebrew, ...SCROLLS.overlaps, ...SCROLLS.numbering,
     ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
@@ -64,6 +64,7 @@ describe('content integrity', () => {
       ...JOURNEYS.flatMap((j) => [j.ref, ...j.stations.map((st) => st.verse)]),
       ...TALLIES.flatMap((t) => [t.ref, ...[...t.rows, ...(t.groups ?? [])].map((r) => r.ref), ...(t.total ? [t.total.ref] : [])]),
       ...reignQuotes().map((q) => q.ref),
+      ...SCROLLS.overlaps.flatMap((o) => [o.a, o.b]),
       MONARCHY.kings, MONARCHY.chronicles,
       ...MONARCHY.anchors.flatMap((a) => (a.ref ? [a.ref] : [])),
       ...MONARCHY.prophets.flatMap((p) => [...p.refs, p.sent]),
@@ -688,6 +689,39 @@ describe('content integrity', () => {
       expect(TEXT_BY_ID.has(b.beyond!.text), `${b.id}: ${b.beyond!.text}`).toBe(true);
     }
     for (const c of CANONS) expect(c.sources.some((x) => evidential.has(x.kind)), `${c.id} cites no primary statement`).toBe(true);
+  });
+  it('the Hebrew books cover the Old Testament once, each a run of English books, and a joined one says what joins it', () => {
+    const ot = THE_66.filter((b) => b.testament === 'OT').map((b) => b.id);
+    const covered = SCROLLS.hebrew.flatMap((h) => h.books);
+    expect([...covered].sort()).toEqual([...ot].sort());
+    for (const h of SCROLLS.hebrew) {
+      const at = h.books.map((id) => ot.indexOf(id));
+      expect(at.every((i, k) => k === 0 || i === at[k - 1] + 1), `${h.id}'s books are not consecutive in the English order`).toBe(true);
+      expect(!!h.kind, `${h.id}: a Hebrew book of several English ones says whether it is one book or one scroll`).toBe(h.books.length > 1);
+      if (h.kind === 'scroll') expect(h.gap, `${h.id} says how many blank lines lie between its books`).toBeGreaterThan(0);
+      if (h.kind) {
+        expect(h.summary, h.id).toBeTruthy();
+        expect(h.sources?.some((s) => evidential.has(s.kind)), `${h.id} cites no primary source for the join`).toBe(true);
+      }
+    }
+    for (const id of Object.keys(SCROLLS.greek)) expect(SCROLLS.hebrew.find((h) => h.books.includes(id))?.kind, `a Greek name for ${id}, which the Hebrew does not join to another book`).toBe('book');
+    for (const x of [SCROLLS, ...SCROLLS.overlaps, ...SCROLLS.numbering]) {
+      expect(x.sources.length, x.id).toBeGreaterThan(0);
+      if (x.confidence === 'interpretation') expect((x as { traditions?: string[] }).traditions?.length, x.id).toBeGreaterThan(0);
+    }
+    expect(SCROLLS.sources.some((s) => evidential.has(s.kind))).toBe(true);
+  });
+  it('words repeated across a book\'s end are the same words in the BSB, and end one book and open another', () => {
+    const first = (ref: string) => {
+      const { start } = parseRef(ref)!;
+      const b = JSON.parse(readFileSync(new URL(`${start.book}.json`, bibleDir), 'utf8')) as BibleBook;
+      return { text: b.chapters[start.chapter - 1].find((v) => v.v === start.verse)!.t, last: start.chapter === b.chapters.length, opens: start.chapter === 1 && start.verse === 1 };
+    };
+    for (const o of SCROLLS.overlaps) {
+      const a = first(o.a), b = first(o.b);
+      expect(a.text, o.id).toBe(b.text);
+      expect(a.last && b.opens, `${o.id}: ${o.a} should end its book and ${o.b} open its own`).toBe(true);
+    }
   });
   it('an echo, which is a judgement and not a quotation, cites who records it', () => {
     for (const q of QUOTES.filter((q) => q.allusion)) expect(q.sources?.length, q.id).toBeGreaterThan(0);
