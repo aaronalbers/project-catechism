@@ -4,7 +4,7 @@ import { goTo, useStore } from '@/app/store';
 import { SourceList } from '@/components/SourceList';
 import { IndexLink } from '@/components/IndexView';
 import { journeysInChapter } from '@/lib/content';
-import { book } from '@/lib/refs';
+import { book, sameLoc } from '@/lib/refs';
 import { loadPlaces, loadPlacesForBook } from '@/lib/data';
 import { partialPath, resolveRoute, stopAt, type LatLon, type RouteStop } from '@/lib/journey';
 import type { Place } from '@/lib/types';
@@ -83,17 +83,17 @@ export function PlacesPanel() {
   // An itinerary in this chapter replaces the per-verse markers with a route drawn as it is read.
   const journey = useMemo(() => journeysInChapter(loc.book, loc.chapter)[0], [loc.book, loc.chapter]);
   const stops = useMemo(() => (journey && placesById.size ? resolveRoute(journey, placesById) : []), [journey, placesById]);
-  const cur = stops.length ? stopAt(stops, loc.verse) : -1;
+  const cur = stops.length ? stopAt(stops, loc) : -1;
   const stationIds = useMemo(() => new Set(stops.flatMap((s) => (s.station.place ? [s.station.place] : []))), [stops]);
 
-  const hereIds = byVerse[`${loc.chapter}.${loc.verse}`] ?? [];
-  const chapterIds = useMemo(() => {
+  // Memoised, so the markers are redrawn (and the map flies) only when the places change, not on every render.
+  const hereIds = useMemo(() => byVerse[`${loc.chapter}.${loc.verse}`] ?? [], [byVerse, loc.chapter, loc.verse]);
+  const here = useMemo(() => hereIds.map((id) => placesById.get(id)).filter((p): p is Place => !!p && !stationIds.has(p.id)), [hereIds, placesById, stationIds]);
+  const chapter = useMemo(() => {
     const ids = new Set<string>();
     for (const [k, v] of Object.entries(byVerse)) if (k.startsWith(`${loc.chapter}.`)) v.forEach((id) => ids.add(id));
-    return [...ids];
-  }, [byVerse, loc.chapter]);
-  const here = hereIds.map((id) => placesById.get(id)).filter((p): p is Place => !!p && !stationIds.has(p.id));
-  const chapter = chapterIds.map((id) => placesById.get(id)).filter((p): p is Place => !!p && !hereIds.includes(p.id) && !stationIds.has(p.id));
+    return [...ids].map((id) => placesById.get(id)).filter((p): p is Place => !!p && !hereIds.includes(p.id) && !stationIds.has(p.id));
+  }, [byVerse, loc.chapter, hereIds, placesById, stationIds]);
 
   useEffect(() => {
     if (!mapEl.current || map.current) return;
@@ -150,7 +150,7 @@ export function PlacesPanel() {
     // map zooms to the stretch this verse describes and pulls back to the whole once it closes.
     const whole = L.latLngBounds(stops.flatMap((s) => s.leg)).pad(0.08);
     const border = journey.kind === 'border';
-    const first = cur < 0 ? 0 : stops.findIndex((s) => s.verse === stops[cur].verse);
+    const first = cur < 0 ? 0 : stops.findIndex((s) => sameLoc(s.loc, stops[cur].loc));
     const complete = cur === stops.length - 1 && !!journey.closed;
     const view = border && cur >= 0 && !complete ? L.latLngBounds(stops.slice(first, cur + 1).flatMap((s) => s.leg)).pad(0.1) : prev === null || border ? whole : null;
     const fit = fitOptions(mapEl.current, stageCard.current);
@@ -177,7 +177,7 @@ export function PlacesPanel() {
       c.bindTooltip(escape(stopName(s)), named || from
         ? { permanent: true, direction: left ? 'left' : 'right', offset: [left ? -8 : 8, 0], className: i === cur ? 'map-label' : 'map-label muted' }
         : { direction: 'right', offset: [6, 0], className: 'map-label muted' });
-      c.on('click', () => goTo({ book: loc.book, chapter: loc.chapter, verse: s.verse }));
+      c.on('click', () => goTo(s.loc));
     });
 
     if (cur < 0) return;
@@ -221,7 +221,7 @@ export function PlacesPanel() {
 
   const current = cur >= 0 ? stops[cur] : undefined;
   const border = journey?.kind === 'border';
-  const first = current ? stops.findIndex((s) => s.verse === current.verse) : -1;
+  const first = current ? stops.findIndex((s) => sameLoc(s.loc, current.loc)) : -1;
   const passed = current ? stops.slice(first, cur).map((s) => s.station.name) : [];
   return (
     <div className="panel-body flush">
@@ -245,10 +245,10 @@ export function PlacesPanel() {
             {stops.map((s, i) => [
               s.segment && s.segment !== stops[i - 1]?.segment && <li key={`seg${i}`} className="stage-segment">{s.segment}</li>,
               <li key={i} aria-current={i === cur ? 'step' : undefined} className={i < cur ? 'done' : undefined}>
-                <button onClick={() => goTo({ book: loc.book, chapter: loc.chapter, verse: s.verse })}>
+                <button onClick={() => goTo(s.loc)}>
                   <span className="n">{border ? i + 1 : i === 0 ? '·' : i}</span>
                   <span className="nm">{s.station.name}{s.estimate && <span className="approx" title={s.estimate}> ≈</span>}</span>
-                  <span className="v">{loc.chapter}:{s.verse}</span>
+                  <span className="v">{s.loc.chapter}:{s.loc.verse}</span>
                 </button>
                 {i === cur && (s.estimate || s.station.via || s.place) && (
                   <div className="stage-note">

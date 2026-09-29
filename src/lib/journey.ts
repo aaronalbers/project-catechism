@@ -1,12 +1,14 @@
 // Resolves an itinerary's stations to map positions: OpenBible's identification where it
 // gives a real site, the curated estimate where it doesn't, and even spacing along the line
 // of travel for camps nobody has located.
-import { parseRef } from './refs';
+import { compareLoc, parseRef, type VerseLoc } from './refs';
 import type { Journey, Place, Station } from './types';
 
 export type LatLon = [number, number];
 export interface RouteStop {
-  station: Station; verse: number; at: LatLon; place?: Place;
+  station: Station; at: LatLon; place?: Place;
+  /** The verse that names it. */
+  loc: VerseLoc;
   /** The named stretch this stop belongs to, carried forward from the last station that set one. */
   segment?: string;
   /** Why the position is approximate, or undefined when it is OpenBible's proposed site. */
@@ -42,7 +44,7 @@ export function resolveRoute(j: Journey, places: Map<string, Place>): RouteStop[
     const estimate = s.estimate?.basis ?? (place?.approx ? `OpenBible only places it ${place.approx}.` : undefined);
     const prev = stops[stops.length - 1];
     stops.push({
-      station: s, verse: parseRef(s.verse)?.start.verse ?? 0, at: pt, place, estimate, segment: s.segment ?? prev?.segment,
+      station: s, loc: parseRef(s.verse)!.start, at: pt, place, estimate, segment: s.segment ?? prev?.segment,
       leg: prev ? [prev.at, ...(s.via?.points ?? []), pt] : [pt],
       legEstimated: !!prev && (!!s.via || !!estimate || !!prev.estimate),
     });
@@ -50,10 +52,10 @@ export function resolveRoute(j: Journey, places: Map<string, Place>): RouteStop[
   return stops;
 }
 
-/** Index of the stop the reader has reached at `verse`: the last one named at or before it, or -1. */
-export function stopAt(stops: RouteStop[], verse: number) {
+/** Index of the stop the reader has reached at `loc`: the last one named at or before it, or -1. */
+export function stopAt(stops: RouteStop[], loc: VerseLoc) {
   let cur = -1;
-  stops.forEach((s, i) => { if (s.verse <= verse) cur = i; });
+  stops.forEach((s, i) => { if (compareLoc(s.loc, loc) <= 0) cur = i; });
   return cur;
 }
 

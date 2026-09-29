@@ -32,7 +32,9 @@ describe('resolveRoute', () => {
     expect(stops.map((s) => s.segment)).toEqual(['South', 'South', 'South', 'South', 'East']);
   });
   it('finds the camp reached at a verse', () => {
-    expect([2, 3, 7, 50].map((v) => stopAt(stops, v))).toEqual([-1, 0, 3, 4]);
+    expect([2, 3, 7, 50].map((verse) => stopAt(stops, { book: 'Num', chapter: 33, verse }))).toEqual([-1, 0, 3, 4]);
+    expect(stopAt(stops, { book: 'Num', chapter: 32, verse: 50 })).toBe(-1);
+    expect(stopAt(stops, { book: 'Num', chapter: 34, verse: 1 })).toBe(4);
   });
 });
 

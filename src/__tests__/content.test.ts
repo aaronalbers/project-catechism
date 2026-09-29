@@ -204,12 +204,9 @@ describe('content integrity', () => {
   it('journeys cite evidence, run in order, and explain every estimate', () => {
     for (const j of JOURNEYS) {
       expect(j.sources.some((s) => evidential.has(s.kind)), j.id).toBe(true);
-      // The Places tab draws a journey in the chapter being read and places its stations by verse number alone.
-      const r = parseRef(j.ref)!;
-      expect(r.end.book === r.start.book && r.end.chapter === r.start.chapter, `${j.id} spans more than one chapter`).toBe(true);
-      for (const st of j.stations) expect(contains(j.ref, parseRef(st.verse)!.start), `${j.id}: ${st.name} (${st.verse}) is outside ${j.ref}`).toBe(true);
-      const verses = j.stations.map((st) => parseRef(st.verse)!.start.verse);
-      expect(verses, `${j.id} stations out of order`).toEqual([...verses].sort((a, b) => a - b));
+      const locs = j.stations.map((st) => parseRef(st.verse)!.start);
+      j.stations.forEach((st, i) => expect(contains(j.ref, locs[i]), `${j.id}: ${st.name} (${st.verse}) is outside ${j.ref}`).toBe(true));
+      for (let i = 1; i < locs.length; i++) expect(compareLoc(locs[i - 1], locs[i]), `${j.id}: ${j.stations[i].name} out of order`).toBeLessThanOrEqual(0);
       for (const st of j.stations) {
         expect(st.place || st.estimate, `${j.id}: ${st.name} has neither a place nor an estimate`).toBeTruthy();
         if (st.estimate) expect(st.estimate.basis.length, `${j.id}: ${st.name}`).toBeGreaterThan(20);

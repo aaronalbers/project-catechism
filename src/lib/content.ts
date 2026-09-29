@@ -199,6 +199,7 @@ export const VIDEO_SERIES: { series: string; videos: Video[] }[] = (() => {
 export function markersForChapter(book: string, chapter: number): Map<number, Set<string>> {
   const map = new Map<number, Set<string>>();
   const here = (refs: string[]) => refs.filter((r) => touchesChapter(r, book, chapter));
+  const inChapter = (l: VerseLoc) => l.book === book && l.chapter === chapter;
   const kinds: [string, string[]][] = [
     ['insight', here(INSIGHTS.flatMap((i) => i.verses))],
     ['model', here(MODELS.flatMap((m) => m.verses))],
@@ -209,9 +210,13 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
     ['passion', here([...PASSION.accounts.flatMap((a) => a.events.map((e) => e.ref)), ...PASSION.sayings.map((x) => x.ref)])],
     ['reign', here(KINGS.flatMap((k) => [k.reign.ref, ...(k.reign.chronicles ? [k.reign.chronicles.ref] : [])]))],
   ];
-  for (let v = 1; v <= LONGEST_CHAPTER; v++) {
-    const loc = { book, chapter, verse: v };
-    for (const [kind, refs] of kinds) if (anyContains(refs, loc)) { if (!map.has(v)) map.set(v, new Set()); map.get(v)!.add(kind); }
+  for (const [kind, refs] of kinds) {
+    for (const ref of refs) {
+      // A ref touching the chapter that starts (or ends) outside it covers the chapter from its first verse (or to its last).
+      const r = parseRef(ref)!;
+      const from = inChapter(r.start) ? r.start.verse : 1, to = inChapter(r.end) ? Math.min(r.end.verse, LONGEST_CHAPTER) : LONGEST_CHAPTER;
+      for (let v = from; v <= to; v++) (map.get(v) ?? map.set(v, new Set()).get(v)!).add(kind);
+    }
   }
   return map;
 }
