@@ -46,8 +46,10 @@ function indexFromHash(hash: string): string | null {
 }
 const hashFromIndex = (section: string) => `#/index${section ? `/${section}` : ''}`;
 
+// The stored verse goes through the hash's checks too, so one saved under a book id since renamed is dropped.
+const storedLoc = readStored<VerseLoc | null>('loc', null);
 let state: State = {
-  loc: locFromHash(location.hash) ?? readStored<VerseLoc>('loc', { book: 'Matt', chapter: 1, verse: 1 }),
+  loc: locFromHash(location.hash) ?? (storedLoc && locFromHash(hashFromLoc(storedLoc))) ?? { book: 'Matt', chapter: 1, verse: 1 },
   wordIndex: null,
   layout: readLayout(readStored<unknown>('layout', null), readStored<PanelTab | null>('tab', null)),
   focus: 0,
@@ -128,6 +130,14 @@ export function setLayout(patch: Partial<Layout>) { setState((s) => ({ layout: {
 
 export function goTo(loc: VerseLoc, opts: { openTab?: PanelTab; reveal?: Reveal; feature?: string } = {}) {
   setState((s) => ({ loc, wordIndex: null, index: null, reveal: opts.reveal ?? null, feature: opts.feature ?? null, ...(opts.openTab ? showing(s, opts.openTab) : {}) }));
+}
+
+/**
+ * Opens `tab` at the card (`feature`) a caption in the reader names. A tab shows only what the current verse is
+ * in, so unless it is `here`, the reader first goes to `at`, the verse the caption stands at.
+ */
+export function openCard(tab: PanelTab, feature: string | undefined, here: boolean, at: VerseLoc) {
+  if (here) openTab(tab, { feature: feature ?? null }); else goTo(at, { openTab: tab, feature });
 }
 
 function fromHash() {

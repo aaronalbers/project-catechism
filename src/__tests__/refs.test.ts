@@ -30,6 +30,7 @@ describe('parseRef', () => {
     expect(locFromHash('#/1Cor/13/4')).toEqual({ book: '1Cor', chapter: 13, verse: 4 });
     expect(locFromHash('#/Matt')).toEqual({ book: 'Matt', chapter: 1, verse: 1 });
     expect(locFromHash('#/foo')).toBeNull();
+    expect(locFromHash('#/Jude/9/0')).toEqual({ book: 'Jude', chapter: 1, verse: 1 });
   });
 });
 

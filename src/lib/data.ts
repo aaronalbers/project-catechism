@@ -1,6 +1,6 @@
 import type { CircleData } from './circle';
 import { book } from './refs';
-import type { BibleBook, BiblePerson, Family,InterlinearVerse, MapData, PeopleInBook, Place, Ref, StrongsEntry, Xrefs } from './types';
+import type { BibleBook, BiblePerson, Family, InterlinearVerse, MapData, PeopleInBook, Place, Ref, StrongsEntry, Xrefs } from './types';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const cache = new Map<string, Promise<unknown>>();
@@ -31,7 +31,7 @@ export const loadPeopleForBook = (book: string) => get<PeopleInBook>(`people/by-
 export const personShard = (id: string) => `${id[0]}/${Math.floor(parseInt(id.slice(1), 10) / 100)}`;
 /** Every family, the curated tree and TIPNR's merged, laid out at build time. */
 export const loadFamilies = () => get<Family[]>('people/families.json');
-export const loadPerson =(id: string) => get<Record<string, BiblePerson>>(`people/${personShard(id)}.json`).then((s) => s[id]).catch(() => undefined);
+export const loadPerson = (id: string) => get<Record<string, BiblePerson>>(`people/${personShard(id)}.json`).then((s) => s[id]).catch(() => undefined);
 
 export const loadMap = () => get<MapData>('map.json');
 

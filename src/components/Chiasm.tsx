@@ -1,9 +1,11 @@
 // Chiastic structure drawn on the text: a ladder inside the verse for phrase-level chiasms, and a
 // margin rail with level headers and a structure strip for passage-level ones.
 import type { CSSProperties, ReactNode } from 'react';
-import { goTo, openTab } from '@/app/store';
+import { getState, goTo, openCard } from '@/app/store';
+import { chiasmsFor } from '@/lib/content';
+import { cardId } from '@/lib/catalog';
 import { depth, levelAt, levelStart, levelTouches, partner, tone } from '@/lib/chiasm';
-import { formatRef, type VerseLoc } from '@/lib/refs';
+import { compareLoc, formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import type { Chiasm } from '@/lib/types';
 import { ConfidenceBadge } from './SourceList';
 
@@ -12,7 +14,8 @@ export const label = (s: string) => s.replace(/'/g, '′');
 
 export const levelStyle = (c: Chiasm, i: number) => ({ '--depth': depth(c, i), '--tone': tone(c, i) }) as CSSProperties;
 
-const showSources = () => openTab('links');
+/** The chiasm's card in the Links tab, going first to `at` (a verse of it) if the reader is outside it. */
+const showSources = (c: Chiasm, at: VerseLoc) => openCard('links', cardId({ kind: 'chiasm', id: c.id }), chiasmsFor(getState().loc).includes(c), at);
 
 function Toggle({ show, onToggle }: { show: boolean; onToggle: () => void }) {
   return <button className="chiasm-toggle" aria-pressed={show} onClick={(e) => { e.stopPropagation(); onToggle(); }}>{show ? 'Hide structure' : 'Show structure'}</button>;
@@ -23,7 +26,7 @@ export function ChiasmCaption({ c, show, onToggle }: { c: Chiasm; show: boolean;
   return (
     <div className="chiasm-cap">
       <span className="kind">Chiasm</span>
-      <button className="name" onClick={showSources} title="Summary and sources in the Links panel">{c.title}</button>
+      <button className="name" onClick={() => showSources(c, parseRef(c.ref)!.start)} title="Summary and sources in the Links panel">{c.title}</button>
       <Toggle show={show} onToggle={onToggle} />
     </div>
   );
@@ -32,11 +35,14 @@ export function ChiasmCaption({ c, show, onToggle }: { c: Chiasm; show: boolean;
 /** The whole passage-level structure at the top of a chapter it touches, set in a V by depth. */
 export function ChiasmStrip({ c, loc, show, onToggle }: { c: Chiasm; loc: VerseLoc; show: boolean; onToggle: () => void }) {
   const here = levelAt(c, loc);
+  // Where the chiasm is in this chapter: its start, or the chapter's first verse when it began in an earlier one.
+  const opens = parseRef(c.ref)!.start, top = { book: loc.book, chapter: loc.chapter, verse: 1 };
+  const inChapter = compareLoc(opens, top) >= 0 ? opens : top;
   return (
     <div className="chiasm-strip">
       <div className="chiasm-cap">
         <span className="kind">Chiasm</span>
-        <button className="name" onClick={showSources} title="Summary and sources in the Links panel">{c.title}</button>
+        <button className="name" onClick={() => showSources(c, inChapter)} title="Summary and sources in the Links panel">{c.title}</button>
         <ConfidenceBadge c={c.confidence} />
         <Toggle show={show} onToggle={onToggle} />
       </div>

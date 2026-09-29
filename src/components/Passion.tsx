@@ -2,16 +2,16 @@
 // time in the tomb across them, and a pin for each verse of the account being read that says when. The reader
 // draws the strip under each such verse; the Days tab adds the reading toggle, the legend and the counts.
 import type { CSSProperties } from 'react';
-import { goTo, openTab, setState, useStore } from '@/app/store';
+import { getState, goTo, openCard, setState, useStore } from '@/app/store';
 import { PASSION } from '@/lib/content';
 import { parseRef, type VerseLoc } from '@/lib/refs';
 import {
-  READINGS, WEEKDAYS, buriedAt, clock, countsOf, domain, eventHour, eventTime, eventReached, hourOf, jewishDayAt, jewishDays, readingOf, roseFrom, roseTo,
+  READINGS, WEEKDAYS, buriedAt, clock, countsOf, domain, eventHour, eventTime, eventReached, hourOf, jewishDayAt, jewishDays, passionAt, readingOf, roseFrom, roseTo,
   type Account,
 } from '@/lib/passion';
 import type { PassionEvent, PassionReading, PassionSaying } from '@/lib/types';
+import { plural } from '@/lib/format';
 
-const plural = (n: number, s: string) => `${n} ${s}${n === 1 ? '' : 's'}`;
 /** "≈36 hours", or "≈24–36 hours" when the text leaves the rising open. */
 export const hoursLabel = ([a, b]: [number, number]) => `≈${a === b ? a : `${a}–${b}`} hours`;
 
@@ -28,11 +28,16 @@ export function PassionChart({ event, saying, account, loc, show, onToggle }: {
 }) {
   const r = readingOf(useStore((s) => s.passionReading));
   const c = countsOf(r);
+  // The Days tab tells the moment at the current verse, so from another verse go to this one first.
+  const details = () => {
+    const at = passionAt(getState().loc);
+    openCard('days', undefined, event ? at.event === event : at.saying === saying, parseRef((event ?? saying)!.ref)!.start);
+  };
   return (
     <div className="days-block" onClick={(e) => e.stopPropagation()}>
       <div className="chiasm-cap days-cap">
         <span className="kind">Days</span>
-        <button className="name" onClick={() => openTab('days')} title="Readings, counts and sources in the Days tab">
+        <button className="name" onClick={details} title="Readings, counts and sources in the Days tab">
           {event ? event.label : `“${saying!.quote}”`}
         </button>
         <span className="when">

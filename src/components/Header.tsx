@@ -6,7 +6,7 @@ import type { Beyond } from '@/lib/types';
 import { FEATURE_LABEL, featuresInBook, orderKinds, type FeatureKind } from '@/lib/catalog';
 import { Icon } from './Icons';
 
-/** Accepts "Matt 5:39", "Matthew 5", "mk 14 3", "1 Cor 13:4". */
+/** Accepts "Matt 5:39", "Matthew 5", "mk 14 3", "1 Cor 13:4", "Jude 5". */
 function parseInput(s: string) {
   const m = /^\s*([1-3]?\s?[A-Za-z]+(?:\s(?:of\s)?[A-Za-z]+)*)\s*(\d+)?(?:[:.\s]+(\d+))?\s*$/.exec(s);
   if (!m) return null;
@@ -15,6 +15,8 @@ function parseInput(s: string) {
   if (!b) return null;
   // The Psalter has 150; the Greek's 151st is a book of its own here.
   if (b.id === 'Ps' && m[2] === '151') return { book: 'AddPs', chapter: 1, verse: +(m[3] ?? 1) || 1 };
+  // A book of one chapter is cited by verse alone: "Jude 5".
+  if (b.chapters === 1 && m[2] && !m[3]) return { book: b.id, chapter: 1, verse: +m[2] || 1 };
   return { book: b.id, chapter: Math.min(+(m[2] ?? 1), b.chapters) || 1, verse: +(m[3] ?? 1) || 1 };
 }
 

@@ -1,8 +1,8 @@
 // Everyone the Bible names, from the generated people data, tied to the curated profiles and the family tree.
 import { useEffect, useState } from 'react';
 import { loadPeopleForBook } from './data';
-import { BOOKS, contains, parseRef } from './refs';
-import type { PeopleInBook, Person, Ref } from './types';
+import { BOOKS, parseRef } from './refs';
+import type { PeopleInBook, Ref } from './types';
 
 /** Who a book names, once it has loaded (undefined until then). */
 export function usePeopleInBook(book: string): PeopleInBook | undefined {
@@ -14,7 +14,6 @@ export function usePeopleInBook(book: string): PeopleInBook | undefined {
   }, [book]);
   return data?.book === book ? data.data : undefined;
 }
-
 
 /** One person in a chapter's list: who they are and the verses of the chapter that name them. */
 export interface Named { id: string; name: string; title: string; sex: 'male' | 'female'; verses: number[] }
@@ -32,12 +31,6 @@ export function namedInChapter(data: PeopleInBook, chapter: number): Named[] {
     }
   }
   return [...out.values()];
-}
-
-/** The people-data id for a family-tree entry, among the people a chapter names. */
-export function namedFor(p: Person, named: Named[], book: string, chapter: number): Named | undefined {
-  if (p.tipnr) return named.find((n) => n.id === p.tipnr);
-  return named.find((n) => n.name === p.name && n.verses.some((v) => p.refs.some((r) => contains(r, { book, chapter, verse: v }))));
 }
 
 /** How many verses in each book name someone, in canonical order, for the strip of where they appear. */

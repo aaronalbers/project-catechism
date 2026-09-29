@@ -98,6 +98,8 @@ export function PeoplePanel() {
   const nodeSet = useRef<DataSet<Node> | null>(null);
   const fresh = useRef(true);
   const [selected, setSelected] = useState<Person | null>(null);
+  // A genealogy card picked in the tree belongs to its chapter; "← all in this chapter" would name another.
+  useEffect(() => setSelected(null), [loc.book, loc.chapter]);
   const person = useStore((s) => s.person);
   const feature = useStore((s) => s.feature);
   const byBook = usePeopleInBook(loc.book);

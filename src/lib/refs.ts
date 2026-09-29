@@ -124,10 +124,11 @@ export function sameLoc(a: VerseLoc, b: VerseLoc): boolean {
   return a.book === b.book && a.chapter === b.chapter && a.verse === b.verse;
 }
 
-/** Route hash: #/Matt/1/1 */
+/** Route hash: #/Matt/1/1. A chapter past the book's last is its last. */
 export function locFromHash(hash: string): VerseLoc | null {
   const m = /^#\/([1-3]?[A-Za-z]+)(?:\/(\d+))?(?:\/(\d+))?/.exec(hash);
-  if (!m || !byId.has(m[1])) return null;
-  return { book: m[1], chapter: +(m[2] ?? 1), verse: +(m[3] ?? 1) };
+  const b = m && byId.get(m[1]);
+  if (!b) return null;
+  return { book: b.id, chapter: Math.min(Math.max(1, +(m[2] ?? 1)), b.chapters), verse: Math.max(1, +(m[3] ?? 1)) };
 }
 export function hashFromLoc(loc: VerseLoc): string { return `#/${loc.book}/${loc.chapter}/${loc.verse}`; }

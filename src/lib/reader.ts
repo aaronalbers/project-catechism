@@ -56,19 +56,20 @@ const AHEAD = 4;
 /** Whether reading goes on from `loc` to `next`: always when continuous, otherwise only within the chapter. */
 const readsOn = (loc: VerseLoc, next: VerseLoc) => rs.continuous || (next.book === loc.book && next.chapter === loc.chapter);
 
-export async function play(from?: VerseLoc) {
+/** Reads aloud from `from` (the current verse by default); `notice` is shown in place of an error while it does. */
+export async function play(from?: VerseLoc, notice: string | null = null) {
   stop();
   const ctl = new AbortController();
   abort = ctl;
   const engine = engines[rs.engine];
-  set({ status: 'loading', error: null });
+  set({ status: 'loading', error: notice });
   try {
     await engine.load((p) => set({ progress: p }), rs.device);
   } catch (e) {
     if (rs.engine === 'kokoro') {
-      // Fall back rather than leaving the user with silence.
-      set({ engine: 'browser', voice: 'default', progress: null, error: `Kokoro unavailable (${e instanceof Error ? e.message : e}); using browser speech.` });
-      return play(from);
+      // Fall back rather than leaving the user with silence, and say why.
+      set({ engine: 'browser', voice: 'default', progress: null });
+      return play(from, `Kokoro unavailable (${e instanceof Error ? e.message : e}); using browser speech.`);
     }
     set({ status: 'error', error: e instanceof Error ? e.message : String(e) });
     return;
@@ -82,6 +83,8 @@ export async function play(from?: VerseLoc) {
     while (!ctl.signal.aborted) {
       const text = await verseText(loc);
       const next = await nextVerse(loc);
+      // Stopped while the text loaded: an engine never hears an abort that came before it began speaking.
+      if (ctl.signal.aborted) break;
       void prefetchFrom(engine, loc, next, ctl.signal);
       set({ status: 'playing' });
       if (text) await engine.speak(text, { voice: rs.voice, speed: rs.speed, signal: ctl.signal });

@@ -2,13 +2,15 @@
 // count, all on one scale, each subtotal the text gives stacked from its rows, and the whole list
 // stacked under the verse that gives the total.
 import type { CSSProperties } from 'react';
-import { openTab } from '@/app/store';
+import { getState, openCard } from '@/app/store';
+import { cardId } from '@/lib/catalog';
 import { comparedWith, earlierRow, groupMax, groupOf, groupRows, rowReached, tallyMax, tallyPlace, tallySum, wideLabels } from '@/lib/tally';
-import type { VerseLoc } from '@/lib/refs';
+import { contains, parseRef, type VerseLoc } from '@/lib/refs';
 import type { Tally, TallyGroup, TallyRow } from '@/lib/types';
 import { ConfidenceBadge } from './SourceList';
 
-const showSources = () => openTab('links');
+/** The tally's card in the Links tab, going first to where it opens if the reader is outside it. */
+const showSources = (t: Tally) => openCard('links', cardId({ kind: 'tally', id: t.id }), contains(t.ref, getState().loc), parseRef(t.ref)!.start);
 const fmt = (n: number) => n.toLocaleString('en-US');
 /** A change with its sign: +20,500, −37,100. */
 const delta = (n: number) => `${n > 0 ? '+' : n < 0 ? '−' : '±'}${fmt(Math.abs(n))}`;
@@ -22,7 +24,7 @@ export function TallyCaption({ t, show, onToggle }: { t: Tally; show: boolean; o
     <div className="tally-cap">
       <div className="chiasm-cap">
         <span className="kind">Count</span>
-        <button className="name" onClick={showSources} title="Summary and sources in the Links panel">{t.title}</button>
+        <button className="name" onClick={() => showSources(t)} title="Summary and sources in the Links panel">{t.title}</button>
         <ConfidenceBadge c={t.confidence} />
         <button className="chiasm-toggle" aria-pressed={show} onClick={(e) => { e.stopPropagation(); onToggle(); }}>{show ? 'Hide chart' : 'Show chart'}</button>
       </div>

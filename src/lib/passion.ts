@@ -50,7 +50,7 @@ export function jewishDays(r: PassionReading): JewishDay[] {
 export function nightsIn(r: PassionReading): number {
   const [a, b] = [buriedAt(r), roseTo(r)];
   let n = 0;
-  for (let s = Math.floor((a - SUNSET) / 24) * 24 + SUNSET; s < b; s += 24) if (s + 12 > a) n++;
+  for (let s = Math.floor((a - SUNSET) / 24) * 24 + SUNSET; s < b; s += 24) if (s + 24 - SUNSET + SUNRISE > a) n++;
   return n;
 }
 /** How a reading counts the three days: the days counted inclusively, the nights, and the hours in the tomb (a range when the text leaves the rising open). */

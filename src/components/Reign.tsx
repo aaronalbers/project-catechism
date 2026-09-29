@@ -3,14 +3,16 @@
 // prophets of the time, in one of the reconstructions or with the stated lengths end to end. The reader draws the chart
 // alone under each accession; the Reign tab adds the date toggle, the legend and the facts.
 import type { CSSProperties, ReactNode } from 'react';
-import { goTo, openTab, setState, useStore } from '@/app/store';
+import { getState, goTo, openCard, setState, useStore } from '@/app/store';
+import { cardId } from '@/lib/catalog';
 import { MONARCHY } from '@/lib/content';
 import { formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import {
   DOMAIN, KINGDOM_NAME, KINGDOMS, READINGS, VERDICT_LABEL, anchorFits, bc, chartRef, datesIn, dynasties, kingById, laneOf, modeLabel, overlapSpan,
-  prophetKingdom, prophetRows, prophetSpan, reached, readingOf, reckoningAt, span, statedBefore, synchronism, verdictClass, verdictIn, windowFor, type Account, type DateMode, type King,
+  prophetKingdom, prophetRows, prophetSpan, reached, readingOf, reckoningAt, reignAt, span, statedBefore, synchronism, verdictClass, verdictIn, windowFor, type Account, type DateMode, type King,
 } from '@/lib/reign';
 import type { Verdict } from '@/lib/types';
+import { plural } from '@/lib/format';
 import { RefChip } from './SourceList';
 
 // Rows of the plot, in pixels, from the top of Israel's lane: the SVG overlay uses the same numbers. Israel's
@@ -20,7 +22,6 @@ const LANE = 18, HOUSES = 21, JUDAH = 33, PROPHET_ROW = 14, PROPHET_GAP = 6;
 const go = (ref: string | undefined) => { const r = ref && parseRef(ref); if (r) goTo(r.start); };
 const stop = (f: () => void) => (e: { stopPropagation: () => void }) => { e.stopPropagation(); f(); };
 const years = (a: number, b: number) => `≈${bc(a)}–${bc(b)} BC`;
-const plural = (n: number, s: string) => `${n} ${s}${n === 1 ? '' : 's'}`;
 /** What follows a king's years to say which view gave them: nothing for Thiele's, the default. */
 export const modeSuffix = (mode: DateMode) => { const r = readingOf(mode); return !r ? ' as stated' : r === READINGS[0] ? '' : ` (${r.label})`; };
 
@@ -29,11 +30,13 @@ export function ReignChart({ k, account, loc, show, onToggle }: { k: King; accou
   const mode = useStore((s) => s.reignDates);
   const [a, b] = span(k, mode);
   const v = verdictClass(verdictIn(k, account));
+  // The Reign tab shows the reign being read, so from before his accession go to it first.
+  const details = () => { const at = reignAt(getState().loc); openCard('reigns', cardId({ kind: 'reign', id: k.id }), at?.k === k && at.account === account, parseRef(chartRef(k, account)!)!.start); };
   return (
     <div className="reign-block" onClick={(e) => e.stopPropagation()}>
       <div className="chiasm-cap reign-cap">
         <span className="kind">Reign</span>
-        <button className="name" onClick={() => openTab('reigns')} title="Details, dates and sources in the Reign tab">
+        <button className="name" onClick={details} title="Details, dates and sources in the Reign tab">
           {k.name}, {k.title.toLowerCase()} of {KINGDOM_NAME[k.reign.kingdom]}
         </button>
         <span className="when">{years(a, b)}{modeSuffix(mode)}</span>

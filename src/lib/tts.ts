@@ -209,6 +209,7 @@ export class BrowserEngine implements Engine {
   async load() { if (!('speechSynthesis' in window)) throw new Error('This browser has no speech synthesis.'); }
   voices() {
     // 'default' leaves the utterance's voice unset, so the system's own choice speaks; it is listed so the menu shows it.
+    if (!('speechSynthesis' in window)) return [{ id: 'default', label: 'System default' }];
     return [{ id: 'default', label: 'System default' }, ...speechSynthesis.getVoices().filter((v) => v.lang.startsWith('en')).map((v) => ({ id: v.name, label: `${v.name} (${v.lang})` }))];
   }
   prefetch() { /* nothing to warm */ }
