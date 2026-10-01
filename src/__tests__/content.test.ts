@@ -57,6 +57,7 @@ describe('content integrity', () => {
       ...QUOTES.flatMap((q) => [q.quoting, q.quoted]),
       ...FRAGMENTS.flatMap((f) => f.contents),
       ...SPEAKERS.map((s) => s.ref),
+      ...WRITERS.flatMap((w) => w.books.flatMap((b) => b.refs ?? [])),
       ...CHIASMS.flatMap((c) => [c.ref, ...c.levels.map((l) => l.ref)]),
       ...RULERS.flatMap((r) => r.refs),
       ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)]), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => [a.ref, ...a.changes.map((c) => c.ref)])) ]),
@@ -187,6 +188,13 @@ describe('content integrity', () => {
       const file = new URL(`${personShard(id)}.json`, peopleDir);
       const shard = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown> : {};
       expect(shard[id], `${p.id} → ${id}`).toBeTruthy();
+    }
+  });
+  it.skipIf(!existsSync(peopleDir))('writers and speakers name people the people data has', () => {
+    for (const x of [...WRITERS, ...SPEAKERS]) if (x.person) {
+      const file = new URL(`${personShard(x.person)}.json`, peopleDir);
+      const shard = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown> : {};
+      expect(shard[x.person], `${x.id} → ${x.person}`).toBeTruthy();
     }
   });
 
@@ -755,6 +763,26 @@ describe('content integrity', () => {
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);
     for (const w of WRITERS) for (const b of w.books) expect(BOOKS.some((x) => x.id === b.book), `${w.id}: ${b.book}`).toBe(true);
+  });
+  // The People tab says who wrote every verse, so no book (and no psalm) may be left without an entry.
+  it('every book and every psalm has a writer entry', () => {
+    for (const b of BOOKS) expect(WRITERS.some((w) => w.books.some((x) => x.book === b.id)), `no writer for ${b.id}`).toBe(true);
+    for (const w of WRITERS) for (const b of w.books) for (const r of b.refs ?? []) expect(parseRef(r)?.start.book, `${w.id}: ${r}`).toBe(b.book);
+    for (let ch = 1; ch <= 150; ch++) {
+      const loc = { book: 'Ps', chapter: ch, verse: 1 };
+      expect(WRITERS.some((w) => w.books.some((b) => b.book === 'Ps' && b.refs?.some((r) => contains(r, loc)))), `no writer for Psalm ${ch}`).toBe(true);
+    }
+  });
+  // A psalm's writer is whoever its heading names, so each list is checked against the BSB's headings both ways:
+  // every psalm listed carries the heading, and every psalm carrying it is listed.
+  it.skipIf(!existsSync(bibleDir))('psalm writers are the ones the headings name', () => {
+    const ps = JSON.parse(readFileSync(new URL('Ps.json', bibleDir), 'utf8')) as BibleBook;
+    const NOT_A_HEADING: Record<number, string> = { 132: "'remember on behalf of David' is the psalm's first line, not its heading" };
+    for (const w of WRITERS.filter((x) => x.heading)) for (let ch = 1; ch <= 150; ch++) {
+      const listed = w.books.some((b) => b.refs?.includes(`Ps.${ch}`));
+      const headed = !NOT_A_HEADING[ch] && ps.chapters[ch - 1][0].t.toLowerCase().includes(w.heading!.toLowerCase());
+      expect(listed, `Psalm ${ch}: ${w.id} is ${listed ? 'listed but not in its heading' : 'in its heading but not listed'}`).toBe(headed);
+    }
   });
 
   // Videos embed from YouTube where BibleProject publishes there, and otherwise link to

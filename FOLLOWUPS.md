@@ -15,8 +15,9 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 
 - **Jerome's *Prologus Galeatus*.** It is a Latin witness that Samuel, Kings, Chronicles, Ezra–Nehemiah and the Twelve
   were each counted as one book. *Left out because* no working link was found: New Advent's Jerome pages
-  (`fathers/3006`–`3010`) are other works. *Needed:* a public-domain translation online (CCEL's NPNF series 2,
-  vol. 6, is a likely place), checked for the wording on each book, then cited on the `samuel`, `kings`,
+  (`fathers/3006`–`3010`) are other works. *Found since:* CCEL has it as the Preface to the Books of Samuel and
+  Kings (https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html), which `writers.json` now cites for Tobit and
+  1 Maccabees. *Needed:* a check of its wording on each book, then a citation on the `samuel`, `kings`,
   `chronicles`, `ezra` and `twelve` entries.
 - **A Dead Sea Scroll holding both halves of Samuel (4QSam-a, 4Q51).** This would be archaeological evidence to go
   with the Talmud and Origen, which are texts. *Left out because* the Leon Levy library URL tried
@@ -135,3 +136,26 @@ The list aims to include every BibleProject video, wherever it applies.
 - **No interlinear, Strong's or word studies.** No open tagged Greek text of these books exists yet. STEPBible's TAGOT
   is announced as "coming soon". *Needed:* when it is released, build their interlinear from it. The panels say
   why they're empty until then.
+
+## Writers and speakers (`content/writers.json`, `content/speakers.json`, the People tab), recorded 2026-10-01
+
+### Incomplete
+
+- **Most verses have no speaker.** `speakers.json` has 19 hand-picked passages, so the People tab's "Speaking in
+  verse" shows nothing for most of the text, though the text says who speaks almost everywhere. *Needed:* a
+  verse-level speaker dataset under an open licence, if one exists, checked against a sample of passages before
+  it is used; failing that, more curated passages, starting with the long speeches (the prophets' oracles, Job's
+  dialogue, Deuteronomy, the discourses in John).
+- **Some speakers have no person link.** "'Some of those present' — John 12:4 names Judas Iscariot" (Mark 14:4–5)
+  and "The narrator (Matthew)" are left unlinked, since the passage itself does not name them. *Needed:* a
+  decision on whether a row may link to someone a parallel passage or tradition names, and how it would say so.
+
+### Citations not checked against the work
+
+Cited from memory without a link to the text: the Muratorian Fragment (lines 69–71, on Wisdom), the Septuagint's
+opening sentence of Lamentations, Jerome's Commentary on Daniel (on Porphyry), the Didascalia Apostolorum (on the
+Prayer of Manasseh), Josephus' Antiquities book 11 (on 1 Esdras), the British Museum number of the Amenemope
+papyrus (EA 10474), and the Dead Sea Scroll numbers (Tobit 4Q196–200, 7Q2, 11Q5 column 28, 4Q201–212, 4Q216,
+Mas1h, 1QpHab). *Needed:* each checked against a public-domain translation or the museum's or library's catalogue
+page, with a `url` added.
+

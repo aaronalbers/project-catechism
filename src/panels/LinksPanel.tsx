@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { goTo, useFeatureInView, useStore } from '@/app/store';
 import { loadParallels, loadVerseText, loadXrefs } from '@/lib/data';
-import { chiasmsFor, fragmentsFor, fulfilmentRefs, propheciesFor, quotesFor, speakerFor, talliesFor, writersFor, rulersFor } from '@/lib/content';
+import { chiasmsFor, fragmentsFor, fulfilmentRefs, propheciesFor, quotesFor, talliesFor, rulersFor } from '@/lib/content';
 import { book, contains, formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Fulfilment, Prophecy, Xrefs } from '@/lib/types';
@@ -82,18 +82,12 @@ export function LinksPanel() {
   const fragments = fragmentsFor(loc);
   const chiasms = chiasmsFor(loc);
   const tallies = talliesFor(loc);
-  const speakers = speakerFor(loc);
-  const writers = writersFor(loc.book);
   const rulers = rulersFor(loc);
   useFeatureInView();
   return (
     <div className="panel-body">
       <div className="panel-title">Links across the Bible</div>
       <LinkCircle />
-      {speakers.length > 0 && <>
-        <div className="panel-title">Who is speaking</div>
-        {speakers.map((s) => <div className="card" key={s.id}><h3>{s.speaker}</h3>{s.summary && <p className="summary">{s.summary}</p>}<div className="verses"><RefChip r={s.ref} /></div>{s.sources && <SourceList sources={s.sources} />}</div>)}
-      </>}
       {prophecies.length > 0 && <>
         <div className="panel-title">Prophecy</div>
         {prophecies.map(({ p, role }) => (
@@ -175,16 +169,6 @@ export function LinksPanel() {
       <div className="panel-title">Cross references</div>
       {refs.length ? <ul className="linklist">{refs.map(([to, votes]) => <XrefRow key={to} to={to} votes={votes} />)}</ul> : <div className="empty">{beyond ? 'OpenBible’s cross references cover only the 66 books.' : 'No cross references recorded for this verse.'}</div>}
       <div className="sources"><ol><li><span className="skind">Dataset</span><a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noreferrer">OpenBible.info cross references</a> (CC-BY), ranked by reader votes.</li></ol></div>
-      {writers.length > 0 && <>
-        <div className="panel-title">Who wrote {loc.book === 'Ps' ? 'this' : 'this book'}</div>
-        {writers.map((w) => (
-          <div className="card" key={w.id}>
-            <h3><span style={{ flex: 1 }}>{w.name}</span><ConfidenceBadge c={w.confidence} /></h3>
-            <p className="summary">{w.summary}</p>
-            <SourceList sources={w.sources} traditions={w.traditions} />
-          </div>
-        ))}
-      </>}
     </div>
   );
 }

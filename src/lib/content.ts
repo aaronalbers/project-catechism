@@ -80,7 +80,7 @@ export function quotesFor(loc: VerseLoc) {
     .filter((x): x is { q: Quote; role: 'quoting' | 'quoted' } => x.role !== null);
 }
 export function fragmentsFor(loc: VerseLoc) { return FRAGMENTS.filter((f) => anyContains(f.contents, loc)); }
-export function writersFor(book: string) { return WRITERS.filter((w) => w.books.some((b) => b.book === book)); }
+export function writersFor(loc: VerseLoc) { return WRITERS.filter((w) => w.books.some((b) => b.book === loc.book && (!b.refs || b.refs.some((r) => contains(r, loc))))); }
 export function speakerFor(loc: VerseLoc) { return SPEAKERS.filter((s) => contains(s.ref, loc)); }
 export function chiasmsFor(loc: VerseLoc) { return CHIASMS.filter((c) => contains(c.ref, loc) || c.levels.some((l) => contains(l.ref, loc))); }
 export function rulersFor(loc: VerseLoc) { return RULERS.filter((r) => anyContains([...r.refs, ...(r.reign ? [r.reign.ref, ...(r.reign.chronicles ? [r.reign.chronicles.ref] : [])] : [])], loc)); }

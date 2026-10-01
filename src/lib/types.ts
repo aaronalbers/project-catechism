@@ -183,8 +183,11 @@ export interface Prophecy { id: string; title: string; foretold: Ref; fulfilled:
 /** `allusion` marks an echo rather than a quotation: a phrase or an image taken up, not words cited. */
 export interface Quote { id: string; quoting: Ref; quoted: Ref; summary: string; sources?: Source[]; allusion?: true }
 export interface Fragment { id: string; siglum: string; name: string; date: string; contents: Ref[]; held: string; summary: string; sources: Source[]; media?: Media[] }
-export interface Writer { id: string; name: string; books: { book: string; refs?: Ref[] }[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
-export interface Speaker { id: string; ref: Ref; speaker: string; summary?: string; sources?: Source[] }
+/** Who wrote a book, or the chapters `refs` name (the Psalms, by their headings). `person` is the TIPNR id the
+ *  People tab links to; `heading` is the words a psalm's heading names them by, checked against the BSB. */
+export interface Writer { id: string; name: string; person?: string; heading?: string; books: { book: string; refs?: Ref[] }[]; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
+/** Who speaks a passage; `person` is their TIPNR id, absent for a speaker the people data has no entry for (God, an angel, a crowd). */
+export interface Speaker { id: string; ref: Ref; speaker: string; person?: string; summary?: string; sources?: Source[] }
 /**
  * One member of a chiasm. `text` is its label; `quote` is the exact BSB wording it covers, which
  * lets the reader lay a phrase-level chiasm out in the verse itself. Passage-level chiasms, whose

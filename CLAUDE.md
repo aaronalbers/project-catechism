@@ -141,6 +141,13 @@ them in CI — read it before adding content.
   it cites who records the parallel (the Nestle–Aland index). Links between the 66 and the books beyond them are
   curated here, from that index, each checked against the WEB or Charles numbering of the verse.
 
+- Writers (`content/writers.json`) say who wrote each book, and speakers (`content/speakers.json`) who speaks a
+  passage; the People tab lists both above the people in the verse. `person` is the TIPNR id a row links to (none
+  for God, an angel or an unknown writer), and a verse that names no one frames its speaker in the family tree. A
+  writer's `books[].refs` limit it to some chapters: the Psalms go by their headings, each writer's `heading`
+  being the words that name them ("of Asaph"). A test fails the build if a book or psalm has no writer, if a psalm
+  is listed under a heading it lacks or carries a heading it is not listed under, or if a `person` does not resolve.
+
 - Word cards (`kind: 'word'`) are named for their Strong's number (`word-h5775-oph`), or list several in
   `strongs`. `narrows` marks a word the English is narrower than: `rendered` names the BSB renderings that
   narrow it, in the singular ("earth", not "land"), and `means` says what the word covers. The reader

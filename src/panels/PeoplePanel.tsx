@@ -2,10 +2,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Network, type Edge, type Node } from 'vis-network';
 import { DataSet } from 'vis-data';
 import { goTo, openPerson, setState, useStore } from '@/app/store';
-import { PEOPLE, PEOPLE_BY_ID, PROFILE_BY_PERSON, PROFILE_INDEX, peopleFor, peopleInChapter } from '@/lib/content';
-import { RefChip, SourceList } from '@/components/SourceList';
-import { book as bookOf, parseRef } from '@/lib/refs';
-import type { Family, Person } from '@/lib/types';
+import { PEOPLE, PEOPLE_BY_ID, PROFILE_BY_PERSON, PROFILE_INDEX, peopleFor, peopleInChapter, speakerFor, writersFor } from '@/lib/content';
+import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
+import { book as bookOf, formatRef, parseRef } from '@/lib/refs';
+import type { Confidence, Family, Person, Source } from '@/lib/types';
 import { loadFamilies } from '@/lib/data';
 import { formatYear } from '@/lib/format';
 import { namedInChapter, usePeopleInBook, type Named } from '@/lib/people';
@@ -83,6 +83,30 @@ function NamedRow({ n, here = false }: { n: Named; here?: boolean }) {
   );
 }
 
+/** Who speaks or wrote the verse, as a row like a named person's: it opens the person when the people data has
+ *  them (not God, an angel or an unknown writer), and says underneath what the attribution rests on. */
+function Credit({ name, person, life, confidence, summary, sources, traditions }: { name: string; person?: string; life?: string; confidence?: Confidence; summary?: string; sources?: Source[]; traditions?: string[] }) {
+  const prof = person ? PROFILE_BY_PERSON.get(person) : undefined;
+  const row = <>
+    {prof?.thumb ? <img className="thumb" src={prof.thumb} alt="" loading="lazy" /> : <span className={`thumb initial${person ? '' : ' none'}`} aria-hidden="true">{name.replace(/^\W+/, '')[0]}</span>}
+    <span className="who">
+      <span className="name">{name}{prof && <span className="chip profiled" title="Has a written profile">Profile</span>}</span>
+      {life && <span className="life">{life}</span>}
+    </span>
+    {confidence && <ConfidenceBadge c={confidence} />}
+  </>;
+  return (
+    <div className="credit">
+      {person ? <button className="person named" onClick={() => openPerson(person)}>{row}</button> : <div className="person named static">{row}</div>}
+      {(summary || sources?.length) && <details>
+        <summary>What this rests on</summary>
+        {summary && <p className="summary">{summary}</p>}
+        {sources && <SourceList sources={sources} traditions={traditions} />}
+      </details>}
+    </div>
+  );
+}
+
 export function PeoplePanel() {
   const loc = useStore((s) => s.loc);
   const here = useMemo(() => peopleFor(loc), [loc]);
@@ -116,10 +140,14 @@ export function PeoplePanel() {
   const familyOf = useMemo(() => new Map((families ?? []).flatMap((f, i) => f.n.map((x) => [x[0], i] as const))), [families]);
   // A curated entry is drawn as the TIPNR person it is; the few the text leaves unnamed keep their curated id.
   const nodeOf = (p: Person) => p.tipnr ?? p.id;
-  // The people the verse itself names; only a verse that names no one falls back on the curated passages
-  // (Abijah's 1 Kings 15:1–8), which would otherwise pull the frame away from David in 15:5.
+  const speakers = speakerFor(loc);
+  const writers = writersFor(loc);
+  // The people the verse itself names; a verse that names no one frames who is speaking it (Mary through the
+  // Magnificat), and only then the curated passages (Abijah's 1 Kings 15:1–8), which would otherwise pull the
+  // frame away from David in 15:5.
   const inVerse = named.filter((x) => x.verses.includes(loc.verse)).map((x) => x.id).filter((id) => familyOf.has(id));
-  const focus = inVerse.length ? inVerse : here.map(nodeOf).filter((id) => familyOf.has(id));
+  const speaking = speakers.flatMap((sp) => (sp.person && familyOf.has(sp.person) ? [sp.person] : []));
+  const focus = inVerse.length ? inVerse : speaking.length ? speaking : here.map(nodeOf).filter((id) => familyOf.has(id));
   // The family to draw: the verse's, else the first the chapter names someone in.
   const familyIndex = focus.length ? familyOf.get(focus[0]) : named.map((x) => familyOf.get(x.id)).find((i) => i !== undefined);
   const family = familyIndex === undefined ? undefined : families![familyIndex];
@@ -207,6 +235,8 @@ export function PeoplePanel() {
       <Lifespans people={graphPeople} />
       <div className="people-list">
         {selected && <button className="chip link" onClick={() => setSelected(null)}>← all in this chapter</button>}
+        {!selected && speakers.length > 0 && <><div className="panel-title">Speaking in verse {loc.verse}</div>{speakers.map((sp) => <Credit key={sp.id} name={sp.speaker} person={sp.person} life={formatRef(sp.ref)} summary={sp.summary} sources={sp.sources} />)}</>}
+        {!selected && writers.length > 0 && <><div className="panel-title">{loc.book === 'Ps' ? `Who wrote Psalm ${loc.chapter}` : `Who wrote ${bookOf(loc.book)?.name}`}</div>{writers.map((w) => <Credit key={w.id} name={w.name} person={w.person} confidence={w.confidence} summary={w.summary} sources={w.sources} traditions={w.traditions} />)}</>}
         {!selected && byBook === undefined && <div className="loading">Loading people…</div>}
         {!selected && byBook && !named.length && <div className="empty"><p>{bookOf(loc.book)?.beyond ? `The people list comes from STEPBible's names data, which covers only the 66 books, so it lists no one in ${bookOf(loc.book)?.name}.` : `No one is named in ${bookOf(loc.book)?.name} ${loc.chapter}.`}</p></div>}
         {!selected && hereNamed.length > 0 && <><div className="panel-title">In verse {loc.verse}</div>{hereNamed.map((n) => <NamedRow key={n.id} n={n} here />)}</>}

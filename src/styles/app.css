@@ -335,6 +335,15 @@ body.resizing-y { cursor: row-resize; }
 .person .thumb { flex: none; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; object-position: 50% 25%; background: var(--surface-2); }
 .person .thumb.initial { display: grid; place-items: center; font-family: var(--serif); font-size: 17px; color: var(--accent-ink); background: var(--accent); opacity: 0.75; }
 .person .thumb.initial.female { background: var(--interpretation); }
+.person .thumb.initial.none { background: var(--surface-2); color: var(--muted); opacity: 1; }
+.person.named.static { cursor: default; }
+.person.named.static:hover { background: none; }
+.credit { border-bottom: 1px solid var(--border); }
+.credit .person.named { border-bottom: 0; }
+.credit .badge { flex: none; }
+.credit details { margin: -4px 0 8px 46px; font-size: 13px; }
+.credit summary { color: var(--muted); cursor: pointer; }
+.credit .summary { margin: 6px 0; }
 .chip.profiled { margin-left: 6px; font-size: 10px; padding: 0 6px; font-weight: 500; vertical-align: 2px; }
 .person-link { margin: 4px 0 8px; }
 .profile .profile-head { margin: 10px 0 8px; }
