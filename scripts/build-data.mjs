@@ -14,6 +14,8 @@
 //   people/families.json         every family, the curated tree and TIPNR's merged, laid out with dagre
 //   people/<H|G>/<n>.json        everyone named in the Bible (STEPBible's TIPNR), keyed by their Strong's
 //                                number, in shards of a hundred numbers
+//   speakers/<Book>.json         who speaks each verse ("ch.v" → speakers), from Glyssen, with the TIPNR person
+//                                each single speaker is
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
 //                                size reference drawn beside models too big for a figure
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
@@ -26,6 +28,7 @@ import { RARE, core, fold, isContentWord } from './renderings.mjs';
 import { families, familyGraph, layout } from './families.mjs';
 import { kinList, otherNames, parseTipnr, personShard, tagWords, unnamed } from './people.mjs';
 import { USFM_BOOKS, parseEnoch, parseJubilees, parseUsfm, unpackModule } from './beyond.mjs';
+import { USFM_66, parseCharacterVerse, parseCharacters, parseOverrides, resolver } from './speakers.mjs';
 
 const OUT = new URL('../public/data/', import.meta.url);
 /** A cached file's path on disk (URL.pathname would keep %20 for a space). */
@@ -580,6 +583,71 @@ async function buildPeople() {
   for (const [book, data] of perBook) await writeJson(`people/by-book/${book}.json`, data);
   console.log('people  ', out.length, 'people,', easton.size, "with Easton's entries");
   await buildFamilies(out);
+  await buildSpeakers(out);
+}
+
+// ---------- Speakers: Glyssen's casting of every speech, with the TIPNR person each single speaker is ----------
+const GLYSSEN = (file) => new URL(file.replace('*', '504e143'), CACHE);
+/**
+ * Speakers Glyssen casts as someone the text does not name, left unlinked: [book, Glyssen character, why]. The
+ * People tab lists each where it credits Glyssen.
+ */
+const SPEAKER_UNLINKED = [
+  ['John', 'John', "John's Gospel never names the disciple whom Jesus loved; calling him John is tradition"],
+  ['Josh', 'Jesus', "Glyssen casts the commander of the LORD's army (5:14) as Jesus, a reading the text does not make"],
+];
+async function buildSpeakers(people) {
+  const the66 = books.filter((b) => !b.beyond).map((b) => b.id);
+  if (the66.length !== USFM_66.length) throw new Error('speakers: the 66 and Glyssen\'s book codes differ in number');
+  const bookOf = new Map(USFM_66.map((code, i) => [code, the66[i]]));
+  const lastVerse = new Map();
+  for (const [b, c, v] of verseIndex) lastVerse.set(`${b}.${c}`, Math.max(v, lastVerse.get(`${b}.${c}`) ?? 0));
+  const characters = parseCharacters(await readFile(GLYSSEN('glyssen-CharacterDetail-*.txt'), 'utf8'));
+  const personOf = resolver(people, characters);
+  const unlinked = new Set(SPEAKER_UNLINKED.map(([b, c]) => `${b}|${c}`));
+  const namesOfPerson = new Map(people.map((p) => [p.id, [p.name, ...(p.also ?? [])]]));
+  const rows = [
+    ...parseCharacterVerse(await readFile(GLYSSEN('glyssen-CharacterVerse-*.txt'), 'utf8'), bookOf),
+    ...parseOverrides(new TextDecoder('utf-16').decode(await readFile(GLYSSEN('glyssen-NarratorOverrides-*.xml'))), bookOf, (b, c) => lastVerse.get(`${b}.${c}`) ?? 0),
+  ];
+  // A speaker is matched verse by verse, but a passage that never names them (Jeremiah's laments) leaves them
+  // unmatched, and a namesake named beside them (Jaazaniah's father Jeremiah, 35:3) can be matched by mistake. Where
+  // one person has more than half of a speaker's matches in a book, that person is theirs throughout it.
+  const matched = new Map();
+  for (const r of rows) {
+    const p = personOf(r.character, r.book, r.ch, r.v);
+    if (!p) continue;
+    const m = matched.get(`${r.book}|${r.character}`) ?? matched.set(`${r.book}|${r.character}`, new Map()).get(`${r.book}|${r.character}`);
+    m.set(p, (m.get(p) ?? 0) + 1);
+  }
+  const usual = new Map([...matched].flatMap(([key, m]) => {
+    const total = [...m.values()].reduce((a, b) => a + b, 0);
+    const [id, n] = [...m].sort((a, b) => b[1] - a[1])[0];
+    return n / total > 0.5 ? [[key, id]] : [];
+  }));
+  const perBook = new Map();
+  for (const r of rows) {
+    const verses = perBook.get(r.book) ?? perBook.set(r.book, {}).get(r.book);
+    const list = (verses[`${r.ch}.${r.v}`] ??= []);
+    const name = r.alias || r.character;
+    const had = list.find((x) => x.n === name);
+    if (had) { if (had.k && r.kind === 'speaks') delete had.k; continue; }
+    let p = usual.get(`${r.book}|${r.character}`) ?? personOf(r.character, r.book, r.ch, r.v);
+    // The row shows Glyssen's alias where it has one ("Jethro's daughters", cast as Zipporah): link only someone it names.
+    if (p && (unlinked.has(`${r.book}|${r.character}`) || !namesOfPerson.get(p).some((n) => new RegExp(`\\b${n}\\b`).test(name)))) p = undefined;
+    // Glyssen's delivery is a word for the actor ("praying", "amazed"); its longer notes are for the producer.
+    const d = /^[\w' -]+$/.test(r.delivery) && r.delivery.split(' ').length <= 3 ? r.delivery : '';
+    list.push({ n: name, ...(p ? { p } : {}), ...(r.kind !== 'speaks' ? { k: r.kind } : {}), ...(d ? { d } : {}) });
+  }
+  // Words quoted are kept only where no one speaks the verse: in John 21:7 Glyssen also lists the beloved disciple's
+  // words as quoted from "John", a name the Gospel never gives him.
+  for (const verses of perBook.values()) for (const [key, list] of Object.entries(verses)) {
+    if (list.some((x) => !x.k)) verses[key] = list.filter((x) => x.k !== 'quoted');
+  }
+  await rm(new URL('speakers/', OUT), { recursive: true, force: true });
+  for (const [book, verses] of perBook) await writeJson(`speakers/${book}.json`, verses);
+  const all = [...perBook.values()].flatMap((v) => Object.values(v).flat());
+  console.log('speakers', all.length, 'speakers in', [...perBook.values()].reduce((n, v) => n + Object.keys(v).length, 0), 'verses,', all.filter((x) => x.p).length, 'linked to a person');
 }
 
 /**

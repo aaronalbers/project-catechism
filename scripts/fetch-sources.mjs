@@ -11,6 +11,7 @@ export const CACHE = new URL('../.cache/', import.meta.url);
 const NE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/';
 const GEO = 'https://raw.githubusercontent.com/openbibleinfo/Bible-Geocoding-Data/main/data/';
 const THEO = 'https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/master/json/';
+const GLYSSEN = 'https://raw.githubusercontent.com/sillsdev/Glyssen/504e1435280db14474e63fb43cae862fe94b1ccb/GlyssenCharacters/Resources/';
 export const SOURCES = {
   // Berean Standard Bible — public domain. https://berean.bible/
   'bsb.txt': 'https://bereanbible.com/bsb.txt',
@@ -30,6 +31,11 @@ export const SOURCES = {
   // commit (in the file name too, so a new pin downloads afresh): the people's ids are TIPNR's numbers, and
   // the profiles are keyed on them.
   'tipnr-b99716b.txt': 'https://raw.githubusercontent.com/STEPBible/STEPBible-Data/b99716b0cddb648ddb95cc786a197180f2f97d48/Proper%20Nouns/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt',
+  // Glyssen's character data — MIT, © SIL LSDev and Faith Comes By Hearing. https://github.com/sillsdev/Glyssen
+  // Who speaks each verse of the 66, cast for dramatised audio. Pinned to a commit, in the file names too.
+  'glyssen-CharacterVerse-504e143.txt': GLYSSEN + 'CharacterVerse.txt',
+  'glyssen-CharacterDetail-504e143.txt': GLYSSEN + 'CharacterDetail.txt',
+  'glyssen-NarratorOverrides-504e143.xml': GLYSSEN + 'NarratorOverrides.xml',
   // Theographic Bible Metadata — CC-BY-SA 4.0. https://github.com/robertrouse/theographic-bible-metadata
   // Easton's Bible Dictionary (1897, public domain), matched to TIPNR's people by the verses naming them.
   'theo-people.json': THEO + 'people.json',

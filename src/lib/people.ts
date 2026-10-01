@@ -1,8 +1,8 @@
 // Everyone the Bible names, from the generated people data, tied to the curated profiles and the family tree.
 import { useEffect, useState } from 'react';
-import { loadPeopleForBook } from './data';
+import { loadPeopleForBook, loadSpeakersForBook } from './data';
 import { BOOKS, parseRef } from './refs';
-import type { PeopleInBook, Ref } from './types';
+import type { PeopleInBook, Ref, SpeakersInBook } from './types';
 
 /** Who a book names, once it has loaded (undefined until then). */
 export function usePeopleInBook(book: string): PeopleInBook | undefined {
@@ -10,6 +10,17 @@ export function usePeopleInBook(book: string): PeopleInBook | undefined {
   useEffect(() => {
     let live = true;
     loadPeopleForBook(book).then((d) => live && setData({ book, data: d }));
+    return () => { live = false; };
+  }, [book]);
+  return data?.book === book ? data.data : undefined;
+}
+
+/** Who speaks each verse of a book, once it has loaded (undefined until then). */
+export function useSpeakersInBook(book: string): SpeakersInBook | undefined {
+  const [data, setData] = useState<{ book: string; data: SpeakersInBook }>();
+  useEffect(() => {
+    let live = true;
+    loadSpeakersForBook(book).then((d) => live && setData({ book, data: d }));
     return () => { live = false; };
   }, [book]);
   return data?.book === book ? data.data : undefined;

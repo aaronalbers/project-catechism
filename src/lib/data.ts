@@ -1,7 +1,7 @@
 import type { CircleData } from './circle';
 import { personShard } from '../../scripts/people.mjs';
 import { book } from './refs';
-import type { BibleBook, BiblePerson, Family, InterlinearVerse, MapData, PeopleInBook, Place, Ref, StrongsEntry, Xrefs } from './types';
+import type { BibleBook, BiblePerson, Family, InterlinearVerse, MapData, PeopleInBook, Place, Ref, SpeakersInBook, StrongsEntry, Xrefs } from './types';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const cache = new Map<string, Promise<unknown>>();
@@ -28,6 +28,8 @@ export const loadPlacesForBook = (book: string) => get<Record<string, string[]>>
 
 const NO_PEOPLE: PeopleInBook = { verses: {}, people: {} };
 export const loadPeopleForBook = (book: string) => get<PeopleInBook>(`people/by-book/${book}.json`).catch(() => NO_PEOPLE);
+/** Who speaks each verse of a book; the books beyond the 66 have no file, and so no speakers. */
+export const loadSpeakersForBook = (book: string) => get<SpeakersInBook>(`speakers/${book}.json`).catch(() => ({} as SpeakersInBook));
 /** Where a person is stored: people/<H|G>/<hundreds>.json, from the data build's own rule. */
 export { personShard };
 /** Every family, the curated tree and TIPNR's merged, laid out at build time. */

@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { personShard } from '@/lib/data';
 import { PEOPLE } from '@/lib/content';
 import { contains, parseRef } from '@/lib/refs';
-import type { BiblePerson, InterlinearVerse, PeopleInBook } from '@/lib/types';
+import type { BiblePerson, InterlinearVerse, PeopleInBook, SpeakersInBook } from '@/lib/types';
 
 const data = new URL('../../public/data/', import.meta.url);
 const files = new Map<string, unknown>();
@@ -87,5 +87,42 @@ describe.skipIf(!existsSync(new URL('people/', data)))('people', () => {
       }
     }
     expect([...new Set(problems)].slice(0, 20)).toEqual([]);
+  });
+});
+
+// Who speaks each verse, from Glyssen (scripts/speakers.mjs), with the TIPNR person each single speaker is.
+describe.skipIf(!existsSync(new URL('speakers/', data)))('speakers', () => {
+  const at = (book: string, ch: number, v: number) => read<SpeakersInBook>(`speakers/${book}.json`)[`${ch}.${v}`] ?? [];
+  const who = (book: string, ch: number, v: number) => at(book, ch, v).map((s) => s.p ?? s.n);
+  it('names both sides of a dialogue, and links them', () => {
+    expect(who('Gen', 22, 7)).toEqual(['H0085', 'H3327']); // Isaac asks, Abraham answers
+    expect(who('Matt', 26, 25)).toEqual(['G2424G', 'G2455H']); // "Surely not I, Rabbi?"
+    expect(who('Job', 4, 2)).toEqual(['H0464H']);
+    expect(who('Luke', 1, 46)).toEqual(['G3137G']);
+  });
+  it('carries a speaker through chapters that do not name them, and past a namesake', () => {
+    expect(who('Jer', 20, 7)).toEqual(['H3414L']);
+    expect(who('Neh', 4, 4)).toEqual(['H5166H']); // not Nehemiah son of Azbuk, named in 3:16
+  });
+  it('links no one the text does not name as the speaker', () => {
+    expect(at('Num', 21, 17).some((s) => s.p)).toBe(false); // Israel singing, not Jacob
+    expect(at('Mark', 6, 37).find((s) => s.n.startsWith('disciples'))?.p).toBeUndefined(); // not Herod's brother Philip
+    expect(at('John', 21, 7).some((s) => s.p)).toBe(false); // the disciple whom Jesus loved, never named
+    expect(at('Josh', 5, 14).map((s) => s.p).filter(Boolean)).toEqual(['H3091G']); // Joshua; not the commander
+    expect(at('Exod', 2, 19).some((s) => s.p)).toBe(false); // Jethro's daughters, cast as Zipporah
+    expect(at('Josh', 17, 14).some((s) => s.p)).toBe(false); // "the people of Joseph"
+  });
+  it('leaves the psalmist to the heading, and gives the Song of Songs its voices', () => {
+    expect(who('Ps', 23, 1)).toEqual([]); // David's own voice, credited by the heading
+    expect(who('Ps', 3, 2)).toEqual(["David's foes, many"]); // "Many say of me…"
+    expect(who('Ps', 82, 2)).toEqual(['God']);
+    expect(who('Song', 1, 9)).toEqual(['H8010']);
+  });
+  it('links only to people the people data has', () => {
+    const missing = new Set<string>();
+    for (const book of ['Gen', 'Judg', '2Sam', 'Jer', 'Luke', 'John', 'Acts', 'Rev']) {
+      for (const list of Object.values(read<SpeakersInBook>(`speakers/${book}.json`))) for (const s of list) if (s.p && !person(s.p)) missing.add(s.p);
+    }
+    expect([...missing]).toEqual([]);
   });
 });

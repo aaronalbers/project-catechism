@@ -5,10 +5,10 @@ import { goTo, openPerson, setState, useStore } from '@/app/store';
 import { PEOPLE, PEOPLE_BY_ID, PROFILE_BY_PERSON, PROFILE_INDEX, peopleFor, peopleInChapter, speakerFor, writersFor } from '@/lib/content';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
 import { book as bookOf, formatRef, parseRef } from '@/lib/refs';
-import type { Confidence, Family, Person, Source } from '@/lib/types';
+import type { Confidence, Family, Person, Source, VerseSpeaker } from '@/lib/types';
 import { loadFamilies } from '@/lib/data';
 import { formatYear } from '@/lib/format';
-import { namedInChapter, usePeopleInBook, type Named } from '@/lib/people';
+import { namedInChapter, usePeopleInBook, useSpeakersInBook, type Named } from '@/lib/people';
 import { cardId } from '@/lib/catalog';
 import { Profile } from './Profile';
 import { PeopleSources } from './PeopleSources';
@@ -107,6 +107,11 @@ function Credit({ name, person, life, confidence, summary, sources, traditions }
   );
 }
 
+/** How a cast speaker's words come, under their name: Glyssen's delivery ("praying"), and whether the words are
+ *  quoted or this is one reading of who speaks. */
+const castLife = (g: VerseSpeaker) => [g.d, g.k === 'alt' ? 'one reading of who speaks' : g.k === 'quoted' ? 'words quoted' : undefined].filter(Boolean).join(' · ') || undefined;
+const capital = (s: string) => s[0].toUpperCase() + s.slice(1);
+
 export function PeoplePanel() {
   const loc = useStore((s) => s.loc);
   const here = useMemo(() => peopleFor(loc), [loc]);
@@ -142,11 +147,22 @@ export function PeoplePanel() {
   const nodeOf = (p: Person) => p.tipnr ?? p.id;
   const speakers = speakerFor(loc);
   const writers = writersFor(loc);
+  // Who speaks the verse as Glyssen casts it. Where a curated passage already says, it adds only the other people
+  // it names (Adam and Eve beside "the LORD God, in dialogue"); alternative readings come last.
+  const castData = useSpeakersInBook(loc.book);
+  const cast = useMemo(() => {
+    const curated = new Set(speakers.flatMap((sp) => (sp.person ? [sp.person] : [])));
+    const seen = new Set<string>();
+    return (castData?.[`${loc.chapter}.${loc.verse}`] ?? [])
+      .filter((g) => (speakers.length ? g.p && !curated.has(g.p) : true))
+      .filter((g) => { const key = g.p ?? g.n; if (seen.has(key)) return false; seen.add(key); return true; })
+      .sort((a, b) => Number(a.k === 'alt') - Number(b.k === 'alt'));
+  }, [castData, loc]); // speakers is derived from loc, so loc stands for it
   // The people the verse itself names; a verse that names no one frames who is speaking it (Mary through the
   // Magnificat), and only then the curated passages (Abijah's 1 Kings 15:1–8), which would otherwise pull the
   // frame away from David in 15:5.
   const inVerse = named.filter((x) => x.verses.includes(loc.verse)).map((x) => x.id).filter((id) => familyOf.has(id));
-  const speaking = speakers.flatMap((sp) => (sp.person && familyOf.has(sp.person) ? [sp.person] : []));
+  const speaking = [...speakers.map((sp) => sp.person), ...cast.filter((g) => g.k !== 'alt').map((g) => g.p)].filter((id): id is string => !!id && familyOf.has(id));
   const focus = inVerse.length ? inVerse : speaking.length ? speaking : here.map(nodeOf).filter((id) => familyOf.has(id));
   // The family to draw: the verse's, else the first the chapter names someone in.
   const familyIndex = focus.length ? familyOf.get(focus[0]) : named.map((x) => familyOf.get(x.id)).find((i) => i !== undefined);
@@ -235,7 +251,10 @@ export function PeoplePanel() {
       <Lifespans people={graphPeople} />
       <div className="people-list">
         {selected && <button className="chip link" onClick={() => setSelected(null)}>← all in this chapter</button>}
-        {!selected && speakers.length > 0 && <><div className="panel-title">Speaking in verse {loc.verse}</div>{speakers.map((sp) => <Credit key={sp.id} name={sp.speaker} person={sp.person} life={formatRef(sp.ref)} summary={sp.summary} sources={sp.sources} />)}</>}
+        {!selected && (speakers.length > 0 || cast.length > 0) && <><div className="panel-title">Speaking in verse {loc.verse}</div>
+          {speakers.map((sp) => <Credit key={sp.id} name={sp.speaker} person={sp.person} life={formatRef(sp.ref)} summary={sp.summary} sources={sp.sources} />)}
+          {cast.map((g) => <Credit key={g.p ?? g.n} name={capital(g.n)} person={g.p} life={castLife(g)} />)}
+        </>}
         {!selected && writers.length > 0 && <><div className="panel-title">{loc.book === 'Ps' ? `Who wrote Psalm ${loc.chapter}` : `Who wrote ${bookOf(loc.book)?.name}`}</div>{writers.map((w) => <Credit key={w.id} name={w.name} person={w.person} confidence={w.confidence} summary={w.summary} sources={w.sources} traditions={w.traditions} />)}</>}
         {!selected && byBook === undefined && <div className="loading">Loading people…</div>}
         {!selected && byBook && !named.length && <div className="empty"><p>{bookOf(loc.book)?.beyond ? `The people list comes from STEPBible's names data, which covers only the 66 books, so it lists no one in ${bookOf(loc.book)?.name}.` : `No one is named in ${bookOf(loc.book)?.name} ${loc.chapter}.`}</p></div>}

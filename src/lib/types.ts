@@ -142,6 +142,11 @@ export interface BiblePerson {
   refs: Ref[]; easton?: string[];
 }
 /** Who each verse of a book names ("ch.v" → ids), and each one's [name, title, 'm' | 'f']. */
+/** One speaker of a verse, from Glyssen: the name it casts them by, their TIPNR id, how the words come (`alt`: one
+ *  reading of who speaks; `quoted`: their words quoted by another) and the delivery it marks ("praying"). */
+export interface VerseSpeaker { n: string; p?: string; k?: 'alt' | 'quoted'; d?: string }
+/** speakers/<Book>.json: "ch.v" → who speaks the verse. */
+export type SpeakersInBook = Record<string, VerseSpeaker[]>;
 export interface PeopleInBook { verses: Record<string, string[]>; people: Record<string, [string, string, 'm' | 'f']> }
 /**
  * A family link: `parent`, `alt` (the curated tree's other parentage, Matthew 1 against Luke 3), `uncertain`

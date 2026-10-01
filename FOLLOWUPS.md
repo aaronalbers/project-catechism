@@ -141,13 +141,15 @@ The list aims to include every BibleProject video, wherever it applies.
 
 ### Incomplete
 
-- **Most verses have no speaker.** `speakers.json` has 19 hand-picked passages, so the People tab's "Speaking in
-  verse" shows nothing for most of the text, though the text says who speaks almost everywhere. *Needed:* a
-  verse-level speaker dataset under an open licence, if one exists, checked against a sample of passages before
-  it is used; failing that, more curated passages, starting with the long speeches (the prophets' oracles, Job's
-  dialogue, Deuteronomy, the discourses in John).
-- **Some speakers have no person link.** "'Some of those present' — John 12:4 names Judas Iscariot" (Mark 14:4–5)
-  and "The narrator (Matthew)" are left unlinked, since the passage itself does not name them. *Needed:* a
+- **No speakers in the books beyond the 66.** Glyssen covers only the 66, so Tobit to Jubilees show who wrote them
+  but no one speaking. *Needed:* a source for them (none is known), or curated passages for their dialogues.
+- **Glyssen's speakers are a casting, not checked verse by verse.** About 13,800 of its 22,300 speakers are linked
+  to people; the links were reviewed by speaker (408 pairs) and the mistakes fixed or pinned in `people.test.ts`,
+  but the casting itself (who speaks, and its alternative readings) is Glyssen's and has only been spot-checked.
+  *Needed:* a review of the books with the most dialogue (Genesis, Samuel, the Gospels, Acts) against the text.
+- **Some speakers have no person link.** "'Some of those present' — John 12:4 names Judas Iscariot" (Mark 14:4–5),
+  "The narrator (Matthew)", and from Glyssen the disciple whom Jesus loved in John and a speaker its matching
+  cannot place (Jesus as "the Lord" in Acts 9:10, the voice like a trumpet in Revelation 1:10) are left unlinked. *Needed:* a
   decision on whether a row may link to someone a parallel passage or tradition names, and how it would say so.
 
 ### Citations not checked against the work

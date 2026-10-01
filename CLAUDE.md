@@ -47,7 +47,7 @@ new *kind* of sparse content needs a section in `CATALOG`.
 sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/data.ts`
 (which memoises promises per path). It is sharded so a chapter costs one or two small
 requests: `bible/<Book>.json`, `interlinear/<Book>/<ch>.json`, `strongs/<H|G>/<shard>.json`
-(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<H|G>/<n>.json` (everyone the Bible names, from STEPBible's TIPNR, keyed by its Strong's number for them, with their Easton's entry), and `map.json` (Natural Earth coasts, rivers and
+(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<H|G>/<n>.json` (everyone the Bible names, from STEPBible's TIPNR, keyed by its Strong's number for them, with their Easton's entry), `speakers/<Book>.json` (who speaks each verse of the 66, from Glyssen), and `map.json` (Natural Earth coasts, rivers and
 lakes round Jerusalem, for the models' map scale). The books beyond the 66 get `bible/<Book>.json` too, built by
 `scripts/beyond.mjs` from the World English Bible's deuterocanon (USFM) and R. H. Charles's 1 Enoch and Jubilees
 (CrossWire's SWORD genbook modules), with `parallels.json` (Charles's cross references from 1 Enoch to the 66) and
@@ -147,6 +147,16 @@ them in CI — read it before adding content.
   writer's `books[].refs` limit it to some chapters: the Psalms go by their headings, each writer's `heading`
   being the words that name them ("of Asaph"). A test fails the build if a book or psalm has no writer, if a psalm
   is listed under a heading it lacks or carries a heading it is not listed under, or if a `person` does not resolve.
+- Speakers beyond the curated passages come from Glyssen's character data (SIL and Faith Comes By Hearing, MIT;
+  `scripts/speakers.mjs`, pinned to a commit in `fetch-sources.mjs`), which casts every speech of the 66 for
+  dramatised audio, and its first-person overrides (the Song of Songs' voices; in the Psalms only voices other than
+  the psalmist, whom the heading credits). It reads "Potential", "Indirect", "Hypothetical" and "Rare" quotes as no
+  one speaking. A single speaker is linked to the TIPNR person of that name named within fifteen verses before the
+  speech or three after, then to whoever has most of their matches through the rest of the book; a row links only
+  someone its shown name names, and `SPEAKER_UNLINKED` in `build-data.mjs` keeps out what the text does not settle
+  (the disciple whom Jesus loved). A curated passage in `speakers.json` keeps its card, and Glyssen adds only the
+  other people it names. `PeopleSources.tsx` credits Glyssen and lists the exceptions; `people.test.ts` pins the
+  cases found in review.
 
 - Word cards (`kind: 'word'`) are named for their Strong's number (`word-h5775-oph`), or list several in
   `strongs`. `narrows` marks a word the English is narrower than: `rendered` names the BSB renderings that
