@@ -90,6 +90,22 @@ the card attributes to it.
 - **Insight cards** (`content/insights/`): Ussishkin's Lachish excavation reports (1982); Lemaire's 1994 *BAR* article
   on "House of David" on the Mesha Stele; Finkelstein, Na'aman and Römer (2019); Weidner (1939) on the Jehoiachin
   ration tablets; Mendelsohn (1949) on slave prices; Bailey (1986).
+- **Insight cards added 2026-10-02** (`content/insights/`): the primary texts were all read (Oracc, Perseus, Sefaria,
+  New Advent, Cowley on archive.org), but these were not:
+  - Parpola, "The Murderer of Sennacherib" (1980), for Adrammelech = Arda-Mulišši (`sennacherib-murder`).
+  - Metzger's *Textual Commentary* (1994) on 1 John 5:7-8, for the manuscript evidence and Erasmus's editions
+    (`comma-johanneum`). The Codex Sinaiticus link goes to the site, not to the page, which the site doesn't
+    link directly.
+  - Austin, Franz and Frost (2000): only summaries of the paper were read, for the six sites, ≈750 BC and magnitude
+    ≈8 (`amos-earthquake`). The Hazor details come from Williams's earthquake catalogue, not Yadin's reports.
+  - Torczyner, *Lachish I* (1938), cited as the first publication; the wording quoted is Noegel's (2006).
+  - From memory, not checked: Aretas IV's death ≈AD 40 and what dates it (`aretas-and-antipas`); Botta's start at
+    Khorsabad in 1843 (`sargon-samaria`); Rawlinson's 1863 identification of Pul, which rests on the Jewish
+    Encyclopedia, an article that also misdates Pul's Babylonian reign (`tiglath-pileser-menahem-pul`).
+  - The Great Isaiah Scroll's reading yirʾeh ʾor at 53:11 is stated from memory and not checked against a
+    transcription (`great-isaiah-scroll-light`). The Septuagint and Masoretic readings were checked.
+  - Whiting's "Jerusalem's Locust Plague" (*National Geographic*, December 1915) is the written eyewitness account
+    behind the photographs. archive.org has only its cover, so `joel-locusts-1915` cites the photographs alone.
 - **The three days** (`content/passion.json`): Rusk, "The Day He Died" (*Christianity Today*, 1974); Torrey (1907);
   Bullinger's *Companion Bible*, whose appendices are cited without numbers because they weren't confirmed.
 - **Reigns** (`content/monarchy.json`):

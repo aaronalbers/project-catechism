@@ -85,6 +85,29 @@
    {"kind": "scripture", "ref": "Mark.10.32", "note": "'they were on the road, going up to Jerusalem'"}
   ],
   "confidence": "evidence",
-  "related": ["jericho-jerusalem-ascent"]
+  "related": ["jericho-jerusalem-ascent", "sukkot-water-and-light"]
+ },
+ {
+  "id": "joel-locusts-1915",
+  "title": "Joel's locusts, photographed in 1915",
+  "kind": "geography",
+  "verses": ["Joel.1.4-7", "Joel.1.12", "Joel.2.2-10", "Joel.2.25"],
+  "summary": "In spring 1915 a locust plague stripped Palestine. Photographers of Jerusalem's American Colony recorded it stage by stage — the swarms, the crawling young that did the most damage, and the trees left bare — much as Joel describes.",
+  "body": [
+   "Joel names four kinds of locust (1:4, 2:25). Whether they are four species or stages of one insect's growth is debated, but the sequence fits how a plague runs: adults lay eggs, and the young that hatch, wingless and crawling, eat what the swarm left before they can fly. The 1915 photographers called the crawling stage the most destructive.",
+   "The American Colony photographers titled their series 'The terrible plague of locusts in Palestine, March–June 1915'. It shows masses of locusts on an olive tree, locusts devouring palm leaves, storks in pursuit of the swarm, and the Garden of Gethsemane before and after.",
+   "Joel 1:7 says the swarm 'has stripped off the bark … the branches have turned white', and 2:7-9 that the locusts 'scale the walls', 'run along the wall' and 'climb into houses, entering through windows like thieves'. The photographs of the stripped trees show what that looks like. Joel 2:10's darkened sun fits a swarm thick enough to block the light; whether the verse means that or more is a question for the book's readers."
+  ],
+  "media": [
+   {"type": "image", "src": "https://tile.loc.gov/storage-services/service/pnp/matpc/14400/14429r.jpg", "caption": "The Garden of Gethsemane in spring 1915, before the locusts arrived.", "credit": "American Colony (Jerusalem) Photo Department, Library of Congress", "creditUrl": "https://www.loc.gov/item/2019704634/", "license": "No known restrictions on publication"},
+   {"type": "image", "src": "https://tile.loc.gov/storage-services/service/pnp/matpc/01800/01896r.jpg", "caption": "'The same garden after a visitation by the locusts.'", "credit": "American Colony (Jerusalem) Photo Department, Library of Congress", "creditUrl": "https://www.loc.gov/item/2019695588/", "license": "No known restrictions on publication"}
+  ],
+  "sources": [
+   {"kind": "primary", "title": "The terrible plague of locusts in Palestine, March–June 1915 (photographs)", "author": "American Colony (Jerusalem) Photo Department", "year": 1915, "url": "https://www.loc.gov/item/2019701781/", "note": "Library of Congress, Matson Collection; 'The crawling locust, most destructive stage of life'"},
+   {"kind": "primary", "title": "Masses of locusts attacking an olive tree", "author": "American Colony (Jerusalem) Photo Department", "year": 1915, "url": "https://www.loc.gov/item/2019695591/"},
+   {"kind": "scripture", "ref": "Joel.1.4"},
+   {"kind": "scripture", "ref": "Joel.1.7"}
+  ],
+  "confidence": "evidence"
  }
 ]

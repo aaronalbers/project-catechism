@@ -18,7 +18,7 @@
    {"kind": "scripture", "ref": "Acts.18.2"}
   ],
   "confidence": "consensus",
-  "related": ["gallio-inscription"]
+  "related": ["gallio-inscription", "pliny-christians-bithynia"]
  },
  {
   "id": "agrippa-death-caesarea",
@@ -37,7 +37,8 @@
    {"kind": "scripture", "ref": "Acts.12.21-23"},
    {"kind": "scholarship", "title": "The Acts of the Apostles: A Socio-Rhetorical Commentary", "author": "Ben Witherington III", "year": 1998, "note": "on the independence of the two accounts and the topos of death by worms"}
   ],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "related": ["felix-and-drusilla"]
  },
  {
   "id": "quirinius-census",
@@ -60,7 +61,7 @@
   ],
   "confidence": "interpretation",
   "traditions": ["Most critical scholarship (Brown, Schürer, Fitzmyer) treats Luke 2:2 as a historical error", "Conservative Protestant and Catholic scholarship commonly adopts the 'before Quirinius' translation or an earlier commission", "No major creed or confession depends on the census date"],
-  "related": ["herod-death-4bc", "tiberius-15th-year"]
+  "related": ["herod-death-4bc", "tiberius-15th-year", "theudas-and-judas"]
  },
  {
   "id": "canon-books-beyond-the-66",
@@ -93,6 +94,345 @@
    {"kind": "primary", "title": "Mishnah Yadayim 3:5", "url": "https://www.sefaria.org/Mishnah_Yadayim.3.5", "note": "tr. Joshua Kulp"},
    {"kind": "scholarship", "title": "What Do We Mean by Jabneh?", "author": "Jack P. Lewis", "year": 1964, "url": "https://academic.oup.com/jaar/article-abstract/XXXII/2/125/700440", "note": "Journal of Bible and Religion 32, 125–132"}
   ],
+  "confidence": "consensus",
+  "related": ["song-holy-of-holies", "disputed-letters-eusebius"]
+ },
+ {
+  "id": "josephus-john-baptist",
+  "title": "John the Baptist in Josephus",
+  "kind": "history",
+  "verses": ["Mark.6.14-29", "Matt.14.1-12", "Luke.3.19-20", "Luke.9.7-9"],
+  "summary": "Josephus tells of John, 'called the Baptist', a good man who urged the Jews to virtue and baptism, and whom Herod Antipas killed at the fortress of Machaerus for fear his following would rise — a second account of the Gospels' story, with a different motive.",
+  "body": [
+   "Josephus's Antiquities, written in Rome about AD 93, describes Antipas's war with Aretas of Nabataea and adds: 'some of the Jews thought that the destruction of Herod's army came from God, and that very justly, as a punishment of what he did against John, that was called the Baptist: for Herod slew him, who was a good man, and commanded the Jews to exercise virtue … and so to come to baptism.' John was 'sent a prisoner … to Macherus … and was there put to death'.",
+   "The Gospels say John was arrested for condemning Antipas's marriage to Herodias (Mark 6:17-18). Josephus says Antipas feared that John's influence 'might put it into his power and inclination to raise a rebellion'. The two are not exclusive — a prophet denouncing the ruler's marriage was a political danger — and the marriage is the cause of the war in Josephus's account too.",
+   "Josephus fills in names the Gospels leave out. Machaerus, the fortress east of the Dead Sea, is where John died. Herodias's daughter, unnamed in Mark, was Salome, who later married Philip the tetrarch. And Herodias's first husband, whom Mark calls Philip, Josephus calls Herod, a son of Herod the Great by the high priest Simon's daughter. Whether he bore both names is not known.",
+   "This passage is not one of the parts of Josephus thought to have been touched by Christian copyists: it says nothing of Jesus, and its account of John's baptism differs from the Gospels'."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 18.5.2 (18.116–119)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D5%3Awhiston+section%3D2", "note": "'John, that was called the Baptist … sent a prisoner … to Macherus … and was there put to death'"},
+   {"kind": "primary", "title": "Josephus, Antiquities 18.5.4 (18.136–137)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D5%3Awhiston+section%3D4", "note": "Herodias leaves her husband Herod for Antipas; 'her daughter Salome was married to Philip … tetrarch of Trachonitis'"},
+   {"kind": "scripture", "ref": "Mark.6.17-18"}
+  ],
+  "confidence": "evidence",
+  "related": ["aretas-and-antipas"]
+ },
+ {
+  "id": "aretas-and-antipas",
+  "title": "King Aretas: why his governor watched Damascus's gates",
+  "kind": "history",
+  "verses": ["2Cor.11.32-33", "Acts.9.23-25", "Gal.1.17"],
+  "summary": "Paul escaped Damascus in a basket because 'the governor under King Aretas' was guarding the city. Aretas IV of Nabataea was the father of the wife Herod Antipas divorced for Herodias, and Josephus tells how he went to war with Antipas over it.",
+  "body": [
+   "Josephus: Antipas 'had married the daughter of Aretas', but fell in love with Herodias and agreed to divorce her. She learned of it, fled to her father, and 'Aretas made this the first occasion of his enmity between him and Herod'. In the war that followed, 'all Herod's army was destroyed'. Tiberius ordered Vitellius, the governor of Syria, to march on Aretas, but news of the emperor's death (AD 37) reached Vitellius on the way and he called the army home.",
+   "2 Corinthians 11:32 says his ethnarch 'secured the city of the Damascenes in order to arrest me'; Acts 9 says the Jews watched the gates. Galatians 1:17 adds that Paul had gone 'into Arabia', that is Nabataea, before returning to Damascus — which may be why Aretas's man wanted him.",
+   "Aretas IV is usually said to have died ≈AD 40, a date resting on his dated coins and inscriptions. If so, Paul's escape, and with it his conversion three years earlier (Galatians 1:18), cannot be later than that — one of the few fixed points for dating Paul's life. How a Nabataean official came to hold the gates of a Roman city is not known."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 18.5.1 (18.109–115)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D5%3Awhiston+section%3D1", "note": "Aretas's daughter divorced; Antipas's army destroyed; Tiberius orders Vitellius to war"},
+   {"kind": "primary", "title": "Josephus, Antiquities 18.5.3 (18.120–125)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D5%3Awhiston+section%3D3", "note": "Vitellius hears of Tiberius's death and sends the army home"},
+   {"kind": "scripture", "ref": "2Cor.11.32-33"},
+   {"kind": "scripture", "ref": "Gal.1.17-18"}
+  ],
+  "confidence": "evidence",
+  "related": ["josephus-john-baptist"]
+ },
+ {
+  "id": "james-death-josephus",
+  "title": "The death of James, 'the brother of Jesus, who was called Christ'",
+  "kind": "history",
+  "verses": ["Gal.1.19", "Acts.15.13-21", "Acts.21.17-18", "Jas.1.1", "Mark.6.3"],
+  "summary": "Josephus records that in AD 62, between two Roman governors, the high priest Ananus convened the Sanhedrin and had 'the brother of Jesus, who was called Christ, whose name was James' stoned — and was deposed for it after three months.",
+  "body": [
+   "Acts shows James leading the Jerusalem church (15:13-21; 21:18), and Paul calls him 'the Lord's brother' (Galatians 1:19). Josephus tells how he died. When the governor Festus died in office, and before his successor Albinus arrived, the young high priest Ananus 'assembled the sanhedrim of judges, and brought before them the brother of Jesus, who was called Christ, whose name was James, and some others … and delivered them to be stoned'.",
+   "The fairest-minded citizens, Josephus says, objected, and some went to meet Albinus on the road to complain that Ananus had no right to convene the court without the governor. King Agrippa II removed Ananus after three months. The year, AD 62, comes from the governors' dates: Festus is the governor of Acts 24:27-26:32.",
+   "Most historians accept the passage as Josephus's own. It names Jesus only to identify James, and calls him 'the one called Christ', which a Christian copyist is unlikely to have written. Eusebius preserves a later and fuller account by Hegesippus, in which James is thrown from the temple and clubbed to death."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 20.9.1 (20.197–203)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D9%3Awhiston+section%3D1", "note": "'the brother of Jesus, who was called Christ, whose name was James'"},
+   {"kind": "primary", "title": "Eusebius, Church History 2.23", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "Hegesippus's account of James's death"},
+   {"kind": "scripture", "ref": "Gal.1.19"}
+  ],
+  "confidence": "evidence",
+  "related": ["annas-high-priestly-family"]
+ },
+ {
+  "id": "theudas-and-judas",
+  "title": "Theudas and Judas: Gamaliel's examples, and a dating problem",
+  "kind": "history",
+  "verses": ["Acts.5.34-39"],
+  "summary": "Gamaliel cites Theudas and then Judas the Galilean as movements that came to nothing. Josephus tells of a Theudas too, but under the governor Fadus, about AD 45 — a decade after Gamaliel speaks, and forty years after Judas.",
+  "body": [
+   "In Acts 5:36-37 Gamaliel says: 'Some time ago Theudas rose up, claiming to be somebody, and about four hundred men joined him. He was killed … After him, Judas the Galilean appeared in the days of the census.' Judas's revolt against the census of AD 6 is well attested in Josephus.",
+   "Josephus's Theudas is a 'magician' who, 'while Fadus was procurator of Judea' (≈AD 44–46, from the order of governors Josephus gives), led a crowd to the Jordan promising to part it. Roman cavalry killed many, and Theudas's head was taken to Jerusalem. The next paragraph mentions the crucifixion of 'the sons of Judas of Galilee' — so Josephus names Theudas and then Judas, in the order of Acts, though Judas's revolt was much earlier.",
+   "The difficulty is old. Origen, around AD 248, followed Acts and put 'a certain Theudas … before the birth of Christ'. The proposals since are that Gamaliel meant another, earlier Theudas, perhaps one of the rebels in the unrest after Herod's death in 4 BC; that Luke has placed Josephus's Theudas too early; or, less often, that Josephus has the date wrong. The two accounts also differ on numbers: Acts has about four hundred followers, Josephus 'a great part of the people'."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 20.5.1 (20.97–99)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D5%3Awhiston+section%3D1", "note": "'while Fadus was procurator of Judea … a certain magician, whose name was Theudas'"},
+   {"kind": "primary", "title": "Josephus, Antiquities 20.5.2 (20.102)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D5%3Awhiston+section%3D2", "note": "'the sons of Judas of Galilee were now slain; I mean of that Judas who caused the people to revolt, when Cyrenius came to take an account of the estates'"},
+   {"kind": "primary", "title": "Origen, Against Celsus 1.57", "author": "Origen", "year": "c. AD 248", "url": "https://www.newadvent.org/fathers/04161.htm", "note": "'a certain Theudas among the Jews before the birth of Christ'"},
+   {"kind": "scripture", "ref": "Acts.5.36-37"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["An earlier Theudas than Josephus's: Origen; many conservative commentators", "Luke has placed Josephus's Theudas too early: much historical-critical scholarship", "Josephus has misdated Theudas: a minority view"],
+  "related": ["quirinius-census", "the-egyptian-assassins"]
+ },
+ {
+  "id": "the-egyptian-assassins",
+  "title": "'Aren't you the Egyptian?' — the prophet of the Mount of Olives",
+  "kind": "history",
+  "verses": ["Acts.21.37-39"],
+  "summary": "The Roman commander who arrested Paul took him for 'the Egyptian who incited a rebellion and led four thousand of the Assassins into the wilderness'. Josephus tells of the same man: under Felix he led a crowd to the Mount of Olives promising Jerusalem's walls would fall, and escaped when the Romans attacked.",
+  "body": [
+   "Josephus has the story twice. In the Jewish War: 'an Egyptian false prophet … got together thirty thousand men that were deluded by him; these he led round about from the wilderness to the mount which was called the Mount of Olives', meaning to take Jerusalem. Felix's soldiers routed them and 'the Egyptian ran away, with a few others'. In the Antiquities he promised that 'at his command, the walls of Jerusalem would fall down', and Felix's troops killed four hundred and took two hundred alive; 'the Egyptian himself escaped out of the fight, but did not appear any more'.",
+   "His escape explains the commander's question: the man was still at large, and a riot in the temple might be his return. The figures differ — Acts' 4,000, the War's 30,000 — and Acts' is the more modest of the two.",
+   "Acts calls his followers sikarioi, 'the Assassins' in the BSB. Josephus describes the sicarii, named for the short dagger (sica) they hid under their clothes, as arising under Felix. They stabbed opponents in the festival crowds, and their first victim was the high priest Jonathan."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Jewish War 2.13.5 (2.261–263)", "author": "Flavius Josephus", "year": "c. AD 75", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0148%3Abook%3D2%3Awhiston+chapter%3D13%3Awhiston+section%3D5", "note": "'an Egyptian false prophet … got together thirty thousand men'"},
+   {"kind": "primary", "title": "Josephus, Antiquities 20.8.6 (20.169–172)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D8%3Awhiston+section%3D6", "note": "'he would show them from hence how, at his command, the walls of Jerusalem would fall down'"},
+   {"kind": "primary", "title": "Josephus, Jewish War 2.13.3 (2.254–256)", "author": "Flavius Josephus", "year": "c. AD 75", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0148%3Abook%3D2%3Awhiston+chapter%3D13%3Awhiston+section%3D3", "note": "the sicarii, who 'concealed daggers under their garments'"},
+   {"kind": "scripture", "ref": "Acts.21.38"}
+  ],
+  "confidence": "evidence",
+  "related": ["theudas-and-judas", "felix-and-drusilla"]
+ },
+ {
+  "id": "famine-under-claudius",
+  "title": "Agabus's famine, 'under Claudius'",
+  "kind": "history",
+  "verses": ["Acts.11.27-30", "Acts.12.25"],
+  "summary": "Acts says Agabus foretold a great famine, which came 'under Claudius', and the church at Antioch sent relief to Judea by Barnabas and Saul. Josephus describes a famine in Judea under the governors Fadus and Tiberius Alexander, which Queen Helena of Adiabene relieved with grain from Egypt.",
+  "body": [
+   "Luke's aside — 'This happened under Claudius' (AD 41–54) — invites a check. Josephus: 'Under these procurators' (Fadus and Tiberius Alexander, ≈AD 44–48 from the order of governors he gives) 'that great famine happened in Judea, in which queen Helena bought corn in Egypt at a great expense, and distributed it to those that were in want.'",
+   "Helena, a convert to Judaism and the mother of the king of Adiabene in northern Mesopotamia, was in Jerusalem when the famine struck, 'and many people died for want of what was necessary'. She sent servants to Alexandria for grain and to Cyprus for dried figs; her son sent money. The Antioch disciples did the same on a smaller scale, each 'according to his ability' (Acts 11:29).",
+   "Acts says the famine would be 'over the whole world', meaning the Roman world. Josephus speaks of Judea; Suetonius says that in Claudius's reign there was 'a scarcity of grain because of long-continued droughts' at Rome. These are local shortages across the reign, not one famine everywhere at once."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 20.2.5 (20.49–53)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D2%3Awhiston+section%3D5", "note": "Helena buys grain in Alexandria and figs in Cyprus"},
+   {"kind": "primary", "title": "Josephus, Antiquities 20.5.2 (20.101)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D5%3Awhiston+section%3D2", "note": "'Under these procurators that great famine happened in Judea'"},
+   {"kind": "primary", "title": "Suetonius, Life of Claudius 18.2", "author": "Suetonius", "year": "c. AD 121", "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Claudius*.html", "note": "'a scarcity of grain because of long-continued droughts'"},
+   {"kind": "scripture", "ref": "Acts.11.28-30"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "felix-and-drusilla",
+  "title": "Felix and Drusilla",
+  "kind": "history",
+  "verses": ["Acts.24.22-27", "Acts.23.24-26"],
+  "summary": "Felix listened to Paul with 'his wife Drusilla, who was a Jewess'. Josephus says she was the daughter of King Agrippa I, persuaded by a Cypriot magician to leave her husband, the king of Emesa, for Felix. Tacitus said Felix wielded 'the power of a king with all the instincts of a slave'.",
+  "body": [
+   "Josephus: 'While Felix was procurator of Judea, he saw this Drusilla, and fell in love with her … and he sent to her a person whose name was Simon, one of his friends; a Jew he was, and by birth a Cypriot, and one who pretended to be a magician', to persuade her to leave her husband Azizus. She married Felix, 'to transgress the laws of her forefathers'. Their son Agrippa later died in the eruption of Vesuvius.",
+   "She was the daughter of the Herod Agrippa of Acts 12, and the sister of Agrippa II and Bernice, before whom Paul spoke two years later (Acts 25:13-26:32). When Paul spoke to Felix 'about righteousness, self-control, and the judgment to come' (24:25), he was speaking to a couple whose marriage the Law forbade.",
+   "Felix was a freedman, the brother of Claudius's minister Pallas. Tacitus says he 'practised every kind of cruelty and lust, wielding the power of king with all the instincts of a slave', and Suetonius that he became 'the husband of three queens'. Tacitus's Drusilla is a different woman, a granddaughter of Antony and Cleopatra, so Felix married two Drusillas. Acts' note that he hoped Paul would offer a bribe (24:26) fits the picture."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 20.7.2 (20.141–144)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D7%3Awhiston+section%3D2", "note": "Drusilla, Azizus, and Simon the Cypriot magician"},
+   {"kind": "primary", "title": "Tacitus, Histories 5.9", "author": "Tacitus", "year": "c. AD 105", "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Histories/5A*.html", "note": "'wielding the power of king with all the instincts of a slave'"},
+   {"kind": "primary", "title": "Suetonius, Life of Claudius 28", "author": "Suetonius", "year": "c. AD 121", "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Claudius*.html", "note": "'he became the husband of three queens'"},
+   {"kind": "scripture", "ref": "Acts.24.24-26"}
+  ],
+  "confidence": "evidence",
+  "related": ["the-egyptian-assassins", "agrippa-death-caesarea"]
+ },
+ {
+  "id": "annas-high-priestly-family",
+  "title": "Annas: high priest, and father of high priests",
+  "kind": "history",
+  "verses": ["John.18.12-14", "John.18.24", "Luke.3.2", "Acts.4.5-6"],
+  "summary": "Jesus was taken 'first to Annas', though Caiaphas was high priest. Josephus explains why: Annas (Ananus son of Seth) had been high priest himself, and five of his sons held the office after him — a family that kept power while Rome appointed and removed its priests.",
+  "body": [
+   "Josephus records that Quirinius appointed 'Ananus, the son of Seth, to be high priest' in AD 6, and that the governor Gratus deposed him (≈AD 15). Gratus then made and unmade three high priests in as many years — one of them Annas's son Eleazar — before 'Joseph Caiaphas was made his successor'. Caiaphas lasted until Vitellius removed him, about AD 36, and appointed 'Jonathan the son of Ananus'.",
+   "Of the elder Ananus, Josephus says that 'he had five sons who had all performed the office of a high priest to God … which had never happened to any other of our high priests'. The youngest, also Ananus, is the high priest who had James killed in AD 62.",
+   "John alone says Caiaphas was Annas's son-in-law (18:13). That explains why Luke can date John the Baptist's ministry 'during the high priesthood of Annas and Caiaphas' (3:2), and why Acts 4:6 calls Annas 'the high priest' years after he left office: the title stayed with a former holder, and the family's head kept his standing."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 18.2.1–2 (18.26, 18.33–35)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D2%3Awhiston+section%3D2", "note": "Ananus son of Seth appointed and deposed; 'Joseph Caiaphas was made his successor'"},
+   {"kind": "primary", "title": "Josephus, Antiquities 18.4.3 (18.95)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D4%3Awhiston+section%3D3", "note": "Vitellius 'deprived Joseph, who was also called Caiaphas, of the high priesthood, and appointed Jonathan the son of Ananus'"},
+   {"kind": "primary", "title": "Josephus, Antiquities 20.9.1 (20.198)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D9%3Awhiston+section%3D1", "note": "'he had five sons who had all performed the office of a high priest'"},
+   {"kind": "scripture", "ref": "John.18.13"}
+  ],
+  "confidence": "evidence",
+  "related": ["caiaphas-ossuary", "james-death-josephus"]
+ },
+ {
+  "id": "pliny-christians-bithynia",
+  "title": "'If you suffer as a Christian': Pliny's trials in Bithynia",
+  "kind": "history",
+  "verses": ["1Pet.1.1", "1Pet.4.12-16", "Acts.11.26", "Acts.26.28"],
+  "summary": "1 Peter writes to Christians in provinces including Bithynia, who may 'suffer as a Christian'. About fifty years later Pliny, governing Bithynia, asked Trajan whether 'the very profession of Christianity' was punishable, and executed those who would not deny the name.",
+  "body": [
+   "The word 'Christian' occurs only three times in the New Testament: the disciples were first called so at Antioch (Acts 11:26), Agrippa uses it (26:28), and 1 Peter 4:16 tells readers not to be ashamed if they suffer 'as a Christian'. The letter is addressed to 'Pontus, Galatia, Cappadocia, Asia, and Bithynia' (1:1).",
+   "Pliny the Younger governed Bithynia and Pontus for Trajan ≈AD 110–112, the dates resting on his correspondence with the emperor. He wrote asking how to deal with Christians: 'whether the very profession of Christianity, unattended with any criminal act, or only the crimes themselves inherent in the profession are punishable'. Meanwhile he asked the accused three times whether they were Christians and had those who persisted executed, sending Roman citizens to Rome.",
+   "Those who had left the faith told him they used to 'meet on a stated day before it was light, and address a form of prayer to Christ, as to a divinity', binding themselves by oath not to steal or commit adultery, and later met to eat 'a harmless meal'. He tortured two slave women 'who were said to officiate', and found only 'an absurd and extravagant superstition'. Trajan replied that Christians were not to be sought out, but if accused and convicted must be punished unless they recanted.",
+   "The letter does not date 1 Peter, which most place well before Pliny. It shows that in those very provinces the name alone could be the charge."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Pliny the Younger, Letters 10.96–97", "author": "Pliny the Younger", "year": "c. AD 112", "url": "https://www.gutenberg.org/ebooks/2811", "note": "tr. W. Melmoth, rev. F. C. T. Bosanquet; numbered XCVII–XCVIII in this edition"},
+   {"kind": "scripture", "ref": "1Pet.4.16"},
+   {"kind": "scripture", "ref": "1Pet.1.1"}
+  ],
+  "confidence": "evidence",
+  "related": ["claudius-expulsion-chrestus"]
+ },
+ {
+  "id": "comma-johanneum",
+  "title": "Why 1 John 5:7 is shorter than in the King James",
+  "kind": "history",
+  "verses": ["1John.5.6-8"],
+  "summary": "The KJV reads 'there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one'. Those words, the Johannine Comma, are not in any early Greek manuscript of 1 John; they entered Latin Bibles, and the printed Greek text in 1522. The BSB leaves them out.",
+  "body": [
+   "The BSB's 1 John 5:7-8 reads: 'For there are three that testify: the Spirit, the water, and the blood — and these three are in agreement.' The King James adds a heavenly witness between them: 'the Father, the Word, and the Holy Ghost: and these three are one. And there are three that bear witness in earth'.",
+   "The great Greek codices of the fourth and fifth centuries, Sinaiticus, Vaticanus and Alexandrinus, do not have the words, nor do the Greek writers of the early church, who argued at length over the Trinity without citing them. They are first found in Latin, from the fourth century on, and spread through the Latin Vulgate. The few Greek manuscripts that have them are late.",
+   "Erasmus left them out of the first two editions of his Greek New Testament (1516, 1519) and put them into the third (1522), on the evidence of a Greek manuscript produced in his own day. Later printed editions, and from them the King James, kept them.",
+   "Modern editions of the Greek leave them out, and with them nearly all modern translations. The teaching of the Trinity does not rest on them; the debate is over what John wrote."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Codex Sinaiticus, 1 John 5:7–8", "url": "https://codexsinaiticus.org/", "note": "fourth century; the verses without the Comma"},
+   {"kind": "primary", "title": "King James Version (1611), 1 John 5:7", "note": "quoted in modern spelling"},
+   {"kind": "scholarship", "title": "A Textual Commentary on the Greek New Testament (2nd ed.)", "author": "Bruce M. Metzger", "year": 1994, "note": "on 1 John 5:7-8: the manuscript evidence and Erasmus's editions"},
+   {"kind": "scripture", "ref": "1John.5.7-8"}
+  ],
   "confidence": "consensus"
+ },
+ {
+  "id": "disputed-letters-eusebius",
+  "title": "The letters some doubted: James, 2 Peter, 2–3 John, Jude",
+  "kind": "history",
+  "verses": ["2Pet.1.1", "2John.1.1", "3John.1.1", "Jas.1.1", "Jude.1.1", "2Pet.3.15-16"],
+  "summary": "Writing about AD 325, Eusebius sorted the New Testament books into those every church accepted and those 'disputed … nevertheless recognized by many': James, Jude, 2 Peter, and 2 and 3 John. All five were in the canon lists before the end of the century.",
+  "body": [
+   "Eusebius's Church History sets out the state of the question in his day: 'Among the disputed writings, which are nevertheless recognized by many, are extant the so-called epistle of James and that of Jude, also the second epistle of Peter, and those that are called the second and third of John, whether they belong to the evangelist or to another person of the same name.' The Gospels, Acts, Paul's letters, 1 Peter and 1 John he lists as accepted by all.",
+   "The doubts were about authorship and circulation. The short letters had been little quoted; 2 Peter differs in style from 1 Peter; and 2 and 3 John come from 'the elder', which led some to think of a second John. Eusebius also wavers over Revelation, listing it both as accepted 'if it really seem proper' and among the rejected.",
+   "The disputes did not leave these books out. Athanasius's Easter letter of 367 lists the 27 books of the New Testament, including 'of Peter, two; of John, three; after these, one of Jude', and the councils of North Africa in the 390s and 419 do the same. 2 Peter itself already treats Paul's letters as a collection, set beside 'the other Scriptures' (3:16)."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Eusebius, Church History 3.25", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250103.htm", "note": "'the second and third of John, whether they belong to the evangelist or to another person of the same name'"},
+   {"kind": "primary", "title": "Athanasius, Festal Letter 39", "author": "Athanasius of Alexandria", "year": 367, "url": "https://www.newadvent.org/fathers/2806039.htm", "note": "the seven catholic epistles: 'of James, one; of Peter, two; of John, three; after these, one of Jude'"},
+   {"kind": "scripture", "ref": "2Pet.3.15-16"}
+  ],
+  "confidence": "evidence",
+  "related": ["the-elder-john", "canon-books-beyond-the-66"]
+ },
+ {
+  "id": "the-elder-john",
+  "title": "Who is 'the elder'?",
+  "kind": "history",
+  "verses": ["2John.1.1", "3John.1.1", "1John.1.1-4"],
+  "summary": "2 and 3 John are from 'the elder', unnamed. Most of the church has read him as the apostle John. But Papias, early in the second century, named two Johns among his sources — the apostle and 'the presbyter John' — and Jerome reports that some credited these two letters to the second.",
+  "body": [
+   "Neither letter names its writer; both open 'The elder' (ho presbyteros). Their language is close to 1 John and the Gospel of John, and the church has usually taken all of them as the apostle's.",
+   "Papias, bishop of Hierapolis, wrote that he used to ask what 'Andrew or what Peter said, or … James, or by John, or by Matthew … and what things Aristion and the presbyter John, the disciples of the Lord, say'. Eusebius, quoting him, noticed that John is 'twice enumerated', once among the apostles and once after Aristion and 'distinctly called a presbyter', and added that there were two tombs at Ephesus each called John's.",
+   "Jerome, around 392, says the two letters 'are said to be the work of John the presbyter, to the memory of whom another sepulchre is shown at Ephesus to the present day'. Eusebius lists them among the disputed books for this reason. Whether Papias's 'presbyter John' is a second man or the apostle under an older title is itself debated."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Eusebius, Church History 3.39.4–6", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250103.htm", "note": "Papias's 'Aristion and the presbyter John'; 'two tombs in Ephesus, each of which … is called John's'"},
+   {"kind": "primary", "title": "Jerome, Lives of Illustrious Men 9", "author": "Jerome", "year": "c. AD 392", "url": "https://www.newadvent.org/fathers/2708.htm", "note": "'are said to be the work of John the presbyter'"},
+   {"kind": "scripture", "ref": "2John.1.1"},
+   {"kind": "scripture", "ref": "3John.1.1"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["The apostle John: the church's prevailing tradition", "A second John, 'the presbyter': some reported by Jerome; a reading of Papias proposed by Eusebius, held by some modern scholars"],
+  "related": ["disputed-letters-eusebius"]
+ },
+ {
+  "id": "song-holy-of-holies",
+  "title": "'The Song of Songs is the holy of holies'",
+  "kind": "history",
+  "verses": ["Song.1.1", "Song.8.6-7", "Eccl.1.1-2", "Eccl.12.13"],
+  "summary": "The Mishnah records rabbis disputing whether the Song of Songs and Ecclesiastes 'defile the hands' — the rabbinic test of a holy book. Rabbi Akiva defended the Song: 'all the writings are holy but the Song of Songs is the holy of holies'.",
+  "body": [
+   "A scroll of Scripture, by rabbinic rule, made the hands that touched it ritually unclean, a mark of its holiness. Mishnah Yadayim 3:5 asks which books do. 'All the Holy Scriptures defile the hands. The Song of Songs and Kohelet (Ecclesiastes) defile the hands.' Then the dissent: Rabbi Judah says the Song does but Ecclesiastes is disputed; Rabbi Yose says the reverse.",
+   "Rabbi Akiva (died ≈AD 135, after the Bar Kokhba revolt) answers: 'Far be it! No man in Israel disputed that the Song of Songs … does not defile the hands. For the whole world is not as worthy as the day on which the Song of Songs was given to Israel; for all the writings are holy but the Song of Songs is the holy of holies. If they had a dispute, they had a dispute only about Kohelet.' Ben Azzai reports a ruling for both books on the day Rabbi Elazar ben Azariah was made head of the academy.",
+   "A love poem that hardly names God and a book that says 'everything is futile' were questioned for those reasons; Akiva's defence presupposes reading the Song as about God and Israel. Both books were in the Bible the rabbis read, and the passage records the argument about them, not a decision to admit them."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Mishnah Yadayim 3:5", "year": "compiled c. AD 200", "url": "https://www.sefaria.org/Mishnah_Yadayim.3.5", "note": "tr. Joshua Kulp (Mishnah Yomit), CC BY: 'all the writings are holy but the Song of Songs is the holy of holies'"},
+   {"kind": "scripture", "ref": "Eccl.1.2"}
+  ],
+  "confidence": "evidence",
+  "related": ["canon-books-beyond-the-66", "purim-reading-esther"]
+ },
+ {
+  "id": "when-did-job-live",
+  "title": "When did Job live? The Talmud's answers",
+  "kind": "history",
+  "verses": ["Job.1.1-3", "Ezek.14.14", "Ezek.14.20", "Jas.5.11"],
+  "summary": "The book of Job names no king and gives no date. The Talmud collects the rabbis' guesses — Job lived in the time of Moses, of the spies, of Jacob, of the return from exile — and one sage's view that 'Job never existed … his story was a parable'.",
+  "body": [
+   "Job is set 'in the land of Uz' (1:1), outside Israel, among people Genesis connects with Esau and Aram. Its customs are those of the patriarchs: Job offers sacrifice himself as head of his family, and his wealth is counted in flocks.",
+   "The Babylonian Talmud (Bava Batra 15a) records the debate. A baraita says Moses wrote 'the book of Job', and Rabbi Levi bar Lahma that 'Job lived in the time of Moses'; Rava, at the time of the spies; others in Jacob's day, or among the exiles who returned under the Second Temple, with a house of study in Tiberias. One sage said before Rabbi Shmuel bar Nahmani: 'Job never existed and was never created … Rather, his story was a parable', and was answered that a parable would not give the man's name and city.",
+   "Elsewhere the Bible treats Job as a man. Ezekiel names him with Noah and Daniel as righteous men (14:14, 20), and James cites 'Job's perseverance' (5:11). Whether the book is history, parable or both is a question the rabbis already asked."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 15a", "year": "compiled c. AD 500", "url": "https://www.sefaria.org/Bava_Batra.15a", "note": "William Davidson translation: 'Job never existed and was never created … his story was a parable'"},
+   {"kind": "scripture", "ref": "Ezek.14.14"},
+   {"kind": "scripture", "ref": "Jas.5.11"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "edom-day-jerusalem-fell",
+  "title": "What Edom did when Jerusalem fell",
+  "kind": "history",
+  "verses": ["Obad.1.10-14", "Ps.137.7", "Lam.4.21-22", "Ezek.35.5", "1Esd.4.45"],
+  "summary": "Obadiah condemns Edom for gloating, looting and cutting off fugitives 'in the day of their disaster'. Psalm 137, Lamentations and Ezekiel bring the same charge, 1 Esdras says the Edomites burned the temple, and letters from the fort at Arad show Judah's soldiers watching for an Edomite attack.",
+  "body": [
+   "Obadiah's charges are specific: Edom 'stood aloof while strangers carried off his wealth', entered the gate, looted, and stood 'at the crossroads to cut off their fugitives' (verses 11-14). Psalm 137:7 remembers 'the sons of Edom on the day Jerusalem fell: Destroy it … tear it down to its foundations!' Lamentations 4:21-22 and Ezekiel 25:12 and 35:5 say the same.",
+   "1 Esdras, in Zerubbabel's speech to Darius, goes further: 'You also vowed to build the temple which the Edomites burned when Judea was made desolate by the Chaldeans' (4:45), and asks that 'the Edomites should give up the villages of the Jews which they held' (4:50). By then Edom had moved into southern Judah, the region later called Idumea.",
+   "The ostraca from Arad, a Judahite fort in the Negev, include letters from the last years before the fall that order troops moved because of fears about Edomites nearby. They show the threat the prophets describe from Judah's side.",
+   "Obadiah does not date itself, and some place it earlier, in an Edomite revolt under Jehoram (2 Kings 8:20-22). The details of verses 11-14 fit 586 BC best, which is the usual reading."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Ps.137.7"},
+   {"kind": "primary", "title": "1 Esdras 4:45, 4:50", "ref": "1Esd.4.45", "note": "'the temple which the Edomites burned when Judea was made desolate by the Chaldeans'"},
+   {"kind": "archaeology", "title": "Arad Ostraca, c. 600 BCE", "url": "https://cojs.org/arad_ostraca-_c-_600_bce/", "note": "Center for Online Judaic Studies: excavated by Y. Aharoni; letters that 'discuss troop movements in the light of fears about nearby Edomites'"},
+   {"kind": "scripture", "ref": "Obad.1.11-14"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "paul-quotes-greek-poets",
+  "title": "Paul quoting the Greek poets",
+  "kind": "history",
+  "verses": ["Acts.17.28", "Titus.1.12-13", "1Cor.15.33"],
+  "summary": "Three times Paul quotes Greek verse: Aratus's 'we are his offspring' at Athens, 'Cretans are always liars' from a Cretan 'prophet', and 'bad company corrupts good character', a line of comedy. The church fathers already traced each to its source.",
+  "body": [
+   "At Athens: 'As some of your own poets have said, We are His offspring' (Acts 17:28). The words open Aratus's Phaenomena, an astronomical poem of the third century BC: 'From Zeus let us begin … always we all have need of Zeus. For we are also his offspring.' Paul applies to the God he proclaims a line written of Zeus, and his hearers would have known it.",
+   "To Titus, on Crete: 'As one of their own prophets has said, Cretans are always liars, evil beasts, lazy gluttons' (1:12). Clement of Alexandria and Jerome name the prophet as Epimenides of Crete, the sixth-century BC seer. The first half-line is also in Callimachus's Hymn to Zeus, where the Cretans lie in claiming Zeus's tomb: 'O Lord, for thee the Cretans builded; but thou didst not die, for thou art for ever.' Paul adds, 'This testimony is true' — and the saying puts a Cretan in the liar's paradox, which Paul does not remark on.",
+   "To Corinth: 'Bad company corrupts good character' (1 Corinthians 15:33), a line of Greek iambic verse. Jerome says Paul 'quotes a line of Menander', the comic playwright; Socrates of Constantinople credited it to Euripides. It was a proverb by Paul's day, and he may have known it as one.",
+   "Jerome cites all three to show that Paul knew Greek literature and used it."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Aratus, Phaenomena 1–5", "author": "Aratus", "year": "c. 275 BC", "url": "https://www.theoi.com/Text/AratusPhaenomena.html", "note": "tr. G. R. Mair (1921): 'For we are also his offspring'"},
+   {"kind": "primary", "title": "Callimachus, Hymn 1 (to Zeus) 8–9", "author": "Callimachus", "year": "c. 270 BC", "url": "https://www.theoi.com/Text/CallimachusHymns1.html", "note": "tr. A. W. Mair (1921): 'Cretans are ever liars. Yea, a tomb, O Lord, for thee the Cretans builded'"},
+   {"kind": "primary", "title": "Clement of Alexandria, Stromata 1.14", "author": "Clement of Alexandria", "year": "c. AD 200", "url": "https://www.newadvent.org/fathers/02101.htm", "note": "'Epimenides the Cretan, whom Paul knew as a Greek prophet'"},
+   {"kind": "primary", "title": "Jerome, Letter 70 (to Magnus) 2", "author": "Jerome", "year": "c. AD 397", "url": "https://www.newadvent.org/fathers/3001070.htm", "note": "Epimenides, Menander and Aratus"},
+   {"kind": "primary", "title": "Socrates of Constantinople, Church History 3.16", "author": "Socrates Scholasticus", "year": "c. AD 440", "url": "https://www.newadvent.org/fathers/26013.htm", "note": "credits 1 Cor 15:33 to 'the tragedies of Euripides'"},
+   {"kind": "scripture", "ref": "Acts.17.28"}
+  ],
+  "confidence": "evidence"
+ },
+ {
+  "id": "praetorium-philippians",
+  "title": "Where was Paul when he wrote Philippians?",
+  "kind": "history",
+  "verses": ["Phil.1.12-14", "Phil.4.22", "Phil.2.24", "Acts.23.35", "Acts.28.16-31"],
+  "summary": "Paul writes Philippians in chains, known to 'the whole palace guard' (the praetorium) and greeted by 'the household of Caesar'. Rome is the traditional answer, but a praetorium and Caesar's slaves existed in provincial capitals too, and Acts itself has Paul kept 'in Herod's Praetorium' at Caesarea.",
+  "body": [
+   "Philippians gives clues but no place. Paul is a prisoner awaiting a verdict that could mean death (1:20-23); his chains are known 'throughout the whole praetorium' (1:13, BSB 'palace guard'); 'those from the household of Caesar' send greetings (4:22); and he hopes to visit Philippi soon (2:24).",
+   "Read with Acts 28, Rome fits: Paul spent two years there under guard, and the praetorian guard and the emperor's household of slaves and freedmen were in the city. This is the church's traditional view.",
+   "But praetorium was also the word for a governor's headquarters anywhere: the Gospels use it of Pilate's in Jerusalem (Mark 15:16, John 18:28), and Acts 23:35 has Paul held 'in Herod's Praetorium' at Caesarea for two years. 'Caesar's household' included imperial slaves and freedmen across the provinces. So Caesarea is possible, and so is Ephesus, where Paul says he 'fought wild beasts' (1 Corinthians 15:32) and 'despaired even of life' (2 Corinthians 1:8), though Acts records no imprisonment there. Ephesus, being near Philippi, would make the several journeys the letter implies easier.",
+   "The answer changes the date — on the usual chronology of Paul's life, ≈mid-50s from Ephesus, ≈late 50s from Caesarea, ≈early 60s from Rome — and so where the letter falls among Paul's others."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Phil.1.13"},
+   {"kind": "scripture", "ref": "Phil.4.22"},
+   {"kind": "scripture", "ref": "Acts.23.35"},
+   {"kind": "scripture", "ref": "Acts.28.16"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["Rome: the traditional view, and still the most widely held", "Ephesus: proposed in the twentieth century, from the letter's travel plans and Paul's dangers there", "Caesarea: a minority view, from Acts 23:35 and 24:27"]
  }
 ]

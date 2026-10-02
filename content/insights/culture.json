@@ -198,5 +198,46 @@
   ],
   "confidence": "evidence",
   "related": ["word-h2617-hesed"]
+ },
+ {
+  "id": "sukkot-water-and-light",
+  "title": "Water and light at the Feast of Tabernacles",
+  "kind": "culture",
+  "verses": ["John.7.2", "John.7.37-39", "John.8.12", "John.9.5-7", "Zech.14.8"],
+  "summary": "On the last day of Tabernacles Jesus cried, 'If anyone is thirsty, let him come to Me and drink', and soon after, 'I am the light of the world'. The Mishnah describes the feast's two great rites in the temple: water drawn from Siloam and poured at the altar, and golden lamps that lit every courtyard in Jerusalem.",
+  "body": [
+   "Mishnah Sukkah 4:9: each morning of the feast a priest filled 'a golden jug with a capacity of three log with water from the Siloam pool', carried it in through the Water Gate to the sound of trumpets, climbed the altar and poured it into a silver basin. A Sadducee priest who once poured it on his feet instead was pelted with the people's citrons — the rite mattered to them.",
+   "Sukkah 5:2-4: at the end of the first day golden lamps were set up in the Women's Court, on poles with four basins each, lit with wicks of worn priestly garments, 'and the light … was so bright that there was not a courtyard in Jerusalem that was not illuminated'. Men danced with torches through the night while the Levites played on the fifteen steps.",
+   "Against that background John's chapters read as answers to the feast: living water offered 'on the last and greatest day' (7:37), light offered in the temple courts during the feast (8:12, 20), and a blind man sent to wash in Siloam (9:7). Zechariah 14, read on the feast's first day, promises living water flowing from Jerusalem (14:8).",
+   "The Mishnah was compiled about AD 200, after the temple's fall. It describes the rites as remembered, and how closely they match the practice of Jesus's day cannot be checked; the water-pouring itself is old enough that the Sadducees resisted it."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Mishnah Sukkah 4:9", "year": "compiled c. AD 200", "url": "https://www.sefaria.org/Mishnah_Sukkah.4.9", "note": "William Davidson translation: the water libation from Siloam"},
+   {"kind": "primary", "title": "Mishnah Sukkah 5:2–4", "year": "compiled c. AD 200", "url": "https://www.sefaria.org/Mishnah_Sukkah.5.2", "note": "'not a courtyard in Jerusalem that was not illuminated'"},
+   {"kind": "primary", "title": "Babylonian Talmud, Megillah 31a", "year": "compiled c. AD 500", "url": "https://www.sefaria.org/Megillah.31a", "note": "the haftarah on Sukkot's first day: 'Behold the day of the Lord comes' (Zechariah 14)"},
+   {"kind": "scripture", "ref": "John.7.37"},
+   {"kind": "scripture", "ref": "John.8.12"}
+  ],
+  "confidence": "consensus",
+  "related": ["pool-of-siloam", "going-up-to-jerusalem"]
+ },
+ {
+  "id": "purim-reading-esther",
+  "title": "Purim on the 14th or the 15th — and an argument over Esther",
+  "kind": "culture",
+  "verses": ["Esth.9.17-32"],
+  "summary": "Esther fixes Purim on the 14th of Adar, and the 15th for Susa, where the fighting lasted a day longer. The Mishnah keeps the split: walled cities read the scroll on the 15th. The Talmud also records a sage who held that Esther, which never names God, did not 'defile the hands' as Scripture does.",
+  "body": [
+   "Esther 9 explains the two dates: the Jews of the provinces rested on the 14th of Adar, but in Susa they fought on the 13th and 14th and rested on the 15th (9:17-19). Mordecai's letters establish both days (9:21).",
+   "The Mishnah turns it into a rule for reading the scroll, the Megillah: 'Cities that have been surrounded by a wall since the days of Joshua, son of Nun, read the Megilla on the fifteenth of Adar, whereas villages and large towns that have not been walled since the days of Joshua … read it on the fourteenth.' Jerusalem still keeps Purim on the 15th.",
+   "Esther never mentions God, and the Talmud preserves a dispute over its standing. Rav Yehuda quotes Shmuel: 'The book of Esther does not render the hands ritually impure' — the mark of a holy scroll — and resolves the tension with Shmuel's other view that Esther was 'stated with the inspiration of the Divine Spirit' by saying it was given to be read aloud but not written as Scripture. The book was read in the synagogues all the same."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Mishnah Megillah 1:1", "year": "compiled c. AD 200", "url": "https://www.sefaria.org/Mishnah_Megillah.1.1", "note": "William Davidson translation: walled cities read on the 15th"},
+   {"kind": "primary", "title": "Babylonian Talmud, Megillah 7a", "year": "compiled c. AD 500", "url": "https://www.sefaria.org/Megillah.7a", "note": "'The book of Esther does not render the hands ritually impure'"},
+   {"kind": "scripture", "ref": "Esth.9.18-19"}
+  ],
+  "confidence": "evidence",
+  "related": ["song-holy-of-holies"]
  }
 ]

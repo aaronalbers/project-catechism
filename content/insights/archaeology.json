@@ -33,7 +33,8 @@
    {"kind": "scholarship", "title": "'The Ossuary of Miriam Daughter of Yeshua Son of Caiaphas, Priest of Ma'aziah from Beth 'Imri'", "author": "Boaz Zissu & Yuval Goren", "year": 2011, "note": "Israel Exploration Journal 61"}
   ],
   "confidence": "consensus",
-  "traditions": ["Identification accepted by most archaeologists; doubted by a minority (e.g. W. Horbury, on the spelling)"]
+  "traditions": ["Identification accepted by most archaeologists; doubted by a minority (e.g. W. Horbury, on the spelling)"],
+  "related": ["annas-high-priestly-family"]
  },
  {
   "id": "crucified-heel-yehohanan",
@@ -66,7 +67,8 @@
    {"kind": "archaeology", "title": "Pool of Siloam, City of David, excavated by Ronny Reich and Eli Shukron from 2004", "note": "R. Reich & E. Shukron, 'The Siloam Pool in the Wake of Recent Discoveries', New Studies on Jerusalem 10 (2004)"},
    {"kind": "scripture", "ref": "John.9.7", "note": "'Siloam (which means Sent)'"}
   ],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "related": ["sukkot-water-and-light"]
  },
  {
   "id": "pool-of-bethesda",
@@ -100,7 +102,7 @@
    {"kind": "scripture", "ref": "2Kgs.8.28-29"}
   ],
   "confidence": "evidence",
-  "related": ["mesha-stele"]
+  "related": ["mesha-stele", "black-obelisk-jehu"]
  },
  {
   "id": "hezekiah-tunnel-siloam-inscription",
@@ -136,7 +138,7 @@
    {"kind": "scripture", "ref": "2Kgs.19.35-36"}
   ],
   "confidence": "evidence",
-  "related": ["lachish-siege"]
+  "related": ["lachish-siege", "sargon-samaria", "sennacherib-murder"]
  },
  {
   "id": "cyrus-cylinder",
@@ -153,7 +155,7 @@
    {"kind": "scripture", "ref": "Ezra.1.2-4"}
   ],
   "confidence": "evidence",
-  "related": ["babylonian-chronicle-597", "jehoiachin-ration-tablets"]
+  "related": ["babylonian-chronicle-597", "jehoiachin-ration-tablets", "elephantine-sanballat"]
  },
  {
   "id": "ketef-hinnom-scrolls",
@@ -169,7 +171,8 @@
    {"kind": "archaeology", "title": "Ketef Hinnom amulets I and II, Israel Museum, excavated 1979 by Gabriel Barkay", "note": "G. Barkay, A. Vaughn, M. Lundberg & B. Zuckerman, 'The Amulets from Ketef Hinnom: A New Edition and Evaluation', BASOR 334 (2004)"},
    {"kind": "scripture", "ref": "Num.6.24-26"}
   ],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "related": ["great-isaiah-scroll-light"]
  },
  {
   "id": "herod-death-4bc",
@@ -250,7 +253,7 @@
    {"kind": "scholarship", "title": "Restoring Line 31 in the Mesha Stele: The 'House of David' or Biblical Balak?", "author": "Israel Finkelstein, Nadav Na'aman & Thomas Römer", "year": 2019, "note": "Tel Aviv 46 — argues for 'Balak' against Lemaire"}
   ],
   "confidence": "evidence",
-  "related": ["tel-dan-stele"]
+  "related": ["tel-dan-stele", "kurkh-monolith-ahab"]
  },
  {
   "id": "lachish-siege",
@@ -274,7 +277,7 @@
    {"kind": "scripture", "ref": "2Chr.32.9", "note": "'Sennacherib... was before Lachish with all his forces'"}
   ],
   "confidence": "evidence",
-  "related": ["sennacherib-prism", "hezekiah-tunnel-siloam-inscription"]
+  "related": ["sennacherib-prism", "hezekiah-tunnel-siloam-inscription", "lachish-letters-azekah"]
  },
  {
   "id": "babylonian-chronicle-597",
@@ -294,7 +297,7 @@
    {"kind": "scripture", "ref": "2Kgs.24.17", "note": "Nebuchadnezzar makes Mattaniah king in Jehoiachin's place and renames him Zedekiah"}
   ],
   "confidence": "evidence",
-  "related": ["jehoiachin-ration-tablets"]
+  "related": ["jehoiachin-ration-tablets", "fall-of-nineveh-chronicle", "lachish-letters-azekah"]
  },
  {
   "id": "jehoiachin-ration-tablets",
@@ -336,7 +339,8 @@
    {"kind": "scholarship", "title": "The Palace of King David: Excavations at the Summit of the City of David", "author": "Eilat Mazar", "year": 2009, "note": "excavation report including both bullae"},
    {"kind": "scripture", "ref": "Jer.38.1"}
   ],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "related": ["lachish-letters-azekah"]
  },
  {
   "id": "belshazzar-nabonidus",
@@ -473,5 +477,325 @@
   ],
   "confidence": "evidence",
   "related": ["gallio-inscription"]
+ },
+ {
+  "id": "kurkh-monolith-ahab",
+  "title": "Ahab at Qarqar: 2,000 chariots the Bible never mentions",
+  "kind": "archaeology",
+  "verses": ["1Kgs.22.1-4", "1Kgs.20.34", "1Kgs.16.29-30"],
+  "summary": "Shalmaneser III's stele from Kurkh lists the kings who met him at Qarqar on the Orontes, among them '2,000 chariots and 10,000 troops of Ahab the Israelite' — the largest chariot force in the alliance, and a battle Kings does not record.",
+  "body": [
+   "Kings presents Ahab chiefly as an apostate, and his wars as wars with Aram. The Assyrian record shows him in another light: in Shalmaneser's sixth year, ≈853 BC on the Assyrian eponym list, twelve kings of Syria and the coast stood together against Assyria at Qarqar, and Ahab brought more chariots than any of them — Hadad-ezer of Damascus brought 1,200, Irhulena of Hamath 700.",
+   "That alliance fits a detail in 1 Kings. After defeating Ben-hadad, Ahab spared him and 'made a treaty with him' (20:34), and 'three years passed without war between Aram and Israel' (22:1). Fighting side by side against Assyria would explain both. The Assyrian text names Damascus's king Hadad-ezer (Adda-idri) where Kings has Ben-hadad, a difference historians still discuss.",
+   "Shalmaneser claims a crushing victory, but he was back fighting the same coalition in later years, and many historians read Qarqar as a check on Assyria rather than a rout. Whether Israel could field 2,000 chariots is also debated; the figure is the inscription's, not a count anyone can check.",
+   "This is the first time an Israelite king appears in a datable foreign record, and with the eponym list it helps anchor the chronology of the divided monarchy: Ahab was alive in 853 BC, and Jehu was on the throne by 841 BC (see the Black Obelisk)."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kurkh_stele_of_Shalmaneser_III._From_Diyarbak%C4%B1r%2C_southern_Turkey._British_Museum.jpg/500px-Kurkh_stele_of_Shalmaneser_III._From_Diyarbak%C4%B1r%2C_southern_Turkey._British_Museum.jpg", "caption": "The Kurkh stele of Shalmaneser III, from near Diyarbakır in south-east Turkey, now in the British Museum. The annals run across the king's figure; Ahab's contingent is listed in column ii.", "credit": "Osama Shukir Muhammed Amin FRCP(Glasg), Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Kurkh_stele_of_Shalmaneser_III._From_Diyarbak%C4%B1r,_southern_Turkey._British_Museum.jpg", "license": "CC BY-SA 4.0"}
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Kurkh Monolith of Shalmaneser III (RIAo Shalmaneser III 2), ii 89b–95", "url": "https://oracc.museum.upenn.edu/riao/Q004607/", "note": "'2,000 chariots (and) 10,000 troops of Ahab (Aḫ-abi) the Israelite (Sirʾalāyu)'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "1Kgs.20.34"},
+   {"kind": "scripture", "ref": "1Kgs.22.1"}
+  ],
+  "confidence": "evidence",
+  "related": ["black-obelisk-jehu", "mesha-stele"]
+ },
+ {
+  "id": "black-obelisk-jehu",
+  "title": "The Black Obelisk: Jehu, 'son of Omri', bowing to Assyria",
+  "kind": "archaeology",
+  "verses": ["2Kgs.9.1-13", "2Kgs.10.28-36", "1Kgs.19.16-17"],
+  "summary": "A panel on Shalmaneser III's Black Obelisk from Nimrud shows a man kneeling before the Assyrian king, captioned 'the payment of Jehu of Bīt-Ḫumrî' — literally 'son of Omri', though Jehu had wiped out Omri's family.",
+  "body": [
+   "The caption reads: 'I received the payment of Jehu (Iāūa) of (Bīt)-Ḫumrî: silver, gold, a gold bowl, a gold tureen, gold vessels, gold pails, tin, the staffs of the king's hand, (and) spears.' Shalmaneser's annals put the tribute in his eighteenth year, ≈841 BC on the Assyrian eponym list, which on the usual reckoning is the year Jehu took the throne.",
+   "To Assyria, Israel was Bīt-Ḫumrî, 'the house of Omri', after the dynasty that founded Samaria (1 Kings 16:24). So the scribe calls Jehu Omri's 'son' a few years after Jehu killed Omri's grandson Joram and all of Ahab's house (2 Kings 9–10). The phrase names his country, not his father; the Bible calls him 'son of Jehoshaphat, the son of Nimshi'.",
+   "Kings does not mention the tribute. It does say that 'in those days the LORD began to reduce the size of Israel' as Hazael of Damascus took its lands east of the Jordan (10:32-33), and Shalmaneser's annals for the same year record his war with Hazael. Submitting to Assyria was a way to gain protection against Damascus.",
+   "The kneeling figure is usually taken to be Jehu himself, though some read him as Jehu's envoy. Either way, it is the only known ancient picture of an Israelite king or his envoy."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Jehu-on-Obelisk-of-Shalmaneser_%28cropped%29.jpg/500px-Jehu-on-Obelisk-of-Shalmaneser_%28cropped%29.jpg", "caption": "The Jehu panel of the Black Obelisk of Shalmaneser III, from Nimrud, now in the British Museum. The epigraph naming Jehu runs above the scene.", "credit": "Steven G. Johnson, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jehu-on-Obelisk-of-Shalmaneser_(cropped).jpg", "license": "CC BY-SA 3.0"}
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Black Obelisk of Shalmaneser III, epigraph 2 (RIAo Shalmaneser III 88)", "url": "https://oracc.museum.upenn.edu/riao/Q004693/", "note": "'I received the payment of Jehu (Iāūa) of (Bīt)-Ḫumrî (Israel; lit. “son of Omri”)'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "primary", "title": "Annals of Shalmaneser III (RIAo Shalmaneser III 16)", "url": "https://oracc.museum.upenn.edu/riao/Q004621/", "note": "the payment of Baʾal-manzer of Tyre and Jehu, in the year before his nineteenth regnal year", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "2Kgs.9.2"},
+   {"kind": "scripture", "ref": "2Kgs.10.32-33"}
+  ],
+  "confidence": "evidence",
+  "related": ["kurkh-monolith-ahab", "tel-dan-stele"]
+ },
+ {
+  "id": "tiglath-pileser-menahem-pul",
+  "title": "Pul and Menahem: the Assyrian king with two names",
+  "kind": "archaeology",
+  "verses": ["2Kgs.15.19-20", "1Chr.5.26"],
+  "summary": "Kings says Menahem paid 'Pul king of Assyria' a thousand talents. Tiglath-pileser III's own annals list 'Menahem of Samaria' among the kings who paid him, and Babylonian king lists call the same man Pulu.",
+  "body": [
+   "Tiglath-pileser III took the Assyrian throne in 745 BC (the Babylonian Chronicle's 'third year of Nabû-nasir') and in 729 BC made himself king of Babylon too. His annals and a stele from western Iran list the western kings who paid him: Rezin of Damascus, Hiram of Tyre, and 'Menahem of the city Samaria'.",
+   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. The name long puzzled readers, since Kings later calls the same king Tiglath-pileser (15:29). Babylonian king lists explain it: they give the Assyrian who ruled Babylon in those years as Pulu, apparently the name he was known by there. Henry Rawlinson suggested the identification in 1863.",
+   "1 Chronicles 5:26 names both: 'the spirit of Pul king of Assyria, and the spirit of Tiglath-pilneser king of Assyria', with one verb in the singular. The BSB renders the 'and' as 'that is', reading one king under two names, as the Assyrian and Babylonian records show. Older readers who took them for two kings had only the Bible to go on.",
+   "Kings adds a detail no Assyrian text gives: Menahem raised the silver by taxing every wealthy man in Israel fifty shekels. A talent was 3,000 shekels (Exodus 38:25-26 counts 603,550 half-shekels as 100 talents and 1,775 shekels), so a thousand talents at fifty shekels a head is ≈60,000 men — a figure derived from the text's own numbers, if they are taken at face value."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Annals of Tiglath-pileser III (RINAP 1 Tiglath-pileser III 14), lines 10b–11", "url": "https://oracc.museum.upenn.edu/rinap/Q003427/", "note": "'The payment of … Raḫiānu (Rezin) of the land Damascus, Menahem of the city Samaria, [Hiram of the city] Tyre …'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "archaeology", "title": "Iran stele of Tiglath-pileser III (RINAP 1 Tiglath-pileser III 35), iii 5", "url": "https://oracc.museum.upenn.edu/rinap/Q003448/", "note": "'Menahem of the land Samaria'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "primary", "title": "Babylonian Chronicle ABC 1, i 2–6 and i 19–24", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-1-from-nabu-nasir-to-samas-suma-ukin/", "note": "Tiglath-pileser's accession in Assyria (745/744 BC) and in Babylon (729/728 BC); translation adapted from Grayson (1975)"},
+   {"kind": "scholarship", "title": "Pul", "author": "Emil G. Hirsch and Samuel Fuchs", "year": 1906, "url": "https://www.jewishencyclopedia.com/articles/12435-pul", "note": "Jewish Encyclopedia: 'Pulu' in the Babylonian king list; the identification first suggested by Rawlinson (1863)"},
+   {"kind": "scripture", "ref": "2Kgs.15.19-20"},
+   {"kind": "scripture", "ref": "1Chr.5.26"}
+  ],
+  "confidence": "evidence",
+  "related": ["tiglath-pileser-pekah-hoshea", "tiglath-pileser-ahaz"]
+ },
+ {
+  "id": "tiglath-pileser-pekah-hoshea",
+  "title": "'They killed Pekah, and I placed Hoshea over them'",
+  "kind": "archaeology",
+  "verses": ["2Kgs.15.29-30", "2Kgs.17.1-3", "Isa.7.1-9"],
+  "summary": "Kings says Hoshea killed Pekah and reigned in his place. Tiglath-pileser III's summary inscription tells the same coup from the other side: Pekah was killed and the Assyrian king installed Hoshea, and took ten talents of gold for it.",
+  "body": [
+   "Pekah of Israel and Rezin of Damascus tried to force Judah into an anti-Assyrian alliance — the crisis behind Isaiah 7. Tiglath-pileser answered by taking Damascus and the north of Israel: Kings lists Ijon, Abel-beth-maacah, Kedesh, Hazor, Gilead, Galilee and Naphtali (15:29), and Tiglath-pileser's own text names Gilead and Abel-šiṭṭi as 'the border of the land Bīt-Ḫumrî (Israel)'.",
+   "His summary inscription goes on: '(As for) the land Bīt-Ḫumrî (Israel), I brought to Assyria … all of its people. [I/they] killed Peqah, their king, and I placed Hoshea [as king o]ver them. I received from them ten talents of gold, … talents of silver.' The tablet is broken where the verb's subject stands, so whether it claims 'I killed' or 'they killed' cannot be read.",
+   "The two accounts fit together. Kings gives the coup an Israelite face (15:30: 'Hoshea son of Elah led a conspiracy against Pekah'); the Assyrian gives the authority behind it. Hoshea was Assyria's vassal from the start, which is why his later turn to Egypt was treated as rebellion (17:3-4)."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Summary inscription of Tiglath-pileser III (RINAP 1 Tiglath-pileser III 42), lines 15'b–19'", "url": "https://oracc.museum.upenn.edu/rinap/Q003455/", "note": "'[I/they] killed Peqah, their king, and I placed Hoshea [as king o]ver them'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "archaeology", "title": "Summary inscription of Tiglath-pileser III (RINAP 1 Tiglath-pileser III 49), rev. 9–12", "url": "https://oracc.museum.upenn.edu/rinap/Q003462/", "note": "'[I placed Hoshea as] king over them … 100 talents of silver'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "2Kgs.15.29-30"},
+   {"kind": "scripture", "ref": "2Kgs.17.3-4"}
+  ],
+  "confidence": "evidence",
+  "related": ["tiglath-pileser-menahem-pul", "tiglath-pileser-ahaz", "sargon-samaria"]
+ },
+ {
+  "id": "tiglath-pileser-ahaz",
+  "title": "Ahaz in Tiglath-pileser's tribute list: 'Jehoahaz of Judah'",
+  "kind": "archaeology",
+  "verses": ["2Kgs.16.5-10", "2Chr.28.16-21", "Isa.7.1-17"],
+  "summary": "Ahaz sent the temple's silver and gold to Tiglath-pileser to buy help against Israel and Aram. An inscription from Nimrud lists 'Jehoahaz of the land Judah' among the kings who paid him — Ahaz under the full name the Bible shortens.",
+  "body": [
+   "Isaiah urged Ahaz to stand firm against Pekah and Rezin without foreign help (Isaiah 7:4-9). Ahaz instead wrote to Tiglath-pileser, 'I am your servant and your son. Come up and save me', and sent him the silver and gold of the temple and palace (2 Kings 16:7-8).",
+   "A summary inscription from Nimrud lists the payment of the kings of the west, among them 'Sanīpu of the land Bīt-Ammon, Salāmānu of the land Moab, … Mitinti of the land Ashkelon, Jehoahaz of the land Judah, Qauš-malaka of the land Edom … gold, silver, tin, iron, lead, multi-colored garments'.",
+   "The Assyrian scribe writes Ia-ú-ḫa-zi, Yau-hazi: Jehoahaz, 'the LORD has grasped'. Kings and Isaiah call him only Ahaz, 'he has grasped', a short form without the divine name. Oracc's glossary labels Yau-hazi as Jehoahaz king of Israel, but the text says 'of the land Judah', and the only king of Judah in these years with that name is Ahaz.",
+   "Chronicles judges the purchase harshly: Tiglath-pileser 'came against him and oppressed him instead of strengthening him' (2 Chronicles 28:20). Kings adds that Ahaz went to Damascus to meet the Assyrian king there and had an altar copied from the one he saw (16:10)."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Summary inscription of Tiglath-pileser III (RINAP 1 Tiglath-pileser III 47), rev. 7'–11'", "url": "https://oracc.museum.upenn.edu/rinap/Q003460/", "note": "'Mitinti of the land Ashkelon, Jehoahaz of the land Judah, Qauš-malaka of the land Edom'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "2Kgs.16.7-8"},
+   {"kind": "scripture", "ref": "2Chr.28.20-21"},
+   {"kind": "scripture", "ref": "Isa.7.4-9"}
+  ],
+  "confidence": "evidence",
+  "related": ["tiglath-pileser-pekah-hoshea", "tiglath-pileser-menahem-pul"]
+ },
+ {
+  "id": "sargon-samaria",
+  "title": "Who took Samaria? Shalmaneser, Sargon, and 27,290 captives",
+  "kind": "archaeology",
+  "verses": ["2Kgs.17.3-6", "2Kgs.18.9-12", "2Kgs.17.24", "Isa.20.1"],
+  "summary": "Kings names Shalmaneser as the king who besieged Samaria. The Babylonian Chronicle agrees he 'ravaged Samaria', but his successor Sargon II claimed the conquest, the 27,290 deportees and the resettlement for himself.",
+  "body": [
+   "2 Kings 17-18 says Shalmaneser besieged Samaria for three years and 'the king of Assyria' captured it in Hoshea's ninth year. The Babylonian Chronicle says of Shalmaneser V: 'He ravaged Samaria', and that he died in his fifth year (722/721 BC). Sargon II took the throne the same month.",
+   "Sargon's inscriptions at Khorsabad claim the city: 'I surrounded (and) conquered the city Samaria. I carried off as booty 27,290 of its inhabitants, conscripted fifty chariots from among them'. His Nimrud Prism adds that he 'restored the city Samaria and made it greater than before', brought there 'people from the lands that I had conquered' and set a eunuch over them as governor — what Kings describes in 17:24, with people from Babylon, Cuthah, Avva, Hamath and Sepharvaim.",
+   "The prism's number of deportees is damaged: what survives reads 27,280, and its editors restore a further 20,000 in the break, making 47,280. The usual reconstruction is that Shalmaneser took the city as the siege ended and Sargon, facing revolts at the start of his reign, came back to crush Samaria's part in a rising led by Hamath (≈720 BC) and deported its people. Kings' 'the king of Assyria' leaves room for both.",
+   "Isaiah 20:1 is the only place the Bible names Sargon. His own inscriptions came to light when Paul-Émile Botta began digging his palace at Khorsabad in 1843."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sargon_II_Khorsabad_Louvre_14012018_1.jpg/500px-Sargon_II_Khorsabad_Louvre_14012018_1.jpg", "caption": "Sargon II (left) facing an official, on a relief from his palace at Dur-Sharrukin (Khorsabad), ≈716–713 BC, now in the Louvre.", "credit": "Vassil, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Sargon_II_Khorsabad_Louvre_14012018_1.jpg", "license": "CC0"}
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Babylonian Chronicle ABC 1, i 27–31", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-1-from-nabu-nasir-to-samas-suma-ukin/", "note": "'Šalmaneser in Assyria and Akkad ascended the throne. He ravaged Samaria'; his death in his fifth year"},
+   {"kind": "archaeology", "title": "Great Display Inscription of Sargon II, Khorsabad (RINAP 2 Sargon II 7), lines 23b–25", "url": "https://oracc.museum.upenn.edu/rinap/Q006488/", "note": "'I surrounded (and) conquered the city Samaria. I carried off as booty 27,290 of its inhabitants'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "archaeology", "title": "Nimrud Prism of Sargon II (RINAP 2 Sargon II 74), iv 25–41", "url": "https://oracc.museum.upenn.edu/rinap/Q006555/", "note": "line iv 31 reads [20?]+27 thousand 280; the restoration gives 47,280", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "2Kgs.17.24"},
+   {"kind": "scripture", "ref": "Isa.20.1"}
+  ],
+  "confidence": "evidence",
+  "related": ["tiglath-pileser-pekah-hoshea", "sennacherib-prism"]
+ },
+ {
+  "id": "sennacherib-murder",
+  "title": "Sennacherib killed by his son",
+  "kind": "archaeology",
+  "verses": ["2Kgs.19.36-37", "Isa.37.37-38", "2Chr.32.21"],
+  "summary": "Kings says Sennacherib was struck down by his sons Adrammelech and Sharezer, who fled to Ararat, and Esarhaddon succeeded him. The Babylonian Chronicle records that he 'was killed by his son in a rebellion', and Esarhaddon's own account tells of his brothers' revolt and flight.",
+  "body": [
+   "The Babylonian Chronicle: 'On the twentieth day of the month Tebêtu, Sennacherib, king of Assyria, was killed by his son in a rebellion. For twenty-four years Sennacherib ruled Assyria. After the twentieth day of the month Tebêtu the rebellion continued in Assyria until the second day of the month Addaru. On the eighteenth day of the month Addaru Esarhaddon, his son, ascended the throne.' By its reckoning that is 681 BC.",
+   "Esarhaddon, the younger son, tells it as a succession fight. His brothers, jealous of his appointment as heir, 'plotted evil, girt (their) weapons, and in Nineveh … butted each other like kids for (the right to) exercise kingship'; when he marched on Nineveh, they 'deserted the army they relied on and fled to an unknown land'. Kings names the land: Ararat, that is Urartu, north of Assyria.",
+   "Neither Assyrian account names the killer, and the Chronicle has one son where Kings has two. Simo Parpola identified Kings' Adrammelech with Arda-Mulišši, a son of Sennacherib named in Assyrian letters, which most Assyriologists accept.",
+   "Kings places the murder straight after Sennacherib's return from Judah, but the campaign was in 701 BC and the murder twenty years later. 'He returned to Nineveh and stayed there' (19:36) spans the interval."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Babylonian Chronicle ABC 1, iii 34–38", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-1-from-nabu-nasir-to-samas-suma-ukin/abc-1.iii", "note": "'Sennacherib, king of Assyria, was killed by his son in a rebellion'"},
+   {"kind": "archaeology", "title": "Nineveh Prism A of Esarhaddon (RINAP 4 Esarhaddon 1), i 8–86", "url": "https://oracc.museum.upenn.edu/rinap/Q003230/", "note": "his brothers' revolt and flight 'to an unknown land'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scholarship", "title": "The Murderer of Sennacherib", "author": "Simo Parpola", "year": 1980, "note": "in B. Alster (ed.), Death in Mesopotamia; identifies Adrammelech with Arda-Mulišši"},
+   {"kind": "scripture", "ref": "2Kgs.19.37"}
+  ],
+  "confidence": "evidence",
+  "related": ["sennacherib-prism", "esarhaddon-manasseh"]
+ },
+ {
+  "id": "esarhaddon-manasseh",
+  "title": "Manasseh, a vassal on Assyria's lists",
+  "kind": "archaeology",
+  "verses": ["2Kgs.21.1-18", "2Chr.33.1-13"],
+  "summary": "Esarhaddon and Ashurbanipal each list 'Manasseh, king of Judah' among the western kings who served them — one sent building materials to Nineveh, the other troops for Egypt. Chronicles' story of his being taken to Babylon in chains has no Assyrian record.",
+  "body": [
+   "Manasseh reigned fifty-five years, the longest of any king of Judah (2 Kings 21:1), and all of them under Assyria. Esarhaddon's Nineveh prism lists 'Ba'alu, king of Tyre, Manasseh, king of Judah, Qa'uš-gabri, king of Edom, Muṣurī, king of Moab' among twenty-two kings of the west and Cyprus whom he made carry timber and stone for his armoury at Nineveh.",
+   "Ashurbanipal's prism names him again, in almost the same list, among the kings who brought troops and gifts for his first march on Egypt (≈667 BC, the usual date of that campaign, from the Egyptian and Assyrian reign lengths).",
+   "2 Chronicles 33:11-13 tells that the commanders of the king of Assyria took Manasseh to Babylon with a hook and bronze shackles, and that he repented and was restored. Kings does not have the episode, and no Assyrian text mentions it. Those who accept it point out that Esarhaddon's successor Ashurbanipal faced a long revolt in Babylon (652–648 BC) and that a vassal could be summoned there; others treat it as Chronicles' explanation of how so wicked a king reigned so long. The prisms show only that Manasseh served Assyria, which fits either."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Nineveh Prism A of Esarhaddon (RINAP 4 Esarhaddon 1), v 54ff.", "url": "https://oracc.museum.upenn.edu/rinap/Q003230/", "note": "'Baʾalu, king of Tyre, Manasseh, king of Judah, Qaʾuš-gabri, king of Edom …'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "archaeology", "title": "Prism C of Ashurbanipal (RINAP 5 Ashurbanipal 6), ii 25'ff.", "url": "https://oracc.museum.upenn.edu/rinap/Q003705/", "note": "'In the course of my campaign, Baʾalu, king of the land Tyre, Manasseh, king of the land Judah …'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "2Chr.33.11-13"},
+   {"kind": "scripture", "ref": "2Kgs.21.1"}
+  ],
+  "confidence": "evidence",
+  "related": ["sennacherib-murder", "ashurbanipal-thebes"]
+ },
+ {
+  "id": "ashurbanipal-thebes",
+  "title": "'Are you better than Thebes?' Nahum and Assyria's own boast",
+  "kind": "archaeology",
+  "verses": ["Nah.3.8-10"],
+  "summary": "Nahum warns Nineveh that it is no safer than No-Amon, Thebes, which fell into captivity for all its water and allies. Ashurbanipal's annals record the conquest: he took Thebes 'in its entirety', and carried off two obelisks from a temple gate.",
+  "body": [
+   "Thebes was the greatest city of Upper Egypt, the seat of Amun's temples at Karnak and Luxor, defended by the Nile and allied, in Nahum's words, with Cush and Egypt, Put and Libya (3:9). Its kings in that age were the Kushite pharaohs.",
+   "Ashurbanipal's prism tells of his second Egyptian campaign: the Kushite king Tanutamon fled Memphis for Thebes, then fled Thebes as the Assyrians arrived, and 'with the support of (the god) Aššur and the goddess Ištar, I conquered that city (Thebes) in its entirety. Silver, gold, precious stones, … people — male and female — two tall obelisks … whose weight was 2,500 talents (and which) stood at a temple gate, I ripped (them) from where they were erected and took (them) to Assyria.'",
+   "The sack is usually dated ≈663 BC from the Egyptian and Assyrian reign lengths. Nahum's argument depends on it: the city Assyria had itself destroyed is the example of what will happen to Nineveh. So the book was written after 663 BC and, since it foretells Nineveh's fall, before 612 BC."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Rassam Prism of Ashurbanipal (RINAP 5 Ashurbanipal 11), ii 22–48", "url": "https://oracc.museum.upenn.edu/rinap/Q003710/", "note": "'I conquered that city (Thebes) in its entirety … two tall obelisks … I ripped (them) from where they were erected'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scripture", "ref": "Nah.3.8-10"}
+  ],
+  "confidence": "evidence",
+  "related": ["fall-of-nineveh-chronicle", "esarhaddon-manasseh"]
+ },
+ {
+  "id": "fall-of-nineveh-chronicle",
+  "title": "The fall of Nineveh, 612 BC",
+  "kind": "archaeology",
+  "verses": ["Nah.1.1", "Nah.2.1-13", "Nah.3.1-7", "Zeph.2.13-15", "Jonah.3.1-10"],
+  "summary": "Nahum and Zephaniah foretell that Nineveh will be left a ruin. A Babylonian chronicle records how it happened: in 612 BC the Babylonians and the Medes besieged the city for three months, took it, and 'turned the city into a ruin heap'.",
+  "body": [
+   "The Fall of Nineveh Chronicle, a tablet in the British Museum, covers the years of Nabopolassar of Babylon. For his fourteenth year (612/611 BC) it reads: 'The king of Akkad mustered his army and marched to Assyria. The king of the Medes marched towards the king of Akkad … In the month Simanu … they encamped against Nineveh. From the month Simanu until the month Âbu — for three months — they subjected the city to a heavy siege. … At that time Sin-šar-iškun, king of Assyria, died. They carried off the vast booty of the city and the temple and turned the city into a ruin heap.'",
+   "Zephaniah, prophesying under Josiah, says God 'will make Nineveh a desolation, as dry as a desert' (2:13). Nahum describes the siege as if watching it, with the river gates thrown open (2:6). The chronicle follows the last Assyrian king, Aššur-uballiṭ, west to Harran, which fell in 610 BC; Assyria as a power was gone.",
+   "Nineveh was never rebuilt as a city. Two centuries later Xenophon's army camped by its deserted walls; he was told the place was called Mespila and had once been a city of the Medes (Anabasis 3.4.10-12). Jonah's Nineveh, which repented, belongs to an earlier century."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Fall of Nineveh Chronicle (ABC 3), year 14", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-3-fall-of-nineveh-chronicle/", "note": "'for three months they subjected the city to a heavy siege … and turned the city into a ruin heap'; translation adapted from Grayson (1975)"},
+   {"kind": "primary", "title": "Xenophon, Anabasis 3.4.10–12", "author": "Xenophon", "year": "c. 370 BC", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0202%3Abook%3D3%3Achapter%3D4%3Asection%3D10", "note": "'a great stronghold, deserted and lying in ruins. The name of this city was Mespila' — Nineveh"},
+   {"kind": "scripture", "ref": "Zeph.2.13-15"},
+   {"kind": "scripture", "ref": "Nah.2.6"}
+  ],
+  "confidence": "evidence",
+  "related": ["ashurbanipal-thebes", "babylonian-chronicle-597"]
+ },
+ {
+  "id": "lachish-letters-azekah",
+  "title": "The Lachish letters: 'the signals of Azekah have not been seen'",
+  "kind": "archaeology",
+  "verses": ["Jer.34.6-7", "Jer.38.4"],
+  "summary": "Jeremiah says that when Babylon besieged Jerusalem only Lachish and Azekah still held out. A letter written on a potsherd at that time, found in Lachish's gate, reports that the officer is watching for Lachish's signals 'for the code of Azekah has not been seen'.",
+  "body": [
+   "Jeremiah 34:7 is a snapshot: the Babylonian army was 'fighting against Jerusalem and the remaining cities of Judah — against Lachish and Azekah. For these were the only fortified cities remaining in Judah.'",
+   "In 1935 J. L. Starkey's excavation at Lachish found a group of ink letters on potsherds (ostraca) in a guardroom by the city gate, written to the commander there, Yaush, in the last years of Judah. Ostracon 4 ends: 'One will (then) know that we are observing the smoke signals of Lachish according to the codes that my lord gave us, for the code of Azekah has (indeed) not been seen.' Read with Jeremiah, the usual inference is that Azekah had fallen and Lachish was the last fortress left; the letter itself does not say why Azekah's signal was not seen.",
+   "Ostracon 6 complains that letters from the officials in Jerusalem 'weaken your hands and cause the hands of the men to go slack'. That is the Hebrew idiom of Jeremiah 38:4, where the officials say Jeremiah 'is discouraging the warriors' — literally weakening the hands of the men of war. In the letters the officials are the ones accused of it."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Lachish Ostraca 4 and 6", "note": "excavated by J. L. Starkey, 1935; first published by H. Torczyner, Lachish I: The Lachish Letters (1938)"},
+   {"kind": "primary", "title": "The Lachish Ostraca", "author": "Scott B. Noegel (tr.)", "year": 2006, "url": "https://faculty.washington.edu/snoegel/PDFs/articles/Noegel%2049%20-%20ANEHST%202006d.pdf", "note": "in M. W. Chavalas (ed.), The Ancient Near East: Historical Sources in Translation, 400-403; the translation quoted"},
+   {"kind": "scripture", "ref": "Jer.34.7"},
+   {"kind": "scripture", "ref": "Jer.38.4"}
+  ],
+  "confidence": "evidence",
+  "related": ["lachish-siege", "jeremiah-officials-bullae", "babylonian-chronicle-597"]
+ },
+ {
+  "id": "elephantine-sanballat",
+  "title": "Sanballat's sons and Johanan the high priest, in a letter from Egypt",
+  "kind": "archaeology",
+  "verses": ["Neh.2.10", "Neh.4.1-2", "Neh.13.28", "Neh.12.22-23"],
+  "summary": "Nehemiah's enemy Sanballat and the high priest Johanan both appear in a papyrus written ≈407 BC by the Jews of Elephantine in Egypt, who had written to 'Johanan the high priest' in Jerusalem and to 'Delaiah and Shelemiah the sons of Sanballat governor of Samaria'.",
+  "body": [
+   "A Jewish garrison at Elephantine, an island in the Nile at Egypt's southern border, kept its own temple to YHW (Ya'u). When it was destroyed in 410 BC, its leaders petitioned Bagohi (Bigvai in Cowley's edition), the Persian governor of Judah. A draft of their petition survives, dated 'the 20th of Marheshwan, the 17th year of Darius the king' — Darius II's seventeenth year, ≈407 BC by the usual reckoning of his reign (Cowley reckoned 408).",
+   "They say that they had already written 'to Johanan the high priest and his colleagues the priests who are in Jerusalem', without reply, and that they have now set out the matter 'in a letter in our name to Delaiah and Shelemiah the sons of Sanballat governor of Samaria'.",
+   "Nehemiah never gives Sanballat a title, only 'the Horonite' (2:10), and has him speak before 'the army of Samaria' (4:2). The papyrus shows he was the governor of Samaria, and that a generation later his sons were acting for him. Johanan is the high priest of Nehemiah 12:22-23, of the line of Nehemiah's contemporary Eliashib. One of Eliashib's grandsons had married Sanballat's daughter (13:28); the papyrus shows the Elephantine Jews writing to both families."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "Petition to the governor of Judah, Elephantine papyrus (Cowley 30), lines 18–19 and 29", "author": "A. Cowley (ed., tr.)", "year": 1923, "url": "https://archive.org/details/aramaicpapyrioff00ahikuoft", "note": "Aramaic Papyri of the Fifth Century B.C., no. 30: 'Johanan the high priest' and 'Delaiah and Shelemiah the sons of Sanballat governor of Samaria'"},
+   {"kind": "scripture", "ref": "Neh.12.22-23"},
+   {"kind": "scripture", "ref": "Neh.13.28"}
+  ],
+  "confidence": "evidence",
+  "related": ["cyrus-cylinder"]
+ },
+ {
+  "id": "pesher-habakkuk",
+  "title": "'The righteous will live by faith' — read at Qumran before Paul",
+  "kind": "archaeology",
+  "verses": ["Hab.2.4", "Hab.1.6", "Rom.1.17", "Gal.3.11", "Heb.10.38"],
+  "summary": "A Dead Sea Scroll copied in the first century BC quotes Habakkuk line by line with its interpretation. It reads 2:4 as promising deliverance to those who keep the Law 'because of their suffering and their faith in the Teacher of Righteousness' — the verse Paul builds on for a different faith.",
+  "body": [
+   "The Commentary on Habakkuk (1QpHab) is one of the seven scrolls found in Qumran Cave 1 in 1947. It copies Habakkuk 1–2 paragraph by paragraph, each followed by pishro, 'its interpretation', applying the prophecy to the community's own day. The Chaldeans of Habakkuk 1:6 become the Kittim — the Romans.",
+   "On 2:4 it comments: 'Interpreted, this concerns all those who observe the Law in the House of Judah, whom God will deliver from the House of Judgment because of their suffering and because of their faith in the Teacher of Righteousness.'",
+   "Paul quotes the same half-verse twice: 'The righteous will live by faith' (Romans 1:17, Galatians 3:11), setting faith in Christ against works of the Law. Hebrews 10:38 quotes it again, following the Greek. The scroll shows that the verse was already being read, before any of them, as a promise about whom God would save and why. The two readings differ over what faith is in and how it relates to keeping the Law.",
+   "The scroll writes God's name in the old Hebrew script within a text otherwise in the square script, a reverence for the name visible on the leather."
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "The Commentary on Habakkuk Scroll (1QpHab), Israel Museum 95.57/28", "url": "http://dss.collections.imj.org.il/habakkuk", "note": "dated to the second half of the first century BCE; the Romans 'called in the work Chaldeans or Kittim'"},
+   {"kind": "scholarship", "title": "Reclaiming the Dead Sea Scrolls", "author": "Lawrence H. Schiffman", "year": 1994, "url": "https://cojs.org/teacher_of_righteousness-_lawrence_h-_schiffman-_reclaiming_the_dead_sea_scrolls-_jewish_publication_society-_philadelphia_1994/", "note": "the translation of Pesher Habakkuk 8:1-3 quoted"},
+   {"kind": "scripture", "ref": "Rom.1.17"},
+   {"kind": "scripture", "ref": "Gal.3.11"}
+  ],
+  "confidence": "evidence",
+  "related": ["great-isaiah-scroll-light"]
+ },
+ {
+  "id": "great-isaiah-scroll-light",
+  "title": "The Great Isaiah Scroll and the 'light' of Isaiah 53:11",
+  "kind": "archaeology",
+  "verses": ["Isa.53.11", "Isa.52.13-53.12", "Isa.1.1"],
+  "summary": "The BSB's 'He will see the light of life' follows a word the standard Hebrew text lacks. The Great Isaiah Scroll from Qumran, copied ≈125 BC, has it, and so does the Greek Septuagint: the servant 'will see light'.",
+  "body": [
+   "The Masoretic text of Isaiah, the form copied in the medieval codices, reads 53:11 yirʾeh yisbaʿ — 'he shall see, he shall be satisfied' — with nothing for him to see. Translations made from it supply an object ('he shall see it', the JPS) or read 'see the fruit of'.",
+   "The Great Isaiah Scroll (1QIsaᵃ), found in Qumran Cave 1 in 1947, holds all 66 chapters of Isaiah in 54 columns on 7.34 metres of parchment. The Israel Museum dates it ≈125 BC, from its script — about a thousand years older than the oldest Hebrew Bibles known before. At 53:11 it reads yirʾeh ʾor, 'he will see light'.",
+   "The Septuagint, translated from a Hebrew text centuries before the medieval codices, has the same word: 'to shew him light' (Brenton's English). Two independent witnesses agreeing against the later text is why the BSB, like the NIV and NRSV, reads 'light'; others, such as the ESV, keep the Masoretic reading.",
+   "For the rest, the scroll agrees closely with the Masoretic text, with differences mostly of spelling. Its value lies both in the variants and in showing how faithfully the text was copied over the thousand years between them."
+  ],
+  "media": [
+   {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Isaiah_Scroll_Ch53.jpg/500px-Great_Isaiah_Scroll_Ch53.jpg", "caption": "Isaiah 53 in the Great Isaiah Scroll (1QIsaᵃ), Israel Museum, Jerusalem.", "credit": "Photograph by Ardon Bar-Hama, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg", "license": "Public domain"}
+  ],
+  "sources": [
+   {"kind": "archaeology", "title": "The Great Isaiah Scroll (1QIsaᵃ), Israel Museum HU 95.57/27", "url": "http://dss.collections.imj.org.il/isaiah", "note": "'Dating from ca. 125 BCE … some one thousand years older than the oldest manuscripts of the Hebrew Bible known to us before'"},
+   {"kind": "primary", "title": "Isaiah 53:11, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/ISA53.htm", "note": "'to take away from the travail of his soul, to shew him light'"},
+   {"kind": "primary", "title": "Isaiah 53:11, Masoretic text", "url": "https://www.sefaria.org/Isaiah.53.11", "note": "מֵעֲמַל נַפְשׁוֹ יִרְאֶה יִשְׂבָּע, no object for 'see'"},
+   {"kind": "scripture", "ref": "Isa.53.11"}
+  ],
+  "confidence": "evidence",
+  "related": ["pesher-habakkuk", "ketef-hinnom-scrolls"]
+ },
+ {
+  "id": "amos-earthquake",
+  "title": "'Two years before the earthquake'",
+  "kind": "archaeology",
+  "verses": ["Amos.1.1", "Zech.14.5", "Amos.8.8", "Amos.9.1", "2Chr.26.16-21"],
+  "summary": "Amos dates his words by an earthquake in Uzziah's reign, and Zechariah, two centuries later, still remembers people fleeing it. Excavators at Hazor and other sites found collapsed walls in layers of the mid-eighth century BC, which many identify with it.",
+  "body": [
+   "A dateline by an earthquake assumes the readers know which one. Zechariah 14:5 shows it was still proverbial after the exile: 'You will flee as you fled from the earthquake in the days of Uzziah king of Judah.' Amos's own visions are full of it: the land trembling and rising like the Nile (8:8), the temple's capitals struck so that the thresholds shake (9:1).",
+   "At Hazor, Yigal Yadin's excavations in the 1950s found in Stratum VI tilted and collapsed walls, fallen pillars and broken jars in place. Stratum V above it ended in the fire usually tied to Tiglath-pileser's conquest in 732 BC (2 Kings 15:29), so the collapse came earlier in the eighth century. Damage of similar date has been reported at Gezer, Lachish, Deir 'Alla and other sites.",
+   "Steven Austin and two co-authors argued in 2000 that these layers record one great earthquake of ≈750 BC, of magnitude ≈8 on the Dead Sea fault. Both figures are estimates, the date from the pottery and stratigraphy of the sites (to within some thirty years either way) and the magnitude from how widely the damage is spread. Others are less sure that every collapse is the same event, or that Hazor's tilted walls were not caused by subsidence.",
+   "Josephus, writing much later, connects the earthquake with Uzziah's burning incense in the temple (2 Chronicles 26:16-21): a rent opened in the temple, sunlight struck the king's face, and he became leprous. That is a tradition, not something Chronicles says."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Zech.14.5"},
+   {"kind": "scripture", "ref": "Amos.1.1"},
+   {"kind": "archaeology", "title": "Hazor, Stratum VI (excavations of Y. Yadin, 1955–58)", "url": "https://deadseaquake.info/EarthquakeCatalogOfTheDeadSea/Sites/Archaeo/Hazor_StratumVIEarthquake.html", "note": "summarised with references in J. W. Williams's Dead Sea earthquake catalogue: tilted and collapsed walls under the Stratum V destruction of 732 BC"},
+   {"kind": "scholarship", "title": "Amos's Earthquake: An Extraordinary Middle East Seismic Event of 750 B.C.", "author": "S. A. Austin, G. W. Franz and E. G. Frost", "year": 2000, "url": "https://doi.org/10.1080/00206810009465104", "note": "International Geology Review 42, 657-671"},
+   {"kind": "primary", "title": "Josephus, Antiquities 9.10.4 (9.222ff.)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D9%3Awhiston+chapter%3D10%3Awhiston+section%3D4", "note": "'a great earthquake shook the ground and a rent was made in the temple'"}
+  ],
+  "confidence": "estimate"
  }
 ]
