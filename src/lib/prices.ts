@@ -97,8 +97,8 @@ export const priceRefs = (p: Price) => [p.ref, ...(p.also ?? [])];
 /** Every verse a price draws its figures from, for the coverage check and the margin. */
 export const priceSources = (p: Price) => [...new Set([...priceRefs(p), ...priceParts(p).map((x) => x.ref)])];
 
-/** The prices a verse names, in content order: the Worth tab's count. */
-export const pricesAt = (loc: VerseLoc) => PRICES.filter((p) => priceRefs(p).some((r) => contains(r, loc)));
+/** The prices a verse names or gives part of, in content order: the Worth tab's count, and its cards marked as here. */
+export const pricesAt = (loc: VerseLoc) => PRICES.filter((p) => priceSources(p).some((r) => contains(r, loc)));
 
 /**
  * The verses a price's chart is drawn under: its own, and each verse naming it again that is more than three
@@ -179,7 +179,7 @@ export const shortDays = (days: number) => formatDays(days).replace(/’ (wages|
 const ALL_DAYS = PRICES.map(priceDays);
 export const SCALE: [number, number] = [Math.min(...ALL_DAYS) / 2, Math.max(...ALL_DAYS) * 2];
 /** Where `days` falls on the scale, 0–1. */
-export const scaleAt = (days: number) => (Math.log10(days) - Math.log10(SCALE[0])) / (Math.log10(SCALE[1]) - Math.log10(SCALE[0]));
+export const scaleAt = (days: number) => Math.min(1, Math.max(0, (Math.log10(days) - Math.log10(SCALE[0])) / (Math.log10(SCALE[1]) - Math.log10(SCALE[0]))));
 /**
  * Landmarks on the scale. A `minor` one is a mark without a label, named only on hover: between a century and a
  * million years the labels are longer than the two decades between them.

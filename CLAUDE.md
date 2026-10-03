@@ -240,7 +240,7 @@ them in CI — read it before adding content.
   verbatim, if its number (in words or figures, parsed by `quotedAmount`) is not `n`, or if a unit or good is
   unknown. It also fails if a verse of the 66 that names money, by a currency Strong's number in the interlinear or
   by a currency word and a number in the BSB, is neither priced nor listed in `unpriced` with a reason. A money
-  insight card's figures must agree with the yardstick (twelve-hour day, 300-day year). A price gives context only where the text or a
+  insight card's figures must agree with the yardstick (twelve-hour day, 300-day year). A price's `note` says only what the text or the BSB's notes say (where two accounts differ, it says so and does not explain it). The same animal is priced the same everywhere: cattle offered or eaten are bulls. A price gives context only where the text or a
   cited source supplies the second number: `per` is how many shared it (the text's count, quoted from its verse), and
   `every` and `times` say how often it was paid. `compare` is a whole it is measured against (the empire's yearly
   tribute), in a unit of its era, with its source. Never divide by a guessed head count. When the total is too

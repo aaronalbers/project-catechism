@@ -79,6 +79,12 @@ describe('prices', () => {
     }
   });
 
+  // Num 7 gives each leader's offering and then the twelve together; priced alike, they must agree.
+  it('prices the same animals and metal the same way wherever the text counts them', () => {
+    expect(12 * priceDays(byId('leader-offering'))).toBe(priceDays(byId('leaders-total')));
+    expect(perHead(byId('firstborn-total')), 'Num 3:50 is 273 × Num 3:47').toBe(priceDays(byId('firstborn-redemption')));
+  });
+
   it('works out the shares the text implies', () => {
     expect(perHead(byId('tabernacle-silver')), 'a beka a man, as Exod 38:26 says').toBe(15);
     expect(contextLines(byId('tabernacle-silver'))[0], 'the text’s count, unrounded').toBe('≈ 15 days’ wages each, for 603,550 men');

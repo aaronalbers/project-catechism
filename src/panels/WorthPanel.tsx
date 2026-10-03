@@ -2,7 +2,7 @@ import { useState, type CSSProperties } from 'react';
 import { goTo, openTab, useFeatureInView, useStore } from '@/app/store';
 import { INSIGHT_BY_ID, WORTH } from '@/lib/content';
 import { cardId } from '@/lib/catalog';
-import { BY_WORTH, eraOf, goodOf, KIND_LABEL, priceDays, priceParts, pricesInChapter, priceRefs, priceSources, scaleAt, shortDays, unitIn, daysLabel, contextLines, gridOf, type PricePart } from '@/lib/prices';
+import { BY_WORTH, eraOf, goodOf, KIND_LABEL, priceDays, priceParts, pricesAt, pricesInChapter, priceRefs, priceSources, scaleAt, shortDays, unitIn, daysLabel, contextLines, gridOf, type PricePart } from '@/lib/prices';
 import { contains, formatRef, parseRef } from '@/lib/refs';
 import type { Price, PriceKind } from '@/lib/types';
 import type { VerseLoc } from '@/lib/refs';
@@ -144,12 +144,12 @@ export function WorthPanel() {
   // In the order the chapter names them.
   const at = (p: Price) => { const r = priceSources(p).map((x) => parseRef(x)!.start).find((l) => l.book === loc.book && l.chapter === loc.chapter); return r ? r.verse : 0; };
   const here = pricesInChapter(loc.book, loc.chapter).sort((a, b) => at(a) - at(b));
-  const inVerse = (p: Price) => priceRefs(p).some((r) => contains(r, loc)) || priceParts(p).some((x) => contains(x.ref, loc));
+  const inVerse = new Set(pricesAt(loc));
   return (
     <div className="panel-body worth-pane">
       <div className="panel-title">What it was worth, in days of a labourer’s wage</div>
       {here.length
-        ? here.map((p) => <PriceCard key={p.id} p={p} loc={loc} here={inVerse(p)} />)
+        ? here.map((p) => <PriceCard key={p.id} p={p} loc={loc} here={inVerse.has(p)} />)
         : <div className="empty">This chapter names no sum of money. Every one that does is on the scale below.</div>}
       <Ladder chapter={new Set(here)} />
       <Reckoning />

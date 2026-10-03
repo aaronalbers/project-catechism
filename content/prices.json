@@ -2,7 +2,7 @@
  "id": "worth",
  "title": "What things cost",
  "confidence": "estimate",
- "summary": "Every sum the Bible names, in days of a labourer’s wage. The New Testament gives its own yardstick: a denarius for a day in the vineyard (Matt 20:2). The Old Testament gives a year’s wage of ten shekels (Judg 17:10), and Hammurabi’s laws a thirtieth of a shekel a day. Silver wages rose roughly tenfold by the Persian period, so a shekel did not buy the same work in every book. Each sum is reckoned in the money of its own time. The figures in the text are the text’s; the days are an estimate, and say what they rest on.",
+ "summary": "Every sum the Bible names, in days of a labourer’s wage. The New Testament gives its own yardstick: a denarius for a day in the vineyard (Matt 20:2). The Old Testament gives a year’s wage of ten shekels (Judg 17:10), and Hammurabi’s laws a thirtieth of a shekel a day. On these figures, silver wages rose about tenfold by the Persian period, so a shekel did not buy the same work in every book. Each sum is reckoned in the money of its own time. The figures in the text are the text’s; the days are an estimate, and say what they rest on.",
  "hours": 12,
  "year": 300,
  "yardstick": {
@@ -24,7 +24,7 @@
     {"id": "shekel", "name": "shekel", "plural": "shekels", "value": 1, "basis": "A weight of silver, about 11.4 g (the BSB’s figure)."},
     {"id": "gerah", "name": "gerah", "plural": "gerahs", "value": 0.05, "basis": "Twenty gerahs to the shekel (Exod 30:13)."},
     {"id": "beka", "name": "beka", "plural": "bekas", "value": 0.5, "basis": "“A beka per person, that is, half a shekel” (Exod 38:26)."},
-    {"id": "pim", "name": "pim", "plural": "pims", "value": 0.6667, "basis": "Two-thirds of a shekel, from stone weights inscribed pym found in excavations (BSB note on 1 Sam 13:21).", "estimated": true},
+    {"id": "pim", "name": "pim", "plural": "pims", "value": 0.6667, "basis": "Two-thirds of a shekel: a stone weight of about 7 g found in excavations (BSB note on 1 Sam 13:21).", "estimated": true},
     {
      "id": "mina",
      "name": "mina",
@@ -68,7 +68,7 @@
    "label": "After the exile",
    "base": "drachma",
    "days": 1,
-   "basis": "≈ A drachma a day. The Athenian accounts for building the Erechtheion pay labourers, architect and sawyers a drachma a day (408/7 BC), and Tobit offers his son’s guide “a drachma a day” (Tob 5:14). No wage is recorded for Persian Judah itself. Silver had grown far cheaper against labour than in Hammurabi’s day, so a shekel now bought days, not a month.",
+   "basis": "≈ A drachma a day. The Athenian accounts for building the Erechtheion pay labourers, architect and sawyers a drachma a day (408/7 BC), and Tobit offers his son’s guide “a drachma a day” (Tob 5:14). No wage is recorded for Persian Judah itself. On these figures silver bought far less work than in Hammurabi’s day: a shekel now paid for days, not a month.",
    "books": ["Ezra", "Neh", "Esth", "Hag", "Zech", "Mal", "Tob"],
    "units": [
     {"id": "drachma", "name": "drachma", "plural": "drachmas", "value": 1, "basis": "The yardstick: a day’s pay."},
@@ -148,10 +148,13 @@
  "goods": [
   {"id": "sheep", "name": "sheep", "days": 15, "basis": "Half a shekel, the Hittite laws’ price for a sheep (§178), at a thirtieth of a shekel a day: rams, ewes and lambs alike."},
   {"id": "goat", "name": "goat", "days": 15, "basis": "Priced as a sheep: the Hittite price list gives none for a goat."},
-  {"id": "bull", "name": "bull", "days": 150, "basis": "Five shekels, the Hittite price of a bull (“ten half-shekels”); also used for herds the text calls cattle or bulls."},
-  {"id": "ox", "name": "ox", "days": 225, "basis": "Seven and a half shekels, the Hittite price of a plough-ox (“fifteen half-shekels”)."},
+  {
+   "id": "bull",
+   "name": "bull",
+   "days": 150,
+   "basis": "Five shekels, the Hittite price of a bull (“ten half-shekels”), for the bulls, oxen and cattle the text offers or eats. The list’s dearer plough-ox was a draught animal, which none of these were."
+  },
   {"id": "cow", "name": "cow", "days": 105, "basis": "Three and a half shekels, the Hittite price of a grown cow (“seven half-shekels”)."},
-  {"id": "yoke", "name": "yoke of oxen", "days": 450, "basis": "Two plough-oxen."},
   {"id": "year", "name": "year’s work", "days": 300, "basis": "Paid in labour: ≈300 working days a year."}
  ],
  "goodsSources": [
@@ -224,7 +227,6 @@
   {
    "id": "twenty-years-for-laban",
    "ref": "Gen.31.41",
-   "also": ["Gen.31.7"],
    "kind": "wage",
    "what": "Jacob’s twenty years of work for Laban",
    "goods": [
@@ -417,9 +419,9 @@
   {
    "id": "firstborn-redemption",
    "ref": "Num.3.47",
-   "also": ["Num.3.46", "Num.18.16"],
+   "also": ["Num.3.46"],
    "kind": "valuation",
-   "what": "redeeming each firstborn beyond the Levites’ number",
+   "what": "redeeming each of the firstborn beyond the Levites’ number",
    "sums": [
     {"quote": "five shekels", "n": 5, "unit": "shekel"}
    ]
@@ -431,6 +433,16 @@
    "what": "the redemption money for the 273 firstborn",
    "sums": [
     {"quote": "1,365 shekels", "n": 1365, "unit": "shekel"}
+   ],
+   "per": {"n": 273, "quote": "273 firstborn", "ref": "Num.3.46", "who": "firstborn"}
+  },
+  {
+   "id": "firstborn-son",
+   "ref": "Num.18.16",
+   "kind": "valuation",
+   "what": "redeeming a firstborn son at a month old",
+   "sums": [
+    {"quote": "five shekels of silver", "n": 5, "unit": "shekel"}
    ]
   },
   {
@@ -449,7 +461,7 @@
     {"quote": "one ram", "n": 1, "good": "sheep", "ref": "Num.7.15"},
     {"quote": "one male lamb", "n": 1, "good": "sheep", "ref": "Num.7.15"},
     {"quote": "one male goat", "n": 1, "good": "goat", "ref": "Num.7.16"},
-    {"quote": "two oxen", "n": 2, "good": "ox", "ref": "Num.7.17"},
+    {"quote": "two oxen", "n": 2, "good": "bull", "ref": "Num.7.17"},
     {"quote": "five rams", "n": 5, "good": "sheep", "ref": "Num.7.17"},
     {"quote": "five male goats", "n": 5, "good": "goat", "ref": "Num.7.17"},
     {"quote": "five male lambs", "n": 5, "good": "sheep", "ref": "Num.7.17"}
@@ -558,8 +570,8 @@
   {
    "id": "micah-idol",
    "ref": "Judg.17.4",
-   "kind": "purchase",
-   "what": "the silver given to a silversmith for Micah’s idol",
+   "kind": "treasure",
+   "what": "the silver made into Micah’s idol",
    "sums": [
     {"quote": "two hundred shekels of silver", "n": 200, "unit": "shekel"}
    ]
@@ -600,7 +612,8 @@
    "what": "what the Philistines charged to sharpen a pitchfork or axe, or repoint a goad",
    "sums": [
     {"quote": "a third of a shekel", "n": 0.3333333333333333, "unit": "shekel"}
-   ]
+   ],
+   "estimate": "The Hebrew has only “a third”; the BSB supplies “of a shekel”, and notes it may be a third of a pim instead."
   },
   {
    "id": "abigail-gift",
@@ -650,7 +663,7 @@
    "sums": [
     {"quote": "fifty shekels of silver", "n": 50, "unit": "shekel"}
    ],
-   "note": "Chronicles has six hundred shekels of gold “for the site” (1 Chr 21:25): perhaps the whole hill the temple stood on, perhaps a different figure for the same sale."
+   "note": "Chronicles has six hundred shekels of gold “for the site” (1 Chr 21:25). The text does not explain the difference."
   },
   {
    "id": "threshing-floor-chronicles",
@@ -660,7 +673,7 @@
    "sums": [
     {"quote": "six hundred shekels of gold", "n": 600, "unit": "shekel", "gold": true}
    ],
-   "note": "Samuel has fifty shekels of silver for the threshing floor and the oxen (2 Sam 24:24)."
+   "note": "Samuel has fifty shekels of silver “for the threshing floor and the oxen” (2 Sam 24:24). The text does not explain the difference."
   },
   {
    "id": "solomon-provisions",
@@ -669,8 +682,8 @@
    "kind": "treasure",
    "what": "Solomon’s provisions for a single day",
    "goods": [
-    {"quote": "ten fat oxen", "n": 10, "good": "ox"},
-    {"quote": "twenty range oxen", "n": 20, "good": "ox"},
+    {"quote": "ten fat oxen", "n": 10, "good": "bull"},
+    {"quote": "twenty range oxen", "n": 20, "good": "bull"},
     {"quote": "a hundred sheep", "n": 100, "good": "sheep"}
    ],
    "every": "day",
@@ -683,18 +696,19 @@
    "kind": "offering",
    "what": "Solomon’s peace offerings at the temple’s dedication",
    "goods": [
-    {"quote": "22,000 oxen", "n": 22000, "good": "ox"},
+    {"quote": "22,000 oxen", "n": 22000, "good": "bull"},
     {"quote": "120,000 sheep", "n": 120000, "good": "sheep"}
    ]
   },
   {
    "id": "hiram-gold",
    "ref": "1Kgs.9.14",
-   "kind": "gift",
+   "kind": "treasure",
    "what": "the gold Hiram sent Solomon",
    "sums": [
     {"quote": "120 talents of gold", "n": 120, "unit": "talent", "gold": true}
-   ]
+   ],
+   "note": "Sent the year Solomon gave him twenty towns in Galilee (9:11-13); the text does not say whether the gold paid for them."
   },
   {
    "id": "ophir-kings",
@@ -867,7 +881,7 @@
    "sums": [
     {"quote": "fine flour will sell for a shekel", "n": 1, "unit": "shekel"}
    ],
-   "note": "A seah is about 7 litres (≈). Elisha foretells it as the end of the famine."
+   "note": "A seah is about 7.3 litres (BSB note). Elisha foretells it as the end of the famine."
   },
   {
    "id": "barley-after-siege",
@@ -938,7 +952,7 @@
     {"quote": "1,000,000 talents of silver", "n": 1000000, "unit": "talent"}
    ],
    "uncounted": "the bronze, iron, timber and stone",
-   "note": "About 3,400 tonnes of gold and 34,000 of silver at the 34 kg talent assumed here, far beyond any treasury known from the ancient world. Many read it as a deliberately vast round figure."
+   "note": "About 3,420 tonnes of gold and 34,200 of silver, by the BSB’s notes on the verse."
   },
   {
    "id": "david-gift",
@@ -967,7 +981,7 @@
    "id": "dedication-sacrifices",
    "ref": "1Chr.29.21",
    "kind": "offering",
-   "what": "the burnt offerings the day after Solomon was made king",
+   "what": "the burnt offerings at the assembly that made Solomon king",
    "goods": [
     {"quote": "a thousand bulls", "n": 1000, "good": "bull"},
     {"quote": "a thousand rams", "n": 1000, "good": "sheep"},
@@ -1148,7 +1162,7 @@
     {"quote": "forty shekels of silver", "n": 40, "unit": "shekel"}
    ],
    "uncounted": "the bread and wine",
-   "note": "Most likely a daily allowance, beside the food (5:14, 18), though the text does not say how often."
+   "note": "The text does not say how often it was taken."
   },
   {
    "id": "governor-gift",
@@ -1281,7 +1295,7 @@
     {"quote": "A drachma a day", "n": 1, "unit": "drachma"}
    ],
    "uncounted": "his keep",
-   "note": "A drachma a day: the after-the-exile yardstick, in a book written in those years."
+   "note": "A drachma a day: the after-the-exile yardstick."
   },
   {
    "id": "tobit-deposit",
@@ -1291,7 +1305,8 @@
    "what": "the silver Tobit left in trust with Gabael",
    "sums": [
     {"quote": "ten talents of silver", "n": 10, "unit": "talent"}
-   ]
+   ],
+   "estimate": "Tobit is set in Assyria but was written after the exile, and reckons in drachmas (5:14), so its talents are reckoned at that era’s rate."
   },
   {
    "id": "last-penny",
@@ -1328,13 +1343,13 @@
    "sums": [
     {"quote": "two pennies", "n": 2, "unit": "assarion"}
    ],
-   "note": "Buy two pennies’ worth and the fifth sparrow comes free."
+   "note": "At two for a penny (Matt 10:29), two pennies buy four: the fifth is thrown in."
   },
   {
    "id": "temple-tax",
    "ref": "Matt.17.24",
    "kind": "tribute",
-   "what": "the yearly temple tax",
+   "what": "the two-drachma temple tax",
    "sums": [
     {"quote": "the two drachmas", "n": 2, "unit": "drachma"}
    ],
@@ -1562,7 +1577,7 @@
    "sums": [
     {"quote": "wheat for a denarius", "n": 1, "unit": "denarius"}
    ],
-   "note": "A choenix, about a litre: one man’s daily ration of grain for a full day’s pay."
+   "note": "A choenix, about 0.9 litres (BSB note)."
   },
   {
    "id": "famine-barley",
@@ -1576,7 +1591,8 @@
  ],
  "unpriced": [
   {"why": "The kesitah’s value is no longer known (BSB footnote, Gen 33:19), so these are not priced.", "refs": ["Gen.33.19", "Josh.24.32", "Job.42.11"]},
-  {"why": "A weight, not a price: armour, hair, food, spices, bronze.", "refs": ["Exod.30.23", "Exod.30.24", "Exod.38.29", "1Sam.17.5", "1Sam.17.7", "2Sam.14.26", "2Sam.21.16", "Ezek.4.10"]},
+  {"why": "An offering of bronze, which nothing here can price.", "refs": ["Exod.38.29"]},
+  {"why": "A weight, not a price: armour, hair, food and spices.", "refs": ["Exod.30.23", "Exod.30.24", "1Sam.17.5", "1Sam.17.7", "2Sam.14.26", "2Sam.21.16", "Ezek.4.10"]},
   {"why": "Defines a unit rather than paying one.", "refs": ["Lev.27.25", "Ezek.45.12", "Amos.8.5"]},
   {"why": "No sum is named.", "refs": ["Lev.5.15", "1Sam.2.36", "Ps.119.72", "Matt.28.12", "Matt.28.15", "Mark.14.11", "Luke.9.3", "Luke.22.5", "Acts.3.6", "Acts.7.16", "Acts.8.20", "Acts.20.33", "1Pet.1.18"]}
  ]
