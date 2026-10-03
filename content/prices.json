@@ -1009,7 +1009,7 @@
    "sums": [
     {"quote": "a hundred talents of silver", "n": 100, "unit": "talent"}
    ],
-   "note": "For 100,000 men: about a tenth of a day’s pay each at this era’s rate. He sent them home unused (25:10)."
+   "note": "For 100,000 men: three shekels a man, ≈90 days’ pay each at this era’s rate. He sent them home unused (25:10)."
   },
   {
    "id": "ammonite-tribute",
@@ -1250,7 +1250,7 @@
    "sums": [
     {"quote": "thirty pieces of silver", "n": 30, "unit": "shekel"}
    ],
-   "estimate": "The Hebrew has “thirty of silver”; shekels are assumed. In a time when silver wages had risen, this is a little under two months’ pay.",
+   "estimate": "The Hebrew has “thirty of silver”; shekels are assumed. In a time when silver wages had risen, this is ≈65 days’ pay, about two and a half months.",
    "insight": "thirty-pieces-of-silver"
   },
   {
