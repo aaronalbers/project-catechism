@@ -1,5 +1,6 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, TALLIES } from './content';
+import { daysLabel, KIND_LABEL, priceRefs } from './prices';
 import { HEBREW } from './scrolls';
 import { READING_ORDER, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
 import type { InsightKind, Ref } from './types';
@@ -9,7 +10,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'price' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -74,6 +75,14 @@ export const CATALOG: CatalogSection[] = [
     entries: sorted(TALLIES.map((t) => ({
       id: t.id, kind: 'tally', title: t.title, summary: t.summary,
       go: t.ref, lines: [{ label: `${t.rows.length} groups`, refs: [t.ref] }],
+    }))),
+  },
+  {
+    id: 'prices', kind: 'price', title: 'What things cost', tab: 'worth', reveal: 'price',
+    blurb: 'Every sum of money, gift and offering the text names, in days of a labourer’s wage, drawn under its verse and on one scale with every other.',
+    entries: sorted(PRICES.map((p) => ({
+      id: p.id, kind: 'price', title: p.what[0].toUpperCase() + p.what.slice(1), summary: daysLabel(p),
+      go: p.ref, lines: [{ label: KIND_LABEL[p.kind], refs: priceRefs(p) }],
     }))),
   },
   {

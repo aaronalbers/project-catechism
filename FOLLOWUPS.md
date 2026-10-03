@@ -209,3 +209,37 @@ page, with a `url` added.
 - **Sherwin-White's three grades cited without a page.** The scale is widely credited to *Roman Society and Roman Law
   in the New Testament* (1963), and the Digest passage behind it was checked, but his wording was not. *Needed:* the
   page and his own terms.
+
+## What things cost (`content/prices.json`, the Worth tab), 2026-10-03
+
+### Sources not yet found
+
+- **A wage from Persian Judah.** The after-the-exile day of a drachma rests on Athens (the Erechtheion accounts,
+  408/7 BC) and on Tobit, not on Judah or Babylonia. *Needed:* a cited wage from the Elephantine papyri, the
+  Persepolis fortification or treasury tablets, or Neo-Babylonian hire contracts. The shekel, mina and talent of that
+  era should then be checked against it.
+- **An Iron Age wage for Israel and Judah.** The before-the-exile day of 1/30 shekel comes from Hammurabi (§273,
+  Babylon, c. 1750 BC), checked against Judges 17:10. Applied to the ninth-century prices of 2 Kings 7:1, it makes a
+  seah of flour cost a month's wages even on the day the famine ended, which suggests the wage is too low for that
+  period. *Needed:* a Neo-Assyrian or Levantine wage, and then perhaps a separate era for the monarchy.
+- **A gold-to-silver ratio before the Persian period.** Every gold sum uses Herodotus's 13:1 (Histories 3.95). The
+  ratio varied by period, and no Near Eastern figure has been cited. *Needed:* a cited ratio for the second and early
+  first millennium (Powell's "Money in Mesopotamia", JESHO 39, 1996, is a starting point, not yet checked).
+- **Livestock prices from Israel's own world.** Sheep, goats, oxen, bulls and cows are priced from the Hittite laws
+  (§178, Fordham's translation, in half-shekels), turned into days by Hammurabi's wage. Goats are priced as sheep
+  because the list gives no goat. *Needed:* Neo-Assyrian or Ugaritic livestock prices, and a check of §178 against
+  Hoffner's edition, whose figures may differ from the Fordham translation.
+
+### Incomplete
+
+- **Things given in kind with no price.** Grain, flour, oil, wine, wool, camels, donkeys, garments, spices, precious
+  stones, bronze and iron are listed as "not counted" wherever the text gives them (Hiram's wheat, 1 Kgs 5:11, is
+  left out because nothing else in it can be priced). *Needed:* cited prices. Eshnunna §1's barley, or 2 Kings 7:1's
+  flour and barley read as market prices, would price the grain; a source is still needed for the rest.
+- **The kesitah** (Gen 33:19; Josh 24:32; Job 42:11) is unpriced because its value is unknown (BSB note). It should
+  stay that way unless a source gives one.
+- **Books beyond the 66.** Only Tobit's wage and deposit are priced. The sums in 1–2 Maccabees, Judith and Sirach are
+  not, and the coverage test checks only the 66. *Needed:* entries checked against the WEB wording, and a coverage
+  check for those books with an English pattern only, since they have no interlinear.
+- **The mina before the exile** is taken as 50 shekels. Ezekiel 45:12 makes it 60, and 1 Kgs 10:17 with 2 Chr 9:16
+  implies 100. The unit's basis says so, but nothing shows how far the three readings move each sum.

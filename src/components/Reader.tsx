@@ -16,6 +16,8 @@ import { readStored, writeStored } from '@/lib/storage';
 import { ChiasmCaption, ChiasmStrip, LevelHeader, Rung, levelStyle } from './Chiasm';
 import { TallyBar, TallyCaption, TallyGroupBar, TallyTotal } from './Tally';
 import { ReignChart } from './Reign';
+import { PriceChart } from './Price';
+import { chartsAt } from '@/lib/prices';
 import { PassionChart } from './Passion';
 import { OverlapNote, SeamNote } from './Scrolls';
 import { overlapsInChapter, seamsInChapter } from '@/lib/scrolls';
@@ -132,6 +134,8 @@ export function Reader() {
   const reigns = useMemo(() => reignsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const [reignCharts, setReignCharts] = useStoredFlag('reigns', true);
   const toggleReigns = () => setReignCharts();
+  const [priceCharts, setPriceCharts] = useStoredFlag('prices', true);
+  const togglePrices = () => setPriceCharts();
   const [dayCharts, setDayCharts] = useStoredFlag('passion', true);
   const toggleDays = () => setDayCharts();
   const [wordMarks, setWordMarks] = useStoredFlag('word-marks', true);
@@ -139,8 +143,8 @@ export function Reader() {
   const reveal = useStore((s) => s.reveal);
   const seams = useMemo(() => seamsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const overlaps = useMemo(() => overlapsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
-  // Arriving from the index at a chiasm, a count or a reign: show it even if the reader had hidden it.
-  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Arriving from the index at a chiasm, a count, a price or a reign: show it even if the reader had hidden it.
+  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); if (reveal === 'price') setPriceCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep the current verse in view, gently, when it changes (audio, links, hash).
   const lastScrolled = useRef<string>('');
@@ -206,6 +210,7 @@ export function Reader() {
         const totals = charts ? tallies.filter((t) => t.total && contains(t.total.ref, vloc)) : [];
         const reign = reigns.get(v.v);
         const days = passionAt(vloc);
+        const priced = chartsAt(vloc);
         const repeated = overlaps.filter((e) => parseRef(e.here)!.start.verse === v.v);
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
@@ -223,6 +228,7 @@ export function Reader() {
                 {bars.map(({ t, row }) => <TallyBar key={`${t.id}:${row.label}`} t={t} row={row} loc={loc} current={current} />)}
                 {subtotals.map(({ t, g }) => <TallyGroupBar key={`${t.id}:${g.label}`} t={t} g={g} loc={loc} current={current} />)}
                 {totals.map((t) => <TallyTotal key={t.id} t={t} loc={loc} />)}
+                {priced.map((p) => <PriceChart key={p.id} p={p} show={priceCharts} onToggle={togglePrices} />)}
                 {(days.event || days.saying) && <PassionChart event={days.event} saying={days.saying} account={days.account} loc={loc} show={dayCharts} onToggle={toggleDays} />}
                 {repeated.map((e) => <OverlapNote key={e.o.id} end={e} />)}
                 {reign && <ReignChart k={reign.k} account={reign.account} loc={loc} show={reignCharts} onToggle={toggleReigns} />}

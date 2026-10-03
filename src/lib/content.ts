@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, Speaker, Tally, TextSource, Video, VideoKind, Writer } from './types';
+import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, Speaker, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -21,6 +21,7 @@ import monarchy from '@content/monarchy.json';
 import passion from '@content/passion.json';
 import canons from '@content/canons.json';
 import scrolls from '@content/scrolls.json';
+import prices from '@content/prices.json';
 
 export const PEOPLE = people as unknown as Person[];
 export const PROPHECIES = prophecies as unknown as Prophecy[];
@@ -38,6 +39,9 @@ export const MONARCHY = monarchy as unknown as Monarchy;
 export const PASSION = passion as unknown as Passion;
 /** The Hebrew Bible's books and scrolls, and where the Greek, Latin and English divide them otherwise. */
 export const SCROLLS = scrolls as unknown as Scrolls;
+/** Every sum the text names, and the wages it is measured against. */
+export const WORTH = prices as unknown as Worth;
+export const PRICES = WORTH.prices;
 /** The churches that read books beyond the 66, and the translations those books are shown in. */
 export const CANONS = canons.canons as unknown as ChurchCanon[];
 export const TEXTS = canons.texts as unknown as TextSource[];
@@ -214,6 +218,7 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
     ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
     ['chiasm', here(CHIASMS.map((c) => c.ref))],
     ['tally', here(TALLIES.map((t) => t.ref))],
+    ['price', here(PRICES.flatMap((p) => [p.ref, ...(p.also ?? [])]))],
     ['passion', here([...PASSION.accounts.flatMap((a) => a.events.map((e) => e.ref)), ...PASSION.sayings.map((x) => x.ref)])],
     ['reign', here(KINGS.flatMap((k) => [k.reign.ref, ...(k.reign.chronicles ? [k.reign.chronicles.ref] : [])]))],
   ];

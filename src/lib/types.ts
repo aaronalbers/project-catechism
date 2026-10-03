@@ -221,6 +221,38 @@ export interface Tally {
   groups?: TallyGroup[]; total?: TallyRow; discrepancy?: string; compare?: string; alone?: string[];
   sources: Source[]; traditions?: string[]; confidence: Confidence;
 }
+/** A sum of money in a price: the BSB's words for it in its verse (`ref`, the price's own verse unless given), and `gold` for a weight of gold, reckoned in silver. */
+export interface PriceSum { quote: string; n: number; unit: string; gold?: true; ref?: Ref }
+/** Something given in kind (livestock, years of work), valued by `content/prices.json`'s `goods`. */
+export interface PriceGood { quote: string; n: number; good: string; ref?: Ref }
+export type PriceKind = 'wage' | 'purchase' | 'gift' | 'offering' | 'valuation' | 'tribute' | 'debt' | 'bribe' | 'treasure';
+/**
+ * A sum the text names, drawn under `ref` and under each verse in `also` that names it again. `sums` and `goods`
+ * add up to its worth in days of a labourer's wage, reckoned in the money of its `era` (by default, its book's).
+ * `uncounted` is what was also given that nothing here can price; `estimate` says what the reading of the sum
+ * itself rests on, when the text does not name its unit.
+ */
+export interface Price {
+  id: string; ref: Ref; also?: Ref[]; kind: PriceKind; what: string; era?: string;
+  sums?: PriceSum[]; goods?: PriceGood[]; uncounted?: string; estimate?: string; note?: string; insight?: string;
+}
+/** A unit of money in one era: what it is worth in the era's `base` unit, and what that rests on. `coin` marks a gold coin valued as it is, not by weight. */
+export interface MoneyUnit { id: string; name: string; plural: string; value: number; coin?: true; estimated?: true; basis: string }
+/** A stretch of the Bible's history with its own money and its own day's wage: one `base` unit buys `days` days of work. */
+export interface MoneyEra { id: string; label: string; base: string; days: number; basis: string; books?: string[]; units: MoneyUnit[]; sources: Source[] }
+export interface PriceGoodKind { id: string; name: string; days: number; basis: string }
+/** `content/prices.json`: every sum the text names, and the yardstick it is measured with. */
+export interface Worth {
+  id: string; title: string; confidence: Confidence; summary: string;
+  /** Hours in a working day, and working days in a year. */
+  hours: number; year: number; yardstick: { hours: string; year: string };
+  gold: { ratio: number; basis: string };
+  eras: MoneyEra[]; goods: PriceGoodKind[]; goodsSources: Source[];
+  kinds: { id: PriceKind; label: string }[];
+  sources: Source[]; prices: Price[];
+  /** Verses that name money without a sum that can be priced, and why. */
+  unpriced: { why: string; refs: Ref[] }[];
+}
 export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string; reign?: Reign }
 export type Kingdom = 'israel' | 'judah';
 /**

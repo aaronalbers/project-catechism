@@ -1,0 +1,1556 @@
+{
+ "id": "worth",
+ "title": "What things cost",
+ "confidence": "estimate",
+ "summary": "Every sum the Bible names, in days of a labourer’s wage. The New Testament gives its own yardstick: a denarius for a day in the vineyard (Matt 20:2). The Old Testament gives a year’s wage of ten shekels (Judg 17:10), and Hammurabi’s laws a thirtieth of a shekel a day. Silver wages rose roughly tenfold by the Persian period, so a shekel did not buy the same work in every book. Each sum is reckoned in the money of its own time. The figures in the text are the text’s; the days are an estimate, and say what they rest on.",
+ "hours": 12,
+ "year": 300,
+ "yardstick": {
+  "hours": "A working day is twelve hours: “Are there not twelve hours of daylight?” (John 11:9), and the vineyard’s eleventh-hour workers worked one hour (Matt 20:6, 12).",
+  "year": "≈300 working days make a year’s wages: a six-day week less the Sabbaths and festivals. The BSB counts a talent of 6,000 denarii as “about twenty years’ wages” on the same reckoning (Matt 18:24 note)."
+ },
+ "gold": {
+  "ratio": 13,
+  "basis": "Gold is reckoned at thirteen times its weight in silver, as Herodotus does for the Persian empire’s tribute (Histories 3.95). No ratio is stated for Israel; it is the nearest ancient figure, and is applied to every gold sum given by weight."
+ },
+ "eras": [
+  {
+   "id": "kings",
+   "label": "Before the exile",
+   "base": "shekel",
+   "days": 30,
+   "basis": "A day’s wage was about a thirtieth of a shekel of silver. Hammurabi’s laws pay a hired labourer six grains (she) of silver a day for the first five months of the year and five after, and 180 grains make a shekel (§273). Micah pays his Levite ten shekels a year with clothes and food (Judg 17:10), which is ten shekels for ≈300 days’ work. The figure is applied from Genesis to the fall of Jerusalem, though wages surely varied over those centuries.",
+   "units": [
+    {"id": "shekel", "name": "shekel", "plural": "shekels", "value": 1, "basis": "A weight of silver, about 11.4 g (the BSB’s figure)."},
+    {"id": "gerah", "name": "gerah", "plural": "gerahs", "value": 0.05, "basis": "Twenty gerahs to the shekel (Exod 30:13)."},
+    {"id": "beka", "name": "beka", "plural": "bekas", "value": 0.5, "basis": "“A beka per person, that is, half a shekel” (Exod 38:26)."},
+    {"id": "pim", "name": "pim", "plural": "pims", "value": 0.6667, "basis": "Two-thirds of a shekel, from stone weights inscribed pym found in excavations (BSB note on 1 Sam 13:21).", "estimated": true},
+    {
+     "id": "mina",
+     "name": "mina",
+     "plural": "minas",
+     "value": 50,
+     "basis": "Fifty shekels, a sixtieth of the 3,000-shekel talent. Ezekiel’s mina is sixty (Ezek 45:12), and Kings and Chronicles together imply a hundred (1 Kgs 10:17; 2 Chr 9:16).",
+     "estimated": true
+    },
+    {"id": "talent", "name": "talent", "plural": "talents", "value": 3000, "basis": "3,000 shekels: Exodus counts 603,550 half-shekels as 100 talents and 1,775 shekels (Exod 38:25-26)."},
+    {
+     "id": "daric",
+     "name": "daric",
+     "plural": "darics",
+     "value": 9.6,
+     "coin": true,
+     "basis": "A Persian gold coin of 8.4 g (the BSB’s figure, Ezra 2:69), at thirteen times its weight in silver: about 9.6 shekels.",
+     "estimated": true
+    }
+   ],
+   "sources": [
+    {
+     "kind": "primary",
+     "title": "The Code of Hammurabi, §273",
+     "author": "tr. L. W. King",
+     "year": 1915,
+     "url": "https://avalon.law.yale.edu/ancient/hamcode.asp",
+     "note": "a hired labourer’s pay, six grains (she) of silver a day for five months and five for the rest of the year; 180 grains to the shekel"
+    },
+    {"kind": "scripture", "ref": "Judg.17.10", "note": "ten shekels of silver a year, with clothes and food"},
+    {"kind": "scripture", "ref": "Exod.38.25-26", "note": "603,550 half-shekels = 100 talents and 1,775 shekels, so a talent is 3,000 shekels"},
+    {
+     "kind": "data",
+     "title": "Berean Standard Bible footnotes on weights and money",
+     "url": "https://berean.bible/",
+     "note": "a mina ≈ 570 g (Ezra 2:69: 5,000 minas ≈ 2.85 t), so a shekel ≈ 11.4 g; a daric ≈ 8.4 g (61,000 darics ≈ 512.4 kg)"
+    }
+   ]
+  },
+  {
+   "id": "persian",
+   "label": "After the exile",
+   "base": "drachma",
+   "days": 1,
+   "basis": "≈ A drachma a day. The Athenian accounts for building the Erechtheion pay labourers, architect and sawyers a drachma a day (408/7 BC), and Tobit offers his son’s guide “a drachma a day” (Tob 5:14). No wage is recorded for Persian Judah itself. Silver had grown far cheaper against labour than in Hammurabi’s day, so a shekel now bought days, not a month.",
+   "books": ["Ezra", "Neh", "Esth", "Hag", "Zech", "Mal", "Tob"],
+   "units": [
+    {"id": "drachma", "name": "drachma", "plural": "drachmas", "value": 1, "basis": "The yardstick: a day’s pay."},
+    {
+     "id": "daric",
+     "name": "daric",
+     "plural": "darics",
+     "value": 20,
+     "coin": true,
+     "basis": "Twenty drachmas: Cyrus the younger paid “three thousand darics” for a promised “ten talents” (Xenophon, Anabasis 1.7.18), and a talent is 6,000 drachmas."
+    },
+    {
+     "id": "talent",
+     "name": "talent",
+     "plural": "talents",
+     "value": 7800,
+     "basis": "The Babylonian talent, in which the empire’s silver was weighed: “seventy-eight Euboic minae” (Herodotus 3.89), or 7,800 drachmas.",
+     "estimated": true
+    },
+    {"id": "mina", "name": "mina", "plural": "minas", "value": 130, "basis": "A sixtieth of that talent.", "estimated": true},
+    {"id": "shekel", "name": "shekel", "plural": "shekels", "value": 2.1667, "basis": "Sixty to the mina, as Ezekiel reckons it (Ezek 45:12): about 2 drachmas.", "estimated": true}
+   ],
+   "sources": [
+    {
+     "kind": "archaeology",
+     "title": "Erechtheion building accounts, IG I³ 476",
+     "year": "408/7 BC",
+     "url": "https://atticinscriptions.com/inscription/IGI3/476",
+     "note": "a day-wage of 1 drachma for the architect, sawyers and labourers"
+    },
+    {"kind": "primary", "ref": "Tob.5.14", "title": "Tobit 5:14 (World English Bible)", "note": "“A drachma a day, and those things that be necessary for you”"},
+    {
+     "kind": "primary",
+     "title": "Xenophon, Anabasis 1.7.18",
+     "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0202%3Abook%3D1%3Achapter%3D7%3Asection%3D18",
+     "note": "three thousand darics paid for a promise of ten talents"
+    },
+    {
+     "kind": "primary",
+     "title": "Herodotus, Histories 3.89 and 3.95",
+     "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D3%3Achapter%3D89",
+     "note": "the Babylonian talent equal to seventy-eight Euboic minae; gold reckoned at thirteen times silver"
+    }
+   ]
+  },
+  {
+   "id": "roman",
+   "label": "The New Testament",
+   "base": "denarius",
+   "days": 1,
+   "basis": "A denarius a day: the landowner agrees with the labourers “for a denarius a day” (Matt 20:2), and the BSB glosses every denarius as “customarily a day’s wage for a laborer.”",
+   "units": [
+    {"id": "denarius", "name": "denarius", "plural": "denarii", "value": 1, "basis": "The yardstick (Matt 20:2)."},
+    {"id": "drachma", "name": "drachma", "plural": "drachmas", "value": 1, "basis": "The Greek coin, reckoned at a denarius: “each worth about a day’s wages” (BSB note on Luke 15:8).", "estimated": true},
+    {"id": "didrachma", "name": "didrachma", "plural": "didrachmas", "value": 2, "basis": "Two drachmas: the half-shekel temple tax (Matt 17:24)."},
+    {"id": "stater", "name": "stater", "plural": "staters", "value": 4, "basis": "Four drachmas: one paid the two-drachma tax for two (Matt 17:27)."},
+    {"id": "piece", "name": "piece of silver", "plural": "pieces of silver", "value": 4, "basis": "A Tyrian shekel, the temple’s coin, worth a stater of four drachmas.", "estimated": true},
+    {"id": "mina", "name": "mina", "plural": "minas", "value": 100, "basis": "A hundred drachmas, “about a hundred days’ wages” (BSB note on Luke 19:13).", "estimated": true},
+    {"id": "talent", "name": "talent", "plural": "talents", "value": 6000, "basis": "6,000 denarii, “about twenty years’ wages” (BSB note on Matt 18:24).", "estimated": true},
+    {"id": "assarion", "name": "assarion", "plural": "assaria", "value": 0.0625, "basis": "A sixteenth of a denarius: a Roman copper coin (BSB note on Matt 10:29)."},
+    {"id": "kodrantes", "name": "quadrans", "plural": "quadrantes", "value": 0.015625, "basis": "A sixty-fourth of a denarius (BSB note on Matt 5:26)."},
+    {"id": "lepton", "name": "lepton", "plural": "lepta", "value": 0.0078125, "basis": "Half a quadrans: two lepta “amount to” one (Mark 12:42), a 128th of a denarius."}
+   ],
+   "sources": [
+    {"kind": "scripture", "ref": "Matt.20.2", "note": "“a denarius for the day”"},
+    {"kind": "scripture", "ref": "Mark.12.42", "note": "two lepta make a quadrans"},
+    {
+     "kind": "data",
+     "title": "Berean Standard Bible footnotes on money",
+     "url": "https://berean.bible/",
+     "note": "denarius a day’s wage; talent ≈ twenty years’ wages; mina ≈ a hundred days’ wages; assarion 1/16 and quadrans 1/64 of a denarius"
+    }
+   ]
+  }
+ ],
+ "goods": [
+  {"id": "sheep", "name": "sheep", "days": 15, "basis": "Half a shekel, the Hittite laws’ price for a sheep (§178), at a thirtieth of a shekel a day: rams, ewes and lambs alike."},
+  {"id": "goat", "name": "goat", "days": 15, "basis": "Priced as a sheep: the Hittite price list gives none for a goat."},
+  {"id": "bull", "name": "bull", "days": 150, "basis": "Five shekels, the Hittite price of a bull (“ten half-shekels”); also used for herds the text calls cattle or bulls."},
+  {"id": "ox", "name": "ox", "days": 225, "basis": "Seven and a half shekels, the Hittite price of a plough-ox (“fifteen half-shekels”)."},
+  {"id": "cow", "name": "cow", "days": 105, "basis": "Three and a half shekels, the Hittite price of a grown cow (“seven half-shekels”)."},
+  {"id": "yoke", "name": "yoke of oxen", "days": 450, "basis": "Two plough-oxen."},
+  {"id": "year", "name": "year’s work", "days": 300, "basis": "Paid in labour: ≈300 working days a year."}
+ ],
+ "goodsSources": [
+  {
+   "kind": "primary",
+   "title": "The Hittite Laws (Code of the Nesilim), §178",
+   "url": "https://sourcebooks.web.fordham.edu/ancient/1650nesilim.asp",
+   "note": "“A plow-ox costs fifteen half-shekels of silver, a bull costs ten half-shekels of silver, a great cow costs seven half-shekels of silver, a sheep one half-shekel of silver … a horse fourteen half-shekels of silver”"
+  }
+ ],
+ "kinds": [
+  {"id": "wage", "label": "Wages and hire"},
+  {"id": "purchase", "label": "Prices"},
+  {"id": "gift", "label": "Gifts"},
+  {"id": "offering", "label": "Offerings"},
+  {"id": "valuation", "label": "Valuations and redemption"},
+  {"id": "tribute", "label": "Taxes and tribute"},
+  {"id": "debt", "label": "Debts and fines"},
+  {"id": "bribe", "label": "Bribes and rewards"},
+  {"id": "treasure", "label": "Treasure"}
+ ],
+ "sources": [
+  {"kind": "scripture", "ref": "Matt.20.2", "note": "a denarius for a day’s work"},
+  {"kind": "scripture", "ref": "Judg.17.10", "note": "ten shekels a year"},
+  {"kind": "scripture", "ref": "John.11.9", "note": "“twelve hours of daylight”"}
+ ],
+ "prices": [
+  {
+   "id": "abimelech-to-abraham",
+   "ref": "Gen.20.16",
+   "kind": "gift",
+   "what": "Abimelech’s gift to Abraham, to clear Sarah",
+   "sums": [
+    {"quote": "a thousand pieces of silver", "n": 1000, "unit": "shekel"}
+   ],
+   "estimate": "The Hebrew has only “a thousand of silver”; the unit is not named, and shekels, the usual unit for weighed silver, are assumed."
+  },
+  {
+   "id": "rebekah-ring-bracelets",
+   "ref": "Gen.24.22",
+   "kind": "gift",
+   "what": "the gold ring and bracelets given to Rebekah at the well",
+   "sums": [
+    {"quote": "a beka", "n": 1, "unit": "beka", "gold": true},
+    {"quote": "ten shekels", "n": 10, "unit": "shekel", "gold": true}
+   ],
+   "note": "The text gives the weight of the gold; its worth is the weight times gold’s value in silver."
+  },
+  {
+   "id": "seven-years-for-rachel",
+   "ref": "Gen.29.18",
+   "also": ["Gen.29.20"],
+   "kind": "wage",
+   "what": "Jacob’s seven years of work for Rachel",
+   "goods": [
+    {"quote": "seven years", "n": 7, "good": "year"}
+   ],
+   "note": "Paid in labour, not silver: the bride price was seven years of a herdsman’s work."
+  },
+  {
+   "id": "seven-more-years",
+   "ref": "Gen.29.27",
+   "also": ["Gen.29.30"],
+   "kind": "wage",
+   "what": "Jacob’s second seven years, for Rachel after Leah",
+   "goods": [
+    {"quote": "another seven years", "n": 7, "good": "year"}
+   ]
+  },
+  {
+   "id": "twenty-years-for-laban",
+   "ref": "Gen.31.41",
+   "also": ["Gen.31.7"],
+   "kind": "wage",
+   "what": "Jacob’s twenty years of work for Laban",
+   "goods": [
+    {"quote": "twenty years", "n": 20, "good": "year"}
+   ],
+   "note": "Fourteen years for his wives and six for his flocks, with his wages changed ten times."
+  },
+  {
+   "id": "jacob-to-esau",
+   "ref": "Gen.32.14",
+   "also": ["Gen.32.13", "Gen.32.15"],
+   "kind": "gift",
+   "what": "Jacob’s gift to Esau",
+   "goods": [
+    {"quote": "200 female goats", "n": 200, "good": "goat"},
+    {"quote": "20 male goats", "n": 20, "good": "goat"},
+    {"quote": "200 ewes", "n": 200, "good": "sheep"},
+    {"quote": "20 rams", "n": 20, "good": "sheep"},
+    {"quote": "40 cows", "n": 40, "good": "cow", "ref": "Gen.32.15"},
+    {"quote": "10 bulls", "n": 10, "good": "bull", "ref": "Gen.32.15"}
+   ],
+   "uncounted": "the 30 milk camels with their young and the 30 donkeys, which the price list does not value"
+  },
+  {
+   "id": "machpelah",
+   "ref": "Gen.23.16",
+   "also": ["Gen.23.15"],
+   "kind": "purchase",
+   "what": "the field and cave of Machpelah",
+   "sums": [
+    {"quote": "four hundred shekels of silver", "n": 400, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "joseph-sold",
+   "ref": "Gen.37.28",
+   "kind": "purchase",
+   "what": "Joseph, sold to the Ishmaelites",
+   "sums": [
+    {"quote": "twenty shekels of silver", "n": 20, "unit": "shekel"}
+   ],
+   "insight": "joseph-twenty-shekels"
+  },
+  {
+   "id": "benjamin-gift",
+   "ref": "Gen.45.22",
+   "kind": "gift",
+   "what": "Joseph’s gift to Benjamin",
+   "sums": [
+    {"quote": "three hundred shekels of silver", "n": 300, "unit": "shekel"}
+   ],
+   "uncounted": "the five sets of clothes"
+  },
+  {
+   "id": "gored-slave",
+   "ref": "Exod.21.32",
+   "kind": "debt",
+   "what": "what an ox’s owner pays when it gores a slave",
+   "sums": [
+    {"quote": "thirty shekels of silver", "n": 30, "unit": "shekel"}
+   ],
+   "insight": "joseph-twenty-shekels"
+  },
+  {
+   "id": "lampstand-talent",
+   "ref": "Exod.25.39",
+   "also": ["Exod.37.24"],
+   "kind": "treasure",
+   "what": "the lampstand and its utensils",
+   "sums": [
+    {"quote": "a talent of pure gold", "n": 1, "unit": "talent", "gold": true}
+   ]
+  },
+  {
+   "id": "half-shekel",
+   "ref": "Exod.30.13",
+   "also": ["Exod.30.15"],
+   "kind": "offering",
+   "what": "each man’s atonement money at the census",
+   "sums": [
+    {"quote": "a half shekel", "n": 0.5, "unit": "shekel"}
+   ],
+   "note": "The same for rich and poor (30:15).",
+   "insight": "tyrian-shekel-temple-tax"
+  },
+  {
+   "id": "tabernacle-gold",
+   "ref": "Exod.38.24",
+   "kind": "offering",
+   "what": "the gold given for the tabernacle",
+   "sums": [
+    {"quote": "29 talents", "n": 29, "unit": "talent", "gold": true},
+    {"quote": "730 shekels", "n": 730, "unit": "shekel", "gold": true}
+   ]
+  },
+  {
+   "id": "tabernacle-silver",
+   "ref": "Exod.38.25",
+   "also": ["Exod.38.26", "Exod.38.27", "Exod.38.28"],
+   "kind": "offering",
+   "what": "the census silver used for the tabernacle",
+   "sums": [
+    {"quote": "100 talents", "n": 100, "unit": "talent"},
+    {"quote": "1,775 shekels", "n": 1775, "unit": "shekel"}
+   ],
+   "note": "A beka from each of 603,550 men (38:26): 301,775 shekels, which the text calls 100 talents and 1,775 shekels, so a talent is 3,000 shekels."
+  },
+  {
+   "id": "valuation-man",
+   "ref": "Lev.27.3",
+   "kind": "valuation",
+   "what": "a man of twenty to sixty, vowed to the LORD",
+   "sums": [
+    {"quote": "fifty shekels of silver", "n": 50, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-woman",
+   "ref": "Lev.27.4",
+   "kind": "valuation",
+   "what": "a woman of twenty to sixty, vowed to the LORD",
+   "sums": [
+    {"quote": "thirty shekels", "n": 30, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-youth",
+   "ref": "Lev.27.5",
+   "kind": "valuation",
+   "what": "a male of five to twenty",
+   "sums": [
+    {"quote": "twenty shekels", "n": 20, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-girl",
+   "ref": "Lev.27.5",
+   "kind": "valuation",
+   "what": "a female of five to twenty",
+   "sums": [
+    {"quote": "ten shekels", "n": 10, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-boy",
+   "ref": "Lev.27.6",
+   "kind": "valuation",
+   "what": "a boy of a month to five years",
+   "sums": [
+    {"quote": "five shekels of silver", "n": 5, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-infant-girl",
+   "ref": "Lev.27.6",
+   "kind": "valuation",
+   "what": "a girl of a month to five years",
+   "sums": [
+    {"quote": "three shekels of silver", "n": 3, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-old-man",
+   "ref": "Lev.27.7",
+   "kind": "valuation",
+   "what": "a man of sixty or older",
+   "sums": [
+    {"quote": "fifteen shekels", "n": 15, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-old-woman",
+   "ref": "Lev.27.7",
+   "kind": "valuation",
+   "what": "a woman of sixty or older",
+   "sums": [
+    {"quote": "ten shekels", "n": 10, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "valuation-field",
+   "ref": "Lev.27.16",
+   "kind": "valuation",
+   "what": "a field, for every homer of barley seed it takes",
+   "sums": [
+    {"quote": "fifty shekels of silver", "n": 50, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "firstborn-redemption",
+   "ref": "Num.3.47",
+   "also": ["Num.3.46", "Num.18.16"],
+   "kind": "valuation",
+   "what": "redeeming each firstborn beyond the Levites’ number",
+   "sums": [
+    {"quote": "five shekels", "n": 5, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "firstborn-total",
+   "ref": "Num.3.50",
+   "kind": "valuation",
+   "what": "the redemption money for the 273 firstborn",
+   "sums": [
+    {"quote": "1,365 shekels", "n": 1365, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "leader-offering",
+   "ref": "Num.7.13",
+   "also": ["Num.7.14", "Num.7.19", "Num.7.20", "Num.7.25", "Num.7.26", "Num.7.31", "Num.7.32", "Num.7.37", "Num.7.38", "Num.7.43", "Num.7.44", "Num.7.49", "Num.7.50", "Num.7.55", "Num.7.56", "Num.7.61", "Num.7.62", "Num.7.67", "Num.7.68", "Num.7.73", "Num.7.74", "Num.7.79", "Num.7.80"],
+   "kind": "offering",
+   "what": "one leader’s offering for the altar (each of the twelve gave the same)",
+   "sums": [
+    {"quote": "a hundred and thirty shekels", "n": 130, "unit": "shekel"},
+    {"quote": "seventy shekels", "n": 70, "unit": "shekel"},
+    {"quote": "ten shekels", "n": 10, "unit": "shekel", "gold": true, "ref": "Num.7.14"}
+   ],
+   "goods": [
+    {"quote": "one young bull", "n": 1, "good": "bull", "ref": "Num.7.15"},
+    {"quote": "one ram", "n": 1, "good": "sheep", "ref": "Num.7.15"},
+    {"quote": "one male lamb", "n": 1, "good": "sheep", "ref": "Num.7.15"},
+    {"quote": "one male goat", "n": 1, "good": "goat", "ref": "Num.7.16"},
+    {"quote": "two oxen", "n": 2, "good": "ox", "ref": "Num.7.17"},
+    {"quote": "five rams", "n": 5, "good": "sheep", "ref": "Num.7.17"},
+    {"quote": "five male goats", "n": 5, "good": "goat", "ref": "Num.7.17"},
+    {"quote": "five male lambs", "n": 5, "good": "sheep", "ref": "Num.7.17"}
+   ],
+   "uncounted": "the flour, oil and incense"
+  },
+  {
+   "id": "leaders-total",
+   "ref": "Num.7.85",
+   "also": ["Num.7.84", "Num.7.86", "Num.7.87", "Num.7.88"],
+   "kind": "offering",
+   "what": "all twelve leaders’ offerings together",
+   "sums": [
+    {"quote": "two thousand four hundred shekels", "n": 2400, "unit": "shekel"},
+    {"quote": "a hundred and twenty shekels", "n": 120, "unit": "shekel", "gold": true, "ref": "Num.7.86"}
+   ],
+   "goods": [
+    {"quote": "twelve bulls", "n": 12, "good": "bull", "ref": "Num.7.87"},
+    {"quote": "twelve rams", "n": 12, "good": "sheep", "ref": "Num.7.87"},
+    {"quote": "twelve male lambs", "n": 12, "good": "sheep", "ref": "Num.7.87"},
+    {"quote": "twelve male goats", "n": 12, "good": "goat", "ref": "Num.7.87"},
+    {"quote": "twenty-four bulls", "n": 24, "good": "bull", "ref": "Num.7.88"},
+    {"quote": "sixty rams", "n": 60, "good": "sheep", "ref": "Num.7.88"},
+    {"quote": "sixty male goats", "n": 60, "good": "goat", "ref": "Num.7.88"},
+    {"quote": "sixty male lambs", "n": 60, "good": "sheep", "ref": "Num.7.88"}
+   ],
+   "uncounted": "the flour, oil and incense"
+  },
+  {
+   "id": "midian-gold",
+   "ref": "Num.31.52",
+   "kind": "offering",
+   "what": "the commanders’ gold from Midian, given to the LORD",
+   "sums": [
+    {"quote": "16,750 shekels", "n": 16750, "unit": "shekel", "gold": true}
+   ]
+  },
+  {
+   "id": "slander-fine",
+   "ref": "Deut.22.19",
+   "kind": "debt",
+   "what": "the fine for falsely accusing a bride",
+   "sums": [
+    {"quote": "a hundred shekels of silver", "n": 100, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "violation-payment",
+   "ref": "Deut.22.29",
+   "kind": "debt",
+   "what": "what a man pays the father of a girl he violated",
+   "sums": [
+    {"quote": "fifty shekels of silver", "n": 50, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "achan",
+   "ref": "Josh.7.21",
+   "kind": "treasure",
+   "what": "what Achan took from Jericho",
+   "sums": [
+    {"quote": "two hundred shekels of silver", "n": 200, "unit": "shekel"},
+    {"quote": "fifty shekels", "n": 50, "unit": "shekel", "gold": true}
+   ],
+   "uncounted": "the cloak from Shinar"
+  },
+  {
+   "id": "gideon-earrings",
+   "ref": "Judg.8.26",
+   "kind": "gift",
+   "what": "the gold earrings Israel gave Gideon",
+   "sums": [
+    {"quote": "1,700 shekels", "n": 1700, "unit": "shekel", "gold": true}
+   ],
+   "uncounted": "the ornaments, pendants and purple garments"
+  },
+  {
+   "id": "abimelech-hire",
+   "ref": "Judg.9.4",
+   "kind": "wage",
+   "what": "the silver Abimelech hired men with, from Baal-berith’s temple",
+   "sums": [
+    {"quote": "seventy shekels of silver", "n": 70, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "delilah-bribe",
+   "ref": "Judg.16.5",
+   "kind": "bribe",
+   "what": "what each lord of the Philistines offered Delilah",
+   "sums": [
+    {"quote": "eleven hundred shekels of silver", "n": 1100, "unit": "shekel"}
+   ],
+   "note": "There were five lords of the Philistines (Judg 3:3), so 5,500 shekels in all."
+  },
+  {
+   "id": "micah-silver",
+   "ref": "Judg.17.2",
+   "also": ["Judg.17.3"],
+   "kind": "treasure",
+   "what": "the silver Micah took from his mother",
+   "sums": [
+    {"quote": "The eleven hundred shekels of silver", "n": 1100, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "micah-idol",
+   "ref": "Judg.17.4",
+   "kind": "purchase",
+   "what": "the silver given to a silversmith for Micah’s idol",
+   "sums": [
+    {"quote": "two hundred shekels of silver", "n": 200, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "levite-wage",
+   "ref": "Judg.17.10",
+   "kind": "wage",
+   "what": "a Levite’s pay as Micah’s priest, for a year",
+   "sums": [
+    {"quote": "ten shekels of silver", "n": 10, "unit": "shekel"}
+   ],
+   "uncounted": "a suit of clothes and his food",
+   "note": "The one yearly wage the Old Testament states. It matches the yardstick: a year’s work at 1/30 shekel a day."
+  },
+  {
+   "id": "seer-fee",
+   "ref": "1Sam.9.8",
+   "kind": "gift",
+   "what": "the gift Saul’s servant would give the seer",
+   "sums": [
+    {"quote": "a quarter shekel of silver", "n": 0.25, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "sharpening-plowshare",
+   "ref": "1Sam.13.21",
+   "kind": "purchase",
+   "what": "what the Philistines charged to sharpen a plowshare or mattock",
+   "sums": [
+    {"quote": "a pim", "n": 1, "unit": "pim"}
+   ]
+  },
+  {
+   "id": "sharpening-axe",
+   "ref": "1Sam.13.21",
+   "kind": "purchase",
+   "what": "what the Philistines charged to sharpen a pitchfork or axe, or repoint a goad",
+   "sums": [
+    {"quote": "a third of a shekel", "n": 0.3333333333333333, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "abigail-gift",
+   "ref": "1Sam.25.18",
+   "kind": "gift",
+   "what": "Abigail’s gift to David",
+   "goods": [
+    {"quote": "five butchered sheep", "n": 5, "good": "sheep"}
+   ],
+   "uncounted": "the 200 loaves, the wine, the roasted grain, the raisins and the figs"
+  },
+  {
+   "id": "rabbah-crown",
+   "ref": "2Sam.12.30",
+   "also": ["1Chr.20.2"],
+   "kind": "treasure",
+   "what": "the Ammonite king’s crown",
+   "sums": [
+    {"quote": "a talent of gold", "n": 1, "unit": "talent", "gold": true}
+   ],
+   "uncounted": "its precious stones"
+  },
+  {
+   "id": "joab-reward",
+   "ref": "2Sam.18.11",
+   "kind": "bribe",
+   "what": "what Joab would have given for killing Absalom",
+   "sums": [
+    {"quote": "ten shekels of silver", "n": 10, "unit": "shekel"}
+   ],
+   "uncounted": "the warrior’s belt"
+  },
+  {
+   "id": "thousand-not-enough",
+   "ref": "2Sam.18.12",
+   "kind": "bribe",
+   "what": "what the soldier would not have taken to kill Absalom",
+   "sums": [
+    {"quote": "a thousand shekels of silver", "n": 1000, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "threshing-floor-samuel",
+   "ref": "2Sam.24.24",
+   "kind": "purchase",
+   "what": "Araunah’s threshing floor and oxen, as Samuel tells it",
+   "sums": [
+    {"quote": "fifty shekels of silver", "n": 50, "unit": "shekel"}
+   ],
+   "note": "Chronicles has six hundred shekels of gold “for the site” (1 Chr 21:25): perhaps the whole hill the temple stood on, perhaps a different figure for the same sale."
+  },
+  {
+   "id": "threshing-floor-chronicles",
+   "ref": "1Chr.21.25",
+   "kind": "purchase",
+   "what": "Ornan’s site, as Chronicles tells it",
+   "sums": [
+    {"quote": "six hundred shekels of gold", "n": 600, "unit": "shekel", "gold": true}
+   ],
+   "note": "Samuel has fifty shekels of silver for the threshing floor and the oxen (2 Sam 24:24)."
+  },
+  {
+   "id": "solomon-provisions",
+   "ref": "1Kgs.4.23",
+   "also": ["1Kgs.4.22"],
+   "kind": "treasure",
+   "what": "Solomon’s provisions for a single day",
+   "goods": [
+    {"quote": "ten fat oxen", "n": 10, "good": "ox"},
+    {"quote": "twenty range oxen", "n": 20, "good": "ox"},
+    {"quote": "a hundred sheep", "n": 100, "good": "sheep"}
+   ],
+   "uncounted": "the flour, the meal, the deer, gazelles, roebucks and poultry"
+  },
+  {
+   "id": "temple-dedication",
+   "ref": "1Kgs.8.63",
+   "also": ["2Chr.7.5"],
+   "kind": "offering",
+   "what": "Solomon’s peace offerings at the temple’s dedication",
+   "goods": [
+    {"quote": "22,000 oxen", "n": 22000, "good": "ox"},
+    {"quote": "120,000 sheep", "n": 120000, "good": "sheep"}
+   ]
+  },
+  {
+   "id": "hiram-gold",
+   "ref": "1Kgs.9.14",
+   "kind": "gift",
+   "what": "the gold Hiram sent Solomon",
+   "sums": [
+    {"quote": "120 talents of gold", "n": 120, "unit": "talent", "gold": true}
+   ]
+  },
+  {
+   "id": "ophir-kings",
+   "ref": "1Kgs.9.28",
+   "kind": "treasure",
+   "what": "the gold brought from Ophir, as Kings tells it",
+   "sums": [
+    {"quote": "420 talents", "n": 420, "unit": "talent", "gold": true}
+   ],
+   "note": "Chronicles has 450 talents (2 Chr 8:18)."
+  },
+  {
+   "id": "ophir-chronicles",
+   "ref": "2Chr.8.18",
+   "kind": "treasure",
+   "what": "the gold brought from Ophir, as Chronicles tells it",
+   "sums": [
+    {"quote": "450 talents of gold", "n": 450, "unit": "talent", "gold": true}
+   ],
+   "note": "Kings has 420 talents (1 Kgs 9:28)."
+  },
+  {
+   "id": "sheba-gift",
+   "ref": "1Kgs.10.10",
+   "also": ["2Chr.9.9"],
+   "kind": "gift",
+   "what": "the queen of Sheba’s gift to Solomon",
+   "sums": [
+    {"quote": "120 talents of gold", "n": 120, "unit": "talent", "gold": true}
+   ],
+   "uncounted": "the spices and precious stones"
+  },
+  {
+   "id": "solomon-yearly-gold",
+   "ref": "1Kgs.10.14",
+   "also": ["2Chr.9.13"],
+   "kind": "treasure",
+   "what": "the gold that came to Solomon each year",
+   "sums": [
+    {"quote": "666 talents", "n": 666, "unit": "talent", "gold": true}
+   ],
+   "note": "Besides the revenue from merchants, traders, Arabian kings and governors (10:15)."
+  },
+  {
+   "id": "large-shield",
+   "ref": "1Kgs.10.16",
+   "also": ["2Chr.9.15"],
+   "kind": "treasure",
+   "what": "one of Solomon’s two hundred large gold shields",
+   "sums": [
+    {"quote": "six hundred shekels of gold", "n": 600, "unit": "shekel", "gold": true}
+   ]
+  },
+  {
+   "id": "small-shield-kings",
+   "ref": "1Kgs.10.17",
+   "kind": "treasure",
+   "what": "one of Solomon’s three hundred small gold shields, as Kings tells it",
+   "sums": [
+    {"quote": "three minas of gold", "n": 3, "unit": "mina", "gold": true}
+   ],
+   "note": "Chronicles has three hundred shekels (2 Chr 9:16), which would make a mina a hundred shekels, not the fifty assumed here."
+  },
+  {
+   "id": "small-shield-chronicles",
+   "ref": "2Chr.9.16",
+   "kind": "treasure",
+   "what": "one of Solomon’s small gold shields, as Chronicles tells it",
+   "sums": [
+    {"quote": "three hundred shekels of gold", "n": 300, "unit": "shekel", "gold": true}
+   ]
+  },
+  {
+   "id": "chariot",
+   "ref": "1Kgs.10.29",
+   "also": ["2Chr.1.17"],
+   "kind": "purchase",
+   "what": "a chariot imported from Egypt",
+   "sums": [
+    {"quote": "six hundred shekels of silver", "n": 600, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "horse",
+   "ref": "1Kgs.10.29",
+   "also": ["2Chr.1.17"],
+   "kind": "purchase",
+   "what": "a horse imported from Egypt (or Kue)",
+   "sums": [
+    {"quote": "a hundred and fifty", "n": 150, "unit": "shekel"}
+   ],
+   "note": "A chariot horse from abroad; the Hittite price list puts an ordinary horse at seven shekels."
+  },
+  {
+   "id": "hill-of-samaria",
+   "ref": "1Kgs.16.24",
+   "kind": "purchase",
+   "what": "the hill of Samaria, bought by Omri",
+   "sums": [
+    {"quote": "two talents of silver", "n": 2, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "guard-forfeit",
+   "ref": "1Kgs.20.39",
+   "kind": "debt",
+   "what": "the forfeit for letting a captive escape, in the prophet’s story",
+   "sums": [
+    {"quote": "a talent of silver", "n": 1, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "mesha-tribute",
+   "ref": "2Kgs.3.4",
+   "kind": "tribute",
+   "what": "Moab’s yearly tribute to Israel",
+   "goods": [
+    {"quote": "a hundred thousand lambs", "n": 100000, "good": "sheep"}
+   ],
+   "uncounted": "the wool of a hundred thousand rams"
+  },
+  {
+   "id": "naaman-gift",
+   "ref": "2Kgs.5.5",
+   "kind": "gift",
+   "what": "what Naaman took to pay for his healing",
+   "sums": [
+    {"quote": "ten talents of silver", "n": 10, "unit": "talent"},
+    {"quote": "six thousand shekels of gold", "n": 6000, "unit": "shekel", "gold": true}
+   ],
+   "uncounted": "the ten sets of clothing",
+   "note": "Elisha would take none of it (5:16)."
+  },
+  {
+   "id": "gehazi",
+   "ref": "2Kgs.5.23",
+   "also": ["2Kgs.5.22"],
+   "kind": "gift",
+   "what": "what Gehazi got from Naaman by a lie",
+   "sums": [
+    {"quote": "two talents of silver", "n": 2, "unit": "talent"}
+   ],
+   "uncounted": "the two sets of clothing"
+  },
+  {
+   "id": "donkey-head",
+   "ref": "2Kgs.6.25",
+   "kind": "purchase",
+   "what": "a donkey’s head in the siege of Samaria",
+   "sums": [
+    {"quote": "eighty shekels of silver", "n": 80, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "dove-dung",
+   "ref": "2Kgs.6.25",
+   "kind": "purchase",
+   "what": "a quarter cab of dove’s dung in the siege",
+   "sums": [
+    {"quote": "five shekels of silver", "n": 5, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "flour-after-siege",
+   "ref": "2Kgs.7.1",
+   "also": ["2Kgs.7.16", "2Kgs.7.18"],
+   "kind": "purchase",
+   "what": "a seah of fine flour the day the siege lifted",
+   "sums": [
+    {"quote": "fine flour will sell for a shekel", "n": 1, "unit": "shekel"}
+   ],
+   "note": "A seah is about 7 litres (≈). Elisha foretells it as the end of the famine."
+  },
+  {
+   "id": "barley-after-siege",
+   "ref": "2Kgs.7.1",
+   "also": ["2Kgs.7.16", "2Kgs.7.18"],
+   "kind": "purchase",
+   "what": "two seahs of barley the day the siege lifted",
+   "sums": [
+    {"quote": "barley will sell for a shekel", "n": 1, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "menahem-tribute",
+   "ref": "2Kgs.15.19",
+   "kind": "tribute",
+   "what": "Menahem’s payment to Pul of Assyria",
+   "sums": [
+    {"quote": "a thousand talents of silver", "n": 1000, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "menahem-levy",
+   "ref": "2Kgs.15.20",
+   "kind": "tribute",
+   "what": "each wealthy man’s share of it",
+   "sums": [
+    {"quote": "fifty shekels of silver", "n": 50, "unit": "shekel"}
+   ],
+   "note": "A thousand talents at fifty shekels a man is 60,000 men."
+  },
+  {
+   "id": "hezekiah-tribute",
+   "ref": "2Kgs.18.14",
+   "kind": "tribute",
+   "what": "what Sennacherib exacted from Hezekiah",
+   "sums": [
+    {"quote": "three hundred talents of silver", "n": 300, "unit": "talent"},
+    {"quote": "thirty talents of gold", "n": 30, "unit": "talent", "gold": true}
+   ]
+  },
+  {
+   "id": "neco-levy",
+   "ref": "2Kgs.23.33",
+   "also": ["2Chr.36.3"],
+   "kind": "tribute",
+   "what": "the levy Pharaoh Neco laid on Judah",
+   "sums": [
+    {"quote": "a hundred talents of silver", "n": 100, "unit": "talent"},
+    {"quote": "a talent of gold", "n": 1, "unit": "talent", "gold": true}
+   ]
+  },
+  {
+   "id": "ammonite-hire",
+   "ref": "1Chr.19.6",
+   "kind": "wage",
+   "what": "what the Ammonites paid to hire Aram’s chariots and horsemen",
+   "sums": [
+    {"quote": "a thousand talents of silver", "n": 1000, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "david-provision",
+   "ref": "1Chr.22.14",
+   "kind": "offering",
+   "what": "what David set aside for the temple",
+   "sums": [
+    {"quote": "100,000 talents of gold", "n": 100000, "unit": "talent", "gold": true},
+    {"quote": "1,000,000 talents of silver", "n": 1000000, "unit": "talent"}
+   ],
+   "uncounted": "the bronze, iron, timber and stone",
+   "note": "About 3,400 tonnes of gold and 34,000 of silver at the 34 kg talent assumed here, far beyond any treasury known from the ancient world. Many read it as a deliberately vast round figure."
+  },
+  {
+   "id": "david-gift",
+   "ref": "1Chr.29.4",
+   "kind": "offering",
+   "what": "David’s own gift for the temple",
+   "sums": [
+    {"quote": "three thousand talents of gold", "n": 3000, "unit": "talent", "gold": true},
+    {"quote": "seven thousand talents of refined silver", "n": 7000, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "leaders-gift",
+   "ref": "1Chr.29.7",
+   "kind": "offering",
+   "what": "the leaders’ gifts for the temple",
+   "sums": [
+    {"quote": "5,000 talents", "n": 5000, "unit": "talent", "gold": true},
+    {"quote": "10,000 darics of gold", "n": 10000, "unit": "daric"},
+    {"quote": "10,000 talents of silver", "n": 10000, "unit": "talent"}
+   ],
+   "uncounted": "the bronze and iron",
+   "note": "The daric was a Persian coin first struck about 500 years after David: the Chronicler gives the sum in the money of his own day."
+  },
+  {
+   "id": "dedication-sacrifices",
+   "ref": "1Chr.29.21",
+   "kind": "offering",
+   "what": "the burnt offerings the day after Solomon was made king",
+   "goods": [
+    {"quote": "a thousand bulls", "n": 1000, "good": "bull"},
+    {"quote": "a thousand rams", "n": 1000, "good": "sheep"},
+    {"quote": "a thousand lambs", "n": 1000, "good": "sheep"}
+   ],
+   "uncounted": "the drink offerings and the other sacrifices"
+  },
+  {
+   "id": "holy-of-holies-gold",
+   "ref": "2Chr.3.8",
+   "kind": "treasure",
+   "what": "the gold overlaying the Most Holy Place",
+   "sums": [
+    {"quote": "six hundred talents of fine gold", "n": 600, "unit": "talent", "gold": true}
+   ]
+  },
+  {
+   "id": "gold-nails",
+   "ref": "2Chr.3.9",
+   "kind": "treasure",
+   "what": "the gold of the temple’s nails",
+   "sums": [
+    {"quote": "fifty shekels of gold", "n": 50, "unit": "shekel", "gold": true}
+   ]
+  },
+  {
+   "id": "jehoshaphat-tribute",
+   "ref": "2Chr.17.11",
+   "kind": "tribute",
+   "what": "the Arabs’ tribute to Jehoshaphat",
+   "goods": [
+    {"quote": "7,700 rams", "n": 7700, "good": "sheep"},
+    {"quote": "7,700 goats", "n": 7700, "good": "goat"}
+   ],
+   "uncounted": "the Philistines’ gifts and silver"
+  },
+  {
+   "id": "amaziah-hire",
+   "ref": "2Chr.25.6",
+   "also": ["2Chr.25.9"],
+   "kind": "wage",
+   "what": "what Amaziah paid to hire Israel’s soldiers",
+   "sums": [
+    {"quote": "a hundred talents of silver", "n": 100, "unit": "talent"}
+   ],
+   "note": "For 100,000 men: about a tenth of a day’s pay each at this era’s rate. He sent them home unused (25:10)."
+  },
+  {
+   "id": "ammonite-tribute",
+   "ref": "2Chr.27.5",
+   "kind": "tribute",
+   "what": "the Ammonites’ tribute to Jotham, each of three years",
+   "sums": [
+    {"quote": "a hundred talents of silver", "n": 100, "unit": "talent"}
+   ],
+   "uncounted": "the ten thousand cors each of wheat and barley"
+  },
+  {
+   "id": "hezekiah-passover",
+   "ref": "2Chr.30.24",
+   "kind": "gift",
+   "what": "Hezekiah’s animals for the Passover assembly",
+   "goods": [
+    {"quote": "a thousand bulls", "n": 1000, "good": "bull"},
+    {"quote": "seven thousand sheep", "n": 7000, "good": "sheep"}
+   ]
+  },
+  {
+   "id": "officials-passover",
+   "ref": "2Chr.30.24",
+   "kind": "gift",
+   "what": "his officials’ animals for the assembly",
+   "goods": [
+    {"quote": "a thousand bulls", "n": 1000, "good": "bull"},
+    {"quote": "ten thousand sheep", "n": 10000, "good": "sheep"}
+   ]
+  },
+  {
+   "id": "josiah-passover",
+   "ref": "2Chr.35.7",
+   "kind": "gift",
+   "what": "Josiah’s animals for the people’s Passover",
+   "goods": [
+    {"quote": "30,000 lambs and goats", "n": 30000, "good": "sheep"},
+    {"quote": "3,000 bulls", "n": 3000, "good": "bull"}
+   ]
+  },
+  {
+   "id": "priests-passover",
+   "ref": "2Chr.35.8",
+   "kind": "gift",
+   "what": "the temple officials’ gift to the priests",
+   "goods": [
+    {"quote": "2,600 Passover offerings", "n": 2600, "good": "sheep"},
+    {"quote": "300 bulls", "n": 300, "good": "bull"}
+   ]
+  },
+  {
+   "id": "levites-passover",
+   "ref": "2Chr.35.9",
+   "kind": "gift",
+   "what": "the Levite officers’ gift to the Levites",
+   "goods": [
+    {"quote": "5,000 Passover offerings", "n": 5000, "good": "sheep"},
+    {"quote": "500 bulls", "n": 500, "good": "bull"}
+   ]
+  },
+  {
+   "id": "returning-gifts",
+   "ref": "Ezra.2.69",
+   "kind": "offering",
+   "what": "what the returning families gave for rebuilding the temple",
+   "sums": [
+    {"quote": "61,000 darics of gold", "n": 61000, "unit": "daric"},
+    {"quote": "5,000 minas of silver", "n": 5000, "unit": "mina"}
+   ],
+   "uncounted": "the 100 priestly garments"
+  },
+  {
+   "id": "second-temple-dedication",
+   "ref": "Ezra.6.17",
+   "kind": "offering",
+   "what": "the offerings at the second temple’s dedication",
+   "goods": [
+    {"quote": "a hundred bulls", "n": 100, "good": "bull"},
+    {"quote": "two hundred rams", "n": 200, "good": "sheep"},
+    {"quote": "four hundred lambs", "n": 400, "good": "sheep"},
+    {"quote": "twelve male goats", "n": 12, "good": "goat"}
+   ]
+  },
+  {
+   "id": "artaxerxes-grant",
+   "ref": "Ezra.7.22",
+   "kind": "gift",
+   "what": "the most Artaxerxes’ treasurers were to give Ezra",
+   "sums": [
+    {"quote": "up to a hundred talents of silver", "n": 100, "unit": "talent"}
+   ],
+   "uncounted": "the wheat, wine, oil and salt"
+  },
+  {
+   "id": "ezra-treasure",
+   "ref": "Ezra.8.26",
+   "also": ["Ezra.8.27"],
+   "kind": "offering",
+   "what": "the gifts for the temple Ezra weighed out to the priests",
+   "sums": [
+    {"quote": "650 talents of silver", "n": 650, "unit": "talent"},
+    {"quote": "articles of silver weighing 100 talents", "n": 100, "unit": "talent"},
+    {"quote": "100 talents of gold", "n": 100, "unit": "talent", "gold": true},
+    {"quote": "valued at 1,000 darics", "n": 1000, "unit": "daric", "ref": "Ezra.8.27"}
+   ],
+   "uncounted": "the two bronze articles “as precious as gold”"
+  },
+  {
+   "id": "returning-offerings",
+   "ref": "Ezra.8.35",
+   "kind": "offering",
+   "what": "the returning exiles’ burnt offerings",
+   "goods": [
+    {"quote": "12 bulls", "n": 12, "good": "bull"},
+    {"quote": "96 rams", "n": 96, "good": "sheep"},
+    {"quote": "77 lambs", "n": 77, "good": "sheep"},
+    {"quote": "12 male goats", "n": 12, "good": "goat"}
+   ]
+  },
+  {
+   "id": "governors-levy",
+   "ref": "Neh.5.15",
+   "kind": "tribute",
+   "what": "what the governors before Nehemiah took",
+   "sums": [
+    {"quote": "forty shekels of silver", "n": 40, "unit": "shekel"}
+   ],
+   "uncounted": "the bread and wine",
+   "note": "Most likely a daily allowance, beside the food (5:14, 18), though the text does not say how often."
+  },
+  {
+   "id": "governor-gift",
+   "ref": "Neh.7.70",
+   "kind": "offering",
+   "what": "the governor’s gift for the work",
+   "sums": [
+    {"quote": "1,000 darics of gold", "n": 1000, "unit": "daric"}
+   ],
+   "uncounted": "the 50 bowls and 530 priestly garments"
+  },
+  {
+   "id": "heads-gift",
+   "ref": "Neh.7.71",
+   "kind": "offering",
+   "what": "the family heads’ gift for the work",
+   "sums": [
+    {"quote": "20,000 darics of gold", "n": 20000, "unit": "daric"},
+    {"quote": "2,200 minas of silver", "n": 2200, "unit": "mina"}
+   ]
+  },
+  {
+   "id": "people-gift",
+   "ref": "Neh.7.72",
+   "kind": "offering",
+   "what": "the rest of the people’s gift",
+   "sums": [
+    {"quote": "20,000 darics of gold", "n": 20000, "unit": "daric"},
+    {"quote": "2,000 minas of silver", "n": 2000, "unit": "mina"}
+   ],
+   "uncounted": "the 67 priestly garments"
+  },
+  {
+   "id": "third-shekel",
+   "ref": "Neh.10.32",
+   "kind": "offering",
+   "what": "each man’s yearly gift for the temple’s service",
+   "sums": [
+    {"quote": "a third of a shekel", "n": 0.3333333333333333, "unit": "shekel"}
+   ],
+   "insight": "temple-tax-stater"
+  },
+  {
+   "id": "haman-bribe",
+   "ref": "Esth.3.9",
+   "also": ["Esth.4.7"],
+   "kind": "bribe",
+   "what": "what Haman offered the king to destroy the Jews",
+   "sums": [
+    {"quote": "ten thousand talents of silver", "n": 10000, "unit": "talent"}
+   ],
+   "note": "Herodotus puts the whole yearly tribute of the Persian empire at about 14,560 talents (Histories 3.95)."
+  },
+  {
+   "id": "vineyard-rent",
+   "ref": "Song.8.11",
+   "also": ["Song.8.12"],
+   "kind": "purchase",
+   "what": "the rent of Solomon’s vineyard, from each tenant",
+   "sums": [
+    {"quote": "a thousand shekels of silver", "n": 1000, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "tenders-share",
+   "ref": "Song.8.12",
+   "kind": "wage",
+   "what": "the share for those who tend the vineyard",
+   "sums": [
+    {"quote": "two hundred", "n": 200, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "thousand-vines",
+   "ref": "Isa.7.23",
+   "kind": "purchase",
+   "what": "a place with a thousand vines",
+   "sums": [
+    {"quote": "a thousand shekels of silver", "n": 1000, "unit": "shekel"}
+   ],
+   "note": "A shekel a vine."
+  },
+  {
+   "id": "anathoth-field",
+   "ref": "Jer.32.9",
+   "kind": "purchase",
+   "what": "the field Jeremiah bought at Anathoth during the siege",
+   "sums": [
+    {"quote": "seventeen shekels of silver", "n": 17, "unit": "shekel"}
+   ]
+  },
+  {
+   "id": "gomer",
+   "ref": "Hos.3.2",
+   "kind": "purchase",
+   "what": "what Hosea paid to buy back his wife",
+   "sums": [
+    {"quote": "fifteen shekels of silver", "n": 15, "unit": "shekel"}
+   ],
+   "uncounted": "the homer and lethech of barley"
+  },
+  {
+   "id": "zechariah-wages",
+   "ref": "Zech.11.12",
+   "also": ["Zech.11.13"],
+   "kind": "wage",
+   "what": "the shepherd’s wages, thrown to the potter",
+   "sums": [
+    {"quote": "thirty pieces of silver", "n": 30, "unit": "shekel"}
+   ],
+   "estimate": "The Hebrew has “thirty of silver”; shekels are assumed. In a time when silver wages had risen, this is a little under two months’ pay.",
+   "insight": "thirty-pieces-of-silver"
+  },
+  {
+   "id": "tobit-wage",
+   "ref": "Tob.5.14",
+   "kind": "wage",
+   "what": "the wage Tobit offers his son’s guide",
+   "sums": [
+    {"quote": "A drachma a day", "n": 1, "unit": "drachma"}
+   ],
+   "uncounted": "his keep",
+   "note": "A drachma a day: the after-the-exile yardstick, in a book written in those years."
+  },
+  {
+   "id": "tobit-deposit",
+   "ref": "Tob.1.14",
+   "also": ["Tob.4.20"],
+   "kind": "treasure",
+   "what": "the silver Tobit left in trust with Gabael",
+   "sums": [
+    {"quote": "ten talents of silver", "n": 10, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "last-penny",
+   "ref": "Matt.5.26",
+   "kind": "debt",
+   "what": "the last coin of a debt",
+   "sums": [
+    {"quote": "the last penny", "n": 1, "unit": "kodrantes"}
+   ]
+  },
+  {
+   "id": "last-lepton",
+   "ref": "Luke.12.59",
+   "kind": "debt",
+   "what": "the last coin of a debt, in Luke",
+   "sums": [
+    {"quote": "the very last penny", "n": 1, "unit": "lepton"}
+   ]
+  },
+  {
+   "id": "two-sparrows",
+   "ref": "Matt.10.29",
+   "kind": "purchase",
+   "what": "two sparrows",
+   "sums": [
+    {"quote": "for a penny", "n": 1, "unit": "assarion"}
+   ]
+  },
+  {
+   "id": "five-sparrows",
+   "ref": "Luke.12.6",
+   "kind": "purchase",
+   "what": "five sparrows",
+   "sums": [
+    {"quote": "two pennies", "n": 2, "unit": "assarion"}
+   ],
+   "note": "Buy two pennies’ worth and the fifth sparrow comes free."
+  },
+  {
+   "id": "temple-tax",
+   "ref": "Matt.17.24",
+   "kind": "tribute",
+   "what": "the yearly temple tax",
+   "sums": [
+    {"quote": "the two drachmas", "n": 2, "unit": "drachma"}
+   ],
+   "insight": "temple-tax-stater"
+  },
+  {
+   "id": "coin-in-the-fish",
+   "ref": "Matt.17.27",
+   "kind": "tribute",
+   "what": "the coin in the fish, the tax for two",
+   "sums": [
+    {"quote": "a four-drachma coin", "n": 1, "unit": "stater"}
+   ],
+   "insight": "tyrian-shekel-temple-tax"
+  },
+  {
+   "id": "ten-thousand-talents",
+   "ref": "Matt.18.24",
+   "kind": "debt",
+   "what": "the first servant’s debt to the king",
+   "sums": [
+    {"quote": "ten thousand talents", "n": 10000, "unit": "talent"}
+   ],
+   "insight": "ten-thousand-talents"
+  },
+  {
+   "id": "hundred-denarii",
+   "ref": "Matt.18.28",
+   "kind": "debt",
+   "what": "what his fellow servant owed him",
+   "sums": [
+    {"quote": "a hundred denarii", "n": 100, "unit": "denarius"}
+   ],
+   "insight": "ten-thousand-talents"
+  },
+  {
+   "id": "vineyard-wage",
+   "ref": "Matt.20.2",
+   "also": ["Matt.20.9", "Matt.20.10", "Matt.20.13"],
+   "kind": "wage",
+   "what": "a day’s work in the vineyard",
+   "sums": [
+    {"quote": "a denarius", "n": 1, "unit": "denarius"}
+   ],
+   "note": "The yardstick itself: what the parable pays for a day, and the eleventh-hour workers the same for one hour (20:9, 12).",
+   "insight": "denarius-days-wage"
+  },
+  {
+   "id": "tax-coin",
+   "ref": "Matt.22.19",
+   "also": ["Mark.12.15", "Luke.20.24"],
+   "kind": "tribute",
+   "what": "the coin for Caesar’s tax",
+   "sums": [
+    {"quote": "a denarius", "n": 1, "unit": "denarius"}
+   ],
+   "insight": "denarius-days-wage"
+  },
+  {
+   "id": "five-talents",
+   "ref": "Matt.25.15",
+   "also": ["Matt.25.16", "Matt.25.20"],
+   "kind": "treasure",
+   "what": "what the first servant was entrusted with",
+   "sums": [
+    {"quote": "five talents", "n": 5, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "two-talents",
+   "ref": "Matt.25.22",
+   "also": ["Matt.25.17"],
+   "kind": "treasure",
+   "what": "what the second servant was entrusted with",
+   "sums": [
+    {"quote": "two talents", "n": 2, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "one-talent",
+   "ref": "Matt.25.24",
+   "also": ["Matt.25.18", "Matt.25.25", "Matt.25.27", "Matt.25.28"],
+   "kind": "treasure",
+   "what": "what the third servant buried",
+   "sums": [
+    {"quote": "the one talent", "n": 1, "unit": "talent"}
+   ]
+  },
+  {
+   "id": "thirty-pieces",
+   "ref": "Matt.26.15",
+   "also": ["Matt.27.3", "Matt.27.5", "Matt.27.6", "Matt.27.7", "Matt.27.9"],
+   "kind": "bribe",
+   "what": "what the chief priests paid Judas",
+   "sums": [
+    {"quote": "thirty pieces of silver", "n": 30, "unit": "piece"}
+   ],
+   "estimate": "Matthew names no coin. Tyrian shekels, the temple’s money, are assumed, at four denarii each.",
+   "insight": "thirty-pieces-of-silver"
+  },
+  {
+   "id": "feeding-bread",
+   "ref": "Mark.6.37",
+   "also": ["John.6.7"],
+   "kind": "purchase",
+   "what": "bread for the five thousand, as the disciples reckon it",
+   "sums": [
+    {"quote": "two hundred denarii", "n": 200, "unit": "denarius"}
+   ],
+   "note": "Philip says even that would not give each a small piece (John 6:7)."
+  },
+  {
+   "id": "widows-mites",
+   "ref": "Mark.12.42",
+   "also": ["Luke.21.2"],
+   "kind": "offering",
+   "what": "the widow’s gift to the treasury",
+   "sums": [
+    {"quote": "two small copper coins", "n": 2, "unit": "lepton"}
+   ],
+   "note": "All she had to live on (12:44).",
+   "insight": "widows-two-lepta"
+  },
+  {
+   "id": "nard",
+   "ref": "Mark.14.5",
+   "also": ["John.12.5"],
+   "kind": "gift",
+   "what": "the perfume poured on Jesus",
+   "sums": [
+    {"quote": "over three hundred denarii", "n": 300, "unit": "denarius"}
+   ],
+   "note": "“Over” three hundred: the figure is a floor.",
+   "insight": "nard-300-denarii"
+  },
+  {
+   "id": "five-hundred-denarii",
+   "ref": "Luke.7.41",
+   "kind": "debt",
+   "what": "the larger debt in Jesus’ parable",
+   "sums": [
+    {"quote": "five hundred denarii", "n": 500, "unit": "denarius"}
+   ]
+  },
+  {
+   "id": "fifty-denarii",
+   "ref": "Luke.7.41",
+   "kind": "debt",
+   "what": "the smaller debt",
+   "sums": [
+    {"quote": "the other fifty", "n": 50, "unit": "denarius"}
+   ]
+  },
+  {
+   "id": "innkeeper",
+   "ref": "Luke.10.35",
+   "kind": "purchase",
+   "what": "what the Samaritan left with the innkeeper",
+   "sums": [
+    {"quote": "two denarii", "n": 2, "unit": "denarius"}
+   ],
+   "insight": "two-denarii-innkeeper"
+  },
+  {
+   "id": "ten-drachmas",
+   "ref": "Luke.15.8",
+   "also": ["Luke.15.9"],
+   "kind": "treasure",
+   "what": "the woman’s ten silver coins",
+   "sums": [
+    {"quote": "ten silver coins", "n": 10, "unit": "drachma"}
+   ],
+   "insight": "lost-drachma"
+  },
+  {
+   "id": "ten-minas",
+   "ref": "Luke.19.13",
+   "also": ["Luke.19.15", "Luke.19.20", "Luke.19.23", "Luke.19.24", "Luke.19.25"],
+   "kind": "treasure",
+   "what": "the ten minas, one for each servant",
+   "sums": [
+    {"quote": "ten minas", "n": 10, "unit": "mina"}
+   ]
+  },
+  {
+   "id": "mina-made-ten",
+   "ref": "Luke.19.16",
+   "kind": "treasure",
+   "what": "what the first servant made from one mina",
+   "sums": [
+    {"quote": "ten more minas", "n": 10, "unit": "mina"}
+   ]
+  },
+  {
+   "id": "mina-made-five",
+   "ref": "Luke.19.18",
+   "kind": "treasure",
+   "what": "what the second servant made",
+   "sums": [
+    {"quote": "five minas", "n": 5, "unit": "mina"}
+   ]
+  },
+  {
+   "id": "ephesus-books",
+   "ref": "Acts.19.19",
+   "kind": "treasure",
+   "what": "the magic books burned at Ephesus",
+   "sums": [
+    {"quote": "fifty thousand drachmas", "n": 50000, "unit": "drachma"}
+   ]
+  },
+  {
+   "id": "famine-wheat",
+   "ref": "Rev.6.6",
+   "kind": "purchase",
+   "what": "a quart of wheat, in the third seal’s famine",
+   "sums": [
+    {"quote": "wheat for a denarius", "n": 1, "unit": "denarius"}
+   ],
+   "note": "A choenix, about a litre: one man’s daily ration of grain for a full day’s pay."
+  },
+  {
+   "id": "famine-barley",
+   "ref": "Rev.6.6",
+   "kind": "purchase",
+   "what": "three quarts of barley, in the same famine",
+   "sums": [
+    {"quote": "barley for a denarius", "n": 1, "unit": "denarius"}
+   ]
+  }
+ ],
+ "unpriced": [
+  {"why": "The kesitah’s value is no longer known (BSB footnote, Gen 33:19), so these are not priced.", "refs": ["Gen.33.19", "Josh.24.32", "Job.42.11"]},
+  {"why": "A weight, not a price: armour, hair, food, spices, bronze.", "refs": ["Exod.30.23", "Exod.30.24", "Exod.38.29", "1Sam.17.5", "1Sam.17.7", "2Sam.14.26", "2Sam.21.16", "Ezek.4.10"]},
+  {"why": "Defines a unit rather than paying one.", "refs": ["Lev.27.25", "Ezek.45.12", "Amos.8.5"]},
+  {"why": "No sum is named.", "refs": ["Lev.5.15", "1Sam.2.36", "Ps.119.72", "Matt.28.12", "Matt.28.15", "Mark.14.11", "Luke.9.3", "Luke.22.5", "Acts.3.6", "Acts.7.16", "Acts.8.20", "Acts.20.33", "1Pet.1.18"]}
+ ]
+}

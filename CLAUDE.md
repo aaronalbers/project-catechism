@@ -227,6 +227,21 @@ them in CI — read it before adding content.
   up to `total` unless `discrepancy` says why not (Numbers 3's Levites). A model can size itself from
   a tally's rows, as the camp of Israel does, so the two never disagree.
 
+- Prices (`content/prices.json`) are every sum the text names, and everything given or exchanged that can be valued,
+  in days of a labourer's wage. Each price has `sums` (the BSB's words for each amount, in its verse; `gold` for a
+  weight of gold, reckoned in silver at `gold.ratio`) and/or `goods` (livestock or years of work, valued in `goods`),
+  plus `uncounted` for what was also given that nothing prices. A sum is reckoned in its `era`'s money: before the
+  exile a day is 1/30 shekel, after it a drachma, in the New Testament a denarius. A book takes its era from
+  `eras[].books` or its testament, and each era's units say what their value rests on. The reader draws a chart
+  under the price's verse and under each `also` verse more than three verses from one already drawn (`chartRefs`).
+  The chart counts the sum out as hours of a twelve-hour day, working days of a ≈300-day year, or years, and marks it
+  on one log scale with every other sum. The Worth tab (only in chapters that name a sum) shows how each is reckoned,
+  the ladder of all of them, and the yardstick. `src/__tests__/prices.test.ts` fails the build if a quote is not
+  verbatim, if its number (in words or figures, parsed by `quotedAmount`) is not `n`, or if a unit or good is
+  unknown. It also fails if a verse of the 66 that names money, by a currency Strong's number in the interlinear or
+  by a currency word and a number in the BSB, is neither priced nor listed in `unpriced` with a reason. A money
+  insight card's figures must agree with the yardstick (twelve-hour day, 300-day year).
+
 - Reigns: each king of Israel and Judah in `content/rulers.json` has a `reign` (the verse his chart stands
   under in Kings, the length and synchronism as the BSB words them, Kings' verdict, and Chronicles' own chart
   verse and verdict for Judah's kings). A verdict is `right`, `evil` or `none`, with `but` for the qualification

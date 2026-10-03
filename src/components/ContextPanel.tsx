@@ -11,6 +11,8 @@ import { accountAt } from '@/lib/reign';
 import { passionInChapter } from '@/lib/passion';
 import { DaysPanel } from '@/panels/DaysPanel';
 import { ScrollsPanel } from '@/panels/ScrollsPanel';
+import { WorthPanel } from '@/panels/WorthPanel';
+import { pricesAt, pricesInChapter } from '@/lib/prices';
 import { hebrewOf, scrollMarksInChapter } from '@/lib/scrolls';
 import { namedInChapter, usePeopleInBook } from '@/lib/people';
 import { Grip } from './Grip';
@@ -30,6 +32,7 @@ const TABS: { id: PanelTab; label: string }[] = [
   { id: 'reigns', label: 'Reign' },
   { id: 'days', label: 'Days' },
   { id: 'scrolls', label: 'Scrolls' },
+  { id: 'worth', label: 'Worth' },
   { id: 'models', label: 'Models' },
   { id: 'videos', label: 'Videos' },
 ];
@@ -50,6 +53,7 @@ const PanelBody = memo(function PanelBody({ tab }: { tab: PanelTab }) {
       {tab === 'reigns' && <ReignsPanel />}
       {tab === 'days' && <DaysPanel />}
       {tab === 'scrolls' && <ScrollsPanel />}
+      {tab === 'worth' && <WorthPanel />}
     </Suspense>
   );
 });
@@ -79,6 +83,7 @@ export function ContextPanel() {
     videos: videosFor(loc).length,
     // A break the Hebrew does not have, or words repeated across a book's end, in this chapter.
     scrolls: scrollMarksInChapter(loc.book, loc.chapter),
+    worth: pricesAt(loc).length,
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc, named]);
   const { panes } = layout;
@@ -86,9 +91,10 @@ export function ContextPanel() {
   const split = layout.split;
   const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date
-  // the three days; the Scrolls tab only for the Old Testament, whose books the Hebrew Bible divides otherwise.
+  // the three days; the Scrolls tab only for the Old Testament, whose books the Hebrew Bible divides otherwise; the Worth tab
+  // only for chapters that name a sum of money.
   const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || showing('reigns')) && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || showing('days'))
-    && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')));
+    && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth')));
   // As many panes as fit, the ones used most recently; a narrow screen shows only the pane in use.
   const shown = visible(panes.length, used, Math.min(focus, panes.length - 1), narrow ? 1 : fitting(split, panelWidth(layout, viewport), height));
   const hidden = panes.length - shown.length;

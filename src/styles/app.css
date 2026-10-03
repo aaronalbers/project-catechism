@@ -740,3 +740,64 @@ body.resizing-y { cursor: row-resize; }
 .scroll-numbering { margin: 10px 0; }
 .scroll-numbering h4 { display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 600; margin: 0 0 2px; }
 .scroll-numbering p { margin: 0 0 4px; }
+
+/* Prices on the text: what a sum was worth in days of a labourer's wage, counted out under its verse (hours of a
+   day, working days of a year, years of a century) and marked on one logarithmic scale shared by every sum. */
+:root { --price: #9a6b00; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --price: #e2b54a; }
+.marker.price { background: var(--price); }
+.price-block { margin: 8px 0 4px; font: 12px/1.45 var(--sans); color: var(--muted); cursor: default; }
+.price-cap { margin: 0 0 6px; }
+.price-cap .kind::before { background: var(--price); }
+.price-cap .worth { color: var(--text); font-variant-numeric: tabular-nums; }
+.price-chart { display: grid; gap: 8px; }
+.price-hours { display: flex; gap: 2px; max-width: 360px; }
+.price-hours .hour { position: relative; flex: 1; height: 12px; border-radius: 2px; background: color-mix(in oklab, var(--price) 12%, transparent); overflow: hidden; }
+.price-hours .fill { position: absolute; inset: 0 auto 0 0; width: calc(var(--f) * 100%); background: var(--price); }
+.price-grid { display: grid; grid-template-columns: repeat(var(--row), 8px); gap: 2px; }
+.price-grid.years { grid-template-columns: repeat(var(--row), 14px); }
+.price-grid .cell { height: 8px; border-radius: 1.5px; background: var(--price); }
+.price-grid.years .cell { height: 14px; border-radius: 2px; }
+.price-grid .cell[style] { background: linear-gradient(90deg, var(--price) calc(var(--f) * 100%), color-mix(in oklab, var(--price) 18%, transparent) 0); }
+.price-scale { padding: 0 2px; }
+.price-scale .rail { position: relative; height: 14px; }
+.price-scale .rail::before { content: ''; position: absolute; left: 0; right: 0; top: 6px; height: 2px; border-radius: 1px; background: color-mix(in oklab, var(--price) 18%, transparent); }
+.price-scale .fill { position: absolute; left: 0; top: 6px; height: 2px; width: calc(var(--at) * 100%); background: var(--price); border-radius: 1px; }
+.price-scale .other { position: absolute; left: calc(var(--at) * 100%); top: 3px; width: 1px; height: 8px; background: color-mix(in oklab, var(--text) 22%, transparent); }
+.price-scale .other[title]:hover { background: var(--text); }
+.price-scale .dot { position: absolute; left: calc(var(--at) * 100%); top: 1px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: var(--price); box-shadow: 0 0 0 2px var(--surface); }
+.price-scale .ticks { position: relative; height: 14px; font-size: 10px; }
+.price-scale .ticks span { position: absolute; left: calc(var(--at) * 100%); transform: translateX(-50%); white-space: nowrap; }
+.price-scale .ticks span::before { content: ''; position: absolute; left: 50%; top: -5px; width: 1px; height: 4px; background: var(--muted); }
+.price-scale .ticks span:first-child { transform: none; }
+.price-scale .ticks span:first-child::before { left: 0; }
+.price-scale .ticks span.minor { width: 9px; height: 14px; }
+@media (max-width: 600px) { .price-scale .ticks span:nth-child(2) { display: none; } }
+.price-card.here { border-color: color-mix(in oklab, var(--price) 60%, var(--border)); }
+.price-total { margin: 4px 0 8px; font: 14px var(--sans); }
+.price-key { margin: 4px 0 8px; font: 11px var(--sans); color: var(--muted); }
+.price-note { margin: 6px 0; font: 13px/1.5 var(--sans); color: var(--muted); }
+.price-note .verses { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-left: 4px; }
+.price-parts { width: 100%; margin: 10px 0 4px; border-collapse: collapse; font: 12px/1.45 var(--sans); }
+.price-parts td { padding: 4px 6px 4px 0; border-top: 1px solid var(--border); vertical-align: top; color: var(--muted); }
+.price-parts td:first-child { color: var(--text); }
+.price-parts td.n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--text); }
+.price-parts q { font-style: italic; }
+.muted { color: var(--muted); }
+.price-era { margin-top: 14px; }
+.price-era h4 { font: 600 13px var(--sans); margin-bottom: 4px; }
+.price-kinds { margin: 8px 0; flex-wrap: wrap; }
+.price-ladder { list-style: none; margin: 0; padding: 0; font: 12px var(--sans); }
+.price-ladder button { display: grid; grid-template-columns: minmax(0, 1fr) 140px; grid-template-rows: auto auto; column-gap: 8px; width: 100%; padding: 4px 2px; text-align: left; color: var(--muted); border-top: 1px solid var(--border); }
+.price-ladder button:hover { background: color-mix(in oklab, var(--price) 8%, transparent); }
+.price-ladder .what { grid-column: 1; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.price-ladder .ref { grid-column: 2; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.price-ladder .bar { grid-column: 1; align-self: center; position: relative; height: 6px; margin-top: 3px; border-radius: 3px; background: color-mix(in oklab, var(--price) 12%, transparent); }
+.price-ladder .bar span { position: absolute; inset: 0 auto 0 0; width: calc(var(--at) * 100%); border-radius: 3px; background: color-mix(in oklab, var(--price) 60%, var(--surface)); }
+.price-ladder .n { grid-column: 2; white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
+.price-ladder li.here .bar span { background: var(--price); }
+.price-ladder li.here .what { font-weight: 600; }
+.price-block .price-grid { grid-template-columns: repeat(var(--row), 6px); gap: 1px; }
+.price-block .price-grid .cell { height: 6px; border-radius: 1px; }
+.price-block .price-grid.years { grid-template-columns: repeat(var(--row), 10px); gap: 2px; }
+.price-block .price-grid.years .cell { height: 10px; }

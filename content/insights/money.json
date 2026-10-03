@@ -55,7 +55,7 @@
   "verses": ["Matt.18.21-35"],
   "summary": "A talent was 6,000 denarii, so the first servant owed 60 million days' wages; Josephus says the whole of Herod's kingdom yielded about 900 talents a year. The second servant owed 100 denarii — about three months.",
   "body": [
-   "The parable deliberately stacks the two debts against each other. A talent was not a coin but a weight of silver reckoned at 6,000 drachmae/denarii, so 10,000 talents is 60,000,000 denarii. At one denarius a day, that is 60 million days of labour — on the order of 160,000 years for one worker (an estimate that assumes roughly 300 working days a year).",
+   "The parable deliberately stacks the two debts against each other. A talent was not a coin but a weight of silver reckoned at 6,000 drachmae/denarii, so 10,000 talents is 60,000,000 denarii. At one denarius a day, that is 60 million days of labour — about 200,000 years for one worker (an estimate that assumes roughly 300 working days a year).",
    "For scale, Josephus records the annual tax revenue of the territories Herod the Great left to his sons: 600 talents for Archelaus (Judea, Samaria, Idumea), 200 for Antipas (Galilee and Perea) and 100 for Philip — about 900 talents a year for the whole region. The servant's debt is more than eleven years of the entire kingdom's revenue. 'Ten thousand' (myrioi) was also the largest single number-word in Greek, so the hearer would take it as 'the biggest debt imaginable'.",
    "The fellow servant's 100 denarii was real money — about three to four months' pay — which is the point: it is a genuine debt, dwarfed only by comparison."
   ],
@@ -74,14 +74,15 @@
   "title": "The widow's two lepta",
   "kind": "money",
   "verses": ["Mark.12.41-44", "Luke.21.1-4"],
-  "summary": "Mark translates her gift for Roman readers: two lepta 'make a quadrans' — 1/64 of a denarius, about ten minutes of a labourer's day.",
+  "summary": "Mark translates her gift for Roman readers: two lepta 'make a quadrans' — 1/64 of a denarius, about eleven minutes of a labourer's twelve-hour day.",
   "body": [
    "The lepton ('thin one') was the smallest bronze coin in circulation in Judea, the Jewish prutah. Most of those found in Jerusalem excavations were struck a century or more earlier under the Hasmonean king Alexander Jannaeus (103–76 BC) and were still in everyday use — worn, crude, and almost worthless individually.",
-   "Mark's aside, 'which make a kodrantēs' (Latin quadrans), fixes the value: a quadrans was a quarter of an as, and sixteen asses made a denarius, so her two coins were 1/64 of a day's wage. The arithmetic is exact; only the 'ten minutes' comparison is an estimate assuming a ten-hour working day.",
+   "Mark's aside, 'which make a kodrantēs' (Latin quadrans), fixes the value: a quadrans was a quarter of an as, and sixteen asses made a denarius, so her two coins were 1/64 of a day's wage. The arithmetic is exact; the 'eleven minutes' takes the twelve-hour working day the Gospels assume (John 11:9; Matthew 20:6-12).",
    "Because Mark explains the coin in Roman terms, this verse is also one of the small internal clues that his Gospel was written with a non-Judean, probably Roman, audience in mind."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Mark.12.42", "note": "'two small copper coins, which amount to a kodrantes'"},
+   {"kind": "scripture", "ref": "John.11.9", "note": "“twelve hours of daylight”: the working day"},
    {"kind": "archaeology", "title": "A Treasury of Jewish Coins from the Persian Period to Bar Kokhba", "author": "Ya'akov Meshorer", "year": 2001, "note": "prutot of Alexander Jannaeus are the commonest coin in Judean excavation strata of the 1st century AD"},
    {"kind": "primary", "title": "Roman denominations: 4 quadrantes = 1 as; 16 asses = 1 denarius", "note": "the as-to-denarius ratio was fixed at 16:1 from 141 BC"}
   ],

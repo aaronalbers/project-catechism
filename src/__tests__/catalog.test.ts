@@ -1,15 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { PROFILE_INDEX } from '@/lib/content';
 import { CATALOG, chaptersOf, featuresInBook } from '@/lib/catalog';
-import { CHIASMS, INSIGHTS, KINGS, MODELS, TALLIES } from '@/lib/content';
+import { CHIASMS, INSIGHTS, KINGS, MODELS, PRICES, TALLIES } from '@/lib/content';
 import { parseRef } from '@/lib/refs';
 
 describe('catalog', () => {
-  it('lists every model, chiasm, count and insight once', () => {
+  it('lists every model, chiasm, count, price and insight once', () => {
     const ids = (kind: string) => CATALOG.find((s) => s.kind === kind)!.entries.map((e) => e.id).sort();
     expect(ids('model')).toEqual(MODELS.map((m) => m.id).sort());
     expect(ids('chiasm')).toEqual(CHIASMS.map((c) => c.id).sort());
     expect(ids('tally')).toEqual(TALLIES.map((t) => t.id).sort());
+    expect(ids('price')).toEqual(PRICES.map((p) => p.id).sort());
     expect(ids('reign')).toEqual(KINGS.map((k) => k.id).sort());
     expect(ids('insight')).toEqual(INSIGHTS.map((i) => i.id).sort());
     expect(ids('profile')).toEqual(PROFILE_INDEX.map((p) => p.id).sort());
