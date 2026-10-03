@@ -21,6 +21,22 @@ export function TabBar() {
   const strip = useRef<HTMLDivElement>(null);
   const readerTab = useRef<HTMLButtonElement>(null);
   const onReader = !panelOpen;
+  // Which ends of the strip have tabs scrolled out of sight, for it to fade there.
+  const [more, setMore] = useState({ left: false, right: false });
+  useEffect(() => {
+    const el = strip.current;
+    if (!el) return;
+    const measure = () => {
+      const left = el.scrollLeft > 1, right = el.scrollLeft + el.clientWidth < el.scrollWidth - 1;
+      setMore((m) => (m.left === left && m.right === right ? m : { left, right }));
+    };
+    measure();
+    el.addEventListener('scroll', measure, { passive: true });
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    for (const c of el.children) ro.observe(c);
+    return () => { el.removeEventListener('scroll', measure); ro.disconnect(); };
+  }, [tabs.length]);
 
   // Keep the selected tab in sight in a strip too narrow for all of them.
   useEffect(() => {
@@ -46,7 +62,7 @@ export function TabBar() {
         {/* Outside the scrolling strip, so it stays in reach however far that is scrolled. */}
         <button ref={readerTab} role="tab" className={`tab reader-tab${playing ? ' playing' : ''}`} aria-selected={onReader && index === null} onClick={toReader}
           title={playing ? 'The text being read' : undefined}>Reader</button>
-        <div ref={strip} className="strip">
+        <div ref={strip} className={`strip${more.left ? ' more-left' : ''}${more.right ? ' more-right' : ''}`}>
           {tabs.map((t) => (
             <button key={t.id} role="tab" className="tab" aria-selected={!onReader && index === null && shownTab === t.id} onClick={() => toTab(t.id)}>
               {t.label}{counts[t.id] ? <span className="count">{counts[t.id]}</span> : null}

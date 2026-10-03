@@ -452,6 +452,10 @@ body.resizing-y { cursor: row-resize; }
 .tabbar .tabs { flex: 1; min-width: 0; border-bottom: 0; overflow: visible; align-items: center; }
 .tabbar .strip { position: relative; display: flex; gap: 2px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; border-left: 1px solid var(--border); padding-left: 4px; margin-left: 2px; }
 .tabbar .strip::-webkit-scrollbar { display: none; }
+/* Fade an end of the strip that has more tabs beyond it, so it reads as one that scrolls. */
+.tabbar .strip.more-right { mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.tabbar .strip.more-left { mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.tabbar .strip.more-left.more-right { mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
 .tabbar .tab { padding: 9px 10px; border-bottom: 0; border-radius: 8px; }
 .tabbar .tab[aria-selected='true'] { background: var(--surface-2); }
 .tabbar .reader-tab.playing::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
