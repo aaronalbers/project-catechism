@@ -201,3 +201,11 @@ page, with a `url` added.
 - **Luke 22:43–44's manuscripts from memory.** P75 and Vaticanus omitting, Sinaiticus' first hand and Bezae including,
   are standard but were not read off Metzger's *Textual Commentary* (no link given). *Needed:* the entry's page and
   wording, or an NA28 apparatus, to confirm the list.
+- **Who reads Jesus' beating as one, and who as two, is unnamed** (`flogged-and-crucified` in `history.json`). The card
+  gives both readings without naming who holds them, because no commentator's position was checked. It stays
+  `consensus` for the Roman practice, which three primary texts attest. *Needed:* named holders (Raymond Brown's
+  *Death of the Messiah* on John 19:1; an evangelical commentary on John that reads it as two beatings), then a line
+  naming each.
+- **Sherwin-White's three grades cited without a page.** The scale is widely credited to *Roman Society and Roman Law
+  in the New Testament* (1963), and the Digest passage behind it was checked, but his wording was not. *Needed:* the
+  page and his own terms.

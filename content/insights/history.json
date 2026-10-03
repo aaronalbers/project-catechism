@@ -435,4 +435,32 @@
   "confidence": "interpretation",
   "traditions": ["Rome: the traditional view, and still the most widely held", "Ephesus: proposed in the twentieth century, from the letter's travel plans and Paul's dangers there", "Caesarea: a minority view, from Acts 23:35 and 24:27"]
  }
+,
+ {
+  "id": "flogged-and-crucified",
+  "title": "A beating instead of death, or before it",
+  "kind": "history",
+  "verses": ["Luke.23.16", "Luke.23.22", "John.19.1-6", "Mark.15.15", "Matt.27.26"],
+  "summary": "Rome beat people for three purposes: as a penalty in its own right, to question them, and as the first part of an execution. Pilate offers the first: 'I will punish Him and release Him' (Luke 23:16, 22). Mark and Matthew record the third: Jesus flogged and 'handed over to be crucified' (Mark 15:15). The flogging that went with crucifixion was the usual practice, not something added in His case.",
+  "body": [
+   "A beating could stand alone. The Digest of Roman law lists beating with rods among the penalties that touch a man's standing 'and not the danger of his life' (48.19.28.1), and Acts shows the other uses: magistrates have Paul and Silas 'beaten with rods' and then let them go (Acts 16:22, 35), and a commander orders Paul 'flogged and interrogated' to find out what he had done (22:24).",
+   "A beating also came before crucifixion. Livy records that after a slave revolt in Etruria in 196 BC the praetor had its leaders 'flogged and fixed to crosses' (verberatos crucibus adfixit). Josephus says the governor Florus had men 'whipped and nailed to the cross before his tribunal' in Jerusalem in AD 66, and that men caught during Titus' siege 'were first whipped, and then tormented… and were then crucified'. So it was usual for a man condemned to the cross to be flogged first. Jesus did not get a punishment meant to stand instead of crucifixion in addition to it.",
+   "The memory that a flogging could replace crucifixion fits Pilate's own offer. In Luke he twice proposes to 'punish' Jesus (paideusas, the word for disciplining a child) and release Him, a beating instead of a death sentence. In John, Pilate has Jesus flogged (emastigōsen) in the middle of the trial, before any sentence, and brings Him out in the thorns and purple: 'Here is the man!' (John 19:1–5). The flogging looks meant to satisfy the crowd, and it fails: 'Crucify Him! Crucify Him!' (19:6). Mark and Matthew place the flogging (phragellōsas, from the Latin flagellum) after the sentence, as the start of the execution.",
+   "Whether Jesus was beaten once or twice is read two ways. Some harmonise the gospels as two beatings: a lighter one in John, offered to win His release, and the severe one before crucifixion in Mark and Matthew. A. N. Sherwin-White, a Roman historian, drew a scale of three beatings (fustes, rods; flagella, whips; verbera, the scourging joined to a capital sentence) from a list in the Digest (48.19.7: 'fustium admonitio, flagellorum castigatio, vinculorum verberatio'), and the two-beatings reading leans on that scale. Others take John to have moved the one flogging earlier in the trial. The Digest's list is a third-century jurist's, so applying it to Pilate's court is a reconstruction."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.23.16-22"},
+   {"kind": "scripture", "ref": "John.19.1-6"},
+   {"kind": "scripture", "ref": "Mark.15.15"},
+   {"kind": "scripture", "ref": "Acts.16.22-35"},
+   {"kind": "scripture", "ref": "Acts.22.24-25"},
+   {"kind": "primary", "title": "Livy, History of Rome 33.36.3", "author": "Livy", "year": "c. 20 BC", "url": "https://www.thelatinlibrary.com/livy/liv.33.shtml", "note": "'alios verberatos crucibus adfixit, qui principes coniurationis fuerant', 196 BC"},
+   {"kind": "primary", "title": "Josephus, Jewish War 2.14.9 (2.306–308)", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0148:book=2:whiston%20chapter=14:whiston%20section=9", "note": "Florus has men 'whipped and nailed to the cross before his tribunal' (Whiston)"},
+   {"kind": "primary", "title": "Josephus, Jewish War 5.11.1 (5.449)", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0148:book=5:whiston%20chapter=11:whiston%20section=1", "note": "'first whipped, and then tormented with all sorts of tortures, before they died, and were then crucified' (Whiston)"},
+   {"kind": "primary", "title": "Digest of Justinian 48.19.7 and 48.19.28.1 (Callistratus)", "author": "Callistratus", "year": "c. AD 200; compiled AD 533", "url": "https://droitromain.univ-grenoble-alpes.fr/Corpus/d-48.htm", "note": "the beatings with rods, whips and in chains; a beating with rods among the penalties that are 'ad existimationem, non ad capitis periculum' (Mommsen and Krueger's text)"},
+   {"kind": "scholarship", "title": "Roman Society and Roman Law in the New Testament", "author": "A. N. Sherwin-White", "year": 1963, "note": "the Sarum Lectures 1960–61; the three grades of beating"}
+  ],
+  "confidence": "consensus",
+  "related": ["how-crucifixion-killed"]
+ }
 ]
