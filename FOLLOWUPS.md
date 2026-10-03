@@ -185,3 +185,19 @@ page, with a `url` added.
   Glyssen gives Rev 22:14-15 to Jesus, but the BSB closes his words at 22:13, so they stay black too. Red-letter
   editions differ on both. *Needed:* a short curated list of passages to add or leave out, citing a red-letter
   edition for each, read by `wordsOfJesus` alongside Glyssen.
+
+## Medicine cards on the passion (`content/insights/medicine.json`), 2026-10-03
+
+- **Edwards, Gabel & Hosmer (JAMA 1986) quoted from a reprint.** The quotations ("serous pleural and pericardial
+  fluid", "exhaustion asphyxia", the closing sentence) were read from the catholicculture.org reprint, because JAMA's
+  page refuses scripted requests. Volume, issue and page are confirmed by Crossref. *Needed:* a check of the quotations
+  against the JAMA PDF.
+- **Zugibe (2005) not read.** His pleural-effusion reading of the "water", the right atrium, and his suspension
+  experiments come from Maslen & Mitchell's review and Geberth's 2008 AAFS abstract, not from the book. The cards leave
+  out the arm angles and hanging times for that reason. *Needed:* the book (M. Evans, 2005), with page numbers, and the
+  experiments' figures if the card should give them.
+- **Barbet named without a page.** *A Doctor at Calvary* is cited from Maslen & Mitchell (they list a 1963 edition). *Needed:*
+  the passage on asphyxia, and a source entry for it.
+- **Luke 22:43–44's manuscripts from memory.** P75 and Vaticanus omitting, Sinaiticus' first hand and Bezae including,
+  are standard but were not read off Metzger's *Textual Commentary* (no link given). *Needed:* the entry's page and
+  wording, or an NA28 apparatus, to confirm the list.

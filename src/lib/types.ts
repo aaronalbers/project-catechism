@@ -85,7 +85,7 @@ export interface Media {
   src: string; caption: string; credit?: string; creditUrl?: string; license?: string;
 }
 
-export type InsightKind = 'money' | 'culture' | 'archaeology' | 'history' | 'geography' | 'word';
+export type InsightKind = 'money' | 'culture' | 'archaeology' | 'history' | 'geography' | 'medicine' | 'word';
 export interface Insight {
   id: string; title: string; kind: InsightKind; verses: Ref[]; summary: string; body: string[];
   sources: Source[]; traditions?: string[]; confidence: Confidence; media?: Media[]; related?: string[];

@@ -34,7 +34,7 @@ const byPosition = (a: CatalogEntry, b: CatalogEntry) => compareLoc(parseRef(a.g
 const sorted = (entries: CatalogEntry[]) => entries.sort(byPosition);
 
 const INSIGHT_GROUPS: Record<InsightKind, string> = {
-  archaeology: 'Archaeology', culture: 'Culture', money: 'Money and measures', word: 'Words', history: 'History', geography: 'Geography',
+  archaeology: 'Archaeology', culture: 'Culture', money: 'Money and measures', word: 'Words', history: 'History', geography: 'Geography', medicine: 'Medicine',
 };
 
 function modelLines(m: (typeof MODELS)[number]): CatalogLine[] {

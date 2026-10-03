@@ -6,7 +6,7 @@ import { parseRef } from '@/lib/refs';
 import { cardId } from '@/lib/catalog';
 import { IndexLink } from '@/components/IndexView';
 
-const KIND: Record<Insight['kind'], string> = { money: 'Money & wages', culture: 'Cultural context', archaeology: 'Archaeology', history: 'History', geography: 'Geography', word: 'Word study' };
+const KIND: Record<Insight['kind'], string> = { money: 'Money & wages', culture: 'Cultural context', archaeology: 'Archaeology', history: 'History', geography: 'Geography', medicine: 'Medicine', word: 'Word study' };
 
 /** BibleProject's own word studies first, then the themes and the rest; shorts and remixes last. */
 const VIDEO_ORDER: Video['kind'][] = ['word', 'theme', 'series', 'insight', 'podcast', 'short', 'remix'];

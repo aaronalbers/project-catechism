@@ -1,0 +1,81 @@
+[
+ {
+  "id": "blood-and-water",
+  "title": "Blood and water from His side",
+  "kind": "medicine",
+  "verses": ["John.19.31-37", "1John.5.6"],
+  "summary": "The soldiers saw that Jesus was already dead and did not break His legs; one pierced His side, 'and immediately blood and water flowed out' (John 19:33–34). John insists an eyewitness saw it (19:35). Physicians have explained the 'water' several ways, and none of the explanations can be tested.",
+  "body": [
+   "The order matters. In John the soldiers judge Jesus dead before the spear (19:33), and in Mark Pilate is surprised He has died so soon and has the centurion confirm it before releasing the body (Mark 15:44–45). The flow is not how anyone found out He was dead. The medical question is whether what John describes fits a body already dead, and whether the 'water' could be something real rather than a figure of speech.",
+   "Edwards, Gabel and Hosmer (JAMA, 1986), a pathologist, a pastor and a medical illustrator, read the water as 'serous pleural and pericardial fluid', which had collected round the lungs and the heart in the hours of shock after the flogging. On their reading the blood came from the right atrium or ventricle, 'or perhaps from a hemopericardium' (blood in the sac round the heart). They conclude that 'the weight of historical and medical evidence indicates that Jesus was dead before the wound to his side was inflicted.'",
+   "Frederick Zugibe, a forensic pathologist (2005), puts the water in the pleural cavity only: a large effusion round the lungs built up after the scourging, and the spear, driven through it into the right atrium, carried out blood and that fluid together as it was pulled back.",
+   "William Stroud, a physician (1847), argued that Jesus died of a ruptured heart. Blood poured into the sac round the heart and, standing there, separated, as blood does once it leaves the circulation, into 'a pale watery liquid called serum' and a dark clot. The spear released both. On this reading the separation itself needs time after the bleeding, so the flow fits death having already happened. Rupture of a heart without disease behind it is rare, and later reviewers list Stroud's theory among the unproven.",
+   "So a 'pericardium filled with water' is one reading, not a finding: Edwards and his colleagues include pericardial fluid, Zugibe gives pleural fluid alone, and Stroud has blood separated in the pericardium. Each rests on a guess at where the spear went in, which John does not say beyond 'His side'. A review of the medical literature (Maslen and Mitchell, 2006) concludes that 'there is insufficient evidence to safely state exactly how people did die from crucifixion in Roman times.'",
+   "The early church read the flow for its meaning rather than its mechanism. Augustine notes that the evangelist wrote 'opened' His side, 'that thereby, in a sense, the gate of life might be thrown open, from whence have flowed forth the sacraments of the Church': the water of baptism and the blood of the cup. 1 John 5:6 speaks of Jesus coming 'by water and blood', though what that verse refers to is itself disputed."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "John.19.33-35"},
+   {"kind": "scripture", "ref": "Mark.15.44-45"},
+   {"kind": "scholarship", "title": "'On the Physical Death of Jesus Christ'", "author": "William D. Edwards, Wesley J. Gabel & Floyd E. Hosmer", "year": 1986, "url": "https://doi.org/10.1001/jama.1986.03370110077025", "note": "JAMA 255 (11), pp. 1455–1463; 'water probably represented serous pleural and pericardial fluid'"},
+   {"kind": "scholarship", "title": "The Crucifixion of Jesus: A Forensic Inquiry", "author": "Frederick T. Zugibe", "year": 2005, "note": "M. Evans; a pleural effusion after the scourging, and the spear through the right atrium"},
+   {"kind": "scholarship", "title": "A Treatise on the Physical Cause of the Death of Christ", "author": "William Stroud", "year": 1847, "url": "https://archive.org/details/treatiseonphysic00stro", "note": "rupture of the heart; the blood in the pericardium separated into serum and 'crassamentum' (clot)"},
+   {"kind": "scholarship", "title": "'Medical theories on the cause of death in crucifixion'", "author": "Matthew W. Maslen & Piers D. Mitchell", "year": 2006, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1420788/", "note": "Journal of the Royal Society of Medicine 99 (4), pp. 185–188"},
+   {"kind": "primary", "title": "Augustine, Tractates on the Gospel of John 120.2", "author": "Augustine of Hippo", "year": "c. AD 420", "url": "https://www.newadvent.org/fathers/1701120.htm", "note": "the opened side as the source of the sacraments"}
+  ],
+  "traditions": ["Pleural and pericardial fluid: Edwards, Gabel & Hosmer (1986)", "Pleural fluid: Frederick Zugibe (2005)", "Ruptured heart, blood separated into serum and clot: William Stroud (1847)", "Baptism and the Eucharist: Augustine and the Fathers after him"],
+  "confidence": "interpretation",
+  "related": ["how-crucifixion-killed", "crucified-heel-yehohanan"]
+ },
+ {
+  "id": "how-crucifixion-killed",
+  "title": "What killed a crucified man",
+  "kind": "medicine",
+  "verses": ["Mark.15.15", "Mark.15.21", "Mark.15.25", "Mark.15.37", "Mark.15.44", "Matt.27.50", "Luke.23.46", "John.19.1", "John.19.30", "John.19.31-33"],
+  "summary": "Jesus was flogged first (Mark 15:15), another man carried His cross (15:21), and He died about six hours after He was nailed up (15:25, 34–37), soon enough to surprise Pilate (15:44), while the men beside Him were still alive at evening (John 19:32). Physicians agree crucifixion killed slowly, and do not agree how.",
+  "body": [
+   "The most widely repeated explanation is suffocation. Hanging by the arms holds the chest as if breathing in, so to breathe out the victim has to push up on his nailed feet; when he is too exhausted to push up he can no longer breathe. Pierre Barbet, a French surgeon, argued this in A Doctor at Calvary, and Edwards, Gabel and Hosmer (JAMA, 1986) wrote that the 'two most prominent causes probably were hypovolemic shock and exhaustion asphyxia'. On this reading breaking the legs (John 19:31–32) took away the push and brought 'an asphyxic death within minutes', which is why the soldiers did it to hasten death before the Sabbath.",
+   "Frederick Zugibe, a forensic pathologist, tested it: he suspended volunteers, safely harnessed, from a replica cross. In the summary of a later review, 'none of the volunteers suffered significant difficulty breathing while on the replica cross.' He concluded that crucified men died of shock (the loss of blood and fluid from the flogging, the wounds and sweating, and the shock of pain), and gave the cause of Jesus' death as 'cardiac and respiratory arrest, due to hypovolemic and traumatic shock, due to crucifixion'. Maslen and Mitchell note that his conclusion rests on what the volunteers did not suffer, over hanging times far shorter than a crucifixion, and none of them had been scourged.",
+   "Others have proposed a ruptured heart (William Stroud, 1847), pulmonary embolism (a clot to the lungs, from the hours without moving), and shock made worse by the failure of clotting that follows severe injury (John Bergeron, 2012). Maslen and Mitchell (2006) count at least ten theories and conclude that 'there is insufficient evidence to safely state exactly how people did die from crucifixion in Roman times.'",
+   "What the flogging could do is attested outside the gospels, which give no detail of it. Josephus describes another Jesus, son of Ananias, who in the 60s AD was 'whipped till his bones were laid bare' on a Roman governor's order, and the account of Polycarp's martyrdom (c. AD 155) describes Christians 'so torn with scourges, that the frame of their bodies, even to the very inward veins and arteries, was laid open.' How badly Jesus was flogged is not told, so its part in His death is inferred.",
+   "The one crucified skeleton yet found, Yehohanan's, does not settle the leg-breaking either: the first report described his shins as broken on the cross, but a re-examination in 1985 found no certain fracture."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Mark.15.15-44"},
+   {"kind": "scripture", "ref": "John.19.31-33"},
+   {"kind": "primary", "title": "Josephus, Jewish War 6.5.3 (6.300–309)", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0148:book=6:whiston%20chapter=5:whiston%20section=3", "note": "Jesus son of Ananias 'whipped till his bones were laid bare' (Whiston's translation)"},
+   {"kind": "primary", "title": "The Martyrdom of Polycarp 2.2", "year": "c. AD 155", "url": "https://www.newadvent.org/fathers/0102.htm", "note": "'torn with scourges, that the frame of their bodies, even to the very inward veins and arteries, was laid open'"},
+   {"kind": "scholarship", "title": "'On the Physical Death of Jesus Christ'", "author": "William D. Edwards, Wesley J. Gabel & Floyd E. Hosmer", "year": 1986, "url": "https://doi.org/10.1001/jama.1986.03370110077025", "note": "JAMA 255 (11), pp. 1455–1463"},
+   {"kind": "scholarship", "title": "The Crucifixion of Jesus: A Forensic Inquiry", "author": "Frederick T. Zugibe", "year": 2005, "note": "M. Evans; the suspension experiments, and the cause of death as hypovolemic and traumatic shock"},
+   {"kind": "scholarship", "title": "'State Sponsored Torture in Rome: A Forensic Inquiry and Medicolegal Analysis of the Crucifixion of Jesus Christ'", "author": "Vernon J. Geberth", "year": 2008, "url": "https://www.aafs.org/sites/default/files/media/documents/AAFS-2008-D11.pdf", "note": "American Academy of Forensic Sciences proceedings, D11; quotes Zugibe's cause of death"},
+   {"kind": "scholarship", "title": "'The crucifixion of Jesus: review of hypothesized mechanisms of death and implications of shock and trauma-induced coagulopathy'", "author": "John W. Bergeron", "year": 2012, "url": "https://pubmed.ncbi.nlm.nih.gov/22390994/", "note": "Journal of Forensic and Legal Medicine 19 (3), pp. 113–116"},
+   {"kind": "scholarship", "title": "'Medical theories on the cause of death in crucifixion'", "author": "Matthew W. Maslen & Piers D. Mitchell", "year": 2006, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1420788/", "note": "Journal of the Royal Society of Medicine 99 (4), pp. 185–188"}
+  ],
+  "traditions": ["Asphyxia: Pierre Barbet; Edwards, Gabel & Hosmer (1986), with hypovolemic shock", "Hypovolemic and traumatic shock: Frederick Zugibe (2005)", "Shock with trauma-induced coagulopathy: John Bergeron (2012)", "Ruptured heart: William Stroud (1847)"],
+  "confidence": "interpretation",
+  "related": ["blood-and-water", "sweat-like-drops-of-blood", "crucified-heel-yehohanan"]
+ },
+ {
+  "id": "sweat-like-drops-of-blood",
+  "title": "Sweat like drops of blood",
+  "kind": "medicine",
+  "verses": ["Luke.22.43-44"],
+  "summary": "In Gethsemane, Luke says, Jesus' 'sweat became like drops of blood falling to the ground'. Physicians who take it as real blood point to hematidrosis, a rare bleeding into the sweat glands under extreme fear. The Greek can also mean the drops only looked like blood, and the two verses are missing from some of the earliest manuscripts.",
+  "body": [
+   "Luke writes hōsei thromboi haimatos, 'like clots (or thick drops) of blood'. Thayer defines thrombos as 'a large thick drop, especially of clotted blood'. Hōsei, 'like', can mark a comparison, so the words may say only that the drops of sweat resembled drops of blood, in size or in how fast they fell. Alfred Plummer, writing on the Greek (1896), grants that much and still judges it 'not likely that no more than this is intended': he takes 'bloody sweat' as 'probably a correct interpretation'.",
+   "Hematidrosis is real but very rare. J. E. and A. B. Holoubek (1996) gathered seventy-six reported cases and found 'acute fear and intense mental contemplation' the most frequent causes. Edwards, Gabel and Hosmer (JAMA, 1986) hold that Luke's description 'supports the diagnosis of hematidrosis', and Zugibe (2005) takes the same view.",
+   "Verses 43–44, the angel and the sweat, are absent from some of the earliest manuscripts of Luke, among them Papyrus 75 and Codex Vaticanus, and present in others, among them Codex Sinaiticus as first written and Codex Bezae. Westcott and Hort left them out of their text; the Nestle–Aland text prints them in double brackets, and the BSB keeps them. Justin Martyr, writing around AD 155, already read in the apostles' memoirs that His sweat fell 'like drops' (his Greek leaves out 'of blood')."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Luke.22.44"},
+   {"kind": "lexicon", "title": "Thayer, Greek-English Lexicon of the New Testament (1889), θρόμβος", "url": "https://biblehub.com/greek/2361.htm", "note": "'a large thick drop, especially of clotted blood'; notes that Westcott and Hort reject the passage"},
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Gospel According to S. Luke (ICC)", "author": "Alfred Plummer", "year": 1896, "url": "https://archive.org/details/criticalexegetic00plumrich", "note": "on 22:44: the words need mean no more than resemblance, but 'bloody sweat' is 'probably a correct interpretation'"},
+   {"kind": "scholarship", "title": "'Blood, sweat and fear. \"A classification of hematidrosis\"'", "author": "J. E. Holoubek & A. B. Holoubek", "year": 1996, "url": "https://pubmed.ncbi.nlm.nih.gov/8982961/", "note": "Journal of Medicine 27 (3–4), pp. 115–133; seventy-six cases"},
+   {"kind": "scholarship", "title": "'On the Physical Death of Jesus Christ'", "author": "William D. Edwards, Wesley J. Gabel & Floyd E. Hosmer", "year": 1986, "url": "https://doi.org/10.1001/jama.1986.03370110077025", "note": "JAMA 255 (11), pp. 1455–1463"},
+   {"kind": "primary", "title": "Justin Martyr, Dialogue with Trypho 103", "author": "Justin Martyr", "year": "c. AD 155", "url": "https://www.newadvent.org/fathers/01287.htm", "note": "the sweat that fell 'like drops' while He prayed 'If it be possible, let this cup pass'"},
+   {"kind": "scholarship", "title": "A Textual Commentary on the Greek New Testament", "author": "Bruce M. Metzger", "year": 1994, "note": "2nd ed., on Luke 22:43–44: the manuscripts that omit and include the verses"}
+  ],
+  "traditions": ["Hematidrosis: Edwards, Gabel & Hosmer (1986); Frederick Zugibe (2005)", "Actual blood, though the Greek allows a comparison: Alfred Plummer (1896)"],
+  "confidence": "interpretation",
+  "related": ["how-crucifixion-killed"]
+ }
+]

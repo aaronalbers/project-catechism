@@ -51,7 +51,8 @@
    {"kind": "scholarship", "title": "'The Crucified Man from Giv'at ha-Mivtar: A Reappraisal'", "author": "Joseph Zias & Eliezer Sekeles", "year": 1985, "note": "Israel Exploration Journal 35, pp. 22–27"},
    {"kind": "scripture", "ref": "John.20.25"}
   ],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "related": ["how-crucifixion-killed", "blood-and-water"]
  },
  {
   "id": "pool-of-siloam",
