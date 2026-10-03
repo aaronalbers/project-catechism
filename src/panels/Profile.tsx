@@ -1,7 +1,7 @@
-import { goTo, openPerson, setState, useStore } from '@/app/store';
+import { follow, openPerson, setState, useStore } from '@/app/store';
 import { genealogyOf, usePerson, useProfile } from '@/lib/profiles';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
-import { THE_66, book as bookOf, contains, formatRef, parseRef } from '@/lib/refs';
+import { THE_66, book as bookOf, contains, formatRef } from '@/lib/refs';
 import { formatYear } from '@/lib/format';
 import { eastonParts, perBook } from '@/lib/people';
 import { PeopleSources } from './PeopleSources';
@@ -54,7 +54,7 @@ function Appearances({ refs }: { refs: string[] }) {
           const i = THE_66.findIndex((x) => x.id === b.book), h = Math.max(2, (Math.sqrt(b.count) / Math.sqrt(max)) * H);
           return (
             <rect key={b.book} x={i * bw + 0.5} y={H - h} width={Math.max(1.5, bw - 1)} height={h} rx={1} fill="var(--accent)" style={{ cursor: 'pointer' }}
-              onClick={() => { const r = parseRef(b.first); if (r) goTo(r.start); }}>
+              onClick={() => follow(b.first)}>
               <title>{bookOf(b.book)?.name}: {b.count} verse{b.count === 1 ? '' : 's'}, first {formatRef(b.first)}</title>
             </rect>
           );
@@ -68,7 +68,7 @@ function Easton({ text, open }: { text: string[]; open: boolean }) {
   return (
     <details className="easton" open={open}>
       <summary>Easton's Bible Dictionary (1897)</summary>
-      {text.map((t, i) => <p key={i}>{eastonParts(t).map((part, j) => typeof part === 'string' ? part : <button key={j} className="inline-ref" onClick={() => { const r = parseRef(part.ref); if (r) goTo(r.start); }}>{part.label}</button>)}</p>)}
+      {text.map((t, i) => <p key={i}>{eastonParts(t).map((part, j) => typeof part === 'string' ? part : <button key={j} className="inline-ref" onClick={() => follow(part.ref)}>{part.label}</button>)}</p>)}
       <small>Written by M. G. Easton in 1897 (public domain). Its judgements and datings are its own and are not checked here.</small>
     </details>
   );
@@ -143,7 +143,7 @@ export function Profile({ id }: { id: string }) {
         {prof?.when && prof.whenBasis && <p className="when-basis"><span className="est">≈</span> {prof.whenBasis}</p>}
       </header>
       <Family p={p} />
-      {g && <p className="tree-note">In the family tree of the genealogies{years ? <> ({years})</> : null}. <button className="chip link" onClick={() => { const r = parseRef(g.refs[0]); if (r) goTo(r.start); setState({ person: null }); }}>Show in the tree</button></p>}
+      {g && <p className="tree-note">In the family tree of the genealogies{years ? <> ({years})</> : null}. <button className="chip link" onClick={() => follow(g.refs[0], { patch: { person: null } })}>Show in the tree</button></p>}
       <Appearances refs={p.refs} />
       {prof && <Curated prof={prof} />}
       {prof && <Later prof={prof} />}

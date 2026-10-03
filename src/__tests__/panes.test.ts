@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { choose, fitting, panelWidth, place, readLayout, visible, type Layout, type Pane } from '@/lib/panes';
+import { choose, fitting, linkAction, panelWidth, place, readLayout, visible, type Layout, type Pane } from '@/lib/panes';
 
 const panes = (...tabs: Pane['tab'][]): Pane[] => tabs.map((tab) => ({ tab, size: 1 }));
 const tabs = (ps: Pane[]) => ps.map((p) => p.tab);
@@ -58,5 +58,20 @@ describe('visible', () => {
   it('shows the panes used most recently, the one in use always, in layout order', () => {
     expect(visible(4, [4, 1, 3, 2], 1, 2)).toEqual([0, 1]);
     expect(visible(4, [1, 2, 3, 4], 0, 2)).toEqual([0, 3]);
+  });
+});
+
+describe('linkAction', () => {
+  it('previews a link while the audio reads, on any screen, leaving the verse to the audio', () => {
+    expect(linkAction(true, false, true)).toBe('preview');
+    expect(linkAction(true, true, true)).toBe('preview');
+    expect(linkAction(true, true, false)).toBe('preview');
+  });
+  it('goes there otherwise', () => {
+    expect(linkAction(false, false, true)).toBe('go');
+    expect(linkAction(false, true, false)).toBe('go');
+  });
+  it('nudges the Reader tab on a phone showing a panel, where the text moves out of sight', () => {
+    expect(linkAction(false, true, true)).toBe('go-nudge');
   });
 });

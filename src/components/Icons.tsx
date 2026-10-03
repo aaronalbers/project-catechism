@@ -8,6 +8,7 @@ export const Icon = {
   Panel: () => <svg viewBox="0 0 24 24" {...s}><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M15 4v16" /></svg>,
   Plus: () => <svg viewBox="0 0 24 24" {...s}><path d="M12 5v14M5 12h14" /></svg>,
   Close: () => <svg viewBox="0 0 24 24" {...s}><path d="M6 6l12 12M18 6L6 18" /></svg>,
+  Tune: () => <svg viewBox="0 0 24 24" {...s}><path d="M4 7h10M18 7h2M4 17h4M12 17h8" /><circle cx="16" cy="7" r="2" /><circle cx="10" cy="17" r="2" /></svg>,
   Rows: () => <svg viewBox="0 0 24 24" {...s}><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 12h16" /></svg>,
   Cols: () => <svg viewBox="0 0 24 24" {...s}><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M12 4v16" /></svg>,
   Book: () => <svg viewBox="0 0 24 24" {...s}><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>,

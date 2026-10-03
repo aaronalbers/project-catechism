@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { goTo, useFeatureInView, useStore } from '@/app/store';
+import { follow, useFeatureInView, useStore } from '@/app/store';
 import { SCROLLS } from '@/lib/content';
 import { loadCircle } from '@/lib/data';
 import { HEBREW, hebrewOf, overlapsOf, strip, type Span } from '@/lib/scrolls';
@@ -40,7 +40,7 @@ function Row({ spans, total, current, go }: { spans: Span[]; total: number; curr
 function ScrollStrip({ h, verses, loc }: { h: HebrewBook; verses: Map<string, number[]>; loc: VerseLoc }) {
   const s = useMemo(() => strip(h, verses, loc), [h, verses, loc]);
   if (!s.total) return null;
-  const go = (x: Span) => goTo({ book: x.book, chapter: x.chapter ?? 1, verse: 1 });
+  const go = (x: Span) => follow({ book: x.book, chapter: x.chapter ?? 1, verse: 1 });
   const cursor = s.at === null ? null : pct(s.at + 0.5, s.total);
   // Where the Hebrew has blank lines between books, drawn as dotted breaks on its row.
   const gaps = h.kind === 'scroll' ? s.english.slice(1).map((x) => x.start) : [];
@@ -97,7 +97,7 @@ function OrderDiagram({ verses, current }: { verses: Map<string, number[]>; curr
     let at = x;
     for (const id of h.books) { const bw = (w * size(id)) / all; within.set(id, { x: at, w: bw }); at += bw; }
   }
-  const go = (id: string) => goTo({ book: id, chapter: 1, verse: 1 });
+  const go = (id: string) => follow({ book: id, chapter: 1, verse: 1 });
   const y1 = TOP + ROW, y2 = BOTTOM, mid = (y1 + y2) / 2;
   return (
     <div className="scroll-order">

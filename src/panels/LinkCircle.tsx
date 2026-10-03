@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { goTo, useStore } from '@/app/store';
+import { follow, useStore } from '@/app/store';
 import { PROPHECIES, QUOTES } from '@/lib/content';
 import { loadCircle, loadParallels } from '@/lib/data';
 import { readStored, writeStored } from '@/lib/storage';
@@ -158,11 +158,11 @@ export function LinkCircle() {
   const sameTarget = (a: Hover, b: Hover) => !!a && !!b && ('chord' in a ? 'chord' in b && a.chord === b.chord : 'verse' in b && a.verse === b.verse);
   const navigate = (h: Hover) => {
     if (!h || !canon) return;
-    if ('verse' in h) return goTo(canon.locAt(h.verse));
+    if ('verse' in h) return follow(canon.locAt(h.verse));
     const [from, to] = chordRefs(canon, h.chord);
     const target = touchesChapter(from, loc.book, loc.chapter) ? to : from;
     const r = parseRef(target);
-    if (r) goTo(r.start);
+    if (r) follow(r.start);
   };
   const at = (e: React.PointerEvent) => { const b = e.currentTarget.getBoundingClientRect(); return hit(e.clientX - b.left, e.clientY - b.top); };
 

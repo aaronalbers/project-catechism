@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { goTo, useFeatureInView, useStore } from '@/app/store';
+import { follow, useFeatureInView, useStore } from '@/app/store';
 import { loadParallels, loadVerseText, loadXrefs } from '@/lib/data';
 import { chiasmsFor, fragmentsFor, fulfilmentRefs, propheciesFor, quotesFor, talliesFor, rulersFor } from '@/lib/content';
 import { book, contains, formatRef, parseRef, type VerseLoc } from '@/lib/refs';
@@ -17,7 +17,7 @@ function XrefRow({ to, votes }: { to: string; votes?: number }) {
   useEffect(() => { if (r) loadVerseText(r.start.book, r.start.chapter, r.start.verse).then((t) => setText(t ?? '')); }, [to]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <li>
-      <button className="chip link" onClick={() => r && goTo(r.start)}>{formatRef(to)}</button>
+      <button className="chip link" onClick={() => r && follow(to)}>{formatRef(to)}</button>
       <span className="txt">{text.length > 110 ? text.slice(0, 110) + '…' : text}</span>
       {votes !== undefined && <span className="votes" title="Reader votes on OpenBible.info">{votes}</span>}
     </li>
@@ -118,7 +118,7 @@ export function LinksPanel() {
             {c.levels.map((l, i) => (
               <div className={`level${l.label === c.centre ? ' centre' : ''}`} key={i} style={{ paddingLeft: `${Math.min(6, depth(c, i)) * 8}px` }}>
                 <span className="lbl">{label(l.label)}</span>
-                <div><div className="txt">{l.text}</div><button className="ref chip link" onClick={() => { const r = parseRef(l.ref); if (r) goTo(r.start); }}>{formatRef(l.ref)}</button></div>
+                <div><div className="txt">{l.text}</div><button className="ref chip link" onClick={() => follow(l.ref)}>{formatRef(l.ref)}</button></div>
               </div>
             ))}
             <SourceList sources={c.sources} traditions={c.traditions} />

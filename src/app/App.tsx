@@ -4,9 +4,11 @@ import { Header } from '@/components/Header';
 import { Reader } from '@/components/Reader';
 import { ContextPanel } from '@/components/ContextPanel';
 import { AudioBar } from '@/components/AudioBar';
+import { TabBar } from '@/components/TabBar';
+import { Preview } from '@/components/Preview';
 import { IndexView } from '@/components/IndexView';
 import { Grip } from '@/components/Grip';
-import { DEFAULT_LAYOUT, isNarrow, PANE_MIN_PX, PANEL_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth } from '@/lib/panes';
+import { DEFAULT_LAYOUT, isCompact, isNarrow, PANE_MIN_PX, PANEL_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth } from '@/lib/panes';
 
 function useTheme() {
   const theme = useStore((s) => s.theme);
@@ -29,6 +31,8 @@ export function App() {
   const index = useStore((s) => s.index);
   const layout = useStore((s) => s.layout);
   const viewport = useViewportWidth();
+  // A phone shows one view at a time, the reader or a panel, and puts the tabs in the bar at the bottom.
+  const compact = isCompact(viewport);
   const main = useRef<HTMLDivElement>(null);
   const width = panelWidth(layout, viewport);
   // The grip on the panel's left edge: dragging left widens the panel, never past the reader's minimum,
@@ -40,10 +44,10 @@ export function App() {
   };
   const reset = () => setLayout({ width: layout.split === 'cols' ? Math.max(DEFAULT_LAYOUT.width, layout.panes.length * PANE_MIN_PX) : DEFAULT_LAYOUT.width });
   return (
-    <div className="app">
+    <div className={`app${compact ? ' compact' : ''}`}>
       <Header />
       {index !== null ? <IndexView /> : (
-        <div ref={main} className={`main${panelOpen ? '' : ' panel-closed'}`} style={isNarrow(viewport) ? undefined : { '--panel-w': `${width}px` } as React.CSSProperties}>
+        <div ref={main} className={`main${panelOpen ? '' : ' panel-closed'}${compact ? ' compact' : ''}`} style={isNarrow(viewport) ? undefined : { '--panel-w': `${width}px` } as React.CSSProperties}>
           <div className="reader-col" id="reader-scroll"><Reader /></div>
           <aside className="panel-col" aria-label="Context for the current verse">
             {panelOpen && !isNarrow(viewport) && <Grip axis="x" label="Resize the panel" onDrag={resize} onReset={reset} />}
@@ -51,7 +55,8 @@ export function App() {
           </aside>
         </div>
       )}
-      <AudioBar />
+      {compact ? <TabBar /> : <AudioBar />}
+      <Preview />
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { getState, goTo, openTab, useStore } from '@/app/store';
+import { follow, getState, goTo, leave, openTab, useStore } from '@/app/store';
 import { loadBook, loadInterlinear, loadSpeakersForBook } from '@/lib/data';
+import { play } from '@/lib/reader';
 import { CANON_BY_ID, CHIASMS, NARROWED, TEXT_BY_ID, markersForChapter, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
 import { rowsAt } from '@/lib/tally';
 import { reignsInChapter } from '@/lib/reign';
 import { passionAt } from '@/lib/passion';
-import { book, contains, neighbourBook, parseRef, touchesChapter } from '@/lib/refs';
+import { book, contains, neighbourBook, parseRef, sameLoc, touchesChapter, type VerseLoc } from '@/lib/refs';
 import type { Beyond, BibleBook, Chiasm, Insight, InterlinearVerse, InterlinearWord, SpeakersInBook } from '@/lib/types';
 import { cardId } from '@/lib/catalog';
 import { alignVerse, tokenize } from '@/lib/align';
@@ -21,6 +22,15 @@ import { chartsAt } from '@/lib/prices';
 import { PassionChart } from './Passion';
 import { OverlapNote, SeamNote } from './Scrolls';
 import { overlapsInChapter, seamsInChapter } from '@/lib/scrolls';
+
+/**
+ * A verse tapped in the reader: while the audio reads, it reads on from there (the verse being read goes on
+ * undisturbed); otherwise the reader goes there.
+ */
+const pick = (to: VerseLoc) => {
+  const s = getState();
+  if (!s.playing) goTo(to); else if (!sameLoc(to, s.loc)) void play(to);
+};
 
 interface LadderProps { chiasm: Chiasm; pieces: Piece[]; pair: string | null; onPair: (k: string | null) => void }
 
@@ -51,6 +61,8 @@ function VerseText({ text, verse, current, il, ladder, marks, red }: { text: str
             onClick={(e) => {
               e.stopPropagation();
               // A marked word in another verse moves the reader there first; goTo clears the word, so pick it after.
+              // While the audio reads, it is a tap on the verse: the reading moves there, and the word is left.
+              if (!current && getState().playing) { pick({ ...getState().loc, verse }); return; }
               if (!current) goTo({ ...getState().loc, verse });
               open();
             }}
@@ -80,7 +92,7 @@ function useStoredFlag(key: string, initial: boolean): [boolean, (to?: boolean) 
 function BeyondNote({ book: id, beyond }: { book: string; beyond: Beyond }) {
   const churches = beyond.canons.filter((c) => c !== 'anglican').map((c) => CANON_BY_ID.get(c)!.name);
   const text = TEXT_BY_ID.get(beyond.text)!;
-  const why = () => goTo({ book: id, chapter: 1, verse: 1 }, { openTab: 'insights', feature: cardId({ kind: 'insight', id: 'canon-books-beyond-the-66' }) });
+  const why = () => follow({ book: id, chapter: 1, verse: 1 }, { openTab: 'insights', feature: cardId({ kind: 'insight', id: 'canon-books-beyond-the-66' }) });
   return (
     <div className="attribution beyond-note">
       <p><strong>Beyond the 66.</strong> {churches.length ? <>Scripture in the {listed(churches)} {churches.length === 1 ? 'church' : 'churches'}{beyond.canons.includes('anglican') ? '; Anglicans read it “for example of life,” not for doctrine' : ''}.</> : 'Read, but not as scripture.'}{' '}
@@ -218,8 +230,8 @@ export function Reader() {
             {(ilv?.h ?? v.h) && <div className="heading">{ilv?.h ?? v.h}</div>}
             {opens && <ChiasmCaption c={opens} show={structure} onToggle={toggleStructure} />}
             {tallyOpens && <TallyCaption t={tallyOpens} show={charts} onToggle={toggleCharts} />}
-            <div id={`v-${v.v}`} className={`verse${current ? ' current' : ''}`} onClick={() => goTo({ ...loc, verse: v.v })} role="button" tabIndex={0}
-              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo({ ...loc, verse: v.v }); } }} aria-current={current || undefined}>
+            <div id={`v-${v.v}`} className={`verse${current ? ' current' : ''}`} onClick={() => pick(vloc)} role="button" tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(vloc); } }} aria-current={current || undefined}>
               {m && <div className="markers" aria-hidden="true">{[...m].map((k) => <span key={k} className={`marker ${k}`} title={k} />)}</div>}
               <span className="num">{v.l ?? v.v}</span>
               <div>
@@ -241,8 +253,8 @@ export function Reader() {
       })}
       {seams.after && <SeamNote seam={seams.after} side="after" />}
       <nav className="chapter-nav" aria-label="Chapter navigation">
-        {prev ? <button onClick={() => goTo(prev)}>← {book(prev.book)?.name} {prev.chapter}</button> : <span />}
-        {next ? <button onClick={() => goTo(next)}>{book(next.book)?.name} {next.chapter} →</button> : <span />}
+        {prev ? <button onClick={() => leave(prev)}>← {book(prev.book)?.name} {prev.chapter}</button> : <span />}
+        {next ? <button onClick={() => leave(next)}>{book(next.book)?.name} {next.chapter} →</button> : <span />}
       </nav>
     </article>
   );

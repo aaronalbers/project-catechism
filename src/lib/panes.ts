@@ -20,6 +20,11 @@ export interface Layout {
 
 /** Narrower than this and the panel sits under the reader and shows one pane (the CSS breakpoint). */
 export const NARROW_PX = 900;
+/**
+ * Narrower than this (a phone) and the reader is a tab too: one view fills the screen, and the tabs,
+ * with the play button, sit in a bar at the bottom.
+ */
+export const COMPACT_PX = 640;
 /** The least the reader keeps beside the panel, and the least a pane side by side gets. */
 export const READER_MIN_PX = 440;
 export const PANEL_MIN_PX = 320;
@@ -86,3 +91,14 @@ export function useViewportWidth(): number {
   return useSyncExternalStore(subscribe, () => innerWidth, () => innerWidth);
 }
 export const isNarrow = (viewport = innerWidth) => viewport <= NARROW_PX;
+export const isCompact = (viewport = innerWidth) => viewport <= COMPACT_PX;
+
+/**
+ * What a link in a card or caption does. While the audio reads, the verse belongs to it, so the link
+ * opens a preview instead of moving the reader away. Otherwise it goes there; and on a phone showing a
+ * panel, where the reader is out of sight, it also nudges the Reader tab, so it is clear the text moved.
+ */
+export function linkAction(playing: boolean, compact: boolean, panelShown: boolean): 'preview' | 'go' | 'go-nudge' {
+  if (playing) return 'preview';
+  return compact && panelShown ? 'go-nudge' : 'go';
+}

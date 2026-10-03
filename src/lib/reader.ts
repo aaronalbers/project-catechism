@@ -4,7 +4,7 @@ import { useSyncExternalStore } from 'react';
 import { BrowserEngine, KokoroEngine, canUseKokoroGPU, type Engine, type KokoroDevice } from './tts';
 import { loadBook, loadVerseText } from './data';
 import { neighbourBook, type VerseLoc } from './refs';
-import { getState, setState } from '@/app/store';
+import { getState, setState, whenLeaving } from '@/app/store';
 import { readStored, writeStored } from './storage';
 
 export interface ReaderState {
@@ -62,23 +62,26 @@ export async function play(from?: VerseLoc, notice: string | null = null) {
   const ctl = new AbortController();
   abort = ctl;
   const engine = engines[rs.engine];
+  // The verse is the audio's from the press, not from when the engine has loaded: a link followed while a
+  // model downloads opens a preview rather than moving where the reading will start.
+  let loc = from ?? getState().loc;
   set({ status: 'loading', error: notice });
+  setState({ loc, playing: true, preview: null });
   try {
     await engine.load((p) => set({ progress: p }), rs.device);
   } catch (e) {
     if (rs.engine === 'kokoro') {
       // Fall back rather than leaving the user with silence, and say why.
       set({ engine: 'browser', voice: 'default', progress: null });
-      return play(from, `Kokoro unavailable (${e instanceof Error ? e.message : e}); using browser speech.`);
+      return play(loc, `Kokoro unavailable (${e instanceof Error ? e.message : e}); using browser speech.`);
     }
     set({ status: 'error', error: e instanceof Error ? e.message : String(e) });
+    setState({ playing: false });
     return;
   }
   // Stopped, or replaced by another play, while the engine loaded.
   if (ctl.signal.aborted) return;
   set({ progress: null });
-  let loc = from ?? getState().loc;
-  setState({ loc, playing: true });
   try {
     while (!ctl.signal.aborted) {
       const text = await verseText(loc);
@@ -111,6 +114,8 @@ async function prefetchFrom(engine: Engine, loc: VerseLoc, next: VerseLoc | null
     next = await nextVerse(loc);
   }
 }
+
+whenLeaving(() => stop());
 
 export function stop() {
   abort?.abort();

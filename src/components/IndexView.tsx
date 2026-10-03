@@ -1,11 +1,11 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
-import { goTo, setState, useStore } from '@/app/store';
+import { leave, setState, useStore } from '@/app/store';
 import { CATALOG, cardId, type CatalogEntry, type CatalogSection } from '@/lib/catalog';
 import { formatRef, parseRef } from '@/lib/refs';
 
 function open(ref: string, e: CatalogEntry, s: CatalogSection) {
   const r = parseRef(ref);
-  if (r) goTo(r.start, { openTab: s.tab, reveal: s.reveal, feature: cardId(e) });
+  if (r) leave(r.start, { openTab: s.tab, reveal: s.reveal, feature: cardId(e) });
 }
 
 function Entry({ e, s }: { e: CatalogEntry; s: CatalogSection }) {

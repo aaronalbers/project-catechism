@@ -1,4 +1,4 @@
-import { goTo, useFeatureInView, useStore } from '@/app/store';
+import { follow, useFeatureInView, useStore } from '@/app/store';
 import { INSIGHT_BY_ID, insightsFor, insightsInChapter, videosForStrongs, wordStrongs } from '@/lib/content';
 import type { Insight, Video } from '@/lib/types';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
@@ -41,7 +41,7 @@ export function InsightCard({ i, compact = false, videos = true }: { i: Insight;
           const rel = INSIGHT_BY_ID.get(id);
           if (!rel) return null;
           const first = parseRef(rel.verses[0]);
-          return <button key={id} className="chip link" onClick={() => first && goTo(first.start, { openTab: 'insights', feature: cardId({ kind: 'insight', id }) })}>{rel.title}</button>;
+          return <button key={id} className="chip link" onClick={() => first && follow(first.start, { openTab: 'insights', feature: cardId({ kind: 'insight', id }) })}>{rel.title}</button>;
         })}</div> : null}
       </>}
     </div>
@@ -66,7 +66,7 @@ export function InsightsPanel() {
       {nearby.length > 0 && <>
         <div className="panel-title">Elsewhere in this chapter</div>
         {nearby.map((i) => (
-          <div key={i.id} onClick={() => { const r = parseRef(i.verses[0]); if (r) goTo(r.start); }} style={{ cursor: 'pointer' }}>
+          <div key={i.id} onClick={() => follow(i.verses[0])} style={{ cursor: 'pointer' }}>
             <InsightCard i={i} compact />
           </div>
         ))}

@@ -2,7 +2,7 @@
 // time in the tomb across them, and a pin for each verse of the account being read that says when. The reader
 // draws the strip under each such verse; the Days tab adds the reading toggle, the legend and the counts.
 import type { CSSProperties } from 'react';
-import { getState, goTo, openCard, setState, useStore } from '@/app/store';
+import { getState, follow, openCard, setState, useStore } from '@/app/store';
 import { PASSION } from '@/lib/content';
 import { parseRef, type VerseLoc } from '@/lib/refs';
 import {
@@ -90,7 +90,7 @@ export function DaysStrip({ r, account, loc, current }: { r: PassionReading; acc
           const h = eventHour(e, r), reached = eventReached(account!, e, loc), cur = e === current;
           const cls = `dpin${reached ? '' : ' ahead'}${cur ? ' current' : ''}`;
           const title = `${e.label}: “${e.quote}”, ${whenLabel(e, r)}. ${r.moves?.[e.ref]?.basis ?? e.basis}`;
-          const go = (ev: { stopPropagation: () => void }) => { ev.stopPropagation(); const p = parseRef(e.ref); if (p) goTo(p.start); };
+          const go = (ev: { stopPropagation: () => void }) => { ev.stopPropagation(); follow(e.ref); };
           return e.until !== undefined
             ? <button key={e.ref} className={`${cls} span`} style={at(h, hourOf({ ...eventTime(e, r), hour: e.until }, r))} title={title} onClick={go} />
             : <button key={e.ref} className={cls} style={{ left: `${x(h)}%` }} title={title} onClick={go} />;

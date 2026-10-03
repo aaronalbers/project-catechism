@@ -62,8 +62,10 @@ regenerate with `npm run data`.
 field that matters is `loc: { book, chapter, verse }`. Every panel re-derives its contents
 from `loc`; nothing else coordinates them. `loc` is mirrored to the URL hash
 (`#/Matt/5/3`) and to localStorage, and `hashchange` feeds back in, so a URL is a complete
-description of app state. Navigate with `goTo(loc, { openTab })` rather than setting state
-directly.
+description of app state. Navigate through the store rather than setting state directly, by intent:
+`follow(ref, { openTab })` for a link in a card, chart or caption, `leave(loc)` for a move the reader
+chooses (the chapter picker, the next chapter, Back, the index), which stops the audio first, and
+`goTo` only beneath those.
 
 `src/lib/reader.ts` is the reason for that design: verse-by-verse audio playback advances
 `loc` as it reads, so pressing play makes every panel follow along. It holds its own small
@@ -71,6 +73,9 @@ store for playback settings and calls into `src/lib/tts.ts`, which puts two engi
 one `Engine` interface — the Web Speech API, the default, which needs no download, and Kokoro
 (neural, runs in a Web Worker, fp32/WebGPU ≈330 MB or q8/WASM ≈90 MB, user's choice), which
 is slower to start. If Kokoro fails to load, playback falls back to the browser's voice.
+While the audio reads, `loc` is its: `follow` opens a preview of the passage (`Preview.tsx`) with "Read from
+here" and "Go there and stop" instead of moving, and a verse tapped in the reader moves the reading there
+(`linkAction` in `src/lib/panes.ts` holds the rule).
 
 ### Books beyond the 66
 
@@ -97,7 +102,10 @@ suite enforces it.
 `src/components/ContextPanel.tsx` owns the tab strips and shows per-tab counts derived from
 `loc`. On a wide screen the panel holds as many panes as fit (`layout` in the store; the rules are
 pure functions in `src/lib/panes.ts`), stacked or side by side, resized by grips, each showing one
-tab, so never more panes than tabs; a narrow screen shows only the pane in use. When a window holds
+tab, so never more panes than tabs; a narrow screen shows only the pane in use, under the reader. On a phone
+(`COMPACT_PX`) the reader is a tab too: one view fills the screen, `panelOpen: false` meaning the Reader tab,
+and `TabBar.tsx` replaces the audio bar with the play button, an audio settings sheet and the tabs (the
+pane has no strip of its own). The reader stays laid out under a panel, so it keeps its place. When a window holds
 fewer panes than the layout has, the ones used least recently are hidden, not closed. A tab is in at
 most one pane. Ask for a tab with
 `openTab(tab)` or `goTo(loc, { openTab })`, never by setting state: it brings forward the pane

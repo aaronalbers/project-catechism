@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import L from 'leaflet';
-import { goTo, useStore } from '@/app/store';
+import { follow, useStore } from '@/app/store';
 import { SourceList } from '@/components/SourceList';
 import { IndexLink } from '@/components/IndexView';
 import { journeysInChapter } from '@/lib/content';
@@ -177,7 +177,7 @@ export function PlacesPanel() {
       c.bindTooltip(escape(stopName(s)), named || from
         ? { permanent: true, direction: left ? 'left' : 'right', offset: [left ? -8 : 8, 0], className: i === cur ? 'map-label' : 'map-label muted' }
         : { direction: 'right', offset: [6, 0], className: 'map-label muted' });
-      c.on('click', () => goTo(s.loc));
+      c.on('click', () => follow(s.loc));
     });
 
     if (cur < 0) return;
@@ -245,7 +245,7 @@ export function PlacesPanel() {
             {stops.map((s, i) => [
               s.segment && s.segment !== stops[i - 1]?.segment && <li key={`seg${i}`} className="stage-segment">{s.segment}</li>,
               <li key={i} aria-current={i === cur ? 'step' : undefined} className={i < cur ? 'done' : undefined}>
-                <button onClick={() => goTo(s.loc)}>
+                <button onClick={() => follow(s.loc)}>
                   <span className="n">{border ? i + 1 : i === 0 ? '·' : i}</span>
                   <span className="nm">{s.station.name}{s.estimate && <span className="approx" title={s.estimate}> ≈</span>}</span>
                   <span className="v">{s.loc.chapter}:{s.loc.verse}</span>

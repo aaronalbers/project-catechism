@@ -1,7 +1,7 @@
 import { lazy, memo, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { addPane, closePane, focusPane, getState, pickTab, setLayout, useStore, type PanelTab } from '@/app/store';
 import { insightsFor, modelsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
-import { fitting, isNarrow, PANE_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth, visible, type Pane } from '@/lib/panes';
+import { fitting, isCompact, isNarrow, PANE_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth, visible, type Pane } from '@/lib/panes';
 import { InsightsPanel } from '@/panels/InsightsPanel';
 import { WordsPanel } from '@/panels/WordsPanel';
 import { LinksPanel } from '@/panels/LinksPanel';
@@ -58,23 +58,11 @@ const PanelBody = memo(function PanelBody({ tab }: { tab: PanelTab }) {
   );
 });
 
-export function ContextPanel() {
-  const layout = useStore((s) => s.layout);
-  const focus = useStore((s) => s.focus);
-  const used = useStore((s) => s.used);
+/** The tabs the current verse offers, and how many things each has for it: for the panes' strips, and a phone's tab bar. */
+export function useTabs() {
+  const panes = useStore((s) => s.layout.panes);
   const loc = useStore((s) => s.loc);
-  const open = useStore((s) => s.panelOpen);
-  const viewport = useViewportWidth();
   const named = usePeopleInBook(loc.book);
-  const box = useRef<HTMLDivElement>(null);
-  // The panel's height, for how many stacked panes fit.
-  const [height, setHeight] = useState(() => innerHeight - 120);
-  useEffect(() => {
-    if (!box.current) return;
-    const ro = new ResizeObserver(([e]) => setHeight(e.contentRect.height));
-    ro.observe(box.current);
-    return () => ro.disconnect();
-  }, []);
   const counts = useMemo((): Partial<Record<PanelTab, number>> => ({
     insights: insightsFor(loc).length,
     models: modelsFor(loc).length,
@@ -86,15 +74,37 @@ export function ContextPanel() {
     worth: pricesAt(loc).length,
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc, named]);
-  const { panes } = layout;
-  const narrow = isNarrow(viewport);
-  const split = layout.split;
   const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date
   // the three days; the Scrolls tab only for the Old Testament, whose books the Hebrew Bible divides otherwise; the Worth tab
   // only for chapters that name a sum of money.
   const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || showing('reigns')) && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || showing('days'))
     && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth')));
+  return { tabs, counts };
+}
+
+export function ContextPanel() {
+  const layout = useStore((s) => s.layout);
+  const focus = useStore((s) => s.focus);
+  const used = useStore((s) => s.used);
+  const open = useStore((s) => s.panelOpen);
+  const viewport = useViewportWidth();
+  const box = useRef<HTMLDivElement>(null);
+  // The panel's height, for how many stacked panes fit.
+  const [height, setHeight] = useState(() => innerHeight - 120);
+  useEffect(() => {
+    if (!box.current) return;
+    const ro = new ResizeObserver(([e]) => setHeight(e.contentRect.height));
+    ro.observe(box.current);
+    return () => ro.disconnect();
+  }, []);
+  const { tabs, counts } = useTabs();
+  const { panes } = layout;
+  const narrow = isNarrow(viewport);
+  // On a phone the tabs sit in the bar at the bottom, beside the Reader tab, so the pane has no strip of its own.
+  const bare = isCompact(viewport);
+  const split = layout.split;
+  const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // As many panes as fit, the ones used most recently; a narrow screen shows only the pane in use.
   const shown = visible(panes.length, used, Math.min(focus, panes.length - 1), narrow ? 1 : fitting(split, panelWidth(layout, viewport), height));
   const hidden = panes.length - shown.length;
@@ -129,7 +139,7 @@ export function ContextPanel() {
   return (
     <div ref={box} className={`panes ${split}`}>
       {shown.map((i, k) => (
-        <PaneBox key={panes[i].tab} i={i} pane={panes[i]} lone={shown.length === 1} open={open} narrow={narrow}
+        <PaneBox key={panes[i].tab} i={i} pane={panes[i]} lone={shown.length === 1} open={open} narrow={narrow} bare={bare}
           grip={k > 0 && <Grip axis={split === 'cols' ? 'x' : 'y'} label="Resize panes" onDrag={resize(shown[k - 1], i)} onReset={even} />}
           strip={tabs.map((t) => ({ ...t, n: counts[t.id], elsewhere: !narrow && shown.some((j) => j !== i && panes[j].tab === t.id) }))}
           tools={!narrow && <>
@@ -149,7 +159,7 @@ export function ContextPanel() {
 
 interface StripTab { id: PanelTab; label: string; n?: number; elsewhere: boolean }
 
-function PaneBox({ i, pane, lone, open, narrow, grip, strip, tools }: { i: number; pane: Pane; lone: boolean; open: boolean; narrow: boolean; grip: React.ReactNode; strip: StripTab[]; tools: React.ReactNode }) {
+function PaneBox({ i, pane, lone, open, narrow, bare, grip, strip, tools }: { i: number; pane: Pane; lone: boolean; open: boolean; narrow: boolean; bare: boolean; grip: React.ReactNode; strip: StripTab[]; tools: React.ReactNode }) {
   const lit = useStore((s) => s.lit);
   const el = useRef<HTMLElement>(null);
   const [drop, setDrop] = useState(false);
@@ -180,7 +190,7 @@ function PaneBox({ i, pane, lone, open, narrow, grip, strip, tools }: { i: numbe
         onDragOver={(e) => { if (e.dataTransfer.types.includes(DRAG)) { e.preventDefault(); setDrop(true); } }}
         onDragLeave={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setDrop(false); }}
         onDrop={(e) => { const t = e.dataTransfer.getData(DRAG) as PanelTab; setDrop(false); if (t) { e.preventDefault(); pickTab(i, t); } }}>
-        <div className="pane-head">
+        {!bare && <div className="pane-head">
           <div className="tabs" role="tablist">
             {strip.map((t) => (
               <button key={t.id} role="tab" className={`tab${t.elsewhere ? ' elsewhere' : ''}`} aria-selected={pane.tab === t.id && open}
@@ -192,7 +202,7 @@ function PaneBox({ i, pane, lone, open, narrow, grip, strip, tools }: { i: numbe
             ))}
           </div>
           {tools && <div className="pane-tools">{tools}</div>}
-        </div>
+        </div>}
         {open && <PanelBody tab={pane.tab} />}
       </section>
     </>

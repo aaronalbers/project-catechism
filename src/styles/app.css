@@ -440,6 +440,44 @@ body.resizing-y { cursor: row-resize; }
 .progress { height: 3px; background: var(--surface-2); border-radius: 2px; overflow: hidden; margin-top: 4px; }
 .progress span { display: block; height: 100%; background: var(--accent); transition: width 0.2s; }
 
+/* ---------- Phone: one view at a time, the tabs in a bar at the bottom ---------- */
+.app.compact { grid-template-rows: var(--header-h) minmax(0, 1fr) auto; }
+.main.compact, .main.compact.panel-closed { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+/* Both views stay laid out in one cell, so the reader keeps its place (and follows the audio) while a panel covers it. */
+.main.compact > .reader-col, .main.compact > .panel-col { grid-area: 1 / 1; height: auto; min-height: 0; border: 0; }
+.main.compact:not(.panel-closed) > .reader-col, .main.compact.panel-closed > .panel-col { visibility: hidden; }
+.tabbar { position: relative; display: flex; align-items: center; gap: 4px; min-width: 0; padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); border-top: 1px solid var(--border); background: var(--surface); }
+.tabbar .playbtn-main { width: 40px; height: 40px; }
+.tabbar > .iconbtn { flex: none; }
+.tabbar .tabs { flex: 1; min-width: 0; border-bottom: 0; overflow: visible; align-items: center; }
+.tabbar .strip { position: relative; display: flex; gap: 2px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; border-left: 1px solid var(--border); padding-left: 4px; margin-left: 2px; }
+.tabbar .strip::-webkit-scrollbar { display: none; }
+.tabbar .tab { padding: 9px 10px; border-bottom: 0; border-radius: 8px; }
+.tabbar .tab[aria-selected='true'] { background: var(--surface-2); }
+.tabbar .reader-tab.playing::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.tabbar-note { position: absolute; left: 0; right: 0; bottom: 100%; padding: 4px 12px; font-size: 12px; color: var(--muted); background: var(--surface); border-top: 1px solid var(--border); }
+
+/* A passage previewed while the audio reads, and the phone's audio settings */
+dialog.peek { border: 1px solid var(--border); border-radius: 14px; background: var(--surface); color: var(--text); padding: 0; width: min(520px, 94vw); max-height: 80vh; box-shadow: var(--shadow); }
+dialog.peek[open] { display: flex; flex-direction: column; }
+dialog.peek::backdrop { background: rgb(0 0 0 / 0.4); }
+.peek-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.peek-head h2 { font-size: 16px; }
+.peek-body { padding: 12px 16px 0; overflow-y: auto; font-family: var(--serif); font-size: 16px; }
+.peek-body p { margin: 0 0 8px; }
+.peek-body .num { font-family: var(--sans); font-size: 11px; color: var(--muted); vertical-align: super; }
+.peek-body .waiting { font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.peek-note { font-size: 12px; color: var(--muted); padding: 0 16px; margin: 8px 0 0; }
+.peek-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 16px 16px; }
+.peek-actions .chip { font-size: 14px; padding: 6px 14px; color: var(--text); }
+.peek-actions .chip:hover { border-color: var(--accent); }
+.peek-actions .chip svg { width: 14px; height: 14px; }
+.audio-sheet { padding-bottom: 16px; }
+.audio-sheet .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 14px 16px 0; }
+@media (max-width: 640px) {
+  dialog.peek { width: 100vw; max-width: 100vw; margin: auto 0 0; border-radius: 14px 14px 0 0; border-bottom: 0; padding-bottom: env(safe-area-inset-bottom); }
+}
+
 /* Whole-Bible link circle (Links tab). Chart colours validated as a categorical set against each surface. */
 :root { --link-prophecy: #2f7d4f; --link-quote: #2b6cb0; --link-xref: #b7791f; --link-parallel: #8a4fa3; --link-beyond: #9b5d9e; }
 :root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --link-prophecy: #48a26f; --link-quote: #5a8ecb; --link-xref: #b98628; --link-parallel: #b57fcc; --link-beyond: #c08ac3; }

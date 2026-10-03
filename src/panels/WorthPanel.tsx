@@ -1,5 +1,5 @@
 import { useState, type CSSProperties } from 'react';
-import { goTo, openTab, useFeatureInView, useStore } from '@/app/store';
+import { follow, openTab, useFeatureInView, useStore } from '@/app/store';
 import { INSIGHT_BY_ID, WORTH } from '@/lib/content';
 import { cardId } from '@/lib/catalog';
 import { BY_WORTH, eraOf, goodOf, KIND_LABEL, priceDays, priceParts, pricesAt, pricesInChapter, priceRefs, priceSources, scaleAt, shortDays, unitIn, daysLabel, contextLines, gridOf, type PricePart } from '@/lib/prices';
@@ -12,7 +12,7 @@ import { PriceGrid, PriceScale, gridKey } from '@/components/Price';
 const fmt = (n: number) => n.toLocaleString('en-US', { maximumFractionDigits: 4 });
 /** A unit's worth as the text and notes give it: 1/128 rather than 0.0078. */
 const share = (n: number) => (n < 1 && Number.isInteger(1 / n) ? `1/${1 / n}` : fmt(n));
-const go = (p: Price) => goTo(parseRef(p.ref)!.start, { feature: cardId({ kind: 'price', id: p.id }) });
+const go = (p: Price) => follow(p.ref, { feature: cardId({ kind: 'price', id: p.id }) });
 
 /** How one piece of a price is reckoned: "130 shekels × 30 days", "a weight of gold, ×13 for silver". */
 function PartRow({ p, part }: { p: Price; part: PricePart }) {

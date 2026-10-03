@@ -3,7 +3,7 @@
 // prophets of the time, in one of the reconstructions or with the stated lengths end to end. The reader draws the chart
 // alone under each accession; the Reign tab adds the date toggle, the legend and the facts.
 import type { CSSProperties, ReactNode } from 'react';
-import { getState, goTo, openCard, setState, useStore } from '@/app/store';
+import { getState, follow, openCard, setState, useStore } from '@/app/store';
 import { cardId } from '@/lib/catalog';
 import { MONARCHY } from '@/lib/content';
 import { formatRef, parseRef, type VerseLoc } from '@/lib/refs';
@@ -19,7 +19,7 @@ import { RefChip } from './SourceList';
 // prophets stack upward above its lane and Judah's downward below its own, so each sits by the kingdom he spoke to.
 const LANE = 18, HOUSES = 21, JUDAH = 33, PROPHET_ROW = 14, PROPHET_GAP = 6;
 
-const go = (ref: string | undefined) => { const r = ref && parseRef(ref); if (r) goTo(r.start); };
+const go = (ref: string | undefined) => { if (ref) follow(ref); };
 const stop = (f: () => void) => (e: { stopPropagation: () => void }) => { e.stopPropagation(); f(); };
 const years = (a: number, b: number) => `≈${bc(a)}–${bc(b)} BC`;
 /** What follows a king's years to say which view gave them: nothing for Thiele's, the default. */

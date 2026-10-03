@@ -1,4 +1,4 @@
-import { goTo } from '@/app/store';
+import { follow } from '@/app/store';
 import { formatRef, parseRef } from '@/lib/refs';
 import type { Confidence, Media, Source } from '@/lib/types';
 import { Icon } from './Icons';
@@ -7,7 +7,7 @@ import { Icon } from './Icons';
 export function RefChip({ r, here }: { r: string; here?: boolean }) {
   const parsed = parseRef(r);
   return (
-    <button className={`chip link${here ? ' here' : ''}`} onClick={(e) => { e.stopPropagation(); if (parsed) goTo(parsed.start); }} title={`Go to ${formatRef(r)}`}>
+    <button className={`chip link${here ? ' here' : ''}`} onClick={(e) => { e.stopPropagation(); if (parsed) follow(r); }} title={`Go to ${formatRef(r)}`}>
       {formatRef(r)}
     </button>
   );

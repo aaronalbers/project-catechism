@@ -1,8 +1,7 @@
-import { goTo, useFeatureInView, useStore } from '@/app/store';
+import { follow, useFeatureInView, useStore } from '@/app/store';
 import { MONARCHY } from '@/lib/content';
 import { cardId } from '@/lib/catalog';
 import { KINGDOM_NAME, READINGS, VERDICT_LABEL, chartRef, reignAt, span, verdictClass, verdictIn } from '@/lib/reign';
-import { parseRef } from '@/lib/refs';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
 import { DateToggle, Facts, Legend, Plot, modeSuffix } from '@/components/Reign';
 
@@ -31,7 +30,7 @@ export function ReignsPanel() {
           {beside && <>
             <span className="chip">beside</span>
             <button className="chip link" title={`${beside.name}: ${VERDICT_LABEL[verdictClass(verdictIn(beside, 'kings'))].toLowerCase()}`}
-              onClick={() => { const r = parseRef(chartRef(beside, account) ?? beside.reign.ref); if (r) goTo(r.start); }}>
+              onClick={() => follow(chartRef(beside, account) ?? beside.reign.ref)}>
               {beside.name} of {KINGDOM_NAME[beside.reign.kingdom]}
             </button>
           </>}

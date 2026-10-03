@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Network, type Edge, type Node } from 'vis-network';
 import { DataSet } from 'vis-data';
-import { goTo, openPerson, setState, useStore } from '@/app/store';
+import { follow, openPerson, setState, useStore } from '@/app/store';
 import { PEOPLE, PEOPLE_BY_ID, PROFILE_BY_PERSON, PROFILE_INDEX, peopleFor, peopleInChapter, speakerFor, writersFor } from '@/lib/content';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
-import { book as bookOf, formatRef, parseRef } from '@/lib/refs';
+import { book as bookOf, formatRef } from '@/lib/refs';
 import type { Confidence, Family, Person, Source, VerseSpeaker } from '@/lib/types';
 import { loadFamilies } from '@/lib/data';
 import { formatYear } from '@/lib/format';
@@ -58,7 +58,7 @@ function Lifespans({ people }: { people: Person[] }) {
           <g key={i}><line x1={x(y)} x2={x(y)} y1={16} y2={H - 12} stroke="var(--border)" /><text x={x(y)} y={11} textAnchor="middle" fill="var(--muted)">{mode === 'AM' ? Math.round(y) : formatYear(Math.round(y))}</text></g>
         ))}
         {rows.map((r, i) => (
-          <g key={r.p.id} transform={`translate(0 ${22 + i * 18})`} style={{ cursor: 'pointer' }} onClick={() => { const ref = parseRef(r.p.refs[0]); if (ref) goTo(ref.start); }}>
+          <g key={r.p.id} transform={`translate(0 ${22 + i * 18})`} style={{ cursor: 'pointer' }} onClick={() => follow(r.p.refs[0])}>
             <text x={L - 6} y={10} textAnchor="end" fill="var(--text)">{r.p.name}</text>
             <rect x={x(r.a)} y={2} width={Math.max(2, x(r.b) - x(r.a))} height={11} rx={3} fill={r.p.sex === 'female' ? 'var(--interpretation)' : 'var(--accent)'} opacity={r.p.estimated ? 0.45 : 0.9} strokeDasharray={r.p.estimated ? '3 2' : undefined} stroke={r.p.estimated ? 'var(--estimate)' : 'none'} />
           </g>

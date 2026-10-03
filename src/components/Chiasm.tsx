@@ -1,7 +1,7 @@
 // Chiastic structure drawn on the text: a ladder inside the verse for phrase-level chiasms, and a
 // margin rail with level headers and a structure strip for passage-level ones.
 import type { CSSProperties, ReactNode } from 'react';
-import { getState, goTo, openCard } from '@/app/store';
+import { getState, follow, openCard } from '@/app/store';
 import { chiasmsFor } from '@/lib/content';
 import { cardId } from '@/lib/catalog';
 import { depth, levelAt, levelStart, levelTouches, partner, tone } from '@/lib/chiasm';
@@ -53,7 +53,7 @@ export function ChiasmStrip({ c, loc, show, onToggle }: { c: Chiasm; loc: VerseL
             return (
               <li key={i} style={levelStyle(c, i)}>
                 <button className={levelTouches(l, loc.book, loc.chapter) ? 'in-chapter' : undefined} aria-current={i === here || undefined}
-                  title={`${label(l.label)} · ${l.text} (${formatRef(l.ref)})`} onClick={() => start && goTo(start)}>{label(l.label)}</button>
+                  title={`${label(l.label)} · ${l.text} (${formatRef(l.ref)})`} onClick={() => start && follow(l.ref)}>{label(l.label)}</button>
               </li>
             );
           })}
@@ -72,7 +72,7 @@ export function LevelHeader({ c, i }: { c: Chiasm; i: number }) {
       <span className="t">{l.text}</span>
       {i === j
         ? <span className="pair">turning point</span>
-        : <button className="chip link pair" onClick={() => start && goTo(start)} title={m.text}>↔ {label(m.label)} · {formatRef(m.ref)}</button>}
+        : <button className="chip link pair" onClick={() => start && follow(m.ref)} title={m.text}>↔ {label(m.label)} · {formatRef(m.ref)}</button>}
     </div>
   );
 }

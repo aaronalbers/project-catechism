@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { goTo, setState, useStore } from '@/app/store';
+import { leave, setState, useStore } from '@/app/store';
 import { BEYOND, BOOKS, THE_66, book, bookByName } from '@/lib/refs';
 import { CANON_BY_ID } from '@/lib/content';
 import type { Beyond } from '@/lib/types';
 import { FEATURE_LABEL, featuresInBook, orderKinds, type FeatureKind } from '@/lib/catalog';
 import { Icon } from './Icons';
+import { isCompact, useViewportWidth } from '@/lib/panes';
 
 /** Accepts "Matt 5:39", "Matthew 5", "mk 14 3", "1 Cor 13:4", "Jude 5". */
 function parseInput(s: string) {
@@ -44,10 +45,10 @@ function Navigator({ onClose }: { onClose: () => void }) {
   const inBook = (id: string) => orderKinds([...featuresInBook(id).values()].flatMap((s) => [...s]));
   const bookKinds = inBook(bookId);
   const chaptersRef = useRef<HTMLDivElement>(null);
-  const submit = () => { if (parsed) { goTo(parsed); onClose(); } };
+  const submit = () => { if (parsed) { leave(parsed); onClose(); } };
   // Picking a book leads on to its chapters: straight in when there is only one, else scroll to them.
   const pickBook = (id: string) => {
-    if (book(id)!.chapters === 1) { goTo({ book: id, chapter: 1, verse: 1 }); onClose(); return; }
+    if (book(id)!.chapters === 1) { leave({ book: id, chapter: 1, verse: 1 }); onClose(); return; }
     setBookId(id);
     const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
     chaptersRef.current?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
@@ -77,7 +78,7 @@ function Navigator({ onClose }: { onClose: () => void }) {
           {Array.from({ length: b.chapters }, (_, i) => i + 1).map((c) => {
             const kinds = orderKinds(chapters.get(c) ?? []);
             return (
-              <button key={c} aria-current={bookId === loc.book && c === loc.chapter} title={describe(kinds) || undefined} onClick={() => { goTo({ book: bookId, chapter: c, verse: 1 }); onClose(); }}>
+              <button key={c} aria-current={bookId === loc.book && c === loc.chapter} title={describe(kinds) || undefined} onClick={() => { leave({ book: bookId, chapter: c, verse: 1 }); onClose(); }}>
                 {c}<Dots kinds={kinds} />
               </button>
             );
@@ -98,6 +99,8 @@ export function Header() {
   const panelOpen = useStore((s) => s.panelOpen);
   const index = useStore((s) => s.index);
   const [open, setOpen] = useState(false);
+  // On a phone the Reader tab shows and hides the panel.
+  const compact = isCompact(useViewportWidth());
   const b = book(loc.book);
   return (
     <header className="header">
@@ -113,7 +116,7 @@ export function Header() {
       <button className="iconbtn" title={`Theme: ${theme}`} aria-label="Toggle theme" onClick={() => setState({ theme: theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark' })}>
         {theme === 'dark' ? <Icon.Moon /> : <Icon.Sun />}
       </button>
-      <button className="iconbtn" title={panelOpen ? 'Hide context panel' : 'Show context panel'} aria-pressed={panelOpen} onClick={() => setState({ panelOpen: !panelOpen })}><Icon.Panel /></button>
+      {!compact && <button className="iconbtn" title={panelOpen ? 'Hide context panel' : 'Show context panel'} aria-pressed={panelOpen} onClick={() => setState({ panelOpen: !panelOpen })}><Icon.Panel /></button>}
       <a className="iconbtn" href="https://github.com/aaronalbers/project-catechism" title="Source on GitHub" target="_blank" rel="noreferrer"><Icon.GitHub /></a>
       {open && <Navigator onClose={() => setOpen(false)} />}
     </header>
