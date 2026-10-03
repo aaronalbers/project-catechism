@@ -177,3 +177,11 @@ papyrus (EA 10474), and the Dead Sea Scroll numbers (Tobit 4Q196–200, 7Q2, 11Q
 Mas1h, 1QpHab). *Needed:* each checked against a public-domain translation or the museum's or library's catalogue
 page, with a `url` added.
 
+
+## Red letters (`src/lib/redletter.ts`, the reader), 2026-10-03
+
+- **Words of Jesus that Glyssen gives to someone else, or that the BSB leaves unquoted.** Acts 20:35 (“It is more
+  blessed to give than to receive,” which Paul quotes as the Lord's) is Paul's in Glyssen, so it stays black.
+  Glyssen gives Rev 22:14-15 to Jesus, but the BSB closes his words at 22:13, so they stay black too. Red-letter
+  editions differ on both. *Needed:* a short curated list of passages to add or leave out, citing a red-letter
+  edition for each, read by `wordsOfJesus` alongside Glyssen.

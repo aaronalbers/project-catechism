@@ -16,6 +16,7 @@
   --interpretation: #b7791f;
   --estimate: #8a6d9c;
   --danger: #b23a3a;
+  --red-letter: #a3261d;
   --shadow: 0 1px 2px rgb(43 36 24 / 0.06), 0 8px 24px rgb(43 36 24 / 0.08);
   --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -42,6 +43,7 @@
   --interpretation: #e6b455;
   --estimate: #b89ccc;
   --danger: #e57373;
+  --red-letter: #ec8a7c;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
   color-scheme: dark;
 }
@@ -143,6 +145,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .verse.current .text .w:hover, .verse.current .text .w.active { background: var(--accent); color: var(--accent-ink); }
 .w.narrow { text-decoration: underline dotted var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; cursor: pointer; }
 .verse:not(.current) .text .w.narrow:hover { background: var(--surface-2); }
+.jw { color: var(--red-letter); }
 .marks-toggle { color: var(--accent); font-size: 12px; }
 .marks-toggle:hover { text-decoration: underline; }
 .verse .fn { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 4px; }
