@@ -36,6 +36,53 @@ export function priceParts(p: Price): PricePart[] {
 }
 export const priceDays = (p: Price) => priceParts(p).reduce((n, x) => n + x.days, 0);
 
+/** Each one's share, where the text counts who shared it. */
+export const perHead = (p: Price) => (p.per ? priceDays(p) / p.per.n : null);
+/** A sum paid every day over a year, or every year over the years the text gives. */
+export function recurring(p: Price): { days: number; over: string } | null {
+  if (p.times) return { days: priceDays(p) * p.times.n, over: `over the ${WORDS_FOR[p.times.n] ?? p.times.n} ${p.every === 'day' ? 'days' : 'years'}` };
+  if (p.every === 'day') return { days: priceDays(p) * 365, over: 'in a year' };
+  return null;
+}
+const WORDS_FOR: Record<number, string> = { 2: 'two', 3: 'three', 4: 'four', 5: 'five', 7: 'seven', 10: 'ten' };
+/**
+ * What the grid counts out: the sum itself while it is countable (a century or less), else one person's share
+ * where the text counts who shared it, else nothing.
+ */
+export function gridOf(p: Price): { days: number; each: boolean } | null {
+  const days = priceDays(p), each = perHead(p);
+  if (days <= 100 * WORTH.year) return { days, each: false };
+  return each !== null && each <= 100 * WORTH.year ? { days: each, each: true } : null;
+}
+/** Other figures to mark on the scale beside the sum: each one's share, and the yearly or total figure. */
+export function scaleMarks(p: Price): { days: number; label: string }[] {
+  const each = perHead(p), again = recurring(p);
+  return [...(each !== null ? [{ days: each, label: `each, for ${p.per!.n.toLocaleString('en-US')} ${p.per!.who}` }] : []), ...(again ? [{ days: again.days, label: again.over }] : [])];
+}
+/** The whole a sum is measured against, in days, and how many times the sum it is (0.89, 11). */
+export function compared(p: Price): number | null {
+  if (!p.compare) return null;
+  const era = eraOf(p);
+  return priceDays(p) / (p.compare.n * unitIn(era, p.compare.unit)!.value * era.days);
+}
+/** A share or a multiple in words: "89%", "≈ 11 times". */
+const ratio = (r: number) => (r >= 1.5 ? `${round(r)} times` : `${Math.round(r * 100)}% of`);
+
+/**
+ * The context a bare figure needs, one line each, shortest first: each one's share, the yearly or total figure of a
+ * sum paid again and again, and the whole it is measured against.
+ */
+export function contextLines(p: Price): string[] {
+  const out: string[] = [];
+  const each = perHead(p), again = recurring(p), share = compared(p);
+  const approx = exact(p) ? '' : '≈ ';
+  if (each !== null) out.push(`${approx}${formatDays(each)} each, for ${p.per!.n.toLocaleString('en-US')} ${p.per!.who}`);
+  if (p.every && !p.times) out.push(p.every === 'day' ? 'every day' : 'every year');
+  if (again) out.push(`${approx}${formatDays(again.days)} ${again.over}`);
+  if (share !== null) out.push(`≈ ${ratio(share)} ${p.compare!.what}`);
+  return out;
+}
+
 /**
  * Whether the days are the text's own reckoning rather than an estimate: only a sum in New Testament coins whose
  * worth the text or its notes fix (a denarius, a lepton), paid in money, not in kind, and with its unit named.

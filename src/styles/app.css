@@ -750,6 +750,11 @@ body.resizing-y { cursor: row-resize; }
 .price-cap { margin: 0 0 6px; }
 .price-cap .kind::before { background: var(--price); }
 .price-cap .worth { color: var(--text); font-variant-numeric: tabular-nums; }
+.price-cap .ctx { font-variant-numeric: tabular-nums; }
+.price-cap .ctx::before { content: '·'; margin-right: 8px; }
+.price-chart .grid-of, .price-ctx { font: 12px var(--sans); color: var(--muted); }
+.price-ctx { margin: -4px 0 8px; font-size: 13px; color: var(--text); }
+.price-scale .dot.also { width: 10px; height: 10px; margin-left: -5px; top: 2px; background: var(--surface); box-shadow: inset 0 0 0 2px var(--price); }
 .price-chart { display: grid; gap: 8px; }
 .price-hours { display: flex; gap: 2px; max-width: 360px; }
 .price-hours .hour { position: relative; flex: 1; height: 12px; border-radius: 2px; background: color-mix(in oklab, var(--price) 12%, transparent); overflow: hidden; }

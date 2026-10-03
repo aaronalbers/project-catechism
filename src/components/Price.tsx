@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react';
 import { getState, openCard } from '@/app/store';
 import { cardId } from '@/lib/catalog';
 import { WORTH } from '@/lib/content';
-import { BY_WORTH, daysLabel, KIND_LABEL, priceDays, priceRefs, scaleAt, TICKS } from '@/lib/prices';
+import { BY_WORTH, contextLines, daysLabel, formatDays, gridOf, KIND_LABEL, priceDays, priceRefs, scaleAt, scaleMarks, TICKS } from '@/lib/prices';
 import { contains, formatRef, parseRef } from '@/lib/refs';
 import type { Price } from '@/lib/types';
 
@@ -23,6 +23,7 @@ export function PriceScale({ p, onPick }: { p: Price; onPick?: (q: Price) => voi
             onClick={onPick && ((e) => { e.stopPropagation(); onPick(q); })} />
         ))}
         <span className="fill" style={{ '--at': at } as CSSProperties} />
+        {scaleMarks(p).map((m) => <span key={m.label} className="dot also" style={{ '--at': scaleAt(m.days) } as CSSProperties} title={`${formatDays(m.days)} ${m.label}`} />)}
         <span className="dot" style={{ '--at': at } as CSSProperties} />
       </div>
       <div className="ticks">
@@ -67,17 +68,20 @@ export function gridKey(days: number) {
 
 /** Under the verse: the sum's kind and what it paid for, its worth in wages, and the chart. */
 export function PriceChart({ p, show, onToggle }: { p: Price; show: boolean; onToggle: () => void }) {
-  const days = priceDays(p);
+  const grid = gridOf(p);
+  const context = contextLines(p);
   return (
     <div className="price-block" onClick={(e) => e.stopPropagation()}>
       <div className="chiasm-cap price-cap">
         <span className="kind">{KIND_LABEL[p.kind]}</span>
         <button className="name" onClick={() => showCard(p)} title="How it is reckoned, and every other sum on one scale, in the Worth tab">{p.what}</button>
         <span className="worth">{daysLabel(p)}</span>
+        {context.map((c) => <span key={c} className="ctx">{c}</span>)}
         <button className="chiasm-toggle" aria-pressed={show} onClick={onToggle}>{show ? 'Hide chart' : 'Show chart'}</button>
       </div>
-      {show && <div className="price-chart" role="img" aria-label={`${p.what}: ${daysLabel(p)}`}>
-        <PriceGrid days={days} />
+      {show && <div className="price-chart" role="img" aria-label={[`${p.what}: ${daysLabel(p)}`, ...context].join('; ')}>
+        {grid?.each && <span className="grid-of">Each one’s share:</span>}
+        {grid && <PriceGrid days={grid.days} />}
         <PriceScale p={p} />
       </div>}
     </div>

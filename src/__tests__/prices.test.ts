@@ -3,7 +3,7 @@
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import { INSIGHT_BY_ID, PRICES, WORTH } from '@/lib/content';
-import { eraOf, exact, formatDays, goodOf, priceDays, priceParts, priceSources, quotedAmount, unitIn } from '@/lib/prices';
+import { compared, contextLines, eraOf, exact, formatDays, goodOf, perHead, priceDays, priceParts, priceSources, quotedAmount, recurring, unitIn } from '@/lib/prices';
 import { contains, parseRef, THE_66 } from '@/lib/refs';
 import type { BibleBook, InterlinearVerse } from '@/lib/types';
 
@@ -58,7 +58,36 @@ describe('prices', () => {
   });
 
   it.skipIf(!existsSync(bibleDir))('every quote is the BSB wording of its verse', () => {
-    for (const p of PRICES) for (const x of priceParts(p)) expect(verseText(x.ref), `${p.id} at ${x.ref}`).toContain(x.quote);
+    for (const p of PRICES) {
+      for (const x of priceParts(p)) expect(verseText(x.ref), `${p.id} at ${x.ref}`).toContain(x.quote);
+      for (const c of [p.per, p.times]) if (c) expect(verseText(c.ref), `${p.id} at ${c.ref}`).toContain(c.quote);
+    }
+  });
+
+  // Context is only given where the text counts who shared a sum, or says how often it was paid, or a source gives the whole.
+  it('every head count is the text’s, and every comparison cites evidence in a unit of its era', () => {
+    for (const p of PRICES) {
+      if (p.per) {
+        expect(parseRef(p.per.ref), p.id).toBeTruthy();
+        expect(quotedAmount(p.per.quote), `${p.id}: "${p.per.quote}" is not ${p.per.n}`).toBe(p.per.n);
+      }
+      if (p.times) expect(p.every, `${p.id}: times without every`).toBeTruthy();
+      if (p.compare) {
+        expect(unitIn(eraOf(p), p.compare.unit), `${p.id}: no ${p.compare.unit} in ${eraOf(p).id}`).toBeTruthy();
+        expect(evidential.has(p.compare.source.kind), `${p.id}: comparison cites no evidence`).toBe(true);
+      }
+    }
+  });
+
+  it('works out the shares the text implies', () => {
+    expect(perHead(byId('tabernacle-silver')), 'a beka a man, as Exod 38:26 says').toBe(15);
+    expect(contextLines(byId('tabernacle-silver'))[0], 'the text’s count, unrounded').toBe('≈ 15 days’ wages each, for 603,550 men');
+    expect(perHead(byId('amaziah-hire')), 'three shekels a soldier').toBe(90);
+    expect(perHead(byId('ten-minas')), 'a mina each').toBe(100);
+    expect(contextLines(byId('feeding-bread'))[0]).toBe('29 minutes of a day’s work each, for 5,000 men');
+    expect(recurring(byId('ammonite-tribute'))!.days).toBe(3 * priceDays(byId('ammonite-tribute')));
+    expect(compared(byId('ten-thousand-talents'))).toBeCloseTo(10000 / 900, 9);
+    expect(contextLines(byId('haman-bribe'))).toEqual(['≈ 89% of the Persian empire’s whole yearly tribute']);
   });
 
   // The yardstick's own sums come out as the text and its notes say.

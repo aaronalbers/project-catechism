@@ -231,10 +231,19 @@ export type PriceKind = 'wage' | 'purchase' | 'gift' | 'offering' | 'valuation' 
  * add up to its worth in days of a labourer's wage, reckoned in the money of its `era` (by default, its book's).
  * `uncounted` is what was also given that nothing here can price; `estimate` says what the reading of the sum
  * itself rests on, when the text does not name its unit.
+ *
+ * Context, each only where the text or a cited source gives the second number: `per`, how many shared the sum
+ * (the text's own count, quoted from its verse, and `who` they were); `every`, a sum paid each day or year, and
+ * `times`, how many times the text says it was paid; `compare`, a whole the sum is measured against, in a unit of
+ * its era, with the source that gives it.
  */
 export interface Price {
   id: string; ref: Ref; also?: Ref[]; kind: PriceKind; what: string; era?: string;
   sums?: PriceSum[]; goods?: PriceGood[]; uncounted?: string; estimate?: string; note?: string; insight?: string;
+  per?: { n: number; quote: string; ref: Ref; who: string };
+  every?: 'day' | 'year';
+  times?: { n: number; quote: string; ref: Ref };
+  compare?: { n: number; unit: string; what: string; source: Source };
 }
 /** A unit of money in one era: what it is worth in the era's `base` unit, and what that rests on. `coin` marks a gold coin valued as it is, not by weight. */
 export interface MoneyUnit { id: string; name: string; plural: string; value: number; coin?: true; estimated?: true; basis: string }

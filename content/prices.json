@@ -88,6 +88,7 @@
      "basis": "The Babylonian talent, in which the empire’s silver was weighed: “seventy-eight Euboic minae” (Herodotus 3.89), or 7,800 drachmas.",
      "estimated": true
     },
+    {"id": "euboic-talent", "name": "Euboic talent", "plural": "Euboic talents", "value": 6000, "basis": "The talent Herodotus reckons the empire’s tribute in: sixty Euboic minae of a hundred drachmas."},
     {"id": "mina", "name": "mina", "plural": "minas", "value": 130, "basis": "A sixtieth of that talent.", "estimated": true},
     {"id": "shekel", "name": "shekel", "plural": "shekels", "value": 2.1667, "basis": "Sixty to the mina, as Ezekiel reckons it (Ezek 45:12): about 2 drachmas.", "estimated": true}
    ],
@@ -329,6 +330,7 @@
     {"quote": "100 talents", "n": 100, "unit": "talent"},
     {"quote": "1,775 shekels", "n": 1775, "unit": "shekel"}
    ],
+   "per": {"n": 603550, "quote": "603,550 men", "ref": "Exod.38.26", "who": "men"},
    "note": "A beka from each of 603,550 men (38:26): 301,775 shekels, which the text calls 100 talents and 1,775 shekels, so a talent is 3,000 shekels."
   },
   {
@@ -671,6 +673,7 @@
     {"quote": "twenty range oxen", "n": 20, "good": "ox"},
     {"quote": "a hundred sheep", "n": 100, "good": "sheep"}
    ],
+   "every": "day",
    "uncounted": "the flour, the meal, the deer, gazelles, roebucks and poultry"
   },
   {
@@ -733,6 +736,7 @@
    "sums": [
     {"quote": "666 talents", "n": 666, "unit": "talent", "gold": true}
    ],
+   "every": "year",
    "note": "Besides the revenue from merchants, traders, Arabian kings and governors (10:15)."
   },
   {
@@ -807,7 +811,7 @@
    "id": "mesha-tribute",
    "ref": "2Kgs.3.4",
    "kind": "tribute",
-   "what": "Moab’s yearly tribute to Israel",
+   "what": "the tribute Mesha of Moab paid Israel’s king",
    "goods": [
     {"quote": "a hundred thousand lambs", "n": 100000, "good": "sheep"}
    ],
@@ -1009,16 +1013,19 @@
    "sums": [
     {"quote": "a hundred talents of silver", "n": 100, "unit": "talent"}
    ],
-   "note": "For 100,000 men: three shekels a man, ≈90 days’ pay each at this era’s rate. He sent them home unused (25:10)."
+   "per": {"n": 100000, "quote": "100,000 mighty men of valor", "ref": "2Chr.25.6", "who": "soldiers"},
+   "note": "He sent them home unused (25:10)."
   },
   {
    "id": "ammonite-tribute",
    "ref": "2Chr.27.5",
    "kind": "tribute",
-   "what": "the Ammonites’ tribute to Jotham, each of three years",
+   "what": "the Ammonites’ tribute to Jotham",
    "sums": [
     {"quote": "a hundred talents of silver", "n": 100, "unit": "talent"}
    ],
+   "every": "year",
+   "times": {"n": 3, "quote": "the same in the second and third years", "ref": "2Chr.27.5"},
    "uncounted": "the ten thousand cors each of wheat and barley"
   },
   {
@@ -1080,7 +1087,9 @@
     {"quote": "61,000 darics of gold", "n": 61000, "unit": "daric"},
     {"quote": "5,000 minas of silver", "n": 5000, "unit": "mina"}
    ],
-   "uncounted": "the 100 priestly garments"
+   "per": {"n": 42360, "quote": "numbered 42,360", "ref": "Ezra.2.64", "who": "people in the assembly"},
+   "uncounted": "the 100 priestly garments",
+   "note": "Given by “some of the heads of the families” (2:68); the share is what it comes to across the assembly, not counting its 7,337 servants and 200 singers (2:65)."
   },
   {
    "id": "second-temple-dedication",
@@ -1191,7 +1200,17 @@
    "sums": [
     {"quote": "ten thousand talents of silver", "n": 10000, "unit": "talent"}
    ],
-   "note": "Herodotus puts the whole yearly tribute of the Persian empire at about 14,560 talents (Histories 3.95)."
+   "compare": {
+    "n": 14560,
+    "unit": "euboic-talent",
+    "what": "the Persian empire’s whole yearly tribute",
+    "source": {
+     "kind": "primary",
+     "title": "Herodotus, Histories 3.95",
+     "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D3%3Achapter%3D95",
+     "note": "Darius’s yearly tribute: fourteen thousand five hundred and sixty Euboic talents"
+    }
+   }
   },
   {
    "id": "vineyard-rent",
@@ -1339,6 +1358,12 @@
    "sums": [
     {"quote": "ten thousand talents", "n": 10000, "unit": "talent"}
    ],
+   "compare": {
+    "n": 900,
+    "unit": "talent",
+    "what": "a year’s tribute from all of Herod’s kingdom",
+    "source": {"kind": "primary", "title": "Josephus, Antiquities 17.317–320", "url": "https://lexundria.com/j_aj/17.317-17.320/wst", "note": "600 talents a year to Archelaus, 200 to Antipas, 100 to Philip"}
+   },
    "insight": "ten-thousand-talents"
   },
   {
@@ -1425,7 +1450,8 @@
    "sums": [
     {"quote": "two hundred denarii", "n": 200, "unit": "denarius"}
    ],
-   "note": "Philip says even that would not give each a small piece (John 6:7)."
+   "per": {"n": 5000, "quote": "five thousand men", "ref": "Mark.6.44", "who": "men"},
+   "note": "Besides women and children (Matt 14:21). Philip says even that would not give each a small piece (John 6:7)."
   },
   {
    "id": "widows-mites",
@@ -1498,7 +1524,8 @@
    "what": "the ten minas, one for each servant",
    "sums": [
     {"quote": "ten minas", "n": 10, "unit": "mina"}
-   ]
+   ],
+   "per": {"n": 10, "quote": "ten of his servants", "ref": "Luke.19.13", "who": "servants"}
   },
   {
    "id": "mina-made-ten",

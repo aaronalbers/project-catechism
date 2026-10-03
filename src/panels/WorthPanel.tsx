@@ -2,7 +2,7 @@ import { useState, type CSSProperties } from 'react';
 import { goTo, openTab, useFeatureInView, useStore } from '@/app/store';
 import { INSIGHT_BY_ID, WORTH } from '@/lib/content';
 import { cardId } from '@/lib/catalog';
-import { BY_WORTH, eraOf, goodOf, KIND_LABEL, priceDays, priceParts, pricesInChapter, priceRefs, priceSources, scaleAt, shortDays, unitIn, daysLabel, type PricePart } from '@/lib/prices';
+import { BY_WORTH, eraOf, goodOf, KIND_LABEL, priceDays, priceParts, pricesInChapter, priceRefs, priceSources, scaleAt, shortDays, unitIn, daysLabel, contextLines, gridOf, type PricePart } from '@/lib/prices';
 import { contains, formatRef, parseRef } from '@/lib/refs';
 import type { Price, PriceKind } from '@/lib/types';
 import type { VerseLoc } from '@/lib/refs';
@@ -38,6 +38,7 @@ function PriceCard({ p, loc, here }: { p: Price; loc: VerseLoc; here: boolean })
   const era = eraOf(p);
   const parts = priceParts(p);
   const days = priceDays(p);
+  const grid = gridOf(p);
   const insight = p.insight ? INSIGHT_BY_ID.get(p.insight) : undefined;
   return (
     <div className={`card price-card${here ? ' here' : ''}`} id={cardId({ kind: 'price', id: p.id })}>
@@ -48,8 +49,9 @@ function PriceCard({ p, loc, here }: { p: Price; loc: VerseLoc; here: boolean })
         <span className="chip" title={era.basis}>{era.label}</span>
       </div>
       <p className="price-total"><b>{daysLabel(p)}</b> <span className="muted">({fmt(Math.round(days * 100) / 100)} {days === 1 ? 'day' : 'days'})</span></p>
-      <PriceGrid days={days} />
-      <p className="price-key">{gridKey(days)}</p>
+      {contextLines(p).map((c) => <p key={c} className="price-ctx">{c}</p>)}
+      {grid && <PriceGrid days={grid.days} />}
+      <p className="price-key">{grid?.each ? `each one’s share: ${gridKey(grid.days)}` : gridKey(days)}</p>
       <PriceScale p={p} onPick={go} />
       <table className="price-parts">
         <tbody>{parts.map((x, i) => <PartRow key={i} p={p} part={x} />)}</tbody>
@@ -57,6 +59,7 @@ function PriceCard({ p, loc, here }: { p: Price; loc: VerseLoc; here: boolean })
       {p.uncounted && <p className="price-note">Not counted: {p.uncounted}.</p>}
       {p.estimate && <p className="price-note">≈ {p.estimate}</p>}
       {p.note && <p className="price-note">{p.note}</p>}
+      {p.compare && <SourceList sources={[p.compare.source]} />}
       {insight && <p className="price-note"><button className="marks-toggle" onClick={() => openTab('insights', { feature: cardId({ kind: 'insight', id: insight.id }) })}>{insight.title}</button></p>}
     </div>
   );
