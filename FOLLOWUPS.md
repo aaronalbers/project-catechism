@@ -186,6 +186,40 @@ page, with a `url` added.
   editions differ on both. *Needed:* a short curated list of passages to add or leave out, citing a red-letter
   edition for each, read by `wordsOfJesus` alongside Glyssen.
 
+## The apostles' deaths (`content/insights/history.json`), 2026-10-03
+
+The primary texts (1 Clement, Ignatius, Polycarp, Irenaeus, Tertullian, Clement of Alexandria and Eusebius on New
+Advent; Tacitus on LacusCurtius; Paley on Gutenberg), Guarducci's *Tomb of St. Peter*, van der Horst's review of
+Zwierlein and the Ehrman interview were read for every quotation. These were not, or not fully:
+
+- **McDowell's article was read only through a fetch tool.** equip.org refuses scripted downloads, so the quotations
+  and ratings in `argument-from-the-apostles-suffering` and `what-became-of-the-twelve` come from a fetched rendering of
+  the page. *Needed:* a check of each quotation against the page in a browser, or against the book (2015).
+- **Zwierlein is cited through his reviewer.** The Peter card summarises *Petrus in Rom* (2009) as van der Horst does in
+  BMCR 2010.03.25, and attributes it so. *Needed:* the book itself, and a published reply to it (Heid's *Petrus und
+  Paulus in Rom*, 2011, or Bockmuehl, 2012), so the Roman tradition's modern defenders are given in their own words as
+  well as its ancient sources.
+- **No sceptical voice on the martyrdom traditions themselves.** The argument card gives Ehrman, who accepts the
+  witnesses' sincerity. A writer who questions the persecution accounts (Candida Moss, *The Myth of Persecution*, 2013)
+  was not read. *Needed:* that position in its own words, if it bears on the apostles, as a third tradition.
+- **Papias on John's death.** A fragment ascribed to Papias (through Philip of Side and George Hamartolos) says John was
+  killed by the Jews. It is not on the Twelve card because no text of it was read. *Needed:* the fragment (Holmes's
+  Apostolic Fathers, or ANF 1) and a sentence on it beside Irenaeus and Polycrates.
+- **The Acts of Andrew and Acts of Thomas are cited without a text.** *Needed:* public-domain translations (M. R. James,
+  *The Apocryphal New Testament*, 1924), the chapters for Andrew's death at Patras and Thomas's in India, and their dates.
+- **Heracleon's negative not checked in the Greek.** The Twelve card gives both the New Advent translation and Salmon's
+  reading. *Needed:* the Greek (Stählin's GCS edition), and the card reduced to one reading if the Greek settles it.
+- **Dates of the fathers are standard ones, not checked.** Dionysius of Corinth ≈170, Tertullian's *Prescription* ≈200
+  and *Scorpiace* ≈210, Irenaeus ≈180 and Heracleon ≈170–180 (Salmon) are given with ≈ but without saying what each
+  rests on. *Needed:* a source for each (Eusebius's placing of Dionysius under Soter, say).
+- **The aedicula's dating comes from a secondary page.** The stamped tiles of 146–161 are from stpetersbasilica.info,
+  which cites Guarducci and Toynbee and Ward-Perkins (1956). *Needed:* the page in the excavation report, and a Commons
+  photograph credited from the Commons API.
+- **"Most historians accept" in `james-death-josephus`** (written before these rules) has no source for the majority.
+  *Needed:* a source that says so, or the holders named.
+- **Paul's tomb.** The 2002–06 excavation at St Paul Outside the Walls and the 2009 dating of its sarcophagus's contents
+  are left out for want of a published report. *Needed:* the report, before adding it to `paul-death-rome`.
+
 ## Medicine cards on the passion (`content/insights/medicine.json`), 2026-10-03
 
 - **Edwards, Gabel & Hosmer (JAMA 1986) quoted from a reprint.** The quotations ("serous pleural and pericardial

@@ -38,7 +38,7 @@
    {"kind": "scholarship", "title": "The Acts of the Apostles: A Socio-Rhetorical Commentary", "author": "Ben Witherington III", "year": 1998, "note": "on the independence of the two accounts and the topos of death by worms"}
   ],
   "confidence": "evidence",
-  "related": ["felix-and-drusilla"]
+  "related": ["felix-and-drusilla", "james-son-of-zebedee-sword"]
  },
  {
   "id": "quirinius-census",
@@ -141,20 +141,23 @@
   "id": "james-death-josephus",
   "title": "The death of James, 'the brother of Jesus, who was called Christ'",
   "kind": "history",
-  "verses": ["Gal.1.19", "Acts.15.13-21", "Acts.21.17-18", "Jas.1.1", "Mark.6.3"],
+  "verses": ["Gal.1.19", "Acts.15.13-21", "Acts.21.17-18", "Jas.1.1", "Mark.6.3", "1Cor.15.7", "John.7.5"],
   "summary": "Josephus records that in AD 62, between two Roman governors, the high priest Ananus convened the Sanhedrin and had 'the brother of Jesus, who was called Christ, whose name was James' stoned — and was deposed for it after three months.",
   "body": [
    "Acts shows James leading the Jerusalem church (15:13-21; 21:18), and Paul calls him 'the Lord's brother' (Galatians 1:19). Josephus tells how he died. When the governor Festus died in office, and before his successor Albinus arrived, the young high priest Ananus 'assembled the sanhedrim of judges, and brought before them the brother of Jesus, who was called Christ, whose name was James, and some others … and delivered them to be stoned'.",
    "The fairest-minded citizens, Josephus says, objected, and some went to meet Albinus on the road to complain that Ananus had no right to convene the court without the governor. King Agrippa II removed Ananus after three months. The year, AD 62, comes from the governors' dates: Festus is the governor of Acts 24:27-26:32.",
-   "Most historians accept the passage as Josephus's own. It names Jesus only to identify James, and calls him 'the one called Christ', which a Christian copyist is unlikely to have written. Eusebius preserves a later and fuller account by Hegesippus, in which James is thrown from the temple and clubbed to death."
+   "Most historians accept the passage as Josephus's own. It names Jesus only to identify James, and calls him 'the one called Christ', which a Christian copyist is unlikely to have written. Eusebius preserves a later and fuller account by Hegesippus, in which James is thrown from the temple and clubbed to death.",
+   "James had not always followed his brother. During the ministry 'even His own brothers did not believe in Him' (John 7:5), and his family once came 'to take custody of Him, saying, “He is out of His mind”' (Mark 3:21). Paul's list of witnesses has the risen Jesus appear 'to James' (1 Corinthians 15:7), whom Eusebius takes to be this James, and within a few years he is one of the church's 'pillars' in Jerusalem (Galatians 1:19; 2:9). In Hegesippus's account (≈AD 170), the scribes stand him on the temple's pinnacle and ask him to turn the Passover crowds from Jesus; he answers that Jesus 'sits in heaven at the right hand of the great Power', and they throw him down and stone him. Josephus's account is the earlier and the firmer, and records no such offer."
   ],
   "sources": [
    {"kind": "primary", "title": "Josephus, Antiquities 20.9.1 (20.197–203)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D9%3Awhiston+section%3D1", "note": "'the brother of Jesus, who was called Christ, whose name was James'"},
    {"kind": "primary", "title": "Eusebius, Church History 2.23", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "Hegesippus's account of James's death"},
-   {"kind": "scripture", "ref": "Gal.1.19"}
+   {"kind": "scripture", "ref": "Gal.1.19"},
+   {"kind": "scripture", "ref": "1Cor.15.7"},
+   {"kind": "scripture", "ref": "John.7.5"}
   ],
   "confidence": "evidence",
-  "related": ["annas-high-priestly-family"]
+  "related": ["annas-high-priestly-family", "witnesses-who-suffered"]
  },
  {
   "id": "theudas-and-judas",
@@ -462,5 +465,168 @@
   ],
   "confidence": "consensus",
   "related": ["how-crucifixion-killed"]
+ },
+ {
+  "id": "witnesses-who-suffered",
+  "title": "What the first witnesses suffered, as the sources tell it",
+  "kind": "history",
+  "verses": ["1Cor.15.3-8", "1Cor.15.12-20", "1Cor.15.30-32", "1Cor.4.9", "Acts.4.1-3", "Acts.4.18-20", "Acts.4.33", "Acts.5.40-42", "2Cor.11.23-27"],
+  "summary": "Paul's list of those the risen Jesus appeared to names Cephas, the Twelve, James and Paul himself. The New Testament, Josephus and 1 Clement record the violent deaths of four of them: James son of Zebedee, James the Lord's brother, Peter and Paul.",
+  "body": [
+   "Paul passes on a list he says he 'received' (1 Corinthians 15:3-8): Jesus 'appeared to Cephas and then to the Twelve', then to more than five hundred, 'most of whom are still living', 'then to James, then to all the apostles', and last of all to Paul. He wrote from Ephesus (16:8). Against those in Corinth who said 'there is no resurrection of the dead' (15:12), he sets out what would follow if they were right: Christ was not raised, and 'we are also exposed as false witnesses about God' (15:15). He answers, 'But Christ has indeed been raised from the dead' (15:20).",
+   "Acts has Peter and John arrested while 'proclaiming in Jesus the resurrection of the dead' (4:2), ordered to stop, and answering, 'we cannot stop speaking about what we have seen and heard' (4:20). Flogged later, the apostles 'did not stop teaching and proclaiming the good news that Jesus is the Christ' (5:40-42). Paul lists imprisonments, five times the forty lashes minus one, and a stoning (2 Corinthians 11:23-27), writes that God has displayed the apostles 'like prisoners appointed for death' (1 Corinthians 4:9), and ties the danger to the resurrection: 'why do we endanger ourselves every hour?' … 'If the dead are not raised, “Let us eat and drink, for tomorrow we die.”' (15:30-32).",
+   "Four of those the list names have violent deaths recorded in the New Testament, Josephus or 1 Clement. James son of Zebedee, one of the Twelve, was put to death 'with the sword' (Acts 12:2). James the Lord's brother was stoned in AD 62 (Josephus); Eusebius takes the James of 15:7 to be him, 'one of the so-called brethren of the Saviour'. Peter and Paul 'suffered martyrdom' (1 Clement 5), which does not say where; Dionysius of Corinth (≈AD 170) says it was in Italy, and Tertullian (≈AD 200–210) in Rome under Nero. Each has a card of its own, linked below, as does what is told of the rest of the Twelve.",
+   "Two of the four had not been followers. Jesus' brothers, James among them (Mark 6:3), 'did not believe in Him' (John 7:5), and Paul had 'persecuted the church of God and tried to destroy it' (Galatians 1:13).",
+   "None of these sources records any of the four being offered his life for a denial. Tacitus describes Nero's victims as convicted in great numbers and says nothing of pardon (Annals 15.44); the release of Christians who denied the name is recorded by Pliny in Bithynia, ≈AD 110–112. Whether any of them recanted is taken up by the argument in the linked card."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "1Cor.15.3-8"},
+   {"kind": "scripture", "ref": "1Cor.15.12-20"},
+   {"kind": "scripture", "ref": "1Cor.15.30-32"},
+   {"kind": "scripture", "ref": "Acts.4.20"},
+   {"kind": "scripture", "ref": "Acts.5.40-42"},
+   {"kind": "scripture", "ref": "2Cor.11.23-27"},
+   {"kind": "scripture", "ref": "Acts.12.2"},
+   {"kind": "scripture", "ref": "John.7.5"},
+   {"kind": "scripture", "ref": "Gal.1.13"},
+   {"kind": "primary", "title": "1 Clement 5", "author": "Clement of Rome", "url": "https://www.newadvent.org/fathers/1010.htm", "year": "≈AD 92–100", "note": "Peter 'suffered martyrdom'; Paul 'suffered martyrdom under the prefects'"},
+   {"kind": "primary", "title": "Josephus, Antiquities 20.9.1 (20.200)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D9%3Awhiston+section%3D1", "note": "James 'delivered … to be stoned'"},
+   {"kind": "primary", "title": "Eusebius, Church History 1.12.4", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250101.htm", "note": "'he appeared unto James, who was one of the so-called brethren of the Saviour'"},
+   {"kind": "primary", "title": "Eusebius, Church History 2.25.8", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "Dionysius of Corinth: Peter and Paul 'taught together in like manner in Italy, and suffered martyrdom at the same time'"},
+   {"kind": "primary", "title": "Tertullian, Scorpiace 15", "author": "Tertullian", "year": "c. AD 210", "url": "https://www.newadvent.org/fathers/0318.htm", "note": "'At Rome Nero was the first who stained with blood the rising faith'"},
+   {"kind": "primary", "title": "Tacitus, Annals 15.44", "author": "Tacitus", "year": "c. AD 116", "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/15B*.html", "note": "Nero's punishment of the Christians after the fire of AD 64 (tr. J. Jackson)"}
+  ],
+  "confidence": "evidence",
+  "related": ["argument-from-the-apostles-suffering", "james-son-of-zebedee-sword", "peter-death-rome", "paul-death-rome", "james-death-josephus", "what-became-of-the-twelve", "pliny-christians-bithynia"]
+ },
+ {
+  "id": "argument-from-the-apostles-suffering",
+  "title": "'Would they die for a lie?' The argument from the apostles' suffering",
+  "kind": "history",
+  "verses": ["1Cor.15.3-8", "1Cor.15.14-15", "1Cor.15.30-32", "Acts.4.18-20", "Acts.5.40-42"],
+  "summary": "Christian apologists from William Paley (1794) to Sean McDowell (2015) argue that the first witnesses suffered and died rather than abandon their claim to have seen Jesus risen, and so were not inventing it. McDowell limits the argument to their sincerity, not the truth of what they believed; Bart Ehrman, who explains the appearances as visions, also holds that they were not inventing them.",
+  "body": [
+   "William Paley set the argument out in 1794 as the first proposition of his Evidences of Christianity: 'That there is satisfactory evidence that many professing to be original witnesses of the Christian miracles passed their lives in labours, dangers, and sufferings, voluntarily undergone in attestation of the accounts which they delivered, and solely in consequence of their belief of those accounts.' His second is that there is not satisfactory evidence that witnesses to other miracles have acted in the same manner.",
+   "Sean McDowell, who weighed the evidence for each apostle's death (2015), rates the martyrdom of Peter, Paul, James son of Zebedee and James the Lord's brother at the 'highest possible probability' on his scale. He states the argument's limits himself: the apostles' willingness to die 'does not demonstrate \"the inherent truth of the Christian message,\" but that the apostles really believed that Jesus had risen from the grave'; 'The apostles could have been mistaken, but their willingness to die as martyrs establishes their unmistakable sincerity.' On recanting he writes, 'While there are no early accounts that any of the apostles recanted, we simply don't know how many of them were killed for their testimony about Christ.'",
+   "Historians who do not take the appearances as a bodily resurrection can agree about the witnesses' sincerity. Bart Ehrman, who explains them as visions, said in 2014: 'the historical reality appears to be that Christianity was not invented by people with an ulterior purpose … It originated in real, actual experiences of some of Jesus' followers, as they had visions of Jesus not long after his death.'"
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "1Cor.15.3-8"},
+   {"kind": "scripture", "ref": "Acts.4.20"},
+   {"kind": "scripture", "ref": "1Cor.15.30-32"},
+   {"kind": "scholarship", "title": "A View of the Evidences of Christianity, Proposition I", "author": "William Paley", "year": 1794, "url": "https://www.gutenberg.org/ebooks/14780", "note": "'passed their lives in labours, dangers, and sufferings, voluntarily undergone in attestation of the accounts which they delivered'"},
+   {"kind": "scholarship", "title": "Did the Apostles Really Die as Martyrs for Their Faith?", "author": "Sean McDowell", "year": 2016, "url": "https://www.equip.org/article/apostles-really-die-martyrs-faith", "note": "Christian Research Journal 39.2; a summary of The Fate of the Apostles (2015), with his rating for each apostle"},
+   {"kind": "scholarship", "title": "The Fate of the Apostles: Examining the Martyrdom Accounts of the Closest Followers of Jesus", "author": "Sean McDowell", "year": 2015},
+   {"kind": "scholarship", "title": "A provocative new theory of Easter (interview with Bart Ehrman on How Jesus Became God)", "author": "Ruth Graham", "year": 2014, "url": "https://www.bostonglobe.com/ideas/2014/04/19/provocative-new-theory-easter/bzerglIENc30gvxKgExDBL/story.html", "note": "The Boston Globe, 19 April 2014: 'not invented by people with an ulterior purpose'"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["Christian apologetics: the argument as stated by William Paley (1794) and Sean McDowell (2015), who limits it to the witnesses' sincerity", "Historians who explain the appearances as visions, such as Bart Ehrman (2014), who hold the witnesses sincere without holding the resurrection an event"],
+  "related": ["witnesses-who-suffered", "what-became-of-the-twelve"]
+ },
+ {
+  "id": "james-son-of-zebedee-sword",
+  "title": "James son of Zebedee, put to death by Herod",
+  "kind": "history",
+  "verses": ["Acts.12.1-3", "Mark.10.35-40", "Matt.20.20-23"],
+  "summary": "Acts gives it one sentence: Herod 'had James, the brother of John, put to death with the sword'. It was between AD 41 and 44, and apart from Judas's it is the only death of one of the Twelve that the New Testament tells.",
+  "body": [
+   "Acts 12:1-3 sets the death under 'King Herod', Herod Agrippa I, who seized Peter next and died soon after at Caesarea (12:19-23). He ruled Judea from AD 41, and Josephus puts his death in the seventh year of his reign, AD 44, so the death of James falls between the two. James was one of the three Jesus took apart with him, with Peter and John (Mark 5:37; 9:2; 14:33).",
+   "Acts gives no charge, no trial and no offer to recant.",
+   "When James and John asked for the places at his right and left, Jesus told them, 'You will drink the cup that I drink' (Mark 10:39). Clement of Alexandria, ≈AD 200, passed on a story he had 'from those who had lived before him': the man who brought James to court was moved by his testimony, declared himself a Christian too, asked James's forgiveness on the way, and the two 'were both beheaded at the same time'. Eusebius preserves it; no earlier source tells it."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Acts.12.2"},
+   {"kind": "scripture", "ref": "Mark.10.39"},
+   {"kind": "primary", "title": "Josephus, Antiquities of the Jews 19.343-350", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/19.343-352/wst", "note": "Agrippa's death in the seventh year of his reign"},
+   {"kind": "primary", "title": "Eusebius, Church History 2.9", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "Clement of Alexandria's Hypotyposes, book 7: 'they were both beheaded at the same time'"}
+  ],
+  "confidence": "evidence",
+  "related": ["witnesses-who-suffered", "agrippa-death-caesarea"]
+ },
+ {
+  "id": "peter-death-rome",
+  "title": "What the early sources say of Peter's death",
+  "kind": "history",
+  "verses": ["John.21.18-19", "2Pet.1.13-15", "1Pet.5.13"],
+  "summary": "John's Gospel says Jesus foretold 'the kind of death by which Peter would glorify God'. 1 Clement says Peter 'suffered martyrdom'; Dionysius of Corinth (≈AD 170) puts it in Italy, Tertullian (≈AD 200–210) on a cross in Rome under Nero, and Gaius (≈AD 200) points to his 'trophy' on the Vatican hill. Otto Zwierlein (2009) argues that none of the sources placing it in Rome rests on knowledge of the event.",
+  "body": [
+   "John 21:18-19: 'when you are old, you will stretch out your hands, and someone else will dress you and lead you where you do not want to go.' 'Jesus said this to indicate the kind of death by which Peter would glorify God.' 2 Peter has him say 'this tent will soon be laid aside, as our Lord Jesus Christ has made clear to me' (1:14). 1 Peter sends greetings from 'the church in Babylon' (5:13); Eusebius reports Clement of Alexandria and Papias as saying the letter was written 'in Rome itself', the city called Babylon 'by a figure'.",
+   "1 Clement, sent in the name of the church of Rome to Corinth (Eusebius places Clement as its bishop from Domitian's twelfth year to Trajan's third, ≈AD 92–100 reckoned from their accessions), holds up Peter and Paul as 'the noble examples furnished in our own generation': Peter 'endured not one or two, but numerous labours; and when he had at length suffered martyrdom, departed to the place of glory due to him'. It does not say where or how. The letter to the Romans that bears the name of Ignatius of Antioch, whom Eusebius has taken to Rome under Trajan (AD 98–117), says: 'I do not, as Peter and Paul, issue commandments unto you.'",
+   "About AD 170 Dionysius, bishop of Corinth, wrote to Rome that Peter and Paul 'taught together in like manner in Italy, and suffered martyrdom at the same time'. Tertullian, ≈AD 200, writes that at Rome 'Peter endures a passion like his Lord's', and ≈AD 210, quoting John 21:18: 'At Rome Nero was the first who stained with blood the rising faith. Then is Peter girt by another, when he is made fast to the cross.' Origen, as Eusebius reports him, says Peter 'was crucified head-downwards; for he had requested that he might suffer in this way'.",
+   "Gaius, a Roman churchman in the time of bishop Zephyrinus (198–217, as Guarducci dates him), told an opponent: 'if you will go to the Vatican or to the Ostian way, you will find the trophies of those who laid the foundations of this church.' Excavations under St Peter's Basilica in 1939–49 found a small shrine (an aedicula) built against a red-plastered wall in a cemetery on the Vatican hill. The wall is dated ≈AD 160 by five tiles over a drain beside it, stamped with the names of Aurelius Caesar and Faustina, a pairing used between 146 and 161. Margherita Guarducci, writing on the excavations in 1960, says 'virtually all scholars admit' the shrine is the trophy Gaius names.",
+   "Otto Zwierlein (2009) argues that Peter 'never visited Rome, did not undergo martyrdom there, was not buried there', as his reviewer Pieter van der Horst summarises it. On his reading 'Babylon' in 1 Peter 5:13 is the diaspora of 1:1, not Rome; 1 Clement knows nothing of Peter beyond Acts and dates from the 120s; the letters of Ignatius are spurious and late second century; and the first sources to place Peter's death in Rome, from Dionysius on, all come from the last decades of the second century."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "John.21.18-19"},
+   {"kind": "scripture", "ref": "2Pet.1.14"},
+   {"kind": "scripture", "ref": "1Pet.5.13"},
+   {"kind": "primary", "title": "Eusebius, Church History 2.15.2", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "Peter's first letter 'which they say that he wrote in Rome itself … when he calls the city, by a figure, Babylon'"},
+   {"kind": "primary", "title": "1 Clement 5", "author": "Clement of Rome", "url": "https://www.newadvent.org/fathers/1010.htm", "year": "≈AD 92–100", "note": "'when he had at length suffered martyrdom, departed to the place of glory due to him'; Eusebius places Clement as bishop of Rome from Domitian's twelfth year to Trajan's third, ≈AD 92–100 (3.15, 3.34)"},
+   {"kind": "primary", "title": "Ignatius, Letter to the Romans 4", "author": "Ignatius of Antioch", "year": "AD 98–117", "url": "https://www.newadvent.org/fathers/0107.htm", "note": "'I do not, as Peter and Paul, issue commandments unto you'; the date is Eusebius's (Church History 3.36)"},
+   {"kind": "primary", "title": "Eusebius, Church History 2.25.5–8", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "Gaius's 'trophies of the apostles' at the Vatican and the Ostian way; Dionysius of Corinth, 'suffered martyrdom at the same time'"},
+   {"kind": "primary", "title": "Tertullian, Prescription Against Heretics 36", "author": "Tertullian", "year": "c. AD 200", "url": "https://www.newadvent.org/fathers/0311.htm", "note": "'Where Peter endures a passion like his Lord's'"},
+   {"kind": "primary", "title": "Tertullian, Scorpiace 15", "author": "Tertullian", "year": "c. AD 210", "url": "https://www.newadvent.org/fathers/0318.htm", "note": "'Then is Peter girt by another, when he is made fast to the cross'"},
+   {"kind": "primary", "title": "Eusebius, Church History 3.1", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250103.htm", "note": "Origen: 'crucified head-downwards; for he had requested that he might suffer in this way'"},
+   {"kind": "archaeology", "title": "The aedicula ('trophy') beneath St Peter's Basilica, Vatican necropolis, excavated 1939–49", "url": "https://stpetersbasilica.info/Necropolis/RedWall.htm", "note": "the Red Wall and the stamped tiles of 146–161 over the drain beside it"},
+   {"kind": "scholarship", "title": "The Tomb of St. Peter", "author": "Margherita Guarducci", "year": 1960, "url": "https://stpetersbasilica.info/Necropolis/MG/TheTombofStPeter-5.htm", "note": "'There can be no question (virtually all scholars admit it) that the chapel is identical with that \"trophy\" of Peter'"},
+   {"kind": "scholarship", "title": "Review of Otto Zwierlein, Petrus in Rom: Die literarischen Zeugnisse (2009)", "author": "Pieter W. van der Horst", "year": 2010, "url": "https://bmcr.brynmawr.edu/2010/2010.03.25", "note": "Bryn Mawr Classical Review 2010.03.25: Zwierlein's case that Peter 'never visited Rome', that 1 Clement dates to the 120s and the letters of Ignatius to the late second century, and that 'Babylon' in 1 Peter 5:13 is the diaspora"}
+  ],
+  "confidence": "evidence",
+  "related": ["witnesses-who-suffered", "paul-death-rome"]
+ },
+ {
+  "id": "paul-death-rome",
+  "title": "What the early sources say of Paul's death",
+  "kind": "history",
+  "verses": ["2Tim.4.6-8", "Phil.1.20-23", "Acts.20.22-25", "Acts.28.30-31"],
+  "summary": "Acts ends with Paul two years in Rome, still preaching. 1 Clement says he 'suffered martyrdom under the prefects'; Tertullian (≈AD 200–210) puts his death in Rome under Nero, and Eusebius says he was beheaded there.",
+  "body": [
+   "Acts and the letters speak of the danger: 'in town after town the Holy Spirit warns me that chains and afflictions await me' (Acts 20:23); 'Christ will be exalted in my body, whether by life or by death' (Philippians 1:20); and 2 Timothy has him write, 'I am already being poured out like a drink offering, and the time of my departure is at hand' (4:6). Acts closes with him two years in Rome, where 'boldly and freely he proclaimed the kingdom of God' (28:31), and does not say what came next.",
+   "1 Clement: Paul, 'after being seven times thrown into captivity, compelled to flee, and stoned', had 'come to the extreme limit of the west, and suffered martyrdom under the prefects'. It does not name the place. Polycarp of Smyrna, writing to Philippi after Ignatius had passed through (ch. 13), sets 'Paul himself, and the rest of the apostles' beside Ignatius as those now with the Lord, 'with whom also they suffered. For they loved not this present world, but Him who died for us, and for our sakes was raised again by God from the dead.'",
+   "Tertullian, ≈AD 200, writes that at Rome 'Paul wins his crown in a death like John's', and ≈AD 210 that there 'Paul obtain[s] a birth suited to Roman citizenship'. Paul was a citizen (Acts 22:25-28). Eusebius writes that 'Paul was beheaded in Rome itself'. He introduces Gaius's 'trophies' at the Vatican and on the Ostian way as 'the places where the sacred corpses of the aforesaid apostles are laid'; Guarducci reads them as Peter's and Paul's respectively, and the basilica of St Paul Outside the Walls stands on the Ostian way.",
+   "Paul writes that he had 'persecuted the church of God and tried to destroy it' (Galatians 1:13), and that the risen Jesus 'appeared to me also' (1 Corinthians 15:8)."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Acts.20.23"},
+   {"kind": "scripture", "ref": "Phil.1.20"},
+   {"kind": "scripture", "ref": "2Tim.4.6"},
+   {"kind": "scripture", "ref": "Acts.22.25-28"},
+   {"kind": "scripture", "ref": "Gal.1.13"},
+   {"kind": "scripture", "ref": "1Cor.15.8"},
+   {"kind": "primary", "title": "1 Clement 5", "author": "Clement of Rome", "url": "https://www.newadvent.org/fathers/1010.htm", "year": "≈AD 92–100", "note": "'suffered martyrdom under the prefects'; Eusebius places Clement as bishop of Rome from Domitian's twelfth year to Trajan's third, ≈AD 92–100"},
+   {"kind": "primary", "title": "Polycarp, Letter to the Philippians 9, 13", "author": "Polycarp of Smyrna", "year": "early 2nd century", "url": "https://www.newadvent.org/fathers/0136.htm", "note": "'Paul himself, and the rest of the apostles … with whom also they suffered'; ch. 13 asks for news of Ignatius"},
+   {"kind": "primary", "title": "Tertullian, Prescription Against Heretics 36", "author": "Tertullian", "year": "c. AD 200", "url": "https://www.newadvent.org/fathers/0311.htm", "note": "'Where Paul wins his crown in a death like John's'"},
+   {"kind": "primary", "title": "Tertullian, Scorpiace 15", "author": "Tertullian", "year": "c. AD 210", "url": "https://www.newadvent.org/fathers/0318.htm", "note": "'Then does Paul obtain a birth suited to Roman citizenship'"},
+   {"kind": "primary", "title": "Eusebius, Church History 2.25.5–7", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250102.htm", "note": "'Paul was beheaded in Rome itself'; Gaius's trophies"},
+   {"kind": "scholarship", "title": "The Tomb of St. Peter", "author": "Margherita Guarducci", "year": 1960, "url": "https://stpetersbasilica.info/Necropolis/MG/TheTombofStPeter-8.htm", "note": "the 'trophies' of Peter and Paul 'respectively in the Vatican and on the Via Ostiense'"}
+  ],
+  "confidence": "evidence",
+  "related": ["witnesses-who-suffered", "peter-death-rome"]
+ },
+ {
+  "id": "what-became-of-the-twelve",
+  "title": "What the early sources say of the other apostles' deaths",
+  "kind": "history",
+  "verses": ["Matt.10.2-4", "Acts.1.13", "Acts.1.26", "John.21.20-23"],
+  "summary": "For the Twelve beyond Peter, James son of Zebedee and Judas, the sources gathered here date from the late second century on. Polycrates of Ephesus says John and Philip lie buried in Asia, and Heracleon (≈AD 170–180), as George Salmon reads him, names Matthew, Philip and Thomas among those never called to confess before the authorities.",
+  "body": [
+   "John 21:23 corrects 'the rumor … that this disciple would not die'. Irenaeus, ≈AD 180, says John remained at Ephesus 'permanently until the times of Trajan' (AD 98–117). Polycrates, bishop of Ephesus, writing to Victor of Rome, says John 'sleeps at Ephesus' and that 'Philip, one of the twelve apostles … sleeps in Hierapolis'. Tertullian, ≈AD 200, tells that John was 'plunged, unhurt, into boiling oil, and thence remitted to his island-exile'.",
+   "Origen, as Eusebius reports him, says where some of them went: 'Parthia, according to tradition, was allotted to Thomas as his field of labor, Scythia to Andrew, and Asia to John'. The apocryphal Acts of Andrew and Acts of Thomas tell of Andrew's death at Patras and Thomas's in India.",
+   "Heracleon, a Valentinian teacher quoted by Clement of Alexandria, distinguishes confession in one's life from confession by the voice before the authorities, and goes on: 'Of whom are Matthew, Philip, Thomas, Levi, and many others.' Which kind the list belongs to turns on the sentence before it, which the New Advent translation gives as 'all the saved have confessed with the confession made by the voice, and departed'; George Salmon reads Heracleon as naming those who 'have never been called on to make it'. Clement, answering him, says Heracleon 'seems to be of the same sentiments with us in this section'.",
+   "Sean McDowell (2015), weighing each case, rates the martyrdom of Thomas 'more probable than not', of Andrew 'more plausible than not', of the other apostles 'as plausible as not', and of John 'improbable'."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "John.21.23"},
+   {"kind": "primary", "title": "Irenaeus, Against Heresies 3.3.4", "author": "Irenaeus of Lyons", "year": "c. AD 180", "url": "https://www.newadvent.org/fathers/0103303.htm", "note": "John 'remaining among them permanently until the times of Trajan'"},
+   {"kind": "primary", "title": "Eusebius, Church History 3.31.3", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250103.htm", "note": "Polycrates: Philip 'sleeps in Hierapolis'; John 'sleeps at Ephesus'"},
+   {"kind": "primary", "title": "Tertullian, Prescription Against Heretics 36", "author": "Tertullian", "year": "c. AD 200", "url": "https://www.newadvent.org/fathers/0311.htm", "note": "John 'plunged, unhurt, into boiling oil'"},
+   {"kind": "primary", "title": "Eusebius, Church History 3.1", "author": "Eusebius of Caesarea", "year": "c. AD 325", "url": "https://www.newadvent.org/fathers/250103.htm", "note": "Thomas to Parthia, Andrew to Scythia, John to Asia"},
+   {"kind": "primary", "title": "Clement of Alexandria, Stromata 4.9", "author": "Clement of Alexandria", "year": "c. AD 200", "url": "https://www.newadvent.org/fathers/02104.htm", "note": "quoting Heracleon: 'Of whom are Matthew, Philip, Thomas, Levi, and many others' (tr. W. Wilson)"},
+   {"kind": "scholarship", "title": "Heracleon, in A Dictionary of Christian Biography", "author": "George Salmon", "year": 1880, "url": "https://earlychristianwritings.com/info/heracleon-wace.html", "note": "'there are many who have never been called on to make it, as for instance Matthew, Philip, Thomas, Levi'; Heracleon's activity ≈170–180"},
+   {"kind": "primary", "title": "Acts of Andrew; Acts of Thomas", "note": "the accounts of Andrew's and Thomas's deaths"},
+   {"kind": "scholarship", "title": "Did the Apostles Really Die as Martyrs for Their Faith?", "author": "Sean McDowell", "year": 2016, "url": "https://www.equip.org/article/apostles-really-die-martyrs-faith", "note": "Christian Research Journal 39.2; a summary of The Fate of the Apostles (2015), with his rating for each apostle"}
+  ],
+  "confidence": "evidence",
+  "related": ["witnesses-who-suffered", "argument-from-the-apostles-suffering", "the-elder-john"]
  }
 ]
