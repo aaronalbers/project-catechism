@@ -4,7 +4,7 @@
  "role": "King of Judea when Jesus was born",
  "people": ["G2264G"],
  "when": "≈ 37–4 BC reigned",
- "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. Appointed king by the Roman senate in 40 BC; ruled from 37. See the Insights card on the date of his death.",
+ "whenBasis": "The reign as Emil Schürer reckons it from Josephus: appointed king by the Roman senate in 40 BC, ruling from 37, dying in 4 BC. W. E. Filmer, Jack Finegan and Andrew Steinmann reckon it 39 (36) to 1 BC. See the Insights card on the date of his death.",
  "summary": "King of Judea when Magi from the east came to Jerusalem asking where the King of the Jews had been born. He was disturbed, and all Jerusalem with him. He learned from the scribes that the Christ was to be born in Bethlehem, sent the Magi there asking them to report back so he too might worship, and when they did not, ordered all the boys in Bethlehem two years old and under put to death. Joseph was warned and fled with the child to Egypt until Herod died.",
  "body": [
   "Luke dates the announcement to Zechariah “in the time of Herod king of Judea.” After his death his son Archelaus rules Judea, and Joseph, afraid of him, settles in Galilee."
@@ -19,7 +19,7 @@
   {"ref": "Matt.2.22", "text": "Archelaus succeeds him"}
  ],
  "later": [
-  {"text": "Josephus's history of his reign tells of his rebuilding of the Jerusalem temple and his fortresses, his wife Mariamne and three of his sons executed on his orders, and his death after an eclipse and before Passover, 4 BC.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 15–17"}, {"kind": "primary", "title": "Josephus, Jewish War 1.203–673"}]},
+  {"text": "Josephus's history of his reign tells of his rebuilding of the Jerusalem temple and his fortresses, his wife Mariamne and three of his sons executed on his orders, and his death after an eclipse of the moon and before Passover; the year is reckoned as 4 BC or 1 BC (see the Insights card on the date of his death).", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 15–17"}, {"kind": "primary", "title": "Josephus, Jewish War 1.203–673"}]},
   {"text": "No other source records the killing of the children at Bethlehem. Raymond Brown doubts it; R. T. France argues that a few infants in a small village would hardly have been noticed beside the killings Josephus does record.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.2.16"}, {"kind": "scholarship", "title": "The Birth of the Messiah", "author": "Raymond E. Brown", "year": 1977}], "traditions": ["doubted: Raymond E. Brown", "plausible though unrecorded: R. T. France"]},
   {"text": "In 2007 Ehud Netzer identified a sarcophagus and mausoleum at Herodium as Herod's tomb; some archaeologists doubt the identification.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Herodium excavations, Hebrew University of Jerusalem", "note": "Ehud Netzer, 2007"}], "traditions": ["Ehud Netzer and his team", "doubted by some archaeologists"]}
  ],

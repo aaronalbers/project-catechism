@@ -39,8 +39,7 @@
    {"kind": "primary", "title": "Herodotus, Histories 8.98", "author": "Herodotus", "year": "c. 430 BC", "note": "the Persian courier relay from which the word comes"},
    {"kind": "scholarship", "title": "Jesus and Nonviolence: A Third Way", "author": "Walter Wink", "year": 2003}
   ],
-  "confidence": "consensus",
-  "traditions": ["The second mile as turning coercion into a free act: Walter Wink (Jesus and Nonviolence, 2003)"],
+  "confidence": "evidence",
   "related": ["right-cheek-backhand"]
  },
  {
@@ -106,7 +105,7 @@
   "verses": ["Luke.2.6-7", "Luke.22.11", "Luke.10.34"],
   "summary": "Luke's word in 2:7 is kataluma, which he uses again for the upper 'guest room' of the Last Supper. When he means a commercial inn (Luke 10:34) he uses a different word, pandocheion.",
   "body": [
-   "The picture of an innkeeper turning the couple away rests on the translation 'inn', which the BSB keeps. Luke knows the ordinary word for a paid inn — pandocheion, the place the Good Samaritan pays two denarii — and does not use it here. Kataluma is a lodging place or guest room; in Luke 22:11 (and Mark 14:14) it is the furnished upper room where Jesus eats the Passover.",
+   "The picture of an innkeeper turning the couple away rests on the translation 'inn', which the BSB keeps. Luke knows the ordinary word for a paid inn — pandocheion, the place the Good Samaritan pays two denarii — and does not use it here. The NIV (2011) renders it 'guest room' here; the King James Version, like the BSB, 'inn'. Kataluma is a lodging place or guest room; in Luke 22:11 (and Mark 14:14) it is the furnished upper room where Jesus eats the Passover.",
    "Kenneth Bailey reconstructs the village house of the period with a single family room, a raised guest space, and a lower area where animals were brought in at night, with mangers cut into the floor or wall between them. On his reading Joseph and Mary were taken in by relatives in Bethlehem, the guest room was already full, and the baby was laid in the manger at the family end of the house. Luke's choice of words is evidence; Bailey's house is an interpretation."
   ],
   "sources": [
@@ -116,8 +115,7 @@
    {"kind": "lexicon", "title": "BDAG s.v. κατάλυμα: 'lodging place, guest room'", "note": "Bauer, Danker, Arndt & Gingrich, Greek-English Lexicon (3rd ed., 2000)"},
    {"kind": "scholarship", "title": "Jesus Through Middle Eastern Eyes", "author": "Kenneth E. Bailey", "year": 2008, "note": "ch. 1, the village-house reading"}
   ],
-  "confidence": "consensus",
-  "traditions": ["'Guest room': Kenneth E. Bailey (Jesus Through Middle Eastern Eyes, 2008); the NIV (2011)", "'Inn': the King James Version and the BSB, among other translations"]
+  "confidence": "evidence"
  },
  {
   "id": "hebrew-day-evening-morning",

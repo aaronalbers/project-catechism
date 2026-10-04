@@ -156,7 +156,17 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   are written as its critics' or its proponents' own concessions, attributed to them.
 - **A badge covers every sentence.** If one sentence of a `consensus` card is a reading, that sentence names its holder
   or moves elsewhere. Inferences about the text ("the narrator writes as though …", "Paul treats this as absurd") are
-  readings: attribute them, or state only what the text says.
+  readings: attribute them, or state only what the text says. So is a conclusion drawn from the evidence that those
+  who read it otherwise dispute ("all three point to 4 BC", "the eclipse fits"): it is one side's, and says so.
+- **A badge is a claim too.** `consensus` means "broadly agreed among scholars", a majority claim like any other: it
+  needs a source that says so, and it never sits on a question with a recognised dissent, however small. Only an
+  `interpretation` lists `traditions` (a test fails the build otherwise); a fact-badged card that reports who reads it
+  how does so in its body.
+- **A disputed question is laid out evenly.** Give each answer with its holders and the evidence each reads, in the same
+  depth. No answer gets the card's title, id or summary, and the other is not a sentence at the end ("others make the
+  case for …"). Keep the facts every side shares (the primary text's figures, the computed dates) in a card of their
+  own with a fact's badge, and badge the question `interpretation`. Every `traditions` entry names a church, a school or
+  a person; "the reckoning set out here" makes the project the holder.
 - **Read the passage round every verse cited.** A quotation must do in the card what it does in its own argument. 1
   Corinthians 15:15 is Paul showing where his opponents' view leads, not a possibility he allows. The same goes for a
   primary text: read the paragraph, not the search hit.
@@ -167,7 +177,9 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
 - **Memory is not a citation.** A claim taken from a work not read in the session is either checked against a copy or
   recorded in `FOLLOWUPS.md` as unchecked, and the card's wording stays no stronger than what was actually read.
 - **Review before handing over.** For each sentence of new content, ask: what source says this, who holds it if it is a
-  judgment, and is any of it in the project's own voice? Fix what fails, and list what could not be checked.
+  judgment, and is any of it in the project's own voice? Then read the card whole: does its badge hold for every
+  sentence, and does its title, summary or order favour one answer? A card can lose every forbidden word and still take
+  a side. Fix what fails, and list what could not be checked.
 - **Never cite Wikipedia.** Use it as a finding aid if you like, then trace the claim to the
   museum, primary text or publication and cite that. A test fails the build on any
   `sources[].url` pointing at a `wikipedia.org` host. Wikisource (public-domain primary

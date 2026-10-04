@@ -312,3 +312,20 @@ the Heidelberg database state it, not as Kent's). Still from memory:
 - **The mechanism of the Galilee squalls** (`galilee-squalls`, `consensus`) is not cited to any meteorological source;
   only the survey figures are. *Needed:* a limnological or meteorological study of the lake's winds, or the badge
   lowered.
+
+## Disputed questions under a fact's badge, recorded 2026-10-04
+
+Cards that listed `traditions` under an `evidence` or `consensus` badge were rebadged or rewritten, and a test now
+fails the build on the pattern. What the rewrite could not check:
+
+- **The date of Herod's death** (`herod-death-date`, `herod-death-josephus`) was rewritten from Steinmann's article
+  (*Novum Testamentum* 51, 2009), read in full, Josephus (Whiston) and NASA's eclipse catalogue. Schürer, Filmer,
+  Martin, Barnes, Bernegger and Finegan's revised *Handbook* are cited as Steinmann reports them, not read, so the
+  4 BC side is given through its critic. *Needed:* Barnes (JTS 1968) and Bernegger (JTS 1983) read for their own
+  arguments, and Finegan §§ 500, 516–518 checked for his 1 BC position.
+- **Every other `consensus` badge** (about fifty records) still needs a source that says the view is agreed, or a
+  lower badge. The review that added this rule fixed only the records with `traditions`. *Needed:* a pass over each,
+  citing a survey of the field or rebadging.
+- **Mark and Luke in `writers.json`** are now `interpretation`s with only the traditional attribution as a holder.
+  *Needed:* named, cited holders of the other view (who doubts Papias's link to Peter; who holds Luke–Acts was not
+  written by Paul's companion), and a holder for Mark's "has been taken to suggest a Roman audience" and its date.

@@ -47,9 +47,9 @@
   "title": "The census problem in Luke 2",
   "kind": "history",
   "verses": ["Luke.2.1-5", "Acts.5.37"],
-  "summary": "Luke dates the birth of Jesus by a registration 'when Quirinius was governor of Syria'. The census Quirinius is known to have run took place in AD 6, about a decade after Herod the Great died. This card sets out the difficulty and the answers proposed, and gives no verdict between them.",
+  "summary": "Luke dates the birth of Jesus by a registration 'when Quirinius was governor of Syria'. The census Quirinius is known to have run took place in AD 6, ten years after Herod the Great died on one reckoning of his death and seven on the other. This card sets out the difficulty and the answers proposed, and gives no verdict between them.",
   "body": [
-   "Luke 1:5 and Matthew 2:1 put the birth in the reign of Herod the Great, who died in 4 BC (see the card on dating Herod's death). Luke 2:2 dates the registration to Quirinius' governorship of Syria. Josephus describes Quirinius arriving in Syria after Augustus deposed Herod's son Archelaus and annexed Judea, to assess the new province for tax — reckoned by Josephus as thirty-seven years after Actium, which is AD 6. That census provoked the revolt of Judas the Galilean, which Luke himself refers to in Acts 5:37. The two dates are about ten years apart.",
+   "Luke 1:5 and Matthew 2:1 put the birth in the reign of Herod the Great, whose death is reckoned to 4 BC or to 1 BC (see the card on dating Herod's death). Luke 2:2 dates the registration to Quirinius' governorship of Syria. Josephus describes Quirinius arriving in Syria after Augustus deposed Herod's son Archelaus and annexed Judea, to assess the new province for tax — reckoned by Josephus as thirty-seven years after Actium, which is AD 6. That census provoked the revolt of Judas the Galilean, which Luke himself refers to in Acts 5:37. The two dates are about ten years apart on the 4 BC reckoning of Herod's death, seven on the 1 BC.",
    "Brown surveys the proposals. (1) Translate prote as 'before': 'this registration was before Quirinius was governor', the reading I. Howard Marshall defends. (2) An earlier commission: on this proposal Quirinius held authority in the East around 7-6 BC, alongside the legate Sentius Saturninus, and conducted a registration then. The Lapis Tiburtinus, an inscription naming an unidentified official who governed Syria twice, is brought in for it, but it does not name Quirinius. (3) A long registration: Augustus ordered an empire-wide enrolment carried out province by province over years, completed in Judea under Quirinius. (4) Luke is mistaken on the date, Brown's own conclusion.",
    "Josephus attests the AD 6 census under Quirinius. No source outside Luke tells of a census of Judea under Herod. Each of the four proposals is a reconstruction, and this card is marked as an interpretation for that reason."
   ],
@@ -63,7 +63,7 @@
   ],
   "confidence": "interpretation",
   "traditions": ["Raymond E. Brown: Luke 2:2 is mistaken on the date", "I. Howard Marshall: prote read as 'before', a registration before Quirinius was governor"],
-  "related": ["herod-death-4bc", "tiberius-15th-year", "theudas-and-judas"]
+  "related": ["herod-death-date", "tiberius-15th-year", "theudas-and-judas"]
  },
  {
   "id": "canon-books-beyond-the-66",
@@ -171,7 +171,7 @@
   "body": [
    "In Acts 5:36-37 Gamaliel says: 'Some time ago Theudas rose up, claiming to be somebody, and about four hundred men joined him. He was killed … After him, Judas the Galilean appeared in the days of the census.' Josephus tells of Judas's revolt against the census of AD 6.",
    "Josephus's Theudas is a 'magician' who, 'while Fadus was procurator of Judea' (≈AD 44–46, from the order of governors Josephus gives), led a crowd to the Jordan promising to part it. Roman cavalry killed many, and Theudas's head was taken to Jerusalem. The next paragraph mentions the crucifixion of 'the sons of Judas of Galilee' — so Josephus names Theudas and then Judas, in the order of Acts, though Judas's revolt was much earlier.",
-   "The difficulty is old. Origen, around AD 248, followed Acts and put 'a certain Theudas … before the birth of Christ'. Those who follow Origen take Gamaliel to mean another, earlier Theudas, perhaps one of the rebels in the unrest after Herod's death in 4 BC. Richard Pervo, who holds that Luke used Josephus, takes Luke to have placed Josephus's Theudas too early. The two accounts also differ on numbers: Acts has about four hundred followers, Josephus 'a great part of the people'."
+   "The difficulty is old. Origen, around AD 248, followed Acts and put 'a certain Theudas … before the birth of Christ'. Those who follow Origen take Gamaliel to mean another, earlier Theudas, perhaps one of the rebels in the unrest after Herod's death. Richard Pervo, who holds that Luke used Josephus, takes Luke to have placed Josephus's Theudas too early. The two accounts also differ on numbers: Acts has about four hundred followers, Josephus 'a great part of the people'."
   ],
   "sources": [
    {"kind": "primary", "title": "Josephus, Antiquities 20.5.1 (20.97–99)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston+chapter%3D5%3Awhiston+section%3D1", "note": "'while Fadus was procurator of Judea … a certain magician, whose name was Theudas'"},

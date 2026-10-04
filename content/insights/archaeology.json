@@ -32,8 +32,7 @@
    {"kind": "primary", "title": "Josephus, Antiquities 18.35, 18.95", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/18.35/wst", "note": "'Joseph, who was called Caiaphas'"},
    {"kind": "scholarship", "title": "'The Ossuary of Miriam Daughter of Yeshua Son of Caiaphas, Priest of Ma'aziah from Beth 'Imri'", "author": "Boaz Zissu & Yuval Goren", "year": 2011, "note": "Israel Exploration Journal 61"}
   ],
-  "confidence": "consensus",
-  "traditions": ["The high priest's ossuary: Zvi Greenhut, who excavated the tomb", "Doubted on the spelling of the name: William Horbury"],
+  "confidence": "evidence",
   "related": ["annas-high-priestly-family"]
  },
  {
@@ -176,23 +175,49 @@
   "related": ["great-isaiah-scroll-light"]
  },
  {
-  "id": "herod-death-4bc",
-  "title": "When Herod died — dating the nativity",
+  "id": "herod-death-josephus",
+  "title": "What Josephus says of Herod's reign and death",
   "kind": "history",
   "verses": ["Matt.2.1-23", "Luke.1.5"],
-  "summary": "Josephus records a lunar eclipse shortly before Herod's death and his burial before Passover; the eclipse of 13 March 4 BC fits. On that reckoning Jesus was born before spring 4 BC, a few years 'before Christ' by the AD count devised in the sixth century.",
+  "summary": "Josephus dates Herod's appointment and his capture of Jerusalem by the Roman consuls of the year, gives the reign as thirty-seven and thirty-four years, and says Herod died after an eclipse of the moon and before Passover. He names no year for the death; which year follows depends on how the figures are counted and which eclipse is meant (see the card on dating it).",
   "body": [
-   "Josephus says Herod died after an eclipse of the moon and before the following Passover, having reigned 37 years from his appointment by Rome (40 BC) and 34 from his capture of Jerusalem (37 BC). All three point to 4 BC; the partial lunar eclipse of 13 March 4 BC was visible from Jericho, where Herod lay dying. Finegan's Handbook sets out the case others make for the eclipse of 1 BC, which would move everything three years.",
-   "The monk Dionysius Exiguus devised the AD numbering in AD 525; on the 4 BC reckoning his year 1 falls after Herod's death, which is why the birth of Jesus falls 'BC'. Herod kills the boys 'two years old and under' (Matthew 2:16), so an estimate of c. 6–4 BC follows. That range is an estimate; the terminus (before Herod's death) is the evidence."
+   "Herod received the kingdom from the Romans 'on the hundred and eighty-fourth olympiad, when Caius Domitius Calvinus was consul the second time, and Caius Asinius Pollio', the consuls of 40 BC. He took Jerusalem 'when Marcus Agrippa and Caninius Gallus were consuls of Rome on the hundred eighty and fifth olympiad', the consuls of 37 BC. When he died he had reigned, 'since he had procured Antigonus to be slain, thirty-four years; but since he had been declared king by the Romans, thirty-seven'.",
+   "The night he burned the Matthias who had pulled down the golden eagle from the temple, 'there was an eclipse of the moon'. Herod's death, his funeral and the start of Archelaus's rule follow, and then 'the approach of that feast of unleavened bread … which feast is called the Passover'.",
+   "Finegan's table of the lunar eclipses between 7 and 1 BC, as Steinmann reproduces it, lists four, and NASA's catalogue gives the same dates and kinds: total on 23 March and 15 September 5 BC, partial on 13 March 4 BC (about a third of the moon's width in the umbra), and total on 10 January 1 BC. The dates are computed, not recorded; which of them Josephus means is the question the dating card sets out."
   ],
   "sources": [
-   {"kind": "primary", "title": "Josephus, Antiquities 17.167 (eclipse), 17.191 (length of reign), 17.213 (Passover after the death)", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/17.167/wst"},
-   {"kind": "scholarship", "title": "Handbook of Biblical Chronology (rev. ed.)", "author": "Jack Finegan", "year": 1998, "note": "§§ 471–495 survey the 4 BC and 1 BC options"},
-   {"kind": "scripture", "ref": "Matt.2.16"}
+   {"kind": "primary", "title": "Josephus, Antiquities 14.389 (appointment), 14.487 (Jerusalem taken)", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/14.389/wst", "note": "Whiston's translation"},
+   {"kind": "primary", "title": "Josephus, Antiquities 17.167 (eclipse), 17.191 (length of reign), 17.213 (Passover after the death)", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/17.167/wst", "note": "Whiston's translation"},
+   {"kind": "data", "title": "Five Millennium Catalog of Lunar Eclipses, -0099 to 0000", "author": "Fred Espenak and Jean Meeus (NASA)", "url": "https://eclipse.gsfc.nasa.gov/LEcat5/LE-0099-0000.html", "note": "-0004 Mar 23 and Sep 15 total; -0003 Mar 13 partial, umbral magnitude 0.36; 0000 Jan 10 total (astronomical year 0 is 1 BC)"},
+   {"kind": "scholarship", "title": "'When Did Herod the Great Reign?', Novum Testamentum 51 (2009) 1–29", "author": "Andrew E. Steinmann", "year": 2009, "url": "https://doi.org/10.1163/156853608X245953", "note": "Table 1, the four eclipses between 7 and 1 BC, from Finegan's Handbook table 142"}
   ],
-  "confidence": "consensus",
-  "traditions": ["4 BC: the reckoning set out here from Josephus", "1 BC: Jack Finegan in his later view, as his Handbook sets out"],
-  "related": ["quirinius-census"]
+  "confidence": "evidence",
+  "related": ["herod-death-date"]
+ },
+ {
+  "id": "herod-death-date",
+  "title": "When Herod died — 4 BC or 1 BC",
+  "kind": "history",
+  "verses": ["Matt.2.1-23", "Luke.1.5"],
+  "summary": "Emil Schürer reckoned Herod's death to 4 BC, the date Andrew Steinmann calls the consensus of most scholars for a century. W. E. Filmer, Ernest Martin, Jack Finegan in his revised Handbook, and Steinmann reckon it to 1 BC. Both read the same figures in Josephus; they differ on how he counted the years and which eclipse he meant. Matthew and Luke put the birth of Jesus before the death, so the two reckonings move the latest date for the birth by three years.",
+  "body": [
+   "The 4 BC reckoning, as Steinmann sets out Schürer's case: Herod was appointed in 40 BC and took Jerusalem in 37 BC, and Josephus's thirty-seven and thirty-four years count both the first and the last year (inclusive reckoning), ending in 4 BC. The eclipse is the partial one of 13 March 4 BC, twenty-nine days before Passover. The reigns of Herod's sons agree: Archelaus deposed in AD 6 after ten years, Antipas losing his tetrarchy in AD 39 after forty-three, Philip dying in AD 33/34 after thirty-seven, all counted from 4 BC. Timothy Barnes (1968) and P. M. Bernegger (1983) answered Filmer in defence of this reckoning; Barnes, as Steinmann reports him, argues that Gaius Caesar was in Rome when Archelaus came before Augustus, which he holds rules out the middle of 1 BC.",
+   "The 1 BC reckoning, as Steinmann argues it after Filmer (1966): Schürer's dates give Herod thirty-six and thirty-three years, not Josephus's thirty-seven and thirty-four, and Steinmann finds no inclusive reckoning elsewhere in Josephus. He counts Herod's first official year from Tishri 38 BC, after an appointment late in 39, and has him take Jerusalem in 36. The eclipse is the total one of 10 January 1 BC, about twelve weeks before Passover; Martin estimated that the events Josephus tells between the eclipse and Passover need at least fifty-four days, more than the twenty-nine of 4 BC. Steinmann takes the sons to have dated their reigns from when Herod named them his heirs, before his death. He adds that the early Christian writers place the birth after Passover 4 BC, most of them in late 3 or early 2 BC, and that Finegan's revised Handbook (1998) moved to the 1 BC death and a birth in 3/2 BC.",
+   "The AD count was devised by the monk Dionysius Exiguus in AD 525. On either reckoning his year 1 falls after Herod's death, so the birth falls 'BC'. Herod kills the boys of Bethlehem 'two years old and under, according to the time he had learned from the Magi' (Matthew 2:16); the text gives the death as the latest point for the birth, and gives no year."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Josephus, Antiquities 17.167, 17.191, 17.213", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/17.191/wst", "note": "the eclipse, the thirty-seven and thirty-four years, and the Passover after the death"},
+   {"kind": "scripture", "ref": "Matt.2.16"},
+   {"kind": "scholarship", "title": "'When Did Herod the Great Reign?', Novum Testamentum 51 (2009) 1–29", "author": "Andrew E. Steinmann", "year": 2009, "url": "https://doi.org/10.1163/156853608X245953", "note": "'This is the consensus of the majority of scholars, and has been for at least a century since the publication of Schürer'; argues for late 39 to early 1 BC, and reports Schürer, Filmer, Martin, Finegan, Barnes and Bernegger"},
+   {"kind": "scholarship", "title": "A History of the Jewish People in the Time of Jesus Christ (rev. G. Vermes and F. Millar)", "author": "Emil Schürer", "year": "1896; rev. 1973", "note": "1.326–327, inclusive reckoning, as Steinmann cites it; not read for this card"},
+   {"kind": "scholarship", "title": "'The Chronology of the Reign of Herod the Great', Journal of Theological Studies n.s. 17 (1966) 283–298", "author": "W. E. Filmer", "year": 1966, "note": "as Steinmann cites it; not read for this card"},
+   {"kind": "scholarship", "title": "'The Date of Herod's Death', Journal of Theological Studies n.s. 19 (1968) 204–219", "author": "Timothy D. Barnes", "year": 1968, "note": "as Steinmann cites it; not read for this card"},
+   {"kind": "scholarship", "title": "'Affirmation of Herod's Death in 4 BC', Journal of Theological Studies n.s. 34 (1983) 526–531", "author": "P. M. Bernegger", "year": 1983, "note": "as Steinmann cites it; not read for this card"},
+   {"kind": "scholarship", "title": "Handbook of Biblical Chronology (rev. ed.)", "author": "Jack Finegan", "year": 1998, "note": "§§ 500, 516–518, as Steinmann cites them; not read for this card"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["4 BC: Emil Schürer, and Timothy Barnes and P. M. Bernegger in answer to Filmer", "1 BC: W. E. Filmer, Ernest L. Martin, Jack Finegan in his revised Handbook (1998), Andrew E. Steinmann"],
+  "related": ["herod-death-josephus", "quirinius-census", "tiberius-15th-year"]
  },
  {
   "id": "tiberius-15th-year",
@@ -201,7 +226,7 @@
   "verses": ["Luke.3.1-2", "Luke.3.23"],
   "summary": "Luke dates John's ministry by six rulers at once. Tiberius succeeded Augustus on 19 August AD 14, so his fifteenth year, counted from then, is AD 28/29.",
   "body": [
-   "Augustus died on 19 August AD 14 (Suetonius, Augustus 100; Tacitus, Annals 1.5). Counting from then, Tiberius' fifteenth year runs from August AD 28 to August AD 29; if Luke used the Syrian calendar beginning in autumn, it is October AD 28 to September AD 29. Either way John's preaching begins about AD 28–29, and Jesus, 'about thirty' (3:23), was born around 6–2 BC — consistent with the Herod evidence.",
+   "Augustus died on 19 August AD 14 (Suetonius, Augustus 100; Tacitus, Annals 1.5). Counting from then, Tiberius' fifteenth year runs from August AD 28 to August AD 29; if Luke used the Syrian calendar beginning in autumn, it is October AD 28 to September AD 29. Either way John's preaching begins about AD 28–29, and Jesus, 'about thirty' (3:23), was born around 6–2 BC (see the card on dating Herod's death).",
    "The other five names Luke gives all check against inscriptions and Josephus: Pilate (prefect AD 26–36), Herod Antipas (tetrarch 4 BC–AD 39), Philip (4 BC–AD 34), Lysanias of Abilene (attested by an inscription from Abila under Tiberius), and the priests Annas and Caiaphas (AD 18–36)."
   ],
   "sources": [

@@ -87,6 +87,22 @@ describe('content integrity', () => {
       for (const r of i.related ?? []) expect(INSIGHT_BY_ID.has(r), `${i.id} relates to unknown ${r}`).toBe(true);
     }
   });
+  // A list of who holds what marks a disputed reading, and a disputed reading is an interpretation: under an
+  // `evidence` or `consensus` badge it would carry the reading as though it were a fact or agreed.
+  it('only an interpretation lists traditions', () => {
+    const wrong: string[] = [];
+    const walk = (x: unknown, at: string): void => {
+      if (Array.isArray(x)) x.forEach((y, i) => walk(y, `${at}[${i}]`));
+      else if (x && typeof x === 'object') {
+        const o = x as { id?: string; confidence?: string; traditions?: string[] };
+        const here = o.id ?? at;
+        if (o.confidence && o.confidence !== 'interpretation' && o.traditions?.length) wrong.push(`${here} (${o.confidence})`);
+        for (const [k, v] of Object.entries(o)) walk(v, `${here}.${k}`);
+      }
+    };
+    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
+    expect(wrong, 'move the holders into the body, or badge the card an interpretation').toEqual([]);
+  });
   // The reader marks a narrowed word wherever it occurs, so the card must say which word, and only one card may claim it.
   it('word cards that narrow a word name its Strong\'s numbers, and no number has two', () => {
     const claimed = new Map<string, string>();
