@@ -92,6 +92,14 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
 - **Ezekiel's city (Ezek 48:30–35)** as its own model at its true 4,500 cubits a side, to set beside the New
   Jerusalem's 2,220 km. A short comparison of Ezekiel's, Zechariah's and John's cities could go on the card.
 
+## Translations
+
+- **Compare translations**, as an optional pane loaded only when opened. YouVersion's React SDK (Apache-2.0,
+  github.com/youversion/platform-sdk-react) fetches a passage in any of its versions by a reference such as
+  `JHN.3.16`. It needs an app key and a live third-party API, where everything else is static and free, and its
+  texts are copyrighted, so they could not be bundled or checked at build time: the BSB would stay the text every
+  quote is checked against. YouVersion's platform terms have not been read.
+
 ## Layout
 
 - **A "follow" pane**, which switches to whichever tab has content for the current verse, in a set priority. Pinned

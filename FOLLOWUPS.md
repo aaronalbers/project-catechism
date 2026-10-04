@@ -117,6 +117,14 @@ The list aims to include every BibleProject video, wherever it applies.
 - **No interlinear, Strong's or word studies.** No open tagged Greek text of these books exists yet. STEPBible's TAGOT
   is announced as "coming soon". *Needed:* when it is released, build their interlinear from it. The panels say
   why they're empty until then.
+- **Verse numbering is noted by hand, not mapped.** Jubilees uses CrossWire's editor's verse numbers rather than
+  Charles's (its `note` says where they drift), and the WEB deuterocanon's numbering is taken as given, so a
+  reference can point at different words in another edition. The Copenhagen Alliance's versification working group
+  (UBS, Tyndale House, SIL, YouVersion) publishes a JSON format for mapping one text's numbering onto a base text,
+  and rules for working out which scheme a text uses: github.com/youversion/versification-specification. Not yet
+  read beyond its README; the repo states no licence, and whether it covers 1 Enoch or Jubilees is unchecked.
+  *Needed:* read the spec, check its coverage and licence (cite it, or ask before copying its data), and if it fits,
+  map Jubilees onto Charles's 1913 numbering and the deuterocanon onto other editions.
 
 ## Writers and speakers (`content/writers.json`, `content/speakers.json`, the People tab), recorded 2026-10-01
 
