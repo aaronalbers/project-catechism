@@ -557,14 +557,14 @@
  },
  {
   "id": "tiglath-pileser-menahem-pul",
-  "title": "Pul and Menahem: the Assyrian king with two names",
+  "title": "Menahem's silver: Kings' Pul and Tiglath-pileser's annals",
   "kind": "archaeology",
   "verses": ["2Kgs.15.19-20", "1Chr.5.26"],
-  "summary": "Kings says Menahem paid 'Pul king of Assyria' a thousand talents. Tiglath-pileser III's own annals list 'Menahem of Samaria' among the kings who paid him, and Babylonian king lists call the same man Pulu.",
+  "summary": "Kings says Menahem paid 'Pul king of Assyria' a thousand talents. Tiglath-pileser III's own annals list 'Menahem of Samaria' among the kings who paid him, and Babylonian king lists give the Assyrian who ruled Babylon in his years as Pulu.",
   "body": [
    "Tiglath-pileser III took the Assyrian throne in 745 BC (the Babylonian Chronicle's 'third year of Nabû-nasir') and in 729 BC made himself king of Babylon too. His annals and a stele from western Iran list the western kings who paid him: Rezin of Damascus, Hiram of Tyre, and 'Menahem of the city Samaria'.",
-   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. Kings later calls the king of Assyria Tiglath-pileser (15:29). Babylonian king lists give the Assyrian who ruled Babylon in those years as Pulu, which Hirsch and Fuchs take for the name he was known by there. Henry Rawlinson suggested the identification in 1863.",
-   "1 Chronicles 5:26 names both: 'the spirit of Pul king of Assyria, and the spirit of Tiglath-pilneser king of Assyria', with one verb in the singular. The BSB renders the 'and' as 'that is', reading one king under two names.",
+   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. Kings later calls the king of Assyria Tiglath-pileser (15:29). Babylonian king lists give the Assyrian who ruled Babylon in those years as Pulu. Whether Pul and Tiglath-pileser are one king or two is set out in its own card.",
+   "1 Chronicles 5:26 names both: 'the spirit of Pul king of Assyria, and the spirit of Tiglath-pilneser king of Assyria', with one verb in the singular. The BSB renders the 'and' as 'that is', reading one king under two names; the King James keeps 'and'.",
    "Kings adds a detail no Assyrian text gives: Menahem raised the silver by taxing every wealthy man in Israel fifty shekels. A talent was 3,000 shekels (Exodus 38:25-26 counts 603,550 half-shekels as 100 talents and 1,775 shekels), so a thousand talents at fifty shekels a head is ≈60,000 men — a figure derived from the text's own numbers, if they are taken at face value."
   ],
   "sources": [
@@ -576,7 +576,7 @@
    {"kind": "scripture", "ref": "1Chr.5.26"}
   ],
   "confidence": "evidence",
-  "related": ["tiglath-pileser-pekah-hoshea", "tiglath-pileser-ahaz", "bur-sagale-eclipse"]
+  "related": ["pul-and-tiglath-pileser", "tiglath-pileser-pekah-hoshea", "tiglath-pileser-ahaz", "bur-sagale-eclipse"]
  },
  {
   "id": "bur-sagale-eclipse",
@@ -622,6 +622,30 @@
   "confidence": "interpretation",
   "traditions": ["15 June 763 BC: Hermann Hunger (Altorientalische Forschungen 35, 2008); Rodger C. Young (Bible and Spade 26.2, 2013)", "Another eclipse, at least eight fitting the entry: Rolf Furuli (Assyrian, Babylonian and Egyptian Chronology, 2008; b-hebrew, 2009)"],
   "related": ["bur-sagale-eclipse"]
+ },
+ {
+  "id": "pul-and-tiglath-pileser",
+  "title": "Pul and Tiglath-pileser: one king or two",
+  "kind": "archaeology",
+  "verses": ["2Kgs.15.19-20", "2Kgs.15.29", "1Chr.5.26"],
+  "summary": "Kings names Pul as the king Menahem paid and Tiglath-pileser as the king who took Naphtali. Rawlinson, Lepsius, A. H. Sayce, the Jewish Encyclopedia and the International Standard Bible Encyclopedia read the two as one king under two names; A. T. Jones held that the Bible names two kings.",
+  "body": [
+   "The shared facts are in the card on Menahem's silver: Tiglath-pileser III's annals list Menahem among his tributaries, Babylonian king lists give the Assyrian who ruled Babylon in his years as Pulu, and 1 Chronicles 5:26 names 'Pul king of Assyria' and 'Tilgath-pilneser king of Assyria' with one verb in the singular.",
+   "Emil Hirsch and Samuel Fuchs, in the Jewish Encyclopedia (1906), write that Pul 'appears in the list of kings as “Pulu,”' and that his identity with Tiglath-pileser, 'first suggested by Rawlinson' in 1863, 'was six years later independently established by Lepsius.' A. H. Sayce, as A. T. Jones quotes him, called 'the fact of their identity' 'now completely established', holding Pulu to be the king's own name and Tiglath-pileser the throne name he took. T. Nicol, in the International Standard Bible Encyclopedia (1915), calls it 'now practically certain' (citing Schrader), and the BSB translates 1 Chronicles 5:26 on that reading: 'Pul king of Assyria (that is, Tiglath-pileser king of Assyria)'.",
+   "A. T. Jones, in The Empires of the Bible (1897), reports that 'the most of the writers on this subject' make the two one, and disagrees. 'In the Bible,' he writes, 'Pul and Tiglath-Pileser are named in such a way as to appear clearly to be two distinct kings', and Sayce offers no evidence 'except in the name “Pulu”'. Those who identify them, he argues, have had to 'bring down the dates of the kings of Israel and Judah to a time where they cannot possibly belong'; he lets Pul reign to 764 or 763 and Tiglath-pileser come to the throne in Menahem's last years. He concedes that 'it is not here claimed that it is impossible' for the two names to be one man, only that 'there is more probability of mistake in the Assyrian records, or in deductions based upon them, than in the Scriptures.'"
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "2Kgs.15.19"},
+   {"kind": "scripture", "ref": "2Kgs.15.29"},
+   {"kind": "scripture", "ref": "1Chr.5.26"},
+   {"kind": "primary", "title": "Babylonian Chronicle ABC 1, i 2–6 and i 19–24", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-1-from-nabu-nasir-to-samas-suma-ukin/", "note": "Tiglath-pileser's accession in Assyria (745/744 BC) and in Babylon (729/728 BC)"},
+   {"kind": "scholarship", "title": "Pul", "author": "Emil G. Hirsch and Samuel Fuchs", "year": 1906, "url": "https://www.jewishencyclopedia.com/articles/12435-pul", "note": "Jewish Encyclopedia"},
+   {"kind": "scholarship", "title": "Tiglath-pileser", "author": "T. Nicol", "year": 1915, "url": "https://www.biblestudytools.com/encyclopedias/isbe/tiglath-pileser.html", "note": "International Standard Bible Encyclopedia: 'now practically certain', citing Schrader, COT I 230–231"},
+   {"kind": "scholarship", "title": "The Empires of the Bible, ch. 21, 'Pul and Tiglath-Pileser III'", "author": "Alonzo T. Jones", "year": 1897, "url": "https://text.egwwritings.org/read/1133.1692", "note": "pp. 287–288; quotes Sayce, Records of the Past, new series, vol. 5, p. 116"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["One king, Pulu his name in Babylon: Rawlinson (1863) and Lepsius, as the Jewish Encyclopedia reports them; A. H. Sayce, as Jones quotes him; Emil Hirsch and Samuel Fuchs (Jewish Encyclopedia, 1906); T. Nicol (ISBE, 1915)", "Two kings: A. T. Jones (The Empires of the Bible, 1897)"],
+  "related": ["tiglath-pileser-menahem-pul"]
  },
  {
   "id": "tiglath-pileser-pekah-hoshea",

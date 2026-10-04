@@ -423,3 +423,14 @@ b-hebrew post and NASA's canon.
   the Assyrian Empire 910–612 BC*, 1994) was not read, nor which copies carry the line. *Needed:* the edition, with
   the copies cited.
 - **Who first identified the eclipse.** Henry Rawlinson's identification (1867) is not given, as no copy was read.
+
+## Pul and Tiglath-pileser (`pul-and-tiglath-pileser`), 2026-10-04
+
+Reviewed for a `consensus` badge and does not qualify: A. T. Jones (1897) holds Pul and Tiglath-pileser to be two
+kings. The holders given are those read in the session, all from 1897–1915.
+
+- **No modern holder read.** Tadmor and Yamada's introduction to RINAP 1 (2011) and Cogan and Tadmor's *II Kings*
+  (Anchor Bible, 1988) would give the identification as it stands now, and say whether anyone still disputes it.
+- **Sayce and Schrader second-hand.** Sayce is quoted from Jones, and Schrader is cited as the ISBE cites him.
+- **The king list not read.** "Pulu" is given as the Jewish Encyclopedia reports it; Babylonian King List A (and the
+  Synchronistic King List, which has Tiglath-pileser at that point) were not read in an edition.
