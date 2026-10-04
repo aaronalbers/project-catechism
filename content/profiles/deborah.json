@@ -23,7 +23,7 @@
  ],
  "later": [
   {"text": "The Babylonian Talmud counts her among the seven prophetesses of Israel: Sarah, Miriam, Deborah, Hannah, Abigail, Huldah and Esther.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Megillah 14a", "url": "https://www.sefaria.org/Megillah.14a"}]},
-  {"text": "Many scholars take the Song of Deborah to be among the oldest poems in the Hebrew Bible, older than the prose account beside it, from its archaic language.", "confidence": "interpretation", "traditions": ["Frank Moore Cross and David Noel Freedman", "much historical-critical scholarship"], "sources": [{"kind": "scholarship", "title": "Studies in Ancient Yahwistic Poetry", "author": "Frank Moore Cross and David Noel Freedman", "year": 1975}]}
+  {"text": "Frank Moore Cross and David Noel Freedman take the Song of Deborah to be among the oldest poems in the Hebrew Bible, older than the prose account beside it, from its archaic language.", "confidence": "interpretation", "traditions": ["Frank Moore Cross and David Noel Freedman"], "sources": [{"kind": "scholarship", "title": "Studies in Ancient Yahwistic Poetry", "author": "Frank Moore Cross and David Noel Freedman", "year": 1975}]}
  ],
  "confidence": "evidence",
  "sources": [

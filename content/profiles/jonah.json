@@ -24,8 +24,8 @@
   {"ref": "Matt.12.40", "text": "The sign of Jonah"}
  ],
  "later": [
-  {"text": "The book is history: Jesus speaks of Jonah and of Nineveh's repentance as events (Matthew 12:40–41).", "confidence": "interpretation", "traditions": ["traditional Jewish and Christian readings", "many evangelical scholars"], "sources": [{"kind": "scripture", "ref": "Matt.12.40-41"}]},
-  {"text": "The book is a didactic story, a parable-like tale about God's mercy to Israel's enemies, told with irony and exaggeration.", "confidence": "interpretation", "traditions": ["most historical-critical scholarship"], "sources": [{"kind": "scholarship", "title": "Jonah (Anchor Bible 24B)", "author": "Jack M. Sasson", "year": 1990}]}
+  {"text": "The book is history: Jesus speaks of Jonah and of Nineveh's repentance as events (Matthew 12:40–41).", "confidence": "interpretation", "traditions": ["traditional Jewish and Christian readings"], "sources": [{"kind": "scripture", "ref": "Matt.12.40-41"}]},
+  {"text": "The book is a didactic story, a parable-like tale about God's mercy to Israel's enemies, told with irony and exaggeration.", "confidence": "interpretation", "traditions": ["Jack M. Sasson"], "sources": [{"kind": "scholarship", "title": "Jonah (Anchor Bible 24B)", "author": "Jack M. Sasson", "year": 1990}]}
  ],
  "confidence": "evidence",
  "sources": [

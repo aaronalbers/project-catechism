@@ -22,7 +22,7 @@
  ],
  "later": [
   {"text": "An inscription of Shalmaneser III calls Hazael “son of a nobody” who seized the throne, agreeing with 2 Kings that he was a usurper.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Shalmaneser III's inscription on a statue from Assur", "note": "translated in J. B. Pritchard, Ancient Near Eastern Texts (1969), p. 280"}]},
-  {"text": "The Aramaic Tel Dan stele, which boasts of killing a king of Israel and a king of the house of David, is usually attributed to Hazael.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Tel Dan Stele, Israel Museum, Jerusalem"}, {"kind": "scholarship", "title": "The Tel Dan Inscription: A New Fragment", "author": "Avraham Biran and Joseph Naveh", "year": 1995, "note": "Israel Exploration Journal 45"}], "traditions": ["most scholars"]}
+  {"text": "The Aramaic Tel Dan stele, which boasts of killing a king of Israel and a king of the house of David, is attributed to Hazael by its editors, Avraham Biran and Joseph Naveh.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Tel Dan Stele, Israel Museum, Jerusalem"}, {"kind": "scholarship", "title": "The Tel Dan Inscription: A New Fragment", "author": "Avraham Biran and Joseph Naveh", "year": 1995, "note": "Israel Exploration Journal 45"}], "traditions": ["Avraham Biran and Joseph Naveh, its editors"]}
  ],
  "confidence": "evidence",
  "sources": [

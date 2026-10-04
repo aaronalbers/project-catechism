@@ -18,7 +18,7 @@
  ],
  "later": [
   {"text": "The Mishnah remembers him as Rabban Gamaliel the Elder and says that when he died, the glory of the Torah ceased and purity and separateness perished.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Mishnah Sotah 9:15", "url": "https://www.sefaria.org/Mishnah_Sotah.9.15"}]},
-  {"text": "Josephus dates Theudas's revolt to the governorship of Fadus, ≈AD 44–46, a decade after the speech Acts gives; either Luke's order is loose or Gamaliel meant an earlier Theudas.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.97–98"}, {"kind": "scripture", "ref": "Acts.5.36"}], "traditions": ["commentators, variously"]}
+  {"text": "Josephus dates Theudas's revolt to the governorship of Fadus, ≈AD 44–46, a decade after the speech Acts gives; Origen took Gamaliel to mean an earlier Theudas; Richard Pervo takes Luke to have placed Josephus's Theudas too early. See the card on Theudas.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 20.97–98"}, {"kind": "scripture", "ref": "Acts.5.36"}], "traditions": ["Origen; Richard Pervo"]}
  ],
  "confidence": "evidence",
  "sources": [

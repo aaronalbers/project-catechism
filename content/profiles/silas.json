@@ -24,7 +24,7 @@
   {"ref": "1Pet.5.12", "text": "Through Silvanus"}
  ],
  "later": [
-  {"text": "Silas is the Greek short form and Silvanus the Latin name of the same man, most scholars agree.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Acts.15.22"}, {"kind": "scripture", "ref": "1Thess.1.1"}, {"kind": "lexicon", "title": "Greek Silas; Latin Silvanus"}]}
+  {"text": "Silas and Silvanus are Greek and Latin forms of one name. Acts names Paul's companion in Corinth Silas (18:5), and Paul names Silvanus as co-sender of letters written there (1 Thessalonians 1:1).", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Acts.15.22"}, {"kind": "scripture", "ref": "1Thess.1.1"}, {"kind": "lexicon", "title": "Greek Silas; Latin Silvanus"}]}
  ],
  "confidence": "evidence",
  "sources": [

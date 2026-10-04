@@ -27,7 +27,7 @@
  ],
  "later": [
   {"text": "A tablet from the reign of Darius I or Xerxes names a Marduka as an official at Susa; some have taken him for Mordecai, but the name, meaning “of Marduk,” was common.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Keilinschriftliche Beiträge zum Buch Ezra und Esther", "author": "Arthur Ungnad", "year": 1941, "note": "Zeitschrift für die alttestamentliche Wissenschaft 58"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}], "traditions": ["Arthur Ungnad and some later scholars; doubted by others"]},
-  {"text": "The rabbis read his descent from Kish, Saul's father, against Haman's from Agag, whom Saul spared: the old war between Saul and Amalek finished.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "1Sam.15.8-9"}, {"kind": "scripture", "ref": "Esth.2.5"}, {"kind": "scripture", "ref": "Esth.3.1"}, {"kind": "primary", "title": "Babylonian Talmud, Megillah 12b–13a", "url": "https://www.sefaria.org/Megillah.13a"}], "traditions": ["the Talmud and rabbinic tradition", "many modern commentators"]}
+  {"text": "The rabbis read his descent from Kish, Saul's father, against Haman's from Agag, whom Saul spared: the old war between Saul and Amalek finished.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "1Sam.15.8-9"}, {"kind": "scripture", "ref": "Esth.2.5"}, {"kind": "scripture", "ref": "Esth.3.1"}, {"kind": "primary", "title": "Babylonian Talmud, Megillah 12b–13a", "url": "https://www.sefaria.org/Megillah.13a"}], "traditions": ["the Talmud and rabbinic tradition"]}
  ],
  "confidence": "evidence",
  "sources": [

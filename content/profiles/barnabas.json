@@ -26,7 +26,7 @@
   {"ref": "Col.4.10", "text": "Mark's cousin"}
  ],
  "later": [
-  {"text": "Tertullian names him as the author of Hebrews. The Epistle of Barnabas, from the early second century, carries his name, but scholars agree he did not write it.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Tertullian, On Modesty 20"}, {"kind": "primary", "title": "Epistle of Barnabas"}, {"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Tertullian, on Hebrews"]},
+  {"text": "Tertullian names him as the author of Hebrews. The Epistle of Barnabas, from the early second century, carries his name in its title; the letter itself names no author.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Tertullian, On Modesty 20"}, {"kind": "primary", "title": "Epistle of Barnabas"}, {"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Tertullian, on Hebrews"]},
   {"text": "The Acts of Barnabas says he was martyred at Salamis on Cyprus, where a monastery stands by the tomb shown as his.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Acts of Barnabas"}], "traditions": ["Cypriot Orthodox tradition"]}
  ],
  "confidence": "evidence",

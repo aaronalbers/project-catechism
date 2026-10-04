@@ -5,7 +5,7 @@
  "people": ["H6855"],
  "summary": "One of the seven daughters of the priest of Midian whom Moses helped at a well, given to him as wife; she bore Gershom and Eliezer. On the way back to Egypt, when the LORD sought to kill Moses, she circumcised her son with a flint knife and touched his feet with it, calling Moses a bridegroom of blood. Moses later sent her back to her father, who brought her to him in the wilderness.",
  "body": [
-  "The night encounter on the road to Egypt is one of the most obscure passages in the Torah: the LORD meets Moses and seeks to kill him, and Zipporah's quick action ends it. Whose feet she touches, and why, the text does not make plain.",
+  "On the road to Egypt the LORD meets Moses and seeks to kill him, and Zipporah's quick action ends it. Whose feet she touches, and why, the text does not make plain.",
   "She reappears only when Jethro brings her and her sons to Moses at the mountain of God, after Moses had sent her away."
  ],
  "moments": [
@@ -15,7 +15,7 @@
   {"ref": "Exod.18.2-4", "text": "Brought back by Jethro"}
  ],
  "later": [
-  {"text": "Numbers 12:1 says Miriam and Aaron spoke against Moses because of the Cushite woman he had married. Some read her as Zipporah; others as a second wife.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Num.12.1"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 2.252–253", "url": "https://www.gutenberg.org/ebooks/2848", "note": "Moses marries an Ethiopian princess, Tharbis"}], "traditions": ["Zipporah herself: Demetrius the Chronographer (3rd century BC), and some later readers", "a second, Ethiopian wife: Josephus, and many commentators"]}
+  {"text": "Numbers 12:1 says Miriam and Aaron spoke against Moses because of the Cushite woman he had married. Some read her as Zipporah; others as a second wife.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Num.12.1"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 2.252–253", "url": "https://www.gutenberg.org/ebooks/2848", "note": "Moses marries an Ethiopian princess, Tharbis"}], "traditions": ["Zipporah herself: Demetrius the Chronographer (3rd century BC)", "a second, Ethiopian wife: Josephus"]}
  ],
  "confidence": "evidence",
  "sources": [

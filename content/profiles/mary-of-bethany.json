@@ -4,7 +4,7 @@
  "role": "Sister of Martha and Lazarus, who anointed Jesus",
  "people": ["G3137J"],
  "when": "≈ AD 28–33",
- "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, AD 30 or 33 on reckonings from the gospels' weekday.",
  "summary": "Sister of Martha and Lazarus of Bethany, who sat at the Lord's feet listening while Martha served; Jesus said she had chosen the good portion, which would not be taken from her. When Lazarus died she fell at Jesus' feet weeping, and he wept. Six days before the Passover she anointed his feet with a pint of costly nard and wiped them with her hair, and the house was filled with the fragrance.",
  "body": [
   "When Judas objects to the waste, Jesus answers, “Leave her alone… She has kept this perfume in preparation for the day of My burial.” Mark and Matthew tell of an unnamed woman at Bethany who poured perfume on his head, and Jesus says that wherever the gospel is preached, what she has done will be told in memory of her."
@@ -20,7 +20,7 @@
   {"ref": "Mark.14.3-9", "text": "The anointing at Bethany"}
  ],
  "later": [
-  {"text": "Pope Gregory the Great, in a sermon of AD 591, identified her with Mary Magdalene and with the sinful woman of Luke 7; the Western church long followed him, and the Roman calendar separated them again in 1969. Eastern churches always kept them apart.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Gregory the Great, Homily 33 on the Gospels (591)"}, {"kind": "scripture", "ref": "Luke.7.36-50"}], "traditions": ["Gregory the Great and the medieval Western church", "the Eastern churches and most modern scholars, keeping them apart"]}
+  {"text": "Pope Gregory the Great, in a sermon of AD 591, identified her with Mary Magdalene and with the sinful woman of Luke 7; the Western church long followed him, and the Roman calendar separated them again in 1969. Eastern churches always kept them apart.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Gregory the Great, Homily 33 on the Gospels (591)"}, {"kind": "scripture", "ref": "Luke.7.36-50"}], "traditions": ["Gregory the Great and the medieval Western church", "the Eastern churches, keeping them apart"]}
  ],
  "confidence": "evidence",
  "sources": [

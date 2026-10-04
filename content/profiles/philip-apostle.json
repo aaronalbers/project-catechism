@@ -4,7 +4,7 @@
  "role": "Apostle from Bethsaida",
  "people": ["G5376G"],
  "when": "≈ AD 28–33",
- "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, AD 30 or 33 on reckonings from the gospels' weekday.",
  "summary": "One of the Twelve, from Bethsaida, the town of Andrew and Peter. Jesus found him and said, “Follow Me,” and Philip found Nathanael and told him they had found the one Moses and the prophets wrote about. Tested by Jesus before the feeding of the five thousand, he reckoned that two hundred denarii would not buy enough bread. At the Last Supper he asked, “Lord, show us the Father, and that will be enough for us.”",
  "body": [
   "He answers Nathanael's scorn for Nazareth with “Come and see.” Greeks at the feast come to him asking to see Jesus. Jesus answers his request at the supper: “Anyone who has seen Me has seen the Father.”"
@@ -21,7 +21,7 @@
   {"ref": "Acts.1.13", "text": "In the upper room"}
  ],
  "later": [
-  {"text": "Polycrates of Ephesus (≈AD 190) says Philip “of the twelve apostles” was buried at Hierapolis in Asia with his daughters; he may be confusing him with Philip the evangelist, who had four prophesying daughters. Excavators at Hierapolis announced a tomb they took for his in 2011.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.31.3; 5.24.2"}, {"kind": "scripture", "ref": "Acts.21.8-9"}, {"kind": "archaeology", "title": "Hierapolis excavations, Italian Archaeological Mission", "note": "Francesco D'Andria, 2011"}], "traditions": ["Polycrates", "Francesco D'Andria"]}
+  {"text": "Polycrates of Ephesus (≈AD 190) says Philip “of the twelve apostles” was buried at Hierapolis in Asia with his daughters; Philip the evangelist also had daughters who prophesied (Acts 21:8-9), and the two have been taken for one man. Excavators at Hierapolis announced a tomb they took for his in 2011.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.31.3; 5.24.2"}, {"kind": "scripture", "ref": "Acts.21.8-9"}, {"kind": "archaeology", "title": "Hierapolis excavations, Italian Archaeological Mission", "note": "Francesco D'Andria, 2011"}], "traditions": ["Polycrates", "Francesco D'Andria"]}
  ],
  "confidence": "evidence",
  "sources": [

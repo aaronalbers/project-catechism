@@ -5,7 +5,7 @@
  "people": ["H0085"],
  "genealogy": "abraham",
  "when": "≈ 2000 BC in the Bible's own reckoning",
- "whenBasis": "Genesis gives ages but no dates in any calendar we can fix. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; many historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
+ "whenBasis": "Genesis gives ages but no dates in any calendar that can be fixed. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
  "summary": "Abram son of Terah left Ur of the Chaldeans with his father, and at the LORD's call left Haran for Canaan with Sarai and Lot, promised land, offspring and a blessing for all the families of the earth. He believed the LORD, and it was credited to him as righteousness. Renamed Abraham, he fathered Ishmael by Hagar and, at a hundred, Isaac by Sarah, whom he was then told to offer on a mountain in Moriah.",
  "body": [
   "The LORD tells him to go from his country, his kindred and his father's house to a land he will be shown. He goes at seventy-five, builds altars across Canaan, goes down to Egypt in a famine and passes Sarai off as his sister, and parts from Lot, who chooses the Jordan plain. When Lot is carried off in a raid, Abram pursues the kings with 318 men and brings him back, and Melchizedek king of Salem blesses him.",
@@ -33,7 +33,7 @@
   {"ref": "Jas.2.23", "text": "“A friend of God”"}
  ],
  "later": [
-  {"text": "Ur of the Chaldeans is usually identified with the Sumerian city at Tell el-Muqayyar in southern Iraq, excavated by Leonard Woolley from 1922 to 1934. A tradition going back centuries instead places his birth near Haran, at Urfa (Şanlıurfa) in Turkey.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Excavations at Ur (Tell el-Muqayyar)", "note": "Leonard Woolley for the British Museum and the University of Pennsylvania, 1922–34"}, {"kind": "scripture", "ref": "Gen.11.28-31"}], "traditions": ["southern Ur: most scholars", "a northern Ur near Haran: Jewish and Muslim tradition at Urfa, and some scholars"]},
+  {"text": "Leonard Woolley, who excavated the Sumerian city at Tell el-Muqayyar in southern Iraq from 1922 to 1934, identified it with Ur of the Chaldeans. A tradition going back centuries instead places his birth near Haran, at Urfa (Şanlıurfa) in Turkey.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Excavations at Ur (Tell el-Muqayyar)", "note": "Leonard Woolley for the British Museum and the University of Pennsylvania, 1922–34"}, {"kind": "scripture", "ref": "Gen.11.28-31"}], "traditions": ["southern Ur: Leonard Woolley, its excavator", "a northern Ur near Haran: Jewish and Muslim tradition at Urfa"]},
   {"text": "Judaism, Christianity and Islam all honour him as a patriarch. The Qur'an tells of Ibrahim and Ismail raising the foundations of the House in Mecca.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Qur'an 2:127"}]}
  ],
  "confidence": "evidence",

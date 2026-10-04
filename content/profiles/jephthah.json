@@ -24,7 +24,7 @@
   {"ref": "Heb.11.32", "text": "Among the faithful"}
  ],
  "later": [
-  {"text": "Most ancient readers, Jewish and Christian, understood that he offered her as a burnt offering. Some medieval and later interpreters read it instead as dedicating her to lifelong virginity, from the note that she had never known a man (11:39).", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 5.263–266", "url": "https://www.gutenberg.org/ebooks/2848"}, {"kind": "scripture", "ref": "Judg.11.39"}], "traditions": ["a sacrifice: Josephus and most ancient readers", "lifelong virginity: David Kimhi and some medieval and later interpreters"]}
+  {"text": "Josephus understood that he offered her as a burnt offering. Some medieval and later interpreters read it instead as dedicating her to lifelong virginity, from the note that she had never known a man (11:39).", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 5.263–266", "url": "https://www.gutenberg.org/ebooks/2848"}, {"kind": "scripture", "ref": "Judg.11.39"}], "traditions": ["a sacrifice: Josephus", "lifelong virginity: David Kimhi and some medieval and later interpreters"]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -5,7 +5,7 @@
  "people": ["H3130G"],
  "genealogy": "joseph",
  "when": "≈ 1900–1800 BC in the Bible's own reckoning",
- "whenBasis": "Genesis gives ages but no dates in any calendar we can fix. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; many historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
+ "whenBasis": "Genesis gives ages but no dates in any calendar that can be fixed. Counting back from 1 Kings 6:1's 480 years and the 430 years in Egypt (Exodus 12:40) puts Abraham ≈2000 BC; historians who place the exodus later, or read the numbers as schematic, put the patriarchs later or decline to date them.",
  "summary": "Rachel's firstborn and Jacob's favourite, given a robe of many colors. His brothers, hating him for it and for his dreams, sold him to traders bound for Egypt. A slave in Potiphar's house and then a prisoner, he interpreted the dreams of Pharaoh's officials and of Pharaoh, and was set over Egypt to store grain against the famine. When his brothers came to buy food he tested them, then made himself known and brought Jacob's household to Egypt.",
  "body": [
   "At seventeen he brings his father bad reports of his brothers and tells them his dreams, of their sheaves and then the sun, moon and stars bowing to him. Sent to find them at Dothan, he is stripped of his robe and thrown into a dry cistern, then sold for twenty shekels of silver; they dip the robe in goat's blood for Jacob.",
@@ -32,7 +32,7 @@
   {"ref": "Josh.24.32", "text": "Buried at Shechem"}
  ],
  "later": [
-  {"text": "Genesis dresses the story in Egyptian detail: dream interpretation, embalming, an Egyptian name and wife, and his death at 110 years, the ideal length of life in Egyptian texts.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.50.26"}, {"kind": "scholarship", "title": "Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition", "author": "James K. Hoffmeier", "year": 1997}]},
+  {"text": "James Hoffmeier points to the story's Egyptian detail: dream interpretation, embalming, an Egyptian name and wife, and his death at 110 years, the ideal length of life in Egyptian texts.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.50.26"}, {"kind": "scholarship", "title": "Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition", "author": "James K. Hoffmeier", "year": 1997}]},
   {"text": "The Qur'an tells his story in its twelfth sura, Yusuf, which calls it the most beautiful of stories.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Qur'an 12:3"}]}
  ],
  "confidence": "evidence",

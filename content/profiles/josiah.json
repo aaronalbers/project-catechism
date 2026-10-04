@@ -26,7 +26,7 @@
   {"ref": "2Chr.35.25", "text": "Jeremiah's laments"}
  ],
  "later": [
-  {"text": "Since W. M. L. de Wette (1805), most scholars identify the book found in the temple with Deuteronomy, or a core of it, because Josiah's reforms follow its laws on a single sanctuary and on the Passover.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Dissertatio critica", "author": "W. M. L. de Wette", "year": 1805}, {"kind": "scripture", "ref": "Deut.12.1-14"}, {"kind": "scripture", "ref": "Deut.16.1-8"}], "traditions": ["W. M. L. de Wette and most modern scholars"]}
+  {"text": "W. M. L. de Wette (1805) identified the book found in the temple with Deuteronomy, or a core of it, because Josiah's reforms follow its laws on a single sanctuary and on the Passover.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Dissertatio critica", "author": "W. M. L. de Wette", "year": 1805}, {"kind": "scripture", "ref": "Deut.12.1-14"}, {"kind": "scripture", "ref": "Deut.16.1-8"}], "traditions": ["W. M. L. de Wette and those who follow him"]}
  ],
  "confidence": "evidence",
  "sources": [

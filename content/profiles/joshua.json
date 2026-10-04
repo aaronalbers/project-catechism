@@ -4,7 +4,7 @@
  "role": "Moses' successor, who led Israel into Canaan",
  "people": ["H3091G"],
  "when": "≈ 15th or 13th century BC",
- "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC; many historians put it under Ramesses II, ≈1270s–1250s BC. The text gives no date in a calendar we can fix.",
+ "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC; others, Kenneth Kitchen among them, put it under Ramesses II, ≈1270s–1250s BC. The text gives no date in a calendar that can be fixed.",
  "summary": "Son of Nun, of Ephraim, Moses' assistant, who led Israel against Amalek and went with Moses up the mountain of God. One of the two spies who trusted the LORD, he was commissioned to succeed Moses. He led the people across the Jordan, took Jericho and Ai, fought the kings of the south and north, divided the land among the tribes, and before he died at 110 called them to choose whom they would serve.",
  "body": [
   "Moses renames him from Hoshea to Joshua, which means the LORD saves. He fights Amalek while Moses holds up his hands, stays in the tent of meeting after Moses leaves, and, with Caleb, pleads with the people to trust the LORD after the spies' report. Moses lays hands on him before Eleazar.",
@@ -28,7 +28,7 @@
   {"ref": "Josh.24.29-30", "text": "Dies at 110"}
  ],
  "later": [
-  {"text": "Kathleen Kenyon's excavations at Tell es-Sultan (1952–58) dated the destruction of Jericho's last walled city to ≈1550 BC and found little of a town in the following centuries, which fits neither date of the conquest easily. Bryant Wood (1990) re-dated the destruction to ≈1400 BC. Most archaeologists follow Kenyon.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Excavations at Jericho (Tell es-Sultan)", "note": "Kathleen Kenyon, British School of Archaeology in Jerusalem, 1952–58"}, {"kind": "scholarship", "title": "Did the Israelites Conquer Jericho? A New Look at the Archaeological Evidence", "author": "Bryant G. Wood", "year": 1990, "note": "Biblical Archaeology Review 16:2"}], "traditions": ["≈1550 BC: Kathleen Kenyon and most archaeologists", "≈1400 BC: Bryant G. Wood"]}
+  {"text": "Kathleen Kenyon's excavations at Tell es-Sultan (1952–58) dated the destruction of Jericho's last walled city to ≈1550 BC and found little of a town in the following centuries. Bryant Wood (1990) re-dated the destruction to ≈1400 BC.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Excavations at Jericho (Tell es-Sultan)", "note": "Kathleen Kenyon, British School of Archaeology in Jerusalem, 1952–58"}, {"kind": "scholarship", "title": "Did the Israelites Conquer Jericho? A New Look at the Archaeological Evidence", "author": "Bryant G. Wood", "year": 1990, "note": "Biblical Archaeology Review 16:2"}], "traditions": ["≈1550 BC: Kathleen Kenyon", "≈1400 BC: Bryant G. Wood"]}
  ],
  "confidence": "evidence",
  "sources": [

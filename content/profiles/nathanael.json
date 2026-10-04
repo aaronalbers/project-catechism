@@ -4,7 +4,7 @@
  "role": "Disciple from Cana whom Jesus saw under the fig tree",
  "people": ["G3482"],
  "when": "≈ AD 28–33",
- "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, AD 30 or 33 on reckonings from the gospels' weekday.",
  "summary": "A man of Cana in Galilee whom Philip brought to Jesus. Told they had found the one Moses wrote about, Jesus of Nazareth, he asked, “Can anything good come from Nazareth?” Jesus called him a true Israelite in whom there is no deceit, and said he had seen him under the fig tree before Philip called him. Nathanael answered, “Rabbi… You are the Son of God! You are the King of Israel!”",
  "body": [
   "Jesus promises he will see greater things: heaven opened and the angels of God ascending and descending on the Son of Man. He is among the seven disciples fishing on the Sea of Tiberias when the risen Jesus appears on the shore."
@@ -19,7 +19,7 @@
   {"ref": "John.21.2", "text": "From Cana, fishing"}
  ],
  "later": [
-  {"text": "The other gospels never name him, and John never names Bartholomew; because Bartholomew is a family name (son of Tolmai) and is paired with Philip in the lists, many identify the two.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.10.3"}, {"kind": "scripture", "ref": "John.1.45"}], "traditions": ["many commentators, from the Middle Ages on"]}
+  {"text": "The other gospels never name him, and John never names Bartholomew; because Bartholomew is a family name (son of Tolmai) and is paired with Philip in the lists, some identify the two.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.10.3"}, {"kind": "scripture", "ref": "John.1.45"}], "traditions": ["commentators from the Middle Ages on"]}
  ],
  "confidence": "evidence",
  "sources": [

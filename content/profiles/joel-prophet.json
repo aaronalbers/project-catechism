@@ -19,7 +19,7 @@
   {"ref": "Rom.10.13", "text": "Quoted by Paul"}
  ],
  "later": [
-  {"text": "Some date him early, under the boy-king Joash, because the book names no king; most modern scholars date it after the return from exile.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Joel and Amos (Hermeneia)", "author": "Hans Walter Wolff", "year": 1977}], "traditions": ["early: some traditional commentators", "after the exile: Hans Walter Wolff and most modern scholars"]}
+  {"text": "Keil and Delitzsch date him early, under the boy-king Joash, because the book names no king; Hans Walter Wolff dates it after the return from exile.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Joel and Amos (Hermeneia)", "author": "Hans Walter Wolff", "year": 1977}], "traditions": ["early: Keil and Delitzsch", "after the exile: Hans Walter Wolff"]}
  ],
  "confidence": "evidence",
  "sources": [

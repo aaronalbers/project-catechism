@@ -19,7 +19,7 @@
    "label": "Before the exile",
    "base": "shekel",
    "days": 30,
-   "basis": "A day’s wage was about a thirtieth of a shekel of silver. Hammurabi’s laws pay a hired labourer six grains (she) of silver a day for the first five months of the year and five after, and 180 grains make a shekel (§273). Micah pays his Levite ten shekels a year with clothes and food (Judg 17:10), which is ten shekels for ≈300 days’ work. The figure is applied from Genesis to the fall of Jerusalem, though wages surely varied over those centuries.",
+   "basis": "A day’s wage was about a thirtieth of a shekel of silver. Hammurabi’s laws pay a hired labourer six grains (she) of silver a day for the first five months of the year and five after, and 180 grains make a shekel (§273). Micah pays his Levite ten shekels a year with clothes and food (Judg 17:10), which is ten shekels for ≈300 days’ work. The figure is applied from Genesis to the fall of Jerusalem, though wages may have varied over those centuries.",
    "units": [
     {"id": "shekel", "name": "shekel", "plural": "shekels", "value": 1, "basis": "A weight of silver, about 11.4 g (the BSB’s figure)."},
     {"id": "gerah", "name": "gerah", "plural": "gerahs", "value": 0.05, "basis": "Twenty gerahs to the shekel (Exod 30:13)."},
@@ -975,7 +975,7 @@
     {"quote": "10,000 talents of silver", "n": 10000, "unit": "talent"}
    ],
    "uncounted": "the bronze and iron",
-   "note": "The daric was a Persian coin first struck about 500 years after David: the Chronicler gives the sum in the money of his own day."
+   "note": "The daric was a Persian coin first struck about 500 years after David."
   },
   {
    "id": "dedication-sacrifices",

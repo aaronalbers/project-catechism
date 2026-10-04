@@ -277,3 +277,54 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
   check for those books with an English pattern only, since they have no interlinear.
 - **The mina before the exile** is taken as 50 shekels. Ezekiel 45:12 makes it 60, and 1 Kgs 10:17 with 2 Chr 9:16
   implies 100. The unit's basis says so, but nothing shows how far the three readings move each sum.
+
+## Holders named from memory, and views still without one, recorded 2026-10-04
+
+The review of all curated content against "the project has no opinions of its own" replaced majority words and the
+project's own readings with named holders. Some holders were named from knowledge of the literature, not from a copy
+read in the session. Each needs checking against the work, and correcting or removing if the work does not say it.
+
+### Named from memory
+
+- **Insight cards:** Richard Pervo (*Dating Acts*, 2006) on Luke placing Josephus's Theudas too early
+  (`theudas-and-judas`); William Horbury questioning the Caiaphas ossuary on the spelling (`caiaphas-ossuary`, and the
+  `caiaphas` profile); Hayim Tadmor's reconstruction of Samaria's fall under Shalmaneser and Sargon (`sargon-samaria`);
+  John Kent dating the Erastus pavement to the mid-first century (`erastus-inscription`); J. B. Lightfoot, G. S. Duncan
+  and Gerald Hawthorne for Rome, Ephesus and Caesarea (`praetorium-philippians`); E. Randolph Richards reading 1 Peter
+  5:12 as naming the carrier (`amanuensis-dictation`); Robert Hubbard reading Ruth 4 as a court and the book's theme as
+  hesed (`sandal-at-the-gate`); Wink's soldier punished for exceeding his allowance (`extra-mile-angareia`); the
+  Douay-Rheims wording of Genesis 4:13 (`word-h5771-avon`); Frank Yurco on the determinative (`merneptah-stele`).
+- **Profiles:** Kenneth Kitchen as a holder of the 13th-century exodus (the `whenBasis` of Moses, Aaron, Miriam,
+  Joshua and Caleb); R. T. France on the Bethlehem infants (`herod-the-great`); Raymond Brown doubting it; H. G. M.
+  Williamson for the 458 BC order (`ezra`, `artaxerxes`); Louis Hartman and Alexander Di Lella seeing an error in
+  "father" (`belshazzar`); Keil and Delitzsch dating Joel under Joash (`joel-prophet`, and `writers.json`); Davies and
+  Allison on Matthew's authorship (`matthew`, `writers.json`); John Collins on Daniel 4 and the Prayer of Nabonidus
+  (`nebuchadnezzar`, and `rulers.json` on Antiochus IV); Raymond Brown's later view of the beloved disciple
+  (`john-son-of-zebedee`); Jack Sasson on Jonah as a didactic story (`jonah`); J. B. Lightfoot placing Philemon at
+  Colossae (`philemon`, and the `luke` note on Colossians 4:11); Jerome identifying Thaddaeus with Judas son of James
+  (`thaddaeus`); I. Howard Marshall on the Pastorals (`timothy`, `writers.json`); Carol and Eric Meyers on Second
+  Zechariah (`zechariah-prophet`); Daniel Schwartz for AD 19 as Pilate's start (`pontius-pilate`, `rulers.json`);
+  Julius Wellhausen as the holder for the Torah's composition (`moses`).
+- **Other files:** Leopold Zunz (1832) for one Chronicler (`scrolls.json`); Robert Gundry reading Hosea 11:1 in
+  Matthew as typology and Rashi reading Isaiah's Servant as Israel (`prophecies.json`); Kenneth Kitchen's ≈925 BC for
+  Shishak (`models.json`, already listed above under Reigns).
+
+### Views still held by an unnamed group
+
+- **`writers.json`** names the critical view as "critical scholarship" or "modern scholarship" for most books, after
+  its majority words ("most", "near-universal", "virtually everyone") were cut. *Needed:* a survey that reports the
+  field (Raymond Brown's *Introduction to the New Testament*; John J. Collins's *Introduction to the Hebrew Bible*),
+  cited for what it says, or named scholars for each book.
+- **Profiles** whose traditions still read "some commentators", "other readers" or "traditional readers":
+  `adam`, `ahithophel` (Bathsheba's grandfather), `cleopas`, `james-brother-of-jesus` (a later writer of James),
+  `john-mark` (the young man in Gethsemane), `joseph-husband-of-mary` (Luke's line as Mary's), `judas-barsabbas`,
+  `nathanael`, `nicodemus`, `simon-of-cyrene`, `vashti`, `zechariah-prophet`, `zephaniah-prophet`, `zerubbabel`,
+  `elihu` (the speeches as integral), `herod-the-great` (the Herodium tomb doubted).
+- **Insight cards:** the one-beating and two-beating readings of Jesus' flogging (`flogged-and-crucified`); who first
+  claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads Ketef Hinnom in the Persian
+  period (dropped from `ketef-hinnom-scrolls`); who reads Joel's locusts as four species or as stages
+  (`joel-locusts-1915`); who reads the Song of Ascents heading as pilgrims' songs or as step-parallelism
+  (`going-up-to-jerusalem`); who holds 586 BC for Obadiah besides Hirsch and Barton.
+- **The mechanism of the Galilee squalls** (`galilee-squalls`, `consensus`) is not cited to any meteorological source;
+  only the survey figures are. *Needed:* a limnological or meteorological study of the lake's winds, or the badge
+  lowered.

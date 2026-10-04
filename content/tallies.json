@@ -5,7 +5,7 @@
   "ref": "Num.1.20-46",
   "unit": "men twenty and older able to serve",
   "confidence": "evidence",
-  "summary": "Numbered in the Wilderness of Sinai in the second year after the Exodus. Levi is left out (1:47–49), and Joseph is counted as two tribes, Ephraim and Manasseh, so there are still twelve. The twelve figures add up exactly to the 603,550 of 1:46, and the same total is given for the tabernacle's silver in Exodus 38:26. Every figure but Gad's (45,650) is a round hundred. How large the numbers are is debated: 'thousand' translates the Hebrew ʾeleph, which some scholars read here as a clan or military unit rather than a thousand.",
+  "summary": "Numbered in the Wilderness of Sinai in the second year after the Exodus. Levi is left out (1:47–49), and Joseph is counted as two tribes, Ephraim and Manasseh, so there are still twelve. The twelve figures add up exactly to the 603,550 of 1:46, and the same total is given for the tabernacle's silver in Exodus 38:26. Every figure but Gad's (45,650) is a round hundred. How large the numbers are is debated: 'thousand' translates the Hebrew ʾeleph, which George Mendenhall and Colin Humphreys read here as a clan or military unit rather than a thousand.",
   "rows": [
    {"ref": "Num.1.21", "label": "Reuben", "count": 46500, "quote": "46,500"},
    {"ref": "Num.1.23", "label": "Simeon", "count": 59300, "quote": "59,300"},
@@ -35,7 +35,7 @@
   "unit": "men twenty and older able to serve",
   "confidence": "evidence",
   "compare": "num1-census",
-  "summary": "Numbered on the plains of Moab at the end of the wilderness years: not one man from the first census was left except Caleb and Joshua (26:64–65). The total barely moves, 1,820 fewer than the 603,550 of Numbers 1, but the tribes do. Simeon falls by 37,100 to 22,200, from the third largest to the smallest; Manasseh grows by 20,500 and now comes before Ephraim, which fell by 8,000. The text does not say why Simeon shrank. The plague at Peor had just killed 24,000 (25:9) and the man at its centre was a Simeonite chief (25:14), and readers often connect the two, but that is an inference. The Levites are counted apart again, 23,000 males a month old or more (26:62).",
+  "summary": "Numbered on the plains of Moab at the end of the wilderness years: not one man from the first census was left except Caleb and Joshua (26:64–65). The total barely moves, 1,820 fewer than the 603,550 of Numbers 1, but the tribes do. Simeon falls by 37,100 to 22,200, from the third largest to the smallest; Manasseh grows by 20,500 and now comes before Ephraim, which fell by 8,000. The text does not say why Simeon shrank. The plague at Peor had just killed 24,000 (25:9) and the man at its centre was a Simeonite chief (25:14), and the two have been connected, though the text does not connect them. The Levites are counted apart again, 23,000 males a month old or more (26:62).",
   "rows": [
    {"ref": "Num.26.7", "label": "Reuben", "count": 43730, "quote": "43,730"},
    {"ref": "Num.26.14", "label": "Simeon", "count": 22200, "quote": "22,200"},

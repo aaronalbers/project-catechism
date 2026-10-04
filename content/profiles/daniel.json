@@ -24,8 +24,8 @@
   {"ref": "Matt.24.15", "text": "“Spoken of by the prophet Daniel”"}
  ],
  "later": [
-  {"text": "The book was written by Daniel in the sixth century BC, and its visions foretell the kingdoms after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Josephus (Antiquities 11.337)", "many evangelical scholars"], "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 11.337", "note": "Alexander is shown the book of Daniel"}]},
-  {"text": "The book was completed ≈167–164 BC under Antiochus IV, whose persecution chapters 8 and 11 describe closely, and whose death they do not.", "confidence": "interpretation", "traditions": ["Porphyry (3rd century, known through Jerome)", "most historical-critical scholarship"], "sources": [{"kind": "primary", "title": "Jerome, Commentary on Daniel, prologue", "note": "answers Porphyry's dating"}, {"kind": "scholarship", "title": "Daniel (Hermeneia)", "author": "John J. Collins", "year": 1993}]}
+  {"text": "The book was written by Daniel in the sixth century BC, and its visions foretell the kingdoms after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Josephus (Antiquities 11.337)", "Jerome, answering Porphyry"], "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 11.337", "note": "Alexander is shown the book of Daniel"}]},
+  {"text": "The book was completed ≈167–164 BC under Antiochus IV, whose persecution, on this reading, chapters 8 and 11 describe closely, and whose death they do not.", "confidence": "interpretation", "traditions": ["Porphyry (3rd century, known through Jerome)", "John J. Collins (Hermeneia)"], "sources": [{"kind": "primary", "title": "Jerome, Commentary on Daniel, prologue", "note": "answers Porphyry's dating"}, {"kind": "scholarship", "title": "Daniel (Hermeneia)", "author": "John J. Collins", "year": 1993}]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -26,8 +26,8 @@
   {"ref": "John.19.37", "text": "Read of the cross"}
  ],
  "later": [
-  {"text": "Chapters 9–14 have no dates, visions or named figures of the return, and many scholars assign them to a later hand (Second Zechariah).", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Haggai, Zechariah 1–8 (Anchor Bible 25B)", "author": "Carol L. Meyers and Eric M. Meyers", "year": 1987}], "traditions": ["one author: traditional readers", "a later author for chapters 9–14: many historical-critical scholars"]},
-  {"text": "Jesus speaks of Zechariah son of Berechiah, murdered between the sanctuary and the altar. Some take him to be this prophet; others the priest Zechariah son of Jehoiada, stoned in the temple court.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.23.35"}, {"kind": "scripture", "ref": "2Chr.24.20-22"}], "traditions": ["this prophet: some ancient and modern readers", "son of Jehoiada: many commentators, and Theographic's data"]}
+  {"text": "Chapters 9–14 have no dates, visions or named figures of the return, and Carol and Eric Meyers assign them to a later hand (Second Zechariah).", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Haggai, Zechariah 1–8 (Anchor Bible 25B)", "author": "Carol L. Meyers and Eric M. Meyers", "year": 1987}], "traditions": ["one author: traditional readers", "a later author for chapters 9–14: Carol and Eric Meyers"]},
+  {"text": "Jesus speaks of Zechariah son of Berechiah, murdered between the sanctuary and the altar. Some take him to be this prophet; others the priest Zechariah son of Jehoiada, stoned in the temple court.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Matt.23.35"}, {"kind": "scripture", "ref": "2Chr.24.20-22"}], "traditions": ["this prophet: some ancient and modern readers", "son of Jehoiada: some commentators, and Theographic's data"]}
  ],
  "confidence": "evidence",
  "sources": [

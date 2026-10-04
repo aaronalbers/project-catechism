@@ -82,7 +82,7 @@
    }
   ],
   "estimated": true,
-  "notes": "931 BC for the division of the kingdom is the anchor of most chronologies, worked back from Assyrian records that date Ahab (853) and Jehu (841).",
+  "notes": "931 BC for the division of the kingdom is Thiele's anchor, worked back from Assyrian records that date Ahab (853) and Jehu (841).",
   "predecessor": "david"
  },
  {
@@ -1686,7 +1686,7 @@
     "title": "Persepolis inscriptions; Herodotus 7"
    }
   ],
-  "notes": "Identification of Esther's Ahasuerus with Xerxes is the majority view; the Septuagint calls him Artaxerxes."
+  "notes": "Carey Moore identifies Esther's Ahasuerus with Xerxes; the Septuagint calls him Artaxerxes."
  },
  {
   "id": "artaxerxes1",
@@ -1727,7 +1727,7 @@
     "note": "the desecration of the temple, 167 BC"
    }
   ],
-  "notes": "Daniel 8 and 11 are read by most scholars as describing his reign; the Bible names him only in 1 Maccabees."
+  "notes": "Daniel 8 and 11 are read by Porphyry and by critical scholars after him, John J. Collins among them, as describing his reign; the Bible names him only in 1 Maccabees."
  },
  {
   "id": "herod-great",
@@ -1895,7 +1895,7 @@
    }
   ],
   "estimated": true,
-  "notes": "Josephus places his arrival under Tiberius and his recall before Tiberius' death; 26–36 is the usual reconstruction. Some argue for AD 19 as the start."
+  "notes": "Josephus places his arrival under Tiberius and his recall before Tiberius' death; 26–36 is the reckoning drawn here; Daniel Schwartz argues for AD 19 as the start."
  },
  {
   "id": "caiaphas",
@@ -1962,7 +1962,7 @@
    {
     "kind": "primary",
     "title": "Suetonius, Life of Claudius 25.4",
-    "note": "'expelled the Jews from Rome' — the expulsion Acts 18:2 mentions, usually dated AD 49"
+    "note": "'expelled the Jews from Rome' — the expulsion Acts 18:2 mentions, dated AD 49 by Orosius"
    }
   ]
  },

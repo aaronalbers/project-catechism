@@ -4,10 +4,10 @@
  "role": "King of Persia in the book of Esther",
  "people": ["H0325"],
  "when": "≈ 486–465 BC reigned",
- "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. Identification of Esther's Ahasuerus with Xerxes is the majority view; the Septuagint calls him Artaxerxes.",
+ "whenBasis": "The reign as the rulers' data dates it, from sources outside the Bible. Carey Moore identifies Esther's Ahasuerus with Xerxes; the Septuagint calls him Artaxerxes.",
  "summary": "The king who reigned over 127 provinces from India to Cush, called Ahasuerus in Hebrew. In his third year he deposed Queen Vashti for refusing to come to his banquet; in his seventh Esther became queen. He let Haman issue a decree to destroy the Jews, then, reminded on a sleepless night that Mordecai had saved his life, had Haman hanged and gave Mordecai his signet ring and the right to let the Jews defend themselves.",
  "body": [
-  "Esther shows a king ruled by his advisers and his temper: a decree against every disobedient wife on Memucan's word, the Jews' destruction on Haman's. A law of the Medes and Persians cannot be revoked, so the second decree does not cancel the first; it lets the Jews fight back. The book ends with the tribute he laid on the land and Mordecai second only to him.",
+  "In Esther the king acts on his advisers' words: a decree against every disobedient wife on Memucan's word, the Jews' destruction on Haman's. A law of the Medes and Persians cannot be revoked, so the second decree does not cancel the first; it lets the Jews fight back. The book ends with the tribute he laid on the land and Mordecai second only to him.",
   "Ezra 4:6 records an accusation against Judah and Jerusalem at the start of his reign."
  ],
  "moments": [
@@ -26,7 +26,7 @@
   {"ref": "Ezra.4.6", "text": "An accusation"}
  ],
  "later": [
-  {"text": "Ahasuerus is the Hebrew form of the Persian Xšayāršā, the name the Greeks wrote Xerxes; most scholars identify him with Xerxes I. The Greek Esther calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "lexicon", "title": "Hebrew ʾăḥašwērôš, Old Persian Xšayāršā"}, {"kind": "primary", "title": "Greek Esther (Septuagint) 1:1"}]},
+  {"text": "Ahasuerus is the Hebrew form of the Persian Xšayāršā, the name the Greeks wrote Xerxes; Carey Moore identifies him with Xerxes I. The Greek Esther calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "lexicon", "title": "Hebrew ʾăḥašwērôš, Old Persian Xšayāršā"}, {"kind": "primary", "title": "Greek Esther (Septuagint) 1:1"}]},
   {"text": "Herodotus tells of his invasion of Greece in 480 BC and names his queen Amestris.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Herodotus, Histories 7.61, 7.114, 9.108–112"}]}
  ],
  "confidence": "evidence",

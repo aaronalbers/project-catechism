@@ -89,7 +89,7 @@
    "basis": "Mark calls the day of the crucifixion 'Preparation Day (that is, the day before the Sabbath)' (15:42), and Luke has the women rest on the Sabbath and come to the tomb on the first day of the week with no day between (23:54–24:1). John's 'High Sabbath' (19:31) is then the weekly Sabbath falling in the Passover week.",
    "thirdDay": "Friday is the first day, the Sabbath the second, Sunday the third: counted inclusively, as Esther's 'three days' end 'on the third day' (Esth 4:16–5:1).",
    "nights": "Only two nights, Friday's and Saturday's. The reading takes 'three days and three nights' as an idiom for the same inclusive span, a part of a day counting as a whole day and night; Matthew himself sets 'after three days' beside 'until the third day' (27:63–64).",
-   "traditions": ["The church's observance of Good Friday and Easter since the early centuries", "Most commentators, among them Harold Hoehner"],
+   "traditions": ["The church's observance of Good Friday and Easter since the early centuries", "Harold Hoehner"],
    "sources": [
     {"kind": "scripture", "ref": "Mark.15.42"},
     {"kind": "scripture", "ref": "Luke.23.54-24.1"},
@@ -97,7 +97,7 @@
     {"kind": "scripture", "ref": "Esth.4.16-5.1", "note": "'three days, night or day', ending 'on the third day'"},
     {"kind": "scripture", "ref": "1Sam.30.12-13", "note": "'three days and three nights' beside 'three days ago'"},
     {"kind": "primary", "title": "Babylonian Talmud, Pesachim 4a", "url": "https://www.sefaria.org/Pesachim.4a", "note": "'the legal status of part of the day is like that of an entire day' (William Davidson translation)"},
-    {"kind": "primary", "title": "Jerusalem Talmud, Shabbat 9:3", "url": "https://www.sefaria.org/Jerusalem_Talmud_Shabbat.9.3", "note": "Eleazar ben Azariah: 'day and night each are a term, and part of a term is like the whole' (Guggenheimer's translation); the rendering usually quoted for Matthew 12:40 makes a day and a night one term"},
+    {"kind": "primary", "title": "Jerusalem Talmud, Shabbat 9:3", "url": "https://www.sefaria.org/Jerusalem_Talmud_Shabbat.9.3", "note": "Eleazar ben Azariah: 'day and night each are a term, and part of a term is like the whole' (Guggenheimer's translation); the rendering quoted for Matthew 12:40 makes a day and a night one term"},
     {"kind": "scholarship", "title": "Chronological Aspects of the Life of Christ", "author": "Harold W. Hoehner", "year": 1977, "note": "ch. 4, 'The Day of Christ's Crucifixion', weighs the Wednesday, Thursday and Friday views and holds Friday"}
    ]
   },

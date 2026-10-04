@@ -28,7 +28,7 @@
  ],
  "later": [
   {"text": "Eusebius says he was the first bishop of Ephesus; a later account of his martyrdom has him killed there.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.4.5"}, {"kind": "primary", "title": "Acts of Timothy"}], "traditions": ["Eusebius", "Catholic and Orthodox tradition"]},
-  {"text": "Whether Paul wrote the letters to Timothy and Titus is disputed; many scholars date them after his death.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Pastoral Epistles (International Critical Commentary)", "author": "I. Howard Marshall", "year": 1999}], "traditions": ["by Paul: traditional readers and some scholars", "by a later follower: many historical-critical scholars"]}
+  {"text": "Whether Paul wrote the letters to Timothy and Titus is disputed; I. Howard Marshall holds them written by a follower soon after his death.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "The Pastoral Epistles (International Critical Commentary)", "author": "I. Howard Marshall", "year": 1999}], "traditions": ["by Paul: traditional readers", "by a follower soon after his death: I. Howard Marshall"]}
  ],
  "confidence": "evidence",
  "sources": [

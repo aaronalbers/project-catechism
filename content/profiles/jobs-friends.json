@@ -5,7 +5,7 @@
  "people": ["H0464H", "H1085", "H6691"],
  "summary": "Eliphaz the Temanite, Bildad the Shuhite and Zophar the Naamathite, who came to sympathise with Job and comfort him. They wept, tore their robes, and sat with him on the ground seven days and nights without a word. When Job cursed his day, they answered him in turn: the innocent do not perish, God does not reject the blameless, Job suffers less than his iniquity deserves. At the end the LORD said they had not spoken of Him accurately, as Job had, and told them to offer sacrifices and have Job pray for them.",
  "body": [
-  "Eliphaz speaks first and most gently, telling of a spirit that passed before his face in the night; by his third speech he accuses Job of great wickedness. Bildad appeals to the tradition of the fathers; Zophar, bluntest, has no third speech. Job calls them miserable comforters.",
+  "Eliphaz speaks first, telling of a spirit that passed before his face in the night; by his third speech he accuses Job of great wickedness. Bildad appeals to the tradition of the fathers; Zophar has no third speech. Job calls them miserable comforters.",
   "Paul quotes Eliphaz as scripture: “He catches the wise in their craftiness.”"
  ],
  "moments": [
@@ -23,7 +23,7 @@
   {"ref": "1Cor.3.19", "text": "Paul quotes Eliphaz"}
  ],
  "later": [
-  {"text": "Teman is a clan and region of Edom elsewhere in the Bible, and Shuah a son of Abraham by Keturah. The Greek Job's closing addition makes Eliphaz a king of the Temanites of Esau's line, Bildad ruler of the Shuhites and Zophar king of the Minaeans.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Gen.36.11"}, {"kind": "scripture", "ref": "Gen.25.2"}, {"kind": "scripture", "ref": "Jer.49.7"}, {"kind": "primary", "title": "Septuagint, Job 42:17 (the addition)"}], "traditions": ["the Septuagint's addition", "many commentators, on the place names"]}
+  {"text": "Teman is a clan and region of Edom elsewhere in the Bible, and Shuah a son of Abraham by Keturah. The Greek Job's closing addition makes Eliphaz a king of the Temanites of Esau's line, Bildad ruler of the Shuhites and Zophar king of the Minaeans.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Gen.36.11"}, {"kind": "scripture", "ref": "Gen.25.2"}, {"kind": "scripture", "ref": "Jer.49.7"}, {"kind": "primary", "title": "Septuagint, Job 42:17 (the addition)"}], "traditions": ["the Septuagint's addition"]}
  ],
  "confidence": "evidence",
  "sources": [

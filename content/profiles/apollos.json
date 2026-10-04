@@ -21,7 +21,7 @@
   {"ref": "Titus.3.13", "text": "Equipped for the journey"}
  ],
  "later": [
-  {"text": "Martin Luther suggested that Apollos wrote the letter to the Hebrews; many modern scholars count him a likely candidate.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Martin Luther and some modern scholars"]}
+  {"text": "Martin Luther suggested that Apollos wrote the letter to the Hebrews; Craig Koester lists him among the candidates proposed since.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Martin Luther"]}
  ],
  "confidence": "evidence",
  "sources": [

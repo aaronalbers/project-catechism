@@ -16,7 +16,7 @@
   {"ref": "Mic.5.6", "text": "“The land of Nimrod”"}
  ],
  "later": [
-  {"text": "Josephus makes Nimrod the one who stirred people to build the tower of Babel in defiance of God, a reading many later retellings follow.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 1.113–114", "url": "https://www.gutenberg.org/ebooks/2848"}], "traditions": ["Josephus", "later Jewish and Christian retellings"]}
+  {"text": "Josephus makes Nimrod the one who stirred people to build the tower of Babel in defiance of God, a reading later retellings follow.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 1.113–114", "url": "https://www.gutenberg.org/ebooks/2848"}], "traditions": ["Josephus", "later Jewish and Christian retellings"]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -5,7 +5,7 @@
  "people": ["H4872"],
  "genealogy": "moses",
  "when": "≈ 15th or 13th century BC",
- "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC. Many historians put it under Ramesses II, ≈1270s–1250s BC, taking Exodus 1:11's store city Rameses as his. The text gives no date in any calendar we can fix.",
+ "whenBasis": "1 Kings 6:1 puts the exodus 480 years before Solomon's fourth year, ≈1446 BC. Others, Kenneth Kitchen among them, put it under Ramesses II, ≈1270s–1250s BC, taking Exodus 1:11's store city Rameses as his. The text gives no date in any calendar that can be fixed.",
  "summary": "A Levite hidden in the Nile and raised by Pharaoh's daughter, Moses fled to Midian after killing an Egyptian and met the LORD in the burning bush. He led Israel out of Egypt, received the Law at Sinai, led the people forty years in the wilderness, and died on Mount Nebo in sight of the land.",
  "body": [
   "Born when Pharaoh has ordered Hebrew boys drowned, he is set afloat in a basket, found by Pharaoh's daughter and nursed by his own mother. She names him Moses, “I drew him out of the water.” Grown, he kills an Egyptian beating a Hebrew and flees to Midian, where he marries Zipporah and keeps Jethro's flocks.",
@@ -26,7 +26,7 @@
   {"ref": "Deut.34.10", "text": "No prophet like Moses"}
  ],
  "later": [
-  {"text": "Tradition holds that Moses wrote the Torah; the Talmud gives the last eight verses, on his death, to Joshua. Most critical scholars see the five books as compiled from several sources long after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Babylonian Talmud (Bava Batra 14b–15a)", "historical-critical scholarship"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b–15a", "url": "https://www.sefaria.org/Bava_Batra.14b"}]}
+  {"text": "Tradition holds that Moses wrote the Torah; the Talmud gives the last eight verses, on his death, to Joshua. Julius Wellhausen and the documentary hypothesis after him see the five books as compiled from several sources long after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Babylonian Talmud (Bava Batra 14b–15a)", "Julius Wellhausen (Prolegomena, 1878)"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b–15a", "url": "https://www.sefaria.org/Bava_Batra.14b"}]}
  ],
  "confidence": "evidence",
  "sources": [

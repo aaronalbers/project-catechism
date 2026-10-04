@@ -25,7 +25,7 @@
  ],
  "later": [
   {"text": "The Babylonian Chronicle (British Museum 21946) records that in his seventh year, on the second of Adar (16 March 597 BC), he captured “the city of Judah”, seized its king and appointed a king of his choice.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian Chronicle for 605–594 BC, British Museum 21946"}]},
-  {"text": "No Babylonian record mentions a madness of Nebuchadnezzar. A Qumran text, the Prayer of Nabonidus, tells a similar story of a seven-year affliction of Nabonidus, the last king of Babylon, and many scholars think Daniel 4 drew on such a tradition.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Prayer of Nabonidus (4Q242), from Qumran Cave 4"}, {"kind": "scholarship", "title": "Daniel (Hermeneia)", "author": "John J. Collins", "year": 1993}], "traditions": ["many historical-critical scholars"]}
+  {"text": "No Babylonian record mentions a madness of Nebuchadnezzar. A Qumran text, the Prayer of Nabonidus, tells a similar story of a seven-year affliction of Nabonidus, the last king of Babylon, and John Collins holds that Daniel 4 drew on such a tradition.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Prayer of Nabonidus (4Q242), from Qumran Cave 4"}, {"kind": "scholarship", "title": "Daniel (Hermeneia)", "author": "John J. Collins", "year": 1993}], "traditions": ["John J. Collins"]}
  ],
  "confidence": "evidence",
  "sources": [

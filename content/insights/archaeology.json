@@ -7,7 +7,7 @@
   "summary": "A dedication found at Caesarea in 1961 reads '[PO]NTIUS PILATUS [PRAEF]ECTUS IUDA[EA]E' — the only inscription naming Pilate, and it corrects his title: prefect, not procurator.",
   "body": [
    "Italian excavators led by Antonio Frova found the block reused as a step in the theatre at Caesarea Maritima, Pilate's seat of government. It records his dedication of a building (a 'Tiberieum') to the emperor. Three lines survive well enough to read his name and title.",
-   "Tacitus (Annals 15.44) calls Pilate a procurator; the stone shows that in his day the governor of Judea held the rank of praefectus, the title Josephus and the Gospels' 'governor' (hēgemōn) fit. The original is in the Israel Museum; a replica stands at Caesarea."
+   "Tacitus (Annals 15.44) calls Pilate a procurator; the stone gives the governor of Judea in his day the rank of praefectus. The Gospels use the general word hēgemōn, 'governor'. The original is in the Israel Museum; a replica stands at Caesarea."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Pilate inscription, Caesarea Maritima, discovered 1961 (Israel Museum, AE 1963 no. 104)", "note": "excavated by A. Frova; published in Rendiconti dell'Istituto Lombardo 95 (1961)"},
@@ -24,8 +24,8 @@
   "verses": ["Matt.26.3", "Matt.26.57", "John.11.49", "John.18.13-14", "Acts.4.6"],
   "summary": "A richly carved limestone bone-box found in 1990 in Jerusalem's Peace Forest is inscribed 'Yehosef bar Qayafa' — Joseph son of Caiaphas — the high priest's full name as Josephus gives it.",
   "body": [
-   "Construction work south of the Old City broke into a family tomb with twelve ossuaries. The most ornate, decorated with rosettes, carries the name twice, once in the form 'Yehosef bar Qafa' and once 'Yehosef bar Qayafa', and contained the bones of a man of about sixty. Josephus names the high priest 'Joseph who was called Caiaphas', so the match is close.",
-   "Most scholars accept the identification; some have questioned it because the spelling of the name and the tomb's modesty are unexpected for a high-priestly family. The ossuary is in the Israel Museum. In 2011 a second ossuary, naming 'Miriam daughter of Yeshua son of Caiaphas, priest of Maaziah from Beth Imri', surfaced on the antiquities market and was authenticated by the Israel Antiquities Authority, adding a priestly course to the family."
+   "Construction work south of the Old City broke into a family tomb with twelve ossuaries. The most ornate, decorated with rosettes, carries the name twice, once in the form 'Yehosef bar Qafa' and once 'Yehosef bar Qayafa', and contained the bones of a man of about sixty. Josephus names the high priest 'Joseph who was called Caiaphas'.",
+   "Greenhut, who published the tomb, identified the man as the high priest; William Horbury questioned it, on the spelling of the name. The ossuary is in the Israel Museum. In 2011 a second ossuary, naming 'Miriam daughter of Yeshua son of Caiaphas, priest of Maaziah from Beth Imri', surfaced on the antiquities market and was authenticated by the Israel Antiquities Authority, adding a priestly course to the family."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Ossuary of Yehosef bar Qayafa, Jerusalem (Israel Museum), discovered November 1990", "note": "Z. Greenhut, 'The Caiaphas Tomb in North Talpiyot, Jerusalem', 'Atiqot 21 (1992)"},
@@ -33,7 +33,7 @@
    {"kind": "scholarship", "title": "'The Ossuary of Miriam Daughter of Yeshua Son of Caiaphas, Priest of Ma'aziah from Beth 'Imri'", "author": "Boaz Zissu & Yuval Goren", "year": 2011, "note": "Israel Exploration Journal 61"}
   ],
   "confidence": "consensus",
-  "traditions": ["Identification accepted by most archaeologists; doubted by a minority (e.g. W. Horbury, on the spelling)"],
+  "traditions": ["The high priest's ossuary: Zvi Greenhut, who excavated the tomb", "Doubted on the spelling of the name: William Horbury"],
   "related": ["annas-high-priestly-family"]
  },
  {
@@ -41,9 +41,9 @@
   "title": "A crucified man's heel bone",
   "kind": "archaeology",
   "verses": ["Matt.27.35", "Mark.15.24", "Luke.23.33", "John.19.18", "John.20.25"],
-  "summary": "In 1968 an ossuary at Giv'at ha-Mivtar in Jerusalem yielded the right heel bone of a man named Yehohanan with an 11.5 cm iron nail still through it — the only physical remains of a Roman crucifixion ever found.",
+  "summary": "In 1968 an ossuary at Giv'at ha-Mivtar in Jerusalem yielded the right heel bone of a man named Yehohanan with an 11.5 cm iron nail still through it — the first physical remains of a crucifixion to be identified.",
   "body": [
-   "The nail had bent on a knot in the olive-wood cross and could not be withdrawn, so the heel was buried with it, along with a wooden plaque that had been used as a washer. The find shows crucifixion victims could receive Jewish burial, that the feet were nailed (here through the sides of the heels, one to each side of the upright), and that nails were used rather than only ropes — which bears on Thomas's 'the mark of the nails' in John 20:25.",
+   "The nail had bent on a knot in the olive-wood cross and could not be withdrawn, so the heel was buried with it, along with a wooden plaque that had been used as a washer. The find shows crucifixion victims could receive Jewish burial, that the feet were nailed (here through the sides of the heels, one to each side of the upright), and that nails were used rather than only ropes. In John 20:25 Thomas speaks of 'the nail marks in His hands'.",
    "Yehohanan was in his twenties and died in the first century AD, so his execution falls within a few decades of Jesus'. The initial report claimed both heels were pierced by one nail and the shins broken; re-examination in 1985 corrected that to one nail per heel and no certain leg fracture."
   ],
   "sources": [
@@ -59,10 +59,10 @@
   "title": "The Pool of Siloam, found in 2004",
   "kind": "archaeology",
   "verses": ["John.9.1-11", "Luke.13.4", "Neh.3.15", "Isa.8.6"],
-  "summary": "Sewer repairs in 2004 exposed the monumental stepped pool at the southern tip of the City of David where John says the blind man washed. Coins in the plaster date its construction to the reign of Alexander Jannaeus and its use through AD 70.",
+  "summary": "Sewer repairs in 2004 exposed the monumental stepped pool at the southern tip of the City of David which its excavators identify as the pool where John says the blind man washed. Coins in the plaster date its construction to the reign of Alexander Jannaeus and its use through AD 70.",
   "body": [
-   "The Byzantine pool by Hezekiah's Tunnel had been taken for Siloam since the fifth century. The real one lies a little south-east: a trapezoidal pool over 70 m across with three flights of five steps, cut from the same first-century paving as the street that climbs to the Temple Mount. Coins of Alexander Jannaeus (103–76 BC) were found in the plaster, and coins of the First Revolt (AD 66–70) in the silt, bracketing its life.",
-   "Its size and steps mark it as a mikveh-style public bath for pilgrims, which fits John's story: Jesus sends the man to wash where Jerusalem washed."
+   "The Byzantine pool by Hezekiah's Tunnel had been taken for Siloam since the fifth century. The pool Reich and Shukron uncovered lies a little south-east: a trapezoidal pool over 70 m across with three flights of five steps, cut from the same first-century paving as the street that climbs to the Temple Mount. Coins of Alexander Jannaeus (103–76 BC) were found in the plaster, and coins of the First Revolt (AD 66–70) in the silt, bracketing its life.",
+   "Reich and Shukron read its size and steps as those of a mikveh, a ritual bath, used by pilgrims."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Pool of Siloam, City of David, excavated by Ronny Reich and Eli Shukron from 2004", "note": "R. Reich & E. Shukron, 'The Siloam Pool in the Wake of Recent Discoveries', New Studies on Jerusalem 10 (2004)"},
@@ -76,10 +76,10 @@
   "title": "Bethesda's five colonnades",
   "kind": "archaeology",
   "verses": ["John.5.1-9"],
-  "summary": "John's odd detail — a pool 'with five covered colonnades' — puzzled readers until excavations near St Anne's church revealed two adjoining pools with a colonnade on each side and a fifth across the dividing wall.",
+  "summary": "John describes a pool 'with five covered colonnades'. Excavations near St Anne's church uncovered two adjoining pools, which Joachim Jeremias reconstructed with a colonnade on each side and a fifth across the dividing wall.",
   "body": [
-   "The twin pools north of the Temple Mount were partly exposed by Conrad Schick in 1888 and fully excavated by the White Fathers in the 1950s–60s. Two large reservoirs separated by a rock wall form a rectangle; porticoes ran around all four sides and along the central wall — five in all. The later Roman shrine to Asclepius built over the site suggests the spot kept a reputation for healing.",
-   "The Copper Scroll from Qumran (3Q15) refers to 'Beth Eshdatayin', 'house of the two pools', confirming both the name and the double layout before AD 70."
+   "The twin pools north of the Temple Mount were partly exposed by Conrad Schick in 1888 and fully excavated by the White Fathers in the 1950s–60s. Two large reservoirs separated by a rock wall form a rectangle; in Jeremias's reconstruction porticoes ran around all four sides and along the central wall, five in all. A Roman shrine to Asclepius, the god of healing, was later built over the site.",
+   "The Copper Scroll from Qumran (3Q15), from before AD 70, names a 'Beth Eshdatayin', which Jeremias reads as 'house of the two pools' and takes to be Bethesda."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Pools of Bethesda, St Anne's compound, Jerusalem; excavations 1888 (C. Schick), 1956–62 (J.-M. Rousée, White Fathers)", "note": "J. Jeremias, The Rediscovery of Bethesda (1966)"},
@@ -95,8 +95,8 @@
   "verses": ["2Sam.7.11-16", "1Kgs.12.19", "2Kgs.8.28-29", "2Kgs.9.14-27"],
   "summary": "Fragments of an Aramaic stele found at Tel Dan in 1993–94 boast of killing the kings of Israel and of 'the House of David' (bytdwd) — the earliest reference to David outside the Bible, about a century and a half after his reign.",
   "body": [
-   "The inscription, probably set up by Hazael of Damascus around 840 BC, claims the deaths of '[Jeho]ram son of [Ahab] king of Israel' and '[Ahaz]iahu son of [Jehoram] king of the House of David'. 2 Kings 9 credits those deaths to Jehu; Hazael may be claiming Jehu's coup as his own doing, as overlords did.",
-   "Before 1993 a few scholars doubted David existed. The stele does not prove any story about him, but it shows that Judah's dynasty was known to its enemies as 'the House of David' by the mid-ninth century BC."
+   "The inscription, which its editors Biran and Naveh attribute to Hazael of Damascus, around 840 BC, claims the deaths of '[Jeho]ram son of [Ahab] king of Israel' and '[Ahaz]iahu son of [Jehoram] king of the House of David'. 2 Kings 9 credits those deaths to Jehu.",
+   "The stele tells no story about David. Read as Biran and Naveh read bytdwd, it shows Judah's dynasty called 'the House of David' by its enemies in the mid-ninth century BC."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Tel Dan stele, fragments A (1993) and B (1994), Israel Museum", "note": "A. Biran & J. Naveh, 'An Aramaic Stele Fragment from Tel Dan', IEJ 43 (1993); 'The Tel Dan Inscription: A New Fragment', IEJ 45 (1995)"},
@@ -128,9 +128,9 @@
   "title": "Sennacherib's own account of the siege of Jerusalem",
   "kind": "archaeology",
   "verses": ["2Kgs.18.13-19.37", "2Chr.32.1-23", "Isa.36.1-37.38"],
-  "summary": "The Assyrian king's annals, on three clay prisms, say he shut Hezekiah up 'like a bird in a cage' in Jerusalem — and conspicuously do not claim to have taken the city.",
+  "summary": "The Assyrian king's annals, on three clay prisms, say he shut Hezekiah up 'like a bird in a cage' in Jerusalem, and do not claim to have taken the city.",
   "body": [
-   "Sennacherib's third campaign (701 BC) is recorded on the Taylor Prism (British Museum), the Oriental Institute Prism (Chicago) and the Jerusalem Prism (Israel Museum). He lists 46 walled towns of Judah captured, tribute from Hezekiah, and the siege of Jerusalem — but the usual formula 'I conquered' is missing for the capital, matching the Bible's account that the siege was lifted (2 Kings 19:35–36).",
+   "Sennacherib's third campaign (701 BC) is recorded on the Taylor Prism (British Museum), the Oriental Institute Prism (Chicago) and the Jerusalem Prism (Israel Museum). He lists 46 walled towns of Judah captured, tribute from Hezekiah, and the siege of Jerusalem — but the formula 'I conquered', used of the towns, is not used of the capital. 2 Kings 19:35–36 says the siege was lifted.",
    "The reliefs from his palace at Nineveh showing the capture of Lachish (2 Kings 18:14, 17) are also in the British Museum."
   ],
   "sources": [
@@ -146,9 +146,9 @@
   "title": "The Cyrus Cylinder and the policy behind Ezra 1",
   "kind": "archaeology",
   "verses": ["Ezra.1.1-4", "2Chr.36.22-23", "Isa.44.28", "Isa.45.1"],
-  "summary": "Cyrus's foundation deposit from Babylon (539 BC) announces that he returned captive peoples and their gods to their sanctuaries — the same policy Ezra 1 records for Judah.",
+  "summary": "Cyrus's foundation deposit from Babylon (539 BC) announces that he returned captive peoples and their gods to their sanctuaries. Ezra 1 records a decree of Cyrus sending the exiles of Judah home to rebuild the temple.",
   "body": [
-   "The clay cylinder, found in 1879 and now in the British Museum, does not mention Jews or Jerusalem; it is written for Babylon's god Marduk. But it states the principle: 'I returned the images of the gods... to their places and let them dwell in eternal abodes. I gathered all their inhabitants and returned to them their dwellings.' Ezra's decree of Cyrus is that policy applied to one small province.",
+   "The clay cylinder, found in 1879 and now in the British Museum, does not mention Jews or Jerusalem; it is written for Babylon's god Marduk. But it states the principle: 'I returned the images of the gods... to their places and let them dwell in eternal abodes. I gathered all their inhabitants and returned to them their dwellings.'",
    "The Nabonidus Chronicle (also British Museum) independently dates the fall of Babylon to Cyrus in October 539 BC."
   ],
   "sources": [
@@ -165,8 +165,8 @@
   "verses": ["Num.6.24-26", "Deut.7.9"],
   "summary": "Two tiny rolled silver amulets from a tomb at Ketef Hinnom, Jerusalem (excavated 1979), carry the priestly blessing of Numbers 6 in Hebrew script of about 600 BC — four centuries older than the Dead Sea Scrolls.",
   "body": [
-   "Unrolled with great difficulty, the strips read a shortened form of 'The LORD bless you and keep you; the LORD make his face shine upon you and be gracious to you...' along with a phrase close to Deuteronomy 7:9. Palaeographic dating places them in the late seventh or early sixth century BC, just before the Babylonian exile; some argue for the Persian period. They are in the Israel Museum.",
-   "They show the blessing was already fixed wording worn on the body, in the way later Jews wore tefillin."
+   "Unrolled with great difficulty, the strips read a shortened form of 'The LORD bless you and keep you; the LORD make his face shine upon you and be gracious to you...' along with a phrase close to Deuteronomy 7:9. Barkay, Vaughn, Lundberg and Zuckerman (2004) date them by their script to the late seventh or early sixth century BC, just before the Babylonian exile. They are in the Israel Museum.",
+   ""
   ],
   "sources": [
    {"kind": "archaeology", "title": "Ketef Hinnom amulets I and II, Israel Museum, excavated 1979 by Gabriel Barkay", "note": "G. Barkay, A. Vaughn, M. Lundberg & B. Zuckerman, 'The Amulets from Ketef Hinnom: A New Edition and Evaluation', BASOR 334 (2004)"},
@@ -180,10 +180,10 @@
   "title": "When Herod died — dating the nativity",
   "kind": "history",
   "verses": ["Matt.2.1-23", "Luke.1.5"],
-  "summary": "Josephus records a lunar eclipse shortly before Herod's death and his burial before Passover; the eclipse of 13 March 4 BC fits. So Jesus was born before spring 4 BC — 'before Christ', by a few years, thanks to a sixth-century miscalculation.",
+  "summary": "Josephus records a lunar eclipse shortly before Herod's death and his burial before Passover; the eclipse of 13 March 4 BC fits. On that reckoning Jesus was born before spring 4 BC, a few years 'before Christ' by the AD count devised in the sixth century.",
   "body": [
-   "Josephus says Herod died after an eclipse of the moon and before the following Passover, having reigned 37 years from his appointment by Rome (40 BC) and 34 from his capture of Jerusalem (37 BC). All three point to 4 BC; the partial lunar eclipse of 13 March 4 BC was visible from Jericho, where Herod lay dying. A minority of scholars prefer the eclipse of 1 BC, which would move everything three years.",
-   "The monk Dionysius Exiguus, who devised the AD numbering in AD 525, placed the birth a few years too late, which is why the birth of Jesus falls 'BC'. Matthew 2:16 suggests Jesus was up to two years old when Herod acted, so most estimates put the birth c. 6–4 BC. That range is an estimate; the terminus (before Herod's death) is the evidence."
+   "Josephus says Herod died after an eclipse of the moon and before the following Passover, having reigned 37 years from his appointment by Rome (40 BC) and 34 from his capture of Jerusalem (37 BC). All three point to 4 BC; the partial lunar eclipse of 13 March 4 BC was visible from Jericho, where Herod lay dying. Finegan's Handbook sets out the case others make for the eclipse of 1 BC, which would move everything three years.",
+   "The monk Dionysius Exiguus devised the AD numbering in AD 525; on the 4 BC reckoning his year 1 falls after Herod's death, which is why the birth of Jesus falls 'BC'. Herod kills the boys 'two years old and under' (Matthew 2:16), so an estimate of c. 6–4 BC follows. That range is an estimate; the terminus (before Herod's death) is the evidence."
   ],
   "sources": [
    {"kind": "primary", "title": "Josephus, Antiquities 17.167 (eclipse), 17.191 (length of reign), 17.213 (Passover after the death)", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://lexundria.com/j_aj/17.167/wst"},
@@ -191,7 +191,7 @@
    {"kind": "scripture", "ref": "Matt.2.16"}
   ],
   "confidence": "consensus",
-  "traditions": ["4 BC: the great majority of historians; 1 BC: a minority (e.g. Finegan's later view, Steinmann)"],
+  "traditions": ["4 BC: the reckoning set out here from Josephus", "1 BC: Jack Finegan in his later view, as his Handbook sets out"],
   "related": ["quirinius-census"]
  },
  {
@@ -199,7 +199,7 @@
   "title": "'The fifteenth year of Tiberius' — Luke's anchor date",
   "kind": "history",
   "verses": ["Luke.3.1-2", "Luke.3.23"],
-  "summary": "Luke dates John's ministry by six rulers at once. Tiberius succeeded Augustus on 19 August AD 14, so his fifteenth year is AD 28/29 — the firmest date in the Gospels.",
+  "summary": "Luke dates John's ministry by six rulers at once. Tiberius succeeded Augustus on 19 August AD 14, so his fifteenth year, counted from then, is AD 28/29.",
   "body": [
    "Augustus died on 19 August AD 14 (Suetonius, Augustus 100; Tacitus, Annals 1.5). Counting from then, Tiberius' fifteenth year runs from August AD 28 to August AD 29; if Luke used the Syrian calendar beginning in autumn, it is October AD 28 to September AD 29. Either way John's preaching begins about AD 28–29, and Jesus, 'about thirty' (3:23), was born around 6–2 BC — consistent with the Herod evidence.",
    "The other five names Luke gives all check against inscriptions and Josephus: Pilate (prefect AD 26–36), Herod Antipas (tetrarch 4 BC–AD 39), Philip (4 BC–AD 34), Lysanias of Abilene (attested by an inscription from Abila under Tiberius), and the priests Annas and Caiaphas (AD 18–36)."
@@ -220,8 +220,8 @@
   "summary": "An Egyptian victory hymn of about 1208 BC boasts 'Israel is laid waste, his seed is not' — the earliest mention of Israel outside the Bible, and the Egyptian grammar treats Israel as a people rather than a place.",
   "body": [
    "Flinders Petrie found the black granite stele in 1896 in Merneptah's mortuary temple at Thebes; it is now Cairo, Egyptian Museum JE 31408. Cut in the pharaoh's fifth regnal year (≈1208 BC), it is mostly about a Libyan war, and only the last three lines turn to Canaan.",
-   "Line 27 lists the defeated: Ashkelon, Gezer, Yanoam — and then Israel. What makes the line matter is not the boast but the spelling. Egyptian writing tags every name with a silent 'determinative' sign saying what kind of thing it is. Ashkelon, Gezer and Yanoam each get the sign for a city-state. Israel gets the throw-stick (foreign) plus a seated man and woman over three strokes: the sign for a people. In 1208 BC an Egyptian scribe knew of an Israel in Canaan that was a population, not yet a city or a kingdom.",
-   "That is the whole of the evidence, and it is worth being clear about its limits. The stele says nothing about Israel's origins, size, religion or relation to Egypt, and a royal victory hymn is not a neutral witness — 'his seed is not' is plainly an overstatement, since Israel outlived Merneptah. What it fixes is a date by which the name existed and an Egyptian king thought it worth naming."
+   "Line 27 lists the defeated: Ashkelon, Gezer, Yanoam — and then Israel. Egyptian writing tags every name with a silent 'determinative' sign saying what kind of thing it is. Ashkelon, Gezer and Yanoam each get the sign for a city-state. Israel gets the throw-stick (foreign) plus a seated man and woman over three strokes: the sign for a people. Frank Yurco reads this as an Israel in Canaan known to the scribe as a people, not a city or a kingdom.",
+   "The stele says nothing about Israel's origins, size, religion or relation to Egypt. It is a royal victory hymn, and its 'his seed is not' is a boast: Israel appears in later records. It dates a time by which the name existed."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Merneptah_Stele_2022_09.jpg/500px-Merneptah_Stele_2022_09.jpg", "caption": "The Merneptah Stele in the Egyptian Museum, Cairo (JE 31408), inscribed in the pharaoh's fifth year, ≈1208 BC.", "credit": "Onceinawhile, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Merneptah_Stele_2022_09.jpg", "license": "CC BY-SA 4.0"}
@@ -241,8 +241,8 @@
   "summary": "A Moabite king's own account of the same war that 2 Kings 3 describes — from the losing side's point of view. It names Omri king of Israel, the god Chemosh, and 'the vessels of YHWH': the earliest mention of Israel's God in an inscription.",
   "body": [
    "The basalt block was found at Dhiban (biblical Dibon) in Jordan in August 1868 and stands today in the Louvre (AO 5066). Mesha king of Moab set it up about 840 BC to credit Chemosh with throwing off Israelite rule. 2 Kings 3:4-5 introduces the same king — 'Mesha king of Moab was a sheep breeder' — and the same revolt.",
-   "Mesha's version and the Bible's version agree on the participants and disagree, predictably, on the outcome: Mesha says 'Israel has perished forever', while 2 Kings 3 has the coalition withdrawing after Mesha sacrifices his son on the wall. Both are royal propaganda and both are useful. Line 4-5 names 'Omri king of Israel' and his son, matching 1 Kings 16:23-28. Line 18 records that Mesha took 'the vessels of YHWH' from Nebo and dragged them before Chemosh — the earliest datable occurrence of the divine name outside the Bible.",
-   "One line is still argued over. Shortly after the discovery the stone was smashed by locals; about two-thirds of the fragments were recovered, and a paper squeeze taken beforehand preserves text now lost. Reading line 31 from that squeeze, André Lemaire proposed 'House of David' in 1994, which would make this a second witness alongside the Tel Dan stele; Israel Finkelstein, Nadav Na'aman and Thomas Römer argued in 2019 for the personal name 'Balak' instead. Later imaging work has been read both ways. The Omri and YHWH lines are secure; line 31 is not, and this card does not rest on it."
+   "Mesha's version and the Bible's agree on the participants and disagree on the outcome: Mesha says 'Israel has perished forever', while 2 Kings 3 has the coalition withdrawing after Mesha sacrifices his son on the wall. Line 4-5 names 'Omri king of Israel' and his son, matching 1 Kings 16:23-28. Line 18 records that Mesha took 'the vessels of YHWH' from Nebo and dragged them before Chemosh — the earliest datable occurrence of the divine name outside the Bible.",
+   "One line is still argued over. Shortly after the discovery the stone was smashed by locals; about two-thirds of the fragments were recovered, and a paper squeeze taken beforehand preserves text now lost. Reading line 31 from that squeeze, André Lemaire proposed 'House of David' in 1994, which would make this a second witness alongside the Tel Dan stele; Israel Finkelstein, Nadav Na'aman and Thomas Römer argued in 2019 for the personal name 'Balak' instead. Later imaging work has been read both ways. Neither reading of line 31 is used elsewhere on this card."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mesha_stele_%28Louvre%2C_AO_5066%29.jpg/500px-Mesha_stele_%28Louvre%2C_AO_5066%29.jpg", "caption": "The Mesha Stele (Moabite Stone), Louvre AO 5066. The darker areas are the recovered original fragments; the paler filling is restored from the 1868 squeeze.", "credit": "Tangopaso, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066).jpg", "license": "Public domain"}
@@ -258,15 +258,15 @@
  },
  {
   "id": "lachish-siege",
-  "title": "Lachish: the one siege we can see from both sides",
+  "title": "Lachish: a siege seen from both sides",
   "kind": "archaeology",
   "verses": ["2Kgs.18.13-17", "2Kgs.19.8", "2Chr.32.9", "Isa.36.2", "Mic.1.13", "Jer.34.7"],
-  "summary": "Sennacherib covered a whole room of his palace with carvings of his assault on Lachish in 701 BC — and the ramp his engineers built is still there on the tell. It is the best-documented battle in the Hebrew Bible, mostly because the attacker was proud of it.",
+  "summary": "Sennacherib covered a whole room of his palace with carvings of his assault on Lachish in 701 BC — and the ramp his engineers built is still there on the tell.",
   "body": [
    "The Bible mentions Lachish almost in passing: Hezekiah sends his surrender terms to Sennacherib 'at Lachish' (2 Kings 18:14), and the Assyrian officers come up to Jerusalem from there. What the text passes over, Assyrian art dwells on. Austen Henry Layard excavated Room XXXVI of Sennacherib's South-West Palace at Nineveh in 1845-47 and found the walls lined with a continuous relief of one siege: siege engines climbing a ramp, archers, defenders throwing torches, files of deportees with their carts, and prisoners impaled outside the walls. The reliefs are now in the British Museum.",
-   "A caption over the king reads: 'Sennacherib, king of the world, king of Assyria, sat on a throne and the booty of Lachish passed before him.' For an event in Judah's history to be illustrated by the enemy, in the enemy's throne room, is unique.",
-   "The tell itself supplies the other half. Tell ed-Duweir was dug by James Starkey in the 1930s and by David Ussishkin for Tel Aviv University from 1973. Against the south-west corner they uncovered the only Assyrian siege ramp ever found — a stone-and-rubble mound, roughly 50-60 m wide at the base, estimated by the excavators at ≈19,000 tons of stone. Behind the wall the defenders had thrown up a counter-ramp to keep the fighting above the attackers. The ground yielded more than 800 arrowheads, sling stones, scale armour and burnt debris, and the whole of city Level III was destroyed by fire. A nearby cave held the jumbled bones of roughly 1,500 people, usually connected with the siege, though that link is inference rather than proof.",
-   "Yigael Yadin showed that the walls, gate and towers drawn at Nineveh match the excavated plan. The relief is not a generic siege scene; it is a picture of this hill."
+   "A caption over the king reads: 'Sennacherib, king of the world, king of Assyria, sat on a throne and the booty of Lachish passed before him.'",
+   "The tell itself supplies the other half. Tell ed-Duweir was dug by James Starkey in the 1930s and by David Ussishkin for Tel Aviv University from 1973. Against the south-west corner they uncovered what Ussishkin describes as the only Assyrian siege ramp yet found: a stone-and-rubble mound, roughly 50-60 m wide at the base, estimated by the excavators at ≈19,000 tons of stone. Behind the wall the defenders had thrown up a counter-ramp to keep the fighting above the attackers. The ground yielded more than 800 arrowheads, sling stones, scale armour and burnt debris, and the whole of city Level III was destroyed by fire. A nearby cave held the jumbled bones of roughly 1,500 people; whether they died in the siege is not known from the finds.",
+   "Yigael Yadin compared the walls, gate and towers drawn at Nineveh with the excavated plan and found they match; on his reading the relief pictures this hill, not a generic siege."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Lachish_Relief%2C_British_Museum_3.jpg/500px-Lachish_Relief%2C_British_Museum_3.jpg", "caption": "Part of the Lachish relief from Sennacherib's palace at Nineveh, now in the British Museum: siege engines ascend the ramp against the city wall.", "credit": "Mike Peel, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Lachish_Relief,_British_Museum_3.jpg", "license": "CC BY-SA 4.0"}
@@ -285,11 +285,11 @@
   "title": "A Babylonian scribe dates the fall of Jerusalem to the day",
   "kind": "archaeology",
   "verses": ["2Kgs.24.10-17", "2Chr.36.9-10", "Jer.52.28", "Ezek.1.2"],
-  "summary": "A clay tablet in the British Museum records Nebuchadnezzar taking 'the city of Judah' on the second of Adar in his seventh year — 16 March 597 BC. Very few events in the Old Testament can be dated that precisely, and this one is dated by the other side.",
+  "summary": "A clay tablet in the British Museum records Nebuchadnezzar taking 'the city of Judah' on the second of Adar in his seventh year — 16 March 597 BC. The date is the Babylonians' own.",
   "body": [
    "Tablet BM 21946, one of the Babylonian Chronicles (ABC 5), is a terse year-by-year record of Nebuchadnezzar II's early reign. The seventh-year entry reads: 'In the month of Kislev the king of Akkad mustered his troops, marched to Hatti-land, and encamped against the city of Judah, and on the second day of the month of Adar he captured the city and seized the king. He appointed there a king of his own choice, received its heavy tribute and sent it to Babylon.'",
-   "2 Kings 24:10-17 tells the same events from inside the walls: Jehoiachin surrenders after a three-month reign, the treasuries are stripped, and Nebuchadnezzar installs Jehoiachin's uncle Mattaniah, renaming him Zedekiah — a king of his own choice, exactly as the chronicle says.",
-   "Converting 2 Adar of Nebuchadnezzar's seventh year to the Julian calendar gives 15/16 March 597 BC. That conversion is a calculation, not something the tablet states: it rests on the standard Babylonian chronological tables of Parker and Dubberstein, which are built from dated astronomical texts. The event and the Babylonian date are evidence; the modern calendar date is a computed equivalent."
+   "2 Kings 24:10-17 tells the same events from inside the walls: Jehoiachin surrenders after a three-month reign, the treasuries are stripped, and Nebuchadnezzar installs Jehoiachin's uncle Mattaniah, renaming him Zedekiah: the chronicle's 'king of his own choice'.",
+   "Converting 2 Adar of Nebuchadnezzar's seventh year to the Julian calendar gives 15/16 March 597 BC. That conversion is a calculation, not something the tablet states: it rests on the Babylonian chronological tables of Parker and Dubberstein, which are built from dated astronomical texts. The event and the Babylonian date are evidence; the modern calendar date is a computed equivalent."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Babylonian Chronicle ABC 5 ('Jerusalem Chronicle'), British Museum BM 21946", "note": "obverse/reverse record Nebuchadnezzar's years 1-11"},
@@ -308,8 +308,8 @@
   "summary": "Palace store records from Babylon list oil issued to 'Ya'u-kinu, king of the land of Yahudu' and his five sons. A deposed king of Judah appears in the accounts of the empire that deposed him, still called king.",
   "body": [
    "Robert Koldewey's German excavations at Babylon (1899-1917) recovered hundreds of administrative tablets from vaulted storerooms near the Ishtar Gate. Ernst Weidner published a group of them in 1939. They are ration dockets: so much oil, barley or grain to named recipients, dated between about 595 and 570 BC. Among the recipients are craftsmen from Tyre, Byblos, Egypt, Persia and Ionia — and a Judean royal household.",
-   "One text allots 10 sila of oil (about 8 litres) to 'Ya'u-kinu, king of the land of Yahudu', and 2½ sila to be divided among his five sons, handed over through a Judean attendant. Ya'u-kinu is Jehoiachin; Yahudu is Judah. He is still given the royal title even though Zedekiah was reigning in Jerusalem, which is precisely how 2 Kings and Jeremiah keep numbering years by Jehoiachin's exile (Ezekiel 1:2 dates a vision to 'the fifth year of the exile of King Jehoiachin').",
-   "These tablets fall in Nebuchadnezzar's reign, so they are earlier than 2 Kings 25:27-30, where Evil-merodach releases Jehoiachin from prison in 561 BC and gives him 'a regular allowance for the rest of his life'. Together they sketch the same policy: a captive royal family kept, fed and on the books rather than executed. The tablets are in the Vorderasiatisches Museum (Pergamonmuseum), Berlin."
+   "One text allots 10 sila of oil (about 8 litres) to 'Ya'u-kinu, king of the land of Yahudu', and 2½ sila to be divided among his five sons, handed over through a Judean attendant. Ya'u-kinu is Jehoiachin; Yahudu is Judah. He is still given the royal title while Zedekiah reigned in Jerusalem. The Bible too dates by his exile: Ezekiel 1:2 by 'the fifth year of the exile of King Jehoiachin', and 2 Kings 25:27 by its thirty-seventh year.",
+   "These tablets fall in Nebuchadnezzar's reign, so they are earlier than 2 Kings 25:27-30, where Evil-merodach releases Jehoiachin from prison in 561 BC and gives him 'a regular allowance for the rest of his life'. The tablets are in the Vorderasiatisches Museum (Pergamonmuseum), Berlin."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Jehoiachin_Ration_Tablet.JPG/500px-Jehoiachin_Ration_Tablet.JPG", "caption": "One of the Babylon ration tablets naming Jehoiachin of Judah, Vorderasiatisches Museum, Berlin.", "credit": "Scallaham, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jehoiachin_Ration_Tablet.JPG", "license": "CC BY-SA 4.0"}
@@ -331,8 +331,8 @@
   "summary": "Jeremiah 38:1 names four officials who demanded the prophet's death. Excavations in the City of David turned up the personal seal impressions of two of them — Jehucal son of Shelemiah and Gedaliah son of Pashhur — a few metres apart in the same layer.",
   "body": [
    "A bulla is a lump of clay pressed over the string of a rolled document and stamped with the sender's seal. The document rots; the clay survives, especially when the building burns. Eilat Mazar's excavation at the summit of the City of David found one in 2005 reading 'belonging to Yehukal son of Shelemyahu son of Shovi', and another in 2008, from the same late-Iron-Age stratum a few metres away, reading 'belonging to Gedalyahu son of Pashhur'.",
-   "Jeremiah 38:1 lists the officials who told Zedekiah the prophet should die: 'Shephatiah son of Mattan, Gedaliah son of Pashhur, Jehucal son of Shelemiah, and Pashhur son of Malchijah'. Jehucal also appears in 37:3 as one of the two men Zedekiah sends to ask Jeremiah to pray for the city. Two of the four are now attested by their own seals, in the right city, in the right period, in what appears to be an administrative quarter.",
-   "The strength of the find is that both were excavated in place. Several famous bullae connected with Jeremiah's circle — including the well-known 'Berechiah son of Neriah the scribe' bulla often linked to Baruch — surfaced on the antiquities market with no findspot, and their authenticity has been challenged. These two came out of stratified soil, so their context is known. What they do not prove is any particular reading of the events; they establish that the men were real officials in Jerusalem, not names invented later."
+   "Jeremiah 38:1 lists the officials who told Zedekiah the prophet should die: 'Shephatiah son of Mattan, Gedaliah son of Pashhur, Jehucal son of Shelemiah, and Pashhur son of Malchijah'. Jehucal also appears in 37:3 as one of the two men Zedekiah sends to ask Jeremiah to pray for the city. Mazar identifies the owners of the two seals with the two men of the same names in Jeremiah 38:1.",
+   "Both were excavated in place, in a dated layer. Other bullae with names from Jeremiah's circle, among them 'Berechiah son of Neriah the scribe', came from the antiquities market with no findspot. The bullae give names and fathers' names; they say nothing of the events of Jeremiah 38."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Bulla of Yehukal son of Shelemyahu son of Shovi, City of David excavations (2005)", "note": "excavated in situ by Eilat Mazar, Hebrew University"},
@@ -348,12 +348,12 @@
   "title": "Belshazzar, and why Daniel is offered third place",
   "kind": "archaeology",
   "verses": ["Dan.5.1-31", "Dan.7.1", "Dan.8.1"],
-  "summary": "For centuries Belshazzar was known only from Daniel 5, and was taken to be an invention. Cuneiform tablets recovered from the 1850s on name him as Nabonidus' eldest son, left in charge of Babylon — which is also why the highest post he can offer is the third.",
+  "summary": "Outside Daniel and works drawing on it, Belshazzar was unknown until cuneiform tablets, deciphered from the 1850s on, named him as Nabonidus' eldest son, left in charge of Babylon. William Shea reads Daniel's offer of 'third ruler' in that light; others read the word as 'one of three'.",
   "body": [
-   "Berossus, Herodotus and the other classical sources give Babylon's last king as Nabonidus; none of them mentions a Belshazzar. Until the mid-nineteenth century Daniel 5 stood alone, and the name was widely treated as legendary.",
-   "Then the cuneiform record began to speak. A clay cylinder from the temple of Sin at Ur (British Museum 91128) closes with Nabonidus praying for himself and for 'Belshazzar, my eldest son, the offspring of my heart'. The Nabonidus Chronicle records that the king spent years at the oasis of Tema in Arabia while 'the crown prince, the officers and the army were in Akkad'. The propaganda text known as the Verse Account says plainly that Nabonidus 'entrusted the kingship' to him and went his way.",
-   "That is the setting Daniel 5 assumes. Belshazzar holds court in Babylon and can reward a man — but only with 'third ruler in the kingdom' (Daniel 5:7, 16, 29). If Nabonidus was first and Belshazzar second, third was the highest place in his gift. The detail makes sense only under the arrangement the tablets describe, and no Greek source preserved it.",
-   "Two limits are worth stating. Belshazzar never took the royal title in dated Babylonian documents, which call him mar sarri, 'son of the king' — so Daniel's 'King Belshazzar' uses the word loosely for the man exercising royal power. And this evidence bears on the accuracy of the chapter's setting, not on the date of the book; most critical scholars still place the composition of Daniel in the second century BC, while traditional readings place it in the sixth."
+   "Berossus, Herodotus and the other classical sources give Babylon's last king as Nabonidus; none of them mentions a Belshazzar. Until the mid-nineteenth century Daniel 5 stood alone. William Shea notes that interpreters before then identified Belshazzar with one or another of the known Babylonian kings.",
+   "A clay cylinder from the temple of Sin at Ur (British Museum 91128) closes with Nabonidus praying for himself and for 'Belshazzar, my eldest son, the offspring of my heart'. The Nabonidus Chronicle records that the king spent years at the oasis of Tema in Arabia while 'the crown prince, the officers and the army were in Akkad'. The propaganda text known as the Verse Account says that Nabonidus 'entrusted the kingship' to him and went his way.",
+   "In Daniel 5 Belshazzar holds court in Babylon and offers 'third ruler in the kingdom' (5:7, 16, 29). William Shea (1982) reads this as third after Nabonidus and Belshazzar, the highest place Belshazzar could give, and a detail no Greek source preserved. James Montgomery (1927) and Keil and Delitzsch read the Aramaic as 'one of three', a member of a ruling board of three, as in Daniel 6:2; Shea answers Montgomery on the grammar.",
+   "Dated Babylonian documents never give Belshazzar the royal title; they call him mar sarri, 'son of the king'. Daniel calls him 'King Belshazzar'. The tablets bear on the chapter's setting, not on when the book was written: Porphyry, in the third century, held it written in the time of Antiochus Epiphanes, as Jerome reports in answering him, and Jerome held it the prophet Daniel's own."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Cylinder_Nabonidus_BM_WA91128.jpg/500px-Cylinder_Nabonidus_BM_WA91128.jpg", "caption": "Clay cylinder of Nabonidus from Ur (British Museum 91128), recording the restoration of the ziggurat of Sin and naming his eldest son Belshazzar.", "credit": "Marie-Lan Nguyen (Jastrow), Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Cylinder_Nabonidus_BM_WA91128.jpg", "license": "CC BY 2.5"}
@@ -361,6 +361,9 @@
   "sources": [
    {"kind": "archaeology", "title": "Nabonidus Cylinder from Ur, British Museum 91128", "note": "names Bel-sar-usur (Belshazzar) as Nabonidus' eldest son"},
    {"kind": "primary", "title": "Nabonidus Chronicle (ABC 7), British Museum BM 35382", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-7-nabonidus-chronicle/", "note": "the king at Tema; the crown prince and the army in Akkad"},
+   {"kind": "scholarship", "title": "Nabonidus, Belshazzar, and the Book of Daniel: An Update", "author": "William H. Shea", "year": 1982, "url": "https://www.andrews.edu/library/car/cardigital/Periodicals/AUSS/1982-2/1982-2-05.pdf", "note": "Andrews University Seminary Studies 20, 133–149: interpreters before the tablets; 'third ruler' kept against Montgomery's 'one of three'"},
+   {"kind": "scholarship", "title": "Biblical Commentary on the Old Testament: Daniel 5:7", "author": "C. F. Keil and Franz Delitzsch", "year": 1869, "url": "https://biblehub.com/commentaries/kad/daniel/5.htm", "note": "'as one of three he shall rule in the kingdom'"},
+   {"kind": "primary", "title": "Jerome, Commentary on Daniel, prologue", "author": "Jerome", "year": "AD 407", "url": "https://www.tertullian.org/fathers/jerome_daniel_02_text.htm", "note": "'Porphyry wrote his twelfth book against the prophecy of Daniel, denying that it was composed by the person to whom it is ascribed in its title' (tr. G. L. Archer)"},
    {"kind": "primary", "title": "Verse Account of Nabonidus", "note": "'he entrusted the kingship to him' before leaving Babylon"},
    {"kind": "scripture", "ref": "Dan.5.29", "note": "Daniel is proclaimed 'third ruler in the kingdom'"}
   ],
@@ -368,15 +371,15 @@
  },
  {
   "id": "gallio-inscription",
-  "title": "The Gallio inscription: the one fixed date in Paul's life",
+  "title": "The Gallio inscription: a date for Paul in Corinth",
   "kind": "archaeology",
   "verses": ["Acts.18.11-17"],
-  "summary": "A letter of Claudius carved at Delphi names Gallio as proconsul of Achaia and carries titles that date it to AD 52. Because Acts puts Paul before Gallio's tribunal in Corinth, that stone is the peg from which the whole of Pauline chronology hangs.",
+  "summary": "A letter of Claudius carved at Delphi names Gallio as proconsul of Achaia and carries titles that date it to AD 52. Acts puts Paul before Gallio's tribunal in Corinth, and Jerome Murphy-O'Connor reckons the chronology of Paul's life from that date.",
   "body": [
    "Nine fragments of an imperial letter were found at the Temple of Apollo in Delphi in the early twentieth century and are now in the Delphi Archaeological Museum. Claudius is writing about the depopulation of Delphi, and in passing refers to 'Lucius Junius Gallio, my friend and proconsul of Achaia'. This is the elder brother of the philosopher Seneca.",
    "The letter dates itself the way Roman documents do, by the emperor's running titles: Claudius' twenty-sixth acclamation as imperator and his twelfth tribunician power. Both fall in AD 52, and the twenty-sixth acclamation narrows it to roughly the first half of that year.",
-   "Senatorial proconsuls served a single year beginning around 1 July, so Gallio was almost certainly in office from mid-AD 51 to mid-AD 52 — and since the letter mentions him as already reporting on local conditions, his term had already begun. Acts 18:11 says Paul spent a year and six months in Corinth, and 18:12 places the hearing before Gallio inside that stay. Working backwards, Paul arrived in Corinth around the start of AD 50.",
-   "Almost every other date in Paul's life is then measured forward or back from this one: the Jerusalem council, the Thessalonian and Corinthian letters, the later journeys. The margin is a year or so either way, which is why cards on this site that depend on it say so."
+   "Senatorial proconsuls served a single year beginning around 1 July, so on Murphy-O'Connor's reckoning Gallio was in office from mid-AD 51 to mid-AD 52 — and since the letter mentions him as already reporting on local conditions, his term had already begun. Acts 18:11 says Paul spent a year and six months in Corinth, and 18:12 places the hearing before Gallio inside that stay. Working backwards, Paul arrived in Corinth around the start of AD 50.",
+   "Murphy-O'Connor measures other dates in Paul's life forward or back from this one: the Jerusalem council, the Thessalonian and Corinthian letters, the later journeys. The margin is a year or so either way, and cards on this site that depend on it say so."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Delphes_Gallion.jpg/500px-Delphes_Gallion.jpg", "caption": "Fragment of the Delphi inscription naming Gallio, Delphi Archaeological Museum.", "credit": "Gérard, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Delphes_Gallion.jpg", "license": "CC BY-SA 4.0"}
@@ -384,7 +387,7 @@
   "sources": [
    {"kind": "archaeology", "title": "Delphi (Gallio) inscription, Delphi Archaeological Museum, SIG³ 801D", "note": "letter of Claudius; dated by his 26th imperatorial acclamation and 12th tribunician power (AD 52)"},
    {"kind": "scripture", "ref": "Acts.18.12", "note": "'while Gallio was proconsul of Achaia'"},
-   {"kind": "scholarship", "title": "A Chronology of the Apostolic Era", "author": "Jerome Murphy-O'Connor", "year": 1993, "note": "the standard reconstruction from the Gallio date"}
+   {"kind": "scholarship", "title": "A Chronology of the Apostolic Era", "author": "Jerome Murphy-O'Connor", "year": 1993, "note": "his reconstruction of Paul's chronology from the Gallio date"}
   ],
   "confidence": "evidence",
   "related": ["erastus-inscription", "politarch-thessalonica"]
@@ -398,8 +401,8 @@
   "body": [
    "Charles Clermont-Ganneau found a complete limestone block in 1871, reused in a school building near the Old City of Jerusalem; it is now in the Istanbul Archaeology Museums. A second, fragmentary copy was found in 1936 during roadworks outside the Lions' Gate and is in the Israel Museum. The Greek reads: 'No foreigner is to enter within the balustrade and enclosure around the temple area. Whoever is caught will have himself to blame for the death that follows.'",
    "Josephus describes the fence they stood on: a stone screen three cubits high running round the inner courts, with notices at intervals 'in Greek and Latin characters' declaring the law of purity. He also reports that Rome, which otherwise reserved capital sentences to itself, allowed the temple authorities to enforce this one.",
-   "That is the background to Acts 21:28-29. The crowd seizes Paul shouting that he 'has brought Greeks into the temple and defiled this holy place' — Luke adds that they had seen Trophimus the Ephesian with him in the city and assumed the rest. The charge was not a technicality: it carried a death penalty that the notices spelled out in advance.",
-   "Many readers connect Ephesians 2:14, 'he has broken down the dividing wall of hostility', with this barrier. The Greek word there (mesotoichon) is not the word on the stone, and Paul does not name the temple, so the link is a reasonable reading rather than something the text states."
+   "That is the background to Acts 21:28-29. The crowd seizes Paul shouting that he 'has brought Greeks into the temple and defiled this holy place' — Luke adds that they had seen Trophimus the Ephesian with him in the city and assumed the rest. The notices spelled out the penalty for what the crowd charged: death.",
+   "Ellicott's commentary and the Expositor's Greek Testament (which names Bengel among others) connect Ephesians 2:14, 'He has torn down the dividing wall of hostility', with this barrier; Meyer reports the view without adopting it. The Greek word there (mesotoichon) is not the word on the stone, and Paul does not name the temple."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Soreg_inscription.jpg/500px-Soreg_inscription.jpg", "caption": "The temple warning (soreg) inscription — the complete block found in 1871, Istanbul Archaeology Museums.", "credit": "Tamar Hayardeni, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Soreg_inscription.jpg", "license": "Attribution (free use with credit)"}
@@ -407,6 +410,7 @@
   "sources": [
    {"kind": "archaeology", "title": "Temple warning (soreg) inscription, Istanbul Archaeology Museums", "note": "found by C. Clermont-Ganneau, 1871; fragmentary second copy (1936) in the Israel Museum"},
    {"kind": "primary", "title": "Josephus, Jewish War 5.193-194", "author": "Flavius Josephus", "year": "c. AD 75", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0148%3Abook%3D5%3Awhiston+chapter%3D5", "note": "the three-cubit screen and its notices in Greek and Latin"},
+   {"kind": "scholarship", "title": "Commentaries on Ephesians 2:14 (Ellicott; Expositor's Greek Testament; Meyer)", "url": "https://biblehub.com/commentaries/ephesians/2-14.htm", "note": "the 'middle wall' read as the temple barrier and its inscription"},
    {"kind": "primary", "title": "Josephus, Antiquities 15.417", "author": "Flavius Josephus", "year": "c. AD 94", "note": "the same barrier and the penalty of death"},
    {"kind": "scripture", "ref": "Acts.21.28"}
   ],
@@ -417,12 +421,12 @@
   "title": "A first-century fishing boat from the Sea of Galilee",
   "kind": "archaeology",
   "verses": ["Mark.4.35-41", "Matt.8.23-27", "Luke.5.1-11", "John.21.1-8"],
-  "summary": "A drought in 1986 exposed the hull of a working boat from the time of Jesus: 8.2 m long, patched together from at least ten kinds of wood, and just about big enough for a teacher and twelve companions.",
+  "summary": "A drought in 1986 exposed the hull of a working boat from the time of Jesus: 8.2 m long and patched together from at least ten kinds of wood.",
   "body": [
    "Two brothers from Kibbutz Ginosar, Moshe and Yuval Lufan, spotted the outline of timbers in the exposed mud of the north-west shore in January 1986. The Israel Antiquities Authority excavated it in eleven days, encased it in polyurethane foam and floated it to shore. Conservation of the waterlogged wood took a further eleven years; it has been on display in the Yigal Allon Museum at Ginosar since 2000.",
-   "The hull is 8.2 m long, 2.3 m wide and 1.3 m at its highest preserved point, built shell-first with pegged mortise-and-tenon joints — good Mediterranean shipwright's practice. Radiocarbon dating gave 40 BC ±80 years; the pottery and nails found with it point to roughly 50 BC to AD 50. The boat was in use somewhere in that window.",
-   "The most human detail is the timber. The builders used at least ten different species, much of it reused, and the hull had been repaired again and again before finally being stripped of anything worth salvaging and left to sink. This was not a fine vessel; it was a poor fishing family's boat kept alive by patching.",
-   "Its size implies a crew and passengers of around fifteen — an estimate from the hull dimensions rather than a figure anyone recorded. That happens to be the number the Gospels put in a boat: Jesus and the Twelve. The boat is not connected to any Gospel event and no one claims it is; what it gives is the physical scale of the scenes — how close together thirteen men would have been, and how little freeboard stood between them and a squall."
+   "The hull is 8.2 m long, 2.3 m wide and 1.3 m at its highest preserved point, built shell-first with pegged mortise-and-tenon joints, the Mediterranean way of building a hull. Radiocarbon dating gave 40 BC ±80 years; the pottery and nails found with it point to roughly 50 BC to AD 50. The boat was in use somewhere in that window.",
+   "The builders used at least ten different species, much of it reused, and the hull had been repaired again and again before finally being stripped of anything worth salvaging and left to sink.",
+   "The excavators estimate from its dimensions that it could carry around fifteen people, an estimate rather than a figure anyone recorded. The Gospels put Jesus and the disciples in one boat (Mark 4:36). The boat is not connected to any Gospel event; it shows the size of a working boat on the lake in that period."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Ginosar-Yigal_Allon_Museum-08-Boot-2010-gje.jpg/500px-Ginosar-Yigal_Allon_Museum-08-Boot-2010-gje.jpg", "caption": "The Ancient Galilee Boat on display in the Yigal Allon Museum, Kibbutz Ginosar.", "credit": "Gerd Eichmann, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Ginosar-Yigal_Allon_Museum-08-Boot-2010-gje.jpg", "license": "CC BY-SA 4.0"}
@@ -440,12 +444,12 @@
   "title": "A pavement at Corinth signed by an Erastus",
   "kind": "archaeology",
   "verses": ["Rom.16.23", "Acts.19.22", "2Tim.4.20"],
-  "summary": "A paving block by the theatre at Corinth records that 'Erastus, in return for his aedileship, laid this at his own expense'. Paul greets an Erastus who is the city's treasurer. Whether they are the same man is genuinely unsettled — and a lot rides on it.",
+  "summary": "A paving block by the theatre at Corinth records that 'Erastus, in return for his aedileship, laid this at his own expense'. Paul greets an Erastus who is the city's treasurer. Whether they are the same man is disputed.",
   "body": [
-   "The block was uncovered in 1929 in the paved square north-east of the theatre at Corinth, with the letters cut deep and once filled with bronze. It reads ERASTVS PRO AEDILIT[AT]E S P STRAVIT: 'Erastus, in return for his aedileship, laid [this pavement] at his own expense'. An aedile was an elected magistrate responsible for public works, and the customary price of election was a benefaction like this one. The lettering is generally placed in the mid-first century AD, though the dating is argued.",
+   "The block was uncovered in 1929 in the paved square north-east of the theatre at Corinth, with the letters cut deep and once filled with bronze. It reads ERASTVS PRO AEDILIT[AT]E S P STRAVIT: 'Erastus, in return for his aedileship, laid [this pavement] at his own expense'. An aedile was an elected magistrate responsible for public works, and the customary price of election was a benefaction like this one. John Kent, who published it, dated the lettering to the mid-first century AD; the date is disputed.",
    "Romans 16:23, written from Corinth, sends greetings from 'Erastus, the city treasurer' — in Greek, ho oikonomos tes poleos. Acts 19:22 and 2 Timothy 4:20 mention an Erastus too.",
-   "The case for identifying them: the name is not especially common at Corinth, the date fits, and the man Paul names holds a civic financial office. The case against: oikonomos is not the normal Greek equivalent of aedile (that would be agoranomos), an oikonomos was often a public slave or freedman rather than an elected magistrate, and the stone's own date is not secure. The question matters beyond a name, because it feeds directly into the argument about whether the first urban churches reached into the wealthy governing class or were overwhelmingly poor.",
-   "This card is filed as an interpretation because the identification is exactly that. The inscription is real and says what it says; the link to Romans 16 is an inference, and competent scholars land on both sides."
+   "Gerd Theissen argues for the identification: the name is not common at Corinth, the date fits, and the man Paul names holds a civic financial office. Justin Meggitt argues against: oikonomos is not the usual Greek for aedile (that would be agoranomos), an oikonomos was often a public slave or freedman rather than an elected magistrate, and the stone's own date is not secure. The question bears on a wider one the two also disagree over: whether the first urban churches included members of the governing class.",
+   "The inscription is evidence; the link to Romans 16 is an identification, and this card is filed as an interpretation for that reason."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Erastus_stone_at_Theater_of_Corinth.jpg/500px-Erastus_stone_at_Theater_of_Corinth.jpg", "caption": "The Erastus pavement inscription in situ beside the theatre at ancient Corinth.", "credit": "Rduncan2, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Erastus_stone_at_Theater_of_Corinth.jpg", "license": "CC BY-SA 4.0"}
@@ -457,19 +461,19 @@
    {"kind": "scholarship", "title": "Paul, Poverty and Survival", "author": "Justin J. Meggitt", "year": 1998, "note": "argues against; oikonomos need not be a magistrate"}
   ],
   "confidence": "interpretation",
-  "traditions": ["Identification accepted by Theissen, Gill, Winter and Goodrich", "Rejected or doubted by Meggitt, Friesen and Weiss", "No confessional tradition depends on the outcome — it is a historical question about social status"],
+  "traditions": ["Identification accepted by Theissen, Gill, Winter and Goodrich", "Rejected or doubted by Meggitt, Friesen and Weiss"],
   "related": ["gallio-inscription"]
  },
  {
   "id": "politarch-thessalonica",
-  "title": "'Politarchs' — the word Luke was said to have invented",
+  "title": "'Politarchs': Luke's title for Thessalonica's magistrates",
   "kind": "archaeology",
   "verses": ["Acts.17.5-9"],
-  "summary": "Acts 17 calls the magistrates of Thessalonica politarchs, a title found in no surviving Greek author. Nineteenth-century critics counted it a mistake. Around seventy inscriptions have since turned up using it, a great many of them from Thessalonica itself.",
+  "summary": "Acts 17 calls the magistrates of Thessalonica politarchs, a title found in no surviving Greek author. Around seventy inscriptions using it are now known, some twenty-eight of them from Thessalonica itself.",
   "body": [
-   "When the mob drags Jason before the city authorities, Luke calls them politarchai (Acts 17:6, 8). No classical author uses the word, and the standard titles elsewhere were archontes or strategoi, so the term was long treated as evidence that Acts was written late and far away by someone guessing at local government.",
-   "The inscriptions closed the question. Roughly seventy non-literary attestations of the title are now known; more than four-fifths come from Macedonia, and around twenty-eight from Thessalonica alone — the highest concentration anywhere. The best known was carved on the Vardar Gate of the city; the gate was demolished in 1876, but the inscribed block had already been removed and is in the British Museum.",
-   "The lesson is narrower than it is sometimes made. This does not show that everything in Acts is accurate; it shows that on one checkable point of Macedonian civic vocabulary the author used the local term correctly, and that an argument from silence about ancient titles is a weak argument."
+   "When the mob drags Jason before the city authorities, Luke calls them politarchai (Acts 17:6, 8). No classical author uses the word; the titles found elsewhere are archontes or strategoi.",
+   "Horsley catalogues roughly seventy non-literary attestations of the title are now known; more than four-fifths come from Macedonia, and around twenty-eight from Thessalonica alone — the highest concentration anywhere. The best known was carved on the Vardar Gate of the city; the gate was demolished in 1876, but the inscribed block had already been removed and is in the British Museum.",
+   ""
   ],
   "sources": [
    {"kind": "archaeology", "title": "Vardar Gate politarch inscription, British Museum (1877,0511.1)", "url": "https://www.britishmuseum.org/collection/object/G_1877-0511-1", "note": "removed from the gate before its demolition in 1876"},
@@ -486,9 +490,9 @@
   "verses": ["1Kgs.22.1-4", "1Kgs.20.34", "1Kgs.16.29-30"],
   "summary": "Shalmaneser III's stele from Kurkh lists the kings who met him at Qarqar on the Orontes, among them '2,000 chariots and 10,000 troops of Ahab the Israelite' — the largest chariot force in the alliance, and a battle Kings does not record.",
   "body": [
-   "Kings presents Ahab chiefly as an apostate, and his wars as wars with Aram. The Assyrian record shows him in another light: in Shalmaneser's sixth year, ≈853 BC on the Assyrian eponym list, twelve kings of Syria and the coast stood together against Assyria at Qarqar, and Ahab brought more chariots than any of them — Hadad-ezer of Damascus brought 1,200, Irhulena of Hamath 700.",
-   "That alliance fits a detail in 1 Kings. After defeating Ben-hadad, Ahab spared him and 'made a treaty with him' (20:34), and 'three years passed without war between Aram and Israel' (22:1). Fighting side by side against Assyria would explain both. The Assyrian text names Damascus's king Hadad-ezer (Adda-idri) where Kings has Ben-hadad, a difference historians still discuss.",
-   "Shalmaneser claims a crushing victory, but he was back fighting the same coalition in later years, and many historians read Qarqar as a check on Assyria rather than a rout. Whether Israel could field 2,000 chariots is also debated; the figure is the inscription's, not a count anyone can check.",
+   "Kings tells of Ahab's worship of Baal and his wars with Aram, and does not mention Assyria. In Shalmaneser's sixth year, ≈853 BC on the Assyrian eponym list, twelve kings of Syria and the coast stood together against Assyria at Qarqar, and Ahab brought more chariots than any of them — Hadad-ezer of Damascus brought 1,200, Irhulena of Hamath 700.",
+   "In 1 Kings, after defeating Ben-hadad, Ahab spared him and 'made a treaty with him' (20:34), and 'three years passed without war between Aram and Israel' (22:1). The Assyrian text names Damascus's king Hadad-ezer (Adda-idri) where Kings has Ben-hadad.",
+   "Shalmaneser claims a crushing victory. The figure of 2,000 chariots is the inscription's, not a count anyone can check.",
    "This is the first time an Israelite king appears in a datable foreign record, and with the eponym list it helps anchor the chronology of the divided monarchy: Ahab was alive in 853 BC, and Jehu was on the throne by 841 BC (see the Black Obelisk)."
   ],
   "media": [
@@ -509,10 +513,10 @@
   "verses": ["2Kgs.9.1-13", "2Kgs.10.28-36", "1Kgs.19.16-17"],
   "summary": "A panel on Shalmaneser III's Black Obelisk from Nimrud shows a man kneeling before the Assyrian king, captioned 'the payment of Jehu of Bīt-Ḫumrî' — literally 'son of Omri', though Jehu had wiped out Omri's family.",
   "body": [
-   "The caption reads: 'I received the payment of Jehu (Iāūa) of (Bīt)-Ḫumrî: silver, gold, a gold bowl, a gold tureen, gold vessels, gold pails, tin, the staffs of the king's hand, (and) spears.' Shalmaneser's annals put the tribute in his eighteenth year, ≈841 BC on the Assyrian eponym list, which on the usual reckoning is the year Jehu took the throne.",
+   "The caption reads: 'I received the payment of Jehu (Iāūa) of (Bīt)-Ḫumrî: silver, gold, a gold bowl, a gold tureen, gold vessels, gold pails, tin, the staffs of the king's hand, (and) spears.' Shalmaneser's annals put the tribute in his eighteenth year, ≈841 BC on the Assyrian eponym list, which in Thiele's chronology (the Reign tab) is the year Jehu took the throne.",
    "To Assyria, Israel was Bīt-Ḫumrî, 'the house of Omri', after the dynasty that founded Samaria (1 Kings 16:24). So the scribe calls Jehu Omri's 'son' a few years after Jehu killed Omri's grandson Joram and all of Ahab's house (2 Kings 9–10). The phrase names his country, not his father; the Bible calls him 'son of Jehoshaphat, the son of Nimshi'.",
-   "Kings does not mention the tribute. It does say that 'in those days the LORD began to reduce the size of Israel' as Hazael of Damascus took its lands east of the Jordan (10:32-33), and Shalmaneser's annals for the same year record his war with Hazael. Submitting to Assyria was a way to gain protection against Damascus.",
-   "The kneeling figure is usually taken to be Jehu himself, though some read him as Jehu's envoy. Either way, it is the only known ancient picture of an Israelite king or his envoy."
+   "Kings does not mention the tribute. It does say that 'in those days the LORD began to reduce the size of Israel' as Hazael of Damascus took its lands east of the Jordan (10:32-33), and Shalmaneser's annals for the same year record his war with Hazael.",
+   "The caption does not say whether the kneeling figure is Jehu himself or his envoy. It is the only known ancient picture of an Israelite king or his envoy."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Jehu-on-Obelisk-of-Shalmaneser_%28cropped%29.jpg/500px-Jehu-on-Obelisk-of-Shalmaneser_%28cropped%29.jpg", "caption": "The Jehu panel of the Black Obelisk of Shalmaneser III, from Nimrud, now in the British Museum. The epigraph naming Jehu runs above the scene.", "credit": "Steven G. Johnson, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jehu-on-Obelisk-of-Shalmaneser_(cropped).jpg", "license": "CC BY-SA 3.0"}
@@ -534,8 +538,8 @@
   "summary": "Kings says Menahem paid 'Pul king of Assyria' a thousand talents. Tiglath-pileser III's own annals list 'Menahem of Samaria' among the kings who paid him, and Babylonian king lists call the same man Pulu.",
   "body": [
    "Tiglath-pileser III took the Assyrian throne in 745 BC (the Babylonian Chronicle's 'third year of Nabû-nasir') and in 729 BC made himself king of Babylon too. His annals and a stele from western Iran list the western kings who paid him: Rezin of Damascus, Hiram of Tyre, and 'Menahem of the city Samaria'.",
-   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. The name long puzzled readers, since Kings later calls the same king Tiglath-pileser (15:29). Babylonian king lists explain it: they give the Assyrian who ruled Babylon in those years as Pulu, apparently the name he was known by there. Henry Rawlinson suggested the identification in 1863.",
-   "1 Chronicles 5:26 names both: 'the spirit of Pul king of Assyria, and the spirit of Tiglath-pilneser king of Assyria', with one verb in the singular. The BSB renders the 'and' as 'that is', reading one king under two names, as the Assyrian and Babylonian records show. Older readers who took them for two kings had only the Bible to go on.",
+   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. Kings later calls the king of Assyria Tiglath-pileser (15:29). Babylonian king lists give the Assyrian who ruled Babylon in those years as Pulu, apparently the name he was known by there. Henry Rawlinson suggested the identification in 1863.",
+   "1 Chronicles 5:26 names both: 'the spirit of Pul king of Assyria, and the spirit of Tiglath-pilneser king of Assyria', with one verb in the singular. The BSB renders the 'and' as 'that is', reading one king under two names.",
    "Kings adds a detail no Assyrian text gives: Menahem raised the silver by taxing every wealthy man in Israel fifty shekels. A talent was 3,000 shekels (Exodus 38:25-26 counts 603,550 half-shekels as 100 talents and 1,775 shekels), so a thousand talents at fifty shekels a head is ≈60,000 men — a figure derived from the text's own numbers, if they are taken at face value."
   ],
   "sources": [
@@ -558,7 +562,7 @@
   "body": [
    "Pekah of Israel and Rezin of Damascus tried to force Judah into an anti-Assyrian alliance — the crisis behind Isaiah 7. Tiglath-pileser answered by taking Damascus and the north of Israel: Kings lists Ijon, Abel-beth-maacah, Kedesh, Hazor, Gilead, Galilee and Naphtali (15:29), and Tiglath-pileser's own text names Gilead and Abel-šiṭṭi as 'the border of the land Bīt-Ḫumrî (Israel)'.",
    "His summary inscription goes on: '(As for) the land Bīt-Ḫumrî (Israel), I brought to Assyria … all of its people. [I/they] killed Peqah, their king, and I placed Hoshea [as king o]ver them. I received from them ten talents of gold, … talents of silver.' The tablet is broken where the verb's subject stands, so whether it claims 'I killed' or 'they killed' cannot be read.",
-   "The two accounts fit together. Kings gives the coup an Israelite face (15:30: 'Hoshea son of Elah led a conspiracy against Pekah'); the Assyrian gives the authority behind it. Hoshea was Assyria's vassal from the start, which is why his later turn to Egypt was treated as rebellion (17:3-4)."
+   "Kings says 'Hoshea son of Elah led a conspiracy against Pekah' (15:30); the inscription says Tiglath-pileser placed Hoshea over Israel. Kings later has Hoshea become Shalmaneser's vassal and pay him tribute, and imprisoned when he sent envoys to Egypt and withheld it (17:3-4)."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Summary inscription of Tiglath-pileser III (RINAP 1 Tiglath-pileser III 42), lines 15'b–19'", "url": "https://oracc.museum.upenn.edu/rinap/Q003455/", "note": "'[I/they] killed Peqah, their king, and I placed Hoshea [as king o]ver them'", "license": "The Oracc project, CC BY-SA 3.0"},
@@ -576,7 +580,7 @@
   "verses": ["2Kgs.16.5-10", "2Chr.28.16-21", "Isa.7.1-17"],
   "summary": "Ahaz sent the temple's silver and gold to Tiglath-pileser to buy help against Israel and Aram. An inscription from Nimrud lists 'Jehoahaz of the land Judah' among the kings who paid him — Ahaz under the full name the Bible shortens.",
   "body": [
-   "Isaiah urged Ahaz to stand firm against Pekah and Rezin without foreign help (Isaiah 7:4-9). Ahaz instead wrote to Tiglath-pileser, 'I am your servant and your son. Come up and save me', and sent him the silver and gold of the temple and palace (2 Kings 16:7-8).",
+   "Isaiah told Ahaz, 'Calm down and be quiet. Do not be afraid' of Pekah and Rezin (Isaiah 7:4-9). Ahaz instead wrote to Tiglath-pileser, 'I am your servant and your son. Come up and save me', and sent him the silver and gold of the temple and palace (2 Kings 16:7-8).",
    "A summary inscription from Nimrud lists the payment of the kings of the west, among them 'Sanīpu of the land Bīt-Ammon, Salāmānu of the land Moab, … Mitinti of the land Ashkelon, Jehoahaz of the land Judah, Qauš-malaka of the land Edom … gold, silver, tin, iron, lead, multi-colored garments'.",
    "The Assyrian scribe writes Ia-ú-ḫa-zi, Yau-hazi: Jehoahaz, 'the LORD has grasped'. Kings and Isaiah call him only Ahaz, 'he has grasped', a short form without the divine name. Oracc's glossary labels Yau-hazi as Jehoahaz king of Israel, but the text says 'of the land Judah', and the only king of Judah in these years with that name is Ahaz.",
    "Chronicles judges the purchase harshly: Tiglath-pileser 'came against him and oppressed him instead of strengthening him' (2 Chronicles 28:20). Kings adds that Ahaz went to Damascus to meet the Assyrian king there and had an altar copied from the one he saw (16:10)."
@@ -599,7 +603,7 @@
   "body": [
    "2 Kings 17-18 says Shalmaneser besieged Samaria for three years and 'the king of Assyria' captured it in Hoshea's ninth year. The Babylonian Chronicle says of Shalmaneser V: 'He ravaged Samaria', and that he died in his fifth year (722/721 BC). Sargon II took the throne the same month.",
    "Sargon's inscriptions at Khorsabad claim the city: 'I surrounded (and) conquered the city Samaria. I carried off as booty 27,290 of its inhabitants, conscripted fifty chariots from among them'. His Nimrud Prism adds that he 'restored the city Samaria and made it greater than before', brought there 'people from the lands that I had conquered' and set a eunuch over them as governor — what Kings describes in 17:24, with people from Babylon, Cuthah, Avva, Hamath and Sepharvaim.",
-   "The prism's number of deportees is damaged: what survives reads 27,280, and its editors restore a further 20,000 in the break, making 47,280. The usual reconstruction is that Shalmaneser took the city as the siege ended and Sargon, facing revolts at the start of his reign, came back to crush Samaria's part in a rising led by Hamath (≈720 BC) and deported its people. Kings' 'the king of Assyria' leaves room for both.",
+   "The prism's number of deportees is damaged: what survives reads 27,280, and its editors restore a further 20,000 in the break, making 47,280. Hayim Tadmor reconstructed it so: Shalmaneser took the city as the siege ended, and Sargon, facing revolts at the start of his reign, came back to crush Samaria's part in a rising led by Hamath (≈720 BC) and deported its people. Kings names no king for the capture itself, only 'the king of Assyria'.",
    "Isaiah 20:1 is the only place the Bible names Sargon. His own inscriptions came to light when Paul-Émile Botta began digging his palace at Khorsabad in 1843."
   ],
   "media": [
@@ -624,8 +628,8 @@
   "body": [
    "The Babylonian Chronicle: 'On the twentieth day of the month Tebêtu, Sennacherib, king of Assyria, was killed by his son in a rebellion. For twenty-four years Sennacherib ruled Assyria. After the twentieth day of the month Tebêtu the rebellion continued in Assyria until the second day of the month Addaru. On the eighteenth day of the month Addaru Esarhaddon, his son, ascended the throne.' By its reckoning that is 681 BC.",
    "Esarhaddon, the younger son, tells it as a succession fight. His brothers, jealous of his appointment as heir, 'plotted evil, girt (their) weapons, and in Nineveh … butted each other like kids for (the right to) exercise kingship'; when he marched on Nineveh, they 'deserted the army they relied on and fled to an unknown land'. Kings names the land: Ararat, that is Urartu, north of Assyria.",
-   "Neither Assyrian account names the killer, and the Chronicle has one son where Kings has two. Simo Parpola identified Kings' Adrammelech with Arda-Mulišši, a son of Sennacherib named in Assyrian letters, which most Assyriologists accept.",
-   "Kings places the murder straight after Sennacherib's return from Judah, but the campaign was in 701 BC and the murder twenty years later. 'He returned to Nineveh and stayed there' (19:36) spans the interval."
+   "Neither Assyrian account names the killer, and the Chronicle has one son where Kings has two. Simo Parpola identified Kings' Adrammelech with Arda-Mulišši, a son of Sennacherib named in Assyrian letters.",
+   "Kings tells the murder straight after Sennacherib's return from Judah: 'He returned to Nineveh and stayed there' (19:36). The campaign was in 701 BC and the murder twenty years later."
   ],
   "sources": [
    {"kind": "primary", "title": "Babylonian Chronicle ABC 1, iii 34–38", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-1-from-nabu-nasir-to-samas-suma-ukin/abc-1.iii", "note": "'Sennacherib, king of Assyria, was killed by his son in a rebellion'"},
@@ -644,11 +648,12 @@
   "summary": "Esarhaddon and Ashurbanipal each list 'Manasseh, king of Judah' among the western kings who served them — one sent building materials to Nineveh, the other troops for Egypt. Chronicles' story of his being taken to Babylon in chains has no Assyrian record.",
   "body": [
    "Manasseh reigned fifty-five years, the longest of any king of Judah (2 Kings 21:1), and all of them under Assyria. Esarhaddon's Nineveh prism lists 'Ba'alu, king of Tyre, Manasseh, king of Judah, Qa'uš-gabri, king of Edom, Muṣurī, king of Moab' among twenty-two kings of the west and Cyprus whom he made carry timber and stone for his armoury at Nineveh.",
-   "Ashurbanipal's prism names him again, in almost the same list, among the kings who brought troops and gifts for his first march on Egypt (≈667 BC, the usual date of that campaign, from the Egyptian and Assyrian reign lengths).",
-   "2 Chronicles 33:11-13 tells that the commanders of the king of Assyria took Manasseh to Babylon with a hook and bronze shackles, and that he repented and was restored. Kings does not have the episode, and no Assyrian text mentions it. Those who accept it point out that Esarhaddon's successor Ashurbanipal faced a long revolt in Babylon (652–648 BC) and that a vassal could be summoned there; others treat it as Chronicles' explanation of how so wicked a king reigned so long. The prisms show only that Manasseh served Assyria, which fits either."
+   "Ashurbanipal's prism names him again, in almost the same list, among the kings who brought troops and gifts for his first march on Egypt (≈667 BC, a date reckoned from the Egyptian and Assyrian reign lengths).",
+   "2 Chronicles 33:11-13 tells that the commanders of the king of Assyria took Manasseh to Babylon with a hook and bronze shackles, and that he repented and was restored. Kings does not have the episode, and no Assyrian text mentions it. Ellicott's commentary notes that it has 'excited more scepticism among modern critics' than any other passage peculiar to Chronicles, without naming them; Barnes and the Cambridge Bible answer that Esarhaddon held court at Babylon at times, and that 'there is nothing improbable' in a prisoner being taken there. The prisms show Manasseh serving Assyria and say nothing of a captivity."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Nineveh Prism A of Esarhaddon (RINAP 4 Esarhaddon 1), v 54ff.", "url": "https://oracc.museum.upenn.edu/rinap/Q003230/", "note": "'Baʾalu, king of Tyre, Manasseh, king of Judah, Qaʾuš-gabri, king of Edom …'", "license": "The Oracc project, CC BY-SA 3.0"},
+   {"kind": "scholarship", "title": "Commentaries on 2 Chronicles 33:11 (Ellicott; Barnes; Cambridge Bible)", "url": "https://biblehub.com/commentaries/2_chronicles/33-11.htm", "note": "Ellicott: 'none has excited more scepticism among modern critics'; Barnes: Esarhaddon held court at Babylon"},
    {"kind": "archaeology", "title": "Prism C of Ashurbanipal (RINAP 5 Ashurbanipal 6), ii 25'ff.", "url": "https://oracc.museum.upenn.edu/rinap/Q003705/", "note": "'In the course of my campaign, Baʾalu, king of the land Tyre, Manasseh, king of the land Judah …'", "license": "The Oracc project, CC BY-SA 3.0"},
    {"kind": "scripture", "ref": "2Chr.33.11-13"},
    {"kind": "scripture", "ref": "2Kgs.21.1"}
@@ -663,9 +668,9 @@
   "verses": ["Nah.3.8-10"],
   "summary": "Nahum warns Nineveh that it is no safer than No-Amon, Thebes, which fell into captivity for all its water and allies. Ashurbanipal's annals record the conquest: he took Thebes 'in its entirety', and carried off two obelisks from a temple gate.",
   "body": [
-   "Thebes was the greatest city of Upper Egypt, the seat of Amun's temples at Karnak and Luxor, defended by the Nile and allied, in Nahum's words, with Cush and Egypt, Put and Libya (3:9). Its kings in that age were the Kushite pharaohs.",
+   "Thebes was the chief city of Upper Egypt, the seat of Amun's temples at Karnak and Luxor, defended by the Nile and allied, in Nahum's words, with Cush and Egypt, Put and Libya (3:9). Its kings in that age were the Kushite pharaohs.",
    "Ashurbanipal's prism tells of his second Egyptian campaign: the Kushite king Tanutamon fled Memphis for Thebes, then fled Thebes as the Assyrians arrived, and 'with the support of (the god) Aššur and the goddess Ištar, I conquered that city (Thebes) in its entirety. Silver, gold, precious stones, … people — male and female — two tall obelisks … whose weight was 2,500 talents (and which) stood at a temple gate, I ripped (them) from where they were erected and took (them) to Assyria.'",
-   "The sack is usually dated ≈663 BC from the Egyptian and Assyrian reign lengths. Nahum's argument depends on it: the city Assyria had itself destroyed is the example of what will happen to Nineveh. So the book was written after 663 BC and, since it foretells Nineveh's fall, before 612 BC."
+   "The sack is dated ≈663 BC from the Egyptian and Assyrian reign lengths. Nahum tells Thebes' fall as past ('Yet she became an exile', 3:10) and Nineveh's as still to come."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Rassam Prism of Ashurbanipal (RINAP 5 Ashurbanipal 11), ii 22–48", "url": "https://oracc.museum.upenn.edu/rinap/Q003710/", "note": "'I conquered that city (Thebes) in its entirety … two tall obelisks … I ripped (them) from where they were erected'", "license": "The Oracc project, CC BY-SA 3.0"},
@@ -682,8 +687,8 @@
   "summary": "Nahum and Zephaniah foretell that Nineveh will be left a ruin. A Babylonian chronicle records how it happened: in 612 BC the Babylonians and the Medes besieged the city for three months, took it, and 'turned the city into a ruin heap'.",
   "body": [
    "The Fall of Nineveh Chronicle, a tablet in the British Museum, covers the years of Nabopolassar of Babylon. For his fourteenth year (612/611 BC) it reads: 'The king of Akkad mustered his army and marched to Assyria. The king of the Medes marched towards the king of Akkad … In the month Simanu … they encamped against Nineveh. From the month Simanu until the month Âbu — for three months — they subjected the city to a heavy siege. … At that time Sin-šar-iškun, king of Assyria, died. They carried off the vast booty of the city and the temple and turned the city into a ruin heap.'",
-   "Zephaniah, prophesying under Josiah, says God 'will make Nineveh a desolation, as dry as a desert' (2:13). Nahum describes the siege as if watching it, with the river gates thrown open (2:6). The chronicle follows the last Assyrian king, Aššur-uballiṭ, west to Harran, which fell in 610 BC; Assyria as a power was gone.",
-   "Nineveh was never rebuilt as a city. Two centuries later Xenophon's army camped by its deserted walls; he was told the place was called Mespila and had once been a city of the Medes (Anabasis 3.4.10-12). Jonah's Nineveh, which repented, belongs to an earlier century."
+   "Zephaniah, prophesying under Josiah, says God 'will make Nineveh a desolation, as dry as a desert' (2:13). Nahum describes the siege, with the river gates thrown open (2:6). The chronicle follows the last Assyrian king, Aššur-uballiṭ, west to Harran, which fell in 610 BC; Assyria as a power was gone.",
+   "Nineveh was never rebuilt as a city. Two centuries later Xenophon's army camped by its deserted walls; he was told the place was called Mespila and had once been a city of the Medes (Anabasis 3.4.10-12). Jonah son of Amittai, whose preaching Nineveh repented at, prophesied under Jeroboam II (2 Kings 14:25), more than a century earlier."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Fall of Nineveh Chronicle (ABC 3), year 14", "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-3-fall-of-nineveh-chronicle/", "note": "'for three months they subjected the city to a heavy siege … and turned the city into a ruin heap'; translation adapted from Grayson (1975)"},
@@ -702,7 +707,7 @@
   "summary": "Jeremiah says that when Babylon besieged Jerusalem only Lachish and Azekah still held out. A letter written on a potsherd at that time, found in Lachish's gate, reports that the officer is watching for Lachish's signals 'for the code of Azekah has not been seen'.",
   "body": [
    "Jeremiah 34:7 is a snapshot: the Babylonian army was 'fighting against Jerusalem and the remaining cities of Judah — against Lachish and Azekah. For these were the only fortified cities remaining in Judah.'",
-   "In 1935 J. L. Starkey's excavation at Lachish found a group of ink letters on potsherds (ostraca) in a guardroom by the city gate, written to the commander there, Yaush, in the last years of Judah. Ostracon 4 ends: 'One will (then) know that we are observing the smoke signals of Lachish according to the codes that my lord gave us, for the code of Azekah has (indeed) not been seen.' Read with Jeremiah, the usual inference is that Azekah had fallen and Lachish was the last fortress left; the letter itself does not say why Azekah's signal was not seen.",
+   "In 1935 J. L. Starkey's excavation at Lachish found a group of ink letters on potsherds (ostraca) in a guardroom by the city gate, written to the commander there, Yaush, in the last years of Judah. Ostracon 4 ends: 'One will (then) know that we are observing the smoke signals of Lachish according to the codes that my lord gave us, for the code of Azekah has (indeed) not been seen.' The letter does not say why Azekah's signal was not seen.",
    "Ostracon 6 complains that letters from the officials in Jerusalem 'weaken your hands and cause the hands of the men to go slack'. That is the Hebrew idiom of Jeremiah 38:4, where the officials say Jeremiah 'is discouraging the warriors' — literally weakening the hands of the men of war. In the letters the officials are the ones accused of it."
   ],
   "sources": [
@@ -723,7 +728,7 @@
   "body": [
    "A Jewish garrison at Elephantine, an island in the Nile at Egypt's southern border, kept its own temple to YHW (Ya'u). When it was destroyed in 410 BC, its leaders petitioned Bagohi (Bigvai in Cowley's edition), the Persian governor of Judah. A draft of their petition survives, dated 'the 20th of Marheshwan, the 17th year of Darius the king' — Darius II's seventeenth year, ≈407 BC by the usual reckoning of his reign (Cowley reckoned 408).",
    "They say that they had already written 'to Johanan the high priest and his colleagues the priests who are in Jerusalem', without reply, and that they have now set out the matter 'in a letter in our name to Delaiah and Shelemiah the sons of Sanballat governor of Samaria'.",
-   "Nehemiah never gives Sanballat a title, only 'the Horonite' (2:10), and has him speak before 'the army of Samaria' (4:2). The papyrus shows he was the governor of Samaria, and that a generation later his sons were acting for him. Johanan is the high priest of Nehemiah 12:22-23, of the line of Nehemiah's contemporary Eliashib. One of Eliashib's grandsons had married Sanballat's daughter (13:28); the papyrus shows the Elephantine Jews writing to both families."
+   "Nehemiah never gives Sanballat a title, only 'the Horonite' (2:10), and has him speak before 'the army of Samaria' (4:2). The papyrus calls him governor of Samaria and is addressed to his sons. Nehemiah 12:22-23 names a Johanan among the high priests descended from Nehemiah's contemporary Eliashib. One of Eliashib's grandsons had married Sanballat's daughter (13:28); the papyrus shows the Elephantine Jews writing to both families."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Petition to the governor of Judah, Elephantine papyrus (Cowley 30), lines 18–19 and 29", "author": "A. Cowley (ed., tr.)", "year": 1923, "url": "https://archive.org/details/aramaicpapyrioff00ahikuoft", "note": "Aramaic Papyri of the Fifth Century B.C., no. 30: 'Johanan the high priest' and 'Delaiah and Shelemiah the sons of Sanballat governor of Samaria'"},
@@ -743,7 +748,7 @@
    "The Commentary on Habakkuk (1QpHab) is one of the seven scrolls found in Qumran Cave 1 in 1947. It copies Habakkuk 1–2 paragraph by paragraph, each followed by pishro, 'its interpretation', applying the prophecy to the community's own day. The Chaldeans of Habakkuk 1:6 become the Kittim — the Romans.",
    "On 2:4 it comments: 'Interpreted, this concerns all those who observe the Law in the House of Judah, whom God will deliver from the House of Judgment because of their suffering and because of their faith in the Teacher of Righteousness.'",
    "Paul quotes the same half-verse twice: 'The righteous will live by faith' (Romans 1:17, Galatians 3:11), setting faith in Christ against works of the Law. Hebrews 10:38 quotes it again, following the Greek. The scroll shows that the verse was already being read, before any of them, as a promise about whom God would save and why. The two readings differ over what faith is in and how it relates to keeping the Law.",
-   "The scroll writes God's name in the old Hebrew script within a text otherwise in the square script, a reverence for the name visible on the leather."
+   "The scroll writes God's name in the old Hebrew script within a text otherwise in the square script."
   ],
   "sources": [
    {"kind": "archaeology", "title": "The Commentary on Habakkuk Scroll (1QpHab), Israel Museum 95.57/28", "url": "http://dss.collections.imj.org.il/habakkuk", "note": "dated to the second half of the first century BCE; the Romans 'called in the work Chaldeans or Kittim'"},
@@ -763,8 +768,8 @@
   "body": [
    "The Masoretic text of Isaiah, the form copied in the medieval codices, reads 53:11 yirʾeh yisbaʿ — 'he shall see, he shall be satisfied' — with nothing for him to see. Translations made from it supply an object ('he shall see it', the JPS) or read 'see the fruit of'.",
    "The Great Isaiah Scroll (1QIsaᵃ), found in Qumran Cave 1 in 1947, holds all 66 chapters of Isaiah in 54 columns on 7.34 metres of parchment. The Israel Museum dates it ≈125 BC, from its script — about a thousand years older than the oldest Hebrew Bibles known before. At 53:11 it reads yirʾeh ʾor, 'he will see light'.",
-   "The Septuagint, translated from a Hebrew text centuries before the medieval codices, has the same word: 'to shew him light' (Brenton's English). Two independent witnesses agreeing against the later text is why the BSB, like the NIV and NRSV, reads 'light'; others, such as the ESV, keep the Masoretic reading.",
-   "For the rest, the scroll agrees closely with the Masoretic text, with differences mostly of spelling. Its value lies both in the variants and in showing how faithfully the text was copied over the thousand years between them."
+   "The Septuagint, translated from a Hebrew text centuries before the medieval codices, has the same word: 'to shew him light' (Brenton's English). The BSB, like the NIV and NRSV, reads 'light'; others, such as the ESV, keep the Masoretic reading.",
+   "Elsewhere the scroll and the Masoretic text differ mostly in spelling."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Isaiah_Scroll_Ch53.jpg/500px-Great_Isaiah_Scroll_Ch53.jpg", "caption": "Isaiah 53 in the Great Isaiah Scroll (1QIsaᵃ), Israel Museum, Jerusalem.", "credit": "Photograph by Ardon Bar-Hama, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg", "license": "Public domain"}
@@ -783,11 +788,11 @@
   "title": "'Two years before the earthquake'",
   "kind": "archaeology",
   "verses": ["Amos.1.1", "Zech.14.5", "Amos.8.8", "Amos.9.1", "2Chr.26.16-21"],
-  "summary": "Amos dates his words by an earthquake in Uzziah's reign, and Zechariah, two centuries later, still remembers people fleeing it. Excavators at Hazor and other sites found collapsed walls in layers of the mid-eighth century BC, which many identify with it.",
+  "summary": "Amos dates his words by an earthquake in Uzziah's reign, and Zechariah, two centuries later, still remembers people fleeing it. Excavators at Hazor and other sites found collapsed walls in layers of the mid-eighth century BC, which Steven Austin and his co-authors identify with it.",
   "body": [
-   "A dateline by an earthquake assumes the readers know which one. Zechariah 14:5 shows it was still proverbial after the exile: 'You will flee as you fled from the earthquake in the days of Uzziah king of Judah.' Amos's own visions are full of it: the land trembling and rising like the Nile (8:8), the temple's capitals struck so that the thresholds shake (9:1).",
-   "At Hazor, Yigal Yadin's excavations in the 1950s found in Stratum VI tilted and collapsed walls, fallen pillars and broken jars in place. Stratum V above it ended in the fire usually tied to Tiglath-pileser's conquest in 732 BC (2 Kings 15:29), so the collapse came earlier in the eighth century. Damage of similar date has been reported at Gezer, Lachish, Deir 'Alla and other sites.",
-   "Steven Austin and two co-authors argued in 2000 that these layers record one great earthquake of ≈750 BC, of magnitude ≈8 on the Dead Sea fault. Both figures are estimates, the date from the pottery and stratigraphy of the sites (to within some thirty years either way) and the magnitude from how widely the damage is spread. Others are less sure that every collapse is the same event, or that Hazor's tilted walls were not caused by subsidence.",
+   "Zechariah 14:5 still refers to it after the exile: 'You will flee as you fled from the earthquake in the days of Uzziah king of Judah.' Amos's visions include the land trembling and rising like the Nile (8:8), the temple's capitals struck so that the thresholds shake (9:1).",
+   "At Hazor, Yigal Yadin's excavations in the 1950s found in Stratum VI tilted and collapsed walls, fallen pillars and broken jars in place. Stratum V above it ended in a fire Yadin tied to Tiglath-pileser's conquest in 732 BC (2 Kings 15:29), so the collapse came earlier in the eighth century. Damage of similar date has been reported at Gezer, Lachish, Deir 'Alla and other sites.",
+   "Steven Austin and two co-authors argued in 2000 that these layers record one great earthquake of ≈750 BC, of magnitude ≈8 on the Dead Sea fault. Both figures are estimates, the date from the pottery and stratigraphy of the sites (to within some thirty years either way) and the magnitude from how widely the damage is spread.",
    "Josephus, writing much later, connects the earthquake with Uzziah's burning incense in the temple (2 Chronicles 26:16-21): a rent opened in the temple, sunlight struck the king's face, and he became leprous. That is a tradition, not something Chronicles says."
   ],
   "sources": [

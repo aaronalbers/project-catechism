@@ -4,7 +4,7 @@
  "role": "The apostle who betrayed Jesus",
  "people": ["G2455H"],
  "when": "≈ AD 30 or 33",
- "whenBasis": "The crucifixion under Pilate (AD 26–36), usually dated to the Passover of AD 30 or 33 from the weekday the gospels give.",
+ "whenBasis": "The crucifixion under Pilate (AD 26–36), dated to the Passover of AD 30 or 33 by reckonings from the weekday the gospels give.",
  "summary": "Son of Simon Iscariot, one of the Twelve, who kept the money bag. He went to the chief priests and asked what they would give him to hand Jesus over, and they paid him thirty pieces of silver. At the Last Supper Jesus said one of them would betray him; Judas took the morsel and went out into the night. In Gethsemane he led the crowd to Jesus and kissed him. When Jesus was condemned, he was filled with remorse, threw the silver into the temple, and hanged himself.",
  "body": [
   "John says he complained when Mary anointed Jesus with costly perfume, not because he cared for the poor but because he was a thief. Jesus says to him at the arrest, “Judas, are you betraying the Son of Man with a kiss?”",
@@ -25,7 +25,7 @@
   {"ref": "Acts.1.25-26", "text": "Replaced by Matthias"}
  ],
  "later": [
-  {"text": "Iscariot is usually taken to mean “man of Kerioth,” a town in Judah; other meanings proposed include “assassin” or “false one.”", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Josh.15.25"}, {"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}], "traditions": ["man of Kerioth: most commentators", "other derivations: some"]},
+  {"text": "Raymond Brown surveys the meanings proposed for Iscariot: “man of Kerioth,” a town in Judah, “assassin,” or “false one.”", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Josh.15.25"}, {"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}], "traditions": ["the derivations Raymond E. Brown surveys"]},
   {"text": "The Gospel of Judas, a second-century Gnostic text known from a Coptic copy published in 2006, makes his betrayal a secret task Jesus gave him.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Codex Tchacos, Coptic, ≈AD 280, published 2006"}]},
   {"text": "Theographic's record for him also counts John 14:22, where John names “Judas (not Iscariot),” the apostle also called Thaddaeus.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "John.14.22"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Judas Iscariot"}]}
  ],

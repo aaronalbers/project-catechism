@@ -4,11 +4,11 @@
   "title": "Why 'the right cheek'?",
   "kind": "culture",
   "verses": ["Matt.5.38-42", "Luke.6.29"],
-  "summary": "A right-handed blow to someone's right cheek is a backhand — the slap of a superior to an inferior. Jewish law fined a backhanded slap double. Turning the other cheek offers only the left, which can be struck as an equal.",
+  "summary": "A right-handed blow to someone's right cheek is a backhand, and the Mishnah fines a backhanded slap double. Walter Wink reads Jesus' words from there: turning the other cheek offers only the left, which can be struck only as an equal. Augustine read the saying as a readiness of the heart.",
   "body": [
-   "Matthew specifies the right cheek. For a right-handed striker to hit the right cheek, the blow is a backhand — and in the ancient Mediterranean that was not a fight but an insult, the way a master struck a slave or a husband a wife. The Mishnah prices the difference: a slap costs 200 zuz in damages; a backhanded slap, 400, 'because of the greater degradation'.",
-   "Read against that background, turning the other cheek is neither retaliation nor submission. Offering the left cheek makes a second backhand impossible; the striker must either stop or hit with an open hand or fist — the way one strikes an equal. The gesture takes the humiliation out of the blow.",
-   "This reading was developed by Walter Wink and is widely used in Anabaptist, Mennonite and mainline Protestant teaching on nonviolence. The older tradition, from Augustine on, read the saying primarily as a disposition of the heart — a readiness to absorb injury without vengeance — and treats the 'right' as incidental. Both agree on what the verse forbids (returning evil for evil, Romans 12:17); they differ on whether Jesus is also describing a tactic. The Mishnah's fine is a fact; the tactic is an interpretation."
+   "Matthew specifies the right cheek. For a right-handed striker to hit the right cheek, the blow is a backhand. The Mishnah prices the difference: a slap costs 200 zuz (dinars) in damages, a slap with the back of the hand 400, in a list of payments for humiliation. Wink reads the backhand as an insult rather than a fight, the way a master struck a slave.",
+   "On Wink's reading, turning the other cheek is neither retaliation nor submission. Offering the left cheek makes a second backhand impossible; the striker must either stop or hit with an open hand or fist, the way one strikes an equal, and the gesture takes the humiliation out of the blow.",
+   "Augustine read the saying as about 'the preparation of the heart, not the outward act': a readiness to absorb injury without vengeance, with nothing made of the 'right'. The Mishnah's fine is evidence; Wink's tactic and Augustine's disposition are interpretations."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Matt.5.39", "note": "'on the right cheek'"},
@@ -18,7 +18,7 @@
    {"kind": "primary", "title": "Augustine, Sermon on the Mount 1.19", "author": "Augustine of Hippo", "year": "c. 394", "note": "'the precept concerns the preparation of the heart, not the outward act'"}
   ],
   "confidence": "interpretation",
-  "traditions": ["Backhand/'third way' reading: Anabaptist, Mennonite, much of mainline Protestantism", "Disposition-of-the-heart reading: Augustine, Catholic and Orthodox commentators, Reformed tradition"],
+  "traditions": ["The backhand, a 'third way' between retaliation and submission: Walter Wink (Jesus and Nonviolence, 2003)", "A disposition of the heart, the 'right' incidental: Augustine (Sermon on the Mount 1.19)"],
   "related": ["extra-mile-angareia", "cloak-and-tunic"]
  },
  {
@@ -28,9 +28,9 @@
   "verses": ["Matt.5.41", "Matt.27.32", "Mark.15.21"],
   "summary": "'Compel' is angareuō, the technical word for a soldier's legal right to requisition a civilian's labour or animal. The same word is used when the soldiers press Simon of Cyrene to carry the cross.",
   "body": [
-   "The Persian empire ran a relay post (angareion) whose couriers could commandeer horses and men; the word passed into Greek and Latin and by Roman times meant any official requisition of transport or labour. Matthew uses it here and again in 27:32, where Simon of Cyrene is 'compelled' to carry Jesus' cross — the one act of angareia we can actually watch in the Gospels.",
-   "An inscription found at Sagalassos in Pisidia (modern Turkey) preserves an edict of the governor Sextus Sotidius Strabo Libuscidianus, issued under Tiberius, setting out exactly what soldiers and officials could demand of the locals: so many carts and mules, at fixed rates, for so far — and complaining that they abused the right. The edict is contemporary with Jesus and shows both that the practice was legal and that it was resented.",
-   "The distance is a Roman mile (milion, about 1,480 m). The reading that going a second mile turned coercion into a free act — leaving the soldier, who could be punished for exceeding his allowance, oddly in the debtor's position — comes from the same interpretive tradition as the 'right cheek' card, and is marked accordingly."
+   "The Persian empire ran a relay post (angareion) whose couriers could commandeer horses and men; the word passed into Greek and Latin and by Roman times meant any official requisition of transport or labour. Matthew uses it here and again in 27:32, where Simon of Cyrene is 'compelled' to carry Jesus' cross — the one act of angareia the Gospels narrate.",
+   "An inscription found at Sagalassos in Pisidia (modern Turkey) preserves an edict of the governor Sextus Sotidius Strabo Libuscidianus, issued under Tiberius, setting out exactly what soldiers and officials could demand of the locals: so many carts and mules, at fixed rates, for so far — and complaining that they abused the right. The edict is contemporary with Jesus, and shows the practice both regulated by law and complained of by the governor as abused.",
+   "The distance is a Roman mile (milion, about 1,480 m). Walter Wink reads the second mile as turning coercion into a free act, leaving the soldier, who on his account could be punished for exceeding his allowance, in the debtor's position. That is Wink's reading, as on the 'right cheek' card; the text says only 'go with him two miles'."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Matt.5.41", "note": "ἀγγαρεύσει, 'compels'"},
@@ -40,7 +40,7 @@
    {"kind": "scholarship", "title": "Jesus and Nonviolence: A Third Way", "author": "Walter Wink", "year": 2003}
   ],
   "confidence": "consensus",
-  "traditions": ["The legal background is undisputed; the 'subversive second mile' reading is characteristic of Wink and Anabaptist teaching"],
+  "traditions": ["The second mile as turning coercion into a free act: Walter Wink (Jesus and Nonviolence, 2003)"],
   "related": ["right-cheek-backhand"]
  },
  {
@@ -48,11 +48,11 @@
   "title": "Tunic, cloak, and the law that protected the poor",
   "kind": "culture",
   "verses": ["Matt.5.40", "Luke.6.29", "Exod.22.26-27", "Deut.24.12-13"],
-  "summary": "Torah let a creditor take a debtor's tunic as a pledge but forbade keeping his cloak overnight, because it was his blanket. Jesus tells the person being sued to hand over the one garment the law protected.",
+  "summary": "Torah required a creditor who took a poor man's cloak as a pledge to return it by sunset, because it was what he slept in. In Matthew, Jesus tells the one sued for his tunic to give up his cloak as well.",
   "body": [
-   "A first-century Judean man typically owned two garments: the chitōn (tunic, worn next to the skin) and the himation (cloak, the heavy outer wrap). Exodus 22:26–27 and Deuteronomy 24:12–13 allow a lender to take the tunic in pledge but require the cloak to be returned by sunset — 'for it is his only covering... in what else will he sleep?'",
-   "Matthew's version has the opponent suing for the tunic, the pledgeable garment, and Jesus telling the debtor to give up the cloak as well — the one item Torah forbade taking. In Luke the order is reversed (a robbery rather than a lawsuit). Either way the listener is someone poor enough to be sued for their shirt.",
-   "One ostracon from Mesad Hashavyahu (7th century BC) records a field labourer's petition to a governor complaining that an official confiscated his cloak — the exact situation the law envisages, and evidence the rule was live long before Jesus quoted it."
+   "A first-century Judean man typically owned two garments: the chitōn (tunic, worn next to the skin) and the himation (cloak, the heavy outer wrap). Exodus 22:26–27 and Deuteronomy 24:12–13 require a lender who takes a cloak as collateral to return it by sunset: 'his cloak is the only covering he has for his body. What else will he sleep in?' The laws say nothing of the tunic.",
+   "Matthew's version has the opponent suing for the tunic, and Jesus telling the one sued to let him have the cloak as well, the garment the pledge laws protect overnight. In Luke the order is reversed, and there is no lawsuit: 'if someone takes your cloak, do not withhold your tunic as well' (6:29).",
+   "An ostracon from Mesad Hashavyahu (7th century BC) records a field labourer's petition to a governor complaining that an official had seized his garment and asking for it back."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Exod.22.26-27"},
@@ -71,7 +71,7 @@
   "summary": "Joseph is 'pledged' to Mary but plans to 'divorce' her. Jewish betrothal (erusin) was legally marriage: the couple did not yet live together, but ending it required a bill of divorce, and unfaithfulness counted as adultery.",
   "body": [
    "Marriage came in two stages roughly a year apart. At betrothal the man paid the bride-price and the woman was legally his wife; at the wedding (nissuin) she moved into his house. Deuteronomy 22:23–24 already treats a betrothed woman as a 'wife' and her seducer as an adulterer, and the Mishnah's tractate on betrothal (Kiddushin 1:1) opens with the three ways a woman is 'acquired' as a wife — money, a document, or intercourse.",
-   "That is why Matthew can call Joseph Mary's 'husband' (1:19) while saying they had not 'come together' (1:18), and why his options were a public accusation or a quiet bill of divorce — not simply walking away. Choosing the quiet route is what the narrator means by calling him 'righteous'."
+   "Matthew calls Joseph Mary's 'husband' (1:19) while saying they had not yet 'come together' (1:18), and has Joseph, 'a righteous man … unwilling to disgrace her publicly', resolve 'to divorce her quietly'."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Deut.22.23-24", "note": "the betrothed woman called 'wife'"},
@@ -86,10 +86,10 @@
   "title": "Reclining at table — why her hair could reach his feet",
   "kind": "culture",
   "verses": ["Luke.7.36-50", "John.12.1-3", "John.13.23-25", "Mark.14.3", "Matt.26.7"],
-  "summary": "At a formal meal guests lay on couches on their left side, feet pointing away from the table. That is how a woman could anoint Jesus' feet from behind, and how John could lean back against him.",
+  "summary": "At a formal meal guests lay on couches on their left side, feet pointing away from the table. A guest's feet lay behind him: in Luke 7 a woman anoints Jesus' feet from behind, and in John 13 the disciple whom Jesus loved leans back against Him.",
   "body": [
-   "Every Gospel dinner scene uses the verb 'recline' (anakeimai, katakeimai), not 'sit'. Diners lay on couches (the Greek triklinion, 'three couches', gives us the room's name) arranged around a low table, propped on the left elbow, heads toward the table and feet stretched out behind.",
-   "The arrangement explains several details that puzzle modern readers: the woman in Luke 7 stands 'behind him at his feet'; Mary in John 12 anoints his feet and wipes them with her hair; in Mark 14 the flask is poured on his head as he reclines; and in John 13 the beloved disciple can lean back on Jesus' chest to whisper a question. Dining rooms of this type have been excavated in Herodian palaces and in ordinary Jerusalem houses of the period."
+   "The Gospels' dinner scenes use the verbs for 'recline' (anakeimai, katakeimai), not 'sit'. Diners lay on couches (the Greek triklinion, 'three couches', gives us the room's name) arranged around a low table, propped on the left elbow, heads toward the table and feet stretched out behind.",
+   "The Gospels' details agree with that arrangement: the woman in Luke 7 stands 'behind him at his feet'; Mary in John 12 anoints his feet and wipes them with her hair; in Mark 14 the flask is poured on his head as he reclines; and in John 13 the beloved disciple can lean back on Jesus' chest to whisper a question. Dining rooms of this type have been excavated in Herodian palaces and in the wealthy houses of Jerusalem's Herodian Quarter."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Luke.7.38", "note": "'standing behind Him at His feet'"},
@@ -106,8 +106,8 @@
   "verses": ["Luke.2.6-7", "Luke.22.11", "Luke.10.34"],
   "summary": "Luke's word in 2:7 is kataluma, which he uses again for the upper 'guest room' of the Last Supper. When he means a commercial inn (Luke 10:34) he uses a different word, pandocheion.",
   "body": [
-   "The traditional picture of an innkeeper turning the couple away rests on the translation 'inn'. But Luke knows the ordinary word for a paid inn — pandocheion, the place the Good Samaritan pays two denarii — and does not use it here. Kataluma is a lodging place or guest room; in Luke 22:11 (and Mark 14:14) it is the furnished upper room where Jesus eats the Passover.",
-   "Village houses of the period commonly had a single family room, a raised guest space, and a lower area where animals were brought in at night — with mangers cut into the floor or wall between them. On this reading Joseph and Mary were taken in by relatives in Bethlehem, the guest room was already full (a census had brought the whole clan home), and the baby was laid in the manger at the family end of the house. The lexical point is firm; the reconstruction of the house is an interpretation supported by excavated village houses of the period."
+   "The picture of an innkeeper turning the couple away rests on the translation 'inn', which the BSB keeps. Luke knows the ordinary word for a paid inn — pandocheion, the place the Good Samaritan pays two denarii — and does not use it here. Kataluma is a lodging place or guest room; in Luke 22:11 (and Mark 14:14) it is the furnished upper room where Jesus eats the Passover.",
+   "Kenneth Bailey reconstructs the village house of the period with a single family room, a raised guest space, and a lower area where animals were brought in at night, with mangers cut into the floor or wall between them. On his reading Joseph and Mary were taken in by relatives in Bethlehem, the guest room was already full, and the baby was laid in the manger at the family end of the house. Luke's choice of words is evidence; Bailey's house is an interpretation."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Luke.2.7", "note": "κατάλυμα"},
@@ -117,17 +117,17 @@
    {"kind": "scholarship", "title": "Jesus Through Middle Eastern Eyes", "author": "Kenneth E. Bailey", "year": 2008, "note": "ch. 1, the village-house reading"}
   ],
   "confidence": "consensus",
-  "traditions": ["'Guest room' reading: increasingly standard in modern commentaries and in the NIV (2011) and other recent translations; the 'inn' reading remains in older translations and popular tradition"]
+  "traditions": ["'Guest room': Kenneth E. Bailey (Jesus Through Middle Eastern Eyes, 2008); the NIV (2011)", "'Inn': the King James Version and the BSB, among other translations"]
  },
  {
   "id": "hebrew-day-evening-morning",
   "title": "A day begins at sunset",
   "kind": "culture",
   "verses": ["Gen.1.5", "Lev.23.32", "Mark.1.32", "Luke.23.54"],
-  "summary": "'There was evening, and there was morning' — the Hebrew day ran from sunset to sunset, which is why the crowds wait until sundown to bring the sick on the Sabbath and why the burial of Jesus was rushed.",
+  "summary": "'There was evening, and there was morning' — the Hebrew day ran from sunset to sunset.",
   "body": [
-   "Genesis 1 counts each day evening-first, and Leviticus 23:32 makes the rule explicit for the Day of Atonement: 'from evening to evening'. Sabbath therefore began at Friday sunset. In Mark 1:32 the townspeople of Capernaum bring their sick 'that evening, after sunset' — the moment the Sabbath ended and carrying became permissible. In Luke 23:54 the burial is hurried because 'the Sabbath was beginning' as the sun went down on Friday.",
-   "The same convention explains why Passover 'day' spans what we would call two calendar dates, and why Jewish holidays today still begin at nightfall."
+   "Genesis 1 counts each day evening-first, and Leviticus 23:32 makes the rule explicit for the Day of Atonement: 'from evening to evening'. Sabbath therefore began at Friday sunset. Mark sets Jesus' first day in Capernaum on a Sabbath (1:21), and the townspeople bring their sick 'that evening, after sunset' (1:32), when by this reckoning the Sabbath had ended. Luke sets the burial on 'Preparation Day, and the Sabbath was beginning' (23:54).",
+   "The same convention explains why Passover 'day' spans what are two calendar dates in the Roman reckoning, and why Jewish holidays today still begin at nightfall."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Gen.1.5"},
@@ -145,9 +145,9 @@
   "summary": "The woman with the haemorrhage reaches for 'the fringe of his garment' — the kraspedon, the tasselled corner Numbers 15 commands every Israelite man to wear as a memorial of the commandments.",
   "body": [
    "Numbers 15:38-39 tells Israel to make tassels on the corners of their garments, with a cord of blue in each, 'so that you may look at it and remember all the commandments of the LORD'. Deuteronomy 22:12 repeats the instruction. The Hebrew is tzitzit; the Greek translators and the Gospel writers use kraspedon, which English versions render fringe, tassel, hem or border.",
-   "So when Matthew 9:20 says the woman touched 'the fringe of his garment', it is not a vague reach for the hem of a robe. She took hold of the part of his clothing that marked him as a man under the commandments. Matthew 14:36 and Mark 6:56 repeat it: the sick in the villages ask to touch just the kraspedon.",
-   "Her condition makes the gesture heavier. Leviticus 15:25-27 places a woman with a chronic flow of blood in a state of ritual impurity that passes to whatever and whoever she touches; twelve years of it (Mark 5:25) had cut her off from ordinary contact. Reaching for the tassel from behind and in a crowd is the act of someone who expects to be turned on if noticed.",
-   "The same garment detail cuts the other way in Matthew 23:5, where Jesus says the scribes and Pharisees 'lengthen their tassels' to be seen. The object is not the problem; the display is.",
+   "Matthew 9:20 says the woman touched 'the fringe of His cloak', the kraspedon. Matthew 14:36 and Mark 6:56 use the same word: the sick in the villages ask to touch just the kraspedon.",
+   "Leviticus 15:25-27 places a woman with a chronic flow of blood in a state of ritual impurity that passes to whatever she lies or sits on and to whoever touches it. Hers had lasted twelve years (Mark 5:25), and she came 'through the crowd behind Him' (5:27).",
+   "The tassels appear again in Matthew 23:5, where Jesus says of the scribes and Pharisees, 'All their deeds are done for men to see … they lengthen their tassels.'",
    "Woollen tassels and cords of blue have been recovered from the Judean desert caves of the Bar Kokhba period, so the practice is attested physically as well as textually — though those finds are a century after the Gospels."
   ],
   "sources": [
@@ -163,12 +163,12 @@
   "title": "'I, Tertius, who wrote this letter, greet you'",
   "kind": "culture",
   "verses": ["Rom.16.22", "1Cor.16.21", "Gal.6.11", "Col.4.18", "2Thess.3.17", "Phlm.1.19", "1Pet.5.12"],
-  "summary": "Paul's letters were dictated to a professional scribe and signed off in Paul's own hand. One of those scribes signs his own name in Romans, and the change of handwriting is something Paul twice points out on the page.",
+  "summary": "One of Paul's scribes signs his own name in Romans, and Paul several times writes a closing 'in my own hand'. E. Randolph Richards sets these beside the papyrus letters of the period, dictated to a secretary and signed by the sender.",
   "body": [
-   "Ancient letter writing was a two-person job. Writing on papyrus with a reed pen was a trained skill, and anyone who could afford it dictated to a secretary — an amanuensis. Hundreds of surviving papyrus letters show the pattern: a practised professional hand for the body, then a few clumsier lines and a signature added by the sender.",
-   "Paul's letters show exactly this. Romans ends with the scribe stepping briefly out of role: 'I, Tertius, who wrote this letter, greet you in the Lord' (Romans 16:22) — a Roman name common among slaves and freedmen. Elsewhere Paul takes the pen himself for the closing: 'the greeting is in my own hand' (1 Corinthians 16:21; Colossians 4:18), 'see with what large letters I am writing to you with my own hand' (Galatians 6:11), and in Philemon 19 an IOU written out personally. 2 Thessalonians 3:17 makes the signature a deliberate authentication: 'this is the sign of genuineness in every letter of mine'.",
-   "That last verse implies a real problem — letters circulating under Paul's name that were not his (2 Thessalonians 2:2) — and a practical answer to it.",
-   "Two consequences follow, and both are commonly overdrawn, so they are worth stating carefully. First, dictation is a plausible part of the explanation for the shifts of style between letters, since secretaries varied in how much they smoothed what they heard; how much latitude Paul gave is unknown, and the range of secretarial practice in antiquity runs from strict shorthand to near co-authorship. Second, 1 Peter 5:12, 'by Silvanus I have written to you briefly', is sometimes read as naming a secretary, but the Greek phrase more naturally identifies the letter carrier. Neither point is settled by the evidence; what is settled is the basic mechanics of how these letters reached the page."
+   "Writing on papyrus with a reed pen was a trained skill, and Richards shows from surviving papyrus letters that senders often dictated to a secretary, an amanuensis: a practised professional hand for the body, then a few lines and a signature added by the sender.",
+   "Romans ends with the scribe stepping briefly out of role: 'I, Tertius, who wrote this letter, greet you in the Lord' (Romans 16:22) — a Roman name common among slaves and freedmen. Elsewhere Paul takes the pen himself for the closing: 'the greeting is in my own hand' (1 Corinthians 16:21; Colossians 4:18), 'see with what large letters I am writing to you with my own hand' (Galatians 6:11), and in Philemon 19 an IOU written out personally. 2 Thessalonians 3:17 makes the signature a deliberate authentication: 'this is the sign of genuineness in every letter of mine'.",
+   "The same letter warns against a 'letter seeming to be from us' (2 Thessalonians 2:2).",
+   "Richards documents a range of secretarial practice, from strict shorthand to near co-authorship, and offers dictation as part of the explanation for shifts of style between letters; how much latitude Paul gave is not recorded. 1 Peter 5:12, 'by Silvanus I have written to you briefly', has been read as naming a secretary; Richards reads the phrase as naming the letter's carrier."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Rom.16.22", "note": "'I, Tertius, who wrote this letter'"},
@@ -183,12 +183,12 @@
   "title": "A sandal, ten witnesses, and a property deal at the gate",
   "kind": "culture",
   "verses": ["Ruth.4.1-12", "Deut.25.5-10", "Lev.25.25", "Deut.21.19"],
-  "summary": "Boaz does not marry Ruth privately. He convenes a court in the town gateway, makes the nearer kinsman decline in public, and takes a sandal as the receipt. Ruth 4 is a legal transaction, recorded as one.",
+  "summary": "Boaz does not marry Ruth privately. He convenes a court in the town gateway, makes the nearer kinsman decline in public, and takes a sandal as the receipt. Ruth 4 records it as a legal transaction.",
   "body": [
-   "The gate of a walled town was its courthouse. The gateway of an Iron Age Israelite city was a deep chambered structure with benches built into the side rooms — excavated examples survive at Dan, Gezer and Beersheba — and it was where everyone entering or leaving passed. Deuteronomy 21:19, 22:15 and 25:7 all send disputes 'to the elders at the gate'. Boaz sits down there, stops the man he needs and seats ten elders (Ruth 4:1-2): he is empanelling a court, in the one place where the whole town will see it.",
-   "Two separate laws are in play. Leviticus 25:25 gives a near relative the right and duty to redeem land a poor kinsman has had to sell. Deuteronomy 25:5-10 requires a dead man's brother to marry the widow and raise an heir in his name. Boaz presents the field first; the nearer redeemer accepts. Only then does Boaz add that the field comes with Ruth, and the man withdraws rather than 'impair my own inheritance' (Ruth 4:6) — that is, risk the land passing to an heir counted to another man's line.",
-   "Then the sandal. Ruth 4:7 explains the custom for readers who no longer practised it: 'to confirm a transaction, one party removed his sandal and gave it to the other'. This is a conveyancing gesture — a token handed over to make the transfer public and final, like a seal. It is related to, but not the same as, Deuteronomy 25:9, where the widow herself pulls the sandal off the refusing brother-in-law and spits in his face; that version is a shaming penalty. In Ruth the man takes his own sandal off and hands it over, and nobody spits. The narrator's aside that this was the custom 'in former times in Israel' tells us the book was written for an audience to whom it needed explaining.",
-   "What the law compelled and what Boaz actually does are not the same thing. He is not the nearest kinsman and is under no obligation, and the levirate law names a brother rather than a distant relative. He goes beyond the letter of both statutes and does it in front of witnesses — which is the book's argument about hesed made procedurally."
+   "The gate of a walled town was its courthouse. The gateway of an Iron Age Israelite city was a deep chambered structure with benches built into the side rooms — excavated examples survive at Dan, Gezer and Beersheba — and it was where everyone entering or leaving passed. Deuteronomy 21:19, 22:15 and 25:7 all send disputes 'to the elders at the gate'. Boaz sits down there, stops the man he needs and seats ten elders (Ruth 4:1-2); Robert Hubbard reads this as convening a court.",
+   "Two separate laws are in play. Leviticus 25:25 gives a near relative the right and duty to redeem land a poor kinsman has had to sell. Deuteronomy 25:5-10 requires a dead man's brother to marry the widow and raise an heir in his name. Boaz presents the field first; the nearer redeemer accepts. Only then does Boaz add that the field comes with Ruth, and the man withdraws, 'or I would jeopardize my own inheritance' (Ruth 4:6), which Hubbard reads as the risk of the land passing to an heir counted to another man's line.",
+   "Then the sandal. Ruth 4:7 explains the custom: 'in former times in Israel, concerning the redemption or exchange of property, to make any matter legally binding a man would remove his sandal and give it to the other party'. It is related to, but not the same as, Deuteronomy 25:9, where the widow herself pulls the sandal off the refusing brother-in-law and spits in his face; that version is a shaming penalty. In Ruth the man takes his own sandal off and hands it over, and nobody spits. The narrator explains it as a custom of 'former times in Israel'.",
+   "Boaz is not the nearest kinsman, and the levirate law of Deuteronomy 25 names a brother, not a more distant relative. Hubbard reads his acting beyond both statutes, before witnesses, as the book's theme of hesed, loyal kindness."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Ruth.4.7", "note": "'now this was the custom in former times in Israel'"},
@@ -206,10 +206,10 @@
   "verses": ["John.7.2", "John.7.37-39", "John.8.12", "John.9.5-7", "Zech.14.8"],
   "summary": "On the last day of Tabernacles Jesus cried, 'If anyone is thirsty, let him come to Me and drink', and soon after, 'I am the light of the world'. The Mishnah describes the feast's two great rites in the temple: water drawn from Siloam and poured at the altar, and golden lamps that lit every courtyard in Jerusalem.",
   "body": [
-   "Mishnah Sukkah 4:9: each morning of the feast a priest filled 'a golden jug with a capacity of three log with water from the Siloam pool', carried it in through the Water Gate to the sound of trumpets, climbed the altar and poured it into a silver basin. A Sadducee priest who once poured it on his feet instead was pelted with the people's citrons — the rite mattered to them.",
+   "Mishnah Sukkah 4:9: each morning of the feast a priest filled 'a golden jug with a capacity of three log with water from the Siloam pool', carried it in through the Water Gate to the sound of trumpets, climbed the altar and poured it into a silver basin. A priest who once poured it on his feet instead (a Sadducee, in the William Davidson translation's explanation) was pelted with the people's citrons.",
    "Sukkah 5:2-4: at the end of the first day golden lamps were set up in the Women's Court, on poles with four basins each, lit with wicks of worn priestly garments, 'and the light … was so bright that there was not a courtyard in Jerusalem that was not illuminated'. Men danced with torches through the night while the Levites played on the fifteen steps.",
-   "Against that background John's chapters read as answers to the feast: living water offered 'on the last and greatest day' (7:37), light offered in the temple courts during the feast (8:12, 20), and a blind man sent to wash in Siloam (9:7). Zechariah 14, read on the feast's first day, promises living water flowing from Jerusalem (14:8).",
-   "The Mishnah was compiled about AD 200, after the temple's fall. It describes the rites as remembered, and how closely they match the practice of Jesus's day cannot be checked; the water-pouring itself is old enough that the Sadducees resisted it."
+   "John sets these sayings at the feast: living water offered 'on the last and greatest day' (7:37), 'I am the light of the world' spoken in the temple courts (8:12, 20), and soon after a blind man sent to wash in Siloam (9:7). Zechariah 14, read on the feast's first day, promises living water flowing from Jerusalem (14:8).",
+   "The Mishnah was compiled about AD 200, after the temple's fall. It describes the rites as remembered, and how closely they match the practice of Jesus's day cannot be checked."
   ],
   "sources": [
    {"kind": "primary", "title": "Mishnah Sukkah 4:9", "year": "compiled c. AD 200", "url": "https://www.sefaria.org/Mishnah_Sukkah.4.9", "note": "William Davidson translation: the water libation from Siloam"},

@@ -28,7 +28,7 @@
  ],
  "later": [
   {"text": "The Talmud credits him with writing his book and the genealogies of Chronicles; 4 Ezra tells how he restored the scriptures after they were burned.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 15a", "url": "https://www.sefaria.org/Bava_Batra.15a"}, {"kind": "primary", "title": "4 Ezra (2 Esdras) 14:19–48", "ref": "2Esd.14.19-48"}], "traditions": ["the Talmud", "4 Ezra"]},
-  {"text": "Taken in the text's order he came in 458 BC, thirteen years before Nehemiah; some scholars put him in 398 BC under Artaxerxes II, after Nehemiah.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Ezra.7.7-8"}, {"kind": "scholarship", "title": "Ezra, Nehemiah (Word Biblical Commentary 16)", "author": "H. G. M. Williamson", "year": 1985}], "traditions": ["458 BC: the text's order and many commentators", "398 BC: Albin van Hoonacker and some later scholars"]}
+  {"text": "Taken in the text's order he came in 458 BC, thirteen years before Nehemiah; Albin van Hoonacker and those who follow him put him in 398 BC under Artaxerxes II, after Nehemiah.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Ezra.7.7-8"}, {"kind": "scholarship", "title": "Ezra, Nehemiah (Word Biblical Commentary 16)", "author": "H. G. M. Williamson", "year": 1985}], "traditions": ["458 BC: the text's order; H. G. M. Williamson", "398 BC: Albin van Hoonacker and those who follow him"]}
  ],
  "confidence": "evidence",
  "sources": [

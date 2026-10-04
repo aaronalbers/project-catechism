@@ -15,7 +15,7 @@
    { "verse": "Num.33.5", "name": "Succoth", "place": "aa28709" },
    { "verse": "Num.33.6", "name": "Etham", "place": "a27d0e0" },
    { "verse": "Num.33.7", "name": "Pi-hahiroth", "place": "ababfd2" },
-   { "verse": "Num.33.8", "name": "Marah", "place": "ad3970d", "via": { "points": [[29.87694, 32.65833]], "basis": "After the sea crossing the line runs through Uyun Musa (the 'Springs of Moses', in OpenBible's modern-site list) and down the eastern shore of the Gulf of Suez, the natural corridor to Marah. Only the camps are named in the text; the path between them is an estimate." } },
+   { "verse": "Num.33.8", "name": "Marah", "place": "ad3970d", "via": { "points": [[29.87694, 32.65833]], "basis": "After the sea crossing the line runs through Uyun Musa (the 'Springs of Moses', in OpenBible's modern-site list) and down the eastern shore of the Gulf of Suez, the coastal route to Marah. Only the camps are named in the text; the path between them is an estimate." } },
    { "verse": "Num.33.9", "name": "Elim", "place": "a2410c1" },
    { "verse": "Num.33.10", "name": "Camp by the Red Sea", "place": "a3ba698", "estimate": { "at": [29.05, 33.12], "basis": "The text says only 'by the Red Sea', and OpenBible's point is the middle of the Gulf of Suez. The camp is placed on the gulf's eastern shore near Abu Zenima, between Elim and the Desert of Sin." } },
    { "verse": "Num.33.11", "name": "Desert of Sin", "place": "a0f54e4" },
@@ -62,7 +62,7 @@
   "closed": true,
   "ref": "Num.34.1-12",
   "confidence": "estimate",
-  "summary": "The boundary God gives Moses for the land, traced clockwise from the southern tip of the Salt Sea: west across the Negev to the Brook of Egypt, up the Mediterranean coast, east through Lebo-hamath to Hazar-enan, and back down past the Sea of Galilee and the Jordan. Named points use OpenBible.info's top-ranked identification. Where the text names a feature (the Brook, the coast, the Jordan, the Salt Sea), the line follows it. Where a point is unidentified, it is spaced between its neighbours and marked ≈. The northern points are the most debated.",
+  "summary": "The boundary God gives Moses for the land, traced clockwise from the southern tip of the Salt Sea: west across the Negev to the Brook of Egypt, up the Mediterranean coast, east through Lebo-hamath to Hazar-enan, and back down past the Sea of Galilee and the Jordan. Named points use OpenBible.info's top-ranked identification. Where the text names a feature (the Brook, the coast, the Jordan, the Salt Sea), the line follows it. Where a point is unidentified, it is spaced between its neighbours and marked ≈. The identifications of the northern points are disputed.",
   "sources": [
    { "kind": "scripture", "ref": "Num.34.1-12", "note": "The boundary description itself." },
    { "kind": "scripture", "ref": "Josh.15.1-4", "note": "Judah's southern border repeats the same line: Akrabbim, Zin, Kadesh-barnea, Hezron/Addar, Azmon, the Brook of Egypt." },

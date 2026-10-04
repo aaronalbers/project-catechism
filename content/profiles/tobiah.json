@@ -19,7 +19,7 @@
   {"ref": "Neh.13.7-8", "text": "Thrown out"}
  ],
  "later": [
-  {"text": "Many historians connect him with the Tobiads, a powerful family east of the Jordan: a Tobias appears in the Zenon papyri of 259 BC, the name Tobiah is cut in the rock at ʿIraq al-Amir, and Josephus tells of the family's feuds.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "ʿIraq al-Amir, rock-cut inscription “Tobiah”"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 12.160–236"}, {"kind": "scholarship", "title": "The Tobiads", "author": "Benjamin Mazar", "year": 1957, "note": "Israel Exploration Journal 7"}], "traditions": ["Benjamin Mazar and many historians"]}
+  {"text": "Benjamin Mazar connects him with the Tobiads, a powerful family east of the Jordan: a Tobias appears in the Zenon papyri of 259 BC, the name Tobiah is cut in the rock at ʿIraq al-Amir, and Josephus tells of the family's feuds.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "ʿIraq al-Amir, rock-cut inscription “Tobiah”"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 12.160–236"}, {"kind": "scholarship", "title": "The Tobiads", "author": "Benjamin Mazar", "year": 1957, "note": "Israel Exploration Journal 7"}], "traditions": ["Benjamin Mazar"]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -4,7 +4,7 @@
  "role": "Apostle, also called Judas son of James",
  "people": ["G2455G"],
  "when": "≈ AD 28–33",
- "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, AD 30 or 33 on reckonings from the gospels' weekday.",
  "summary": "One of the Twelve, named Thaddaeus in Matthew and Mark, and Judas son of James in Luke and Acts. At the Last Supper Judas (not Iscariot) asked Jesus why he would reveal himself to the disciples and not to the world; Jesus answered that the Father and he would come and make their home with anyone who loves him and keeps his word.",
  "body": [
   "Some manuscripts of Matthew call him Lebbaeus."
@@ -17,7 +17,7 @@
   {"ref": "Acts.1.13", "text": "In the upper room"}
  ],
  "later": [
-  {"text": "Most readers take Thaddaeus and Judas son of James to be the same man under two names, since each list has one and not the other.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.3.18"}, {"kind": "scripture", "ref": "Luke.6.16"}], "traditions": ["most commentators"]},
+  {"text": "Jerome takes Thaddaeus and Judas son of James to be the same man under two names, since each list has one and not the other.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.3.18"}, {"kind": "scripture", "ref": "Luke.6.16"}], "traditions": ["Jerome (Commentary on Matthew 10:4)"]},
   {"text": "Eusebius tells how Thaddaeus, whom he counts one of the Seventy, was sent to King Abgar of Edessa; Western tradition joins him with Simon the Zealot in Persia.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 1.13"}], "traditions": ["Eusebius and Syriac tradition", "Western Catholic tradition"]}
  ],
  "confidence": "evidence",

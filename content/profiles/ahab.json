@@ -28,7 +28,7 @@
  ],
  "later": [
   {"text": "The Kurkh Monolith of Shalmaneser III (British Museum ME 118884) lists “Ahab the Israelite” among the allied kings who fought him at Qarqar in 853 BC, with 2,000 chariots and 10,000 soldiers, the largest chariot force of the coalition.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Kurkh Monolith of Shalmaneser III, British Museum ME 118884", "note": "found at Kurkh (Üçtepe), Turkey, 1861"}]},
-  {"text": "Carved ivories found in the royal quarter of Samaria are commonly linked to the “ivory house” of 1 Kings 22:39.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Samaria ivories", "note": "Harvard excavations of 1908–10 and the Joint Expedition of 1931–35"}, {"kind": "scripture", "ref": "1Kgs.22.39"}, {"kind": "scripture", "ref": "Amos.3.15"}], "traditions": ["many archaeologists"]}
+  {"text": "Carved ivories found in the royal quarter of Samaria were linked by their excavators to the “ivory house” of 1 Kings 22:39.", "confidence": "interpretation", "sources": [{"kind": "archaeology", "title": "Samaria ivories", "note": "Harvard excavations of 1908–10 and the Joint Expedition of 1931–35"}, {"kind": "scripture", "ref": "1Kgs.22.39"}, {"kind": "scripture", "ref": "Amos.3.15"}], "traditions": ["the Samaria excavators"]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -4,7 +4,7 @@
  "role": "Tax collector called to be an apostle",
  "people": ["G3156"],
  "when": "≈ AD 28–33",
- "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, usually dated AD 30 or 33.",
+ "whenBasis": "Jesus' ministry, from the fifteenth year of Tiberius (Luke 3:1), AD 28–29, to the crucifixion under Pilate, AD 30 or 33 on reckonings from the gospels' weekday.",
  "summary": "A tax collector by the Sea of Galilee, called Levi son of Alphaeus in Mark and Luke. Jesus saw him at the tax booth and said, “Follow Me,” and he got up and followed. He held a great banquet for Jesus with many tax collectors and sinners; when the Pharisees objected, Jesus said he had come to call sinners, not the righteous. He is listed among the Twelve as Matthew the tax collector.",
  "body": [
   "Luke says he left everything behind. Only the Gospel of Matthew names the tax collector Matthew and calls him the tax collector in its list of the Twelve."
@@ -20,7 +20,7 @@
  ],
  "later": [
   {"text": "Papias (early second century), as quoted by Eusebius, says Matthew compiled the sayings in the Hebrew language. From Irenaeus on, the church has named him as author of the first Gospel.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.39.16"}, {"kind": "primary", "title": "Irenaeus, Against Heresies 3.1.1"}], "traditions": ["Papias and Irenaeus", "traditional Christian readers"]},
-  {"text": "Most modern scholars think the Greek Gospel of Matthew draws on Mark and was not written by an eyewitness.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Matthew (International Critical Commentary)", "author": "W. D. Davies and Dale C. Allison", "year": 1988}], "traditions": ["most historical-critical scholars"]}
+  {"text": "Davies and Allison hold that the Greek Gospel of Matthew draws on Mark and was not written by an eyewitness.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Matthew (International Critical Commentary)", "author": "W. D. Davies and Dale C. Allison", "year": 1988}], "traditions": ["W. D. Davies and Dale C. Allison"]}
  ],
  "confidence": "evidence",
  "sources": [

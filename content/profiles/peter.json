@@ -23,9 +23,9 @@
   {"ref": "Gal.2.11", "text": "Opposed by Paul at Antioch"}
  ],
  "later": [
-  {"text": "He was martyred in Rome under Nero, ≈AD 64–68. First Clement, written from Rome ≈AD 96, speaks of his martyrdom, and Dionysius of Corinth (quoted by Eusebius) says Peter and Paul died in Italy at the same time. Most historians accept that he died in Rome.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "1 Clement 5"}, {"kind": "primary", "title": "Eusebius, Church History 2.25"}]},
+  {"text": "First Clement, written from Rome ≈AD 96, speaks of his martyrdom without naming the place; Dionysius of Corinth (quoted by Eusebius) says Peter and Paul died in Italy at the same time, and Tertullian puts his death in Rome under Nero. Otto Zwierlein (2009) argues that none of these rests on knowledge of the event. See the card on Peter's death.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "1 Clement 5"}, {"kind": "primary", "title": "Eusebius, Church History 2.25"}, {"kind": "primary", "title": "Tertullian, Scorpiace 15"}, {"kind": "scholarship", "title": "Review of Otto Zwierlein, Petrus in Rom (2009)", "author": "Pieter W. van der Horst", "url": "https://bmcr.brynmawr.edu/2010/2010.03.25"}]},
   {"text": "He was crucified head downward, at his own request.", "confidence": "interpretation", "traditions": ["Acts of Peter (late 2nd century)", "Origen, as quoted by Eusebius (Church History 3.1)"], "sources": [{"kind": "primary", "title": "Eusebius, Church History 3.1"}]},
-  {"text": "Mark's Gospel preserves Peter's preaching: Papias says Mark was Peter's interpreter and wrote down what he remembered.", "confidence": "interpretation", "traditions": ["Papias (early 2nd century)", "Eusebius", "many scholars, with reservations"], "sources": [{"kind": "primary", "title": "Eusebius, Church History 3.39"}]}
+  {"text": "Papias says Mark was Peter's interpreter and wrote down what he remembered.", "confidence": "interpretation", "traditions": ["Papias (early 2nd century)", "Eusebius"], "sources": [{"kind": "primary", "title": "Eusebius, Church History 3.39"}]}
  ],
  "confidence": "evidence",
  "sources": [

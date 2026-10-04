@@ -4,7 +4,7 @@
  "role": "Jewish queen of Persia who saved her people",
  "people": ["H0635"],
  "when": "≈ 479 BC made queen",
- "whenBasis": "She is taken to the king in the seventh year of his reign (Esther 2:16). The BSB names him Xerxes; if he is Xerxes I (486–465 BC), as most identify him, that is ≈479 BC.",
+ "whenBasis": "She is taken to the king in the seventh year of his reign (Esther 2:16). The BSB names him Xerxes; if he is Xerxes I (486–465 BC), as Carey Moore identifies him, that is ≈479 BC.",
  "summary": "Hadassah, an orphan raised by her cousin Mordecai in Susa, became queen of Persia. When Haman won a decree to destroy the Jews, she went to the king unsummoned at the risk of her life, exposed Haman, and won the Jews the right to defend themselves. The feast of Purim keeps the day.",
  "body": [
   "Mordecai raises her as his own daughter; she is chosen from the young women gathered for the king and made queen in place of Vashti, keeping her people secret at Mordecai's word.",
@@ -22,8 +22,8 @@
   {"ref": "Esth.9.29-32", "text": "Confirms Purim"}
  ],
  "later": [
-  {"text": "The king the Hebrew calls Ahasuerus is identified with Xerxes I, whose Persian name, Xšayāršā, the Hebrew spelling follows. The Septuagint instead calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Herodotus, Histories, book 7", "note": "Xerxes' reign and court"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}]},
-  {"text": "The Hebrew book never names God. The Greek adds six passages, with prayers of Mordecai and Esther among them. Catholic and Orthodox Bibles include them; Jewish and most Protestant Bibles do not.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Septuagint Esther, Additions A–F"}]}
+  {"text": "Carey Moore identifies the king the Hebrew calls Ahasuerus with Xerxes I, whose Persian name, Xšayāršā, the Hebrew spelling follows. The Septuagint instead calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Herodotus, Histories, book 7", "note": "Xerxes' reign and court"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}]},
+  {"text": "The Hebrew book never names God. The Greek adds six passages, with prayers of Mordecai and Esther among them. Catholic and Orthodox Bibles include them; Jewish Bibles do not, nor does the BSB.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Septuagint Esther, Additions A–F"}]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -23,7 +23,7 @@
   {"ref": "1Sam.2.21", "text": "Five more children"}
  ],
  "later": [
-  {"text": "Her song is echoed in Mary's Magnificat: the proud brought down, the humble lifted up, the hungry filled.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "1Sam.2.1-10"}, {"kind": "scripture", "ref": "Luke.1.46-55"}]},
+  {"text": "Mary's Magnificat (Luke 1:46–55) also sings of the proud brought down, the humble lifted up and the hungry filled.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "1Sam.2.1-10"}, {"kind": "scripture", "ref": "Luke.1.46-55"}]},
   {"text": "The Talmud draws rules for prayer from hers: to pray with directed heart, to form the words with the lips, and not to raise the voice.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Berakhot 31a", "url": "https://www.sefaria.org/Berakhot.31a"}]}
  ],
  "confidence": "evidence",

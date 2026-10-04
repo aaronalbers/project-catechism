@@ -23,7 +23,7 @@
  ],
  "later": [
   {"text": "Josephus names him Joseph called Caiaphas and dates his high priesthood from Valerius Gratus to Vitellius, the longest of any in the Roman period.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Antiquities of the Jews 18.35, 18.95"}]},
-  {"text": "An ornate ossuary inscribed “Yehosef bar Qayafa,” found in a Jerusalem tomb in 1990, is widely taken to be his.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Ossuary of Yehosef bar Qayafa, Israel Museum"}]}
+  {"text": "An ornate ossuary inscribed “Yehosef bar Qayafa,” found in a Jerusalem tomb in 1990, was identified as his by Zvi Greenhut, who excavated it; William Horbury questioned the identification on the spelling. See the card on the ossuary.", "confidence": "interpretation", "traditions": ["his: Zvi Greenhut", "doubted: William Horbury"], "sources": [{"kind": "archaeology", "title": "Ossuary of Yehosef bar Qayafa, Israel Museum"}]}
  ],
  "confidence": "evidence",
  "sources": [

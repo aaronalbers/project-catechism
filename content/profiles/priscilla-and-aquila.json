@@ -20,8 +20,8 @@
   {"ref": "2Tim.4.19", "text": "Greeted"}
  ],
  "later": [
-  {"text": "Suetonius says Claudius expelled the Jews from Rome for disturbances at the instigation of Chrestus, usually read as disputes about Christ and dated AD 49. See the card on Claudius's expulsion.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Suetonius, Life of Claudius 25.4"}, {"kind": "primary", "title": "Orosius, History Against the Pagans 7.6.15–16"}]},
-  {"text": "Adolf von Harnack proposed in 1900 that Priscilla wrote the letter to the Hebrews.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Probabilia über die Adresse und den Verfasser des Hebräerbriefes", "author": "Adolf von Harnack", "year": 1900}, {"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Adolf von Harnack; few have followed him"]}
+  {"text": "Suetonius says Claudius expelled the Jews from Rome for disturbances at the instigation of Chrestus, which Orosius read as Christ and dated to AD 49; Dixon Slingerland argues Chrestus was a man in Rome. See the card on Claudius's expulsion.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Suetonius, Life of Claudius 25.4"}, {"kind": "primary", "title": "Orosius, History Against the Pagans 7.6.15–16"}]},
+  {"text": "Adolf von Harnack proposed in 1900 that Priscilla wrote the letter to the Hebrews.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Probabilia über die Adresse und den Verfasser des Hebräerbriefes", "author": "Adolf von Harnack", "year": 1900}, {"kind": "scholarship", "title": "Hebrews (Anchor Bible 36)", "author": "Craig R. Koester", "year": 2001}], "traditions": ["Adolf von Harnack"]}
  ],
  "confidence": "evidence",
  "sources": [

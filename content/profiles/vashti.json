@@ -21,7 +21,7 @@
  ],
  "later": [
   {"text": "The Talmud says she was ordered to appear wearing only the crown, and that she was a granddaughter of Nebuchadnezzar.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Megillah 12b", "url": "https://www.sefaria.org/Megillah.12b"}], "traditions": ["the Talmud and later rabbinic midrash"]},
-  {"text": "Herodotus names Xerxes' queen as Amestris. Some identify Vashti with her; most scholars find no Vashti or Esther in the Greek historians.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Herodotus, Histories 7.61, 9.108–112"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}], "traditions": ["Vashti is Amestris: some conservative commentators", "no match in the Greek sources: most historians"]}
+  {"text": "Herodotus names Xerxes' queen as Amestris. Some identify Vashti with her; Carey Moore finds no Vashti or Esther in the Greek historians.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Herodotus, Histories 7.61, 9.108–112"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}], "traditions": ["Vashti is Amestris: some commentators", "no match in the Greek sources: Carey A. Moore"]}
  ],
  "confidence": "evidence",
  "sources": [

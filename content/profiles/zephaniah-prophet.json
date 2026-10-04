@@ -20,7 +20,7 @@
  ],
  "later": [
   {"text": "The medieval hymn Dies irae takes its opening from Zephaniah 1:15 in the Latin Vulgate, “dies irae dies illa.”", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Vulgate, Sophonias 1:15"}, {"kind": "primary", "title": "Dies irae, sequence of the Latin Requiem Mass"}]},
-  {"text": "Many take the Hezekiah of his lineage to be the king, which would make him of royal blood; the text does not call him king.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Zeph.1.1"}], "traditions": ["many commentators"]}
+  {"text": "Some take the Hezekiah of his lineage to be the king, which would make him of royal blood; the text does not call him king.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Zeph.1.1"}], "traditions": ["some commentators"]}
  ],
  "confidence": "evidence",
  "sources": [

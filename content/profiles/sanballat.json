@@ -20,8 +20,8 @@
   {"ref": "Neh.13.28", "text": "His son-in-law driven away"}
  ],
  "later": [
-  {"text": "A papyrus of 407 BC from Elephantine in Egypt names Delaiah and Shelemiah, “sons of Sanballat governor of Samaria,” confirming his office.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Elephantine papyri, Cowley 30–31 (petition to Bagohi, governor of Judah, 407 BC)", "note": "names Johanan the high priest in Jerusalem and Delaiah and Shelemiah, sons of Sanballat governor of Samaria"}]},
-  {"text": "Horonite is usually taken to mean from Beth-horon, north-west of Jerusalem, or from Horonaim in Moab.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Josh.16.3"}, {"kind": "scripture", "ref": "Isa.15.5"}, {"kind": "scholarship", "title": "Ezra, Nehemiah (Word Biblical Commentary 16)", "author": "H. G. M. Williamson", "year": 1985}], "traditions": ["Beth-horon: most commentators", "Horonaim: some"]}
+  {"text": "A papyrus of 407 BC from Elephantine in Egypt names Delaiah and Shelemiah, “sons of Sanballat governor of Samaria,” giving him the title.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Elephantine papyri, Cowley 30–31 (petition to Bagohi, governor of Judah, 407 BC)", "note": "names Johanan the high priest in Jerusalem and Delaiah and Shelemiah, sons of Sanballat governor of Samaria"}]},
+  {"text": "Horonite has been read as from Beth-horon, north-west of Jerusalem, or from Horonaim in Moab.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Josh.16.3"}, {"kind": "scripture", "ref": "Isa.15.5"}, {"kind": "scholarship", "title": "Ezra, Nehemiah (Word Biblical Commentary 16)", "author": "H. G. M. Williamson", "year": 1985}], "traditions": ["the readings H. G. M. Williamson discusses"]}
  ],
  "confidence": "evidence",
  "sources": [

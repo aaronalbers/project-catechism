@@ -4,7 +4,7 @@
  "kings": "1Kgs.12.1-2Kgs.25.30",
  "chronicles": "2Chr.10.1-2Chr.36.23",
  "from": -931,
- "summary": "Kings gives every king of the divided kingdoms a length of reign, and dates most accessions by the other kingdom’s king (“in the thirty-eighth year of Asa…”). Added up as they stand the figures disagree, with each other and with the Assyrian and Babylonian records that date some of these kings to the year. Edwin Thiele reconciled almost all of them with three observations: some reigns overlap, as coregencies or rivals; the kingdoms counted a king’s first part-year differently, and each changed its practice; and Israel began its year in the spring (Nisan), Judah in the autumn (Tishri). His dates are drawn by default, with two later reconstructions beside them: McFall and Young’s revision of Thiele, and Galil’s. They give dates as pairs (931/930), because a regnal year straddles two of ours; the chart rounds to the first. The pins are what anchors them: dates fixed outside the Bible, through the Assyrian eponym list, whose eclipse is dated astronomically to 15 June 763 BC.",
+ "summary": "Kings gives every king of the divided kingdoms a length of reign, and dates most accessions by the other kingdom’s king (“in the thirty-eighth year of Asa…”). Added up as they stand the figures disagree, with each other and with the Assyrian and Babylonian records that date some of these kings to the year. Edwin Thiele proposed to reconcile almost all of them with three observations: some reigns overlap, as coregencies or rivals; the kingdoms counted a king’s first part-year differently, and each changed its practice; and Israel began its year in the spring (Nisan), Judah in the autumn (Tishri). His dates are drawn by default, with two later reconstructions beside them: McFall and Young’s revision of Thiele, and Galil’s. They give dates as pairs (931/930), because a regnal year straddles two of ours; the chart rounds to the first. The pins are what anchors them: dates fixed outside the Bible, through the Assyrian eponym list, whose eclipse is dated astronomically to 15 June 763 BC.",
  "stated": "Each kingdom’s reigns laid end to end at the lengths Kings gives, from 931 BC, with no overlaps and every year counted once. The kingdoms drift apart, and away from the dated pins: this is the arithmetic Thiele’s overlaps and ways of counting account for.",
  "reckoning": [
   {"kingdom": "israel", "from": -931, "to": -798, "method": "non-accession", "year": "Nisan", "basis": "Thiele’s reconstruction: a king’s first part-year counted as his year one (and as his predecessor’s last), which is why Israel’s stated reigns to Jehu come to 98 years against Judah’s 95."},
@@ -24,7 +24,7 @@
   {"id": "jehu-tribute", "year": -841, "label": "Jehu’s tribute", "kings": ["jehu"], "note": "Shalmaneser III’s eighteenth year. Twelve years after Qarqar: Ahab’s last year and Jehu’s first are twelve years apart in Kings too, Ahaziah’s two and Joram’s twelve counted the non-accession way.", "sources": [
    {"kind": "archaeology", "title": "Black Obelisk of Shalmaneser III (British Museum ME 118885)", "note": "shows ‘Jehu son of Omri’ bowing with tribute"}
   ]},
-  {"id": "menahem-tribute", "year": -738, "label": "Menahem’s tribute", "kings": ["menahem"], "ref": "2Kgs.15.19", "estimated": true, "note": "Kings has Menahem pay a thousand talents to ‘Pul’, Tiglath-pileser III (15:19). Tiglath-pileser’s annals and a stele of his found in Iran list ‘Menahem of Samaria’ among his tributaries, but the annals lump his western campaigns of 743–738 together, so the year is uncertain: it has usually been put in 738, from the ninth-year section that follows it, and some argue for 740. Either falls after Thiele’s end for Menahem, 742.", "sources": [
+  {"id": "menahem-tribute", "year": -738, "label": "Menahem’s tribute", "kings": ["menahem"], "ref": "2Kgs.15.19", "estimated": true, "note": "Kings has Menahem pay a thousand talents to ‘Pul’, Tiglath-pileser III (15:19). Tiglath-pileser’s annals and a stele of his found in Iran list ‘Menahem of Samaria’ among his tributaries, but the annals lump his western campaigns of 743–738 together, so the year is uncertain: it has been put in 738, from the ninth-year section that follows it, and the Ministry article argues for 740. Either falls after Thiele’s end for Menahem, 742.", "sources": [
    {"kind": "primary", "title": "Annals and Iran stele of Tiglath-pileser III", "note": "list ‘Menahem of Samaria’ among tributaries"},
    {"kind": "scholarship", "title": "The Royal Inscriptions of Tiglath-pileser III (744–727 BC) and Shalmaneser V (726–722 BC), Kings of Assyria", "author": "Hayim Tadmor and Shigeo Yamada", "year": 2011, "note": "Royal Inscriptions of the Neo-Assyrian Period 1 (Winona Lake: Eisenbrauns)"},
    {"kind": "scholarship", "title": "'Menahem and Tiglath-Pileser: A New Synchronism'", "author": "Louis D. Levine", "year": 1972, "url": "https://www.jstor.org/stable/1356356", "note": "Bulletin of the American Schools of Oriental Research 206, pp. 40–42; publishes the Iran stele"},
@@ -46,7 +46,7 @@
   {"id": "jerusalem-597", "year": -597, "label": "Jerusalem taken", "kings": ["jehoiachin"], "ref": "2Kgs.24.12", "note": "The Babylonian Chronicle dates it to 2 Adar in Nebuchadnezzar’s seventh year: March 597 (the 15th, 16th or 17th, depending on how the Babylonian calendar is converted). Kings counts it as his eighth (24:12).", "sources": [
    {"kind": "primary", "title": "Babylonian Chronicle 5 (British Museum 21946)", "note": "‘he seized the city and captured the king’"}
   ]},
-  {"id": "jerusalem-586", "year": -586, "label": "Jerusalem burned", "kings": ["zedekiah"], "ref": "2Kgs.25.8", "estimated": true, "note": "Nebuchadnezzar’s nineteenth year (25:8). The Babylonian Chronicle breaks off before it, so the year is counted from 597; scholars divide between 587 and 586, on how Zedekiah’s years were reckoned.", "sources": [
+  {"id": "jerusalem-586", "year": -586, "label": "Jerusalem burned", "kings": ["zedekiah"], "ref": "2Kgs.25.8", "estimated": true, "note": "Nebuchadnezzar’s nineteenth year (25:8). The Babylonian Chronicle breaks off before it, so the year is counted from 597; Thiele has 586, McFall and Young 587, on how Zedekiah’s years were reckoned.", "sources": [
    {"kind": "scripture", "ref": "2Kgs.25.8"}
   ]}
  ],
@@ -188,7 +188,7 @@
   {"kind": "primary", "title": "Assyrian and Babylonian Chronicles", "author": "A. Kirk Grayson", "year": 1975, "note": "the Babylonian Chronicles for Samaria (722) and Jerusalem (605, 597)"}
  ],
  "traditions": [
-  "Edwin Thiele, the most widely used reconstruction (drawn by default)",
+  "Edwin Thiele (drawn by default)",
   "Leslie McFall and Rodger Young, revising Thiele (Hezekiah’s coregency, the 587 fall)",
   "Gershon Galil and others, with different overlaps and counting"
  ],

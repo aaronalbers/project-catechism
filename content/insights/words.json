@@ -1,13 +1,13 @@
 [
  {
   "id": "word-g1220-denarion",
-  "title": "δηνάριον (dēnarion) — 'penny' in the KJV, a day's wage in reality",
+  "title": "δηνάριον (dēnarion) — 'penny' in the KJV, a day's wage in the parable",
   "kind": "word",
   "verses": ["Matt.20.2", "Matt.22.19", "Mark.6.37", "Mark.14.5", "Luke.10.35", "John.6.7", "John.12.5", "Rev.6.6"],
-  "summary": "A Latin loanword (denarius) used 16 times in the New Testament. Translations that render it 'penny' or 'shilling' shrink the sums; keeping the transliteration preserves the scale — 200 denarii of bread (Mark 6:37) is more than half a year's pay.",
+  "summary": "A Latin loanword (denarius) used 16 times in the New Testament. Some translations render it 'penny' or 'shilling'; the BSB keeps 'denarius'. At the parable's rate of a denarius a day (Matthew 20:2), 200 denarii of bread (Mark 6:37) is more than half a year's pay.",
   "body": [
-   "Strong's G1220. The KJV's 'penny' reflects the abbreviation d. for pence (from denarius), not the coin's value. Every occurrence should be read as 'day's wage': the 200 denarii the disciples reckon it would take to feed the crowd (Mark 6:37; John 6:7), the two denarii at the inn (Luke 10:35), the 300 for the nard (Mark 14:5), the 500 and 50 forgiven (Luke 7:41).",
-   "In Revelation 6:6 'a quart of wheat for a denarius' is a famine price: a whole day's pay for one person's daily grain."
+   "Strong's G1220. The KJV's 'penny' reflects the abbreviation d. for pence (from denarius), not the coin's value. At a denarius a day, the sums can be counted in days' wages: the 200 denarii the disciples reckon it would take to feed the crowd (Mark 6:37; John 6:7), the two denarii at the inn (Luke 10:35), the 300 for the nard (Mark 14:5), the 500 and 50 forgiven (Luke 7:41).",
+   "In Revelation 6:6, in the vision of the black horse, 'a quart of wheat for a denarius' sets a day's pay against a quart of wheat."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G1220", "note": "'a denarius (or ten asses)'"},
@@ -21,7 +21,7 @@
   "title": "ἀλάβαστρον (alabastron) — the jar named for its stone",
   "kind": "word",
   "verses": ["Mark.14.3", "Matt.26.7", "Luke.7.37"],
-  "summary": "The word means both the material (Egyptian calcite, 'alabaster') and the long-necked perfume flask carved from it. Pliny says perfume 'keeps best in alabaster' — the neck was sealed and snapped to open, which is Mark's 'she broke the jar'.",
+  "summary": "The word means both the material (Egyptian calcite, 'alabaster') and the long-necked perfume flask carved from it. Pliny says perfume 'keeps best in alabaster'. Mark says the woman 'broke the jar' to pour it.",
   "body": [
    "Strong's G211. Alabastra were carved from banded calcite quarried in Egypt, turned to a thin wall, with a narrow neck and a small mouth to slow evaporation. Cheap versions were made in glass and clay. The Gospel writers do not say 'a jar of alabaster' but simply 'an alabastron', the way we say 'a thermos'."
   ],
@@ -34,23 +34,24 @@
  },
  {
   "id": "word-g3341-metanoia",
-  "title": "μετάνοια (metanoia) — a change of mind, not a penance",
+  "title": "μετάνοια (metanoia) — a change of mind, or 'do penance'",
   "kind": "word",
   "strongs": ["G3341", "G3340"],
-  "narrows": {"rendered": ["repentance", "repent"], "means": "a change of mind (meta, change; nous, mind) that turns a life round; the word names no act of penance"},
+  "narrows": {"rendered": ["repentance", "repent"], "means": "a change of mind (meta, change; nous, mind), which the Vulgate rendered 'do penance'"},
   "verses": ["Matt.3.2", "Matt.4.17", "Mark.1.15", "Luke.24.47", "Acts.2.38"],
-  "summary": "Literally 'after-thought': a change of mind that turns a life around. The Latin Vulgate's 'do penance' (paenitentiam agite) shaped centuries of reading; the Greek says nothing about acts of penance.",
+  "summary": "Literally 'after-thought': a change of mind. The Latin Vulgate rendered John's and Jesus' call 'do penance' (paenitentiam agite); Erasmus and Luther argued that the Greek meant a change of mind, not acts of penance.",
   "body": [
-   "Strong's G3341 (verb G3340, metanoeō). The word is built from meta ('after, change') and nous ('mind'). In the Septuagint it renders the Hebrew idea of 'turning' (shuv), so the New Testament sense is a reorientation of the whole person toward God rather than either mere regret or a ritual of satisfaction.",
-   "Jerome's Vulgate translated Matthew 3:2 as paenitentiam agite, 'do penance'. Erasmus (1516) argued the Greek meant 'come to your senses' (resipiscite); Luther's discovery of the same point is the subject of the first of his 95 Theses. The difference of traditions is real, but the lexical meaning is not in dispute."
+   "Strong's G3341 (verb G3340, metanoeō). The word is built from meta ('after, change') and nous ('mind'). Strong's defines it as 'compunction (for guilt, including reformation); by implication reversal'. Thayer notes that the Septuagint uses the verb 'several times for נִחַם', nacham, 'to be sorry, relent'.",
+   "Jerome's Vulgate translated Matthew 3:2 as paenitentiam agite, 'do penance'. Erasmus (1516) argued the Greek meant 'come to your senses' (resipiscite). Luther's first two theses (1517) take up the same word: Jesus' 'Repent' willed 'the entire life of believers to be one of repentance', and 'cannot be understood to mean sacramental penance'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G3341", "note": "'compunction (for guilt, including reformation); by implication reversal'"},
+   {"kind": "lexicon", "title": "Thayer, Greek-English Lexicon of the New Testament (1889), μετανοέω", "url": "https://biblehub.com/greek/3340.htm", "note": "'the Sept. several times for נִחַם'"},
    {"kind": "primary", "title": "Erasmus, Annotations on the New Testament (1516), on Matthew 3:2", "author": "Desiderius Erasmus", "year": 1516},
    {"kind": "primary", "title": "Martin Luther, Ninety-five Theses, Thesis 1", "author": "Martin Luther", "year": 1517, "url": "https://www.projectwittenberg.org/pub/resources/text/wittenberg/luther/web/ninetyfive.html"}
   ],
   "confidence": "evidence",
-  "traditions": ["Catholic tradition retains 'penance' as the sacramental expression of repentance while accepting the lexical sense; Protestant traditions emphasise the inner turning"],
+  "traditions": ["'Do penance' (paenitentiam agite): Jerome's Vulgate", "'Come to your senses' (resipiscite): Erasmus (1516); Luther, who denied the word meant sacramental penance (Ninety-five Theses 1-2)"],
   "related": ["word-g2098-euangelion"]
  },
  {
@@ -58,10 +59,10 @@
   "title": "'The book of the genesis' — Matthew's first words echo Genesis",
   "kind": "word",
   "verses": ["Matt.1.1", "Gen.2.4", "Gen.5.1"],
-  "summary": "Matthew opens with biblos geneseōs, the exact phrase the Greek Old Testament uses for 'the record of the origins' of heaven and earth (Genesis 2:4) and of Adam's line (Genesis 5:1). A Greek-reading Jew would hear 'a new Genesis'.",
+  "summary": "Matthew opens with biblos geneseōs, the exact phrase the Greek Old Testament uses for 'the record of the origins' of heaven and earth (Genesis 2:4) and of Adam's line (Genesis 5:1). Davies and Allison read it as announcing 'a new Genesis'.",
   "body": [
-   "Strong's G976 (biblos) + G1078 (genesis). In the Septuagint, Genesis 2:4 reads 'This is the book of the genesis of heaven and earth' and 5:1 'This is the book of the genesis of men'. Matthew 1:1 is word-for-word the same phrase. It can be translated 'genealogy' (it introduces one) or 'birth' (1:18 uses the same word for Jesus' birth), but the allusion is to the beginning of the Bible itself.",
-   "The gospel's closing words, 'I am with you always, to the end of the age', mirror the opening: a new creation framed by God's presence."
+   "Strong's G976 (biblos) + G1078 (genesis). In the Septuagint, Genesis 2:4 reads 'This is the book of the genesis of heaven and earth' and 5:1 'This is the book of the genesis of men'. Matthew 1:1 is word-for-word the same phrase. It can be translated 'genealogy' (it introduces one) or 'birth' (1:18 uses the same word for Jesus' birth), and Davies and Allison take it as an allusion to the beginning of the Bible itself.",
+   ""
   ],
   "sources": [
    {"kind": "scripture", "ref": "Gen.2.4"},
@@ -81,7 +82,7 @@
   "summary": "Matthew arranges the genealogy in three sets of fourteen, skipping four kings to do it. In Hebrew letters David's name (דוד) adds up to 4 + 6 + 4 = 14, and David is the fourteenth name on the list.",
   "body": [
    "Hebrew letters double as numerals: dalet = 4, waw = 6. D-W-D = 14. Matthew's list also has David in fourteenth position and names him twice at the hinge of the pattern (1:6). To get fourteen in the middle block he omits Ahaziah, Joash and Amaziah between Joram and Uzziah (compare 1 Chronicles 3:11–12), and Jehoiakim before Jeconiah.",
-   "That the pattern is deliberate is certain — Matthew says so in 1:17. That it encodes David's name (gematria) is the most widely accepted explanation but remains an inference; alternatives include six sevens (Jesus beginning the seventh seven) or simply a memory aid."
+   "Matthew states the pattern himself (1:17). That it encodes David's name (gematria) is Davies and Allison's explanation and remains an inference; other proposals are six sevens (Jesus beginning the seventh seven) or a memory aid."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Matt.1.17"},
@@ -89,7 +90,7 @@
    {"kind": "scholarship", "title": "The Gospel According to Saint Matthew (ICC), vol. 1", "author": "W. D. Davies & Dale C. Allison", "year": 1988, "note": "excursus on the genealogy; the gematria explanation"}
   ],
   "confidence": "interpretation",
-  "traditions": ["Gematria reading: most modern commentators across traditions; alternatives noted above"]
+  "traditions": ["The numerical value of David's name: W. D. Davies and Dale C. Allison (ICC, 1988)"]
  },
  {
   "id": "word-g3107-makarios",
@@ -99,8 +100,8 @@
   "verses": ["Matt.5.3-12", "Luke.6.20-23", "Ps.1.1"],
   "summary": "The Beatitudes open with a word that is not a wish or a prayer but a declaration — the Greek equivalent of the Hebrew ashrei ('O the happiness of…') that opens Psalm 1.",
   "body": [
-   "Strong's G3107. Makarios describes someone whose situation is enviable; it is the word Greeks used of the gods and of the wealthy. The Septuagint uses it for the Hebrew ashrei, a plural construct meaning something like 'O the blessednesses of…', found in Psalm 1:1 and thirty-odd other places. It is distinct from eulogētos (G2128), 'blessed' in the sense of praised, used of God.",
-   "So 'Blessed are the poor in spirit' is not a benediction pronounced over them but an announcement about them: these, surprisingly, are the ones to be congratulated."
+   "Strong's G3107. Makarios describes someone whose situation is enviable: Strong's gives 'fortunate, well off'. The Septuagint uses it for the Hebrew ashrei, a plural construct meaning something like 'O the blessednesses of…', found in Psalm 1:1 and thirty-odd other places. It is distinct from eulogētos (G2128), 'blessed' in the sense of praised, used of God.",
+   "In that sense 'Blessed are the poor in spirit' declares them fortunate, in the form of the Psalms' ashrei, rather than pronouncing a blessing over them."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G3107", "note": "'supremely blest; by extension fortunate, well off'"},
@@ -119,8 +120,8 @@
   "body": [
    "The Hebrew Bible uses two different things where English prints 'Lord'. One is adon/Adonai, an ordinary word meaning lord or master. The other is the four consonants YHWH — the Tetragrammaton, Strong's H3068 — which Exodus 3:15 presents as God's own name: 'this is my name forever, and thus I am to be remembered throughout all generations'. It occurs around 6,800 times.",
    "By the Second Temple period the name was not pronounced in ordinary reading, and Adonai was said in its place. When the Masoretes added vowel points to the consonantal text in the early Middle Ages, they pointed YHWH with the vowels of the word to be said instead — a standing substitution technical enough to have its own name, qere perpetuum. Read those vowels with those consonants and you get the hybrid form 'Jehovah', which entered Christian usage in the sixteenth century and is a mechanical artefact of the notation rather than an ancient pronunciation. The reconstruction 'Yahweh' is a scholarly proposal from transliterations in early Greek writers; it is a reasoned estimate, not a recovered fact.",
-   "The Greek Septuagint had already rendered the name kyrios, 'lord'; the Vulgate used Dominus; Tyndale and the English tradition after him used LORD in capitals to keep the distinction visible on the page. So the typography is a translation decision with a long history behind it, and it is doing real work: LORD is the name, Lord is the title.",
-   "Once you can see it, verses change shape. Psalm 110:1, 'the LORD says to my Lord', is two different words. Exodus 6:3 turns on the name itself. And Deuteronomy 6:4 — 'Hear, O Israel: the LORD our God, the LORD is one' — is a statement about a named person, not a generic one.",
+   "The Greek Septuagint had already rendered the name kyrios, 'lord'; the Vulgate used Dominus; Tyndale and the English tradition after him used LORD in capitals to keep the distinction visible on the page. The typography is a translation decision with a long history: LORD marks the name, Lord the title.",
+   "Psalm 110:1, 'the LORD says to my Lord', is two different words. Exodus 6:3 turns on the name itself, and Deuteronomy 6:4, 'Hear, O Israel: the LORD our God, the LORD is one', uses it twice.",
    "Note on this reader: the Berean Standard Bible used here follows the same convention, so wherever you see LORD in small capitals in the text, the Hebrew underneath is YHWH."
   ],
   "sources": [
@@ -136,18 +137,18 @@
   "title": "חֶסֶד (hesed) — loyalty that was never owed",
   "kind": "word",
   "verses": ["Ruth.1.8", "Ruth.2.20", "Ruth.3.10", "Exod.34.6", "Ps.136.1", "Hos.6.6", "Mic.6.8"],
-  "summary": "No single English word carries it: mercy, lovingkindness, steadfast love, covenant faithfulness have all been tried. The nearest sense is kindness a person keeps showing when nothing any longer compels them to.",
+  "summary": "Mercy, lovingkindness, steadfast love and covenant faithfulness have all been tried in English. Nelson Glueck read it as kindness owed within a relationship; Katharine Sakenfeld points to cases, in Ruth among them, where it is shown when nothing any longer compels it.",
   "body": [
-   "Hesed (Strong's H2617) appears about 250 times. The King James used 'mercy' and Coverdale coined 'lovingkindness'; modern versions favour 'steadfast love' or 'faithful love'; the Septuagint mostly chose eleos, 'mercy', which pulled later readings toward pity. Each catches part of it and loses part.",
-   "The word does two things at once that English separates. It is warm — real kindness, not mere legal performance — and it is durable, the behaviour of someone who does not stop. It usually occurs inside a relationship, which is why 'covenant faithfulness' is often used; but Ruth shows the relationship can be the one the actor chooses to honour rather than the one they are bound by. Naomi releases her daughters-in-law and prays that the LORD deal with them in hesed 'as you have dealt with the dead and with me' (Ruth 1:8); Boaz calls Ruth's refusal to chase younger men a greater hesed than her first (Ruth 3:10). In both cases the obligation had lapsed and the person acted anyway.",
+   "Hesed (Strong's H2617) appears about 250 times. The King James used 'mercy' and Coverdale coined 'lovingkindness'; modern versions favour 'steadfast love' or 'faithful love'; the Septuagint mostly chose eleos, 'mercy'.",
+   "It usually occurs inside a relationship: Glueck read it as the conduct owed within one, and so 'covenant faithfulness'. Sakenfeld finds cases where the relationship is one the actor chooses to honour rather than one they are bound by. Naomi releases her daughters-in-law and prays that the LORD deal with them in hesed 'as you have dealt with the dead and with me' (Ruth 1:8); Boaz calls Ruth's refusal to chase younger men a greater hesed than her first (Ruth 3:10). Sakenfeld reads both as kindness where the obligation had lapsed.",
    "Exodus 34:6 puts it at the centre of God's self-description to Moses — 'abounding in hesed and faithfulness' — a line the Hebrew Bible then quotes back to itself repeatedly (Numbers 14:18; Psalm 86:15; Joel 2:13; Jonah 4:2). Psalm 136 makes it a refrain for twenty-six verses. Micah 6:8 sets it as one of three things required: do justice, love hesed, walk humbly.",
-   "Hosea 6:6, 'I desire hesed and not sacrifice', is the verse Jesus quotes twice in Matthew (9:13; 12:7) — in Greek, eleos. Reading it as 'mercy' alone narrows it; what Hosea contrasts with sacrifice is not a feeling but a way of keeping faith with people."
+   "Hosea 6:6, 'I desire hesed and not sacrifice', is the verse Jesus quotes twice in Matthew (9:13; 12:7) — in Greek, eleos, which the BSB renders 'mercy'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's H2617 (hesed)", "note": "'kindness, lovingkindness, mercy, steadfast love'"},
    {"kind": "scripture", "ref": "Exod.34.6"},
    {"kind": "scripture", "ref": "Ruth.3.10", "note": "'you have made this last kindness greater than the first'"},
-   {"kind": "scholarship", "title": "Hesed in the Bible", "author": "Nelson Glueck", "year": 1967, "note": "argued for the covenant-obligation sense; the standard starting point for the debate"},
+   {"kind": "scholarship", "title": "Hesed in the Bible", "author": "Nelson Glueck", "year": 1967, "note": "argued for the covenant-obligation sense"},
    {"kind": "scholarship", "title": "Hesed in the Hebrew Bible", "author": "Katharine Doob Sakenfeld", "year": 1978, "note": "shows the freely-chosen, non-obligated cases, including those in Ruth"}
   ],
   "confidence": "evidence",
@@ -162,10 +163,10 @@
   "summary": "The word translated 'church' was ordinary civic Greek for the assembly of citizens summoned to decide a city's business. Acts 19 uses it in that plain sense three times in one riot — including of a mob that had no idea why it had gathered.",
   "body": [
    "Ekklesia (Strong's G1577) is built from ek, 'out', and kaleo, 'to call' — the called-out body. In classical and Hellenistic usage it is a technical term: the citizen assembly of a Greek city, convened by a herald to vote on public business.",
-   "Acts 19 shows the ordinary meaning unchanged, and Luke does not flinch from it. In the Ephesus riot the crowd in the theatre is called an ekklesia (19:32), even as Luke notes that 'most of them did not know why they had come together'; the city clerk then tells the mob that any further complaint must be settled 'in the lawful ekklesia' (19:39), and finally he dismisses the ekklesia (19:41). Same word, three times, in its everyday civic sense.",
-   "The Septuagint had also used ekklesia for the qahal, the assembly of Israel gathered before God (Deuteronomy 9:10 calls Sinai 'the day of the ekklesia'). So when Jesus says 'on this rock I will build my ekklesia' (Matthew 16:18), the word carries both freights: a summoned assembly, and the assembly of Israel.",
-   "What it never means in the New Testament is a building — there were none for at least two centuries — and it is not primarily an institution or a denomination. Paul writes to 'the ekklesia of God that is in Corinth' (1 Corinthians 1:2): the assembly, in that city. English 'church' comes by a different route entirely, from Greek kyriakon, 'belonging to the Lord', which is where the building sense entered.",
-   "Matthew 18:17, 'tell it to the ekklesia', reads differently once the civic sense is audible: it is an instruction to bring a matter before the assembled body, the same move the Ephesian clerk recommends."
+   "Acts 19 uses it in the ordinary sense. In the Ephesus riot the crowd in the theatre is called an ekklesia (19:32), even as Luke notes that 'most of them did not know why they had come together'; the city clerk then tells the mob that any further complaint must be settled 'in the lawful ekklesia' (19:39), and finally he dismisses the ekklesia (19:41). Same word, three times, in its everyday civic sense.",
+   "The Septuagint had also used ekklesia for the qahal, the assembly of Israel gathered before God (Deuteronomy 9:10 calls Sinai 'the day of the ekklesia'). When Jesus says 'on this rock I will build my ekklesia' (Matthew 16:18), he uses the word the Greek city used for its assembly and the Septuagint for Israel's.",
+   "The New Testament never uses it of a building. Paul writes to 'the ekklesia of God that is in Corinth' (1 Corinthians 1:2): the assembly, in that city. English 'church' comes by a different route, from Greek kyriakon, 'belonging to the Lord'.",
+   ""
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G1577 (ekklesia)", "note": "'a calling out, an assembly'"},
@@ -182,13 +183,13 @@
   "strongs": ["G4697", "G4698"],
   "narrows": {"rendered": ["compassion", "affection", "heart"], "means": "the splanchna, the inward organs, where Greek located strong feeling: compassion felt in the gut"},
   "verses": ["Matt.9.36", "Matt.14.14", "Mark.1.41", "Mark.6.34", "Luke.7.13", "Luke.10.33", "Luke.15.20"],
-  "summary": "The Greek verb is formed from splanchna, the inward organs. It is not a word for a kind thought; it names the physical lurch in the abdomen — and in the Gospels it is used almost exclusively of Jesus.",
+  "summary": "The Greek verb is formed from splanchna, the inward organs. It names feeling by the body's inward parts, and in the Gospels Jesus is its subject in all but three uses, all three in parables.",
   "body": [
-   "Splanchna are the viscera: heart, liver, lungs, intestines. Greeks located strong feeling there, much as English speaks of a gut reaction or of something being wrenching. The verb splanchnizomai (Strong's G4697) therefore means to be moved in the bowels — and translators, reasonably, give 'moved with compassion' or 'had compassion', which is accurate but loses the body.",
-   "In the Gospels the verb is used about a dozen times, and with two exceptions it always has Jesus as its subject: at the sight of the crowds 'harassed and helpless, like sheep without a shepherd' (Matthew 9:36; Mark 6:34), before feeding them (Matthew 14:14), before touching a leper (Mark 1:41), before the widow of Nain following her son's body (Luke 7:13).",
-   "The two exceptions are both in parables, and both are the hinge of the story. The Samaritan sees the beaten man and is moved in the gut (Luke 10:33) — the same verb that had just not been used of the priest and the Levite, who merely 'saw' and passed. And the father sees his son 'while he was still a long way off' and is moved in the gut, and runs (Luke 15:20).",
-   "In Mark 1:41 a small group of manuscripts, including Codex Bezae, reads orgistheis, 'moved with anger', instead. Several modern editions and the NIV footnote it; most editors retain 'compassion' on the weight of the evidence. The variant is noted here because it is real, not because it changes the pattern elsewhere.",
-   "The pattern is worth naming: in these narratives compassion is not a disposition that someone holds, but something that happens to a person's body and is immediately followed by a verb of action — he touched, he ran, he taught, he fed."
+   "Splanchna are the viscera: heart, liver, lungs, intestines. Greeks located strong feeling there, much as English speaks of a gut reaction or of something being wrenching. The verb splanchnizomai (Strong's G4697) therefore means to be moved in the bowels ; translators give 'moved with compassion' or 'had compassion'.",
+   "In the Gospels the verb is used twelve times, and apart from three uses in parables it has Jesus as its subject: at the sight of the crowds 'harassed and helpless, like sheep without a shepherd' (Matthew 9:36; Mark 6:34), before feeding them (Matthew 14:14), before touching a leper (Mark 1:41), before the widow of Nain following her son's body (Luke 7:13).",
+   "The three exceptions are in parables. The master is moved with compassion and forgives the servant's debt (Matthew 18:27). The Samaritan sees the beaten man and is moved (Luke 10:33), where the priest and the Levite had seen him and passed by on the other side. And the father sees his son 'while he was still a long way off' and is moved, and runs (Luke 15:20).",
+   "In Mark 1:41 a small group of manuscripts, including Codex Bezae, reads orgistheis, 'moved with anger', instead. The NIV footnotes it; Metzger's committee retained 'compassion'.",
+   "In these narratives the verb is followed by an act: he touched, he ran, he taught, he fed."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G4697 (splanchnizomai) from G4698 (splanchna, the inward parts)"},
@@ -205,10 +206,10 @@
   "verses": ["Gen.1.2", "Jer.4.23", "Isa.34.11", "Isa.45.18"],
   "summary": "The pair of words in Genesis 1:2 does not mean 'nothing'. Everywhere else in the Hebrew Bible tohu describes a wasteland — trackless, uninhabited, unusable — and the two chapters that quote the phrase back use it of a land undone.",
   "body": [
-   "Tohu (Strong's H8414) occurs about twenty times. Its range is desert, wasteland, emptiness, futility: the wilderness where Israel wanders is a 'howling tohu' (Deuteronomy 32:10), idols are tohu (1 Samuel 12:21; Isaiah 41:29), and the ruined city is a 'city of tohu' (Isaiah 24:10). Bohu (H922) occurs only three times and only alongside tohu, so it has no independent profile; it appears to be a rhyming intensifier, which is why the pair sounds the way it does.",
-   "Those three occurrences matter. Jeremiah 4:23 deliberately quotes Genesis: 'I looked on the earth, and behold, it was tohu wabohu; and to the heavens, and they had no light' — a vision of judgement in which the land is returned to its pre-ordered state, with the birds gone and the fruitful place a desert. Isaiah 34:11 uses the two words of Edom reduced to rubble, measured out with 'the line of tohu and the plumb line of bohu'. In both, the phrase means devastation, not non-existence.",
-   "Isaiah 45:18 then says God did not create the earth tohu but formed it to be inhabited — which sets up the contrast the first chapter of Genesis works through. Days one to three separate and shape; days four to six fill. The narrative answers the opening condition point by point: the unformed gets form, the uninhabited gets inhabitants.",
-   "A note on what this does and does not settle. The lexical point — that tohu means waste rather than nothing — is not disputed. What people build on it is: some read Genesis 1:2 as describing pre-existing raw material, others as a state God had just brought about, and the older 'gap theory' reading of a ruined earlier creation rests on a translation of the verb 'was' as 'became' that Hebrew grammarians generally reject. This card stays with the words."
+   "Tohu (Strong's H8414) occurs about twenty times. Its range is desert, wasteland, emptiness, futility: the wilderness where Israel wanders is a 'howling tohu' (Deuteronomy 32:10), idols are tohu (1 Samuel 12:21; Isaiah 41:29), and the ruined city is a 'city of tohu' (Isaiah 24:10). Bohu (H922) occurs only three times, always alongside tohu.",
+   "Jeremiah 4:23 uses the same pair as Genesis: 'I looked on the earth, and behold, it was tohu wabohu; and to the heavens, and they had no light', in a vision of judgement where the birds are gone and the fruitful place is a desert. Isaiah 34:11 uses the two words of Edom reduced to rubble, measured out with 'the line of tohu and the plumb line of bohu'. In both, the phrase means devastation, not non-existence.",
+   "Isaiah 45:18 says God did not create the earth tohu but formed it to be inhabited.",
+   "Readings of Genesis 1:2 differ in what they build on this: pre-existing raw material, a state God had just brought about, or (the 'gap theory') a ruined earlier creation, which translates 'was' as 'became'. This card stays with the words."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's H8414 (tohu) and H922 (bohu)", "note": "'formlessness, confusion, unreality, emptiness'; bohu occurs only with tohu"},
@@ -227,8 +228,8 @@
   "summary": "The Hebrew word the BSB renders 'birds' is ʿôp, from ʿûp, 'to fly'. It names creatures that fly, not a class defined by feathers. That is why Leviticus 11 can end its list of unclean ʿôp with the bat, then go straight on to 'flying insects', which are ʿôp too.",
   "body": [
    "Strong's H5775, from the verb ʿûp (H5774), 'to fly'. Brown–Driver–Briggs defines the noun as 'flying creatures, fowl, insects', in two senses: birds, and winged insects. The BSB renders it 'bird' or 'birds' 67 times and 'flying' 4 times, and all four of those are 'flying insects' (Leviticus 11:20, 21, 23; Deuteronomy 14:19).",
-   "So the list in Leviticus 11:13–19 does not make a mistake about bats. The chapter sorts creatures by where they live and how they move: on land (vv. 2–8), in the water (vv. 9–12), in the air (vv. 13–23). The bat (ʿăṭallēp, H5847) belongs in the air. The next verse uses the same word for insects: 'all flying insects that walk on all fours' is, word for word, 'every swarming thing of the ʿôp that walks on four'.",
-   "English 'bird' means a feathered animal. The Hebrew category is defined by flight. Reading 'bird' back into the text creates a problem the text does not have."
+   "Leviticus 11 sorts creatures by where they live and how they move: on land (vv. 2–8), in the water (vv. 9–12), in the air (vv. 13–23). The bat (ʿăṭallēp, H5847) belongs in the air. The next verse uses the same word for insects: 'all flying insects that walk on all fours' is, word for word, 'every swarming thing of the ʿôp that walks on four'.",
+   "English 'bird' means a feathered animal. The Hebrew category is defined by flight."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), עוֹף", "url": "https://www.sefaria.org/BDB,_%D7%A2%D7%95%D6%B9%D7%A3", "note": "'coll. flying creatures, fowl, insects': (1) fowl, birds; (2) winged insects, Lv 11:20, 21, 23; Dt 14:19"},
@@ -249,8 +250,8 @@
   "body": [
    "Strong's H5315. Brown–Driver–Briggs glosses it 'soul, living being, life, self, person, desire, appetite, emotion, and passion', and starts from 'that which breathes, the breathing substance or being'. The BSB renders it 'soul' 195 times, 'life' or 'lives' 161, 'person' 25. It often renders it as a plain pronoun ('I', 'you', 'himself'), where 'my nephesh' means 'me'.",
    "Genesis uses the word before there are any humans. The waters teem with nephesh chayyah, 'living creatures' (1:20), and the land brings them forth (1:24). When the LORD breathes into the man, he 'became a living being' (2:7), the same two words. Genesis does not say the man was given a nephesh. It says he became one.",
-   "At the edges the word is plainly physical. A Nazirite must not go near nephesh met, 'a dead body' (Numbers 6:6). Sheol 'enlarges its throat', its nephesh, to swallow Jerusalem's nobles (Isaiah 5:14), a use BDB lists under 'seat of the appetites'. Leviticus 17:11 renders the word two ways in one verse: 'the life of the flesh is in the blood… to make atonement for your souls'.",
-   "The word can also stand for the inner self against the flesh. Isaiah 10:18 has 'both soul and body', and the psalmist's 'soul thirsts for God' (Psalm 42:2). So when Deuteronomy 6:5 asks for love 'with all your soul', it means the whole living self, breath and appetite included. Whether any part of a person survives death is a separate question. This word alone does not settle it."
+   "Some uses are physical. A Nazirite must not go near nephesh met, 'a dead body' (Numbers 6:6). Sheol 'enlarges its throat', its nephesh, to swallow Jerusalem's nobles (Isaiah 5:14), a use BDB lists under 'seat of the appetites'. Leviticus 17:11 renders the word two ways in one verse: 'the life of the flesh is in the blood… to make atonement for your souls'.",
+   "The word can also stand for the inner self against the flesh. Isaiah 10:18 has 'both soul and body', and the psalmist's 'soul thirsts for God' (Psalm 42:2). Deuteronomy 6:5 asks for love 'with all your soul', with the same word. Whether any part of a person survives death is a separate question. This word alone does not settle it."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), נֶפֶשׁ", "url": "https://www.sefaria.org/BDB,_%D7%A0%D6%B6%D6%AB%D7%A4%D6%B6%D7%A9%D7%81", "note": "'soul, living being, life, self, person, desire, appetite, emotion, and passion'; 'seat of the appetites', Is 5:14; 'deceased person', Nu 6:6"},
@@ -273,7 +274,7 @@
   "body": [
    "Strong's G5590. Thayer's first sense is 'breath… the breath of life; the vital force which animates the body'. He notes that the Septuagint uses it for nephesh 'times too many to count'. The BSB renders it 'soul' 39 times and 'life' or 'lives' 38.",
    "The split matters most where a saying depends on repetition. Save your psychē and lose it; lose it for me and find it; what does it profit to gain the world and forfeit the psychē? (Matthew 16:25–26; Mark 8:35–37). A reader of the English can take verse 26 to have changed the subject. A Greek reader hears the same word four times. Matthew 10:28 ('kill the body but cannot kill the soul') and 10:39 ('whoever finds his life will lose it') use the same word a few verses apart.",
-   "Neither rendering is wrong, because psychē covers both. What the English cannot show is that the translators make one choice each time."
+   "Thayer's senses cover both. The English shows only the translators' choice each time."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Thayer, Greek-English Lexicon of the New Testament (1889), ψυχή", "url": "https://biblehub.com/greek/5590.htm", "note": "'breath… the breath of life; the vital force which animates the body'; in the Septuagint 'times too many to count' for נֶפֶשׁ"},
@@ -294,8 +295,8 @@
   "body": [
    "Strong's H7307. Brown–Driver–Briggs: 'breath, wind, spirit'. The BSB renders it 'spirit' 197 times, 'wind' 95 and 'breath' 35. Greek pneuma (G4151) comes from pneō, 'to blow'. Thayer's first sense is 'a movement of air… of the wind', then 'breath of the nostrils or mouth'. The BSB renders pneuma 'Spirit' or 'spirit' nearly every time, 'breath' 3 times and 'wind' twice.",
    "The flood ends when 'God sent a wind over the earth' (Genesis 8:1), and that wind is rûaḥ. So is 'the Spirit of God… hovering over the surface of the waters' in Genesis 1:2, which some translations render 'a wind from God' (NRSV).",
-   "Ezekiel 37:1–14 uses the word ten times. The LORD will 'cause breath to enter you' (37:5). Ezekiel is told to 'prophesy to the breath… Come from the four winds, O breath' (37:9). At the end God says, 'I will put My Spirit in you and you will live' (37:14). Breath, winds and Spirit are one word, and the vision depends on hearing them as one.",
-   "Jesus does the same in Greek in John 3:8: 'The wind blows where it wishes… So it is with everyone born of the Spirit.' Wind and Spirit are both pneuma."
+   "Ezekiel 37:1–14 uses the word ten times. The LORD will 'cause breath to enter you' (37:5). Ezekiel is told to 'prophesy to the breath… Come from the four winds, O breath' (37:9). At the end God says, 'I will put My Spirit in you and you will live' (37:14). Breath, winds and Spirit are one word.",
+   "In John 3:8 the same happens in Greek: 'The wind blows where it wishes… So it is with everyone born of the Spirit.' Wind and Spirit are both pneuma."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), רוּחַ", "url": "https://www.sefaria.org/BDB,_%D7%A8%D7%95%D6%BC%D7%97%D6%B7", "note": "'breath, wind, spirit'"},
@@ -316,7 +317,7 @@
   "verses": ["Gen.1.1", "Gen.12.1", "Gen.41.57", "Gen.7.19", "Gen.11.1"],
   "summary": "The same Hebrew word is 'the earth' of Genesis 1:1 and 'the land' God shows Abram. The BSB renders ʾereṣ 'land' 1,572 times and 'earth' 573, as well as 'country', 'ground', 'region' and 'world'. How far a verse reaches often depends on which one the translator picks.",
   "body": [
-   "Strong's H776. Brown–Driver–Briggs: 'earth, land'. It divides the word's senses into the whole earth (as opposed to a part, or to heaven), a land (a country, a territory, the land of Canaan), and the ground or soil. Most readers now take English 'earth' to mean the planet. ʾEreṣ is as often a territory as the world.",
+   "Strong's H776. Brown–Driver–Briggs: 'earth, land'. It divides the word's senses into the whole earth (as opposed to a part, or to heaven), a land (a country, a territory, the land of Canaan), and the ground or soil. ʾEreṣ is as often a territory as the world.",
    "Genesis 12:1 uses it twice in one sentence: 'Leave your country… and go to the land I will show you.' Genesis 41:57 says that 'every nation came to Joseph in Egypt to buy grain, because the famine was severe over all the earth'. The same Hebrew could be rendered 'all the land'.",
    "The flood narrative uses ʾereṣ throughout ('the waters completely prevailed upon the earth', 7:19). One question is whether it describes the whole planet or the whole land Noah knew. Part of that argument rests on this word, and readers hold both views. The word itself allows either."
   ],
@@ -335,11 +336,11 @@
   "strongs": ["H3820", "H3824"],
   "narrows": {"rendered": ["heart"], "means": "the mind and will as much as the feelings: the lēv plans, understands and decides"},
   "verses": ["Prov.16.9", "1Kgs.3.9-12", "Deut.29.4", "Prov.6.32", "Hos.7.11", "Deut.6.5"],
-  "summary": "In English the heart feels and the head thinks. In Hebrew the lēv does both, and most often the thinking: it plans, understands and decides. The BSB itself sometimes renders it 'mind' or 'judgment'. Where it says 'heart', read 'mind and will' as well.",
+  "summary": "In English the heart feels and the head thinks. In Hebrew the lēv does both, and most often the thinking: it plans, understands and decides. The BSB itself sometimes renders it 'mind' or 'judgment'; BDB heads its entry 'inner man, mind, will, heart'.",
   "body": [
    "Strong's H3820, and its longer form lēvāv (H3824), which is the word in the Shema. Brown–Driver–Briggs heads its entry 'inner man, mind, will, heart'. The BSB renders it 'heart' 415 times, 'mind' 32, 'judgment' 11, 'understanding' 5 and 'conscience' 3.",
    "'A man's heart plans his course' (Proverbs 16:9). Solomon asks for 'an understanding heart to judge Your people' (1 Kings 3:9) and is given 'a wise and discerning heart' (3:12). In Deuteronomy 29:4, 'the LORD has not given you a mind to understand', the 'mind' is lēv. The man who 'lacks judgment' in Proverbs 6:32 is literally 'lacking heart', which BDB renders 'destitute of mind'. Ephraim, 'a silly, senseless dove' (Hosea 7:11), is literally 'without heart'.",
-   "So 'love the LORD your God with all your heart' (Deuteronomy 6:5) includes what a person thinks and what they decide, not only what they feel."
+   "Deuteronomy 6:5, 'love the LORD your God with all your heart', uses the longer form lēvāv."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), לֵב", "url": "https://www.sefaria.org/BDB,_%D7%9C%D6%B5%D7%91%C2%B2", "note": "'inner man, mind, will, heart'; חֲסַר לֵב 'destitute of mind', Pr 6:32; אֵין לֵב, Ho 7:11"},
@@ -356,10 +357,10 @@
   "kind": "word",
   "narrows": {"rendered": ["strength"], "means": "'muchness': all one has, to the utmost; everywhere else the same word is the adverb 'very'"},
   "verses": ["Deut.6.5", "2Kgs.23.25", "Gen.1.31"],
-  "summary": "The third thing Deuteronomy 6:5 asks us to love with is meʾōd. Nearly everywhere else that word is the adverb 'very', as in 'it was very good'. Only here, and in the echo of this verse about Josiah, is it a noun: 'with all your muchness'.",
+  "summary": "The third thing Deuteronomy 6:5 asks Israel to love with is meʾōd. Nearly everywhere else that word is the adverb 'very', as in 'it was very good'. Only here, and in the echo of this verse about Josiah, is it a noun: 'with all your muchness'.",
   "body": [
    "Strong's H3966. Brown–Driver–Briggs defines it as 'muchness, force, abundance, exceedingly'. It gives the noun sense 'force, might' only for Deuteronomy 6:5 and, 'hence', 2 Kings 23:25. In its 298 other uses it means 'exceedingly, greatly, very', as when God saw that 'it was very good' (Genesis 1:31).",
-   "'With all your strength' is a fair rendering of the noun, but English 'strength' suggests muscle. The word says: with everything you have, to the utmost. The Mishnah read it two ways: 'with all your money', or 'with every measure that He metes out to you'.",
+   "The BSB renders the noun 'with all your strength'; BDB's 'muchness, force, abundance' is wider than muscle. The Mishnah read it two ways: 'with all your money', or 'with every measure that He metes out to you'.",
    "Kings praises Josiah in the Shema's own three words. No king was like him, 'who turned to the LORD with all his heart and with all his soul and with all his strength' (2 Kings 23:25)."
   ],
   "sources": [
@@ -377,11 +378,11 @@
   "kind": "word",
   "narrows": {"rendered": ["hell"], "means": "Gehenna: the Valley of Hinnom beside Jerusalem, which Jeremiah said would be called the Valley of Slaughter"},
   "verses": ["Matt.5.22", "Matt.5.29-30", "Matt.10.28", "Mark.9.43-47", "Jas.3.6", "Jer.7.31-32", "2Kgs.23.10", "Josh.15.8"],
-  "summary": "Geenna appears twelve times in the New Testament: eleven times in Jesus' sayings and once in James 3:6. The BSB renders it 'hell' every time. It is the Hebrew gê hinnōm, the Valley of Hinnom beside Jerusalem, where Judah had burned its children. The English gives a destination; the Greek names a place.",
+  "summary": "Geenna appears twelve times in the New Testament: eleven times in Jesus' sayings and once in James 3:6. The BSB renders it 'hell' every time. It is the Hebrew gê hinnōm, the Valley of Hinnom beside Jerusalem, where, Jeremiah says, Judah had burned its children.",
   "body": [
-   "Strong's G1067. Thayer: 'Gehenna, the name of a valley on the south and east of Jerusalem'. It comes from the Hebrew gê hinnōm (Nehemiah 11:30), or more fully gê ben-hinnōm, 'the Valley of Ben-hinnom' (Joshua 15:8). In Joshua it marks part of the border of Judah's territory.",
+   "Strong's G1067. Thayer: 'Gehenna, the name of a valley on the south and east of Jerusalem' (it runs round the south and west of the Old City). It comes from the Hebrew gê hinnōm (Nehemiah 11:30), or more fully gê ben-hinnōm, 'the Valley of Ben-hinnom' (Joshua 15:8). In Joshua it marks part of the border of Judah's territory.",
    "Jeremiah 7:31–32 condemns 'the high places of Topheth in the Valley of Ben-hinnom', where Judah burned 'their sons and daughters in the fire'. He says it will be called 'the Valley of Slaughter' and filled with the dead. Josiah 'desecrated Topheth in the Valley of Ben-hinnom so that no one could sacrifice his son or daughter in the fire to Molech' (2 Kings 23:10).",
-   "Traditions read what Jesus taught with this name in different ways: eternal punishment, final destruction, or a purging that ends. The word itself is not in dispute. His hearers heard the name of a real valley with that history, and English 'hell' does not carry it. The BSB also uses 'hell' once for a different word, tartaroō (2 Peter 2:4), and leaves Hades as 'Hades'."
+   "What Jesus taught with this name is read in different ways; this card is about the word, which names a real valley with that history. The BSB also uses 'hell' once for a different word, tartaroō (2 Peter 2:4), and leaves Hades as 'Hades'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Thayer, Greek-English Lexicon of the New Testament (1889), γέεννα", "url": "https://biblehub.com/greek/1067.htm", "note": "'Gehenna, the name of a valley on the south and east of Jerusalem', from גֵּי הִנֹּם (Neh 11:30), גֵּיא בֶן־הִנֹּם (Josh 15:8)"},
@@ -398,13 +399,13 @@
   "kind": "word",
   "narrows": {"rendered": ["hear", "heard", "hearing", "listen", "listened", "listening"], "means": "to hear so as to heed: to listen, understand and act on what is heard; 'hear the voice of' is the Hebrew way of saying 'obey'", "only": {"command": true, "before": "H6963"}},
   "verses": ["Deut.6.4", "Exod.19.5", "Gen.22.18", "1Sam.15.22", "Jer.7.23-24", "Gen.3.17", "1Kgs.3.9", "Gen.11.7", "Exod.2.24"],
-  "summary": "Biblical Hebrew has no everyday word of its own for 'obey'. Where the BSB says 'obey', the Hebrew usually says 'hear the voice of'. So the Shema's first word, 'Hear, O Israel', asks for more than attention: it asks Israel to hear and do.",
+  "summary": "Where the BSB says 'obey', the Hebrew usually says 'hear the voice of', the phrase BDB defines as 'obey'. The same verb is the Shema's first word, 'Hear, O Israel'.",
   "body": [
    "Strong's H8085. Brown–Driver–Briggs gives the verb's first sense as 'hear', and then lists what hearing leads to: 'listen, give heed', 'understand (language)', 'hear and answer', and, with the phrase 'the voice of' (שָׁמַע בְּקוֹל), 'obey', 'very often'. The BSB renders it 'hear' or 'heard' more than 600 times and 'listen' or 'listened' about 270. It also renders it 'obey' or 'obeyed' 100 times, 'obedience' 3, 'heed' 8, 'understand' 6.",
    "The same Hebrew runs through these verses. 'If you will indeed obey My voice' (Exodus 19:5) is 'if you will surely hear My voice'. Abraham is blessed 'because you have obeyed My voice' (Genesis 22:18), and Adam is cursed 'because you have listened to the voice of your wife' (3:17). Samuel's 'obedience is better than sacrifice' (1 Samuel 15:22) is 'to hear is better than sacrifice'. Jeremiah 7:23–24 sets 'Obey Me' against 'they did not listen', and both are the same verb.",
    "Hearing is also understanding. God confuses the builders' language 'so that they will not understand one another's speech' (Genesis 11:7): they will not 'hear' it. Solomon asks for 'an understanding heart' (1 Kings 3:9), in Hebrew a lēv shōmēaʿ, 'a hearing heart'.",
    "When God hears, he acts. 'God heard their groaning, and He remembered His covenant' (Exodus 2:24), and the rescue from Egypt follows. BDB's 'hear and answer' names that sense.",
-   "The word does not always mean obedience. It is also the ordinary verb for simply hearing: 'I heard Your voice in the garden,' Adam says, 'and I was afraid' (Genesis 3:10). Context decides how much is meant. What English 'hear' cannot show is that the step from hearing to doing is inside the one Hebrew word. That is why 'Hear, O Israel' (Deuteronomy 6:4) is followed straight away by what Israel is to do.",
+   "The word does not always mean obedience. It is also the ordinary verb for simply hearing: 'I heard Your voice in the garden,' Adam says, 'and I was afraid' (Genesis 3:10). Context decides how much is meant. BDB's senses run from hearing to heeding and obeying within the one Hebrew word. 'Hear, O Israel' (Deuteronomy 6:4) is followed straight away by what Israel is to do.",
    "Because the verb is so common, this reader dots it only where the fuller sense is clearest: where it is a command ('Hear!', 'Listen!'), and where it is followed by 'to the voice of', the phrase BDB defines as 'obey'."
   ],
   "sources": [
@@ -422,13 +423,13 @@
   "title": "רַחֲמִים (raḥămîm) — 'compassion', a word from the womb",
   "kind": "word",
   "strongs": ["H7356", "H7355", "H7349"],
-  "narrows": {"rendered": ["compassion", "compassionate", "mercy"], "means": "a love felt in the body, named from reḥem, the womb: the feeling of a mother for her child"},
+  "narrows": {"rendered": ["compassion", "compassionate", "mercy"], "means": "a love felt in the body, from the same root as reḥem, the womb: in BDB's two readings, the feeling of those born of one womb, or of a mother"},
   "verses": ["1Kgs.3.26", "Exod.34.6", "Isa.49.15", "Ps.103.13", "Gen.29.31"],
-  "summary": "The Hebrew for 'compassion', raḥămîm, is built from the same letters as reḥem, 'womb'. The BSB renders it 'compassion' or 'mercy', but twice the same word appears as 'womb'. When God calls himself 'compassionate' (Exodus 34:6), the English loses the picture of a mother's love.",
+  "summary": "The Hebrew for 'compassion', raḥămîm, is built from the same letters as reḥem, 'womb'. The BSB renders it 'compassion' or 'mercy', but twice the same word appears as 'womb'. God calls himself 'compassionate' (Exodus 34:6) with a word from the same root.",
   "body": [
    "Strong's H7356 (the noun), H7355 (the verb, 'have compassion') and H7349 (raḥûm, 'compassionate'). Reḥem, 'womb' (H7358), is the word in 'He opened her womb' (Genesis 29:31). Brown–Driver–Briggs treats the verb as formed from that noun, and explains raḥămîm, 'according to many', as feeling that begins with the womb. It records two readings of what that feeling is: the 'brotherly feeling' of those born from the same womb, or 'motherly feeling'. Which one is right is a scholarly reconstruction, not something the text says.",
    "The text does put the two together. In Solomon's judgment, the real mother speaks up 'because she yearned with compassion for her son' (1 Kings 3:26). In Hebrew her raḥămîm 'grew warm', and it is compassion felt in the body. Isaiah 49:15 asks, 'Can a woman forget her nursing child, or lack compassion for the son of her womb?' Psalm 103:13 uses it for a father: 'As a father has compassion on his children, so the LORD has compassion on those who fear Him.'",
-   "The same word is the first thing God says about himself in Exodus 34:6: 'The LORD, the LORD God, is compassionate and gracious.' English 'compassion' and 'mercy' name a disposition. The Hebrew names something closer to what a parent feels for their own child."
+   "The same word is the first thing God says about himself in Exodus 34:6: 'The LORD, the LORD God, is compassionate and gracious.' 1 Kings 3:26, Isaiah 49:15 and Psalm 103:13 use it of a mother's and a father's feeling for their child."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), רַחֲמִים", "url": "https://www.sefaria.org/BDB,_%D7%A8%D6%B7%D7%97%D6%B2%D7%9E%D6%B4%D7%99%D7%9D", "note": "'compassion (according to many denom. from רֶחֶם, orig. brotherhood, brotherly feeling… or motherly feeling)'"},
@@ -449,7 +450,7 @@
   "body": [
    "Strong's H7965. Brown–Driver–Briggs: 'completeness, soundness, welfare, peace'. Its senses include safety and 'soundness, in body' as well as peace between people and with God. The BSB renders it 'peace' 146 times, 'safely' 10, 'prosperity' 8, 'well' 5 and 'welfare' 4.",
    "The everyday uses show the range. Jacob asks after Laban, 'Is he well?' (Genesis 29:6), and Joseph asks his brothers 'if they were well' (43:27): both ask about their shālôm. David asks Uriah how Joab, the troops and the war are doing (2 Samuel 11:7), and all three are shālôm. The psalmist has 'no rest in my bones' (Psalm 38:3), no shālôm in his body. Jeremiah tells the exiles to 'seek the prosperity of the city' of Babylon (29:7), its shālôm.",
-   "So the blessing 'the LORD… give you peace' (Numbers 6:26) asks for more than calm. And 'the punishment that brought us peace was upon Him' (Isaiah 53:5) speaks of being made whole. Jeremiah condemns prophets who say 'Peace, peace, when there is no peace' (6:14) while treating a wound 'with very little care'."
+   "The same word is in the blessing 'the LORD… give you peace' (Numbers 6:26) and in 'the punishment that brought us peace was upon Him' (Isaiah 53:5). Jeremiah condemns prophets who say 'Peace, peace, when there is no peace' (6:14) while treating a wound 'with very little care'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), שָׁלוֹם", "url": "https://www.sefaria.org/BDB,_%D7%A9%D6%B8%D7%81%D7%9C%D7%95%D6%B9%D7%9D", "note": "'completeness, soundness, welfare, peace'; 'safety, soundness, in body', ψ 38:4 (English 38:3); 'welfare, health, prosperity'"},
@@ -468,8 +469,8 @@
   "summary": "ʿĀwōn comes from a verb meaning to bend or twist. The BSB renders it 'iniquity' 167 times, but also 'guilt' 20 and 'punishment' 15, because the Hebrew word covers all three: the crooked act, the guilt it leaves, and what it brings on the one who did it.",
   "body": [
    "Strong's H5771, from ʿāwâ (H5753), which Strong's defines as 'to crook, literally or figuratively'. The BSB renders the verb 'I am bent' (Psalm 38:6) and 'twisted'. Brown–Driver–Briggs defines the noun as 'iniquity, guilt or punishment of iniquity'.",
-   "Cain's cry in Genesis 4:13, 'My punishment is greater than I can bear', uses ʿāwōn. Some translations read it as 'my iniquity is too great to be forgiven', and the Hebrew allows both: he may be speaking of the deed or of what it has brought on him. Lamentations 4:6 has 'the punishment of the daughter of my people is greater than that of Sodom', and that punishment is ʿāwōn too.",
-   "On the Day of Atonement the goat 'will carry on itself all their iniquities' into the wilderness (Leviticus 16:22), carrying them away in a form it can bear. Isaiah 53 uses the word in the same way: 'He was crushed for our iniquities… the LORD has laid upon Him the iniquity of us all' (53:5–6). What is laid on him is the wrong and its weight together."
+   "Cain's cry in Genesis 4:13, 'My punishment is greater than I can bear', uses ʿāwōn. The Douay-Rheims reads it 'My iniquity is greater than that I may deserve pardon'; BDB's senses allow both the deed and what it has brought on him. Lamentations 4:6 has 'the punishment of the daughter of my people is greater than that of Sodom', and that punishment is ʿāwōn too.",
+   "On the Day of Atonement the goat 'will carry on itself all their iniquities' into the wilderness (Leviticus 16:22). Isaiah 53 uses the word too: 'He was crushed for our iniquities… the LORD has laid upon Him the iniquity of us all' (53:5–6)."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), עָוֹן", "url": "https://www.sefaria.org/BDB,_%D7%A2%D6%B8%D7%95%D6%B9%D7%9F", "note": "'iniquity, guilt or punishment of iniquity'"},
@@ -492,7 +493,7 @@
   "body": [
    "Strong's H6588, from pāshaʿ (H6586). Brown–Driver–Briggs defines the verb as 'rebel, transgress', and its first use as 'rebel, revolt, of nations'. The BSB renders the noun 'transgression(s)' 67 times and 'rebellion' 10. It renders the verb 'rebelled' 16 times, and 'transgress' only a handful.",
    "The political uses are plain. 'Edom rebelled against the hand of Judah and appointed their own king' (2 Kings 8:20). 'After the death of Ahab, Moab rebelled against Israel' (2 Kings 1:1). When the northern tribes break away, 'Israel has been in rebellion against the house of David' (1 Kings 12:19).",
-   "Between people, it is a wrong done to someone. Jacob asks Laban, 'What is my crime?' (Genesis 31:36). Joseph's brothers ask him to 'forgive the transgression… of your brothers' (50:17). Against God it is the same breach of faith: 'I have raised children and brought them up, but they have rebelled against Me' (Isaiah 1:2). So 'He was pierced for our transgressions' (Isaiah 53:5) and David's 'blot out my transgressions' (Psalm 51:1) speak of broken loyalty to a person, not only broken rules."
+   "Between people, it is a wrong done to someone. Jacob asks Laban, 'What is my crime?' (Genesis 31:36). Joseph's brothers ask him to 'forgive the transgression… of your brothers' (50:17). Against God it is the same breach of faith: 'I have raised children and brought them up, but they have rebelled against Me' (Isaiah 1:2). 'He was pierced for our transgressions' (Isaiah 53:5) and David's 'blot out my transgressions' (Psalm 51:1) use the same noun."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), פָּשַׁע", "url": "https://www.sefaria.org/BDB,_%D7%A4%D6%B8%D6%BC%D7%A9%D6%B7%D7%81%D7%A2", "note": "'rebel, transgress'; 'rebel, revolt, of nations', 1 K 12:19; 2 K 1:1; 8:20, 22; 'פָּֽשְׁעוּ בִי Is 1:2 (Isr. under fig. of י׳’s sons)'"},
@@ -515,7 +516,7 @@
   "body": [
    "Three words are involved. Yāḥal (H3176): Brown–Driver–Briggs 'wait; await'. The BSB renders it 'hope' 21 times and 'wait' or 'waited' 14. Qāwâ (H6960): BDB 'wait for, or look eagerly for', and it suggests the root meant 'twist, stretch, then of tension of enduring, waiting'. The BSB renders it 'wait' far more often than 'hope'. Tiqwâ (H8615), from qāwâ, is the common noun for 'hope'.",
    "Noah 'waited seven more days' (Genesis 8:12) with yāḥal, the verb of 'O Israel, put your hope in the LORD' (Psalm 130:7). Psalm 130:5 uses both verbs at once: 'I wait for the LORD; my soul does wait, and in His word I put my hope.' 'Those who wait upon the LORD will renew their strength' (Isaiah 40:31) is qāwâ.",
-   "Tiqwâ, 'hope' in 'to give you a future and a hope' (Jeremiah 29:11), is also 'this scarlet cord' in Joshua 2:18 and 21. BDB lists the two as separate entries under the same root, and whether the writer meant a play on them is not stated. But the word for hope is, literally, something taut that you hold onto."
+   "Tiqwâ, 'hope' in 'to give you a future and a hope' (Jeremiah 29:11), is also 'this scarlet cord' in Joshua 2:18 and 21. BDB lists the two as separate entries under the same root, and the text does not say whether a play on them is meant."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), יָחַל", "url": "https://www.sefaria.org/BDB,_%D7%99%D6%B8%D7%97%D6%B7%D7%9C", "note": "'wait; await'; 'Gn 8:12 and he waited yet seven days'"},
@@ -538,7 +539,7 @@
   "body": [
    "Strong's G2098; the verb euangelizomai is G2097. Thayer: 'good tidings', and before that 'a reward for good tidings'. He cites Homer, Plutarch and Lucian, so the word was in everyday Greek long before the New Testament. Of the verb he says that in the Greek Old Testament it is 'used… of any kind of good news'. The BSB renders the noun 'gospel' 72 times and 'good news' twice.",
    "The Hebrew behind it (bāśar, besôrâ) is the word for a messenger's news. The Philistines send messengers 'to proclaim the news' of Saul's death in their temples (1 Samuel 31:9). Ahimaaz begs to 'run and tell the king the good news' of the battle, and Joab tells him he is not the man 'to take good news today', because the king's son is dead (2 Samuel 18:19–20). Isaiah uses it for the news of God's return: 'How beautiful on the mountains are the feet of those who bring good news… who say to Zion, “Your God reigns!”' (52:7).",
-   "So when Mark opens with 'the beginning of the gospel of Jesus Christ' (1:1), and Jesus says 'the kingdom of God is near. Repent and believe in the gospel' (1:15), the word announces news: something has happened, and here is the report. English 'gospel' (Old English gōd-spell, 'good tidings', as Thayer notes) now reads as the name of a doctrine or a kind of book."
+   "So when Mark opens with 'the beginning of the gospel of Jesus Christ' (1:1), and Jesus says 'the kingdom of God is near. Repent and believe in the gospel' (1:15), the word is the one for a messenger's news. English 'gospel' (Old English gōd-spell, 'good tidings', as Thayer notes) now reads as the name of a doctrine or a kind of book."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Thayer, Greek-English Lexicon of the New Testament (1889), εὐαγγέλιον", "url": "https://biblehub.com/greek/2098.htm", "note": "'1. a reward for good tidings… 2. good tidings'; Hebrew בְּשׂוֹרָה; A-S. god-spell"},
@@ -561,7 +562,7 @@
   "body": [
    "Strong's H4397 and G32. Brown–Driver–Briggs heads its entry simply 'messenger'. Its senses begin with 'one sent with a message'. They go on to a prophet ('Haggai, the messenger of the LORD', Haggai 1:13) and a priest ('he is the messenger of the LORD of Hosts', Malachi 2:7), and only then reach 'angel, as messenger of God'. On Job 33:23 BDB says the Revised Version's 'angel' is 'too specific'. Thayer gives angelos the same order: first 'a messenger, envoy, one who is sent', then the heavenly beings. The same word is inside euangelion, 'good news': Strong's derives it from eu, 'good', and angelos.",
    "Kings, spies and prophets all send or are malʾākîm. Moses sends 'messengers' to the king of Edom (Numbers 20:14), and Saul sends 'messengers' to David's house to kill him (1 Samuel 19:11). In Greek, Jesus 'sent messengers on ahead' to a Samaritan village (Luke 9:52). Rahab 'welcomed the spies' (James 2:25), and they are angeloi. Malachi 3:1, 'I will send My messenger', is quoted of John the Baptist (Mark 1:2).",
-   "So the word does not say what a messenger is, only that it has been sent. Where it is a heavenly being, the text says so in other words. Hebrews 1:14 asks, 'Are not the angels ministering spirits sent to serve…?' The difference shows in two renderings of one verse. Psalm 104:4 in the BSB reads 'He makes the winds His messengers', and the same line quoted in Hebrews 1:7 reads 'He makes His angels winds'. Both are the same two words (malʾāk/angelos and rûaḥ/pneuma), translated two ways."
+   "BDB's and Thayer's senses name the errand, not what kind of being carries it. Hebrews 1:14 asks, 'Are not the angels ministering spirits sent to serve…?' The difference shows in two renderings of one verse. Psalm 104:4 in the BSB reads 'He makes the winds His messengers', and the same line quoted in Hebrews 1:7 reads 'He makes His angels winds'. Both are the same two words (malʾāk/angelos and rûaḥ/pneuma), translated two ways."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Brown–Driver–Briggs, Hebrew and English Lexicon of the Old Testament (1906), מַלְאָךְ", "url": "https://www.sefaria.org/BDB,_%D7%9E%D6%B7%D7%9C%D6%B0%D7%90%D6%B8%D7%9A%D6%B0", "note": "'messenger': 'one sent with a message'; 'a prophet… Hg 1:13'; 'priest Mal 2:7'; Jb 33:23 '(angel of RV too specific)'; 'angel, as messenger of God'"},
