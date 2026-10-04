@@ -332,15 +332,29 @@ fails the build on the pattern. What the rewrite could not check:
 
 ## The Sky tab (`content/skies.json`), 2026-10-04
 
-Built with one reading, Rick Larson's, from his study's pages and Ernest Martin's chapter 6, both read.
+Five readings, each from what was read in the session: Larson's study pages and Martin's chapter 6; Molnar's 1995
+paper (OCR of the ADS scan); Humphreys's 1992 paper; Schaefer's 2015 chapter (author's version); Granada (2005) on
+Kepler; Origen, *Against Celsus* 1.58–59; Chrysostom, *Homily 6 on Matthew*.
 
-- **The other readings** are not yet drawn: Kepler's Jupiter–Saturn triple conjunction (7 BC), Michael Molnar's
-  occultation of Jupiter by the Moon in Aries (April 6 BC), the "broom star" of 5 BC in the *Han shu*, and the star
-  as a miracle, which no sky can show but which needs its holders listed so the tab does not imply only natural
-  readings count. *Needed:* each holder's own work read for their dates and claims.
-- **Who answers Larson** is not given, though an argument is to name its critics where there is one. *Needed:* a
-  published critique read and cited (Aaron Adair's *The Star of Bethlehem: A Skeptical View*, 2013, is one starting
-  point, not yet read).
+- **Kepler is cited through others.** His reading is given as Miguel Granada (2005) and Colin Humphreys (1992)
+  report it; *De Stella Nova* (1606) and *De vero anno* (1614) were not read. *Needed:* the passages in KGW I (pp. 279,
+  354, 359, which Granada cites), in Latin or a translation.
+- **The conjunction as the star** is held, Humphreys says, by David Hughes (1979) and Konradin Ferrari d'Occhieppo
+  (1989); neither was read, so their own dates and arguments are not drawn. *Needed:* both works.
+- **Molnar's critics** are not given; only Schaefer, who supports him, was read. His 1999 book was not read, only his
+  1995 paper. *Needed:* a published critique of the 6 BC occultations read and cited.
+- **The Han shu** is quoted in Humphreys's translation after Ho Peng-Yoke, not checked against the Chinese or another
+  translation. Humphreys's 1991 paper in the QJRAS was not read; the 1992 revision in the Tyndale Bulletin was.
+- **The comet is not drawn**, since the Han shu gives only the lunar mansion. The view frames Capricornus, where
+  Humphreys takes Ch'ien-niu to be; whether Ch'ien-niu is Capricornus or a smaller part of it is his reading, not
+  checked against a star map of the period.
+- **Schaefer is cited from his author's version on arXiv**, not the Brill volume (*The Star of Bethlehem and the Magi*,
+  2015). *Needed:* the page numbers in the published chapter.
+- **Molnar's 20 March occultation** falls, by the engine, from 5:34 to 5:59 p.m. local mean time, ending before
+  sunset; Molnar has it begin a minute after sunset. Both are shown; which ΔT Molnar's program used is not known.
+- **Larson's critics** are given only in Schaefer's general answer to the astronomical readings. *Needed:* a
+  critique of Larson's documentary itself, read and cited (Aaron Adair's *The Star of Bethlehem: A Skeptical View*,
+  2013, is one starting point, not yet read).
 - **The documentary's year and credits** are not cited; the site names only "The Star of Bethlehem DVD" from Mite
   Productions. *Needed:* the DVD's own credits.
 - **Larson gives 25 December 2 BC** for Jupiter's station; astronomy-engine puts the turn on the 28th in ecliptic

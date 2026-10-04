@@ -468,34 +468,41 @@ export type SkyBody = string;
 /**
  * A claim an event makes about the sky that the test suite checks against astronomy-engine: two bodies closest on a
  * day (`conjunction`), or a planet turning between direct and retrograde (`station`, in ecliptic longitude), within
- * `within` days of `on`.
+ * `within` days of `on`; or the Moon covering a body, seen from the event's place, on the local date `on`
+ * (`occultation`).
  */
 export type SkyCheck =
   | { kind: 'conjunction'; a: SkyBody; b: SkyBody; on: string; within: number }
-  | { kind: 'station'; body: SkyBody; on: string; within: number };
+  | { kind: 'station'; body: SkyBody; on: string; within: number }
+  | { kind: 'occultation'; body: SkyBody; on: string };
 /**
  * One moment of a reading's sky, shown at the verse `ref`. `when` is the local mean time at `place` (an OpenBible
  * slug), in the Julian calendar with astronomical years ("-0001-12-25T05:15" is 25 December 2 BC). `look` is what
  * the view centres on, a body or [azimuth, altitude] in degrees, and `fov` how wide it is. `track` draws a body's
- * path among the stars day by day, with `marks` labelled; `toward` marks on the horizon the direction of another
- * place. A time the reading does not give is `estimated`, and `basis` says why that hour or day.
+ * path among the stars day by day (and the bodies in `with` beside it), with `marks` labelled; `toward` marks on the
+ * horizon the direction of another place. `dark` draws the stars as though the sky were dark, for a moment the
+ * reading holds was reckoned rather than seen (an occultation at noon). A time the reading does not give is
+ * `estimated`, and `basis` says why that hour or day.
  */
 export interface SkyEvent {
   id: string; ref: Ref; title: string; when: string; place: string;
   look: SkyBody | [number, number]; fov?: number;
   /** Bodies labelled besides the planets and named stars. */
   label?: SkyBody[];
-  track?: { body: SkyBody; from: string; to: string; every?: number; marks?: { on: string; text: string }[] };
-  toward?: string;
+  track?: { body: SkyBody; with?: SkyBody[]; from: string; to: string; every?: number; marks?: { on: string; text: string }[] };
+  toward?: string; dark?: boolean;
   estimated?: boolean; basis?: string;
   /** What the reading says of this moment, attributed. */
   text: string;
   checks?: SkyCheck[];
   sources: Source[];
 }
-/** A reading of the star of the Magi: who holds it, and the moments of its sky. Every one is an interpretation. */
+/**
+ * A reading of the star of the Magi: who holds it, what they argue (`body`), and the moments of its sky. Every one is
+ * an interpretation. A reading no sky can show (a miracle) has no `events`.
+ */
 export interface SkyReading {
-  id: string; label: string; summary: string;
+  id: string; label: string; summary: string; body?: string[];
   confidence: Confidence; traditions: string[];
   sources: Source[];
   events: SkyEvent[];

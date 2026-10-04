@@ -421,7 +421,11 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   whose calendar is the Gregorian. A day or hour the holder does not give is `estimated`, with a `basis` saying why
   that one. What an event says of the sky goes in `checks` (a conjunction, a station) and `sky.test.ts` checks it
   against astronomy-engine; the card shows the computed dates beside the holder's own, without a verdict where they
-  differ (Larson's 25 December against the engine's 28th). Quote a holder from what they wrote, read in the session.
+  differ (Larson's 25 December against the engine's 28th); an `occultation` check also gives the minutes the Moon
+  covers the body. A reading no sky can show (Chrysostom's miracle) has no events, and its argument goes in `body`.
+  Nothing a record does not place is drawn: the comet of 5 BC has no orbit, so its view frames the region the record
+  names. Each reading's critics go in its `traditions` ("Answered by …"). Quote a holder from what they wrote, read in
+  the session.
 
 When a feature falls short of complete or correct (a source that could not be found or verified, a claim dropped
 or left vague for want of one, a citation not checked, a piece its neighbours have missing), record it in

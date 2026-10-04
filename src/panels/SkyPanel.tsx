@@ -7,7 +7,7 @@ import { SKY_READINGS, skyEventsFor } from '@/lib/content';
 import { loadPlaces, loadSky } from '@/lib/data';
 import { formatRef } from '@/lib/refs';
 import {
-  altAz, bearing, bodyEqj, closest, deltaTHours, eqjOf, formatUt, horizonRotation, magnitude, moonLit, observer, PLANETS,
+  altAz, bearing, bodyEqj, closest, deltaTHours, eqjOf, formatUt, horizonRotation, magnitude, moonLit, observer, occultation, PLANETS,
   starEqj, station, sunAltitude, toHorizon, utOf,
 } from '@/lib/sky';
 import type { Place, SkyData, SkyEvent, SkyReading } from '@/lib/types';
@@ -69,7 +69,7 @@ function moonTexture(lit: number) {
   const c = document.createElement('canvas'); c.width = c.height = 128;
   const g = c.getContext('2d')!, r = 60;
   g.translate(64, 64);
-  g.fillStyle = 'rgba(110,116,135,0.45)'; g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.fill();
+  g.fillStyle = 'rgba(70,76,96,0.85)'; g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.fill();
   g.fillStyle = '#f4f1e6'; g.beginPath();
   g.arc(0, 0, r, -Math.PI / 2, Math.PI / 2); // the lit limb, on the right
   // The terminator as an ellipse whose half-width is r·(1 − 2·lit): bulging right when a crescent, left when gibbous.
@@ -97,7 +97,7 @@ interface ViewState { ut: number; az: number; alt: number; fov: number; daylight
 function initialView(e: SkyEvent, place: Place, sky: SkyData): ViewState {
   const ut = utOf(e.when, place.lon), obs = observer(place);
   const look = typeof e.look === 'string' ? altAz(toHorizon(horizonRotation(ut, obs), eqjOf(e.look, ut, obs, sky))) : { az: e.look[0], alt: e.look[1] };
-  return { ut, az: look.az, alt: Math.max(5, Math.min(80, look.alt)), fov: e.fov ?? 70, daylight: true, ground: true };
+  return { ut, az: look.az, alt: Math.max(5, Math.min(80, look.alt)), fov: e.fov ?? 70, daylight: !e.dark, ground: true };
 }
 
 function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent; place: Place; toward?: Place }) {
@@ -160,7 +160,8 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
     const planets = new THREE.Points(planetGeo, planetMat);
     scene.add(planets);
     const sun = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTexture('#fff6d8'), depthWrite: false, transparent: true }));
-    const moonMat = new THREE.SpriteMaterial({ depthWrite: false, transparent: true });
+    // The Moon writes depth (and drops the clear corners of its square), so it hides the stars and planets it passes in front of.
+    const moonMat = new THREE.SpriteMaterial({ depthWrite: true, transparent: true, alphaTest: 0.5 });
     const moon = new THREE.Sprite(moonMat);
     scene.add(sun, moon);
 
@@ -181,18 +182,20 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
     }
 
     // A body's path among the stars: its J2000 positions day by day, turned with the stars at the time shown.
+    // The first body's path is the one the marks stand on; any `with` it are drawn beside it, fainter.
     const track = event.track;
-    const trackEqj = track ? (() => {
-      const out: { ut: number; v: [number, number, number] }[] = [];
-      for (let t = utOf(track.from, place.lon); t <= utOf(track.to, place.lon); t += track.every ?? 1) out.push({ ut: t, v: bodyEqj(track.body, t, obs) });
-      return out;
-    })() : [];
-    const trackGeo = new THREE.BufferGeometry();
-    const trackPos = new Float32Array(trackEqj.length * 3);
-    trackGeo.setAttribute('position', new THREE.BufferAttribute(trackPos, 3));
-    scene.add(new THREE.Line(trackGeo, new THREE.LineBasicMaterial({ color: '#e6b85c', transparent: true, opacity: 0.8, depthWrite: false })));
-    const trackDots = new THREE.Points(trackGeo, new THREE.PointsMaterial({ color: '#e6b85c', size: 3, sizeAttenuation: false, transparent: true, opacity: 0.8, depthWrite: false }));
-    scene.add(trackDots);
+    const paths = track ? [track.body, ...(track.with ?? [])].map((body, k) => {
+      const pts: { ut: number; v: [number, number, number] }[] = [];
+      for (let t = utOf(track.from, place.lon); t <= utOf(track.to, place.lon); t += track.every ?? 1) pts.push({ ut: t, v: bodyEqj(body, t, obs) });
+      const geo = new THREE.BufferGeometry();
+      const pos = new Float32Array(pts.length * 3);
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      const colour = k === 0 ? '#e6b85c' : '#9fb4d8', opacity = k === 0 ? 0.8 : 0.6;
+      scene.add(new THREE.Line(geo, new THREE.LineBasicMaterial({ color: colour, transparent: true, opacity, depthWrite: false })));
+      scene.add(new THREE.Points(geo, new THREE.PointsMaterial({ color: colour, size: 3, sizeAttenuation: false, transparent: true, opacity, depthWrite: false })));
+      return { pts, geo, pos };
+    }) : [];
+    const trackEqj = paths[0]?.pts ?? [];
 
     // Labels: planets and named stars, constellations, the compass points, the place a line points to, the track's marks.
     const all: Label[] = [];
@@ -229,8 +232,10 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
       const lit = Math.round(moonLit(v.ut) * 50) / 50;
       if (lit !== lastLit) { moonMat.map?.dispose(); moonMat.map = moonTexture(lit); moonMat.needsUpdate = true; lastLit = lit; }
       (moon.userData as { sunward: THREE.Vector3 }).sunward = at([moonV[0] + (sunV[0] - moonV[0]) * 0.01, moonV[1] + (sunV[1] - moonV[1]) * 0.01, moonV[2] + (sunV[2] - moonV[2]) * 0.01], SKY_R * 0.97);
-      trackEqj.forEach((p, i) => { const q = at(p.v, SKY_R * 0.995); trackPos.set([q.x, q.y, q.z], i * 3); });
-      trackGeo.attributes.position.needsUpdate = true;
+      for (const path of paths) {
+        path.pts.forEach((p, i) => { const q = at(p.v, SKY_R * 0.995); path.pos.set([q.x, q.y, q.z], i * 3); });
+        path.geo.attributes.position.needsUpdate = true;
+      }
       for (const m of markLabels) {
         const p = trackEqj.reduce((a, b) => (Math.abs(b.ut - m.ut) < Math.abs(a.ut - m.ut) ? b : a));
         m.l.at.copy(at(p.v));
@@ -352,6 +357,11 @@ function Computed({ e, sky, place }: { e: SkyEvent; sky: SkyData; place: Place }
       const sep = hit.deg < 1 ? `${(hit.deg * 60).toFixed(1)}′` : `${hit.deg.toFixed(2)}°`;
       return `${c.a} and ${c.b} closest on ${formatUt(hit.ut, place.lon, false)}, ${sep} apart.`;
     }
+    if (c.kind === 'occultation') {
+      const o = occultation(c.body, utOf(c.on, place.lon), observer(place));
+      const hm = (ut: number) => formatUt(ut, place.lon).split(', ')[1];
+      return o ? `Seen from ${place.name}, the Moon covers ${c.body} from ${hm(o.from)} to ${hm(o.to)} local mean time on ${formatUt(o.from, place.lon, false)}.` : `The Moon does not cover ${c.body} from ${place.name} that day.`;
+    }
     const s = station(c.body, on, c.within);
     return s ? `${c.body} turns ${s.to} (in ecliptic longitude) on ${formatUt(s.ut, place.lon, false)}.` : `${c.body} does not turn within ${c.within} days.`;
   }), [e, sky, place]);
@@ -364,18 +374,19 @@ function Computed({ e, sky, place }: { e: SkyEvent; sky: SkyData; place: Place }
   );
 }
 
-function ReadingCard({ r, here, picked, onPick }: { r: SkyReading; here: SkyEvent | undefined; picked: SkyEvent; onPick: (e: SkyEvent) => void }) {
+function ReadingCard({ r, here, picked, onPick }: { r: SkyReading; here: SkyEvent | undefined; picked: SkyEvent | undefined; onPick: (e: SkyEvent) => void }) {
   return (
     <div className="card">
       <h3><span style={{ flex: 1 }}>{r.label}</span><ConfidenceBadge c={r.confidence} /></h3>
       <p className="summary">{r.summary}</p>
-      <div className="sky-moments" role="group" aria-label="Moments">
+      {r.body && <div className="body">{r.body.map((p) => <p key={p}>{p}</p>)}</div>}
+      {r.events.length > 0 && <div className="sky-moments" role="group" aria-label="Moments">
         {r.events.map((e) => (
           <button key={e.id} aria-pressed={e === picked} className={e === here ? 'here' : undefined} onClick={() => { onPick(e); follow(e.ref); }}>
             <b>{formatRef(e.ref)}</b> {e.title}
           </button>
         ))}
-      </div>
+      </div>}
       <SourceList sources={r.sources} traditions={r.traditions} />
     </div>
   );
@@ -389,7 +400,7 @@ export function SkyPanel() {
   const [pickedId, setPickedId] = useState<string | null>(here?.id ?? null);
   // Reading on to a moment's verse shows that moment.
   useEffect(() => { if (here) setPickedId(here.id); }, [here]);
-  const event = reading.events.find((e) => e.id === pickedId) ?? here ?? reading.events[0];
+  const event: SkyEvent | undefined = reading.events.find((e) => e.id === pickedId) ?? here ?? reading.events[0];
 
   const [sky, setSky] = useState<SkyData | null>(null);
   const [places, setPlaces] = useState<Map<string, Place> | null>(null);
@@ -398,7 +409,7 @@ export function SkyPanel() {
     loadSky().then(setSky, () => setFailed(true));
     loadPlaces().then((ps) => setPlaces(new Map(ps.map((p) => [p.slug, p]))), () => setFailed(true));
   }, []);
-  const place = places?.get(event.place), toward = event.toward ? places?.get(event.toward) : undefined;
+  const place = event && places?.get(event.place), toward = event?.toward ? places?.get(event.toward) : undefined;
 
   return (
     <div className="panel-body">
@@ -409,7 +420,7 @@ export function SkyPanel() {
       )}
       <ReadingCard r={reading} here={here} picked={event} onPick={(e) => setPickedId(e.id)} />
       {failed && <div className="empty"><p>The sky data has not been built. Run <code>npm run data</code>.</p></div>}
-      {sky && place && (
+      {sky && place && event && (
         <div className="card">
           <h3><span style={{ flex: 1 }}>{event.title}</span></h3>
           <p className="muted">{event.estimated ? '≈ ' : ''}{formatUt(utOf(event.when, place.lon), place.lon)} local mean time, seen from {place.name} · {formatRef(event.ref)}</p>
@@ -420,13 +431,13 @@ export function SkyPanel() {
           <SourceList sources={event.sources} />
         </div>
       )}
-      <p className="sky-note">
+      {event && <p className="sky-note">
         Positions are astronomy-engine’s, for the Julian-calendar date and local mean time shown, without refraction. The
         Earth’s spin has slowed unevenly, and the correction for it (ΔT, ≈{deltaTHours(utOf(event.when)).toFixed(1)} hours here, from
         Espenak and Meeus’s model) is itself uncertain, so an hour or an altitude is ≈; the dates of conjunctions and
         stations do not depend on it. Stars from the Yale Bright Star Catalogue, moved by their proper motions; constellation
         lines from d3-celestial (Olaf Frohn, BSD licence).
-      </p>
+      </p>}
     </div>
   );
 }

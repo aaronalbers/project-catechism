@@ -5,14 +5,15 @@
    "label": "Jupiter, 3–2 BC (Larson)",
    "summary": "Rick Larson identifies the star with Jupiter: its triple conjunction with Regulus in Leo from September 3 BC, its close meeting with Venus in June 2 BC, and its halt among the stars in December 2 BC, seen in the south from Jerusalem, over Bethlehem. He looks at 3 and 2 BC because he dates Herod's death to 1 BC (see the card on dating it).",
    "confidence": "interpretation",
-   "traditions": ["Rick Larson, The Star of Bethlehem", "Ernest L. Martin, for the day of the sign of Revelation 12; Larson's study lists his book among its sources"],
+   "traditions": ["Rick Larson, The Star of Bethlehem", "Ernest L. Martin, for the day of the sign of Revelation 12; Larson's study lists his book among its sources", "Answered by Bradley E. Schaefer (2015), who holds that ancient astrologers had 'no interpretation for triple conjunctions' and that the meeting of Venus and Jupiter 'occurred in 2 BC, while Herod certainly died in early 4 BC'"],
    "sources": [
     {"kind": "scholarship", "title": "The Star of Bethlehem: the study", "author": "Rick Larson", "url": "https://bethlehemstar.com/setting-the-stage/the-nine-points-of-christs-star/", "note": "'If Herod died in 4 BC, then Christ had to be born before that year. But if Herod died in 1 BC, as the best evidence indicates, then we should look at the years 2 and 3 BC'"},
     {"kind": "video", "title": "The Star of Bethlehem (DVD)", "author": "Rick Larson", "note": "Mite Productions; the documentary the study accompanies"},
     {"kind": "scholarship", "title": "The Star that Astonished the World (2nd ed.), ch. 6", "author": "Ernest L. Martin", "year": 1996, "url": "https://www.askelm.com/star/star006.htm"},
     {"kind": "scripture", "ref": "Matt.2.1-12"},
     {"kind": "scripture", "ref": "Rev.12.1-5"},
-    {"kind": "data", "title": "Astronomy Engine 2.1.19", "author": "Don Cross", "url": "https://github.com/cosinekitty/astronomy", "note": "planets, Sun and Moon; ΔT from Espenak and Meeus's model"}
+    {"kind": "data", "title": "Astronomy Engine 2.1.19", "author": "Don Cross", "url": "https://github.com/cosinekitty/astronomy", "note": "planets, Sun and Moon; ΔT from Espenak and Meeus's model"},
+    {"kind": "scholarship", "title": "Astronomical and Historical Evaluation of Molnar's Solution, in The Star of Bethlehem and the Magi (ed. P. Barthel and G. van Kooten)", "author": "Bradley E. Schaefer", "year": 2015, "url": "https://arxiv.org/abs/1612.07642", "note": "the author's version; his answer to the astronomical readings"}
    ],
    "events": [
     {
@@ -39,12 +40,7 @@
      "place": "babylon-1",
      "look": "Jupiter",
      "fov": 70,
-     "track": {"body": "Jupiter", "from": "-0002-08-15", "to": "-0001-06-25", "every": 2, "marks": [
-      {"on": "-0002-09-14", "text": "1st"},
-      {"on": "-0001-02-17", "text": "2nd"},
-      {"on": "-0001-05-09", "text": "3rd"},
-      {"on": "-0001-06-17", "text": "Venus"}
-     ]},
+     "track": {"body": "Jupiter", "from": "-0002-08-15", "to": "-0001-06-25", "every": 2, "marks": [{"on": "-0002-09-14", "text": "1st"}, {"on": "-0001-02-17", "text": "2nd"}, {"on": "-0001-05-09", "text": "3rd"}, {"on": "-0001-06-17", "text": "Venus"}]},
      "estimated": true,
      "basis": "Larson gives September 3 BC, 'at the time of the Jewish New Year', seen by a magus 'from the Middle East', perhaps from Babylon. The day is the computed closest approach of Jupiter and Regulus; the hour, 4:30 in the morning at Babylon, is one in the dawn twilight with Jupiter well up in the east.",
      "text": "Larson reads 'we saw His star in the east' as the star seen rising (en anatolē), and takes it to be Jupiter, 'the King Planet', meeting Regulus, 'the Star of Kings', in September 3 BC. Jupiter then turned back in its retrograde loop and passed Regulus twice more, 'a triple conjunction', which he calls 'a coronation'. It happened in Leo, which he connects with the lion of Judah (Genesis 49:9–10). The path drawn is Jupiter's among the stars from August 3 BC to June 2 BC, with each pass marked.",
@@ -71,8 +67,12 @@
      "estimated": true,
      "basis": "Larson gives June 2 BC, in the evening, with the planets setting in the west. The day is the computed closest approach; the hour, 8 p.m. at Babylon, is one after sunset with both planets still above the western horizon.",
      "text": "Larson: by June 2 BC Jupiter had 'finished crowning Regulus' and met Venus so closely that 'the planets could not be distinguished with the naked eye', setting in the west, so that a magus in Babylon 'would have seen the spectacle of his career while facing toward Judea'. He suggests this may have set the Magi on their way to Jerusalem.",
-     "checks": [{"kind": "conjunction", "a": "Jupiter", "b": "Venus", "on": "-0001-06-17", "within": 2}],
-     "sources": [{"kind": "scholarship", "title": "The Star of Bethlehem: Westward leading", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/westward-leading/"}]
+     "checks": [
+      {"kind": "conjunction", "a": "Jupiter", "b": "Venus", "on": "-0001-06-17", "within": 2}
+     ],
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem: Westward leading", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/westward-leading/"}
+     ]
     },
     {
      "id": "stopped",
@@ -87,13 +87,229 @@
      "estimated": true,
      "basis": "Larson gives 25 December 2 BC and 'the wee hours', looking south from Jerusalem. The hour, 5:15 in the morning, is when Jupiter stands at Bethlehem's bearing from Jerusalem.",
      "text": "Larson: in December 2 BC, 'if the Magi looked south in the wee hours, there hung the Planet of Kings over the city of Messiah's birth', and 'on December 25 of 2 BC as it entered retrograde, Jupiter reached full stop in its travel through the fixed stars'. He reads 'stood over the place' (2:9) as that halt, which an astronomer sees 'not so much on the scale of minutes, but on the longer scale of days, weeks and months'. The path drawn is Jupiter's among the stars from late October 2 BC to February 1 BC.",
-     "checks": [{"kind": "station", "body": "Jupiter", "on": "-0001-12-25", "within": 5}],
+     "checks": [
+      {"kind": "station", "body": "Jupiter", "on": "-0001-12-25", "within": 5}
+     ],
      "sources": [
       {"kind": "scholarship", "title": "The Star of Bethlehem: To stop a star", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/to-stop-a-star/"},
       {"kind": "scholarship", "title": "The Star of Bethlehem: Westward leading", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/westward-leading/"}
      ]
     }
    ]
+  },
+  {
+   "id": "kepler",
+   "label": "A new star after the great conjunction, 7 BC (Kepler)",
+   "summary": "Johannes Kepler saw the new star of 1604 appear where Jupiter, Saturn and Mars had just gathered, and placed the star of the Magi after the great conjunction of Jupiter and Saturn in Pisces in 7 BC. As Miguel Granada and Colin Humphreys report him, the star was a new star the conjunction heralded, not the conjunction itself; no record places such a star, so the sky shows the conjunction alone. Later writers, among them David Hughes and Konradin Ferrari d'Occhieppo, whom Humphreys cites, take the conjunction itself to be the star.",
+   "confidence": "interpretation",
+   "traditions": ["Johannes Kepler (De Stella Nova, 1606; De vero anno, 1614), as Miguel Granada and Colin Humphreys report him", "The conjunction itself as the star: David Hughes (1979) and Konradin Ferrari d'Occhieppo (1989), whom Humphreys cites as its recent supporters", "Answered by Colin Humphreys, who holds a conjunction does not fit 'a single star which appeared at a specific time' and 'stood over' Bethlehem, and by Bradley E. Schaefer, who holds there is no connection between where the planets appear and a distant supernova"],
+   "sources": [
+    {"kind": "scholarship", "title": "The Discussion between Kepler and Roeslin on the Nova of 1604, ASP Conference Series 342", "author": "Miguel A. Granada", "year": 2005, "url": "https://www.aspbooks.org/publications/342/030.pdf", "note": "n. 36: Kepler places 'Christ's first coming and the star of the Magi that announces it only two years after the great conjunction which opened the fifth fiery trigon' (KGW I, 279, 359)"},
+    {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"},
+    {"kind": "scholarship", "title": "Astronomical and Historical Evaluation of Molnar's Solution, in The Star of Bethlehem and the Magi (ed. P. Barthel and G. van Kooten)", "author": "Bradley E. Schaefer", "year": 2015, "url": "https://arxiv.org/abs/1612.07642", "note": "the author's version"},
+    {"kind": "scripture", "ref": "Matt.2.1-12"},
+    {"kind": "data", "title": "Astronomy Engine 2.1.19", "author": "Don Cross", "url": "https://github.com/cosinekitty/astronomy"}
+   ],
+   "events": [
+    {
+     "id": "conjunction",
+     "ref": "Matt.2.2",
+     "title": "Jupiter and Saturn meet in Pisces",
+     "when": "-0006-05-28T03:00",
+     "place": "babylon-1",
+     "look": "Jupiter",
+     "fov": 50,
+     "track": {"body": "Jupiter", "with": ["Saturn"], "from": "-0006-04-01", "to": "-0005-03-15", "every": 3, "marks": [{"on": "-0006-05-28", "text": "May"}, {"on": "-0006-10-02", "text": "Oct"}, {"on": "-0006-12-03", "text": "Dec"}]},
+     "estimated": true,
+     "basis": "Kepler gives the year. The day is the first computed closest approach, and the hour one before dawn at Babylon, with both planets up in the east; Kepler names no place.",
+     "text": "Humphreys reports that Kepler calculated such gatherings of Jupiter, Saturn and Mars came every 805 years and 'suggested that they coincided with great events in history', among them the birth of Christ in 7/6 BC, and that he 'tentatively suggested that the supernova of AD 1604, and the new star of 5 BC might have resulted from these massings'. The paths drawn are Jupiter's and, fainter, Saturn's from April 7 BC to March 6 BC, meeting three times.",
+     "checks": [
+      {"kind": "conjunction", "a": "Jupiter", "b": "Saturn", "on": "-0006-05-28", "within": 3},
+      {"kind": "conjunction", "a": "Jupiter", "b": "Saturn", "on": "-0006-10-02", "within": 3},
+      {"kind": "conjunction", "a": "Jupiter", "b": "Saturn", "on": "-0006-12-03", "within": 3}
+     ],
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"},
+      {"kind": "scholarship", "title": "The Discussion between Kepler and Roeslin on the Nova of 1604, ASP Conference Series 342", "author": "Miguel A. Granada", "year": 2005, "url": "https://www.aspbooks.org/publications/342/030.pdf", "note": "n. 36: Kepler places 'Christ's first coming and the star of the Magi that announces it only two years after the great conjunction which opened the fifth fiery trigon' (KGW I, 279, 359)"}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "molnar",
+   "label": "Jupiter hidden by the Moon in Aries, 6 BC (Molnar)",
+   "summary": "Michael Molnar holds the star was an astrological event rather than a sight: the Moon passing in front of Jupiter in Aries, which he finds ancient astrologers and the coins of Antioch tied to Judea, on 20 March 6 BC, and again on 17 April, the morning Jupiter rose heliacally. Neither occultation could be seen, on his account; astrologers would have reckoned them. He takes Herod's death to be in 4 BC.",
+   "body": [
+    "Molnar reads 'in the east' (en tē anatolē) as an astrologer's term: 'Although the phrase … does translate into \\u2018in the east\\u2019, its meaning in astrological and astronomical discussions is more close to \\u2018at the rising\\u2019', a heliacal rising, Jupiter's first morning appearance after passing the Sun.",
+    "Bradley Schaefer, an astronomer, calls Molnar's solution 'convincing', and finds Jupiter 12.4° from the Sun at dawn on 17 April, which the astrologers of the time would have taken as its heliacal rising by Ptolemy's rule of 12°."
+   ],
+   "confidence": "interpretation",
+   "traditions": ["Michael R. Molnar (1995; The Star of Bethlehem: The Legacy of the Magi, 1999)", "Bradley E. Schaefer (2015), who calls Molnar's solution 'convincing'"],
+   "sources": [
+    {"kind": "scholarship", "title": "The Magi's Star from the Perspective of Ancient Astrological Practices, Quarterly Journal of the Royal Astronomical Society 36", "author": "Michael R. Molnar", "year": 1995, "url": "https://articles.adsabs.harvard.edu/pdf/1995QJRAS..36..109M", "note": "109–126"},
+    {"kind": "scholarship", "title": "Astronomical and Historical Evaluation of Molnar's Solution, in The Star of Bethlehem and the Magi (ed. P. Barthel and G. van Kooten)", "author": "Bradley E. Schaefer", "year": 2015, "url": "https://arxiv.org/abs/1612.07642", "note": "the author's version"},
+    {"kind": "scripture", "ref": "Matt.2.1-12"},
+    {"kind": "data", "title": "Astronomy Engine 2.1.19", "author": "Don Cross", "url": "https://github.com/cosinekitty/astronomy"}
+   ],
+   "events": [
+    {
+     "id": "first",
+     "ref": "Matt.2.1",
+     "title": "The Moon covers Jupiter at sunset",
+     "when": "-0005-03-20T18:11",
+     "place": "jerusalem",
+     "look": "Moon",
+     "fov": 30,
+     "basis": "Molnar gives 1 minute after sunset in Jerusalem. The engine's occultation falls a little earlier (see Computed); its hour depends on ΔT, which is uncertain this far back.",
+     "text": "Molnar: 'On 6 BC March 20 … 1 min after sunset in Jerusalem the Moon occulted Jupiter while in Aries', with Mars also in Aries; 'this significant astrological event was hidden by the bright sky'. He takes this first occultation to mark 'most likely' the birth of Christ.",
+     "checks": [
+      {"kind": "occultation", "body": "Jupiter", "on": "-0005-03-20"}
+     ],
+     "sources": [
+      {"kind": "scholarship", "title": "The Magi's Star from the Perspective of Ancient Astrological Practices, Quarterly Journal of the Royal Astronomical Society 36", "author": "Michael R. Molnar", "year": 1995, "url": "https://articles.adsabs.harvard.edu/pdf/1995QJRAS..36..109M", "note": "109–126"}
+     ]
+    },
+    {
+     "id": "rising",
+     "ref": "Matt.2.2",
+     "title": "Jupiter's heliacal rising",
+     "when": "-0005-04-17T05:20",
+     "place": "jerusalem",
+     "look": "Jupiter",
+     "fov": 50,
+     "estimated": true,
+     "basis": "Molnar gives the morning of 17 April; the hour is one in the dawn twilight when Jupiter has just cleared the eastern horizon.",
+     "text": "Molnar: 'A few hours earlier that morning, Jupiter underwent its heliacal rising; it was 12° from the Sun.' He concludes 'the Magi's star was not just at the moment in the east, but rising heliacally which astrologers held as auspicious.'",
+     "sources": [
+      {"kind": "scholarship", "title": "The Magi's Star from the Perspective of Ancient Astrological Practices, Quarterly Journal of the Royal Astronomical Society 36", "author": "Michael R. Molnar", "year": 1995, "url": "https://articles.adsabs.harvard.edu/pdf/1995QJRAS..36..109M", "note": "109–126"},
+      {"kind": "scholarship", "title": "Astronomical and Historical Evaluation of Molnar's Solution, in The Star of Bethlehem and the Magi (ed. P. Barthel and G. van Kooten)", "author": "Bradley E. Schaefer", "year": 2015, "url": "https://arxiv.org/abs/1612.07642", "note": "the author's version"}
+     ]
+    },
+    {
+     "id": "second",
+     "ref": "Matt.2.9",
+     "title": "The Moon covers Jupiter again, at noon",
+     "when": "-0005-04-17T12:00",
+     "place": "jerusalem",
+     "look": "Moon",
+     "fov": 70,
+     "toward": "bethlehem-1",
+     "dark": true,
+     "basis": "Molnar gives 'a little after local noon'. The stars are drawn as though the sky were dark, since he holds this occultation 'could only be detected through the mathematics of astrologers'.",
+     "text": "Molnar: 'On 6 BC April 17 the Moon … returned to Aries and repeated the occultation of Jupiter. This happened a little after local noon when Jupiter was in the southwest sky.' He takes this as the day the Magi saw Herod, and draws the occultation's place on the horizon of Jerusalem in the direction of Bethlehem, reading 'stood over where the young child was' as 'the glorious astrological occultation graced Aries'.",
+     "checks": [
+      {"kind": "occultation", "body": "Jupiter", "on": "-0005-04-17"}
+     ],
+     "sources": [
+      {"kind": "scholarship", "title": "The Magi's Star from the Perspective of Ancient Astrological Practices, Quarterly Journal of the Royal Astronomical Society 36", "author": "Michael R. Molnar", "year": 1995, "url": "https://articles.adsabs.harvard.edu/pdf/1995QJRAS..36..109M", "note": "109–126"}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "comet",
+   "label": "A comet, 5 BC (Humphreys)",
+   "summary": "Colin Humphreys identifies the star with the 'broom star' the Chinese Han shu records in spring 5 BC, seen 'for over 70 days' at Ch'ien-niu, which he takes as the region of Capricornus. He sets it after two signs that prepared the Magi: Jupiter and Saturn meeting three times in Pisces in 7 BC, and Mars joining them in February 6 BC. No orbit for the comet is known, so the sky shows where the record puts it, not the comet.",
+   "body": [
+    "Humphreys holds that a comet alone fits a star that was new, moved slowly through the stars and 'stood over' a place, the words he finds Dio Cassius and Josephus using of comets. The earliest to compare the star to a comet is Origen, who took it to be 'a new star … partaking of the nature of those celestial bodies which appear at times, such as comets', and cited Chaeremon the Stoic for comets that appeared 'when good was to happen'."
+   ],
+   "confidence": "interpretation",
+   "traditions": ["Colin J. Humphreys (1991; 1992)", "Origen (Against Celsus 1.58–59), for a new star like a comet", "Answered by Bradley E. Schaefer, who holds comets were 'universally feared as evil omens', and by Rick Larson, who holds that comets 'were regarded as omens of doom' and that none is recorded for 3 or 2 BC"],
+   "sources": [
+    {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"},
+    {"kind": "primary", "title": "Han shu (History of the Former Han), on the second year of Jianping", "note": "'a sui-hsing appeared at Ch\\u2019ien-niu for over 70 days', as Humphreys translates it after Ho Peng-Yoke"},
+    {"kind": "primary", "title": "Origen, Against Celsus 1.58–59", "author": "Origen", "url": "https://www.newadvent.org/fathers/04161.htm"},
+    {"kind": "scholarship", "title": "Astronomical and Historical Evaluation of Molnar's Solution, in The Star of Bethlehem and the Magi (ed. P. Barthel and G. van Kooten)", "author": "Bradley E. Schaefer", "year": 2015, "url": "https://arxiv.org/abs/1612.07642", "note": "the author's version"},
+    {"kind": "scholarship", "title": "The Star of Bethlehem: What was the star?", "author": "Rick Larson", "url": "https://bethlehemstar.com/setting-the-stage/what-was-the-star/"},
+    {"kind": "scripture", "ref": "Matt.2.1-16"},
+    {"kind": "data", "title": "Astronomy Engine 2.1.19", "author": "Don Cross", "url": "https://github.com/cosinekitty/astronomy"}
+   ],
+   "events": [
+    {
+     "id": "triple",
+     "ref": "Matt.2.16",
+     "title": "Jupiter and Saturn meet in Pisces",
+     "when": "-0006-05-28T03:00",
+     "place": "babylon-1",
+     "look": "Jupiter",
+     "fov": 50,
+     "track": {"body": "Jupiter", "with": ["Saturn"], "from": "-0006-04-01", "to": "-0005-03-15", "every": 3, "marks": [{"on": "-0006-05-28", "text": "May"}, {"on": "-0006-10-02", "text": "Oct"}, {"on": "-0006-12-03", "text": "Dec"}]},
+     "estimated": true,
+     "basis": "Humphreys gives May, October and December 7 BC. The day is the first computed closest approach, and the hour one before dawn at Babylon.",
+     "text": "Humphreys, after R. A. Rosenberg and Abarbanel: in Magian astrology Saturn stood for the divine Father and Jupiter for his son, and Pisces was associated with Israel, so the conjunction said 'a Messiah-king will be born in Israel'. He suggests Herod's order to kill the boys 'two years old and under' counted from 'the first stage of the triple conjunction in May 7 BC, two years previously'.",
+     "checks": [
+      {"kind": "conjunction", "a": "Jupiter", "b": "Saturn", "on": "-0006-05-28", "within": 3},
+      {"kind": "conjunction", "a": "Jupiter", "b": "Saturn", "on": "-0006-10-02", "within": 3},
+      {"kind": "conjunction", "a": "Jupiter", "b": "Saturn", "on": "-0006-12-03", "within": 3}
+     ],
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"}
+     ]
+    },
+    {
+     "id": "massing",
+     "ref": "Matt.2.7",
+     "title": "Mars joins Jupiter and Saturn",
+     "when": "-0005-02-21T18:40",
+     "place": "babylon-1",
+     "look": "Jupiter",
+     "fov": 40,
+     "estimated": true,
+     "basis": "Humphreys gives February 6 BC. The day is the one on which the engine finds the three planets closest together, and the hour one after sunset at Babylon, with the planets low in the west.",
+     "text": "Humphreys: 'in February 6 BC the three planets (still in Pisces) were separated by only about eight degrees.' He suggests it 'confirmed to the Magi that the Messiah-king to be born in Israel would be a mighty king', and that the Magi described it to Herod when he asked 'the exact time the star had appeared'.",
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"}
+     ]
+    },
+    {
+     "id": "comet-rising",
+     "ref": "Matt.2.2",
+     "title": "Capricornus rising before dawn",
+     "when": "-0004-03-25T05:00",
+     "place": "babylon-1",
+     "look": [150, 30],
+     "fov": 90,
+     "estimated": true,
+     "basis": "The Han shu gives the second month of the second year of Jianping (9 March to 6 April 5 BC) and Ch'ien-niu, and no closer position, so no comet is drawn. The sky is shown before dawn on 25 March from Babylon, which Humphreys names as the farthest the Magi are likely to have come.",
+     "text": "Humphreys: 'In March/April Capricornus rose above the Eastern horizon as seen from Arabia and neighbouring countries and was first visible in the morning twilight. Hence this particular comet would have been first seen rising in the East in the morning sky', which he matches with 'His star in the east', or 'at its rising'. The Han shu's comment on it: 'Sui are the means of eliminating the old and inaugurating the new.'",
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"}
+     ]
+    },
+    {
+     "id": "comet-south",
+     "ref": "Matt.2.9",
+     "title": "In the south, toward Bethlehem",
+     "when": "-0004-05-15T04:00",
+     "place": "jerusalem",
+     "look": [197, 35],
+     "fov": 90,
+     "toward": "bethlehem-1",
+     "estimated": true,
+     "basis": "Humphreys puts the Magi in Jerusalem in April to June 5 BC, seeing the comet 'in the south in the morning sky'. The day is chosen within that span, and the hour is when Capricornus stands at Bethlehem's bearing; the comet itself had moved on, he holds, and no record says where.",
+     "text": "Humphreys: the Magi 'saw the comet in the south in the morning sky as they travelled from Jerusalem to Bethlehem', and 'looked up and saw the comet in front of them, with a near vertical tail, the head of the comet appearing to stand over Bethlehem'.",
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem, a Comet in 5 BC, and the Date of Christ's Birth, Tyndale Bulletin 43.1", "author": "Colin J. Humphreys", "year": 1992, "url": "https://doi.org/10.53751/001c.30475", "note": "a revision of his paper in the Quarterly Journal of the Royal Astronomical Society 32 (1991) 389–407"}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "miracle",
+   "label": "Not a star at all (Chrysostom)",
+   "summary": "John Chrysostom holds the star was 'not of the common sort, or rather not a star at all', but 'some invisible power transformed into this appearance', so no reckoning of the sky can show it.",
+   "body": [
+    "He gives four reasons, each from Matthew's account. Its course: 'we see them going from east to west; but this was wafted from north to south; for so is Palestine situated with respect to Persia.' Its time: 'it appears not in the night, but in mid-day, while the sun is shining.' Its appearing and hiding: it led them to Palestine, hid when they entered Jerusalem, and showed itself again when they left Herod, 'when they were to move, it moved; when to stand, it stood', like the pillar of cloud. And its way of pointing out the child: it could not mark 'a spot so confined' from on high, 'unless it left that height and came down, and stood over the very head of the young child'.",
+    "Bradley Schaefer holds that a miracle would make the deity 'deceitful for having set up the miracle while also having such perfect evidence for the 6 BC horoscope as being the Star'."
+   ],
+   "confidence": "interpretation",
+   "traditions": ["John Chrysostom, Homily 6 on Matthew", "Answered by Bradley E. Schaefer (2015), who holds the star was Molnar's horoscope"],
+   "sources": [
+    {"kind": "primary", "title": "John Chrysostom, Homilies on Matthew 6.3", "author": "John Chrysostom", "url": "https://www.newadvent.org/fathers/200106.htm"},
+    {"kind": "scripture", "ref": "Matt.2.9"},
+    {"kind": "scholarship", "title": "Astronomical and Historical Evaluation of Molnar's Solution, in The Star of Bethlehem and the Magi (ed. P. Barthel and G. van Kooten)", "author": "Bradley E. Schaefer", "year": 2015, "url": "https://arxiv.org/abs/1612.07642", "note": "the author's version"}
+   ],
+   "events": []
   }
  ]
 }

@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import * as A from 'astronomy-engine';
 import { SKY_READINGS } from '@/lib/content';
 import { parseRef } from '@/lib/refs';
-import { altAz, bodyEqj, closest, formatUt, horizonRotation, isSolar, observer, station, toHorizon, utOf } from '@/lib/sky';
+import { altAz, bodyEqj, closest, formatUt, horizonRotation, isSolar, observer, occultation, station, toHorizon, utOf } from '@/lib/sky';
 import type { Place, SkyData } from '@/lib/types';
 
 const data = (p: string) => JSON.parse(readFileSync(new URL(`../../public/data/${p}`, import.meta.url), 'utf8'));
@@ -73,8 +73,11 @@ describe('sky readings', () => {
         const hit = closest(c.a, c.b, utOf(c.on), c.within, sky);
         // A minimum inside the window, not at its edge.
         expect(Math.abs(hit.ut - utOf(c.on)), at).toBeLessThan(c.within - 0.5);
-      } else {
+      } else if (c.kind === 'station') {
         expect(station(c.body, utOf(c.on), c.within), at).toBeTruthy();
+      } else {
+        const p = place(e.place)!;
+        expect(occultation(c.body, utOf(c.on, p.lon), observer(p)), at).toBeTruthy();
       }
     }
   });

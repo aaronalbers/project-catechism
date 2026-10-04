@@ -122,7 +122,9 @@ export const CATALOG: CatalogSection[] = [
     blurb: 'The sky each reading of the star points to, computed for the place and hour, moving with the text.',
     entries: SKY_READINGS.map((r) => ({
       id: r.id, kind: 'sky' as const, title: r.label, summary: r.summary,
-      go: r.events[0].ref, lines: [{ label: 'Moments', refs: r.events.map((e) => e.ref) }],
+      // A reading no sky can show has no moments; it goes to the passage it cites.
+      go: r.events[0]?.ref ?? r.sources.find((s) => s.ref)!.ref!,
+      lines: [{ label: r.events.length ? 'Moments' : 'Cites', refs: r.events.length ? r.events.map((e) => e.ref) : r.sources.flatMap((s) => (s.ref ? [s.ref] : [])) }],
     })),
   },
   {

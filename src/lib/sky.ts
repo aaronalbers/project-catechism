@@ -128,6 +128,22 @@ export function station(body: SkyBody, ut: number, within: number): { ut: number
   return null;
 }
 
+/**
+ * When the Moon covers a body, seen from `obs`, during the local day starting at `ut` (local midnight), searched
+ * minute by minute: the first and last minute its centre is behind the Moon's disc, or null.
+ */
+export function occultation(body: SkyBody, ut: number, obs: A.Observer): { from: number; to: number } | null {
+  let from: number | null = null, to = 0;
+  for (let t = ut; t < ut + 1; t += 1 / 1440) {
+    const moon = A.Equator(A.Body.Moon, t, obs, false, true);
+    const radius = Math.asin(1737.4 / (moon.dist * A.KM_PER_AU)) / RAD;
+    const covered = separation(unit(moon.vec), bodyEqj(body, t, obs)) < radius;
+    if (covered) { from ??= t; to = t; }
+  }
+  return from === null ? null : { from, to };
+}
+const unit = (v: A.Vector): [number, number, number] => { const r = Math.hypot(v.x, v.y, v.z); return [v.x / r, v.y / r, v.z / r]; };
+
 /** The direction (azimuth from north, degrees) from one place to another, on the sphere. */
 export function bearing(from: Pick<Place, 'lat' | 'lon'>, to: Pick<Place, 'lat' | 'lon'>) {
   const [la1, lo1, la2, lo2] = [from.lat, from.lon, to.lat, to.lon].map((x) => x * RAD);
