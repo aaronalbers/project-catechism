@@ -23,7 +23,7 @@
   {"ref": "Acts.21.9", "text": "Four daughters who prophesied"}
  ],
  "later": [
-  {"text": "Papias, as quoted by Eusebius, knew his daughters at Hierapolis; later writers confused him with Philip the apostle.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.31.3–5; 3.39.9"}], "traditions": ["Papias and Polycrates, as reported by Eusebius"]}
+  {"text": "Papias, as quoted by Eusebius, knew his daughters at Hierapolis. Polycrates calls the Philip buried there with his daughters “one of the twelve apostles”, while Luke gives the daughters who prophesied to Philip the evangelist (Acts 21:8–9).", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 3.31.3–5; 3.39.9"}]}
  ],
  "confidence": "evidence",
  "sources": [

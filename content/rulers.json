@@ -897,7 +897,7 @@
   ],
   "estimated": true,
   "predecessor": "jehoiachin",
-  "notes": "The fall of Jerusalem in 586 (or 587) BC is fixed by the Babylonian Chronicle and 2 Kings 25:8.",
+  "notes": "The fall of Jerusalem in 586 (or 587) BC is counted from 2 Kings 25:8, Nebuchadnezzar's nineteenth year, and the Babylonian Chronicle's date for his seventh; the Chronicle breaks off before the fall.",
   "reign": {
    "kingdom": "judah",
    "ref": "2Kgs.24.18",
@@ -1736,6 +1736,7 @@
   "title": "King (client of Rome)",
   "from": -37,
   "to": -4,
+  "toOther": -1,
   "refs": [
    "Matt.2.1-19",
    "Luke.1.5"
@@ -1753,7 +1754,7 @@
     "note": "his building programme survives on a vast scale"
    }
   ],
-  "notes": "Appointed king by the Roman senate in 40 BC; ruled from 37. The death is dated as Emil Schürer reckons it, 4 BC; W. E. Filmer, Jack Finegan and Andrew Steinmann reckon it to 1 BC. See the Insights card on the date of his death."
+  "notes": "Appointed king by the Roman senate in 40 BC; ruled from 37. Emil Schürer reckons his death to 4 BC; W. E. Filmer, Jack Finegan and Andrew Steinmann reckon it to 1 BC, and Steinmann his reign from 36. See the Insights card on the date of his death."
  },
  {
   "id": "archelaus",

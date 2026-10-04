@@ -25,9 +25,9 @@
   {"ref": "Acts.1.25-26", "text": "Replaced by Matthias"}
  ],
  "later": [
-  {"text": "Raymond Brown surveys the meanings proposed for Iscariot: “man of Kerioth,” a town in Judah, “assassin,” or “false one.”", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Josh.15.25"}, {"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}], "traditions": ["the derivations Raymond E. Brown surveys"]},
+  {"text": "Raymond Brown surveys the meanings proposed for Iscariot: “man of Kerioth,” a town in Judah, “assassin,” or “false one.”", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Josh.15.25"}, {"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}]},
   {"text": "The Gospel of Judas, a second-century Gnostic text known from a Coptic copy published in 2006, makes his betrayal a secret task Jesus gave him.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Codex Tchacos, Coptic, ≈AD 280, published 2006"}]},
-  {"text": "Theographic's record for him also counts John 14:22, where John names “Judas (not Iscariot),” the apostle also called Thaddaeus.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "John.14.22"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Judas Iscariot"}]}
+  {"text": "Theographic's record for him also counts John 14:22, where John names “Judas (not Iscariot),” the apostle also called Thaddaeus.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "John.14.22"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Judas Iscariot"}]}
  ],
  "confidence": "evidence",
  "sources": [

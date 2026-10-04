@@ -16,7 +16,7 @@
   {"ref": "John.19.39-40", "text": "Brings spices for the burial"}
  ],
  "later": [
-  {"text": "The Gospel of Nicodemus, also called the Acts of Pilate, is a later apocryphal account of the trial and of Christ's descent to the dead, written in his name.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Gospel of Nicodemus (Acts of Pilate)", "note": "dated variously from the 4th century; some material may be earlier"}]},
+  {"text": "The Gospel of Nicodemus, also called the Acts of Pilate, is a later apocryphal account of the trial and of Christ's descent to the dead, written in his name.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Gospel of Nicodemus (Acts of Pilate)", "note": "dated variously from the 4th century; some material may be earlier"}]},
   {"text": "He may be the wealthy Nakdimon ben Gurion whom the Talmud names in Jerusalem before its fall.", "confidence": "interpretation", "traditions": ["some scholars"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Taanit 19b–20a", "url": "https://www.sefaria.org/Taanit.19b"}]}
  ],
  "confidence": "evidence",

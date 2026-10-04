@@ -16,7 +16,7 @@
   {"ref": "Acts.1.13", "text": "In the upper room"}
  ],
  "later": [
-  {"text": "Whether Zealot means he belonged to the revolutionary party of that name, which Josephus describes only from the war of AD 66, or only that he was zealous for the Law, is debated.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Josephus, Jewish War 4.160–161"}, {"kind": "lexicon", "title": "Aramaic qanʾānā, zealous"}], "traditions": ["commentators, variously"]}
+  {"text": "Whether Zealot means he belonged to the revolutionary party of that name, which Josephus describes only from the war of AD 66, or only that he was zealous for the Law, is debated.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Josephus, Jewish War 4.160–161"}, {"kind": "lexicon", "title": "Aramaic qanʾānā, zealous"}]}
  ],
  "confidence": "evidence",
  "sources": [

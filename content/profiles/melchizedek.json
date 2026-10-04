@@ -17,7 +17,7 @@
   {"ref": "Heb.7.9-10", "text": "Levi paid the tenth in Abraham"}
  ],
  "later": [
-  {"text": "Salem is taken to be Jerusalem: Psalm 76 sets Salem beside Zion, and Josephus identifies them.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Ps.76.2"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 1.180", "url": "https://www.gutenberg.org/ebooks/2848"}]},
+  {"text": "Josephus identifies Salem with Jerusalem, and Psalm 76:2 sets Salem beside Zion.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Ps.76.2"}, {"kind": "primary", "title": "Josephus, Antiquities of the Jews 1.180", "url": "https://www.gutenberg.org/ebooks/2848"}]},
   {"text": "Among the Dead Sea Scrolls, 11QMelchizedek (11Q13) presents Melchizedek as a heavenly figure who brings release and judgment at the end of days.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "11QMelchizedek (11Q13), from Qumran Cave 11"}]}
  ],
  "confidence": "evidence",

@@ -4,7 +4,7 @@
   "title": "The Pilate Stone: the governor's name in limestone",
   "kind": "archaeology",
   "verses": ["Matt.27.2", "Mark.15.1", "Luke.3.1", "Luke.23.1", "John.18.29", "Acts.4.27", "1Tim.6.13"],
-  "summary": "A dedication found at Caesarea in 1961 reads '[PO]NTIUS PILATUS [PRAEF]ECTUS IUDA[EA]E' — the only inscription naming Pilate, and it corrects his title: prefect, not procurator.",
+  "summary": "A dedication found at Caesarea in 1961 reads '[PO]NTIUS PILATUS [PRAEF]ECTUS IUDA[EA]E' — his name and his title, prefect, where Tacitus calls him procurator.",
   "body": [
    "Italian excavators led by Antonio Frova found the block reused as a step in the theatre at Caesarea Maritima, Pilate's seat of government. It records his dedication of a building (a 'Tiberieum') to the emperor. Three lines survive well enough to read his name and title.",
    "Tacitus (Annals 15.44) calls Pilate a procurator; the stone gives the governor of Judea in his day the rank of praefectus. The Gospels use the general word hēgemōn, 'governor'. The original is in the Israel Museum; a replica stands at Caesarea."
@@ -112,7 +112,7 @@
   "summary": "The 533 m water tunnel under the City of David, cut from both ends to meet in the middle, is still walkable. An inscription carved by the diggers describes the moment the two crews heard each other's picks through the rock.",
   "body": [
    "2 Kings 20:20 credits Hezekiah with 'the pool and the conduit' that brought the Gihon spring inside the walls before Sennacherib's siege (701 BC). In 1880 boys wading in the tunnel found a six-line Hebrew inscription near the outlet; its palaeography dates to about 700 BC. The stone is in the Istanbul Archaeology Museum.",
-   "Radiometric dating of the tunnel's plaster and stalactites (2003) gave dates around 700 BC, consistent with the text."
+   "Radiometric dating of the tunnel's plaster and stalactites (2003) gave dates around 700 BC, which its authors set beside the Bible's dating of the tunnel to Hezekiah."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Siloam Inscription (Istanbul Archaeology Museums), found 1880", "note": "KAI 189"},
@@ -164,8 +164,7 @@
   "verses": ["Num.6.24-26", "Deut.7.9"],
   "summary": "Two tiny rolled silver amulets from a tomb at Ketef Hinnom, Jerusalem (excavated 1979), carry the priestly blessing of Numbers 6 in Hebrew script of about 600 BC — four centuries older than the Dead Sea Scrolls.",
   "body": [
-   "Unrolled with great difficulty, the strips read a shortened form of 'The LORD bless you and keep you; the LORD make his face shine upon you and be gracious to you...' along with a phrase close to Deuteronomy 7:9. Barkay, Vaughn, Lundberg and Zuckerman (2004) date them by their script to the late seventh or early sixth century BC, just before the Babylonian exile. They are in the Israel Museum.",
-   ""
+   "Unrolled with great difficulty, the strips read a shortened form of 'The LORD bless you and keep you; the LORD make his face shine upon you and be gracious to you...' along with a phrase close to Deuteronomy 7:9. Barkay, Vaughn, Lundberg and Zuckerman (2004) date them by their script to the late seventh or early sixth century BC, just before the Babylonian exile. They are in the Israel Museum."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Ketef Hinnom amulets I and II, Israel Museum, excavated 1979 by Gabriel Barkay", "note": "G. Barkay, A. Vaughn, M. Lundberg & B. Zuckerman, 'The Amulets from Ketef Hinnom: A New Edition and Evaluation', BASOR 334 (2004)"},
@@ -370,14 +369,14 @@
  },
  {
   "id": "belshazzar-nabonidus",
-  "title": "Belshazzar, and why Daniel is offered third place",
+  "title": "Belshazzar in the Babylonian records, and Daniel's 'third ruler'",
   "kind": "archaeology",
   "verses": ["Dan.5.1-31", "Dan.7.1", "Dan.8.1"],
-  "summary": "Outside Daniel and works drawing on it, Belshazzar was unknown until cuneiform tablets, deciphered from the 1850s on, named him as Nabonidus' eldest son, left in charge of Babylon. William Shea reads Daniel's offer of 'third ruler' in that light; others read the word as 'one of three'.",
+  "summary": "Outside Daniel and works drawing on it, Belshazzar was unknown until cuneiform tablets, deciphered from the 1850s on, named him as Nabonidus' eldest son, left in charge of Babylon. Daniel's offer of 'third ruler' is read by William Shea as third after the two of them, and by James Montgomery and Keil and Delitzsch as 'one of three'.",
   "body": [
    "Berossus, Herodotus and the other classical sources give Babylon's last king as Nabonidus; none of them mentions a Belshazzar. Until the mid-nineteenth century Daniel 5 stood alone. William Shea notes that interpreters before then identified Belshazzar with one or another of the known Babylonian kings.",
    "A clay cylinder from the temple of Sin at Ur (British Museum 91128) closes with Nabonidus praying for himself and for 'Belshazzar, my eldest son, the offspring of my heart'. The Nabonidus Chronicle records that the king spent years at the oasis of Tema in Arabia while 'the crown prince, the officers and the army were in Akkad'. The propaganda text known as the Verse Account says that Nabonidus 'entrusted the kingship' to him and went his way.",
-   "In Daniel 5 Belshazzar holds court in Babylon and offers 'third ruler in the kingdom' (5:7, 16, 29). William Shea (1982) reads this as third after Nabonidus and Belshazzar, the highest place Belshazzar could give, and a detail no Greek source preserved. James Montgomery (1927) and Keil and Delitzsch read the Aramaic as 'one of three', a member of a ruling board of three, as in Daniel 6:2; Shea answers Montgomery on the grammar.",
+   "In Daniel 5 Belshazzar holds court in Babylon and offers 'third ruler in the kingdom' (5:7, 16, 29). William Shea (1982) reads this as third after Nabonidus and Belshazzar, the highest place Belshazzar could give, and a detail no Greek source preserved. James Montgomery (1927) and Keil and Delitzsch read the Aramaic as 'one of three', a member of a ruling board of three, as in Daniel 6:2. Shea argues against Montgomery's reading of the grammar.",
    "Dated Babylonian documents never give Belshazzar the royal title; they call him mar sarri, 'son of the king'. Daniel calls him 'King Belshazzar'. The tablets bear on the chapter's setting, not on when the book was written: Porphyry, in the third century, held it written in the time of Antiochus Epiphanes, as Jerome reports in answering him, and Jerome held it the prophet Daniel's own."
   ],
   "media": [
@@ -392,7 +391,7 @@
    {"kind": "primary", "title": "Verse Account of Nabonidus", "note": "'he entrusted the kingship to him' before leaving Babylon"},
    {"kind": "scripture", "ref": "Dan.5.29", "note": "Daniel is proclaimed 'third ruler in the kingdom'"}
   ],
-  "confidence": "consensus"
+  "confidence": "evidence"
  },
  {
   "id": "gallio-inscription",
@@ -499,8 +498,7 @@
   "summary": "Acts 17 calls the magistrates of Thessalonica politarchs, a title found in no surviving Greek author. Around seventy inscriptions using it are now known, some twenty-eight of them from Thessalonica itself.",
   "body": [
    "When the mob drags Jason before the city authorities, Luke calls them politarchai (Acts 17:6, 8). No classical author uses the word; the titles found elsewhere are archontes or strategoi.",
-   "Horsley catalogues roughly seventy non-literary attestations of the title are now known; more than four-fifths come from Macedonia, and around twenty-eight from Thessalonica alone — the highest concentration anywhere. The best known was carved on the Vardar Gate of the city; the gate was demolished in 1876, but the inscribed block had already been removed and is in the British Museum.",
-   ""
+   "Horsley catalogues roughly seventy non-literary attestations of the title; more than four-fifths come from Macedonia, and around twenty-eight from Thessalonica alone — the highest concentration anywhere. The best known was carved on the Vardar Gate of the city; the gate was demolished in 1876, but the inscribed block had already been removed and is in the British Museum."
   ],
   "sources": [
    {"kind": "archaeology", "title": "Vardar Gate politarch inscription, British Museum (1877,0511.1)", "url": "https://www.britishmuseum.org/collection/object/G_1877-0511-1", "note": "removed from the gate before its demolition in 1876"},
@@ -565,7 +563,7 @@
   "summary": "Kings says Menahem paid 'Pul king of Assyria' a thousand talents. Tiglath-pileser III's own annals list 'Menahem of Samaria' among the kings who paid him, and Babylonian king lists call the same man Pulu.",
   "body": [
    "Tiglath-pileser III took the Assyrian throne in 745 BC (the Babylonian Chronicle's 'third year of Nabû-nasir') and in 729 BC made himself king of Babylon too. His annals and a stele from western Iran list the western kings who paid him: Rezin of Damascus, Hiram of Tyre, and 'Menahem of the city Samaria'.",
-   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. Kings later calls the king of Assyria Tiglath-pileser (15:29). Babylonian king lists give the Assyrian who ruled Babylon in those years as Pulu, apparently the name he was known by there. Henry Rawlinson suggested the identification in 1863.",
+   "2 Kings 15:19 calls the king who took Menahem's silver 'Pul'. Kings later calls the king of Assyria Tiglath-pileser (15:29). Babylonian king lists give the Assyrian who ruled Babylon in those years as Pulu, which Hirsch and Fuchs take for the name he was known by there. Henry Rawlinson suggested the identification in 1863.",
    "1 Chronicles 5:26 names both: 'the spirit of Pul king of Assyria, and the spirit of Tiglath-pilneser king of Assyria', with one verb in the singular. The BSB renders the 'and' as 'that is', reading one king under two names.",
    "Kings adds a detail no Assyrian text gives: Menahem raised the silver by taxing every wealthy man in Israel fifty shekels. A talent was 3,000 shekels (Exodus 38:25-26 counts 603,550 half-shekels as 100 talents and 1,775 shekels), so a thousand talents at fifty shekels a head is ≈60,000 men — a figure derived from the text's own numbers, if they are taken at face value."
   ],

@@ -20,7 +20,7 @@
  ],
  "later": [
   {"text": "His palace at Nineveh was lined with reliefs of the siege and capture of Lachish, now in the British Museum.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Lachish reliefs, British Museum 124904–124915", "note": "from the South-West Palace, Nineveh, excavated by Austen Henry Layard"}]},
-  {"text": "Babylonian and Assyrian records confirm that he was murdered by a son in 681 BC.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian Chronicle 1, British Museum 92502"}]}
+  {"text": "The Babylonian Chronicle records that he was killed by his son in a rebellion, in 681 BC.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Babylonian Chronicle 1, British Museum 92502"}]}
  ],
  "confidence": "evidence",
  "sources": [

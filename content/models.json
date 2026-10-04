@@ -12,7 +12,7 @@
    {"kind": "archaeology", "title": "RIC I² Tiberius 26/30; British Museum R.6195 (BMC 49)", "url": "https://commons.wikimedia.org/wiki/File:Tiberius,_R6195,_BMC_49.jpg", "note": "the Portable Antiquities Scheme photo of BMC 49 shows the type; diameters of recorded specimens cluster at 18–19 mm"},
    {"kind": "scholarship", "title": "The Metallurgy of Roman Silver Coinage", "author": "K. Butcher & M. Ponting", "year": 2014, "note": "weight standard 1/84 lb (≈3.9 g) under Augustus and Tiberius"}
   ],
-  "confidence": "consensus"
+  "confidence": "evidence"
  },
  {
   "id": "alabastron-nard",
@@ -45,7 +45,7 @@
    {"kind": "archaeology", "title": "Tyrian shekels, 126/5 BC – AD 65/6", "note": "Y. Meshorer, A Treasury of Jewish Coins (2001), ch. on Tyrian coinage; the Isfiya hoard (1960) of c. 4,500 shekels and half-shekels"},
    {"kind": "primary", "title": "Mishnah Bekhorot 8:7", "url": "https://www.sefaria.org/Mishnah_Bekhorot.8.7", "note": "temple dues in Tyrian silver"}
   ],
-  "confidence": "consensus"
+  "confidence": "evidence"
  },
  {
   "id": "widows-lepta",
@@ -880,7 +880,7 @@
    {
     "id": "shishak",
     "label": "Shishak (≈ 925 BC)",
-    "basis": "in Rehoboam's fifth year Shishak king of Egypt takes the treasures of the temple and the palace, 'including all the gold shields that Solomon had made' (1 Kgs 14:25-26; 2 Chr 12:9). Shishak is Shoshenq I, whose relief at Karnak lists the towns of his campaign; ≈ 925 BC is Kenneth Kitchen's date for it, and depends on the chronology of both kingdoms. Rehoboam's bronze replacements were kept in the guardroom at the palace entrance (14:27-28), not in this house, so they are not drawn",
+    "basis": "in Rehoboam's fifth year Shishak king of Egypt takes the treasures of the temple and the palace, 'including all the gold shields that Solomon had made' (1 Kgs 14:25-26; 2 Chr 12:9). Kenneth Kitchen identifies Shishak with Shoshenq I, whose relief at Karnak lists the towns of his campaign; ≈ 925 BC is Kenneth Kitchen's date for it, and depends on the chronology of both kingdoms. Rehoboam's bronze replacements were kept in the guardroom at the palace entrance (14:27-28), not in this house, so they are not drawn",
     "accounts": [
      {
       "ref": "1Kgs.14.25-28",

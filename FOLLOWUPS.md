@@ -12,9 +12,8 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 ## Scrolls (`content/scrolls.json`, the Scrolls tab), 2026-09-29
 
 - **Chapters "≈1200s".** Langton made his chapters at Paris before becoming archbishop in 1207, but no sourced year was
-  found. The Jewish Encyclopedia's "Verse-Division" (1906) says only that they were made "perhaps by Stephen Langton",
-  while the entry is badged `consensus` on the Catholic Encyclopedia's account. *Needed:* a source for a narrower date,
-  and either a source for the attribution's standing or the doubt given beside it.
+  found. The entry now gives the Catholic Encyclopedia's attribution and the Jewish Encyclopedia's "perhaps by Stephen
+  Langton" side by side. *Needed:* a source for a narrower date.
 - **Two holders on the Cyrus-decree overlap not read.** Japhet (1968) and Williamson (1977) are now confirmed and
   linked, and both argue that Chronicles and Ezra–Nehemiah are by different hands; that they read the repeated lines
   as a link between the two was not checked in either work.
@@ -309,9 +308,6 @@ the Heidelberg database state it, not as Kent's). Still from memory:
   period (dropped from `ketef-hinnom-scrolls`); who reads Joel's locusts as four species or as stages
   (`joel-locusts-1915`); who reads the Song of Ascents heading as pilgrims' songs or as step-parallelism
   (`going-up-to-jerusalem`); who holds 586 BC for Obadiah besides Hirsch and Barton.
-- **The mechanism of the Galilee squalls** (`galilee-squalls`, `consensus`) is not cited to any meteorological source;
-  only the survey figures are. *Needed:* a limnological or meteorological study of the lake's winds, or the badge
-  lowered.
 
 ## Disputed questions under a fact's badge, recorded 2026-10-04
 
@@ -323,9 +319,6 @@ fails the build on the pattern. What the rewrite could not check:
   Martin, Barnes, Bernegger and Finegan's revised *Handbook* are cited as Steinmann reports them, not read, so the
   4 BC side is given through its critic. *Needed:* Barnes (JTS 1968) and Bernegger (JTS 1983) read for their own
   arguments, and Finegan §§ 500, 516–518 checked for his 1 BC position.
-- **Every other `consensus` badge** (about fifty records) still needs a source that says the view is agreed, or a
-  lower badge. The review that added this rule fixed only the records with `traditions`. *Needed:* a pass over each,
-  citing a survey of the field or rebadging.
 - **Mark and Luke in `writers.json`** are now `interpretation`s with only the traditional attribution as a holder.
   *Needed:* named, cited holders of the other view (who doubts Papias's link to Peter; who holds Luke–Acts was not
   written by Paul's companion), and a holder for Mark's "has been taken to suggest a Roman audience" and its date.
@@ -374,3 +367,45 @@ Kepler; Origen, *Against Celsus* 1.58–59; Chrysostom, *Homily 6 on Matthew*.
   Hebrew word in the same place in the list (reversed for the Septuagint at Job 9:9, as Reyburn says it runs). Where a
   version paraphrases (the Septuagint at Amos 5:8 names no stars), it is not used.
 - **Isaiah 13:10 and 2 Kings 23:5** name "constellations" (kesilim, mazzalot) without naming one, so they are not drawn.
+
+## Second review against the rules, 2026-10-04
+
+Every curated file was read again against the rules added since the first review (a badge is a claim, a disputed
+question laid out evenly, every `traditions` entry naming someone). No record is badged `consensus` any more: the
+fifty-odd that were reported facts or attributed views are badged `evidence`, and those that took one side of a
+dispute are `interpretation`s naming their holders. Holders added in this pass were read in the session (Irenaeus
+3.1.1, Justin's *Dialogue* 71 and 77, Rashi on Isaiah 7:14, Keil and Delitzsch on Daniel 5, the Jewish Encyclopedia
+on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). What could not be settled:
+
+- **Barabbas's custom** (`barabbas`): the note gives Raymond Brown's finding that no source outside the gospels tells
+  of the custom, but Brown was not read in the session. Mishnah Pesahim 8:6 (a lamb slaughtered for one promised
+  release from prison) has been read as a trace of it. *Needed:* Brown's *Death of the Messiah* on the privilegium
+  paschale, and whoever reads Pesahim 8:6 so.
+- **The Comma's defenders** (`comma-johanneum`): the card gives the manuscript evidence and Metzger, not those who hold
+  the words original (Edward F. Hills, *The King James Version Defended*, is one, not read). *Needed:* that view in
+  its own words, as a reading beside the card's facts.
+- **Chrestus as Christ** (`claudius-expulsion-chrestus`): only Orosius holds that reading on the card; Slingerland
+  and Gruen argue the other. *Needed:* a modern holder of the Christ reading, read and cited.
+- **Shishak as Shoshenq I** (`rehoboam`, `forest-of-lebanon`): now Kitchen's identification. The dissent (David
+  Rohl's *A Test of Time*, 1995, which takes Shishak for Ramesses II) was not read.
+- **Which Jeroboam the Megiddo seal names** (`jeroboam-ii`): the note now says only what the seal says. *Needed:* who
+  dates it to Jeroboam II and who to Jeroboam I, each cited.
+- **Salem** (`melchizedek`): Jerome's Letter 73, which places Melchizedek's Salem elsewhere, is printed on New Advent
+  only as a summary. *Needed:* the letter's text, then a reading beside Josephus's.
+- **Belshazzar's "father"** (`belshazzar`): "traditional commentators" still holds the predecessor or mother's-line
+  reading. Keil and Delitzsch, checked, hold a third: that Belshazzar was Nebuchadnezzar's own son (Evil-merodach).
+  *Needed:* a named holder for the predecessor reading, and Keil and Delitzsch's reading added.
+- **Hoffmeier's Egyptian detail** (`joseph`): now an interpretation, with no critic named. *Needed:* a scholar who
+  reads the same details otherwise (Donald Redford was not read).
+- **Isaiah 7:14 as near and fuller fulfilment** (`isa7-virgin`): the "some Christian scholars" entry was cut for want
+  of a holder. *Needed:* a named holder, cited.
+- **Unnamed sides still in cards:** the critics of Chronicles' account of Manasseh's captivity (`esarhaddon-manasseh`,
+  Ellicott does not name them); other reconstructions of Samaria's fall than Tadmor's (`sargon-samaria`); who
+  connects Simeon's fall in Numbers 26 with Peor (`num26-census`; Rashi on 26:13, checked, does not); John 19:14 read
+  as counted from midnight or as a copyist's slip (`passion.json`); 𝔓66 "some argue 4th century" (`fragments.json`);
+  "local Christian tradition" for Ananias's chapel; Jethro, Reuel and Hobab ("some commentators", "others").
+- **Uniqueness and majority claims without a source:** the Black Obelisk as "the only known ancient picture of an
+  Israelite king or his envoy" (`black-obelisk-jehu`); the Great Isaiah Scroll differing from the Masoretic text
+  "mostly in spelling" (`great-isaiah-scroll-light`, and `fragments.json`).
+- **Four videos have no summary** (`videos.json`: bp-0RdKXK2Tm7w, bp-X9kuM-fL7Y4, bp-XqyQeI_VB5c, bp-V-jUmwxq5FE).
+

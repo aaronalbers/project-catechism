@@ -18,7 +18,7 @@
   {"ref": "Hos.1.1", "text": "In Hosea's day"}
  ],
  "later": [
-  {"text": "A seal found at Megiddo in 1904, carved with a roaring lion and inscribed “belonging to Shema, servant of Jeroboam,” has been dated to his reign.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Seal of Shema servant of Jeroboam, Megiddo", "note": "found by Gottlieb Schumacher, 1904; known from a bronze cast, the original lost"}]}
+  {"text": "A seal found at Megiddo in 1904, carved with a roaring lion, is inscribed “belonging to Shema, servant of Jeroboam”; the seal does not say which Jeroboam.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Seal of Shema servant of Jeroboam, Megiddo", "note": "found by Gottlieb Schumacher, 1904; known from a bronze cast, the original lost"}]}
  ],
  "confidence": "evidence",
  "sources": [

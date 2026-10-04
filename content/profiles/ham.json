@@ -20,7 +20,7 @@
   {"ref": "Ps.105.23", "text": "“The land of Ham”"}
  ],
  "later": [
-  {"text": "The curse in Genesis 9:25 falls on Canaan, not on Ham. David Goldenberg traces how, from late antiquity and above all from the 17th to the 19th century, it was read as a curse on Ham's supposed African descendants and used to defend slavery.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.9.25"}, {"kind": "scholarship", "title": "The Curse of Ham: Race and Slavery in Early Judaism, Christianity, and Islam", "author": "David M. Goldenberg", "year": 2003}]}
+  {"text": "The curse in Genesis 9:25 falls on Canaan, not on Ham. David Goldenberg traces how, from late antiquity and above all from the 17th to the 19th century, it was read as a curse on Ham's supposed African descendants and used to defend slavery.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Gen.9.25"}, {"kind": "scholarship", "title": "The Curse of Ham: Race and Slavery in Early Judaism, Christianity, and Islam", "author": "David M. Goldenberg", "year": 2003}]}
  ],
  "confidence": "evidence",
  "sources": [

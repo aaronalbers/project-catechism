@@ -22,7 +22,7 @@
   {"ref": "Esth.9.29-32", "text": "Confirms Purim"}
  ],
  "later": [
-  {"text": "Carey Moore identifies the king the Hebrew calls Ahasuerus with Xerxes I, whose Persian name, Xšayāršā, the Hebrew spelling follows. The Septuagint instead calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "primary", "title": "Herodotus, Histories, book 7", "note": "Xerxes' reign and court"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}]},
+  {"text": "Carey Moore identifies the king the Hebrew calls Ahasuerus with Xerxes I, whose Persian name, Xšayāršā, the Hebrew spelling follows. The Septuagint instead calls him Artaxerxes.", "confidence": "interpretation", "traditions": ["Xerxes I: Carey A. Moore (Esther, Anchor Bible 7B)", "Artaxerxes: the Septuagint"], "sources": [{"kind": "primary", "title": "Herodotus, Histories, book 7", "note": "Xerxes' reign and court"}, {"kind": "scholarship", "title": "Esther (Anchor Bible 7B)", "author": "Carey A. Moore", "year": 1971}]},
   {"text": "The Hebrew book never names God. The Greek adds six passages, with prayers of Mordecai and Esther among them. Catholic and Orthodox Bibles include them; Jewish Bibles do not, nor does the BSB.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Septuagint Esther, Additions A–F"}]}
  ],
  "confidence": "evidence",

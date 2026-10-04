@@ -2,7 +2,7 @@
  "id": "three-days",
  "title": "The three days",
  "confidence": "estimate",
- "summary": "Each gospel sets the crucifixion on the day of Preparation and has the women find the tomb empty early on the first day of the week, a Sunday. Two ways of counting explain how that makes 'the third day'. A Jewish day ran from sunset to sunset, so the Sabbath began on Friday evening (Luke 23:54). And a part of a day was counted as a day: Esther's fast of 'three days, night or day' ends 'on the third day' (Esth 4:16–5:1), and Matthew has the chief priests treat 'after three days' and 'until the third day' as the same (27:63–64). The weekday of the crucifixion is itself read three ways, and the chart draws whichever is chosen in the Days tab.",
+ "summary": "Each gospel sets the crucifixion on the day of Preparation and has the women find the tomb empty early on the first day of the week, a Sunday. How that makes 'the third day', and 'three days and three nights' (Matt 12:40), depends on the weekday of the crucifixion, which is read three ways; the chart draws whichever is chosen in the Days tab. The readings draw on two ways of counting. A Jewish day ran from sunset to sunset, so the Sabbath began on Friday evening (Luke 23:54). And the Talmud counts part of a day as a whole day (Pesachim 4a); Esther's fast of 'three days, night or day' ends 'on the third day' (Esth 4:16–5:1), and in Matthew the chief priests say both 'after three days' and 'until the third day' (27:63–64).",
  "clock": "Clock times are ≈. In Jerusalem near the spring equinox, when Passover falls, sunrise and sunset are close to 6 a.m. and 6 p.m., and the gospels count the hours of the day from sunrise, so 'the third hour' is about 9 a.m. and 'the ninth hour' about 3 p.m. These are derived figures: an hour was a twelfth of the daylight, near the equinox about a clock hour.",
  "died": {"day": 0, "hour": 15, "basis": "Jesus cries out 'at the ninth hour' and then breathes his last (Mark 15:34–37); the ninth hour is ≈3 p.m."},
  "buried": {"day": 0, "hour": 17.5, "basis": "Buried when 'it was already evening' on the day before the Sabbath (Mark 15:42–46), as 'the Sabbath was beginning' (Luke 23:54): before sunset, ≈6 p.m."},
@@ -108,7 +108,7 @@
    "basis": "John's 'High Sabbath' (19:31) is taken as the first day of Unleavened Bread, a day of rest whatever its weekday (Lev 23:6–7), falling on Friday, with the weekly Sabbath after it. Two Sabbaths in a row leave Thursday for the crucifixion.",
    "thirdDay": "Counted inclusively from Thursday, Sunday is the fourth day. The reading has to count 'the third day' from the day after the crucifixion: Friday, Saturday, Sunday.",
    "nights": "Thursday, Friday and Saturday nights: three nights, and three daylights (Thursday's last hours, Friday, Saturday), before a rising on Sunday before dawn.",
-   "traditions": ["Roger Rusk, 'The Day He Died' (1974)", "Some evangelical writers since"],
+   "traditions": ["Roger Rusk, 'The Day He Died' (1974)"],
    "sources": [
     {"kind": "scripture", "ref": "John.19.31"},
     {"kind": "scripture", "ref": "Lev.23.5-7", "note": "the first day of Unleavened Bread a day of rest"},

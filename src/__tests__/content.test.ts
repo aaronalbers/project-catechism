@@ -4,6 +4,7 @@
 import { describe, expect, it } from 'vitest';
 import { PROFILE_INDEX } from '@/lib/content';
 import { personShard } from '@/lib/data';
+import { formatYear } from '@/lib/format';
 
 /** Every profile in full. */
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
@@ -778,6 +779,11 @@ describe('content integrity', () => {
   });
   it('rulers with estimated dates say so, and writers name real books', () => {
     for (const r of RULERS) expect(r.from <= r.to, r.id).toBe(true);
+    // A second end year shows two readings, so the note must name a holder for each (no default in the project's voice).
+    for (const r of RULERS.filter((x) => x.toOther !== undefined)) {
+      expect(r.toOther !== r.to && r.from <= r.toOther!, r.id).toBe(true);
+      for (const y of [r.to, r.toOther!]) expect(r.notes ?? '', `${r.id}: the note names who holds ${formatYear(y)}`).toContain(formatYear(y));
+    }
     for (const w of WRITERS) for (const b of w.books) expect(BOOKS.some((x) => x.id === b.book), `${w.id}: ${b.book}`).toBe(true);
   });
   // The People tab says who wrote every verse, so no book (and no psalm) may be left without an entry.

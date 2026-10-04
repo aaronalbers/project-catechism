@@ -27,7 +27,7 @@
   {"ref": "Hos.1.4", "text": "The bloodshed of Jezreel"}
  ],
  "later": [
-  {"text": "The Black Obelisk of Shalmaneser III (British Museum ME 118885) shows a king bowing before the Assyrian king, labelled as the tribute of “Jehu son of Omri”, in 841 BC: the only surviving picture of an Israelite king. The Assyrians called Israel's kings after Omri, whatever their line.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Black Obelisk of Shalmaneser III, British Museum ME 118885", "note": "found by Austen Henry Layard at Nimrud, 1846"}]}
+  {"text": "The Black Obelisk of Shalmaneser III (British Museum ME 118885) shows a man bowing before the Assyrian king, captioned as the tribute of “Jehu son of Omri”, in 841 BC; the caption does not say whether he is Jehu or his envoy. The Assyrians called Israel's kings after Omri, whatever their line.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Black Obelisk of Shalmaneser III, British Museum ME 118885", "note": "found by Austen Henry Layard at Nimrud, 1846"}]}
  ],
  "confidence": "evidence",
  "sources": [

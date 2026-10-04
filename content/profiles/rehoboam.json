@@ -25,7 +25,7 @@
   {"ref": "2Chr.12.6-7", "text": "Humbles himself"}
  ],
  "later": [
-  {"text": "Shishak is Pharaoh Shoshenq I. His relief on the Bubastite Portal at Karnak lists the towns his campaign reached, many in Israel and some in Judah, and a fragment of a victory stele of his was found at Megiddo.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Bubastite Portal relief of Shoshenq I, temple of Amun, Karnak"}, {"kind": "archaeology", "title": "Shoshenq I stele fragment, Megiddo"}, {"kind": "scholarship", "title": "The Third Intermediate Period in Egypt (1100–650 BC)", "author": "Kenneth A. Kitchen", "year": 1973}]}
+  {"text": "Kenneth Kitchen identifies Shishak with Pharaoh Shoshenq I, whose relief on the Bubastite Portal at Karnak lists the towns his campaign reached, many in Israel and some in Judah; a fragment of a victory stele of Shoshenq's was found at Megiddo.", "confidence": "interpretation", "traditions": ["Shishak as Shoshenq I: Kenneth A. Kitchen (The Third Intermediate Period in Egypt)"], "sources": [{"kind": "archaeology", "title": "Bubastite Portal relief of Shoshenq I, temple of Amun, Karnak"}, {"kind": "archaeology", "title": "Shoshenq I stele fragment, Megiddo"}, {"kind": "scholarship", "title": "The Third Intermediate Period in Egypt (1100–650 BC)", "author": "Kenneth A. Kitchen", "year": 1973}]}
  ],
  "confidence": "evidence",
  "sources": [

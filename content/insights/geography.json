@@ -4,9 +4,9 @@
   "title": "'A man was going down from Jerusalem to Jericho'",
   "kind": "geography",
   "verses": ["Luke.10.30-37", "Luke.18.35", "Luke.19.28", "Mark.10.46", "Josh.18.17"],
-  "summary": "The road in the parable drops about a kilometre in vertical height over some 27 km of bare limestone gorge. 'Down' describes the ground.",
+  "summary": "The road in the parable drops about a kilometre in vertical height over some 27 km of bare limestone gorge, and Luke's 'down' and 'up' match it.",
   "body": [
-   "Jericho sits at roughly 250 m below sea level, the lowest city on earth. Jerusalem stands at about 750 m above it. The Roman-period road between them ran some 27 km through the Judean wilderness, climbing about 1,000 m — an average gradient near 4%, with much steeper stretches. Luke's 'going down' and 'going up' (Luke 10:30; 19:28) are simple description.",
+   "Jericho sits at roughly 250 m below sea level, the lowest city on earth. Jerusalem stands at about 750 m above it. The Roman-period road between them ran some 27 km through the Judean wilderness, climbing about 1,000 m — an average gradient near 4%, with much steeper stretches. Luke's 'going down' and 'going up' (Luke 10:30; 19:28) match the ground.",
    "The route threads the head of the Wadi Qelt, a narrow limestone gorge with blind bends and high sides. Joshua 18:17 names the ascent of Adummim, the red ascent. Josephus describes the descent to Jericho as rugged and desolate.",
    "The Babylonian Talmud records that when each of the twenty-four priestly watches went up for its week of temple service, 'half the priestly watch would ascend from all over Eretz Yisrael to Jerusalem, and half the priestly watch would ascend from Jericho' (Taanit 27a). The parable's first two travellers are a priest and a Levite.",
    "The elevations are modern survey figures and the road length depends on which line you trace; both are given here as approximations."
@@ -29,32 +29,33 @@
   "title": "Why the Sea of Galilee turns violent so fast",
   "kind": "geography",
   "verses": ["Mark.4.35-41", "Matt.8.23-27", "Luke.8.22-25", "Matt.14.24", "John.6.18"],
-  "summary": "A warm lake 210 m below sea level, ringed by cold highlands 700 to 2,800 m above it, with wind funnelled down steep ravines. Sudden squalls are part of the lake's weather.",
+  "summary": "A lake 210 m below sea level, ringed by highlands 700 to 2,800 m above it. Meteorologists describe strong winds and a storm on the lake almost every summer afternoon, and rarer easterly storms, mostly at night between November and May, that raise hazardous waves.",
   "body": [
    "The lake is small: about 21 km long, 13 km wide, 43 m deep at most. Its surface sits roughly 210 m below sea level, in a rift valley. To the east the Golan plateau rises to more than 700 m within a few kilometres of the shore; to the north-east Mount Hermon reaches 2,814 m.",
-   "The lake surface holds warm, humid air. When cold, dry air off those uplands spills over the rim — most often on an easterly — it is denser, so it drops through the ravines and wadis and spreads across the water while the warm air is forced up. The narrow valleys funnel and accelerate it. The result is a squall that arrives with little warning over open water and can raise steep short waves within half an hour, in a boat with a metre of freeboard.",
+   "P. Alpert and his colleagues (1982) modelled the air flowing from the Mediterranean past the lake in summer, to explain what they call two striking features of its weather: 'the almost daily development of strong winds and an associated storm on the lake in the afternoon', and a drop in wind speed of nearly half from the western shore to the eastern, over only 10 km. Shubham Pachpor and his colleagues (2026) studied the easterly storms: 24 between 2000 and 2024 with winds of at least 10 m/s for two hours or more, most of them at night, lasting under twelve hours, between November and May, and generating 'hazardous waves' on the lake.",
    "The Gospels tell of more than one storm on the lake. In Mark 4:39 what stops is both the wind and the waves.",
-   "The physical measurements are survey data. The description of the mechanism is a general account of the basin, not a measurement of any particular storm."
+   "The physical measurements are survey data. Neither study describes a storm of the Gospels' time."
   ],
   "sources": [
    {"kind": "data", "title": "Sea of Galilee: surface ≈-210 m, length ≈21 km, width ≈13 km, maximum depth ≈43 m", "note": "Israel Hydrological Service survey values; lake level fluctuates by several metres"},
    {"kind": "data", "title": "Surrounding relief: Golan plateau >700 m, Mount Hermon 2,814 m"},
+   {"kind": "data", "title": "A model simulation of the summer circulation from the eastern Mediterranean past Lake Kinneret in the Jordan Valley", "author": "P. Alpert, A. Cohen, J. Neumann and E. Doron", "year": 1982, "url": "https://doi.org/10.1175/1520-0493(1982)110%3C0994:AMSOTS%3E2.0.CO;2", "note": "Monthly Weather Review 110, 994–1006: 'the almost daily development of strong winds and an associated storm on the lake in the afternoon'"},
+   {"kind": "data", "title": "Multi-scale drivers of easterly wind storms at the Sea of Galilee", "author": "S. Pachpor, A. Hochman, O. Adam, M. Armon, N. Lensky and E. Strobach", "year": 2026, "url": "https://doi.org/10.1016/j.wace.2026.100928", "note": "Weather and Climate Extremes 53, 100928: 24 easterly storms in 2000–2024, 'predominantly nocturnal', November to May, generating 'hazardous waves'"},
    {"kind": "scripture", "ref": "Mark.4.37", "note": "'a fierce windstorm arose, and the waves were breaking over the boat'"}
   ],
-  "confidence": "consensus",
+  "confidence": "evidence",
   "related": ["galilee-boat"]
  },
  {
   "id": "hinnom-gehenna",
-  "title": "Gehenna is a valley, and the rubbish-dump story is medieval",
+  "title": "Gehenna is a valley, and where the rubbish-dump story begins",
   "kind": "geography",
   "verses": ["Matt.5.22", "Matt.5.29-30", "Matt.10.28", "Matt.18.9", "Mark.9.43-48", "Jer.7.31-32", "Jer.19.2-6", "2Kgs.23.10", "2Chr.28.3"],
   "summary": "The word behind 'hell' in the Gospels is Ge-Hinnom, a real ravine on the south-west side of Jerusalem. The explanation that it was a perpetually burning garbage dump goes back, Lloyd Bailey found, to a rabbi writing about AD 1200, with no earlier evidence for it.",
   "body": [
    "Gehenna transliterates the Aramaic Ge-Hinnam, from Hebrew Ge ben-Hinnom, 'the valley of the son of Hinnom'. It is a specific place: the ravine curving round the south and west of the Old City, meeting the Kidron below the City of David. In Joshua 15:8 and 18:16 it is simply a boundary marker.",
    "What made the name terrible is what happened there. 2 Kings 23:10 says Josiah defiled Topheth 'which is in the Valley of the Son of Hinnom, so that no one could make his son or his daughter pass through the fire to Molech'; 2 Chronicles 28:3 and 33:6 name Ahaz and Manasseh as kings who did. Jeremiah 7:31-32 and 19:6 pronounce that the place will be renamed the Valley of Slaughter and used as a burial ground until there is no room left. By the intertestamental period (1 Enoch 27, 90) the valley's name had become the name of the place of final judgement, and that is how the Gospels use it.",
-   "Lloyd Bailey (1986) looked for the dump in the ancient sources and found no reference in the Hebrew Bible, the Apocrypha, Josephus, the Dead Sea Scrolls, the Mishnah or the Talmud to Jerusalem's refuse being burned in the Hinnom valley, and no archaeological deposit of the kind identified there. The earliest statement of it he found is in Rabbi David Kimhi's commentary on Psalm 27, written around AD 1200, more than a millennium after the Gospels.",
-   ""
+   "Lloyd Bailey (1986) looked for the dump in the ancient sources and found no reference in the Hebrew Bible, the Apocrypha, Josephus, the Dead Sea Scrolls, the Mishnah or the Talmud to Jerusalem's refuse being burned in the Hinnom valley, and no archaeological deposit of the kind identified there. The earliest statement of it he found is in Rabbi David Kimhi's commentary on Psalm 27, written around AD 1200, more than a millennium after the Gospels."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Jerusalem-Hinnom-Kidron-Old-City-323.jpg/500px-Jerusalem-Hinnom-Kidron-Old-City-323.jpg", "caption": "The Hinnom valley below the south-west corner of the Old City of Jerusalem.", "credit": "Bukvoed, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-Hinnom-Kidron-Old-City-323.jpg", "license": "CC BY 4.0"}
@@ -76,8 +77,7 @@
   "body": [
    "Jerusalem sits on the central hill country at roughly 750 m above sea level, with ground falling away on three sides: to the Jordan rift in the east, the Shephelah and coastal plain in the west, and the desert in the south. Every approach is a climb. So Galileans travelling south 'go up' (Luke 2:42), Paul returning from Antioch in the north 'goes up' (Acts 15:2), and the good Samaritan's traveller heading east and downhill 'goes down' (Luke 10:30).",
    "The Hebrew verb alah, 'go up', became the technical term for pilgrimage; the three pilgrim feasts are the regalim, and the noun aliyah, 'a going up', is still the ordinary Hebrew word for immigrating to the land and for being called up to read the Torah.",
-   "Psalms 120-134 carry the heading shir hammaalot, 'a song of ascents'. The Mishnah sets the Levites with their instruments on the fifteen steps between the temple's courts, 'corresponding to the fifteen Songs of the Ascents' (Sukkah 5:4). The heading has also been read as pilgrims' songs on the way up, or as a poetic device in which each verse steps up from the last.",
-   ""
+   "Psalms 120-134 carry the heading shir hammaalot, 'a song of ascents'. The Mishnah sets the Levites with their instruments on the fifteen steps between the temple's courts, 'corresponding to the fifteen Songs of the Ascents' (Sukkah 5:4). The heading has also been read as pilgrims' songs on the way up, or as a poetic device in which each verse steps up from the last."
   ],
   "sources": [
    {"kind": "data", "title": "Jerusalem: ≈750 m above sea level on the central ridge", "note": "modern survey; the Temple Mount platform is somewhat lower than the western hill"},

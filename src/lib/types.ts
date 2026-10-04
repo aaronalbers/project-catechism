@@ -262,7 +262,11 @@ export interface Worth {
   /** Verses that name money without a sum that can be priced, and why. */
   unpriced: { why: string; refs: Ref[] }[];
 }
-export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string; reign?: Reign }
+/**
+ * A ruler's span. `toOther` is a second end year where readings of the evidence differ (Herod's death, 4 or 1 BC):
+ * both are shown, in date order, and `notes` names who holds each.
+ */
+export interface Ruler { id: string; name: string; realm: string; title: string; from: number; to: number; toOther?: number; estimated?: boolean; refs: Ref[]; sources: Source[]; notes?: string; predecessor?: string; reign?: Reign }
 export type Kingdom = 'israel' | 'judah';
 /**
  * What a book says of a king: `right` or `evil`, in the BSB's own words at `ref`, with `but` the

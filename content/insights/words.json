@@ -23,7 +23,7 @@
   "verses": ["Mark.14.3", "Matt.26.7", "Luke.7.37"],
   "summary": "The word means both the material (Egyptian calcite, 'alabaster') and the long-necked perfume flask carved from it. Pliny says perfume 'keeps best in alabaster'. Mark says the woman 'broke the jar' to pour it.",
   "body": [
-   "Strong's G211. Alabastra were carved from banded calcite quarried in Egypt, turned to a thin wall, with a narrow neck and a small mouth to slow evaporation. Cheap versions were made in glass and clay. The Gospel writers do not say 'a jar of alabaster' but simply 'an alabastron', the way we say 'a thermos'."
+   "Strong's G211. Alabastra were carved from banded calcite quarried in Egypt, turned to a thin wall, with a narrow neck and a small mouth to slow evaporation. Cheap versions were made in glass and clay. The Gospel writers do not say 'a jar of alabaster' but simply 'an alabastron', as English says 'a thermos'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G211", "note": "'a vessel of alabaster'"},
@@ -55,13 +55,12 @@
  },
  {
   "id": "word-g976-biblos-geneseos",
-  "title": "'The book of the genesis' — Matthew's first words echo Genesis",
+  "title": "'The book of the genesis' — Matthew's first words, and Genesis's",
   "kind": "word",
   "verses": ["Matt.1.1", "Gen.2.4", "Gen.5.1"],
   "summary": "Matthew opens with biblos geneseōs, the exact phrase the Greek Old Testament uses for 'the record of the origins' of heaven and earth (Genesis 2:4) and of Adam's line (Genesis 5:1). Davies and Allison read it as announcing 'a new Genesis'.",
   "body": [
-   "Strong's G976 (biblos) + G1078 (genesis). In the Septuagint, Genesis 2:4 reads 'This is the book of the genesis of heaven and earth' and 5:1 'This is the book of the genesis of men'. Matthew 1:1 is word-for-word the same phrase. It can be translated 'genealogy' (it introduces one) or 'birth' (1:18 uses the same word for Jesus' birth), and Davies and Allison take it as an allusion to the beginning of the Bible itself.",
-   ""
+   "Strong's G976 (biblos) + G1078 (genesis). In the Septuagint, Genesis 2:4 reads 'This is the book of the genesis of heaven and earth' and 5:1 'This is the book of the genesis of men'. Matthew 1:1 is word-for-word the same phrase. It can be translated 'genealogy' (it introduces one) or 'birth' (1:18 uses the same word for Jesus' birth), and Davies and Allison take it as an allusion to the beginning of the Bible itself."
   ],
   "sources": [
    {"kind": "scripture", "ref": "Gen.2.4"},
@@ -70,7 +69,7 @@
    {"kind": "primary", "title": "Septuagint (LXX) Genesis 2:4; 5:1", "note": "Αὕτη ἡ βίβλος γενέσεως…"},
    {"kind": "scholarship", "title": "The Gospel According to Saint Matthew (ICC), vol. 1", "author": "W. D. Davies & Dale C. Allison", "year": 1988, "note": "on 1:1"}
   ],
-  "confidence": "consensus",
+  "confidence": "evidence",
   "related": ["word-h8414-tohu-wabohu"]
  },
  {
@@ -115,10 +114,10 @@
   "title": "Why your Bible prints LORD in small capitals",
   "kind": "word",
   "verses": ["Exod.3.13-15", "Exod.6.2-3", "Deut.6.4", "Ps.23.1", "Gen.2.4"],
-  "summary": "'LORD' in small capitals is not a title. It marks the four Hebrew letters YHWH — the personal name God gives Moses — which Jewish tradition reads aloud as Adonai, and which nearly every English Bible therefore renders with the substitute word rather than the name.",
+  "summary": "'LORD' in small capitals is not a title. It marks the four Hebrew letters YHWH — the personal name God gives Moses — which Jewish tradition reads aloud as Adonai, and which the BSB, like the King James Version, renders with the substitute word rather than the name.",
   "body": [
    "The Hebrew Bible uses two different things where English prints 'Lord'. One is adon/Adonai, an ordinary word meaning lord or master. The other is the four consonants YHWH — the Tetragrammaton, Strong's H3068 — which Exodus 3:15 presents as God's own name: 'this is my name forever, and thus I am to be remembered throughout all generations'. It occurs around 6,800 times.",
-   "By the Second Temple period the name was not pronounced in ordinary reading, and Adonai was said in its place. When the Masoretes added vowel points to the consonantal text in the early Middle Ages, they pointed YHWH with the vowels of the word to be said instead — a standing substitution technical enough to have its own name, qere perpetuum. Read those vowels with those consonants and you get the hybrid form 'Jehovah', which entered Christian usage in the sixteenth century and is a mechanical artefact of the notation rather than an ancient pronunciation. The reconstruction 'Yahweh' is a scholarly proposal from transliterations in early Greek writers; it is a reasoned estimate, not a recovered fact.",
+   "By the Second Temple period the name was not pronounced in ordinary reading, and Adonai was said in its place. When the Masoretes added vowel points to the consonantal text in the early Middle Ages, they pointed YHWH with the vowels of the word to be said instead — a standing substitution technical enough to have its own name, qere perpetuum. Read those vowels with those consonants and you get the hybrid form 'Jehovah', which entered Christian usage in the sixteenth century and is a product of the notation, not an ancient pronunciation. The reconstruction 'Yahweh' is a scholarly proposal from transliterations in early Greek writers; it is a reconstruction, not a recorded pronunciation.",
    "The Greek Septuagint had already rendered the name kyrios, 'lord'; the Vulgate used Dominus; Tyndale and the English tradition after him used LORD in capitals to keep the distinction visible on the page. The typography is a translation decision with a long history: LORD marks the name, Lord the title.",
    "Psalm 110:1, 'the LORD says to my Lord', is two different words. Exodus 6:3 turns on the name itself, and Deuteronomy 6:4, 'Hear, O Israel: the LORD our God, the LORD is one', uses it twice.",
    "Note on this reader: the Berean Standard Bible used here follows the same convention, so wherever you see LORD in small capitals in the text, the Hebrew underneath is YHWH."
@@ -133,7 +132,7 @@
  },
  {
   "id": "word-h2617-hesed",
-  "title": "חֶסֶד (hesed) — loyalty that was never owed",
+  "title": "חֶסֶד (hesed) — kindness, loyalty, steadfast love",
   "kind": "word",
   "verses": ["Ruth.1.8", "Ruth.2.20", "Ruth.3.10", "Exod.34.6", "Ps.136.1", "Hos.6.6", "Mic.6.8"],
   "summary": "Mercy, lovingkindness, steadfast love and covenant faithfulness have all been tried in English. Nelson Glueck read it as kindness owed within a relationship; Katharine Sakenfeld points to cases, in Ruth among them, where it is shown when nothing any longer compels it.",
@@ -148,7 +147,7 @@
    {"kind": "scripture", "ref": "Exod.34.6"},
    {"kind": "scripture", "ref": "Ruth.3.10", "note": "'you have made this last kindness greater than the first'"},
    {"kind": "scholarship", "title": "Hesed in the Bible", "author": "Nelson Glueck", "year": 1967, "note": "argued for the covenant-obligation sense"},
-   {"kind": "scholarship", "title": "Hesed in the Hebrew Bible", "author": "Katharine Doob Sakenfeld", "year": 1978, "note": "shows the freely-chosen, non-obligated cases, including those in Ruth"}
+   {"kind": "scholarship", "title": "Hesed in the Hebrew Bible", "author": "Katharine Doob Sakenfeld", "year": 1978, "note": "argues for the freely-chosen, non-obligated cases, including those in Ruth"}
   ],
   "confidence": "evidence",
   "related": ["sandal-at-the-gate"]
@@ -164,8 +163,7 @@
    "Ekklesia (Strong's G1577) is built from ek, 'out', and kaleo, 'to call' — the called-out body. In classical and Hellenistic usage it is a technical term: the citizen assembly of a Greek city, convened by a herald to vote on public business.",
    "Acts 19 uses it in the ordinary sense. In the Ephesus riot the crowd in the theatre is called an ekklesia (19:32), even as Luke notes that 'most of them did not know why they had come together'; the city clerk then tells the mob that any further complaint must be settled 'in the lawful ekklesia' (19:39), and finally he dismisses the ekklesia (19:41). Same word, three times, in its everyday civic sense.",
    "The Septuagint had also used ekklesia for the qahal, the assembly of Israel gathered before God (Deuteronomy 9:10 calls Sinai 'the day of the ekklesia'). When Jesus says 'on this rock I will build my ekklesia' (Matthew 16:18), he uses the word the Greek city used for its assembly and the Septuagint for Israel's.",
-   "The New Testament never uses it of a building. Paul writes to 'the ekklesia of God that is in Corinth' (1 Corinthians 1:2): the assembly, in that city. English 'church' comes by a different route, from Greek kyriakon, 'belonging to the Lord'.",
-   ""
+   "The New Testament never uses it of a building. Paul writes to 'the ekklesia of God that is in Corinth' (1 Corinthians 1:2): the assembly, in that city. English 'church' comes by a different route, from Greek kyriakon, 'belonging to the Lord'."
   ],
   "sources": [
    {"kind": "lexicon", "title": "Strong's G1577 (ekklesia)", "note": "'a calling out, an assembly'"},
@@ -184,7 +182,7 @@
   "verses": ["Matt.9.36", "Matt.14.14", "Mark.1.41", "Mark.6.34", "Luke.7.13", "Luke.10.33", "Luke.15.20"],
   "summary": "The Greek verb is formed from splanchna, the inward organs. It names feeling by the body's inward parts, and in the Gospels Jesus is its subject in all but three uses, all three in parables.",
   "body": [
-   "Splanchna are the viscera: heart, liver, lungs, intestines. Greeks located strong feeling there, much as English speaks of a gut reaction or of something being wrenching. The verb splanchnizomai (Strong's G4697) therefore means to be moved in the bowels ; translators give 'moved with compassion' or 'had compassion'.",
+   "Splanchna are the viscera: heart, liver, lungs, intestines. Greeks located strong feeling there, much as English speaks of a gut reaction or of something being wrenching. The verb splanchnizomai (Strong's G4697) therefore means to be moved in the bowels; translators give 'moved with compassion' or 'had compassion'.",
    "In the Gospels the verb is used twelve times, and apart from three uses in parables it has Jesus as its subject: at the sight of the crowds 'harassed and helpless, like sheep without a shepherd' (Matthew 9:36; Mark 6:34), before feeding them (Matthew 14:14), before touching a leper (Mark 1:41), before the widow of Nain following her son's body (Luke 7:13).",
    "The three exceptions are in parables. The master is moved with compassion and forgives the servant's debt (Matthew 18:27). The Samaritan sees the beaten man and is moved (Luke 10:33), where the priest and the Levite had seen him and passed by on the other side. And the father sees his son 'while he was still a long way off' and is moved, and runs (Luke 15:20).",
    "In Mark 1:41 a small group of manuscripts, including Codex Bezae, reads orgistheis, 'moved with anger', instead. The NIV footnotes it; Metzger's committee retained 'compassion'.",
@@ -335,7 +333,7 @@
   "strongs": ["H3820", "H3824"],
   "narrows": {"rendered": ["heart"], "means": "the mind and will as much as the feelings: the lēv plans, understands and decides"},
   "verses": ["Prov.16.9", "1Kgs.3.9-12", "Deut.29.4", "Prov.6.32", "Hos.7.11", "Deut.6.5"],
-  "summary": "In English the heart feels and the head thinks. In Hebrew the lēv does both, and most often the thinking: it plans, understands and decides. The BSB itself sometimes renders it 'mind' or 'judgment'; BDB heads its entry 'inner man, mind, will, heart'.",
+  "summary": "In English the heart feels and the head thinks. In Hebrew the lēv does both: it plans, understands and decides. The BSB itself sometimes renders it 'mind' or 'judgment'; BDB heads its entry 'inner man, mind, will, heart'.",
   "body": [
    "Strong's H3820, and its longer form lēvāv (H3824), which is the word in the Shema. Brown–Driver–Briggs heads its entry 'inner man, mind, will, heart'. The BSB renders it 'heart' 415 times, 'mind' 32, 'judgment' 11, 'understanding' 5 and 'conscience' 3.",
    "'A man's heart plans his course' (Proverbs 16:9). Solomon asks for 'an understanding heart to judge Your people' (1 Kings 3:9) and is given 'a wise and discerning heart' (3:12). In Deuteronomy 29:4, 'the LORD has not given you a mind to understand', the 'mind' is lēv. The man who 'lacks judgment' in Proverbs 6:32 is literally 'lacking heart', which BDB renders 'destitute of mind'. Ephraim, 'a silly, senseless dove' (Hosea 7:11), is literally 'without heart'.",

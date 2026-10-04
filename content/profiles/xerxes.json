@@ -26,7 +26,7 @@
   {"ref": "Ezra.4.6", "text": "An accusation"}
  ],
  "later": [
-  {"text": "Ahasuerus is the Hebrew form of the Persian Xšayāršā, the name the Greeks wrote Xerxes; Carey Moore identifies him with Xerxes I. The Greek Esther calls him Artaxerxes.", "confidence": "consensus", "sources": [{"kind": "lexicon", "title": "Hebrew ʾăḥašwērôš, Old Persian Xšayāršā"}, {"kind": "primary", "title": "Greek Esther (Septuagint) 1:1"}]},
+  {"text": "Ahasuerus is the Hebrew form of the Persian Xšayāršā, the name the Greeks wrote Xerxes; Carey Moore identifies him with Xerxes I. The Greek Esther calls him Artaxerxes.", "confidence": "interpretation", "traditions": ["Xerxes I: Carey A. Moore (Esther, Anchor Bible 7B)", "Artaxerxes: the Greek Esther"], "sources": [{"kind": "lexicon", "title": "Hebrew ʾăḥašwērôš, Old Persian Xšayāršā"}, {"kind": "primary", "title": "Greek Esther (Septuagint) 1:1"}]},
   {"text": "Herodotus tells of his invasion of Greece in 480 BC and names his queen Amestris.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Herodotus, Histories 7.61, 7.114, 9.108–112"}]}
  ],
  "confidence": "evidence",

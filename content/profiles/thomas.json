@@ -21,7 +21,7 @@
  ],
  "later": [
   {"text": "The Acts of Thomas (third century) sends him to India, where the Saint Thomas Christians of Kerala hold he founded their churches and was martyred near Chennai.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Acts of Thomas"}], "traditions": ["the Acts of Thomas", "the Saint Thomas Christians of India"]},
-  {"text": "The Gospel of Thomas, a collection of sayings found at Nag Hammadi in 1945, carries his name; the Coptic copy is of the fourth century, and when the collection was first written is debated.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Nag Hammadi Codex II, Coptic Museum, Cairo"}]}
+  {"text": "The Gospel of Thomas, a collection of sayings found at Nag Hammadi in 1945, carries his name; the Coptic copy is of the fourth century, and when the collection was first written is debated.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Nag Hammadi Codex II, Coptic Museum, Cairo"}]}
  ],
  "confidence": "evidence",
  "sources": [

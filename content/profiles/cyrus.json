@@ -24,7 +24,7 @@
  "later": [
   {"text": "The Cyrus Cylinder, found at Babylon in 1879, is his own account of taking Babylon without a battle and returning the gods of other cities, and their peoples, to their homes. It does not mention the Jews.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Cyrus Cylinder, British Museum 90920"}]},
   {"text": "The Nabonidus Chronicle records that Babylon fell to his army without a battle in 539 BC and that Cyrus entered it days later.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Nabonidus Chronicle, British Museum 35382"}]},
-  {"text": "His tomb stands at Pasargadae in Iran.", "confidence": "consensus", "sources": [{"kind": "archaeology", "title": "Tomb of Cyrus, Pasargadae", "note": "UNESCO World Heritage Site"}]}
+  {"text": "His tomb stands at Pasargadae in Iran.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Tomb of Cyrus, Pasargadae", "note": "UNESCO World Heritage Site"}]}
  ],
  "confidence": "evidence",
  "sources": [

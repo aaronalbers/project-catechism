@@ -154,7 +154,7 @@ export function LinksPanel() {
         {rulers.map((r) => (
           <div className="card" key={r.id}>
             <h3>{r.name}</h3>
-            <div className="verses"><span className="badge kind">{r.title} of {r.realm}</span><span className="chip">{fmtYear(r.from, r.estimated)} – {fmtYear(r.to, r.estimated)}</span></div>
+            <div className="verses"><span className="badge kind">{r.title} of {r.realm}</span><span className="chip">{fmtYear(r.from, r.estimated)} – {r.toOther === undefined ? fmtYear(r.to, r.estimated) : <>{fmtYear(Math.min(r.to, r.toOther), r.estimated)} or {formatYear(Math.max(r.to, r.toOther))}</>}</span></div>
             {r.notes && <p className="summary">{r.notes}</p>}
             <div className="verses">{r.refs.map((x) => <RefChip key={x} r={x} />)}</div>
             <SourceList sources={r.sources} />

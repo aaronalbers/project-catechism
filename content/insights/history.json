@@ -19,7 +19,7 @@
    {"kind": "scholarship", "title": "Review of H. Dixon Slingerland, Claudian Policymaking and the Early Imperial Repression of Judaism at Rome (1997)", "author": "Erich S. Gruen", "year": 1998, "url": "https://bmcr.brynmawr.edu/1998/1998.07.02/", "note": "Bryn Mawr Classical Review 1998.07.02: Slingerland's case that Chrestus was a man in Rome, not Christ"},
    {"kind": "scripture", "ref": "Acts.18.2"}
   ],
-  "confidence": "consensus",
+  "confidence": "evidence",
   "related": ["gallio-inscription", "pliny-christians-bithynia"]
  },
  {
@@ -97,7 +97,7 @@
    {"kind": "primary", "title": "Mishnah Yadayim 3:5", "url": "https://www.sefaria.org/Mishnah_Yadayim.3.5", "note": "tr. Joshua Kulp"},
    {"kind": "scholarship", "title": "What Do We Mean by Jabneh?", "author": "Jack P. Lewis", "year": 1964, "url": "https://academic.oup.com/jaar/article-abstract/XXXII/2/125/700440", "note": "Journal of Bible and Religion 32, 125–132"}
   ],
-  "confidence": "consensus",
+  "confidence": "evidence",
   "related": ["song-holy-of-holies", "disputed-letters-eusebius"]
  },
  {
@@ -267,7 +267,7 @@
   "title": "'If you suffer as a Christian': Pliny's trials in Bithynia",
   "kind": "history",
   "verses": ["1Pet.1.1", "1Pet.4.12-16", "Acts.11.26", "Acts.26.28"],
-  "summary": "1 Peter writes to Christians in provinces including Bithynia, who may 'suffer as a Christian'. About fifty years later Pliny, governing Bithynia, asked Trajan whether 'the very profession of Christianity' was punishable, and executed those who would not deny the name.",
+  "summary": "1 Peter writes to Christians in provinces including Bithynia, who may 'suffer as a Christian'. Pliny, governing Bithynia ≈AD 110–112, asked Trajan whether 'the very profession of Christianity' was punishable, and executed those who would not deny the name.",
   "body": [
    "The word 'Christian' occurs only three times in the New Testament: the disciples were first called so at Antioch (Acts 11:26), Agrippa uses it (26:28), and 1 Peter 4:16 tells readers not to be ashamed if they suffer 'as a Christian'. The letter is addressed to 'Pontus, Galatia, Cappadocia, Asia, and Bithynia' (1:1).",
    "Pliny the Younger governed Bithynia and Pontus for Trajan ≈AD 110–112, the dates resting on his correspondence with the emperor. He wrote asking how to deal with Christians: 'whether the very profession of Christianity, unattended with any criminal act, or only the crimes themselves inherent in the profession are punishable'. Meanwhile he asked the accused three times whether they were Christians and had those who persisted executed, sending Roman citizens to Rome.",
@@ -287,7 +287,7 @@
   "title": "Why 1 John 5:7 is shorter than in the King James",
   "kind": "history",
   "verses": ["1John.5.6-8"],
-  "summary": "The KJV reads 'there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one'. Those words, the Johannine Comma, are not in any early Greek manuscript of 1 John; they entered Latin Bibles, and the printed Greek text in 1522. The BSB leaves them out.",
+  "summary": "The KJV reads 'there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one'. Those words, the Johannine Comma, are not in any early Greek manuscript of 1 John; they are first found in Latin Bibles, and entered the printed Greek text in 1522. The BSB leaves them out.",
   "body": [
    "The BSB's 1 John 5:7-8 reads: 'For there are three that testify: the Spirit, the water, and the blood — and these three are in agreement.' The King James adds a heavenly witness between them: 'the Father, the Word, and the Holy Ghost: and these three are one. And there are three that bear witness in earth'.",
    "Metzger sets out the evidence. The Greek codices of the fourth and fifth centuries, Sinaiticus, Vaticanus and Alexandrinus, do not have the words, and the Greek writers of the early church do not quote them, though they argued at length over the Trinity. They are first found in Latin, from the fourth century on, and spread through the Latin Vulgate. The few Greek manuscripts that have them are late.",
@@ -300,7 +300,7 @@
    {"kind": "scholarship", "title": "A Textual Commentary on the Greek New Testament (2nd ed.)", "author": "Bruce M. Metzger", "year": 1994, "note": "on 1 John 5:7-8: the manuscript evidence and Erasmus's editions"},
    {"kind": "scripture", "ref": "1John.5.7-8"}
   ],
-  "confidence": "consensus"
+  "confidence": "evidence"
  },
  {
   "id": "disputed-letters-eusebius",
@@ -432,7 +432,7 @@
   "summary": "Paul writes Philippians in chains, known to 'the whole palace guard' (the praetorium) and greeted by 'the household of Caesar'. Rome is the traditional answer, but a praetorium and Caesar's slaves existed in provincial capitals too, and Acts itself has Paul kept 'in Herod's Praetorium' at Caesarea.",
   "body": [
    "Philippians gives clues but no place. Paul is a prisoner awaiting a verdict that could mean death (1:20-23); his chains are known 'throughout the whole praetorium' (1:13, BSB 'palace guard'); 'those from the household of Caesar' send greetings (4:22); and he hopes to visit Philippi soon (2:24).",
-   "Read with Acts 28, Rome is the traditional answer: Paul spent two years there under guard, and the praetorian guard and the emperor's household of slaves and freedmen were in the city. This is the church's traditional view.",
+   "Read with Acts 28, Rome is the traditional answer, as in Lightfoot: Paul spent two years there under guard, and the praetorian guard and the emperor's household of slaves and freedmen were in the city.",
    "But praetorium was also the word for a governor's headquarters anywhere: the Gospels use it of Pilate's in Jerusalem (Mark 15:16, John 18:28), and Acts 23:35 has Paul held 'in Herod's Praetorium' at Caesarea for two years. 'Caesar's household' included imperial slaves and freedmen across the provinces. Gerald Hawthorne argues for Caesarea. G. S. Duncan argues for Ephesus, where Paul says he 'fought wild beasts' (1 Corinthians 15:32) and 'despaired even of life' (2 Corinthians 1:8), though Acts records no imprisonment there; Ephesus, being nearer Philippi, would make the several journeys the letter implies easier.",
    "The answer changes the date — on a chronology counted from the Gallio date, ≈mid-50s from Ephesus, ≈late 50s from Caesarea, ≈early 60s from Rome — and so where the letter falls among Paul's others."
   ],
@@ -473,7 +473,7 @@
    {"kind": "primary", "title": "Digest of Justinian 48.19.7 and 48.19.28.1 (Callistratus)", "author": "Callistratus", "year": "c. AD 200; compiled AD 533", "url": "https://droitromain.univ-grenoble-alpes.fr/Corpus/d-48.htm", "note": "the beatings with rods, whips and in chains; a beating with rods among the penalties that are 'ad existimationem, non ad capitis periculum' (Mommsen and Krueger's text)"},
    {"kind": "scholarship", "title": "Roman Society and Roman Law in the New Testament", "author": "A. N. Sherwin-White", "year": 1963, "note": "the Sarum Lectures 1960–61; the three grades of beating"}
   ],
-  "confidence": "consensus",
+  "confidence": "evidence",
   "related": ["how-crucifixion-killed"]
  },
  {

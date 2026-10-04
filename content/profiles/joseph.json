@@ -32,7 +32,7 @@
   {"ref": "Josh.24.32", "text": "Buried at Shechem"}
  ],
  "later": [
-  {"text": "James Hoffmeier points to the story's Egyptian detail: dream interpretation, embalming, an Egyptian name and wife, and his death at 110 years, the ideal length of life in Egyptian texts.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.50.26"}, {"kind": "scholarship", "title": "Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition", "author": "James K. Hoffmeier", "year": 1997}]},
+  {"text": "James Hoffmeier points to the story's Egyptian detail: dream interpretation, embalming, an Egyptian name and wife, and his death at 110 years, the ideal length of life in Egyptian texts.", "confidence": "interpretation", "traditions": ["James K. Hoffmeier (Israel in Egypt), for the story's Egyptian detail as evidence of its authenticity"], "sources": [{"kind": "scripture", "ref": "Gen.50.26"}, {"kind": "scholarship", "title": "Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition", "author": "James K. Hoffmeier", "year": 1997}]},
   {"text": "The Qur'an tells his story in its twelfth sura, Yusuf, which calls it the most beautiful of stories.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Qur'an 12:3"}]}
  ],
  "confidence": "evidence",

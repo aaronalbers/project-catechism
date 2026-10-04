@@ -21,7 +21,7 @@
  ],
  "later": [
   {"text": "Some manuscripts of Matthew 27:16–17 call him Jesus Barabbas, a reading Origen already knew; the name Barabbas means son of the father.", "confidence": "evidence", "sources": [{"kind": "primary", "title": "Origen, Commentary on Matthew, series 121"}, {"kind": "lexicon", "title": "Aramaic bar abbā, son of the father"}]},
-  {"text": "No source outside the gospels mentions the custom of releasing a prisoner at Passover.", "confidence": "consensus", "sources": [{"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}]}
+  {"text": "Raymond Brown, surveying the evidence, finds no source outside the gospels that tells of a custom of releasing a prisoner at Passover.", "confidence": "evidence", "sources": [{"kind": "scholarship", "title": "The Death of the Messiah", "author": "Raymond E. Brown", "year": 1994}]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -49,7 +49,7 @@
   "verses": ["Matt.5.40", "Luke.6.29", "Exod.22.26-27", "Deut.24.12-13"],
   "summary": "Torah required a creditor who took a poor man's cloak as a pledge to return it by sunset, because it was what he slept in. In Matthew, Jesus tells the one sued for his tunic to give up his cloak as well.",
   "body": [
-   "A first-century Judean man typically owned two garments: the chitōn (tunic, worn next to the skin) and the himation (cloak, the heavy outer wrap). Exodus 22:26–27 and Deuteronomy 24:12–13 require a lender who takes a cloak as collateral to return it by sunset: 'his cloak is the only covering he has for his body. What else will he sleep in?' The laws say nothing of the tunic.",
+   "Matthew and Luke name two garments: the chitōn (tunic, worn next to the skin) and the himation (cloak, the heavy outer wrap). Exodus 22:26–27 and Deuteronomy 24:12–13 require a lender who takes a cloak as collateral to return it by sunset: 'his cloak is the only covering he has for his body. What else will he sleep in?' The laws say nothing of the tunic.",
    "Matthew's version has the opponent suing for the tunic, and Jesus telling the one sued to let him have the cloak as well, the garment the pledge laws protect overnight. In Luke the order is reversed, and there is no lawsuit: 'if someone takes your cloak, do not withhold your tunic as well' (6:29).",
    "An ostracon from Mesad Hashavyahu (7th century BC) records a field labourer's petition to a governor complaining that an official had seized his garment and asking for it back."
   ],
@@ -87,7 +87,7 @@
   "verses": ["Luke.7.36-50", "John.12.1-3", "John.13.23-25", "Mark.14.3", "Matt.26.7"],
   "summary": "At a formal meal guests lay on couches on their left side, feet pointing away from the table. A guest's feet lay behind him: in Luke 7 a woman anoints Jesus' feet from behind, and in John 13 the disciple whom Jesus loved leans back against Him.",
   "body": [
-   "The Gospels' dinner scenes use the verbs for 'recline' (anakeimai, katakeimai), not 'sit'. Diners lay on couches (the Greek triklinion, 'three couches', gives us the room's name) arranged around a low table, propped on the left elbow, heads toward the table and feet stretched out behind.",
+   "The Gospels' dinner scenes use the verbs for 'recline' (anakeimai, katakeimai), not 'sit'. Diners lay on couches (the Greek triklinion, 'three couches', the Latin triclinium) arranged around a low table, propped on the left elbow, heads toward the table and feet stretched out behind.",
    "The Gospels' details agree with that arrangement: the woman in Luke 7 stands 'behind him at his feet'; Mary in John 12 anoints his feet and wipes them with her hair; in Mark 14 the flask is poured on his head as he reclines; and in John 13 the beloved disciple can lean back on Jesus' chest to whisper a question. Dining rooms of this type have been excavated in Herodian palaces and in the wealthy houses of Jerusalem's Herodian Quarter."
   ],
   "sources": [
@@ -163,7 +163,7 @@
   "verses": ["Rom.16.22", "1Cor.16.21", "Gal.6.11", "Col.4.18", "2Thess.3.17", "Phlm.1.19", "1Pet.5.12"],
   "summary": "One of Paul's scribes signs his own name in Romans, and Paul several times writes a closing 'in my own hand'. E. Randolph Richards sets these beside the papyrus letters of the period, dictated to a secretary and signed by the sender.",
   "body": [
-   "Writing on papyrus with a reed pen was a trained skill, and Richards shows from surviving papyrus letters that senders often dictated to a secretary, an amanuensis: a practised professional hand for the body, then a few lines and a signature added by the sender.",
+   "Writing on papyrus with a reed pen was a trained skill, and Richards sets out from surviving papyrus letters that senders often dictated to a secretary, an amanuensis: a practised professional hand for the body, then a few lines and a signature added by the sender.",
    "Romans ends with the scribe stepping briefly out of role: 'I, Tertius, who wrote this letter, greet you in the Lord' (Romans 16:22) — a Roman name common among slaves and freedmen. Elsewhere Paul takes the pen himself for the closing: 'the greeting is in my own hand' (1 Corinthians 16:21; Colossians 4:18), 'see with what large letters I am writing to you with my own hand' (Galatians 6:11), and in Philemon 19 an IOU written out personally. 2 Thessalonians 3:17 makes the signature a deliberate authentication: 'this is the sign of genuineness in every letter of mine'.",
    "The same letter warns against a 'letter seeming to be from us' (2 Thessalonians 2:2).",
    "Richards documents a range of secretarial practice, from strict shorthand to near co-authorship, and offers dictation as part of the explanation for shifts of style between letters; how much latitude Paul gave is not recorded. 1 Peter 5:12, 'by Silvanus I have written to you briefly', has been read as naming a secretary; Richards reads the phrase as naming the letter's carrier."
@@ -216,7 +216,7 @@
    {"kind": "scripture", "ref": "John.7.37"},
    {"kind": "scripture", "ref": "John.8.12"}
   ],
-  "confidence": "consensus",
+  "confidence": "evidence",
   "related": ["pool-of-siloam", "going-up-to-jerusalem"]
  },
  {

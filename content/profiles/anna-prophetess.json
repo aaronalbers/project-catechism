@@ -3,8 +3,8 @@
  "name": "Anna",
  "role": "Prophetess who spoke of the child Jesus",
  "people": ["G0451"],
- "when": "≈ 6–4 BC",
- "whenBasis": "Jesus' birth, before Herod's death in 4 BC and perhaps up to two years before it (Matthew 2:16). See the card on dating Herod's death.",
+ "when": "≈ 6–2 BC",
+ "whenBasis": "Jesus' birth, before Herod's death (4 BC as Schürer reckons it, 1 BC as Steinmann does) and perhaps up to two years before it (Matthew 2:16). See the card on dating Herod's death.",
  "summary": "A prophetess, daughter of Phanuel of the tribe of Asher, widowed after seven years of marriage. She never left the temple, worshipping night and day with fasting and prayer. Coming up as Simeon blessed the child Jesus, she gave thanks to God and spoke about him to all who were waiting for the redemption of Jerusalem.",
  "body": [
   "She is one of the few women the New Testament calls a prophet, and one of the few Israelites it names from the northern tribe of Asher."
@@ -15,7 +15,7 @@
   {"ref": "Luke.2.38", "text": "Speaks of the child"}
  ],
  "later": [
-  {"text": "The Greek can mean that she was eighty-four, or that she had been a widow for eighty-four years, which would make her over a hundred.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Luke.2.37"}, {"kind": "scholarship", "title": "The Gospel According to Luke (Anchor Bible 28–28A)", "author": "Joseph A. Fitzmyer", "year": 1981}], "traditions": ["commentators, variously"]}
+  {"text": "The Greek can mean that she was eighty-four, or that she had been a widow for eighty-four years, which would make her over a hundred.", "confidence": "evidence", "sources": [{"kind": "scripture", "ref": "Luke.2.37"}, {"kind": "scholarship", "title": "The Gospel According to Luke (Anchor Bible 28–28A)", "author": "Joseph A. Fitzmyer", "year": 1981}]}
  ],
  "confidence": "evidence",
  "sources": [
