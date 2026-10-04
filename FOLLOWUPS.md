@@ -434,3 +434,15 @@ kings. The holders given are those read in the session, all from 1897–1915.
 - **Sayce and Schrader second-hand.** Sayce is quoted from Jones, and Schrader is cited as the ISBE cites him.
 - **The king list not read.** "Pulu" is given as the Jewish Encyclopedia reports it; Babylonian King List A (and the
   Synchronistic King List, which has Tiglath-pileser at that point) were not read in an edition.
+
+## Hazor at Tel Hazor (`hazor-tel-hazor`), 2026-10-04
+
+The first card badged `consensus` under the current rules: the agreement rests on OpenBible's survey (35 reference
+works, one identification, none dissenting), and a search found no one placing this Hazor elsewhere.
+
+- **The texts naming Hazor are Luca's list.** The Execration Texts, Mari letters, Karnak lists and Amarna letters
+  (EA 148, 227–228) were not read; Hazor 5 is cited from Horowitz's summary, not the edition in *Cuneiform in Canaan*.
+- **Who first identified the site.** Luca gives Garstang (1929); other accounts give J. L. Porter (1875) and Garstang
+  (1926). Left out until a source is read.
+- **No modern standard reference read** for the identification (the *New Encyclopedia of Archaeological Excavations*
+  entry, Rainey and Notley's *Sacred Bridge*) to back the OpenBible survey.

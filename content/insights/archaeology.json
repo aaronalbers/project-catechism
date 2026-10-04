@@ -665,7 +665,7 @@
    {"kind": "scripture", "ref": "2Kgs.17.3-4"}
   ],
   "confidence": "evidence",
-  "related": ["tiglath-pileser-menahem-pul", "tiglath-pileser-ahaz", "sargon-samaria"]
+  "related": ["hazor-tel-hazor", "tiglath-pileser-menahem-pul", "tiglath-pileser-ahaz", "sargon-samaria"]
  },
  {
   "id": "tiglath-pileser-ahaz",
@@ -896,6 +896,7 @@
    {"kind": "scholarship", "title": "Amos's Earthquake: An Extraordinary Middle East Seismic Event of 750 B.C.", "author": "S. A. Austin, G. W. Franz and E. G. Frost", "year": 2000, "url": "https://doi.org/10.1080/00206810009465104", "note": "International Geology Review 42, 657-671"},
    {"kind": "primary", "title": "Josephus, Antiquities 9.10.4 (9.222ff.)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D9%3Awhiston+chapter%3D10%3Awhiston+section%3D4", "note": "'a great earthquake shook the ground and a rent was made in the temple'"}
   ],
-  "confidence": "estimate"
+  "confidence": "estimate",
+  "related": ["hazor-tel-hazor"]
  }
 ]

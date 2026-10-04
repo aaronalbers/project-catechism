@@ -111,5 +111,28 @@
    {"kind": "scripture", "ref": "Joel.1.7"}
   ],
   "confidence": "evidence"
+ },
+ {
+  "id": "hazor-tel-hazor",
+  "title": "Hazor, at Tel Hazor",
+  "kind": "geography",
+  "verses": ["Josh.11.1-13", "Josh.12.19", "Josh.19.36", "Judg.4.2", "Judg.4.17", "1Sam.12.9", "1Kgs.9.15", "2Kgs.15.29"],
+  "summary": "The Hazor of Joshua 11, of Jabin in Deborah's day, of Solomon's building and of Tiglath-pileser's conquest is the mound of Tel Hazor (Tell el-Qedah), north of the Sea of Galilee. OpenBible's survey of 35 reference works finds none that places it elsewhere.",
+  "body": [
+   "Josephus places Hazor 'over the Semechonitis' (Antiquities 5.5.1), the lake whose 'marshes and fens' the Jordan divides before it reaches the Sea of Galilee (Jewish War 3.10.7). M. Luca gives Tel Hazor's place as about 6 km south of the Huleh lake and 15 km north of the Sea of Galilee.",
+   "Hazor is named in texts from beyond Israel. Luca lists the Egyptian Execration Texts, letters from Mari, the lists of cities Thutmose III and Amenhotep II claimed at Karnak, and the Amarna letters, in which Hazor's king promises loyalty to the pharaoh (EA 227–228) and the king of Tyre reports him gone over to the ʿapiru (EA 148).",
+   "Cuneiform tablets have been found on the mound itself. One, Hazor 5, picked up on its surface, is a court record: in Wayne Horowitz's summary, three attendants bring a suit before the king over 'a home and garden in Hazor', and the king finds for the defendant. Luca writes that a cuneiform fragment found there confirmed the identification.",
+   "OpenBible.info's geocoding data records the identifications given in 35 reference works for this Hazor: every one places it at Tel Hazor, 21 of them as certain and 12 as likely, and none proposes another site. When the Late Bronze city was destroyed, and by whom, is a separate question, not taken up here. The Bible's other places named Hazor, in the Negev (Joshua 15:23, 25), in Benjamin (Nehemiah 11:33) and in Arabia (Jeremiah 49:28-33), are different towns."
+  ],
+  "sources": [
+   {"kind": "data", "title": "OpenBible.info Bible Geocoding Data, 'Hazor 1'", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "note": "one identification, Tel Hazor, from 35 sources: 21 'yes', 12 'likely'; CC BY 4.0"},
+   {"kind": "primary", "title": "Josephus, Antiquities of the Jews 5.5.1", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://www.gutenberg.org/ebooks/2848", "note": "Whiston: 'Hazor, a city that was situate over the Semechonitis'"},
+   {"kind": "primary", "title": "Josephus, Jewish War 3.10.7", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.gutenberg.org/ebooks/2850", "note": "Whiston: the Jordan 'divides the marshes and fens of the lake Semechonitis' before Gennesareth"},
+   {"kind": "archaeology", "title": "Hazor 5, court record (surface find)", "url": "http://www.caeno.org/origins/papers/Horowitz_OBTabletsAtHazor.pdf", "note": "summarised in Wayne Horowitz, 'Old Babylonian Period Tablets at Hazor'; edited in Horowitz and Oshima, Cuneiform in Canaan (2006)"},
+   {"kind": "scholarship", "title": "Hazor", "author": "M. Luca (Studium Biblicum Franciscanum)", "year": 2024, "url": "https://sbf.custodia.org/sites/default/files/2025-12/Luca%20-%20Hazor%202024.pdf", "note": "in Italian: position, the texts naming Hazor, the tablet fragment confirming the identification"},
+   {"kind": "scripture", "ref": "Josh.11.10", "note": "'Hazor was formerly the head of all these kingdoms'"}
+  ],
+  "confidence": "consensus",
+  "related": ["tiglath-pileser-pekah-hoshea", "amos-earthquake"]
  }
 ]
