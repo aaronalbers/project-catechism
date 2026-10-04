@@ -409,3 +409,17 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
   "mostly in spelling" (`great-isaiah-scroll-light`, and `fragments.json`).
 - **Four videos have no summary** (`videos.json`: bp-0RdKXK2Tm7w, bp-X9kuM-fL7Y4, bp-XqyQeI_VB5c, bp-V-jUmwxq5FE).
 
+
+## The eclipse in the year of Bur-Sagale (`bur-sagale-eclipse`, `bur-sagale-which-eclipse`), 2026-10-04
+
+The question was reviewed for a `consensus` badge and does not qualify: Rolf Furuli disputes the 763 BC dating in
+print. The cards were written from Hunger (2008, in the English translation he checked), Young (2013), Furuli's 2009
+b-hebrew post and NASA's canon.
+
+- **Furuli's book not read.** *Assyrian, Babylonian and Egyptian Chronology* (2008) sets out his case; the card quotes
+  only his post. *Needed:* his own list of the eight eclipses and his argument against 763, so his side is given in
+  the same depth as Hunger's.
+- **The eponym list quoted in translation only.** The line is Hunger's translation; Millard's edition (*The Eponyms of
+  the Assyrian Empire 910–612 BC*, 1994) was not read, nor which copies carry the line. *Needed:* the edition, with
+  the copies cited.
+- **Who first identified the eclipse.** Henry Rawlinson's identification (1867) is not given, as no copy was read.

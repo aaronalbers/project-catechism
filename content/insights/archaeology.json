@@ -529,7 +529,7 @@
    {"kind": "scripture", "ref": "1Kgs.22.1"}
   ],
   "confidence": "evidence",
-  "related": ["black-obelisk-jehu", "mesha-stele"]
+  "related": ["black-obelisk-jehu", "mesha-stele", "bur-sagale-eclipse"]
  },
  {
   "id": "black-obelisk-jehu",
@@ -553,7 +553,7 @@
    {"kind": "scripture", "ref": "2Kgs.10.32-33"}
   ],
   "confidence": "evidence",
-  "related": ["kurkh-monolith-ahab", "tel-dan-stele"]
+  "related": ["kurkh-monolith-ahab", "tel-dan-stele", "bur-sagale-eclipse"]
  },
  {
   "id": "tiglath-pileser-menahem-pul",
@@ -576,7 +576,52 @@
    {"kind": "scripture", "ref": "1Chr.5.26"}
   ],
   "confidence": "evidence",
-  "related": ["tiglath-pileser-pekah-hoshea", "tiglath-pileser-ahaz"]
+  "related": ["tiglath-pileser-pekah-hoshea", "tiglath-pileser-ahaz", "bur-sagale-eclipse"]
+ },
+ {
+  "id": "bur-sagale-eclipse",
+  "title": "The eclipse in the year of Bur-Sagale",
+  "kind": "archaeology",
+  "verses": ["2Kgs.14.23-25", "Jonah.3.4-10"],
+  "summary": "Assyria named each year after an official and kept the names in order. Under the year of Bur-Saggilê the list reads: 'the sun became eclipsed in the month of Simanu.' The dates the Reign tab pins through Assyria are counted along the list, and so rest on which eclipse that was.",
+  "body": [
+   "Each Assyrian year bore the name of an official, its limmu or eponym, and scribes kept the names in order. Hermann Hunger notes that the list is 'preserved in several copies and versions'. Under one year it reads, in his translation: 'In the eponymy of Bur-Saggilê the sun became eclipsed in the month of Simanu.' Rodger Young reports a revolt in the city of Ashur recorded for the same year.",
+   "The list gives no year in our reckoning. NASA's canon of eclipses, computed by Fred Espenak, has a total eclipse of the sun on 15 June 763 BC (−762 in astronomers' numbering), with five minutes of totality at its greatest, at 39°N 54°E, east of the Caspian. Young reads NASA's map of its path as passing just north of Nineveh, so that the eclipse was total a few miles from the city and partial in it. Hunger dates the list's eclipse to this one; Rolf Furuli holds that others fit as well (see the card on which eclipse the list records).",
+   "Dated by that eclipse, Shalmaneser III's battle at Qarqar, where Ahab fought, falls in 853 BC, Jehu's payment in 841, and Menahem's in ≈740–738. The Reign tab's Assyrian pins are dated this way, and each would move with the eclipse. On it, Bur-Sagale's year falls in Jeroboam II's reign as Thiele reckons it (793–753).",
+   "Kings dates Jonah to Jeroboam II (2 Kings 14:25). Young notes that, on the 763 dating, the list records a plague in 765, the eclipse and a revolt in 763, revolts in the years after, and 'peace in the land' in 758. He suggests the eclipse may be part of the reason Nineveh took Jonah's warning to heart, which would date his visit to 759 or 758 BC, and calls the correlation 'speculative'."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Assyrian eponym list, the year of Bur-Saggilê", "note": "'In the eponymy of Bur-Saggilê the sun became eclipsed in the month of Simanu' (Hunger's translation)"},
+   {"kind": "data", "title": "Total Solar Eclipse of −762 June 15", "author": "Fred Espenak, NASA GSFC", "url": "https://eclipse.gsfc.nasa.gov/SEsearch/SEsearchmap.php?Ecl=-07620615", "note": "Five Millennium Canon of Solar Eclipses: total, greatest at 39°N 54°E, 5m00s"},
+   {"kind": "scholarship", "title": "'Zur Datierung der neuassyrischen Eponymenliste', Altorientalische Forschungen 35 (2008) 323–325", "author": "Hermann Hunger", "year": 2008, "url": "http://kristenfrihet.se/kf4/dating.htm", "note": "read in the English translation published there, checked by Hunger"},
+   {"kind": "scholarship", "title": "'Jonah and the Bur-Sagale Eclipse', in 'Three Notable Eclipses', Bible and Spade 26.2 (2013) 37–44", "author": "Rodger C. Young", "year": 2013, "url": "https://www.rcyoung.org/articles/Eclipse1.pdf"},
+   {"kind": "scripture", "ref": "2Kgs.14.25"}
+  ],
+  "confidence": "evidence",
+  "related": ["bur-sagale-which-eclipse", "kurkh-monolith-ahab", "black-obelisk-jehu", "tiglath-pileser-menahem-pul"]
+ },
+ {
+  "id": "bur-sagale-which-eclipse",
+  "title": "Which eclipse the eponym list records",
+  "kind": "archaeology",
+  "verses": ["2Kgs.14.23-25"],
+  "summary": "Hermann Hunger and Rodger Young date the eclipse in Bur-Sagale's year to 15 June 763 BC, and with it every year of the Assyrian list. Rolf Furuli holds that at least eight other eclipses fit the entry, and that Assyria's chronology rests on it alone.",
+  "body": [
+   "Hunger (2008), answering a proposal that the eclipse was the partial one of 24 June 791 BC, checks the list against Babylonian astronomical texts that date three other years without it. A lunar eclipse recorded in Mukin-zeri's first year falls on 9 April 731 BC, and the Babylonian Chronicle sets that year beside Tiglath-pileser III's fourteenth; meetings of Mars and Mercury date Esarhaddon's second year to 679 BC and Ashurbanipal's eighteenth to 651. Counting back along the list from each gives 763 for Bur-Saggilê's year, in which, he writes, 'a total solar eclipse did take place in Assur'. Of 791 he writes that, at a magnitude of 0.75, it 'was hardly conspicuous and could have been noticed only if it was observed close to sunset.'",
+   "Young (2013) adds that the list's copies overlap Ptolemy's Canon, the second-century astronomer's list of the kings of Babylon and Persia, from 747 to 648 BC, and cites Thiele for their agreement there. He notes that NASA's path leaves Nineveh itself just outside totality, which 'has led some investigators to surmise' another eclipse, and writes that this 'is usually done to support alternative biblical chronologies'.",
+   "Furuli starts from the Bible's figures. In a 2009 post to the b-hebrew list he writes that the chronology of Judah 'is between 30 and 40 years longer than the chronology of Assyria, and the two chronologies cannot be conformed', and that where the sources differ the Assyrian is the one accepted. Only astronomical information tied to a particular year, he argues, can give an absolute chronology; for Assyria it comes once, in Bur-Sagale's year, and 'there are at least 8 other solar eclipses that can fit the data. So, the Neo-Assyrian chronology has a very weak foundation.' He sets the case out in Assyrian, Babylonian and Egyptian Chronology (2008)."
+  ],
+  "sources": [
+   {"kind": "primary", "title": "Assyrian eponym list, the year of Bur-Saggilê", "note": "'In the eponymy of Bur-Saggilê the sun became eclipsed in the month of Simanu' (Hunger's translation)"},
+   {"kind": "data", "title": "Five Millennium Canon of Solar Eclipses, −0799 to −0700", "author": "Fred Espenak, NASA GSFC", "url": "https://eclipse.gsfc.nasa.gov/SEcat5/SE-0799--0700.html", "note": "−762 June 15 total; −790 June 24 annular"},
+   {"kind": "scholarship", "title": "'Zur Datierung der neuassyrischen Eponymenliste', Altorientalische Forschungen 35 (2008) 323–325", "author": "Hermann Hunger", "year": 2008, "url": "http://kristenfrihet.se/kf4/dating.htm", "note": "read in the English translation published there, checked by Hunger"},
+   {"kind": "scholarship", "title": "'Jonah and the Bur-Sagale Eclipse', in 'Three Notable Eclipses', Bible and Spade 26.2 (2013) 37–44", "author": "Rodger C. Young", "year": 2013, "url": "https://www.rcyoung.org/articles/Eclipse1.pdf"},
+   {"kind": "scholarship", "title": "Post to the b-hebrew list, 'Chronology', 3 July 2009", "author": "Rolf Furuli", "year": 2009, "url": "https://lists.ibiblio.org/sympa/arc/b-hebrew/2009-07/msg00028.html"},
+   {"kind": "scholarship", "title": "Assyrian, Babylonian and Egyptian Chronology, 2nd ed. (Oslo: Awatu)", "author": "Rolf Furuli", "year": 2008, "note": "not read for this card"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["15 June 763 BC: Hermann Hunger (Altorientalische Forschungen 35, 2008); Rodger C. Young (Bible and Spade 26.2, 2013)", "Another eclipse, at least eight fitting the entry: Rolf Furuli (Assyrian, Babylonian and Egyptian Chronology, 2008; b-hebrew, 2009)"],
+  "related": ["bur-sagale-eclipse"]
  },
  {
   "id": "tiglath-pileser-pekah-hoshea",
