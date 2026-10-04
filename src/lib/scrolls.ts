@@ -53,8 +53,9 @@ export const overlapsOf = (h: HebrewBook): OverlapEnd[] =>
 /** The name the Greek gives a book, where it differs from the English one. */
 export const greekName = (id: string): string | undefined => SCROLLS.greek[id];
 
-/** A run of verses in a strip row: [start, end) in verses from the start of the Hebrew book. */
-export interface Span { label: string; start: number; end: number; book: string; chapter?: number }
+/** A run of verses in a strip row: [start, end) in verses from the start of the Hebrew book. `books` are the English
+ *  books a Greek span covers when it covers more than one (Esdras B: Ezra and Nehemiah). */
+export interface Span { label: string; start: number; end: number; book: string; chapter?: number; books?: string[] }
 export interface Strip {
   total: number;
   hebrew: Span; greek: Span[] | null; english: Span[]; chapters: Span[];
@@ -64,7 +65,8 @@ export interface Strip {
 
 /**
  * The strip for a Hebrew book: one span for the Hebrew, the English books, the Greek ones where the Greek
- * named them otherwise (Kingdoms, Paraleipomena), and the chapters, sized by `verses` (per chapter, by book).
+ * named them otherwise (Kingdoms, Paraleipomena; English books the Greek keeps as one share a span), and the
+ * chapters, sized by `verses` (per chapter, by book).
  */
 export function strip(h: HebrewBook, verses: Map<string, number[]>, loc: VerseLoc): Strip {
   const english: Span[] = [], chapters: Span[] = [];
@@ -78,6 +80,10 @@ export function strip(h: HebrewBook, verses: Map<string, number[]>, loc: VerseLo
     });
     english.push({ label: book(id)?.name ?? id, start, end: n, book: id });
   }
-  const greek = h.books.some((id) => greekName(id)) ? english.map((s) => ({ ...s, label: greekName(s.book) ?? s.label })) : null;
+  const greek = h.books.some((id) => greekName(id)) ? english.reduce<Span[]>((out, s) => {
+    const label = greekName(s.book) ?? s.label, last = out.at(-1);
+    if (last?.label === label) { last.end = s.end; last.books = [...(last.books ?? [last.book]), s.book]; } else out.push({ ...s, label });
+    return out;
+  }, []) : null;
   return { total: n, hebrew: { label: h.name, start: 0, end: n, book: h.books[0] }, greek, english, chapters, at };
 }

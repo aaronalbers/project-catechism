@@ -18,7 +18,7 @@
   {"ref": "Phlm.1.22", "text": "A guest room"}
  ],
  "later": [
-  {"text": "Because Colossians sends Onesimus and greetings to Archippus, J. B. Lightfoot places Philemon at Colossae.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Col.4.9"}, {"kind": "scripture", "ref": "Col.4.17"}], "traditions": ["J. B. Lightfoot"]}
+  {"text": "Because Colossians sends Onesimus back as “one of you”, J. B. Lightfoot places Philemon at Colossae; where Archippus lived he leaves open.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Col.4.9"}, {"kind": "scholarship", "title": "Saint Paul's Epistles to the Colossians and to Philemon", "author": "J. B. Lightfoot", "year": 1875, "url": "https://www.gutenberg.org/ebooks/50857", "note": "introduction to Philemon: 'a native, or at least an inhabitant, of Colossæ. This appears from the fact that his slave is mentioned as belonging to that place'"}], "traditions": ["J. B. Lightfoot"]}
  ],
  "confidence": "evidence",
  "sources": [

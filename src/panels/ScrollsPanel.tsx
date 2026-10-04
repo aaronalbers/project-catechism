@@ -51,7 +51,7 @@ function ScrollStrip({ h, verses, loc }: { h: HebrewBook; verses: Map<string, nu
       </div>
       <div className="scroll-bars">
         <Row spans={[s.hebrew]} total={s.total} current={() => true} go={go} />
-        {s.greek && <Row spans={s.greek} total={s.total} current={(x) => x.book === loc.book} go={go} />}
+        {s.greek && <Row spans={s.greek} total={s.total} current={(x) => (x.books ?? [x.book]).includes(loc.book)} go={go} />}
         <Row spans={s.english} total={s.total} current={(x) => x.book === loc.book} go={go} />
         <div className="scroll-row chapters">
           {s.chapters.map((c, i) => (

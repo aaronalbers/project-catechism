@@ -246,7 +246,7 @@
    "table-vessels": "plates, dishes, pitchers and bowls, of no stated size or number. Two plates hold the rows of bread, two dishes the frankincense laid on them (Lev 24:7), and a pitcher and bowl stand at each end",
    "table-bread": "twelve loaves in two rows or stacks of six (Lev 24:5-6); the loaf size is not given",
    "lampstand-shaft": "the text gives no height or layout. The 18 handbreadths (3 cubits) and the spacing of every cup, knob and flower follow b. Menachot 28b. The shapes are schematic",
-   "lampstand-branches": "each pair leaves the shaft at a knob and rises to the full height (b. Menachot 28b). Curved branches follow the Arch of Titus relief of the Second Temple lampstand; Maimonides drew them straight",
+   "lampstand-branches": "each pair leaves the shaft at a knob and rises to the full height (b. Menachot 28b). Curved branches follow the Arch of Titus relief of the Second Temple lampstand (its 'gracefully curved arms', in Reviel Netz's words); Maimonides drew the lampstand in his Commentary on the Mishnah, and his son Abraham wrote that its branches rise 'in a straight line, as depicted by my father'",
    "lampstand-branch-cups": "three almond-blossom cups, a bud (knob) and a petal (flower) on each branch; where along the branch is not given, so they are set just below the lamp",
    "lampstand-shaft-cups": "four cups on the shaft: one low down, 5–6 handbreadths up, and three at the top, as b. Menachot 28b places them",
    "lampstand-lamps": "the lamps' shape is not given; small oil lamps are drawn, spouts turned north toward the table so they 'illuminate the area in front of it' (25:37)",
@@ -280,7 +280,8 @@
    {"kind": "scripture", "ref": "Exod.40.17-33", "note": "the assembly, in order"},
    {"kind": "scripture", "ref": "Lev.24.5-6", "note": "twelve loaves in two rows (or stacks) of six"},
    {"kind": "primary", "title": "Babylonian Talmud, Menachot 28b", "url": "https://www.sefaria.org/Menachot.28b", "note": "'the height of the Candelabrum was eighteen handbreadths', which is 3 cubits"},
-   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm used for the metric sizes"}
+   {"kind": "scholarship", "title": "Weights and Measures of the Bible", "author": "R. B. Y. Scott", "year": 1959, "url": "https://doi.org/10.2307/3209306", "note": "The Biblical Archaeologist 22, 22–40; the common cubit of ≈44.5 cm used for the metric sizes"},
+    {"kind": "scholarship", "title": "Straightening Out the Menorah", "author": "Reviel Netz, Jewish Review of Books", "year": 2024, "url": "https://jewishreviewofbooks.com/jewish-life/17870/straightening-out-the-menorah/", "note": "the Arch of Titus menorah 'with its gracefully curved arms'; Maimonides' drawing in the Oxford autograph (Bodleian Ms. Poc. 295), and his son Abraham: the branches 'extend from the central staff of the menorah to its height in a straight line, as depicted by my father, of blessed memory, and not rounded as depicted by others'"}
   ],
   "confidence": "estimate"
  },

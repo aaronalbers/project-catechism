@@ -108,9 +108,11 @@ const isName = (w) => /proper/.test(w[2]) || (w[4].startsWith('G') && /^\p{Lu}/u
  * (Zibeon's leave out Genesis 36:20–29), so a name no record claims in its verse is given to the one record whose
  * number it is, when only one record, a person, has that number ("son" is H1121, which only Ben's record has, so
  * only a word marked as a name counts). `keep(person, ref, word)` can refuse a tag (a
- * tribe named for its ancestor). Returns ref → Set of person ids tagged there.
+ * tribe named for its ancestor). `fixed` ("H244|Num.26.16" → ids, or null for no one, in the order of the original)
+ * settles a verse where two records claim a number without saying which occurrence is whose. Returns ref → Set of
+ * person ids tagged there.
  */
-export function tagWords(chapters, records, people, keep) {
+export function tagWords(chapters, records, people, keep, fixed = {}) {
   const isPerson = new Set(people.map((p) => p.id));
   const claims = new Map(); // "H3101|2Kgs.14.1" → [{ id, occ }]
   for (const r of records) for (const f of r.forms) for (const { ref, occ } of f.refs) {
@@ -142,6 +144,7 @@ export function tagWords(chapters, records, people, keep) {
       const order = [...idx].sort((a, b) => v.w[a][6] - v.w[b][6]);
       const lettered = list.filter((x) => x.occ !== null), bare = [...new Set(list.filter((x) => x.occ === null).map((x) => x.id))];
       const owner = new Map();
+      if (fixed[`${s}|${ref}`]) fixed[`${s}|${ref}`].forEach((id, n) => order[n] !== undefined && owner.set(order[n], id ?? '-'));
       for (const x of lettered) if (order[x.occ] !== undefined) owner.set(order[x.occ], x.id);
       for (const i of order) if (!owner.has(i)) { if (bare.length === 1) owner.set(i, bare[0]); else if (bare.length > 1) ambiguous++; }
       for (const [i, id] of owner) {

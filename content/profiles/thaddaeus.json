@@ -17,7 +17,7 @@
   {"ref": "Acts.1.13", "text": "In the upper room"}
  ],
  "later": [
-  {"text": "Jerome takes Thaddaeus and Judas son of James to be the same man under two names, since each list has one and not the other.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.3.18"}, {"kind": "scripture", "ref": "Luke.6.16"}], "traditions": ["Jerome (Commentary on Matthew 10:4)"]},
+  {"text": "Jerome takes Thaddaeus, Lebbaeus and Luke's Judas son of James to be one man: “One must believe he had three names.”", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Mark.3.18"}, {"kind": "scripture", "ref": "Luke.6.16"}, {"kind": "primary", "title": "Jerome, Commentary on Matthew 10:4", "note": "'He is called Judas son of James by the evangelist Luke, and elsewhere is named Lebbaeus, which means “little heart.” One must believe he had three names', as translated by Catrin H. Williams"}, {"kind": "scholarship", "title": "Judas Thaddaeus, Brill Encyclopedia of Early Christianity", "author": "Catrin H. Williams", "year": 2022, "url": "https://repository.uwtsd.ac.uk/id/eprint/2651/"}], "traditions": ["Jerome (Commentary on Matthew 10:4)"]},
   {"text": "Eusebius tells how Thaddaeus, whom he counts one of the Seventy, was sent to King Abgar of Edessa; Western tradition joins him with Simon the Zealot in Persia.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Eusebius, Ecclesiastical History 1.13"}], "traditions": ["Eusebius and Syriac tradition", "Western Catholic tradition"]}
  ],
  "confidence": "evidence",

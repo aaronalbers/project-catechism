@@ -33,6 +33,9 @@ describe('scrolls', () => {
     expect(s.chapters.map((x) => x.start)).toEqual([0, 3, 5]);
     expect(s.greek?.map((x) => x.label)).toEqual(['1 Kingdoms', '2 Kingdoms']);
     expect(s.at).toBe(6);
+    // The Greek keeps Ezra and Nehemiah as one book, Esdras B.
+    const e = strip(hebrewOf('Neh')!, new Map([['Ezra', [3]], ['Neh', [2]]]), { book: 'Neh', chapter: 1, verse: 1 });
+    expect(e.greek?.map((x) => [x.label, x.start, x.end, x.books])).toEqual([['Esdras B', 0, 5, ['Ezra', 'Neh']]]);
     expect(strip(hebrewOf('Isa')!, new Map([['Isa', [5]]]), { book: 'Gen', chapter: 1, verse: 1 })).toMatchObject({ greek: null, at: null });
   });
 });

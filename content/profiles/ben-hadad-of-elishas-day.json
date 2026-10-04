@@ -1,0 +1,30 @@
+{
+ "id": "ben-hadad-of-elishas-day",
+ "name": "Ben-hadad of Elisha's day",
+ "role": "King of Aram who besieged Samaria and was smothered by Hazael",
+ "people": ["H1130H"],
+ "when": "≈ died before 841 BC",
+ "whenBasis": "His death (2 Kings 8:15) comes before Joram of Israel fights Hazael at Ramoth-gilead (8:28), and so before Joram's death in ≈841 BC in Thiele's reckoning. The king of Israel in the siege of 6:24 is not named, so the text gives no earlier date.",
+ "summary": "A king of Aram who assembled his whole army and besieged Samaria, until a donkey's head sold for eighty shekels of silver. The Arameans fled their camp at twilight, hearing what they took for a great army. Later, sick in Damascus, he sent Hazael to Elisha with forty camel loads of gifts to ask whether he would recover. The next day Hazael spread a wet cloth over his face, and he died.",
+ "body": [
+  "In the siege, a woman cried to the king of Israel that she and another woman had agreed to eat their sons, and that the other had hidden hers. The king tore his clothes, and the people saw sackcloth beneath them. The Lord made the Arameans hear “the sound of chariots, horses, and a great army”, and they said the king of Israel must have hired the kings of the Hittites and Egyptians.",
+  "Hazael came to Elisha saying, “Your son Ben-hadad king of Aram has sent me”. Elisha answered that the king would surely recover, but that the LORD had shown him that he would die. Hazael told his master only, “He told me that you would surely recover.”"
+ ],
+ "moments": [
+  {"ref": "2Kgs.6.24", "text": "Besieges Samaria"},
+  {"ref": "2Kgs.6.25", "text": "Famine in the city"},
+  {"ref": "2Kgs.7.6-7", "text": "The Arameans flee"},
+  {"ref": "2Kgs.8.7-8", "text": "Sick in Damascus"},
+  {"ref": "2Kgs.8.9", "text": "Forty camel loads"},
+  {"ref": "2Kgs.8.14", "text": "“You would surely recover”"},
+  {"ref": "2Kgs.8.15", "text": "Smothered by Hazael"}
+ ],
+ "later": [
+  {"text": "Whether he is the Ben-hadad who fought Ahab the text does not say. TIPNR keeps him apart from that king. Easton's Bible Dictionary (1897) makes the king Hazael killed the son of Asa's ally, “long engaged in war against Israel”, after a reign of “some thirty years”.", "confidence": "interpretation", "sources": [{"kind": "data", "title": "TIPNR (Translators Individualised Proper Names), STEPBible, records for Ben-hadad", "url": "https://github.com/STEPBible/STEPBible-Data"}, {"kind": "scholarship", "title": "Easton's Bible Dictionary, “Ben-hadad”", "author": "M. G. Easton", "year": 1897}], "traditions": ["TIPNR, STEPBible", "M. G. Easton"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.6.24-7.20"},
+  {"kind": "scripture", "ref": "2Kgs.8.7-15"}
+ ]
+}

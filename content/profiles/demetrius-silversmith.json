@@ -19,8 +19,7 @@
   {"ref": "Acts.19.38", "text": "“The courts are open”"}
  ],
  "later": [
-  {"text": "The temple of Artemis at Ephesus was counted one of the seven wonders; its site was found by John Turtle Wood in 1869, and the theatre where the crowd gathered still stands.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Temple of Artemis, Ephesus, excavated by J. T. Wood, 1869; sculpture in the British Museum"}, {"kind": "archaeology", "title": "Great Theatre, Ephesus"}]},
-  {"text": "Theographic's record for him also counts the Demetrius commended in 3 John 12, a different man.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "3John.1.12"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Demetrius"}]}
+  {"text": "The temple of Artemis at Ephesus was counted one of the seven wonders; its site was found by John Turtle Wood in 1869, and the theatre where the crowd gathered still stands.", "confidence": "evidence", "sources": [{"kind": "archaeology", "title": "Temple of Artemis, Ephesus, excavated by J. T. Wood, 1869; sculpture in the British Museum"}, {"kind": "archaeology", "title": "Great Theatre, Ephesus"}]}
  ],
  "confidence": "evidence",
  "sources": [

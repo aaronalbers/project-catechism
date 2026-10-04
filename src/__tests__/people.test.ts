@@ -40,6 +40,16 @@ describe.skipIf(!existsSync(new URL('people/', data)))('people', () => {
     expect(person('G2810').name).toBe('Cleopas');
     expect(person('G0256').refs).not.toContain('Luke.24.18');
   });
+  it('settles a name two records claim in one verse, by the original', () => {
+    // לְאָזְנִי, "to Ozni" (Ezbon), comes first in the Hebrew; the BSB hangs "the Oznite" on it.
+    expect(tagged('Num', 26, 16, 'the Oznite')).toEqual(['H0675G']);
+    expect(tagged('Num', 26, 16, 'from Ozni')).toEqual([undefined]);
+    expect(tagged('1Kgs', 4, 8, 'Ben-hur')).toEqual(['H1133G']);
+  });
+  it('keeps the Demetrius of 3 John apart from the silversmith', () => {
+    expect(tagged('3John', 1, 12, 'Demetrius')).toEqual(['G1216-3John']);
+    expect(person('G1216').refs).toEqual(['Acts.19.24', 'Acts.19.38']);
+  });
   it('gives TIPNR’s kin, less the links the text does not make', () => {
     expect(person('H0175').father).toEqual([{ id: 'H6019G', name: 'Amram' }]);
     // TIPNR makes Nahash Jesse's wife and mother of his sons; 2 Samuel 17:25 names only Abigail her daughter.

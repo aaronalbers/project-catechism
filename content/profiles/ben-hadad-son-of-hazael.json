@@ -1,0 +1,24 @@
+{
+ "id": "ben-hadad-son-of-hazael",
+ "name": "Ben-hadad son of Hazael",
+ "role": "King of Aram who lost Israel's cities to Jehoash",
+ "people": ["H1130I"],
+ "when": "≈ 814–782 BC",
+ "whenBasis": "The reigns of Jehoahaz (≈814–798 BC) and Jehoash (≈798–782 BC) of Israel, the kings the text sets him beside, in Thiele's reckoning; the other readings in the Reign tab differ by a few years. The text does not give his own years.",
+ "summary": "Son of Hazael king of Aram. Under Jehoahaz of Israel the LORD gave Israel “continually into the hands of Hazael king of Aram and his son Ben-hadad”. When Hazael died, Ben-hadad reigned in his place, and Jehoash son of Jehoahaz defeated him three times and took back the cities Hazael had taken from Israel. Amos foretells fire to “consume the citadels of Ben-hadad”.",
+ "body": [
+  "On his deathbed Elisha had Jehoash strike the ground with his arrows. He struck it three times and stopped, and Elisha told him, “You should have struck the ground five or six times… But now you will strike down Aram only three times.”"
+ ],
+ "moments": [
+  {"ref": "2Kgs.13.3", "text": "With his father Hazael"},
+  {"ref": "2Kgs.13.24", "text": "Reigns in Hazael's place"},
+  {"ref": "2Kgs.13.25", "text": "Defeated three times"},
+  {"ref": "Amos.1.4", "text": "“The citadels of Ben-hadad”"}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "2Kgs.13.3"},
+  {"kind": "scripture", "ref": "2Kgs.13.14-25"},
+  {"kind": "scripture", "ref": "Amos.1.3-5"}
+ ]
+}

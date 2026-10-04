@@ -11,40 +11,13 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 
 ## Scrolls (`content/scrolls.json`, the Scrolls tab), 2026-09-29
 
-### Sources not yet cited
-
-- **Jerome's *Prologus Galeatus*.** It is a Latin witness that Samuel, Kings, Chronicles, Ezra–Nehemiah and the Twelve
-  were each counted as one book. *Left out because* no working link was found: New Advent's Jerome pages
-  (`fathers/3006`–`3010`) are other works. *Found since:* CCEL has it as the Preface to the Books of Samuel and
-  Kings (https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html), which `writers.json` now cites for Tobit and
-  1 Maccabees. *Needed:* a check of its wording on each book, then a citation on the `samuel`, `kings`,
-  `chronicles`, `ezra` and `twelve` entries.
-- **A Dead Sea Scroll holding both halves of Samuel (4QSam-a, 4Q51).** This would be archaeological evidence to go
-  with the Talmud and Origen, which are texts. *Left out because* the Leon Levy library URL tried
-  (`deadseascrolls.org.il/explore-the-archive/manuscript/4Q51-1`) opens a different manuscript ("4Q Multiple
-  Compositions"). *Needed:* the right catalogue page, and a check that the scroll really preserves text from both 1
-  and 2 Samuel, before adding it as an `archaeology` source on `samuel`.
-- **When printed Hebrew Bibles took up the splits.** The Bomberg Rabbinic Bible (1516–17) is the usual answer, but no
-  source for it has been verified. The content says only that Hebrew Bibles
-  kept the splits "in time", with no date. *Needed:* a public-domain source (the 1906 Jewish Encyclopedia or the
-  1911 Britannica's "Bible" articles), then a date in the summary and in `SeamNote`'s wording.
-- **Mur 88's description is from memory, not from its page.** "One scroll holding Joel through Zechariah, 2nd century
-  AD" could not be read off the cited page, which loads its text by script. *Needed:* confirm the contents and date
-  (DJD II, 1961, or the IAA record) and adjust the note if they differ.
-- **Japhet (1968) and Williamson (1977)** are cited on the Cyrus-decree overlap without URLs, from knowledge of the
-  literature rather than a checked copy. *Needed:* confirm the titles and years and add a link where one exists.
 - **Chapters "≈1200s".** Langton made his chapters at Paris before becoming archbishop in 1207, but no sourced year was
-  found. *Needed:* a source for a narrower date before tightening it.
-- **Old Testament verse numbers.** Only Estienne's 1551 New Testament is sourced. The Old Testament's verse divisions
-  are older (the Masoretic verse ends), and the numbering has its own history, so the "Verses" entry says nothing
-  about the Old Testament rather than guess. *Needed:* a source on both, then a sentence in `numbering.verses`.
-
-### Incomplete
-
-- **Greek division of Ezra–Nehemiah.** The strip has a Greek row for Samuel, Kings and Chronicles but none for
-  Ezra–Nehemiah. How the Greek divides it is more tangled: Esdras A (1 Esdras) is a different book, and Esdras B is said
-  to hold Ezra and Nehemiah together, which has not been checked. It was left out rather than drawn wrongly. *Needed:* a source on the
-  Septuagint's Esdras books, then `greek` entries for Ezra and Nehemiah.
+  found. The Jewish Encyclopedia's "Verse-Division" (1906) says only that they were made "perhaps by Stephen Langton",
+  while the entry is badged `consensus` on the Catholic Encyclopedia's account. *Needed:* a source for a narrower date,
+  and either a source for the attribution's standing or the doubt given beside it.
+- **Two holders on the Cyrus-decree overlap not read.** Japhet (1968) and Williamson (1977) are now confirmed and
+  linked, and both argue that Chronicles and Ezra–Nehemiah are by different hands; that they read the repeated lines
+  as a link between the two was not checked in either work.
 
 ## Models (`content/models.json`), recorded 2026-09-29
 
@@ -74,9 +47,6 @@ listed.
   tells it. A `state` would draw that.
 - **Framing of tall, narrow parts** is tight: at Exod 39:29 the sash's band sits at the top edge of the view. Fixing it
   means changing the step framing of every model, so check the visibility test afterwards.
-- **Tabernacle lampstand branches (`tabernacle`)**: the estimate for `lampstand-branches` says the curved branches
-  follow the Arch of Titus relief and that Maimonides drew them straight. Both claims were written from memory and
-  are not cited. *Needed:* a source for each, added to the model's `sources`.
 - **The common cubit, ≈44.5 cm**, used by most models, is cited to R. B. Y. Scott, "Weights and Measures of the
   Bible" (1959). The article's details were confirmed, but the article itself was not read, so the figure is from
   memory. *Needed:* check it against the article (JSTOR, doi 10.2307/3209306).
@@ -117,16 +87,11 @@ the card attributes to it.
 
 ## Profiles and people, recorded 2026-09-29
 
-- **Notes about Theographic's records may be out of date.** Four profiles have a "later" note on what Theographic's
-  record for the person wrongly includes: `lydia` (Timna's verses), `demetrius-silversmith` (3 John 12),
-  `james-brother-of-jesus` (James son of Mary) and `jesus` (Old Testament titles). The People tab now takes each
-  person's verses from TIPNR, not Theographic, so these notes may describe data the app no longer shows. *Needed:*
-  check each against TIPNR's record, then correct or remove the note.
-- **No profile for Ben-hadad.** Profiles were written for everyone the data has enough story for. Ben-hadad was left
-  out because Theographic merged two or three Aramean kings of that name. TIPNR may tell them apart. *Needed:*
-  check TIPNR's records, then write a profile for each king.
-- **Seven name words untagged.** Where two people of the same name share a verse and TIPNR doesn't say which is
-  which, the word names no one. *Needed:* identify each from the text and add an override in `scripts/people.mjs`.
+- **The Ben-hadad profiles cite no inscriptions.** The three kings (`ben-hadad-son-of-tabrimmon`,
+  `ben-hadad-of-elishas-day`, `ben-hadad-son-of-hazael`) keep to the text, TIPNR and Easton. The Zakkur stele names a
+  "Bar-Hadad son of Hazael", and the Melqart stele and Shalmaneser III's Adad-idri are linked to the earlier kings by
+  some scholars; none was read in the session. *Needed:* a translation of each (ANET, or the museums' pages), and a
+  `later` note naming who makes each identification.
 
 ## Chiasms (`content/chiasms.json`), recorded 2026-09-29
 
@@ -170,12 +135,17 @@ The list aims to include every BibleProject video, wherever it applies.
 
 ### Citations not checked against the work
 
-Cited from memory without a link to the text: the Muratorian Fragment (lines 69–71, on Wisdom), the Septuagint's
-opening sentence of Lamentations, Jerome's Commentary on Daniel (on Porphyry), the Didascalia Apostolorum (on the
-Prayer of Manasseh), Josephus' Antiquities book 11 (on 1 Esdras), the British Museum number of the Amenemope
-papyrus (EA 10474), and the Dead Sea Scroll numbers (Tobit 4Q196–200, 7Q2, 11Q5 column 28, 4Q201–212, 4Q216,
-Mas1h, 1QpHab). *Needed:* each checked against a public-domain translation or the museum's or library's catalogue
-page, with a `url` added.
+The Muratorian Fragment, the Septuagint's opening of Lamentations, Jerome on Daniel, the Didascalia, Josephus on
+1 Esdras, Irenaeus, Eusebius on Papias, Tertullian on Hebrews, and the catalogue pages of 1QIsa-a, 1QpHab, 4Q196–200,
+4Q201, 4Q216, 7Q2 and 11Q5 were read and linked. Still unchecked:
+
+- **The British Museum number of the Amenemope papyrus (EA 10474).** The museum's collection pages refuse scripted
+  requests. *Needed:* the page opened in a browser, and its URL added.
+- **Which of the Tobit copies are Aramaic and which Hebrew** ("four Aramaic copies and one Hebrew"). The Leon Levy
+  pages are titled only "4Q Tobit". *Needed:* the edition (Fitzmyer, DJD XIX, 1995) or a catalogue that says.
+- **The Masada Ben Sira scroll (Mas1h)** has no page found in the Leon Levy library. *Needed:* its catalogue page.
+- **Enoch's and Jubilees' copies:** "the oldest copied ≈200 BC", "none of the Similitudes" and "over a dozen Hebrew
+  copies" of Jubilees are from memory. *Needed:* Milik (1976) and VanderKam's edition, or the catalogue's dates.
 
 
 ## Red letters (`src/lib/redletter.ts`, the reader), 2026-10-03
@@ -192,9 +162,6 @@ The primary texts (1 Clement, Ignatius, Polycarp, Irenaeus, Tertullian, Clement 
 Advent; Tacitus on LacusCurtius; Paley on Gutenberg), Guarducci's *Tomb of St. Peter*, van der Horst's review of
 Zwierlein and the Ehrman interview were read for every quotation. These were not, or not fully:
 
-- **McDowell's article was read only through a fetch tool.** equip.org refuses scripted downloads, so the quotations
-  and ratings in `argument-from-the-apostles-suffering` and `what-became-of-the-twelve` come from a fetched rendering of
-  the page. *Needed:* a check of each quotation against the page in a browser, or against the book (2015).
 - **Zwierlein is cited through his reviewer.** The Peter card summarises *Petrus in Rom* (2009) as van der Horst does in
   BMCR 2010.03.25, and attributes it so. *Needed:* the book itself, and a published reply to it (Heid's *Petrus und
   Paulus in Rom*, 2011, or Bockmuehl, 2012), so the Roman tradition's modern defenders are given in their own words as
@@ -202,16 +169,14 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 - **No sceptical voice on the martyrdom traditions themselves.** The argument card gives Ehrman, who accepts the
   witnesses' sincerity. A writer who questions the persecution accounts (Candida Moss, *The Myth of Persecution*, 2013)
   was not read. *Needed:* that position in its own words, if it bears on the apostles, as a third tradition.
-- **Papias on John's death.** A fragment ascribed to Papias (through Philip of Side and George Hamartolos) says John was
-  killed by the Jews. It is not on the Twelve card because no text of it was read. *Needed:* the fragment (Holmes's
-  Apostolic Fathers, or ANF 1) and a sentence on it beside Irenaeus and Polycrates.
-- **The Acts of Andrew and Acts of Thomas are cited without a text.** *Needed:* public-domain translations (M. R. James,
-  *The Apocryphal New Testament*, 1924), the chapters for Andrew's death at Patras and Thomas's in India, and their dates.
+- **Papias on John's death is given through Henry Cowan** (ISBE, 1915), who summarises what George Hamartolos and an
+  epitome of Philip of Side quote from Papias. *Needed:* the fragments themselves (de Boor, 1888; Holmes's *Apostolic
+  Fathers*), to quote them and say whether they name James with John.
 - **Heracleon's negative not checked in the Greek.** The Twelve card gives both the New Advent translation and Salmon's
   reading. *Needed:* the Greek (Stählin's GCS edition), and the card reduced to one reading if the Greek settles it.
-- **Dates of the fathers are standard ones, not checked.** Dionysius of Corinth ≈170, Tertullian's *Prescription* ≈200
-  and *Scorpiace* ≈210, Irenaeus ≈180 and Heracleon ≈170–180 (Salmon) are given with ≈ but without saying what each
-  rests on. *Needed:* a source for each (Eusebius's placing of Dionysius under Soter, say).
+- **Tertullian's dates are standard ones, not checked.** *Prescription* ≈200 and *Scorpiace* ≈210 are given with ≈
+  but without saying what they rest on. (Dionysius's ≈170 now rests on Eusebius's Soter, Irenaeus's ≈180 on his own
+  Eleutherius, and Heracleon's on Salmon.) *Needed:* a source for each of Tertullian's.
 - **The aedicula's dating comes from a secondary page.** The stamped tiles of 146–161 are from stpetersbasilica.info,
   which cites Guarducci and Toynbee and Ward-Perkins (1956). *Needed:* the page in the excavation report, and a Commons
   photograph credited from the Commons API.
@@ -223,9 +188,10 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 ## Medicine cards on the passion (`content/insights/medicine.json`), 2026-10-03
 
 - **Edwards, Gabel & Hosmer (JAMA 1986) quoted from a reprint.** The quotations ("serous pleural and pericardial
-  fluid", "exhaustion asphyxia", the closing sentence) were read from the catholicculture.org reprint, because JAMA's
-  page refuses scripted requests. Volume, issue and page are confirmed by Crossref. *Needed:* a check of the quotations
-  against the JAMA PDF.
+  fluid", "exhaustion asphyxia", the closing sentence) were read from the catholicculture.org reprint. JAMA's page,
+  opened in a browser, shows only the abstract, which agrees in substance (death "primarily from hypovolemic shock and
+  exhaustion asphyxia"; "dead when taken down from the cross") but not word for word. *Needed:* a check of the
+  quotations against the JAMA PDF.
 - **Zugibe (2005) not read.** His pleural-effusion reading of the "water", the right atrium, and his suspension
   experiments come from Maslen & Mitchell's review and Geberth's 2008 AAFS abstract, not from the book. The cards leave
   out the arm angles and hanging times for that reason. *Needed:* the book (M. Evans, 2005), with page numbers, and the
@@ -286,28 +252,32 @@ read in the session. Each needs checking against the work, and correcting or rem
 
 ### Named from memory
 
+Checked since against a copy and cited: the Douay-Rheims of Genesis 4:13, Lightfoot (Philippians, Philemon, and Luke
+as a Gentile), Keil on Joel and Obadiah (his reason for Joel was corrected), Jerome on Thaddaeus (his reason was not
+the one the card gave), Wellhausen, Rashi on the Servant, and the Erastus pavement's date (now given as Clarke and
+the Heidelberg database state it, not as Kent's). Still from memory:
+
 - **Insight cards:** Richard Pervo (*Dating Acts*, 2006) on Luke placing Josephus's Theudas too early
   (`theudas-and-judas`); William Horbury questioning the Caiaphas ossuary on the spelling (`caiaphas-ossuary`, and the
   `caiaphas` profile); Hayim Tadmor's reconstruction of Samaria's fall under Shalmaneser and Sargon (`sargon-samaria`);
-  John Kent dating the Erastus pavement to the mid-first century (`erastus-inscription`); J. B. Lightfoot, G. S. Duncan
-  and Gerald Hawthorne for Rome, Ephesus and Caesarea (`praetorium-philippians`); E. Randolph Richards reading 1 Peter
-  5:12 as naming the carrier (`amanuensis-dictation`); Robert Hubbard reading Ruth 4 as a court and the book's theme as
-  hesed (`sandal-at-the-gate`); Wink's soldier punished for exceeding his allowance (`extra-mile-angareia`); the
-  Douay-Rheims wording of Genesis 4:13 (`word-h5771-avon`); Frank Yurco on the determinative (`merneptah-stele`).
+  G. S. Duncan and Gerald Hawthorne for Ephesus and Caesarea (`praetorium-philippians`); E. Randolph Richards reading
+  1 Peter 5:12 as naming the carrier (`amanuensis-dictation`); Robert Hubbard reading Ruth 4 as a court and the book's
+  theme as hesed (`sandal-at-the-gate`); Wink's soldier punished for exceeding his allowance (`extra-mile-angareia`);
+  Frank Yurco on the determinative (`merneptah-stele`).
 - **Profiles:** Kenneth Kitchen as a holder of the 13th-century exodus (the `whenBasis` of Moses, Aaron, Miriam,
   Joshua and Caleb); R. T. France on the Bethlehem infants (`herod-the-great`); Raymond Brown doubting it; H. G. M.
   Williamson for the 458 BC order (`ezra`, `artaxerxes`); Louis Hartman and Alexander Di Lella seeing an error in
-  "father" (`belshazzar`); Keil and Delitzsch dating Joel under Joash (`joel-prophet`, and `writers.json`); Davies and
+  "father" (`belshazzar`); Hans Walter Wolff dating Joel after the exile (`joel-prophet`, `writers.json`); Davies and
   Allison on Matthew's authorship (`matthew`, `writers.json`); John Collins on Daniel 4 and the Prayer of Nabonidus
   (`nebuchadnezzar`, and `rulers.json` on Antiochus IV); Raymond Brown's later view of the beloved disciple
-  (`john-son-of-zebedee`); Jack Sasson on Jonah as a didactic story (`jonah`); J. B. Lightfoot placing Philemon at
-  Colossae (`philemon`, and the `luke` note on Colossians 4:11); Jerome identifying Thaddaeus with Judas son of James
-  (`thaddaeus`); I. Howard Marshall on the Pastorals (`timothy`, `writers.json`); Carol and Eric Meyers on Second
-  Zechariah (`zechariah-prophet`); Daniel Schwartz for AD 19 as Pilate's start (`pontius-pilate`, `rulers.json`);
-  Julius Wellhausen as the holder for the Torah's composition (`moses`).
+  (`john-son-of-zebedee`); Jack Sasson on Jonah as a didactic story (`jonah`); I. Howard Marshall on the Pastorals
+  (`timothy`, `writers.json`); Carol and Eric Meyers on Second Zechariah (`zechariah-prophet`); Daniel Schwartz for
+  AD 19 as Pilate's start (`pontius-pilate`, `rulers.json`).
 - **Other files:** Leopold Zunz (1832) for one Chronicler (`scrolls.json`); Robert Gundry reading Hosea 11:1 in
-  Matthew as typology and Rashi reading Isaiah's Servant as Israel (`prophecies.json`); Kenneth Kitchen's ≈925 BC for
-  Shishak (`models.json`, already listed above under Reigns).
+  Matthew as typology (`prophecies.json`); Kenneth Kitchen's ≈925 BC for Shishak (`models.json`, already listed above
+  under Reigns).
+- **Jerome on Thaddaeus is read in translation only**, through Catrin Williams's article. *Needed:* the Latin (CCSL 77)
+  or Scheck's translation, for the passage's full wording.
 
 ### Views still held by an unnamed group
 

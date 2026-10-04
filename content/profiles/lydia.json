@@ -15,9 +15,6 @@
   {"ref": "Acts.16.15", "text": "Baptised; “Come and stay at my house”"},
   {"ref": "Acts.16.40", "text": "The brothers at her house"}
  ],
- "later": [
-  {"text": "Theographic's record for her also counts two Old Testament verses that belong to the Edomite woman Timna.", "confidence": "consensus", "sources": [{"kind": "scripture", "ref": "Gen.36.22"}, {"kind": "scripture", "ref": "1Chr.1.39"}, {"kind": "data", "title": "Theographic Bible Metadata, person record for Lydia"}]}
- ],
  "confidence": "evidence",
  "sources": [
   {"kind": "scripture", "ref": "Acts.16.11-15"},

@@ -1,13 +1,15 @@
 {
  "id": "scrolls",
  "title": "Scrolls, books and chapters",
- "summary": "The Hebrew Bible reckons twenty-four books, not thirty-nine: Samuel, Kings, Chronicles and Ezra–Nehemiah are each one book, and the twelve short prophets share one scroll. The Greek translators split Samuel and Kings into four books of Kingdoms and Chronicles into two, and Latin and English Bibles, and in time printed Hebrew ones, kept the splits. Chapters were added in the thirteenth century, verse numbers in the sixteenth.",
+ "summary": "The Hebrew Bible reckons twenty-four books, not thirty-nine: Samuel, Kings, Chronicles and Ezra–Nehemiah are each one book, and the twelve short prophets share one scroll. The Greek translators split Samuel and Kings into four books of Kingdoms and Chronicles into two, and Latin and English Bibles kept the splits, and printed Hebrew Bibles took them up from Daniel Bomberg's Rabbinic Bible (Venice, 1516–17). Chapters were added in the thirteenth century, verse numbers in the sixteenth.",
  "confidence": "evidence",
  "sources": [
   {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b", "url": "https://www.sefaria.org/Bava_Batra.14b", "note": "the order of the Prophets and the Writings, naming Samuel, Kings, Ezra and Chronicles each as one book"},
   {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 13b", "url": "https://www.sefaria.org/Bava_Batra.13b", "note": "four blank lines between the books of the Torah copied on one scroll, three between the Twelve, 'because they are considered one book'"},
   {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.1–2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'the First and Second of Kings, among them one, Samouel … of the Chronicles, the First and Second in one … Esdras, First and Second in one'"},
-  {"kind": "scholarship", "title": "Samuel, Books of", "author": "S. A. Cook, Encyclopædia Britannica, 11th ed.", "year": 1911, "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Samuel,_Books_of", "note": "'The division into two (like the two Hebrew books of Kings) follows the Septuagint and the Vulgate'"}
+  {"kind": "scholarship", "title": "Samuel, Books of", "author": "S. A. Cook, Encyclopædia Britannica, 11th ed.", "year": 1911, "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Samuel,_Books_of", "note": "'The division into two (like the two Hebrew books of Kings) follows the Septuagint and the Vulgate'"},
+  {"kind": "scholarship", "title": "First and Second Books of Kings", "author": "F. Bechtel, Catholic Encyclopedia", "year": 1910, "url": "https://www.catholic.com/encyclopedia/first-and-second-books-of-kings", "note": "'The Hebrew text of the Books of Samuel and of the Books of Kings was first divided in Bomberg's edition of the rabbinical Bible (Venice, 1516-17)'"},
+  {"kind": "scholarship", "title": "Samuel, Books of", "author": "Emil G. Hirsch, Jewish Encyclopedia", "year": 1905, "url": "https://jewishencyclopedia.com/articles/13080-samuel-books-of", "note": "'Thence it passed into the editions of the Hebrew Bible published by Daniel Bomberg of Venice in the sixteenth century'"}
  ],
  "hebrew": [
   {"id": "torah", "name": "Torah", "part": "Torah", "books": ["Gen", "Exod", "Lev", "Num", "Deut"], "kind": "scroll", "gap": 4,
@@ -16,16 +18,23 @@
   {"id": "joshua", "name": "Joshua", "part": "Prophets", "books": ["Josh"]},
   {"id": "judges", "name": "Judges", "part": "Prophets", "books": ["Judg"]},
   {"id": "samuel", "name": "Samuel", "part": "Prophets", "books": ["1Sam", "2Sam"], "kind": "book",
-   "summary": "One book in Hebrew: Saul's death (1 Samuel 31) runs straight on into David hearing of it (2 Samuel 1). The Greek made it the first and second books of Kingdoms.",
+   "summary": "One book in Hebrew: Saul's death (1 Samuel 31) runs straight on into David hearing of it (2 Samuel 1). Among the Dead Sea Scrolls, 4QSam-a, copied ≈50 BC, preserves text from both 1 and 2 Samuel on one scroll. The Greek made it the first and second books of Kingdoms, and printed Hebrew Bibles split it from Bomberg's Rabbinic Bible (Venice, 1516–17).",
    "sources": [
     {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b", "url": "https://www.sefaria.org/Bava_Batra.14b"},
-    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'the First and Second of Kings, among them one, Samouel'"}
+    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'the First and Second of Kings, among them one, Samouel'"},
+    {"kind": "primary", "title": "Jerome, Preface to the Books of Samuel and Kings (Prologus Galeatus)", "url": "https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html", "note": "'Then comes Samuel, which we call First and Second Kings'"},
+    {"kind": "scholarship", "title": "First and Second Books of Kings", "author": "F. Bechtel, Catholic Encyclopedia", "year": 1910, "url": "https://www.catholic.com/encyclopedia/first-and-second-books-of-kings"},
+    {"kind": "archaeology", "title": "4Q51 (4QSam-a), Leon Levy Dead Sea Scrolls Digital Library", "url": "https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q51-2"},
+    {"kind": "scholarship", "title": "Qumran Cave 4.XII: 1–2 Samuel (Discoveries in the Judaean Desert XVII)", "author": "Frank Moore Cross, Donald W. Parry, Richard J. Saley and Eugene Ulrich", "year": 2005, "note": "the edition of 4QSam-a"},
+    {"kind": "data", "title": "4Q51 Samuel, verses preserved", "url": "https://dssenglishbible.com/scroll4Q51.htm", "note": "'About 50 B.C.'; parts of 1 Samuel 1–31 and 2 Samuel 1–24"}
    ]},
   {"id": "kings", "name": "Kings", "part": "Prophets", "books": ["1Kgs", "2Kgs"], "kind": "book",
-   "summary": "One book in Hebrew, whose break falls in the middle of Ahaziah's reign (1 Kings 22:51–2 Kings 1:18). The Greek made it the third and fourth books of Kingdoms.",
+   "summary": "One book in Hebrew, whose break falls in the middle of Ahaziah's reign (1 Kings 22:51–2 Kings 1:18). The Greek made it the third and fourth books of Kingdoms, and printed Hebrew Bibles split it from Bomberg's Rabbinic Bible (Venice, 1516–17).",
    "sources": [
     {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b", "url": "https://www.sefaria.org/Bava_Batra.14b"},
-    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'the Third and Fourth of Kings in one, Wammelch David'"}
+    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'the Third and Fourth of Kings in one, Wammelch David'"},
+    {"kind": "primary", "title": "Jerome, Preface to the Books of Samuel and Kings (Prologus Galeatus)", "url": "https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html", "note": "'The fourth is Malachim, that is, Kings, which is contained in the third and fourth volumes of Kings'"},
+    {"kind": "scholarship", "title": "First and Second Books of Kings", "author": "F. Bechtel, Catholic Encyclopedia", "year": 1910, "url": "https://www.catholic.com/encyclopedia/first-and-second-books-of-kings"}
    ]},
   {"id": "jeremiah", "name": "Jeremiah", "part": "Prophets", "books": ["Jer"]},
   {"id": "ezekiel", "name": "Ezekiel", "part": "Prophets", "books": ["Ezek"]},
@@ -34,8 +43,11 @@
    "summary": "Twelve prophets on one scroll, counted as one book, with only three blank lines between them. The Talmud says why: Hosea written on its own, 'since it is small it would be lost'. Sirach already names them together as 'the twelve prophets'.",
    "sources": [
     {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 13b–14b", "url": "https://www.sefaria.org/Bava_Batra.14b"},
+    {"kind": "primary", "title": "Jerome, Preface to the Books of Samuel and Kings (Prologus Galeatus)", "url": "https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html", "note": "'the eighth is the book of the Twelve Prophets'"},
     {"kind": "scripture", "ref": "Sir.49.10", "note": "'the twelve prophets', ≈180 BC"},
-    {"kind": "archaeology", "title": "Mur 88, the Minor Prophets scroll from Wadi Murabba'at", "url": "https://www.deadseascrolls.org.il/explore-the-archive/manuscript/MUR88-1", "note": "one scroll holding Joel through Zechariah, 2nd century AD"}
+    {"kind": "archaeology", "title": "Mur 88, the Minor Prophets scroll from Wadi Murabba'at", "url": "https://www.deadseascrolls.org.il/explore-the-archive/manuscript/MUR88-1", "note": "one scroll of the Twelve, of which parts of Joel 2:20 through Zechariah 1:4 survive"},
+    {"kind": "archaeology", "title": "II. Textes hébreux et araméens: Rouleau des Douze Prophètes", "author": "J. T. Milik, in P. Benoit, J. T. Milik and R. de Vaux, Les Grottes de Murabbaʿât (Discoveries in the Judaean Desert II)", "year": 1961, "note": "pp. 181–205, plates LVI–LXXXIII: the edition of Mur 88"},
+    {"kind": "data", "title": "Wadi Muraba'at Minor Prophets (Mur 88), verses preserved", "url": "https://www.dssenglishbible.com/scrollwadiminor.htm", "note": "Joel 2:20 to Zechariah 1:4, with parts of every book between"}
    ]},
   {"id": "ruth", "name": "Ruth", "part": "Writings", "books": ["Ruth"]},
   {"id": "psalms", "name": "Psalms", "part": "Writings", "books": ["Ps"]},
@@ -47,21 +59,25 @@
   {"id": "daniel", "name": "Daniel", "part": "Writings", "books": ["Dan"]},
   {"id": "esther", "name": "Esther", "part": "Writings", "books": ["Esth"]},
   {"id": "ezra", "name": "Ezra", "part": "Writings", "books": ["Ezra", "Neh"], "kind": "book",
-   "summary": "One book in Hebrew, called Ezra; the Talmud asks why Nehemiah's words were not given a book of his own name. Origen counts 'Esdras, First and Second in one'.",
+   "summary": "One book in Hebrew, called Ezra; the Talmud asks why Nehemiah's words were not given a book of his own name. Origen counts 'Esdras, First and Second in one'. The Greek kept it as one book, Esdras B; Esdras A (the English Bible's 1 Esdras, not its 2 Esdras) is another Greek telling of the return, drawn from the end of Chronicles, Ezra and part of Nehemiah.",
    "sources": [
     {"kind": "primary", "title": "Babylonian Talmud, Sanhedrin 93b", "url": "https://www.sefaria.org/Sanhedrin.93b", "note": "'what is the reason that a book was not called by his name?'"},
-    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm"}
+    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm"},
+    {"kind": "primary", "title": "Jerome, Preface to the Books of Samuel and Kings (Prologus Galeatus)", "url": "https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html", "note": "'the eighth, Ezra, which itself is likewise divided amongst Greeks and Latins into two books'"},
+    {"kind": "scholarship", "title": "An Introduction to the Old Testament in Greek, part II, chapter III", "author": "Henry Barclay Swete, revised by R. R. Ottley", "year": 1914, "url": "https://ccel.org/ccel/swete/greekot.iv.iii.html", "note": "'In MSS. of the LXX. the canonical book Ezra-Nehemiah appears under the title Ἔσδρας βʹ, Ἔσδρας αʹ being appropriated by another recension of the history of the Captivity and Return'"}
    ]},
   {"id": "chronicles", "name": "Chronicles", "part": "Writings", "books": ["1Chr", "2Chr"], "kind": "book",
    "summary": "One book in Hebrew, Divrei haYamim, 'the events of the days', and the last of the Writings: the Hebrew Bible ends with Cyrus's decree. The Greek made it two books of Paraleipomena, 'things left out', and moved it after Kings.",
    "sources": [
     {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b", "url": "https://www.sefaria.org/Bava_Batra.14b"},
-    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'of the Chronicles, the First and Second in one, Dabreïamein'"}
+    {"kind": "primary", "title": "Eusebius, Ecclesiastical History 6.25.2 (quoting Origen)", "url": "https://www.newadvent.org/fathers/250106.htm", "note": "'of the Chronicles, the First and Second in one, Dabreïamein'"},
+    {"kind": "primary", "title": "Jerome, Preface to the Books of Samuel and Kings (Prologus Galeatus)", "url": "https://www.ccel.org/ccel/schaff/npnf206.vii.iii.iv.html", "note": "'Dabre Aiamim, that is, Words of Days … the book that amongst us is called First and Second Chronicles'"}
    ]}
  ],
  "greek": {
   "1Sam": "1 Kingdoms", "2Sam": "2 Kingdoms", "1Kgs": "3 Kingdoms", "2Kgs": "4 Kingdoms",
-  "1Chr": "1 Paraleipomena", "2Chr": "2 Paraleipomena"
+  "1Chr": "1 Paraleipomena", "2Chr": "2 Paraleipomena",
+  "Ezra": "Esdras B", "Neh": "Esdras B"
  },
  "overlaps": [
   {"id": "cyrus-decree", "a": "2Chr.36.22-23", "b": "Ezra.1.1-3",
@@ -76,16 +92,17 @@
     {"kind": "scripture", "ref": "2Chr.36.22-23"},
     {"kind": "scripture", "ref": "Ezra.1.1-3"},
     {"kind": "primary", "title": "Babylonian Talmud, Bava Batra 15a", "url": "https://www.sefaria.org/Bava_Batra.15a", "note": "'Ezra wrote his own book and the genealogy of the book of Chronicles until his period'"},
-    {"kind": "scholarship", "title": "The Supposed Common Authorship of Chronicles and Ezra–Nehemiah Investigated Anew", "author": "Sara Japhet, Vetus Testamentum 18", "year": 1968},
-    {"kind": "scholarship", "title": "Israel in the Books of Chronicles", "author": "H. G. M. Williamson", "year": 1977}
+    {"kind": "scholarship", "title": "The Supposed Common Authorship of Chronicles and Ezra–Nehemiah Investigated Anew", "author": "Sara Japhet, Vetus Testamentum 18", "year": 1968, "url": "https://doi.org/10.1515/9781575065755", "note": "pp. 330–371; reprinted as chapter 1 of her From the Rivers of Babylon to the Highlands of Judah (2006)"},
+    {"kind": "scholarship", "title": "Israel in the Books of Chronicles", "author": "H. G. M. Williamson", "year": 1977, "url": "https://doi.org/10.1017/CBO9780511557453"}
    ]}
  ],
  "numbering": [
   {"id": "chapters", "label": "Chapters", "when": "≈1200s", "summary": "Stephen Langton, teaching at Paris before he became Archbishop of Canterbury (d. 1228), divided the Latin Bible into the chapters still used, which passed into Greek, Hebrew and every modern Bible.",
    "confidence": "consensus",
    "sources": [{"kind": "scholarship", "title": "Stephen Langton", "author": "Catholic Encyclopedia", "year": 1910, "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Stephen_Langton", "note": "'he toted the Bible at Parys and marked the chapitres'"}]},
-  {"id": "verses", "label": "Verses", "when": "1551", "summary": "Robert Estienne (Stephanus), a Paris printer, numbered the verses of the New Testament in his Greek edition of 1551, printed at Geneva; the numbers were later taken into whole Bibles.",
+  {"id": "verses", "label": "Verses", "when": "1551", "summary": "Robert Estienne (Stephanus), a Paris printer, numbered the verses of the New Testament in his Greek edition of 1551, printed at Geneva; the numbers were later taken into whole Bibles. The Old Testament's verse divisions are older, part of the Masoretic tradition with the accents that rest on them; numbers for them were first printed in the Latin Bibles of 1528 and 1555, and the Athias Bible (1659–61) was the first Hebrew edition with verse numbers that Jews could use.",
    "confidence": "evidence",
-   "sources": [{"kind": "scholarship", "title": "Estienne", "author": "Encyclopædia Britannica, 11th ed.", "year": 1911, "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Estienne", "note": "'In the Greek New Testament of 1551 (printed at Geneva) the present division into verses was introduced for the first time'"}]}
+   "sources": [{"kind": "scholarship", "title": "Estienne", "author": "Encyclopædia Britannica, 11th ed.", "year": 1911, "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Estienne", "note": "'In the Greek New Testament of 1551 (printed at Geneva) the present division into verses was introduced for the first time'"},
+    {"kind": "scholarship", "title": "Verse-Division", "author": "Crawford Howell Toy and Max L. Margolis, Jewish Encyclopedia", "year": 1906, "url": "https://www.jewishencyclopedia.com/articles/14682-verse-division", "note": "'verse-division, with the elaborate systems of accentuation resting upon it, is in itself essentially a part of the Masoretic tradition, although notation by means of figures in the text, or on the margin, was employed first in the Latin Bibles of 1528 and 1555 … The Athias Bible (1659-61) was the first edition with verse-notation that could be used by Jews'"}]}
  ]
 }

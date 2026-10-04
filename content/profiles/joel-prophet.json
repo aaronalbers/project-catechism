@@ -19,7 +19,7 @@
   {"ref": "Rom.10.13", "text": "Quoted by Paul"}
  ],
  "later": [
-  {"text": "Keil and Delitzsch date him early, under the boy-king Joash, because the book names no king; Hans Walter Wolff dates it after the return from exile.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Joel and Amos (Hermeneia)", "author": "Hans Walter Wolff", "year": 1977}], "traditions": ["early: Keil and Delitzsch", "after the exile: Hans Walter Wolff"]}
+  {"text": "Keil and Delitzsch date him in the first thirty years of Joash, while Jehoiada the high priest advised the king: the book names Tyre, Sidon, Philistia, Egypt and Edom as enemies but not Aram, and presupposes the temple worship Jehoiada restored. Hans Walter Wolff dates it after the return from exile.", "confidence": "interpretation", "sources": [{"kind": "scholarship", "title": "Biblical Commentary on the Old Testament: The Twelve Minor Prophets, introduction to Joel", "author": "C. F. Keil (Keil and Delitzsch)", "year": 1868, "url": "https://www.biblehub.com/commentaries/kad/joel/1.htm", "note": "'the first thirty years of the reign of Joash, during which the king had Jehoiada the high priest for his adviser, are to be regarded as the period of Joel's ministry'"}, {"kind": "scholarship", "title": "Joel and Amos (Hermeneia)", "author": "Hans Walter Wolff", "year": 1977}], "traditions": ["early: Keil and Delitzsch", "after the exile: Hans Walter Wolff"]}
  ],
  "confidence": "evidence",
  "sources": [

@@ -26,7 +26,7 @@
   {"ref": "Deut.34.10", "text": "No prophet like Moses"}
  ],
  "later": [
-  {"text": "Tradition holds that Moses wrote the Torah; the Talmud gives the last eight verses, on his death, to Joshua. Julius Wellhausen and the documentary hypothesis after him see the five books as compiled from several sources long after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Babylonian Talmud (Bava Batra 14b–15a)", "Julius Wellhausen (Prolegomena, 1878)"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b–15a", "url": "https://www.sefaria.org/Bava_Batra.14b"}]}
+  {"text": "Tradition holds that Moses wrote the Torah; the Talmud gives the last eight verses, on his death, to Joshua. Julius Wellhausen and the documentary hypothesis after him see the five books as compiled from several sources long after him.", "confidence": "interpretation", "traditions": ["Jewish and Christian tradition", "Babylonian Talmud (Bava Batra 14b–15a)", "Julius Wellhausen (Prolegomena, 1878)"], "sources": [{"kind": "primary", "title": "Babylonian Talmud, Bava Batra 14b–15a", "url": "https://www.sefaria.org/Bava_Batra.14b"}, {"kind": "scholarship", "title": "Prolegomena to the History of Israel", "author": "Julius Wellhausen", "year": 1885, "url": "https://www.gutenberg.org/ebooks/4732", "note": "English translation of the 1878 German; the Jehovist (JE) from 'the period of the kings and prophets', Deuteronomy from Josiah's reign, and the Priestly Code, by which 'the Jews under Ezra ordered their sacred community'"}]}
  ],
  "confidence": "evidence",
  "sources": [

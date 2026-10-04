@@ -446,7 +446,7 @@
   "verses": ["Rom.16.23", "Acts.19.22", "2Tim.4.20"],
   "summary": "A paving block by the theatre at Corinth records that 'Erastus, in return for his aedileship, laid this at his own expense'. Paul greets an Erastus who is the city's treasurer. Whether they are the same man is disputed.",
   "body": [
-   "The block was uncovered in 1929 in the paved square north-east of the theatre at Corinth, with the letters cut deep and once filled with bronze. It reads ERASTVS PRO AEDILIT[AT]E S P STRAVIT: 'Erastus, in return for his aedileship, laid [this pavement] at his own expense'. An aedile was an elected magistrate responsible for public works, and the customary price of election was a benefaction like this one. John Kent, who published it, dated the lettering to the mid-first century AD; the date is disputed.",
+   "The block was uncovered in 1929 in the paved square north-east of the theatre at Corinth, with the letters cut deep and once filled with bronze. It reads ERASTVS PRO AEDILIT[AT]E S P STRAVIT: 'Erastus, in return for his aedileship, laid [this pavement] at his own expense'. An aedile was an elected magistrate responsible for public works, and the customary price of election was a benefaction like this one. John Kent published it in 1966. Andrew Clarke calls it 'a mid-first century AD pavement', and the Heidelberg Epigraphic Database dates it AD 31–70; Meggitt holds the date not secure (below).",
    "Romans 16:23, written from Corinth, sends greetings from 'Erastus, the city treasurer' — in Greek, ho oikonomos tes poleos. Acts 19:22 and 2 Timothy 4:20 mention an Erastus too.",
    "Gerd Theissen argues for the identification: the name is not common at Corinth, the date fits, and the man Paul names holds a civic financial office. Justin Meggitt argues against: oikonomos is not the usual Greek for aedile (that would be agoranomos), an oikonomos was often a public slave or freedman rather than an elected magistrate, and the stone's own date is not secure. The question bears on a wider one the two also disagree over: whether the first urban churches included members of the governing class.",
    "The inscription is evidence; the link to Romans 16 is an identification, and this card is filed as an interpretation for that reason."
@@ -456,6 +456,8 @@
   ],
   "sources": [
    {"kind": "archaeology", "title": "Erastus inscription, Corinth (Kent, Corinth VIII.3 no. 232)", "note": "found in situ near the theatre, 1929"},
+   {"kind": "data", "title": "Epigraphic Database Heidelberg, HD025815", "url": "https://edh.ub.uni-heidelberg.de/edh/inschrift/HD025815", "note": "the reading, 'Chronological Data: 31 AD – 70 AD', and Kent, Corinth VIII.3 (1966) 99–100 no. 232"},
+   {"kind": "scholarship", "title": "Another Corinthian Erastus Inscription", "author": "Andrew D. Clarke, Tyndale Bulletin 42.1", "year": 1991, "url": "https://tyndalebulletin.org/article/30502.pdf", "note": "'the Corinthian discovery in 1929 of a mid-first century AD pavement dedicated by a Roman official named Erastus'"},
    {"kind": "scripture", "ref": "Rom.16.23", "note": "'Erastus, the city treasurer (oikonomos), greets you'"},
    {"kind": "scholarship", "title": "The Social Setting of Pauline Christianity", "author": "Gerd Theissen", "year": 1982, "note": "argues for the identification"},
    {"kind": "scholarship", "title": "Paul, Poverty and Survival", "author": "Justin J. Meggitt", "year": 1998, "note": "argues against; oikonomos need not be a magistrate"}

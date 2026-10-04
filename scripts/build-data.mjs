@@ -419,6 +419,14 @@ const SEPARATE = {
   G2810: 'Cleopas',
 };
 /**
+ * Verses TIPNR files under a namesake the text does not say is the same person, given to a person of their own:
+ * [TIPNR id, the new id, their name, the verses]. Listed, as SEPARATE is, where the People tab credits TIPNR.
+ */
+const SEPARATE_VERSES = [
+  // TIPNR puts the Demetrius whom 3 John 12 commends under the Ephesian silversmith of Acts 19; neither passage links them.
+  ['G1216', 'G1216-3John', 'Demetrius', ['3John.1.12']],
+];
+/**
  * Links TIPNR makes that the text does not, taken out of both people's records: [person, the people they are not
  * kin to]. Each is a change to TIPNR's data, listed where the People tab credits it.
  */
@@ -444,6 +452,18 @@ async function loadTipnr() {
     tipnr.records.push(rec);
     tipnr.people.push(rec);
   }
+  for (const [id, newId, name, refs] of SEPARATE_VERSES) {
+    const from = tipnr.people.find((r) => r.id === id);
+    if (!from) throw new Error(`SEPARATE_VERSES: no person ${id} in TIPNR`);
+    if (tipnr.records.some((r) => r.id === newId)) throw new Error(`SEPARATE_VERSES: ${newId} is already TIPNR's`);
+    const moved = (f) => f.refs.filter((r) => refs.includes(r.ref));
+    const forms = from.forms.filter((f) => moved(f).length).map((f) => ({ ...f, sig: 'Named', names: [name], refs: moved(f) }));
+    if (forms.flatMap((f) => f.refs).length < refs.length) throw new Error(`SEPARATE_VERSES: ${id} lacks some of ${refs}`);
+    from.forms = from.forms.map((f) => ({ ...f, refs: f.refs.filter((r) => !refs.includes(r.ref)) }));
+    const rec = { ...from, id: newId, unique: `${name}@${newId}`, parents: '', siblings: '', partners: '', offspring: '', tribe: '', forms };
+    tipnr.records.push(rec);
+    tipnr.people.push(rec);
+  }
   return tipnr;
 }
 /**
@@ -455,6 +475,18 @@ async function loadTipnr() {
 const EPONYMS = {
   H3478: 'Jacob', H6215G: 'Esau', H3063G: null, H1144G: null, H0669G: null, H4519G: null, H7205: null, H8095G: null,
   H3878: null, H1835H: null, H5321G: null, H1410G: null, H0836: null, H3485G: null, H2074: null, H2845: null,
+};
+/**
+ * Verses where two of TIPNR's records claim a name without its "a", "b" saying which word is whose: the ids, in the
+ * order of the original (null for a word that names no one), keyed "Strong's|ref". Where neither claimant is a
+ * person (Exodus 23:31's "Sea of the Philistines"; 2 Samuel 21:19's "the Bethlehemite", which TIPNR also files
+ * under Lahmi of 1 Chronicles 20:5) the words stay untagged and need nothing here.
+ */
+const NAMED_WORDS = {
+  // "To Ozni (לְאָזְנִי), the clan of the Oznite": the man TIPNR files under Ezbon (Gen 46:16), then the gentilic.
+  'H244|Num.26.16': ['H0675G', null],
+  // בֶּן־חוּר, both words of which are the governor's name, which the BSB gives as "Ben-hur"; TIPNR also lists his father Hur.
+  'H1133|1Kgs.4.8': ['H1133G', 'H1133G'],
 };
 /** The name a person is listed under when TIPNR's commonest form is not the one a reader looks for. */
 const LISTED_AS = { H3478: 'Jacob' };
@@ -476,7 +508,7 @@ async function tagPeople(chapters) {
     refused.add(`${id}|${ref}`);
     return false;
   };
-  const { tagged, words, ambiguous, filled } = tagWords(chapters, records, people, keep);
+  const { tagged, words, ambiguous, filled } = tagWords(chapters, records, people, keep, NAMED_WORDS);
   peopleTags = { tagged, refused };
   console.log('names   ', words, 'words tagged with the person they name (', filled, 'where TIPNR leaves the verse out);', ambiguous, 'left untagged where two share a verse unsorted');
 }

@@ -1,0 +1,37 @@
+{
+ "id": "ben-hadad-son-of-tabrimmon",
+ "name": "Ben-hadad son of Tabrimmon",
+ "role": "King of Aram in Damascus, paid by Asa to turn on Israel",
+ "people": ["H1130G"],
+ "when": "≈ 909–855 BC",
+ "whenBasis": "From Baasha's reign (≈909–886 BC), in which Asa paid him, to Ahab's wars with him, before Ahab's death in ≈853 BC, in Thiele's reckoning; the other readings in the Reign tab differ by a few years. These are the ends of the verses TIPNR gives him. The text does not give the years of his reign.",
+ "summary": "Son of Tabrimmon, son of Hezion, king of Aram ruling in Damascus. When Baasha of Israel fortified Ramah against Judah, Asa sent him the silver and gold left in the treasuries of the temple and the palace and asked him to break his treaty with Baasha. He did, and his commanders took Ijon, Dan, Abel-beth-maacah and the land of Naphtali, so that Baasha withdrew. A Ben-hadad king of Aram, whom TIPNR takes to be the same king, later besieged Ahab in Samaria with thirty-two kings, was routed twice, and was let go under a treaty.",
+ "body": [
+  "Asa's message recalls a treaty “between my father and your father”. The Chronicler adds that Hanani the seer rebuked Asa: “Because you have relied on the king of Aram and not on the LORD your God, the army of the king of Aram has escaped from your hand.”",
+  "At Samaria, Ben-hadad demanded Ahab's silver, gold, wives and children, and then the right to search his palace. When Ahab refused the second demand, he swore that not enough dust would remain of Samaria “for each of my men to have a handful”. Ahab answered, “The one putting on his armor should not boast like one taking it off.” The young officers of the district governors marched out at noon while Ben-hadad and the kings were drinking in their tents, and he escaped on horseback.",
+  "His servants told him that Israel's gods were “gods of the hills”, and the next spring he fought at Aphek on the plain. Beaten again, he hid in an inner room, and his servants went out to Ahab in sackcloth. Ahab called him “my brother”, took him up into his chariot, and released him under a treaty restoring the cities his father had taken and giving Israel marketplaces in Damascus. A prophet then told Ahab, “your life will be exchanged for his life”."
+ ],
+ "moments": [
+  {"ref": "1Kgs.15.18-19", "text": "Asa's silver and gold"},
+  {"ref": "1Kgs.15.20", "text": "Strikes the north of Israel"},
+  {"ref": "2Chr.16.7", "text": "Hanani rebukes Asa"},
+  {"ref": "1Kgs.20.1", "text": "Besieges Samaria"},
+  {"ref": "1Kgs.20.10-11", "text": "“A handful” of dust"},
+  {"ref": "1Kgs.20.20", "text": "Escapes on horseback"},
+  {"ref": "1Kgs.20.23", "text": "“Gods of the hills”"},
+  {"ref": "1Kgs.20.30", "text": "Hides at Aphek"},
+  {"ref": "1Kgs.20.32-34", "text": "“He is my brother”"},
+  {"ref": "1Kgs.20.42", "text": "A life for his life"},
+  {"ref": "Jer.49.27", "text": "“The fortresses of Ben-hadad”"}
+ ],
+ "later": [
+  {"text": "The text does not say whether the Ben-hadad whom Asa paid is the one who fought Ahab, or whether either is the Ben-hadad of Elisha's day. TIPNR takes Asa's ally and Ahab's enemy to be one king and the king Hazael smothered to be another. Easton's Bible Dictionary (1897) gives Asa's ally an entry of his own and makes his son the king who was “long engaged in war against Israel” and was killed by Hazael.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "1Kgs.20.34"}, {"kind": "data", "title": "TIPNR (Translators Individualised Proper Names), STEPBible, records for Ben-hadad", "url": "https://github.com/STEPBible/STEPBible-Data"}, {"kind": "scholarship", "title": "Easton's Bible Dictionary, “Ben-hadad”", "author": "M. G. Easton", "year": 1897}], "traditions": ["TIPNR, STEPBible", "M. G. Easton"]}
+ ],
+ "confidence": "evidence",
+ "sources": [
+  {"kind": "scripture", "ref": "1Kgs.15.16-22"},
+  {"kind": "scripture", "ref": "2Chr.16.1-9"},
+  {"kind": "scripture", "ref": "1Kgs.20.1-43"},
+  {"kind": "scripture", "ref": "Jer.49.27"}
+ ]
+}
