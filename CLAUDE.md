@@ -127,6 +127,47 @@ them in CI — read it before adding content.
 - Anything approximate is marked — `estimate` confidence, `estimated: true`, or a leading
   `≈` — and the card says what the approximation rests on. A derived figure (a calendar
   conversion, a capacity inferred from dimensions) says so in the body.
+
+### The project has no opinions of its own
+
+The content reports what the text says, what the evidence shows, and who reads it how. It never argues in its own
+voice. No test can enforce this, so apply it sentence by sentence.
+
+These rules bind whoever drafts the content (Claude), who never adds an opinion of their own. The project's author,
+Aaron Albers, may add one: it goes in attributed to Aaron Albers by name (an `interpretation`, with a `traditions` entry
+such as "Aaron Albers, the project's author"), alongside the scholars it draws on, each cited for what they hold.
+The New Jerusalem model is one: Aaron Albers's reading, built from a combination of other scholars' interpretations.
+Never put his opinion in the project's plain voice, and never extend it beyond what he said.
+
+- **Every judgment belongs to someone named.** That covers what a passage means, what an event shows or proves, which
+  explanation is better, how strong an argument or a piece of evidence is, and what a writer "meant". Name who holds
+  it (a church, a tradition, a school, a scholar) and cite where they say it. Where readings differ, give each with
+  its holders and give no verdict between them. Never use "we", "best held as", "the natural reading" or "rightly".
+- **Majority words are claims about people.** "Usually", "most", "widely", "generally", "traditionally", "scholars
+  agree", "the consensus" each need a source that says so (a standard reference, a survey of the field). Otherwise name
+  the holders instead, or cut the word. A view held by one scholar is that scholar's.
+- **No persuasive or evaluative wording in the project's voice.** Words like "weighs heavily", "plainest case",
+  "clearly", "proves", "absurd", "makes nonsense of", "only", "remarkable" or "decisive" belong in an attributed
+  sentence ("Paley argues …") or nowhere. A summary is held to this as much as a body.
+- **An argument is an interpretation.** An argument for or against a belief (an apologetic, a sceptical
+  reconstruction) gets `confidence: 'interpretation'`, with `traditions` naming who makes it and, where there is one,
+  who answers it, each with a source. Put the attested facts it builds on in their own card or entry with their own
+  badge, so a fact's `evidence` or `consensus` badge never carries the argument built on it. The argument's limits
+  are written as its critics' or its proponents' own concessions, attributed to them.
+- **A badge covers every sentence.** If one sentence of a `consensus` card is a reading, that sentence names its holder
+  or moves elsewhere. Inferences about the text ("the narrator writes as though …", "Paul treats this as absurd") are
+  readings: attribute them, or state only what the text says.
+- **Read the passage round every verse cited.** A quotation must do in the card what it does in its own argument. 1
+  Corinthians 15:15 is Paul showing where his opponents' view leads, not a possibility he allows. The same goes for a
+  primary text: read the paragraph, not the search hit.
+- **A source is cited only for what it says.** Attribute each detail to the earliest source that actually states it,
+  and do not let an early source stand behind a detail added later. 1 Clement records Peter's and Paul's martyrdom but
+  names neither Rome nor Nero; those come from Dionysius and Tertullian. Where a translation's wording is disputed or
+  differs from the original, say so and cite who reads it otherwise.
+- **Memory is not a citation.** A claim taken from a work not read in the session is either checked against a copy or
+  recorded in `FOLLOWUPS.md` as unchecked, and the card's wording stays no stronger than what was actually read.
+- **Review before handing over.** For each sentence of new content, ask: what source says this, who holds it if it is a
+  judgment, and is any of it in the project's own voice? Fix what fails, and list what could not be checked.
 - **Never cite Wikipedia.** Use it as a finding aid if you like, then trace the claim to the
   museum, primary text or publication and cite that. A test fails the build on any
   `sources[].url` pointing at a `wikipedia.org` host. Wikisource (public-domain primary
