@@ -134,5 +134,50 @@
   ],
   "confidence": "consensus",
   "related": ["tiglath-pileser-pekah-hoshea", "amos-earthquake"]
+ },
+ {
+  "id": "shiloh-khirbet-seilun",
+  "title": "Shiloh, by the road from Bethel to Shechem",
+  "kind": "geography",
+  "verses": ["Judg.21.19-23", "Josh.18.1", "1Sam.1.3", "1Sam.4.3-4"],
+  "summary": "Judges 21:19 places Shiloh 'north of Bethel east of the road that goes up from Bethel to Shechem, and south of Lebonah'. S. R. Driver and John Wijngaards find the ruin of Khirbet Seilun where that description puts it. Whether it was also the Shiloh of the tent and the ark is a question of its own.",
+  "body": [
+   "Judges 21:19 gives directions: Shiloh is 'north of Bethel east of the road that goes up from Bethel to Shechem, and south of Lebonah.' S. R. Driver (1902), as John Wijngaards quotes him, follows the road north from Beitin (Bethel): Seilun stands 9½ miles north-north-east of it, a little east of the highway, and el-Lubban, 'evidently the Lebonah of Jg 21,19', 3 miles north-north-west of Seilun. Wijngaards credits E. Robinson with finding the site, and Schwartz and Shemesh cite Robinson and Smith for Seilun as the name Shiloh kept.",
+   "Eusebius's Onomasticon places Shiloh in Ephraim, where 'the ark remained … until the time of Samuel', 'twelve miles from Neapolis in Akrabattine'; Jerome's Latin makes it ten. Schwartz and Shemesh report four Byzantine churches built at Khirbet Seilun, and that in the Crusader period Shiloh was placed instead at Nabi Samwil.",
+   "A Danish team led by Hans Kjaer dug at Khirbet Seilun in the 1920s and 1930s, and Israel Finkelstein in the 1980s. Schwartz and Shemesh write that 'the exact location of the Tabernacle complex at Shiloh has occupied many researchers, and this issue remains in dispute'; Wijngaards notes that neither excavation found a trace of the sanctuary. Whether Khirbet Seilun was the Shiloh of the sanctuary at all is set out in its own card."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Judg.21.19"},
+   {"kind": "primary", "title": "Eusebius, Onomasticon 156.28", "author": "Eusebius of Caesarea", "note": "'It is twelve miles from Neapolis in Akrabattine' (Notley and Safrai's translation, as Schwartz and Shemesh quote it)"},
+   {"kind": "scholarship", "title": "'The Cult in Shiloh during the Roman-Byzantine Period', Religions 10 (2019) 591", "author": "Amichay Schwartz and Abraham Ofir Shemesh", "year": 2019, "url": "https://doi.org/10.3390/rel10110591"},
+   {"kind": "scholarship", "title": "'An alternative location for the ancient sanctuary of Shiloh?'", "author": "John Wijngaards", "year": 2020, "url": "https://www.johnwijngaards.com/download/alternative_location_for_Shiloh.pdf", "note": "quotes S. R. Driver, 'Shiloh', Hastings' Dictionary of the Bible IV (1902) 499–500, and cites Robinson, Biblical Researches (1841) II 268–270"}
+  ],
+  "confidence": "evidence",
+  "related": ["shiloh-sanctuary-where"]
+ },
+ {
+  "id": "shiloh-sanctuary-where",
+  "title": "Where the sanctuary at Shiloh stood",
+  "kind": "geography",
+  "verses": ["Josh.18.1", "Josh.16.6", "Judg.21.12-21", "1Sam.4.3-4", "1Kgs.14.2-4", "Jer.7.12", "Jer.41.5", "Ps.78.60"],
+  "summary": "Robinson, Driver, Albright, and Schwartz and Shemesh take Khirbet Seilun for the Shiloh where the tent of meeting and the ark stood. John Wijngaards argues that the sanctuary stood in the valley of Shechem, at Taanath-shiloh, and that Khirbet Seilun is a different Shiloh.",
+  "body": [
+   "For Khirbet Seilun: Judges 21:19's directions fit it, Eusebius places the Shiloh of the ark at about its distance from Neapolis, its name is Shiloh's, and Byzantine Christians built churches there. W. F. Albright, as Wijngaards quotes him, explains why Judges should spell out the way to so famous a place: 'When the Book of Judges was [completed], probably at about 700 BC, the site of Shiloh was evidently abandoned since the redactor deems it necessary to give us the exact description of the place.' Wijngaards reports that most later commentators take the directions as a note of that kind, 'inserted to preserve a record of Shiloh's position'.",
+   "Wijngaards (2020), who calls the identification 'almost universally accepted by archaeologists', agrees that Khirbet Seilun is the Shiloh of Judges 21:19, and argues it is not the sanctuary's. In Judges 21 the young women are brought to 'the camp at Shiloh' (21:12), and the elders then direct the Benjamites to a Shiloh they must describe (21:19), which, he writes, the text 'introduces … as an unknown locality'; he finds no sign in the text that the directions are a later note. He reports that the Danish excavations found Seilun uninhabited from about 1050 to 350 BC, while Kings has Ahijah living at Shiloh (1 Kings 14:2-4) and Jeremiah has men coming from Shiloh (41:5), and that no trace of the sanctuary has been found. He proposes Taanath-shiloh, on Ephraim's border (Joshua 16:6), at Khirbet Tana in the valley of Shechem, where his own studies place Israel's early covenant ceremonies.",
+   "Wijngaards calls his arguments a 'devil's advocate' and allows that Judges 21:19b 'could, of course, be a gloss skilfully inserted into the text by a later redactor'. He concludes that it 'seems certainly possible, if not likely, that the ancient pre-monarchic sanctuary of Shiloh lay in the valley of Shechem', and that Khirbet Seilun 'might be acceptable as an emergency solution forced on us by defect of anything better.' He also reports an earlier proposal, A. T. Richardson's (1925), of Beit Silo near Beitunia."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Judg.21.12"},
+   {"kind": "scripture", "ref": "Judg.21.19"},
+   {"kind": "scripture", "ref": "Josh.16.6"},
+   {"kind": "scripture", "ref": "1Kgs.14.2"},
+   {"kind": "scripture", "ref": "Jer.41.5"},
+   {"kind": "primary", "title": "Eusebius, Onomasticon 156.28", "author": "Eusebius of Caesarea", "note": "'It is twelve miles from Neapolis in Akrabattine' (Notley and Safrai's translation, as Schwartz and Shemesh quote it)"},
+   {"kind": "scholarship", "title": "'The Cult in Shiloh during the Roman-Byzantine Period', Religions 10 (2019) 591", "author": "Amichay Schwartz and Abraham Ofir Shemesh", "year": 2019, "url": "https://doi.org/10.3390/rel10110591"},
+   {"kind": "scholarship", "title": "'An alternative location for the ancient sanctuary of Shiloh?'", "author": "John Wijngaards", "year": 2020, "url": "https://www.johnwijngaards.com/download/alternative_location_for_Shiloh.pdf", "note": "quotes Albright and Driver, and reports Richardson (Palestine Exploration Fund Quarterly Statement, 1925, 1927) and the Danish excavation reports"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["Khirbet Seilun: E. Robinson (1841) and S. R. Driver (1902), as Wijngaards cites them; W. F. Albright, as Wijngaards quotes him; Amichay Schwartz and Abraham Ofir Shemesh (Religions, 2019)", "Taanath-shiloh in the valley of Shechem: John Wijngaards (2020)", "Beit Silo near Beitunia: A. T. Richardson (1925), as Wijngaards reports him"],
+  "related": ["shiloh-khirbet-seilun"]
  }
 ]

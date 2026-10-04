@@ -446,3 +446,14 @@ works, one identification, none dissenting), and a search found no one placing t
   (1926). Left out until a source is read.
 - **No modern standard reference read** for the identification (the *New Encyclopedia of Archaeological Excavations*
   entry, Rainey and Notley's *Sacred Bridge*) to back the OpenBible survey.
+
+## Shiloh (`shiloh-khirbet-seilun`, `shiloh-sanctuary-where`), 2026-10-04
+
+Reviewed for a `consensus` badge and does not qualify: John Wijngaards (2020) argues that the sanctuary stood in the
+valley of Shechem, and A. T. Richardson (1925) placed Shiloh at Beit Silo.
+
+- **The Seilun side is largely second-hand.** Robinson, Driver and Albright are cited as Wijngaards quotes them, and
+  Eusebius as Schwartz and Shemesh quote Notley and Safrai. *Needed:* Robinson's *Biblical Researches* (1841) II
+  268–270, Driver's Hastings article, and Finkelstein's *Shiloh* (1993), whose own reading of the site, including
+  what he found of Iron Age II there, should answer Wijngaards's report of a gap from 1050 to 350 BC.
+- **Richardson not read.** His Beit Silo proposal is given only as Wijngaards reports it.
