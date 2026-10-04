@@ -507,10 +507,38 @@ export interface SkyReading {
   sources: Source[];
   events: SkyEvent[];
 }
-/** `public/data/sky.json`: stars as [ra, dec, V mag, B−V, pmRA, pmDec] (J2000, degrees and mas/yr), names by star index, constellation lines as runs of star indices, and where each constellation's name goes. */
+/**
+ * What a reading of a star name points to in the sky: constellations by their IAU abbreviation (as d3-celestial keys
+ * their lines), stars by the names `sky.json` gives them, clusters by name, or a planet as the evening or morning star.
+ */
+export interface SkyFigure {
+  constellations?: string[]; stars?: string[]; cluster?: string;
+  planet?: { body: SkyBody; as: 'evening' | 'morning' };
+  /** Where the view looks, [ra, dec] in degrees, for a figure too wide to centre on (the zodiac). */
+  centre?: [number, number];
+}
+/** One identification of a star name: what it points to, who holds it, and where they say so. */
+export interface SkyNameReading {
+  id: string; label: string; figure: SkyFigure;
+  confidence: Confidence; traditions: string[]; sources: Source[];
+  note?: string;
+}
+/**
+ * A Hebrew word the text uses for a star or a group of stars (kimah, "the Pleiades"), the verses it stands in, and the
+ * identifications proposed for it. The Sky tab shows each in the sky over Jerusalem on an evening it stands high.
+ */
+export interface SkyName {
+  id: string; word: string; hebrew: string; strongs: string; rendered: string;
+  refs: Ref[]; summary: string;
+  /** For what the summary says that no reading cites. */
+  sources?: Source[];
+  readings: SkyNameReading[];
+}
+/** `public/data/sky.json`: stars as [ra, dec, V mag, B−V, pmRA, pmDec] (J2000, degrees and mas/yr), names by star index, clusters by name (their members' indices), constellation lines as runs of star indices, and where each constellation's name goes. */
 export interface SkyData {
   stars: [number, number, number, number, number, number][];
   names: Record<string, string>;
+  clusters: Record<string, number[]>;
   lines: Record<string, number[][]>;
   labels: [string, number, number][];
 }

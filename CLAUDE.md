@@ -426,6 +426,14 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   Nothing a record does not place is drawn: the comet of 5 BC has no orbit, so its view frames the region the record
   names. Each reading's critics go in its `traditions` ("Answered by …"). Quote a holder from what they wrote, read in
   the session.
+- The stars the text names (`names` in `skies.json`: kimah, kesil, ʿash/ʿayish, mazzaroth) each list the
+  identifications proposed for the Hebrew word, every one an `interpretation` naming who holds it (BDB, the Septuagint
+  and Vulgate verse by verse, Reyburn's UBS handbook, the BSB's own footnotes). A `figure` is what the Sky tab lights:
+  d3-celestial constellations by IAU abbreviation, stars `sky.json` names, a cluster (`CLUSTERS` in `scripts/sky.mjs`),
+  or Venus as the evening or morning star. It is shown over Jerusalem in ≈760 BC (`NAME_YEAR`, inside the reigns
+  Amos 1:1 names) on the evening the figure stands highest, or at the planet's elongation. A test fails the build if
+  a name's Strong's number is not in each of its verses, or a figure names a constellation, star or cluster the sky
+  lacks.
 
 When a feature falls short of complete or correct (a source that could not be found or verified, a claim dropped
 or left vague for want of one, a citation not checked, a piece its neighbours have missing), record it in

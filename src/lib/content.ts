@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, SkyEvent, SkyReading, Speaker, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
+import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, SkyEvent, SkyName, SkyReading, Speaker, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -46,7 +46,12 @@ export const PRICES = WORTH.prices;
 /** The readings of the star of the Magi, each with the moments of its sky (the Sky tab). */
 export const SKY_READINGS = skies.readings as unknown as SkyReading[];
 export const skyEventsFor = (loc: VerseLoc, r: SkyReading): SkyEvent[] => r.events.filter((e) => contains(e.ref, loc));
-export const skyInChapter = (book: string, chapter: number) => SKY_READINGS.some((r) => r.events.some((e) => touchesChapter(e.ref, book, chapter)));
+/** The stars the text names (kimah, kesil, ʿash, mazzaroth), with the identifications proposed for each. */
+export const SKY_NAMES = (skies as unknown as { names: SkyName[] }).names;
+export const skyNamesFor = (loc: VerseLoc) => SKY_NAMES.filter((n) => n.refs.some((r) => contains(r, loc)));
+export const skyNamesInChapter = (book: string, chapter: number) => SKY_NAMES.filter((n) => n.refs.some((r) => touchesChapter(r, book, chapter)));
+export const magiInChapter = (book: string, chapter: number) => SKY_READINGS.some((r) => r.events.some((e) => touchesChapter(e.ref, book, chapter)));
+export const skyInChapter = (book: string, chapter: number) => magiInChapter(book, chapter) || skyNamesInChapter(book, chapter).length > 0;
 /** The churches that read books beyond the 66, and the translations those books are shown in. */
 export const CANONS = canons.canons as unknown as ChurchCanon[];
 export const TEXTS = canons.texts as unknown as TextSource[];

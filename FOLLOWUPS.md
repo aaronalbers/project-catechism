@@ -364,3 +364,13 @@ Kepler; Origen, *Against Celsus* 1.58–59; Chrysostom, *Homily 6 on Matthew*.
   a degree lower than seen, and stars are not dimmed there.
 - **A link out to Stellarium Web** for each moment was planned but not added; whether its URL takes a BC date and a
   place has not been checked.
+- **Star names: holders cited through others.** Stern, Nöldeke and Hoffmann (kimah as Sirius, ʿash as the Pleiades)
+  are cited as BDB reports them, and Dhorme (mazzaroth as Corona Borealis) and the "others" who read the zodiac as
+  Reyburn reports them; none of their works was read. Dillmann, whom BDB follows for the Great Bear, was not read.
+- **Star names: versions not consulted.** The Syriac (which Reyburn says reverses Job 9:9's order, as the Septuagint
+  does) and the Targum (which BDB cites for kimah) were not read, nor G. R. Driver's articles on these passages. The
+  Septuagint is read in Brenton's English, and the Vulgate from biblestudytools.com, not a critical edition.
+- **Star names: the versions' identifications follow word order.** Each Vulgate and Septuagint name is matched to the
+  Hebrew word in the same place in the list (reversed for the Septuagint at Job 9:9, as Reyburn says it runs). Where a
+  version paraphrases (the Septuagint at Amos 5:8 names no stars), it is not used.
+- **Isaiah 13:10 and 2 Kings 23:5** name "constellations" (kesilim, mazzalot) without naming one, so they are not drawn.

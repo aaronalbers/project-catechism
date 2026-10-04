@@ -3,15 +3,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { follow, useStore } from '@/app/store';
-import { SKY_READINGS, skyEventsFor } from '@/lib/content';
+import { magiInChapter, SKY_READINGS, skyEventsFor, skyNamesFor, skyNamesInChapter } from '@/lib/content';
 import { loadPlaces, loadSky } from '@/lib/data';
 import { formatRef } from '@/lib/refs';
 import {
-  altAz, bearing, bodyEqj, closest, deltaTHours, eqjOf, formatUt, horizonRotation, magnitude, moonLit, observer, occultation, PLANETS,
-  starEqj, station, sunAltitude, toHorizon, utOf,
+  altAz, bearing, bodyEqj, closest, deltaTHours, elongationTime, eqjOf, eveningWhenHigh, figureCentre, formatUt, horizonRotation, magnitude, moonLit,
+  observer, occultation, PLANETS, starEqj, station, sunAltitude, toHorizon, utOf, whenOf,
 } from '@/lib/sky';
-import type { Place, SkyData, SkyEvent, SkyReading } from '@/lib/types';
-import { ConfidenceBadge, SourceList } from '@/components/SourceList';
+import type { Place, SkyData, SkyEvent, SkyFigure, SkyName, SkyNameReading, SkyReading } from '@/lib/types';
+import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
 
 const RAD = Math.PI / 180;
 /** Stars and planets sit on a sphere this far out; the ground is a hemisphere inside it, so it hides what has set. */
@@ -89,7 +89,7 @@ function glowTexture(colour: string) {
 
 interface Label { el: HTMLSpanElement; at: THREE.Vector3; kind: string; w?: number; h?: number; mag?: number }
 /** Which labels win where two would overlap. */
-const PRIORITY: Record<string, number> = { planet: 0, toward: 1, compass: 1, star: 2, mark: 3, constellation: 4 };
+const PRIORITY: Record<string, number> = { lit: 0, planet: 0, toward: 1, compass: 1, star: 2, mark: 3, constellation: 4 };
 
 /** The moment's view: where the camera looks and when. */
 interface ViewState { ut: number; az: number; alt: number; fov: number; daylight: boolean; ground: boolean }
@@ -100,7 +100,22 @@ function initialView(e: SkyEvent, place: Place, sky: SkyData): ViewState {
   return { ut, az: look.az, alt: Math.max(5, Math.min(80, look.alt)), fov: e.fov ?? 70, daylight: !e.dark, ground: true };
 }
 
-function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent; place: Place; toward?: Place }) {
+/** A figure lit in the sky: its constellations' lines, and rings round its cluster, stars or planet, with a name. */
+interface Lit { figure: SkyFigure; label: string }
+
+/** Points of a circle `radius` degrees round a J2000 direction, in J2000. */
+function circleAround(c: [number, number, number], radius: number, n = 64): [number, number, number][] {
+  const ref: [number, number, number] = Math.abs(c[2]) < 0.9 ? [0, 0, 1] : [1, 0, 0];
+  const cross = (a: number[], b: number[]): [number, number, number] => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+  const norm = (a: [number, number, number]): [number, number, number] => { const r = Math.hypot(...a); return [a[0] / r, a[1] / r, a[2] / r]; };
+  const u = norm(cross(c, ref)), w = cross(c, u), r = radius * RAD;
+  return Array.from({ length: n + 1 }, (_, i) => {
+    const t = (i / n) * Math.PI * 2;
+    return [0, 1, 2].map((k) => Math.cos(r) * c[k] + Math.sin(r) * (Math.cos(t) * u[k] + Math.sin(t) * w[k])) as [number, number, number];
+  });
+}
+
+function SkyView({ sky, event, place, toward, lit }: { sky: SkyData; event: SkyEvent; place: Place; toward?: Place; lit?: Lit }) {
   const host = useRef<HTMLDivElement>(null);
   const [view, setView] = useState(() => initialView(event, place, sky));
   const [playing, setPlaying] = useState(false);
@@ -141,12 +156,37 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
     scene.add(new THREE.Points(starGeo, starMat));
 
     // Constellation lines, as pairs of star positions.
-    const pairs: [number, number][] = Object.values(sky.lines).flatMap((runs) => runs.flatMap((run) => run.slice(1).map((b, k) => [run[k], b] as [number, number])));
-    const lineGeo = new THREE.BufferGeometry();
-    const linePos = new Float32Array(pairs.length * 6);
-    lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3));
-    const lineMat = new THREE.LineBasicMaterial({ color: '#5a7bb5', transparent: true, opacity: 0.45, depthWrite: false });
-    scene.add(new THREE.LineSegments(lineGeo, lineMat));
+    // A lit figure's constellations are drawn apart, in gold, and the rest dimmer.
+    const litCons = new Set(lit?.figure.constellations ?? []);
+    const pairsOf = (keep: (c: string) => boolean): [number, number][] => Object.entries(sky.lines).filter(([c]) => keep(c)).flatMap(([, runs]) => runs.flatMap((run) => run.slice(1).map((b, k) => [run[k], b] as [number, number])));
+    const lineSets = [
+      { pairs: pairsOf((c) => !litCons.has(c)), colour: '#5a7bb5', opacity: lit ? 0.3 : 0.45 },
+      { pairs: pairsOf((c) => litCons.has(c)), colour: '#e6b85c', opacity: 0.9 },
+    ].map((s) => {
+      const geo = new THREE.BufferGeometry();
+      const pos = new Float32Array(s.pairs.length * 6);
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      scene.add(new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: s.colour, transparent: true, opacity: s.opacity, depthWrite: false })));
+      return { pairs: s.pairs, geo, pos };
+    });
+
+    // Rings round a lit cluster, its named stars, or its planet (which moves, so its ring is found at each time).
+    const rings: { centre: (ut: number) => [number, number, number]; radius: number; geo: THREE.BufferGeometry; pos: Float32Array }[] = [];
+    const addRing = (centre: (ut: number) => [number, number, number], radius: number) => {
+      const geo = new THREE.BufferGeometry(), pos = new Float32Array(65 * 3);
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      scene.add(new THREE.Line(geo, new THREE.LineBasicMaterial({ color: '#e6b85c', transparent: true, opacity: 0.9, depthWrite: false })));
+      rings.push({ centre, radius, geo, pos });
+    };
+    if (lit?.figure.cluster) {
+      const members = (sky.clusters?.[lit.figure.cluster] ?? []).map((i) => starEqj(sky.stars[i], 0));
+      const c = members.reduce((a, v) => [a[0] + v[0], a[1] + v[1], a[2] + v[2]], [0, 0, 0]), r = Math.hypot(...c);
+      const centre: [number, number, number] = [c[0] / r, c[1] / r, c[2] / r];
+      const spread = Math.max(...members.map((v) => Math.acos(Math.min(1, v[0] * centre[0] + v[1] * centre[1] + v[2] * centre[2])) / RAD));
+      addRing(() => centre, spread + 0.8);
+    }
+    for (const name of lit?.figure.stars ?? []) { const i = Number(Object.entries(sky.names).find(([, n]) => n === name)?.[0]); addRing((ut) => starEqj(sky.stars[i], ut), 1.6); }
+    if (lit?.figure.planet) { const body = lit.figure.planet.body; addRing((ut) => bodyEqj(body, ut, obs), 1.6); }
 
     // Planets, with their sizes from their magnitudes; the Sun and the Moon as sprites.
     const planetGeo = new THREE.BufferGeometry();
@@ -206,6 +246,7 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
     const sunLabel = label('Sun', 'planet'), moonLabel = label('Moon', 'planet');
     for (const [text, az] of [['N', 0], ['E', 90], ['S', 180], ['W', 270]] as const) label(text, 'compass').at.copy(dirOf(az, 0).multiplyScalar(GROUND_R));
     if (toward && towardAz !== null) label(`${toward.name} ↓`, 'toward').at.copy(dirOf(towardAz, 3).multiplyScalar(SKY_R));
+    const litLabel = lit ? label(lit.label, 'lit') : null;
     const markLabels = (track?.marks ?? []).map((m) => ({ ut: utOf(m.on, place.lon), l: label(m.text, 'mark') }));
     all.sort((a, b) => PRIORITY[a.kind] - PRIORITY[b.kind]);
 
@@ -216,8 +257,22 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
       const at = (e: [number, number, number], r = SKY_R) => scenePos(toHorizon(rot, e), r);
       sky.stars.forEach((s, i) => { const p = at(starEqj(s, v.ut)); starPos[i * 3] = p.x; starPos[i * 3 + 1] = p.y; starPos[i * 3 + 2] = p.z; });
       starGeo.attributes.position.needsUpdate = true;
-      pairs.forEach(([a, b], k) => { linePos.set(starPos.subarray(a * 3, a * 3 + 3), k * 6); linePos.set(starPos.subarray(b * 3, b * 3 + 3), k * 6 + 3); });
-      lineGeo.attributes.position.needsUpdate = true;
+      for (const s of lineSets) {
+        s.pairs.forEach(([a, b], k) => { s.pos.set(starPos.subarray(a * 3, a * 3 + 3), k * 6); s.pos.set(starPos.subarray(b * 3, b * 3 + 3), k * 6 + 3); });
+        s.geo.attributes.position.needsUpdate = true;
+      }
+      for (const r of rings) {
+        const c = r.centre(v.ut);
+        circleAround(c, r.radius).forEach((p, i) => { const q = at(p, SKY_R * 0.995); r.pos.set([q.x, q.y, q.z], i * 3); });
+        r.geo.attributes.position.needsUpdate = true;
+      }
+      if (litLabel && lit) {
+        // The name goes beside the first ring, or the middle of the lit lines.
+        const first = rings[0] ? at(rings[0].centre(v.ut)) : null;
+        const pts = lineSets[1].pairs.flat();
+        const mid = pts.length ? pts.reduce((a, i) => a.add(new THREE.Vector3(starPos[i * 3], starPos[i * 3 + 1], starPos[i * 3 + 2])), new THREE.Vector3()).multiplyScalar(1 / pts.length) : null;
+        litLabel.at.copy(first ?? mid ?? new THREE.Vector3());
+      }
       for (const { i, l } of starLabels) l.at.set(starPos[i * 3], starPos[i * 3 + 1], starPos[i * 3 + 2]);
       for (const { v: e, l } of conLabels) l.at.copy(at(e));
       PLANETS.forEach((p, i) => {
@@ -229,8 +284,8 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
       const sunV = bodyEqj('Sun', v.ut, obs), moonV = bodyEqj('Moon', v.ut, obs);
       sun.position.copy(at(sunV, SKY_R * 0.98)); sunLabel.at.copy(sun.position);
       moon.position.copy(at(moonV, SKY_R * 0.97)); moonLabel.at.copy(moon.position);
-      const lit = Math.round(moonLit(v.ut) * 50) / 50;
-      if (lit !== lastLit) { moonMat.map?.dispose(); moonMat.map = moonTexture(lit); moonMat.needsUpdate = true; lastLit = lit; }
+      const phase = Math.round(moonLit(v.ut) * 50) / 50;
+      if (phase !== lastLit) { moonMat.map?.dispose(); moonMat.map = moonTexture(phase); moonMat.needsUpdate = true; lastLit = phase; }
       (moon.userData as { sunward: THREE.Vector3 }).sunward = at([moonV[0] + (sunV[0] - moonV[0]) * 0.01, moonV[1] + (sunV[1] - moonV[1]) * 0.01, moonV[2] + (sunV[2] - moonV[2]) * 0.01], SKY_R * 0.97);
       for (const path of paths) {
         path.pts.forEach((p, i) => { const q = at(p.v, SKY_R * 0.995); path.pos.set([q.x, q.y, q.z], i * 3); });
@@ -323,7 +378,7 @@ function SkyView({ sky, event, place, toward }: { sky: SkyData; event: SkyEvent;
       renderer.dispose(); renderer.forceContextLoss();
       el.removeChild(renderer.domElement); el.removeChild(labels);
     };
-  }, [sky, event, place, toward]);
+  }, [sky, event, place, toward, lit]);
 
   const obs = useMemo(() => observer(place), [place]);
   const sunAlt = sunAltitude(view.ut, obs);
@@ -392,7 +447,21 @@ function ReadingCard({ r, here, picked, onPick }: { r: SkyReading; here: SkyEven
   );
 }
 
-export function SkyPanel() {
+/** The sky notes every view carries: what the positions are and what they leave out. */
+function SkyNote({ ut }: { ut: number }) {
+  return (
+    <p className="sky-note">
+      Positions are astronomy-engine’s, for the Julian-calendar date and local mean time shown, without refraction. The
+      Earth’s spin has slowed unevenly, and the correction for it (ΔT, ≈{deltaTHours(ut).toFixed(1)} hours here, from
+      Espenak and Meeus’s model) is itself uncertain, so an hour or an altitude is ≈; the dates of conjunctions and
+      stations do not depend on it. Stars from the Yale Bright Star Catalogue, moved by their proper motions; constellation
+      lines from d3-celestial (Olaf Frohn, BSD licence).
+    </p>
+  );
+}
+
+/** The readings of the star of the Magi, and the moment of the one chosen that the verse points to. */
+function MagiSection({ sky, places }: { sky: SkyData | null; places: Map<string, Place> | null }) {
   const loc = useStore((s) => s.loc);
   const [readingId, setReadingId] = useState(SKY_READINGS[0].id);
   const reading = SKY_READINGS.find((r) => r.id === readingId) ?? SKY_READINGS[0];
@@ -401,25 +470,16 @@ export function SkyPanel() {
   // Reading on to a moment's verse shows that moment.
   useEffect(() => { if (here) setPickedId(here.id); }, [here]);
   const event: SkyEvent | undefined = reading.events.find((e) => e.id === pickedId) ?? here ?? reading.events[0];
-
-  const [sky, setSky] = useState<SkyData | null>(null);
-  const [places, setPlaces] = useState<Map<string, Place> | null>(null);
-  const [failed, setFailed] = useState(false);
-  useEffect(() => {
-    loadSky().then(setSky, () => setFailed(true));
-    loadPlaces().then((ps) => setPlaces(new Map(ps.map((p) => [p.slug, p]))), () => setFailed(true));
-  }, []);
   const place = event && places?.get(event.place), toward = event?.toward ? places?.get(event.toward) : undefined;
-
   return (
-    <div className="panel-body">
+    <>
+      <h2 className="sky-section">The star of the Magi</h2>
       {SKY_READINGS.length > 1 && (
         <div className="reign-modes" role="group" aria-label="Reading">
           {SKY_READINGS.map((r) => <button key={r.id} aria-pressed={r === reading} onClick={() => { setReadingId(r.id); setPickedId(null); }}>{r.label}</button>)}
         </div>
       )}
       <ReadingCard r={reading} here={here} picked={event} onPick={(e) => setPickedId(e.id)} />
-      {failed && <div className="empty"><p>The sky data has not been built. Run <code>npm run data</code>.</p></div>}
       {sky && place && event && (
         <div className="card">
           <h3><span style={{ flex: 1 }}>{event.title}</span></h3>
@@ -431,13 +491,89 @@ export function SkyPanel() {
           <SourceList sources={event.sources} />
         </div>
       )}
-      {event && <p className="sky-note">
-        Positions are astronomy-engine’s, for the Julian-calendar date and local mean time shown, without refraction. The
-        Earth’s spin has slowed unevenly, and the correction for it (ΔT, ≈{deltaTHours(utOf(event.when)).toFixed(1)} hours here, from
-        Espenak and Meeus’s model) is itself uncertain, so an hour or an altitude is ≈; the dates of conjunctions and
-        stations do not depend on it. Stars from the Yale Bright Star Catalogue, moved by their proper motions; constellation
-        lines from d3-celestial (Olaf Frohn, BSD licence).
-      </p>}
+      {event && <SkyNote ut={utOf(event.when)} />}
+    </>
+  );
+}
+
+/**
+ * The year a star name's sky is shown in: ≈760 BC, within the reigns of Uzziah and Jeroboam II that Amos 1:1 names,
+ * as rulers.json dates them (Job names no date, so its verses are shown in the same year). Astronomical year.
+ */
+const NAME_YEAR = -759;
+const NAME_BASIS = 'The sky over Jerusalem in ≈760 BC, within the reigns of Uzziah and Jeroboam II that Amos 1:1 names (Job names no date, so its verses are shown in the same year)';
+
+/** A star the text names: the identifications proposed for it, each lit in the sky on an evening it is well seen. */
+function NameCard({ n, sky, places, here }: { n: SkyName; sky: SkyData | null; places: Map<string, Place> | null; here: boolean }) {
+  const [readingId, setReadingId] = useState(n.readings[0].id);
+  const r: SkyNameReading = n.readings.find((x) => x.id === readingId) ?? n.readings[0];
+  const jerusalem = places?.get('jerusalem');
+  const view = useMemo(() => {
+    if (!sky || !jerusalem) return null;
+    const fig = r.figure, obs = observer(jerusalem);
+    const ut = fig.planet ? elongationTime(fig.planet.body, fig.planet.as, NAME_YEAR, jerusalem) : eveningWhenHigh(figureCentre(fig, sky), NAME_YEAR, jerusalem);
+    const centre = fig.planet ? bodyEqj(fig.planet.body, ut, obs) : (() => { const [ra, dec] = figureCentre(fig, sky); return [Math.cos(dec * RAD) * Math.cos(ra * RAD), Math.cos(dec * RAD) * Math.sin(ra * RAD), Math.sin(dec * RAD)] as [number, number, number]; })();
+    const look = altAz(toHorizon(horizonRotation(ut, obs), centre));
+    const event: SkyEvent = {
+      id: `${n.id}-${r.id}`, ref: n.refs[0], title: r.label, when: whenOf(ut, jerusalem.lon), place: 'jerusalem',
+      look: [look.az, look.alt], fov: (fig.constellations?.length ?? 0) > 3 ? 120 : fig.constellations ? 75 : 50, estimated: true, text: '', sources: [],
+    };
+    const basis = fig.planet
+      ? `${NAME_BASIS}, on the ${fig.planet.as} nearest that year when ${fig.planet.body} stands farthest from the Sun as the ${fig.planet.as} star, fifty minutes ${fig.planet.as === 'evening' ? 'after sunset' : 'before sunrise'}.`
+      : `${NAME_BASIS}, on the evening of that year when it stands highest at 9 p.m.`;
+    return { event, basis, lit: { figure: fig, label: r.label } };
+  }, [sky, jerusalem, n, r]);
+  return (
+    <div className={`card${here ? ' here' : ''}`}>
+      <h3><span style={{ flex: 1 }}>{n.word} <span className="muted" lang="he">{n.hebrew}</span></span><span className="chip">{n.strongs}</span></h3>
+      <div className="verses">
+        {n.refs.map((ref) => <RefChip key={ref} r={ref} />)}
+        <span className="chip">BSB: “{n.rendered}”</span>
+      </div>
+      <p className="summary">{n.summary}</p>
+      {n.sources && <SourceList sources={n.sources} />}
+      <div className="reign-modes" role="group" aria-label="Identification">
+        {n.readings.map((x) => <button key={x.id} aria-pressed={x === r} onClick={() => setReadingId(x.id)}>{x.label}</button>)}
+      </div>
+      <h4 className="sky-reading"><span style={{ flex: 1 }}>{r.label}</span><ConfidenceBadge c={r.confidence} /></h4>
+      {r.note && <p className="body">{r.note}</p>}
+      {view && jerusalem && sky && (
+        <>
+          <p className="muted">≈ {formatUt(utOf(view.event.when, jerusalem.lon), jerusalem.lon)} local mean time, seen from Jerusalem</p>
+          <SkyView sky={sky} event={view.event} place={jerusalem} lit={view.lit} />
+          <p className="sky-basis">≈ {view.basis}</p>
+        </>
+      )}
+      <SourceList sources={r.sources} traditions={r.traditions} />
+    </div>
+  );
+}
+
+export function SkyPanel() {
+  const loc = useStore((s) => s.loc);
+  const [sky, setSky] = useState<SkyData | null>(null);
+  const [places, setPlaces] = useState<Map<string, Place> | null>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    loadSky().then(setSky, () => setFailed(true));
+    loadPlaces().then((ps) => setPlaces(new Map(ps.map((p) => [p.slug, p]))), () => setFailed(true));
+  }, []);
+  // The names this verse uses come first, then the rest of the chapter's; the star of the Magi in its own chapters,
+  // or wherever no star is named.
+  const atVerse = skyNamesFor(loc);
+  const names = [...atVerse, ...skyNamesInChapter(loc.book, loc.chapter).filter((n) => !atVerse.includes(n))];
+  const magi = magiInChapter(loc.book, loc.chapter) || names.length === 0;
+  return (
+    <div className="panel-body">
+      {failed && <div className="empty"><p>The sky data has not been built. Run <code>npm run data</code>.</p></div>}
+      {names.length > 0 && (
+        <>
+          <h2 className="sky-section">Stars the text names</h2>
+          {names.map((n) => <NameCard key={n.id} n={n} sky={sky} places={places} here={atVerse.includes(n)} />)}
+          {sky && <SkyNote ut={utOf('-0759-01-01')} />}
+        </>
+      )}
+      {magi && <MagiSection sky={sky} places={places} />}
     </div>
   );
 }

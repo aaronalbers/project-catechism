@@ -410,6 +410,9 @@ body.resizing-y { cursor: row-resize; }
 .sky-computed h4 { font-size: 13px; margin: 8px 0 2px; }
 .sky-computed ul { margin: 0; padding-left: 18px; font-size: 13px; }
 .sky-note { color: var(--muted); font-size: 12px; }
+.sky-section { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 6px 0 10px; }
+.sky-reading { display: flex; gap: 8px; align-items: center; font-size: 14px; margin: 10px 0 4px; }
+.sky-label.lit { color: #ffd27a; font-weight: 700; font-size: 12px; }
 .card .scale-note { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
 .card .build-progress { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
 .card .model-states { margin: 8px 0 0; }

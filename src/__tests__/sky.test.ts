@@ -4,9 +4,9 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import * as A from 'astronomy-engine';
-import { SKY_READINGS } from '@/lib/content';
+import { SKY_NAMES, SKY_READINGS } from '@/lib/content';
 import { parseRef } from '@/lib/refs';
-import { altAz, bodyEqj, closest, formatUt, horizonRotation, isSolar, observer, occultation, station, toHorizon, utOf } from '@/lib/sky';
+import { altAz, bodyEqj, closest, elongationTime, eveningWhenHigh, figureCentre, figureStars, formatUt, horizonRotation, isSolar, observer, occultation, PLANETS, station, toHorizon, utOf, whenOf } from '@/lib/sky';
 import type { Place, SkyData } from '@/lib/types';
 
 const data = (p: string) => JSON.parse(readFileSync(new URL(`../../public/data/${p}`, import.meta.url), 'utf8'));
@@ -79,6 +79,40 @@ describe('sky readings', () => {
         const p = place(e.place)!;
         expect(occultation(c.body, utOf(c.on, p.lon), observer(p)), at).toBeTruthy();
       }
+    }
+  });
+});
+
+describe('star names', () => {
+  it('stand in their verses as the Strong\'s number they claim', () => {
+    for (const n of SKY_NAMES) for (const ref of n.refs) {
+      const r = parseRef(ref)!;
+      expect(r, `${n.id}: ${ref}`).toBeTruthy();
+      const chapter: { v: number; w: unknown[][] }[] = data(`interlinear/${r.start.book}/${r.start.chapter}.json`);
+      const words = chapter.find((x) => x.v === r.start.verse)!.w;
+      expect(words.some((w) => w[4] === n.strongs), `${n.id}: ${n.strongs} not in ${ref}`).toBe(true);
+    }
+  });
+  it('give each identification its holders, a source of evidence, and a figure the sky has', () => {
+    for (const n of SKY_NAMES) for (const r of n.readings) {
+      const at = `${n.id}/${r.id}`;
+      expect(r.confidence, at).toBe('interpretation');
+      expect(r.traditions.length, at).toBeGreaterThan(0);
+      expect(r.sources.some((s) => evidential.has(s.kind)), `${at} cites no evidence`).toBe(true);
+      const f = r.figure;
+      for (const c of f.constellations ?? []) expect(sky.lines[c], `${at}: no lines for ${c}`).toBeTruthy();
+      for (const s of f.stars ?? []) expect(named.has(s), `${at}: no star ${s}`).toBe(true);
+      if (f.cluster) expect(sky.clusters[f.cluster]?.length, `${at}: no cluster ${f.cluster}`).toBeGreaterThan(0);
+      if (f.planet) expect((PLANETS as readonly string[]).includes(f.planet.body), at).toBe(true);
+      else expect(figureStars(f, sky).length + (f.centre ? 1 : 0), `${at} lights nothing`).toBeGreaterThan(0);
+    }
+  });
+  it('find an evening for every figure, and Venus at its elongations', () => {
+    const jer = place('jerusalem')!;
+    for (const n of SKY_NAMES) for (const r of n.readings) {
+      const ut = r.figure.planet ? elongationTime(r.figure.planet.body, r.figure.planet.as, -759, jer) : eveningWhenHigh(figureCentre(r.figure, sky), -759, jer);
+      expect(Number.isFinite(ut), `${n.id}/${r.id}`).toBe(true);
+      expect(utOf(whenOf(ut, jer.lon), jer.lon)).toBeCloseTo(ut, 3);
     }
   });
 });

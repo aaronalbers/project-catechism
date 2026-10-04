@@ -1,6 +1,6 @@
 import { lazy, memo, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { addPane, closePane, focusPane, getState, pickTab, setLayout, useStore, type PanelTab } from '@/app/store';
-import { insightsFor, modelsFor, skyInChapter, SKY_READINGS, skyEventsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
+import { insightsFor, modelsFor, skyInChapter, SKY_READINGS, skyEventsFor, skyNamesFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
 import { fitting, isCompact, isNarrow, PANE_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth, visible, type Pane } from '@/lib/panes';
 import { InsightsPanel } from '@/panels/InsightsPanel';
 import { WordsPanel } from '@/panels/WordsPanel';
@@ -75,13 +75,13 @@ export function useTabs() {
     // A break the Hebrew does not have, or words repeated across a book's end, in this chapter.
     scrolls: scrollMarksInChapter(loc.book, loc.chapter),
     worth: pricesAt(loc).length,
-    sky: SKY_READINGS.reduce((n, r) => n + skyEventsFor(loc, r).length, 0),
+    sky: SKY_READINGS.reduce((n, r) => n + skyEventsFor(loc, r).length, 0) + skyNamesFor(loc).length,
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc, named]);
   const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date
   // the three days; the Scrolls tab only for the Old Testament, whose books the Hebrew Bible divides otherwise; the Worth tab
-  // only for chapters that name a sum of money; the Sky tab only for chapters a reading of the star of the Magi points to.
+  // only for chapters that name a sum of money; the Sky tab only for chapters a reading of the star of the Magi points to, or that name a star.
   const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || showing('reigns')) && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || showing('days'))
     && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth'))
     && (t.id !== 'sky' || skyInChapter(loc.book, loc.chapter) || showing('sky')));

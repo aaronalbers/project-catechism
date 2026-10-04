@@ -3,7 +3,7 @@
 // historians give them, with astronomical years (0 is 1 BC, −1 is 2 BC); nothing here goes through a JS Date,
 // whose calendar is the Gregorian.
 import * as A from 'astronomy-engine';
-import type { Place, SkyBody, SkyData } from './types';
+import type { Place, SkyBody, SkyData, SkyFigure } from './types';
 
 export const PLANETS = ['Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn'] as const;
 const SOLAR = new Set<string>(['Sun', 'Moon', ...PLANETS]);
@@ -153,3 +153,69 @@ export function bearing(from: Pick<Place, 'lat' | 'lon'>, to: Pick<Place, 'lat' 
 
 /** ΔT, the clock correction for the Earth's slowing spin, in hours at `ut`: astronomy-engine's model (Espenak and Meeus). */
 export const deltaTHours = (ut: number) => (A.MakeTime(ut).tt - ut) * 24;
+
+/** UT days as a `when` string, local mean time at `lon`, Julian calendar, astronomical year: the inverse of `utOf`. */
+export function whenOf(ut: number, lon = 0): string {
+  const j = julianDate(ut + 2451545.0 + lon / 15 / 24);
+  let hh = Math.floor(j.h), mm = Math.round((j.h - hh) * 60);
+  if (mm === 60) { hh += 1; mm = 0; }
+  const y = j.y < 0 ? `-${String(-j.y).padStart(4, '0')}` : String(j.y).padStart(4, '0');
+  return `${y}-${String(j.m).padStart(2, '0')}-${String(j.d).padStart(2, '0')}T${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
+}
+
+const raDecOf = (v: [number, number, number]): [number, number] => [((Math.atan2(v[1], v[0]) / RAD) + 360) % 360, Math.asin(v[2]) / RAD];
+const meanOf = (vs: [number, number, number][]): [number, number, number] => {
+  const s = vs.reduce((a, v) => [a[0] + v[0], a[1] + v[1], a[2] + v[2]], [0, 0, 0]);
+  const r = Math.hypot(...s);
+  return [s[0] / r, s[1] / r, s[2] / r];
+};
+
+/** The stars a figure lights: its constellations' line stars, its named stars and its cluster's members. */
+export function figureStars(fig: SkyFigure, sky: SkyData): number[] {
+  return [...new Set([
+    ...(fig.constellations ?? []).flatMap((c) => (sky.lines[c] ?? []).flat()),
+    ...(fig.stars ?? []).map((n) => starIndex(sky, n)),
+    ...(fig.cluster ? sky.clusters?.[fig.cluster] ?? [] : []),
+  ])];
+}
+
+/** Where a fixed figure stands, [ra, dec] in degrees (J2000): its `centre`, or the middle of its stars. */
+export function figureCentre(fig: SkyFigure, sky: SkyData): [number, number] {
+  if (fig.centre) return fig.centre;
+  return raDecOf(meanOf(figureStars(fig, sky).map((i) => starEqj(sky.stars[i], 0))));
+}
+
+/**
+ * The evening in astronomical year `year` when a point (J2000 [ra, dec]) stands highest at `hour` local mean time,
+ * searched day by day: when a fixed figure is best seen. Altitude is taken through the rotation to the date, so
+ * precession is allowed for.
+ */
+export function eveningWhenHigh([ra, dec]: [number, number], year: number, place: Pick<Place, 'lat' | 'lon'>, hour = 21): number {
+  const start = utOf(`${year < 0 ? `-${String(-year).padStart(4, '0')}` : String(year).padStart(4, '0')}-01-01T${String(hour).padStart(2, '0')}:00`, place.lon);
+  const obs = observer(place);
+  const v: [number, number, number] = [Math.cos(dec * RAD) * Math.cos(ra * RAD), Math.cos(dec * RAD) * Math.sin(ra * RAD), Math.sin(dec * RAD)];
+  let best = start, bestAlt = -Infinity;
+  for (let d = 0; d < 366; d++) {
+    const alt = altAz(toHorizon(horizonRotation(start + d, obs), v)).alt;
+    if (alt > bestAlt) { bestAlt = alt; best = start + d; }
+  }
+  return best;
+}
+
+/**
+ * When a planet stands farthest from the Sun as the evening or morning star nearest the middle of `year` (Venus does
+ * so every 584 days, so a year may have none), at dusk or dawn: fifty minutes after sunset or before sunrise at `place`.
+ */
+export function elongationTime(body: SkyBody, as: 'evening' | 'morning', year: number, place: Pick<Place, 'lat' | 'lon'>): number {
+  const mid = utOf(`${year < 0 ? `-${String(-year).padStart(4, '0')}` : String(year).padStart(4, '0')}-07-01`, place.lon);
+  let t = mid - 700, best: A.ElongationEvent | null = null;
+  for (let k = 0; k < 6; k++) {
+    const e = A.SearchMaxElongation(body as A.Body, t);
+    if (e.visibility === as && (!best || Math.abs(e.time.ut - mid) < Math.abs(best.time.ut - mid))) best = e;
+    t = e.time.ut + 10;
+  }
+  if (!best) throw new Error(`sky: no ${as} elongation of ${body} near ${year}`);
+  const day = Math.floor(best.time.ut + 0.5) - 0.5 - place.lon / 360;
+  const edge = A.SearchRiseSet(A.Body.Sun, observer(place), as === 'evening' ? -1 : +1, day, 1)!;
+  return edge.ut + (as === 'evening' ? 50 : -50) / 1440;
+}

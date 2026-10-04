@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { openPerson, setState, useStore } from '@/app/store';
+import { openPerson, openTab, setState, useStore } from '@/app/store';
 import { loadInterlinear, loadStrongs } from '@/lib/data';
 import type { InterlinearVerse, StrongsEntry } from '@/lib/types';
-import { NARROWED, TEXT_BY_ID, videosForStrongs, wordCardsFor } from '@/lib/content';
+import { NARROWED, SKY_NAMES, TEXT_BY_ID, videosForStrongs, wordCardsFor } from '@/lib/content';
 import { book } from '@/lib/refs';
 import { InsightCard } from './InsightsPanel';
 import { VideoCard } from './VideosPanel';
@@ -81,6 +81,7 @@ function Lexicon({ id, here }: { id: string; here?: Here }) {
   const cards = wordCardsFor(shown);
   const narrow = NARROWED.get(shown);
   const wordVideos = videosForStrongs(shown);
+  const star = SKY_NAMES.find((n) => n.strongs === shown);
   const roots = [...new Set(entry.derivation?.match(/[HG]\d+/g) ?? [])].filter((r) => r !== shown);
   const r = entry.r ?? [];
   const rendered = r.reduce((a, [, n]) => a + n, 0);
@@ -92,6 +93,12 @@ function Lexicon({ id, here }: { id: string; here?: Here }) {
       {narrow?.narrows && (
         <div className="narrow-note">
           The BSB's {heads(narrow.narrows.rendered).map((r, k) => <span key={r}>{k > 0 && ' and '}<strong>“{r}”</strong></span>)} {heads(narrow.narrows.rendered).length > 1 ? 'are' : 'is'} narrower than {entry.xlit || shown}: {narrow.narrows.means}. The word study is below.
+        </div>
+      )}
+      {star && (
+        <div className="narrow-note">
+          A star or group of stars whose identity is disputed: {star.readings.map((x) => x.label.replace(/^The /, 'the ')).join(', ')}.{' '}
+          <button className="marks-toggle" onClick={() => openTab('sky')}>See each in the sky</button>
         </div>
       )}
       {at?.rare && (

@@ -311,5 +311,228 @@
    ],
    "events": []
   }
+ ],
+ "names": [
+  {
+   "id": "kimah",
+   "word": "kimah",
+   "hebrew": "כִּימָה",
+   "strongs": "H3598",
+   "rendered": "the Pleiades",
+   "refs": ["Job.9.9", "Job.38.31", "Amos.5.8"],
+   "summary": "Named three times beside kesil (Orion), and in Job 38:31 with 'chains' that bind it. BDB gives 'perhaps Pleiades'; the Vulgate gives three different stars in its three verses.",
+   "readings": [
+    {
+     "id": "pleiades",
+     "label": "The Pleiades",
+     "figure": {"cluster": "Pleiades"},
+     "confidence": "interpretation",
+     "traditions": ["BDB ('perhaps Pleiades')", "The Septuagint (Job 9:9, reading its list in reverse as Reyburn says it runs; 38:31)", "The Vulgate at Job 38:31", "William Reyburn, who takes the 'chains' as tying the cluster's seven stars together"],
+     "sources": [
+      {"kind": "lexicon", "title": "Brown–Driver–Briggs (1906), כִּימָה", "url": "https://www.sefaria.org/BDB,_%D7%9B%D6%B4%D6%BC%D7%99%D7%9E%D6%B8%D7%94", "note": "'perhaps Pleiades'; '(Stern … Nö … Hoffm … interpret עשׁ as Pleiades, and כימה as Sirius)'"},
+      {"kind": "primary", "title": "Job 9:9, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/JOB09.htm", "note": "'Who makes Pleias, and Hesperus, and Arcturus, and the chambers of the south'"},
+      {"kind": "primary", "title": "Job 38:31–32, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/JOB38.htm", "note": "'the band of Pleias … the barrier of Orion … Mazuroth in his season, and the evening star with his rays'"},
+      {"kind": "primary", "title": "Job 38:31, Vulgate", "url": "https://www.biblestudytools.com/vula/job/38-31.html", "note": "'numquid coniungere valebis micantes stellas Pliadis aut gyrum Arcturi poteris dissipare'"},
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 38:31", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-3831/"}
+     ]
+    },
+    {
+     "id": "hyades",
+     "label": "The Hyades",
+     "figure": {"cluster": "Hyades"},
+     "confidence": "interpretation",
+     "traditions": ["The Vulgate at Job 9:9, in the Hebrew's order"],
+     "sources": [
+      {"kind": "primary", "title": "Job 9:9, Vulgate", "url": "https://www.biblestudytools.com/vula/job/9-9.html", "note": "'qui facit Arcturum et Oriona et Hyadas et interiora austri'"}
+     ],
+     "note": "The Vulgate names Hyades third, where the Hebrew has kimah."
+    },
+    {
+     "id": "arcturus",
+     "label": "Arcturus",
+     "figure": {"stars": ["Arcturus"]},
+     "confidence": "interpretation",
+     "traditions": ["The Vulgate at Amos 5:8, in the Hebrew's order"],
+     "sources": [
+      {"kind": "primary", "title": "Amos 5:8, Vulgate", "url": "https://www.biblestudytools.com/vula/amos/5-8.html", "note": "'facientem Arcturum et Orionem'"}
+     ]
+    },
+    {
+     "id": "sirius",
+     "label": "Sirius",
+     "figure": {"stars": ["Sirius"]},
+     "confidence": "interpretation",
+     "traditions": ["Stern, Nöldeke and Hoffmann, as BDB reports them"],
+     "sources": [
+      {"kind": "lexicon", "title": "Brown–Driver–Briggs (1906), כִּימָה", "url": "https://www.sefaria.org/BDB,_%D7%9B%D6%B4%D6%BC%D7%99%D7%9E%D6%B8%D7%94", "note": "'perhaps Pleiades'; '(Stern … Nö … Hoffm … interpret עשׁ as Pleiades, and כימה as Sirius)'"}
+     ],
+     "note": "BDB gives their reading in a note and does not adopt it; their works were not read."
+    }
+   ]
+  },
+  {
+   "id": "kesil",
+   "word": "kesil",
+   "hebrew": "כְּסִיל",
+   "strongs": "H3685",
+   "rendered": "Orion",
+   "refs": ["Job.9.9", "Job.38.31", "Amos.5.8"],
+   "summary": "The same letters as kesil, 'fool'. Job 38:31 speaks of loosing its 'cords'. BDB gives Orion, and Reyburn finds it the most consistently identified of the three names.",
+   "readings": [
+    {
+     "id": "orion",
+     "label": "Orion",
+     "figure": {"constellations": ["Ori"]},
+     "confidence": "interpretation",
+     "traditions": ["BDB", "The Septuagint at Job 38:31", "The Vulgate at Job 9:9 and Amos 5:8", "William Reyburn, who finds Orion 'more consistently identified' than the other names"],
+     "sources": [
+      {"kind": "lexicon", "title": "Brown–Driver–Briggs (1906), כְּסִיל²", "url": "https://www.sefaria.org/BDB,_%D7%9B%D6%B0%D6%BC%D7%A1%D6%B4%D7%99%D7%9C%C2%B2", "note": "'Orion'; at Is 13:10 'their Orions … Orion and other constellations of the same brilliancy'"},
+      {"kind": "primary", "title": "Job 38:31–32, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/JOB38.htm", "note": "'the band of Pleias … the barrier of Orion … Mazuroth in his season, and the evening star with his rays'"},
+      {"kind": "primary", "title": "Job 9:9, Vulgate", "url": "https://www.biblestudytools.com/vula/job/9-9.html", "note": "'qui facit Arcturum et Oriona et Hyadas et interiora austri'"},
+      {"kind": "primary", "title": "Amos 5:8, Vulgate", "url": "https://www.biblestudytools.com/vula/amos/5-8.html", "note": "'facientem Arcturum et Orionem'"},
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 9:9", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-99/", "note": "'The Septuagint and Syriac reverse the order here also. Due to the inconsistent use of these names, there appears to have been no clear-cut identification for them, although Orion is more consistently identified'"}
+     ],
+     "note": "BDB takes 'the cords of Orion' as 'appar. some mythological allusion … to giant bound in skies'; Reyburn notes the NEB reads them as Orion's belt."
+    },
+    {
+     "id": "arcturus",
+     "label": "Arcturus",
+     "figure": {"stars": ["Arcturus"]},
+     "confidence": "interpretation",
+     "traditions": ["The Vulgate at Job 38:31 ('gyrum Arcturi'), in the Hebrew's order"],
+     "sources": [
+      {"kind": "primary", "title": "Job 38:31, Vulgate", "url": "https://www.biblestudytools.com/vula/job/38-31.html", "note": "'numquid coniungere valebis micantes stellas Pliadis aut gyrum Arcturi poteris dissipare'"}
+     ]
+    },
+    {
+     "id": "hesperus",
+     "label": "The evening star",
+     "figure": {"planet": {"body": "Venus", "as": "evening"}},
+     "confidence": "interpretation",
+     "traditions": ["The Septuagint at Job 9:9 ('Hesperus'), reading its list in reverse as Reyburn says it runs"],
+     "sources": [
+      {"kind": "primary", "title": "Job 9:9, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/JOB09.htm", "note": "'Who makes Pleias, and Hesperus, and Arcturus, and the chambers of the south'"},
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 9:9", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-99/", "note": "'The Septuagint and Syriac reverse the order here also. Due to the inconsistent use of these names, there appears to have been no clear-cut identification for them, although Orion is more consistently identified'"}
+     ],
+     "note": "Hesperus is the Greek name of Venus as the evening star."
+    }
+   ]
+  },
+  {
+   "id": "ash",
+   "word": "ʿash, ʿayish",
+   "hebrew": "עָשׁ, עַיִשׁ",
+   "strongs": "H5906",
+   "rendered": "the Bear",
+   "refs": ["Job.9.9", "Job.38.32"],
+   "summary": "ʿash in Job 9:9 and ʿayish in 38:32, where it comes 'with her cubs' (literally 'her children'). BDB takes ʿash as an error for ʿayish and gives 'perhaps Great Bear'; the ancient versions give a star and a planet.",
+   "readings": [
+    {
+     "id": "great-bear",
+     "label": "The Great Bear, with the Little Bear as her cubs",
+     "figure": {"constellations": ["UMa", "UMi"]},
+     "confidence": "interpretation",
+     "traditions": ["BDB ('perhaps Great Bear', after Dillmann)", "William Reyburn, who takes the Bear as 'most probably the “Great Bear”' and 'its children' as the Little Bear"],
+     "sources": [
+      {"kind": "lexicon", "title": "Brown–Driver–Briggs (1906), עַ֫יִשׁ", "url": "https://www.sefaria.org/BDB,_%D7%A2%D6%B7%D6%AB%D7%99%D6%B4%D7%A9%D7%81", "note": "'a constellation, perhaps Great Bear (cf. especially Di)'; Job 9:9's עָשׁ is 'prob. error for עישׁ'"},
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 38:32", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-3832/"}
+     ]
+    },
+    {
+     "id": "arcturus",
+     "label": "Arcturus",
+     "figure": {"stars": ["Arcturus"]},
+     "confidence": "interpretation",
+     "traditions": ["The Vulgate at Job 9:9 ('Arcturum'), in the Hebrew's order", "The Septuagint at Job 9:9 ('Arcturus'), reading its list in reverse as Reyburn says it runs", "The BSB's footnote at Job 38:32"],
+     "sources": [
+      {"kind": "primary", "title": "Job 9:9, Vulgate", "url": "https://www.biblestudytools.com/vula/job/9-9.html", "note": "'qui facit Arcturum et Oriona et Hyadas et interiora austri'"},
+      {"kind": "primary", "title": "Job 9:9, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/JOB09.htm", "note": "'Who makes Pleias, and Hesperus, and Arcturus, and the chambers of the south'"},
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 9:9", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-99/", "note": "'The Septuagint and Syriac reverse the order here also. Due to the inconsistent use of these names, there appears to have been no clear-cut identification for them, although Orion is more consistently identified'"},
+      {"kind": "scripture", "ref": "Job.38.32", "note": "the BSB's footnote on 'the Bear': 'Or Leo or Arcturus'"}
+     ]
+    },
+    {
+     "id": "leo",
+     "label": "Leo",
+     "figure": {"constellations": ["Leo"]},
+     "confidence": "interpretation",
+     "traditions": ["The BSB's footnote at Job 38:32"],
+     "sources": [
+      {"kind": "scripture", "ref": "Job.38.32", "note": "the BSB's footnote on 'the Bear': 'Or Leo or Arcturus'"}
+     ]
+    },
+    {
+     "id": "vesper",
+     "label": "The evening star",
+     "figure": {"planet": {"body": "Venus", "as": "evening"}},
+     "confidence": "interpretation",
+     "traditions": ["The Septuagint at Job 38:32 ('the evening star with his rays')", "The Vulgate at Job 38:32 ('vesperum')"],
+     "sources": [
+      {"kind": "primary", "title": "Job 38:31–32, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/JOB38.htm", "note": "'the band of Pleias … the barrier of Orion … Mazuroth in his season, and the evening star with his rays'"},
+      {"kind": "primary", "title": "Job 38:32, Vulgate", "url": "https://www.biblestudytools.com/vula/job/38-32.html", "note": "'numquid producis luciferum in tempore suo et vesperum super filios terrae consurgere facis'"}
+     ]
+    },
+    {
+     "id": "pleiades",
+     "label": "The Pleiades",
+     "figure": {"cluster": "Pleiades"},
+     "confidence": "interpretation",
+     "traditions": ["Stern, Nöldeke and Hoffmann, as BDB reports them"],
+     "sources": [
+      {"kind": "lexicon", "title": "Brown–Driver–Briggs (1906), כִּימָה", "url": "https://www.sefaria.org/BDB,_%D7%9B%D6%B4%D6%BC%D7%99%D7%9E%D6%B8%D7%94", "note": "'perhaps Pleiades'; '(Stern … Nö … Hoffm … interpret עשׁ as Pleiades, and כימה as Sirius)'"}
+     ],
+     "note": "BDB gives their reading in a note and does not adopt it; their works were not read."
+    }
+   ]
+  },
+  {
+   "id": "mazzaroth",
+   "word": "mazzaroth",
+   "hebrew": "מַזָּרוֹת",
+   "strongs": "H4216",
+   "rendered": "the constellations",
+   "refs": ["Job.38.32"],
+   "summary": "Found only here. BDB takes it as probably the same word as mazzalot, the 'constellations' of 2 Kings 23:5, 'perhaps understood of some particular star or constellation'; the Septuagint leaves it untranslated.",
+   "sources": [
+    {"kind": "lexicon", "title": "Brown–Driver–Briggs (1906), מַזָּלוֹת²", "url": "https://www.sefaria.org/BDB,_%D7%9E%D6%B7%D7%96%D6%B8%D6%BC%D7%9C%D7%95%D6%B9%D7%AA%C2%B2", "note": "mazzaroth 'prob. = מַזָּלוֹת', 'perhaps understood of some particular star or constellation'"}
+   ],
+   "readings": [
+    {
+     "id": "zodiac",
+     "label": "The signs of the zodiac",
+     "figure": {"constellations": ["Ari", "Tau", "Gem", "Cnc", "Leo", "Vir", "Lib", "Sco", "Sgr", "Cap", "Aqr", "Psc"], "centre": [150, 15]},
+     "confidence": "interpretation",
+     "traditions": ["Others, as Reyburn reports them, and the Bible en français courant"],
+     "sources": [
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 38:32", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-3832/"},
+      {"kind": "scripture", "ref": "Job.38.32"}
+     ],
+     "note": "The twelve run right round the sky; the view shows those above the horizon."
+    },
+    {
+     "id": "corona",
+     "label": "Corona Borealis",
+     "figure": {"constellations": ["CrB"]},
+     "confidence": "interpretation",
+     "traditions": ["Édouard Dhorme, as Reyburn reports him"],
+     "sources": [
+      {"kind": "scholarship", "title": "A Handbook on Job (UBS Helps for Translators), on 38:32", "author": "William Reyburn", "year": 1992, "url": "https://tips.translation.bible/story/translation-commentary-on-job-3832/"},
+      {"kind": "scripture", "ref": "Job.38.32"}
+     ],
+     "note": "Dhorme's commentary was not read."
+    },
+    {
+     "id": "lucifer",
+     "label": "The morning star",
+     "figure": {"planet": {"body": "Venus", "as": "morning"}},
+     "confidence": "interpretation",
+     "traditions": ["The Vulgate at Job 38:32 ('luciferum'), in the Hebrew's order"],
+     "sources": [
+      {"kind": "primary", "title": "Job 38:32, Vulgate", "url": "https://www.biblestudytools.com/vula/job/38-32.html", "note": "'numquid producis luciferum in tempore suo et vesperum super filios terrae consurgere facis'"}
+     ],
+     "note": "Lucifer, 'light-bearer', is the Latin name of Venus as the morning star."
+    }
+   ]
+  }
  ]
 }

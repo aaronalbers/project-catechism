@@ -1,5 +1,5 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, SKY_READINGS, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, SKY_NAMES, SKY_READINGS, TALLIES } from './content';
 import { daysLabel, KIND_LABEL, priceRefs } from './prices';
 import { HEBREW } from './scrolls';
 import { READING_ORDER, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
@@ -118,14 +118,18 @@ export const CATALOG: CatalogSection[] = [
     }))),
   },
   {
-    id: 'sky', kind: 'sky', title: 'The star of the Magi', tab: 'sky',
-    blurb: 'The sky each reading of the star points to, computed for the place and hour, moving with the text.',
-    entries: SKY_READINGS.map((r) => ({
+    id: 'sky', kind: 'sky', title: 'The sky', tab: 'sky',
+    blurb: 'The stars the text names, with each identification proposed for them lit in the sky; and the sky each reading of the star of the Magi points to, computed for the place and hour.',
+    entries: [...SKY_NAMES.map((n) => ({
+      id: n.id, kind: 'sky' as const, title: `${n.word}, “${n.rendered}”`, summary: n.summary,
+      go: n.refs[0], lines: [{ label: 'Named in', refs: n.refs }], group: 'Stars the text names',
+    })), ...SKY_READINGS.map((r) => ({
       id: r.id, kind: 'sky' as const, title: r.label, summary: r.summary,
       // A reading no sky can show has no moments; it goes to the passage it cites.
       go: r.events[0]?.ref ?? r.sources.find((s) => s.ref)!.ref!,
       lines: [{ label: r.events.length ? 'Moments' : 'Cites', refs: r.events.length ? r.events.map((e) => e.ref) : r.sources.flatMap((s) => (s.ref ? [s.ref] : [])) }],
-    })),
+      group: 'The star of the Magi',
+    }))],
   },
   {
     id: 'people', kind: 'profile', title: 'People', tab: 'people',
