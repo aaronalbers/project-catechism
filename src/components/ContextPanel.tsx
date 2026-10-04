@@ -1,6 +1,6 @@
 import { lazy, memo, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { addPane, closePane, focusPane, getState, pickTab, setLayout, useStore, type PanelTab } from '@/app/store';
-import { insightsFor, modelsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
+import { insightsFor, modelsFor, skyInChapter, SKY_READINGS, skyEventsFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
 import { fitting, isCompact, isNarrow, PANE_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth, visible, type Pane } from '@/lib/panes';
 import { InsightsPanel } from '@/panels/InsightsPanel';
 import { WordsPanel } from '@/panels/WordsPanel';
@@ -18,9 +18,10 @@ import { namedInChapter, usePeopleInBook } from '@/lib/people';
 import { Grip } from './Grip';
 import { Icon } from './Icons';
 
-// Map, graph and 3D libraries are only fetched when their tab is opened.
+// Map, graph, 3D and astronomy libraries are only fetched when their tab is opened.
 const PlacesPanel = lazy(() => import('@/panels/PlacesPanel').then((m) => ({ default: m.PlacesPanel })));
 const PeoplePanel = lazy(() => import('@/panels/PeoplePanel').then((m) => ({ default: m.PeoplePanel })));
+const SkyPanel = lazy(() => import('@/panels/SkyPanel').then((m) => ({ default: m.SkyPanel })));
 const ModelsPanel = lazy(() => import('@/panels/ModelsPanel').then((m) => ({ default: m.ModelsPanel })));
 
 const TABS: { id: PanelTab; label: string }[] = [
@@ -33,6 +34,7 @@ const TABS: { id: PanelTab; label: string }[] = [
   { id: 'days', label: 'Days' },
   { id: 'scrolls', label: 'Scrolls' },
   { id: 'worth', label: 'Worth' },
+  { id: 'sky', label: 'Sky' },
   { id: 'models', label: 'Models' },
   { id: 'videos', label: 'Videos' },
 ];
@@ -54,6 +56,7 @@ const PanelBody = memo(function PanelBody({ tab }: { tab: PanelTab }) {
       {tab === 'days' && <DaysPanel />}
       {tab === 'scrolls' && <ScrollsPanel />}
       {tab === 'worth' && <WorthPanel />}
+      {tab === 'sky' && <SkyPanel />}
     </Suspense>
   );
 });
@@ -72,14 +75,16 @@ export function useTabs() {
     // A break the Hebrew does not have, or words repeated across a book's end, in this chapter.
     scrolls: scrollMarksInChapter(loc.book, loc.chapter),
     worth: pricesAt(loc).length,
+    sky: SKY_READINGS.reduce((n, r) => n + skyEventsFor(loc, r).length, 0),
     links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
   }), [loc, named]);
   const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date
   // the three days; the Scrolls tab only for the Old Testament, whose books the Hebrew Bible divides otherwise; the Worth tab
-  // only for chapters that name a sum of money.
+  // only for chapters that name a sum of money; the Sky tab only for chapters a reading of the star of the Magi points to.
   const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || showing('reigns')) && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || showing('days'))
-    && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth')));
+    && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth'))
+    && (t.id !== 'sky' || skyInChapter(loc.book, loc.chapter) || showing('sky')));
   return { tabs, counts };
 }
 

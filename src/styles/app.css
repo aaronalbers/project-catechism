@@ -132,6 +132,7 @@ dialog.nav::backdrop { background: rgb(0 0 0 / 0.4); }
 .marker { width: 6px; height: 6px; border-radius: 50%; }
 .marker.insight { background: var(--interpretation); }
 .marker.model { background: var(--consensus); }
+.marker.sky { background: #c99a4a; }
 .marker.prophecy { background: var(--evidence); }
 /* Where a prophecy is foretold the mark is a ring, where it comes true a dot: the card's steps use the same two. */
 .marker.prophecy.foretold { background: none; box-shadow: inset 0 0 0 1.5px var(--evidence); }
@@ -385,6 +386,30 @@ body.resizing-y { cursor: row-resize; }
 .model-view .model-tools { position: absolute; left: 8px; top: 8px; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; }
 .model-view .model-tools button { padding: 4px 10px; font-size: 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
 .model-view .model-tools button:hover { border-color: var(--accent); }
+.sky-view { height: 340px; border-radius: var(--radius); overflow: hidden; background: #04060f; border: 1px solid var(--border); position: relative; margin: 8px 0; touch-action: none; cursor: grab; user-select: none; }
+.sky-view:active { cursor: grabbing; }
+.sky-view canvas { display: block; width: 100% !important; height: 100% !important; }
+.sky-tools { position: absolute; left: 8px; top: 8px; right: 8px; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px; cursor: default; }
+.sky-tools button { padding: 3px 9px; font-size: 12px; border: 1px solid #34405e; border-radius: 999px; background: rgba(10, 14, 28, 0.8); color: #dfe6f5; }
+.sky-tools button:hover, .sky-tools button[aria-pressed="true"] { border-color: #e6b85c; }
+.sky-readout { position: absolute; left: 8px; right: 8px; bottom: 6px; z-index: 2; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 11px; color: #c7d0e4; font-variant-numeric: tabular-nums; pointer-events: none; text-shadow: 0 0 3px #000; }
+.sky-readout .hint { color: #9aa6c0; }
+.sky-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+.sky-label { position: absolute; left: 0; top: 0; font-size: 11px; white-space: nowrap; margin: 4px 0 0 6px; color: #c7d0e4; text-shadow: 0 0 3px #000; }
+.sky-label.planet { color: #ffe3a3; font-weight: 600; }
+.sky-label.constellation { color: #6f86b8; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0; translate: -50% -50%; }
+.sky-label.compass { color: #b9c48e; font-weight: 600; margin: 0; translate: -50% -110%; }
+.sky-label.toward { color: #e6b85c; margin: 0; translate: -50% -110%; }
+.sky-label.mark { color: #e6b85c; font-size: 10px; }
+.sky-moments { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+.sky-moments button { text-align: left; padding: 6px 10px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.sky-moments button b { font-weight: 600; margin-right: 6px; }
+.sky-moments button[aria-pressed="true"] { border-color: var(--accent); }
+.sky-moments button.here b { color: var(--accent); }
+.sky-basis { color: var(--muted); font-size: 13px; }
+.sky-computed h4 { font-size: 13px; margin: 8px 0 2px; }
+.sky-computed ul { margin: 0; padding-left: 18px; font-size: 13px; }
+.sky-note { color: var(--muted); font-size: 12px; }
 .card .scale-note { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
 .card .build-progress { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
 .card .model-states { margin: 8px 0 0; }

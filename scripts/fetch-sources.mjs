@@ -11,6 +11,7 @@ export const CACHE = new URL('../.cache/', import.meta.url);
 const NE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/';
 const GEO = 'https://raw.githubusercontent.com/openbibleinfo/Bible-Geocoding-Data/main/data/';
 const THEO = 'https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/master/json/';
+const D3C = 'https://raw.githubusercontent.com/ofrohn/d3-celestial/7e720a3de062059d4c5400a379146a601d9010e0/data/';
 const GLYSSEN = 'https://raw.githubusercontent.com/sillsdev/Glyssen/504e1435280db14474e63fb43cae862fe94b1ccb/GlyssenCharacters/Resources/';
 export const SOURCES = {
   // Berean Standard Bible — public domain. https://berean.bible/
@@ -49,6 +50,12 @@ export const SOURCES = {
   'ne-coastline.geojson': NE + 'ne_50m_coastline.geojson',
   'ne-lakes.geojson': NE + 'ne_50m_lakes.geojson',
   'ne-rivers.geojson': NE + 'ne_50m_rivers_lake_centerlines.geojson',
+  // The Yale Bright Star Catalogue, 5th revised ed. (Hoffleit and Warren, 1991), from CDS (V/50), for the Sky tab.
+  'bsc5-catalog.gz': 'https://cdsarc.cds.unistra.fr/ftp/V/50/catalog.gz',
+  // d3-celestial's constellation lines and name positions — BSD-3-Clause, © Olaf Frohn. Pinned to a commit, in the
+  // file names too. https://github.com/ofrohn/d3-celestial
+  'd3c-lines-7e720a3.json': D3C + 'constellations.lines.json',
+  'd3c-constellations-7e720a3.json': D3C + 'constellations.json',
 };
 
 async function exists(url) {

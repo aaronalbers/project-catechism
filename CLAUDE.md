@@ -47,7 +47,7 @@ new *kind* of sparse content needs a section in `CATALOG`.
 sources, is gitignored, and is **fetched lazily at runtime** through `src/lib/data.ts`
 (which memoises promises per path). It is sharded so a chapter costs one or two small
 requests: `bible/<Book>.json`, `interlinear/<Book>/<ch>.json`, `strongs/<H|G>/<shard>.json`
-(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<H|G>/<n>.json` (everyone the Bible names, from STEPBible's TIPNR, keyed by its Strong's number for them, with their Easton's entry), `speakers/<Book>.json` (who speaks each verse of the 66, from Glyssen), and `map.json` (Natural Earth coasts, rivers and
+(100 entries each), `xrefs/<Book>.json`, `places/by-book/<Book>.json`, `people/by-book/<Book>.json` and `people/<H|G>/<n>.json` (everyone the Bible names, from STEPBible's TIPNR, keyed by its Strong's number for them, with their Easton's entry), `speakers/<Book>.json` (who speaks each verse of the 66, from Glyssen), `sky.json` (the Yale Bright Star Catalogue's stars to magnitude 6.5, with d3-celestial's constellation lines snapped onto them, for the Sky tab), and `map.json` (Natural Earth coasts, rivers and
 lakes round Jerusalem, for the models' map scale). The books beyond the 66 get `bible/<Book>.json` too, built by
 `scripts/beyond.mjs` from the World English Bible's deuterocanon (USFM) and R. H. Charles's 1 Enoch and Jubilees
 (CrossWire's SWORD genbook modules), with `parallels.json` (Charles's cross references from 1 Enoch to the 66) and
@@ -110,8 +110,8 @@ fewer panes than the layout has, the ones used least recently are hidden, not cl
 most one pane. Ask for a tab with
 `openTab(tab)` or `goTo(loc, { openTab })`, never by setting state: it brings forward the pane
 already showing it, or replaces the pane used least recently. The layout lives in localStorage,
-not the URL. Places, People and Models are `lazy()` imports so Leaflet, the graph library and
-three.js only download when their tab is opened — keep them that way, and keep new heavy
+not the URL. Places, People, Models and Sky are `lazy()` imports so Leaflet, the graph library,
+three.js and astronomy-engine only download when their tab is opened — keep them that way, and keep new heavy
 dependencies behind the same boundary.
 
 ## Content conventions
@@ -413,6 +413,15 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   at a new angle in the app: a view from below can score well and still lose the reader in a large
   model (the temple's stands, seen from under the house). A model whose raised floors the
   size figure should stand on flags them `userData.ground` (Ezekiel's courts).
+
+- The Sky tab (`content/skies.json`, `src/panels/SkyPanel.tsx`, `src/lib/sky.ts`) shows the sky each reading of the
+  star of the Magi points to. Every reading is an `interpretation` naming its holders, and each of its `events` stands
+  at a verse, so reading Matthew 2 moves the sky. An event's `when` is local mean time at its `place` (an OpenBible
+  slug), in the Julian calendar with astronomical years (`-0001` is 2 BC); `sky.ts` never goes through a JS `Date`,
+  whose calendar is the Gregorian. A day or hour the holder does not give is `estimated`, with a `basis` saying why
+  that one. What an event says of the sky goes in `checks` (a conjunction, a station) and `sky.test.ts` checks it
+  against astronomy-engine; the card shows the computed dates beside the holder's own, without a verdict where they
+  differ (Larson's 25 December against the engine's 28th). Quote a holder from what they wrote, read in the session.
 
 When a feature falls short of complete or correct (a source that could not be found or verified, a claim dropped
 or left vague for want of one, a citation not checked, a piece its neighbours have missing), record it in

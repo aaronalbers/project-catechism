@@ -1,0 +1,99 @@
+{
+ "readings": [
+  {
+   "id": "larson",
+   "label": "Jupiter, 3–2 BC (Larson)",
+   "summary": "Rick Larson identifies the star with Jupiter: its triple conjunction with Regulus in Leo from September 3 BC, its close meeting with Venus in June 2 BC, and its halt among the stars in December 2 BC, seen in the south from Jerusalem, over Bethlehem. He looks at 3 and 2 BC because he dates Herod's death to 1 BC (see the card on dating it).",
+   "confidence": "interpretation",
+   "traditions": ["Rick Larson, The Star of Bethlehem", "Ernest L. Martin, for the day of the sign of Revelation 12; Larson's study lists his book among its sources"],
+   "sources": [
+    {"kind": "scholarship", "title": "The Star of Bethlehem: the study", "author": "Rick Larson", "url": "https://bethlehemstar.com/setting-the-stage/the-nine-points-of-christs-star/", "note": "'If Herod died in 4 BC, then Christ had to be born before that year. But if Herod died in 1 BC, as the best evidence indicates, then we should look at the years 2 and 3 BC'"},
+    {"kind": "video", "title": "The Star of Bethlehem (DVD)", "author": "Rick Larson", "note": "Mite Productions; the documentary the study accompanies"},
+    {"kind": "scholarship", "title": "The Star that Astonished the World (2nd ed.), ch. 6", "author": "Ernest L. Martin", "year": 1996, "url": "https://www.askelm.com/star/star006.htm"},
+    {"kind": "scripture", "ref": "Matt.2.1-12"},
+    {"kind": "scripture", "ref": "Rev.12.1-5"},
+    {"kind": "data", "title": "Astronomy Engine 2.1.19", "author": "Don Cross", "url": "https://github.com/cosinekitty/astronomy", "note": "planets, Sun and Moon; ΔT from Espenak and Meeus's model"}
+   ],
+   "events": [
+    {
+     "id": "sign",
+     "ref": "Rev.12.1-2",
+     "title": "The woman clothed with the sun",
+     "when": "-0002-09-11T18:30",
+     "place": "jerusalem",
+     "look": [262, 8],
+     "fov": 70,
+     "label": ["Spica"],
+     "basis": "Martin gives the evening of 11 September 3 BC, from sunset (about 6:15 p.m.) to moonset (about 7:45 p.m.), 'as observed from Palestine or Patmos'. The sky is shown from Jerusalem at 6:30.",
+     "text": "Larson reads Revelation 12:1–5 as a sign in the sky: as Jupiter and Regulus were first meeting, Virgo rose 'clothed in the Sun', with 'a new moon, symbolically birthed at the feet of The Virgin'. He gives no day. Ernest Martin dates it to the evening of 11 September 3 BC, which he holds was 'the only day in the whole year' the Sun stood 'mid-bodied to the Virgin' with the crescent Moon below her feet, and he takes that day to have been Tishri 1, the Jewish New Year.",
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem: The birth of a King", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/the-birth-of-a-king/"},
+      {"kind": "scholarship", "title": "The Star that Astonished the World (2nd ed.), ch. 6", "author": "Ernest L. Martin", "year": 1996, "url": "https://www.askelm.com/star/star006.htm", "note": "'In the year 3 B.C.E., these two factors came to precise agreement for about an hour and a half, as observed from Palestine or Patmos, in the twilight period of September 11th'"}
+     ]
+    },
+    {
+     "id": "rising",
+     "ref": "Matt.2.2",
+     "title": "Jupiter rising beside Regulus",
+     "when": "-0002-09-14T04:30",
+     "place": "babylon-1",
+     "look": "Jupiter",
+     "fov": 70,
+     "track": {"body": "Jupiter", "from": "-0002-08-15", "to": "-0001-06-25", "every": 2, "marks": [
+      {"on": "-0002-09-14", "text": "1st"},
+      {"on": "-0001-02-17", "text": "2nd"},
+      {"on": "-0001-05-09", "text": "3rd"},
+      {"on": "-0001-06-17", "text": "Venus"}
+     ]},
+     "estimated": true,
+     "basis": "Larson gives September 3 BC, 'at the time of the Jewish New Year', seen by a magus 'from the Middle East', perhaps from Babylon. The day is the computed closest approach of Jupiter and Regulus; the hour, 4:30 in the morning at Babylon, is one in the dawn twilight with Jupiter well up in the east.",
+     "text": "Larson reads 'we saw His star in the east' as the star seen rising (en anatolē), and takes it to be Jupiter, 'the King Planet', meeting Regulus, 'the Star of Kings', in September 3 BC. Jupiter then turned back in its retrograde loop and passed Regulus twice more, 'a triple conjunction', which he calls 'a coronation'. It happened in Leo, which he connects with the lion of Judah (Genesis 49:9–10). The path drawn is Jupiter's among the stars from August 3 BC to June 2 BC, with each pass marked.",
+     "checks": [
+      {"kind": "conjunction", "a": "Jupiter", "b": "Regulus", "on": "-0002-09-14", "within": 3},
+      {"kind": "conjunction", "a": "Jupiter", "b": "Regulus", "on": "-0001-02-17", "within": 3},
+      {"kind": "conjunction", "a": "Jupiter", "b": "Regulus", "on": "-0001-05-09", "within": 3}
+     ],
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem: A coronation", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/coronation/"},
+      {"kind": "scholarship", "title": "The Star of Bethlehem: The birth of a King", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/the-birth-of-a-king/", "note": "Leo and the tribe of Judah"}
+     ]
+    },
+    {
+     "id": "venus",
+     "ref": "Matt.2.1",
+     "title": "Jupiter meets Venus",
+     "when": "-0001-06-17T20:00",
+     "place": "babylon-1",
+     "look": "Jupiter",
+     "fov": 30,
+     "label": ["Venus"],
+     "toward": "jerusalem",
+     "estimated": true,
+     "basis": "Larson gives June 2 BC, in the evening, with the planets setting in the west. The day is the computed closest approach; the hour, 8 p.m. at Babylon, is one after sunset with both planets still above the western horizon.",
+     "text": "Larson: by June 2 BC Jupiter had 'finished crowning Regulus' and met Venus so closely that 'the planets could not be distinguished with the naked eye', setting in the west, so that a magus in Babylon 'would have seen the spectacle of his career while facing toward Judea'. He suggests this may have set the Magi on their way to Jerusalem.",
+     "checks": [{"kind": "conjunction", "a": "Jupiter", "b": "Venus", "on": "-0001-06-17", "within": 2}],
+     "sources": [{"kind": "scholarship", "title": "The Star of Bethlehem: Westward leading", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/westward-leading/"}]
+    },
+    {
+     "id": "stopped",
+     "ref": "Matt.2.9",
+     "title": "Jupiter halts over Bethlehem",
+     "when": "-0001-12-25T05:15",
+     "place": "jerusalem",
+     "look": [197, 40],
+     "fov": 100,
+     "toward": "bethlehem-1",
+     "track": {"body": "Jupiter", "from": "-0001-10-25", "to": "0000-02-25", "every": 2, "marks": [{"on": "-0001-12-25", "text": "25 Dec"}]},
+     "estimated": true,
+     "basis": "Larson gives 25 December 2 BC and 'the wee hours', looking south from Jerusalem. The hour, 5:15 in the morning, is when Jupiter stands at Bethlehem's bearing from Jerusalem.",
+     "text": "Larson: in December 2 BC, 'if the Magi looked south in the wee hours, there hung the Planet of Kings over the city of Messiah's birth', and 'on December 25 of 2 BC as it entered retrograde, Jupiter reached full stop in its travel through the fixed stars'. He reads 'stood over the place' (2:9) as that halt, which an astronomer sees 'not so much on the scale of minutes, but on the longer scale of days, weeks and months'. The path drawn is Jupiter's among the stars from late October 2 BC to February 1 BC.",
+     "checks": [{"kind": "station", "body": "Jupiter", "on": "-0001-12-25", "within": 5}],
+     "sources": [
+      {"kind": "scholarship", "title": "The Star of Bethlehem: To stop a star", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/to-stop-a-star/"},
+      {"kind": "scholarship", "title": "The Star of Bethlehem: Westward leading", "author": "Rick Larson", "url": "https://bethlehemstar.com/starry-dance/westward-leading/"}
+     ]
+    }
+   ]
+  }
+ ]
+}

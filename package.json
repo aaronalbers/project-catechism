@@ -16,6 +16,7 @@
     "models:angles": "vitest run src/__tests__/angles.test.ts --silent=false --reporter=verbose"
   },
   "dependencies": {
+    "astronomy-engine": "^2.1.19",
     "kokoro-js": "^1.2.1",
     "leaflet": "^1.9.4",
     "react": "^19.3.0",

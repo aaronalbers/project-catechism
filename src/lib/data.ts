@@ -1,7 +1,7 @@
 import type { CircleData } from './circle';
 import { personShard } from '../../scripts/people.mjs';
 import { book } from './refs';
-import type { BibleBook, BiblePerson, Family, InterlinearVerse, MapData, PeopleInBook, Place, Ref, SpeakersInBook, StrongsEntry, Xrefs } from './types';
+import type { BibleBook, BiblePerson, Family, InterlinearVerse, MapData, PeopleInBook, Place, Ref, SkyData, SpeakersInBook, StrongsEntry, Xrefs } from './types';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const cache = new Map<string, Promise<unknown>>();
@@ -37,6 +37,7 @@ export const loadFamilies = () => get<Family[]>('people/families.json');
 export const loadPerson = (id: string) => get<Record<string, BiblePerson>>(`people/${personShard(id)}.json`).then((s) => s[id]).catch(() => undefined);
 
 export const loadMap = () => get<MapData>('map.json');
+export const loadSky = () => get<SkyData>('sky.json');
 
 export async function loadStrongs(id: string): Promise<StrongsEntry | undefined> {
   const m = /^([HG])(\d+)$/.exec(id);

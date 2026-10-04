@@ -329,3 +329,24 @@ fails the build on the pattern. What the rewrite could not check:
 - **Mark and Luke in `writers.json`** are now `interpretation`s with only the traditional attribution as a holder.
   *Needed:* named, cited holders of the other view (who doubts Papias's link to Peter; who holds Luke–Acts was not
   written by Paul's companion), and a holder for Mark's "has been taken to suggest a Roman audience" and its date.
+
+## The Sky tab (`content/skies.json`), 2026-10-04
+
+Built with one reading, Rick Larson's, from his study's pages and Ernest Martin's chapter 6, both read.
+
+- **The other readings** are not yet drawn: Kepler's Jupiter–Saturn triple conjunction (7 BC), Michael Molnar's
+  occultation of Jupiter by the Moon in Aries (April 6 BC), the "broom star" of 5 BC in the *Han shu*, and the star
+  as a miracle, which no sky can show but which needs its holders listed so the tab does not imply only natural
+  readings count. *Needed:* each holder's own work read for their dates and claims.
+- **Who answers Larson** is not given, though an argument is to name its critics where there is one. *Needed:* a
+  published critique read and cited (Aaron Adair's *The Star of Bethlehem: A Skeptical View*, 2013, is one starting
+  point, not yet read).
+- **The documentary's year and credits** are not cited; the site names only "The Star of Bethlehem DVD" from Mite
+  Productions. *Needed:* the DVD's own credits.
+- **Larson gives 25 December 2 BC** for Jupiter's station; astronomy-engine puts the turn on the 28th in ecliptic
+  longitude (29th in right ascension). The card shows both. Whether Larson used another program, ΔT or definition of
+  the station is not known.
+- **Refraction and extinction** are not drawn: positions are geometric, so a body near the horizon stands about half
+  a degree lower than seen, and stars are not dimmed there.
+- **A link out to Stellarium Web** for each moment was planned but not added; whether its URL takes a BC date and a
+  place has not been checked.

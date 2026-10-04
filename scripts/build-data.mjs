@@ -18,6 +18,8 @@
 //                                each single speaker is
 //   map.json                     coastlines, rivers, lakes and a few cities round Jerusalem, for the
 //                                size reference drawn beside models too big for a figure
+//   sky.json                     the Yale Bright Star Catalogue's stars to magnitude 6.5, with d3-celestial's
+//                                constellation lines snapped onto them, for the Sky tab
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { spawn, execFileSync } from 'node:child_process';
 import { createReadStream } from 'node:fs';
@@ -28,6 +30,8 @@ import { RARE, core, fold, isContentWord } from './renderings.mjs';
 import { families, familyGraph, layout } from './families.mjs';
 import { kinList, otherNames, parseTipnr, personShard, tagWords, unnamed } from './people.mjs';
 import { USFM_BOOKS, parseEnoch, parseJubilees, parseUsfm, unpackModule } from './beyond.mjs';
+import { buildSkyData } from './sky.mjs';
+import { gunzipSync } from 'node:zlib';
 import { USFM_66, parseCharacterVerse, parseCharacters, parseOverrides, resolver } from './speakers.mjs';
 
 const OUT = new URL('../public/data/', import.meta.url);
@@ -553,6 +557,14 @@ async function eastonFor(people) {
   return out;
 }
 
+async function buildSky() {
+  const json = async (name) => JSON.parse(await readFile(new URL(name, CACHE), 'utf8'));
+  const bsc = gunzipSync(await readFile(new URL('bsc5-catalog.gz', CACHE))).toString('latin1');
+  const { stats, data } = buildSkyData(bsc, await json('d3c-lines-7e720a3.json'), await json('d3c-constellations-7e720a3.json'));
+  await writeJson('sky.json', data);
+  console.log('sky     ', stats.stars, 'stars,', Object.keys(data.lines).length, 'constellations,', stats.unmatched, 'line points with no star');
+}
+
 async function buildPeople() {
   const { records, people } = await loadTipnr();
   const { tagged, refused } = peopleTags;
@@ -701,5 +713,6 @@ await fetchAll();
 await buildBible();
 await buildBeyond();
 await Promise.all([buildInterlinear().then(() => Promise.all([buildStrongs(), buildPeople()])), buildXrefs().then(buildCircle), buildPlaces().then(buildMap)]);
+await buildSky();
 await writeJson('manifest.json', { builtAt: new Date().toISOString(), sources: JSON.parse(await readFile(new URL('SOURCES.json', CACHE), 'utf8')) });
 console.log('done');

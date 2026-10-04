@@ -45,16 +45,6 @@ Additions to existing models:
   the text gives no dimensions.
 - **Solomon's Temple:** a Josiah state (2 Kgs 23). None of the parts drawn now change there; see Asherah above.
 
-## Sky
-
-- **The star of the Magi (Matt 2, Rev 12).** A lazy Sky tab: the sky over Jerusalem and Bethlehem drawn with three.js
-  from astronomy-engine (MIT) and the Yale Bright Star Catalogue (public domain), stepping through each reading's events
-  as the verses are read (2:2 the rising, 2:9 going ahead and stopping, Rev 12:1 the sign), with a link out to
-  Stellarium Web for each. Every theory is a reading with its holders: Frederick Larson's (*The Star of Bethlehem*,
-  2007, after Ernest Martin) first, then Kepler's, Molnar's, the *Han shu*'s comet of 5 BC, and a miraculous star.
-  The computed positions are `data`, apart from the readings built on them, and ΔT (≈3 hours, uncertain) makes the
-  hour and altitude of an event ≈. Larson's dates need Herod's death in 1 BC; `herod-death-date` gives both reckonings.
-
 ## Counts
 
 - On a tally bar, ticks marking the earlier rows.

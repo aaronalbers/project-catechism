@@ -462,3 +462,48 @@ export interface Scrolls {
   greek: Record<string, string>;
   overlaps: ScrollOverlap[]; numbering: Numbering[];
 }
+
+/** A body the sky computes: a planet, the Sun or the Moon (astronomy-engine's names), or a star the sky names ("Regulus"). */
+export type SkyBody = string;
+/**
+ * A claim an event makes about the sky that the test suite checks against astronomy-engine: two bodies closest on a
+ * day (`conjunction`), or a planet turning between direct and retrograde (`station`, in ecliptic longitude), within
+ * `within` days of `on`.
+ */
+export type SkyCheck =
+  | { kind: 'conjunction'; a: SkyBody; b: SkyBody; on: string; within: number }
+  | { kind: 'station'; body: SkyBody; on: string; within: number };
+/**
+ * One moment of a reading's sky, shown at the verse `ref`. `when` is the local mean time at `place` (an OpenBible
+ * slug), in the Julian calendar with astronomical years ("-0001-12-25T05:15" is 25 December 2 BC). `look` is what
+ * the view centres on, a body or [azimuth, altitude] in degrees, and `fov` how wide it is. `track` draws a body's
+ * path among the stars day by day, with `marks` labelled; `toward` marks on the horizon the direction of another
+ * place. A time the reading does not give is `estimated`, and `basis` says why that hour or day.
+ */
+export interface SkyEvent {
+  id: string; ref: Ref; title: string; when: string; place: string;
+  look: SkyBody | [number, number]; fov?: number;
+  /** Bodies labelled besides the planets and named stars. */
+  label?: SkyBody[];
+  track?: { body: SkyBody; from: string; to: string; every?: number; marks?: { on: string; text: string }[] };
+  toward?: string;
+  estimated?: boolean; basis?: string;
+  /** What the reading says of this moment, attributed. */
+  text: string;
+  checks?: SkyCheck[];
+  sources: Source[];
+}
+/** A reading of the star of the Magi: who holds it, and the moments of its sky. Every one is an interpretation. */
+export interface SkyReading {
+  id: string; label: string; summary: string;
+  confidence: Confidence; traditions: string[];
+  sources: Source[];
+  events: SkyEvent[];
+}
+/** `public/data/sky.json`: stars as [ra, dec, V mag, B−V, pmRA, pmDec] (J2000, degrees and mas/yr), names by star index, constellation lines as runs of star indices, and where each constellation's name goes. */
+export interface SkyData {
+  stars: [number, number, number, number, number, number][];
+  names: Record<string, string>;
+  lines: Record<string, number[][]>;
+  labels: [string, number, number][];
+}

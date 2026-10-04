@@ -1,5 +1,5 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, TALLIES } from './content';
+import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, SKY_READINGS, TALLIES } from './content';
 import { daysLabel, KIND_LABEL, priceRefs } from './prices';
 import { HEBREW } from './scrolls';
 import { READING_ORDER, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
@@ -10,7 +10,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'price' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'price' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'sky' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -116,6 +116,14 @@ export const CATALOG: CatalogSection[] = [
       id: j.id, kind: 'journey', title: j.title, summary: j.summary,
       go: j.ref, lines: [{ label: `${j.kind === 'border' ? 'Border' : 'Route'}, ${j.stations.length} places`, refs: [j.ref] }],
     }))),
+  },
+  {
+    id: 'sky', kind: 'sky', title: 'The star of the Magi', tab: 'sky',
+    blurb: 'The sky each reading of the star points to, computed for the place and hour, moving with the text.',
+    entries: SKY_READINGS.map((r) => ({
+      id: r.id, kind: 'sky' as const, title: r.label, summary: r.summary,
+      go: r.events[0].ref, lines: [{ label: 'Moments', refs: r.events.map((e) => e.ref) }],
+    })),
   },
   {
     id: 'people', kind: 'profile', title: 'People', tab: 'people',
