@@ -120,11 +120,17 @@ The list aims to include every BibleProject video, wherever it applies.
 - **Verse numbering is noted by hand, not mapped.** Jubilees uses CrossWire's editor's verse numbers rather than
   Charles's (its `note` says where they drift), and the WEB deuterocanon's numbering is taken as given, so a
   reference can point at different words in another edition. The Copenhagen Alliance's versification working group
-  (UBS, Tyndale House, SIL, YouVersion) publishes a JSON format for mapping one text's numbering onto a base text,
-  and rules for working out which scheme a text uses: github.com/youversion/versification-specification. Not yet
-  read beyond its README; the repo states no licence, and whether it covers 1 Enoch or Jubilees is unchecked.
-  *Needed:* read the spec, check its coverage and licence (cite it, or ask before copying its data), and if it fits,
-  map Jubilees onto Charles's 1913 numbering and the deuterocanon onto other editions.
+  publishes Paratext's standard schemes as JSON mappings (github.com/youversion/versification-specification, which
+  states no licence). Checked 2026-10-04 against our verse counts:
+  - **1 Enoch and Jubilees: no help.** They appear only in its Ethiopian Orthodox scheme, which divides them into 42
+    and 34 chapters (Charles: 108 and 50) and maps neither onto any other scheme. Mapping Jubilees onto Charles's
+    numbering still needs his 1913 printing.
+  - **The deuterocanon: mostly the English scheme (`eng.json`, which its README says most English Bibles use, the RSV for one).** Judith, Wisdom, Greek Daniel, 1–3
+    Maccabees, 1 and 2 Esdras, the Prayer of Manasseh and Psalm 151 match it chapter for chapter. Five books differ
+    in some chapters' verse counts: Tobit (5, 10), Greek Esther (7 of 10 chapters), Sirach (8 chapters), Baruch (1)
+    and 4 Maccabees (7, 8, 12). `eng.json` has 111 verse mappings for those books.
+  *Needed:* for those five, find which edition the WEB's numbering follows and say in each book's `note` where its
+  verses differ from that scheme's; using `eng.json`'s mappings directly needs its licence settled first.
 
 ## Writers and speakers (`content/writers.json`, `content/speakers.json`, the People tab), recorded 2026-10-01
 
