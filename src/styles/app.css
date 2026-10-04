@@ -196,6 +196,9 @@ body.resizing-y { cursor: row-resize; }
 .card { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
 .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; display: flex; gap: 8px; align-items: flex-start; }
 .card .summary { color: var(--text); margin: 6px 0 8px; font-family: var(--serif); font-size: 16px; }
+.card .quoted-summary { margin: 6px 0 8px; padding-left: 10px; border-left: 3px solid var(--border); }
+.card .quoted-summary .summary { margin: 0; }
+.card .quoted-summary figcaption { color: var(--muted); font-size: 12px; margin-top: 2px; }
 .card .body p { margin: 8px 0; color: var(--text); }
 .card details { margin-top: 6px; }
 .card summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: 13px; }

@@ -433,10 +433,13 @@ export type VideoKind = 'overview' | 'series' | 'theme' | 'word' | 'insight' | '
  * A BibleProject video. `youtube` videos embed; `bibleproject` ones are only published on
  * bibleproject.com and open there. `page` is the bibleproject.com page when there is one.
  * `strongs` lists the Hebrew/Greek words a word study is about, for the Words panel.
+ * `summaryFrom` marks a summary quoted word for word from BibleProject's own description, and
+ * where; the card shows it as theirs. A summary without it is this project's, and says only
+ * what the video covers.
  */
 export interface Video {
   id: string; title: string; provider: 'youtube' | 'bibleproject'; videoId?: string; channel: string; url: string; page?: string;
-  series: string; kind: VideoKind; books?: string[]; verses?: Ref[]; strongs?: string[]; summary?: string; duration?: number;
+  series: string; kind: VideoKind; books?: string[]; verses?: Ref[]; strongs?: string[]; summary?: string; summaryFrom?: 'youtube' | 'bibleproject.com'; duration?: number;
 }
 
 /**

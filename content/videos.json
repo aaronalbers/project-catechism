@@ -51,6 +51,7 @@
    "Mal"
   ],
   "summary": "Did you know that the arrangement of the Old Testament in Protestant Christian Bibles is not original?",
+  "summaryFrom": "bibleproject.com",
   "duration": 764
  },
  {
@@ -66,7 +67,7 @@
   "verses": [
    "Gen.12.1-50.26"
   ],
-  "summary": "Genesis 12–50: Abraham’s family and the promise that runs through the rest of the Bible.",
+  "summary": "An overview of Genesis 12–50.",
   "duration": 487
  },
  {
@@ -82,7 +83,7 @@
   "verses": [
    "Gen.1.1-11.32"
   ],
-  "summary": "Genesis 1–11: creation, rebellion, and the scattering of the nations.",
+  "summary": "An overview of Genesis 1–11.",
   "duration": 462
  },
  {
@@ -98,7 +99,7 @@
   "verses": [
    "Exod.1.1-18.27"
   ],
-  "summary": "Exodus 1–18: slavery, the plagues, Passover and the sea.",
+  "summary": "An overview of Exodus 1–18.",
   "duration": 393
  },
  {
@@ -114,7 +115,7 @@
   "verses": [
    "Exod.19.1-40.38"
   ],
-  "summary": "Exodus 19–40: Sinai, the covenant, the golden calf and the tabernacle.",
+  "summary": "An overview of Exodus 19–40.",
   "duration": 387
  },
  {
@@ -130,7 +131,7 @@
   "books": [
    "Num"
   ],
-  "summary": "Numbers: the wilderness generation.",
+  "summary": "An overview of Numbers.",
   "duration": 411
  },
  {
@@ -147,6 +148,7 @@
    "Josh"
   ],
   "summary": "The book of Joshua shows us God’s covenant faithfulness to bring the Israelites into the land he promised Abraham.",
+  "summaryFrom": "bibleproject.com",
   "duration": 528
  },
  {
@@ -162,7 +164,7 @@
   "books": [
    "Lev"
   ],
-  "summary": "Leviticus: how a holy God can live among a sinful people.",
+  "summary": "An overview of Leviticus.",
   "duration": 497
  },
  {
@@ -178,7 +180,7 @@
   "books": [
    "Ruth"
   ],
-  "summary": "Ruth: loyalty, redemption and the great-grandmother of David.",
+  "summary": "An overview of Ruth.",
   "duration": 431
  },
  {
@@ -195,6 +197,7 @@
    "Judg"
   ],
   "summary": "After the death of Joshua, the people of Israel begin a downward spiral.The book of Judges highlights six judges and their increasing corruption during this time.",
+  "summaryFrom": "bibleproject.com",
   "duration": 449
  },
  {
@@ -211,6 +214,7 @@
    "Deut"
   ],
   "summary": "In the book of Deuteronomy, Moses gives Israel final words of warning and blessing. He covers the story so far, a collection of laws, and a charge for Israel to listen and obey rather than rebel.",
+  "summaryFrom": "bibleproject.com",
   "duration": 469
  },
  {
@@ -226,7 +230,7 @@
   "books": [
    "1Sam"
   ],
-  "summary": "1 Samuel: Israel asks for a king.",
+  "summary": "An overview of 1 Samuel.",
   "duration": 439
  },
  {
@@ -243,7 +247,7 @@
    "Ezra",
    "Neh"
   ],
-  "summary": "Ezra–Nehemiah: the return and rebuilding.",
+  "summary": "An overview of Ezra–Nehemiah.",
   "duration": 516
  },
  {
@@ -260,7 +264,7 @@
    "1Kgs",
    "2Kgs"
   ],
-  "summary": "1–2 Kings: from Solomon to exile.",
+  "summary": "An overview of 1 and 2 Kings.",
   "duration": 531
  },
  {
@@ -276,7 +280,7 @@
   "books": [
    "2Sam"
   ],
-  "summary": "2 Samuel: David’s reign, rise and failures.",
+  "summary": "An overview of 2 Samuel.",
   "duration": 357
  },
  {
@@ -293,6 +297,7 @@
    "Job"
   ],
   "summary": "Job, his wife, and his friends continually speculate on why an upright man like Job might experience so much suffering. God reminds Job that the world has order and beauty but it is also wild and dangerous.",
+  "summaryFrom": "bibleproject.com",
   "duration": 661
  },
  {
@@ -309,6 +314,7 @@
    "Esth"
   ],
   "summary": "Though God is never mentioned in the book of Esther, we can see clearly that he is at work behind the scenes, ensuring that Haman’s plot to destroy the Jewish people is thwarted.",
+  "summaryFrom": "bibleproject.com",
   "duration": 553
  },
  {
@@ -324,7 +330,7 @@
   "books": [
    "Ps"
   ],
-  "summary": "Psalms: the design of the Psalter as one book.",
+  "summary": "An overview of Psalms.",
   "duration": 539
  },
  {
@@ -340,7 +346,7 @@
   "verses": [
    "Isa.1.1-39.8"
   ],
-  "summary": "Isaiah 1–39.",
+  "summary": "An overview of Isaiah 1–39.",
   "duration": 491
  },
  {
@@ -356,7 +362,7 @@
   "books": [
    "Song"
   ],
-  "summary": "Song of Songs.",
+  "summary": "An overview of Song of Songs.",
   "duration": 419
  },
  {
@@ -373,6 +379,7 @@
    "Prov"
   ],
   "summary": "Linked to Solomon and other wise men, the book of Proverbs includes hundreds of short, clever sayings designed to teach us how to live and act wisely.",
+  "summaryFrom": "bibleproject.com",
   "duration": 487
  },
  {
@@ -389,6 +396,7 @@
    "Eccl"
   ],
   "summary": "The book of Ecclesiastes is the author’s response to Proverbs. From their perspective, life isn’t so simple as fearing God and choosing wisdom. Life is unpredictable, and our existence is a blip of time.",
+  "summaryFrom": "bibleproject.com",
   "duration": 481
  },
  {
@@ -404,7 +412,7 @@
   "verses": [
    "Isa.40.1-66.24"
   ],
-  "summary": "Isaiah 40–66.",
+  "summary": "An overview of Isaiah 40–66.",
   "duration": 486
  },
  {
@@ -421,6 +429,7 @@
    "Jer"
   ],
   "summary": "The prophet Jeremiah announced that God would judge Israel’s sins with exile to Babylon. And then he lived through the horror of his predictions.",
+  "summaryFrom": "bibleproject.com",
   "duration": 434
  },
  {
@@ -436,7 +445,7 @@
   "books": [
    "Dan"
   ],
-  "summary": "Daniel.",
+  "summary": "An overview of Daniel.",
   "duration": 534
  },
  {
@@ -453,6 +462,7 @@
    "Lam"
   ],
   "summary": "Lamentations is a collection of poems detailing Israel’s grief after Jerusalem’s destruction, which was caused by their rebellion against God.",
+  "summaryFrom": "bibleproject.com",
   "duration": 437
  },
  {
@@ -469,6 +479,7 @@
    "Ezek.1.1-33.33"
   ],
   "summary": "Ezekiel is a prophet living in exile in Babylon. Ezekiel boldly speaks God’s message of Israel’s rebellion and makes clear that this exile is punishment for their covenant unfaithfulness.",
+  "summaryFrom": "bibleproject.com",
   "duration": 443
  },
  {
@@ -485,6 +496,7 @@
    "Hos"
   ],
   "summary": "In the book of Hosea, God sends Hosea to Israel during the reign of King Jeroboam II to communicate God’s despair over their perpetual idol worship and dependence on outside nations.",
+  "summaryFrom": "bibleproject.com",
   "duration": 456
  },
  {
@@ -501,6 +513,7 @@
    "Ezek.34.1-48.35"
   ],
   "summary": "Ezekiel is a prophet living in exile in Babylon. God’s presence being revealed to Ezekiel demonstrates that holiness has nothing to do with geographical location—it’s about the condition of the heart.",
+  "summaryFrom": "bibleproject.com",
   "duration": 432
  },
  {
@@ -516,7 +529,7 @@
   "books": [
    "Joel"
   ],
-  "summary": "Joel.",
+  "summary": "An overview of Joel.",
   "duration": 409
  },
  {
@@ -532,7 +545,7 @@
   "books": [
    "Obad"
   ],
-  "summary": "Obadiah.",
+  "summary": "An overview of Obadiah.",
   "duration": 298
  },
  {
@@ -549,6 +562,7 @@
    "Jonah"
   ],
   "summary": "The book of Jonah poses fascinating questions for us to ponder. Do we truly forgive and love our enemies? And do we run from God when faced with our failures?",
+  "summaryFrom": "bibleproject.com",
   "duration": 541
  },
  {
@@ -565,6 +579,7 @@
    "Mic"
   ],
   "summary": "The prophet Micah describes God’s coming judgment on Israel because it has exploited the poor and twisted the laws of the Torah. But Micah’s prophecies are not without hope.",
+  "summaryFrom": "bibleproject.com",
   "duration": 398
  },
  {
@@ -581,6 +596,7 @@
    "Nah"
   ],
   "summary": "The book of Nahum is a collection of poems announcing the downfall of some of Israel’s worst oppressors.",
+  "summaryFrom": "bibleproject.com",
   "duration": 307
  },
  {
@@ -596,7 +612,7 @@
   "books": [
    "Amos"
   ],
-  "summary": "Amos.",
+  "summary": "An overview of Amos.",
   "duration": 432
  },
  {
@@ -613,6 +629,7 @@
    "Zeph"
   ],
   "summary": "The book of Zephaniah contains intense images of God’s justice and hope.",
+  "summaryFrom": "bibleproject.com",
   "duration": 310
  },
  {
@@ -628,7 +645,7 @@
   "books": [
    "Zech"
   ],
-  "summary": "Zechariah.",
+  "summary": "An overview of Zechariah.",
   "duration": 490
  },
  {
@@ -644,7 +661,7 @@
   "books": [
    "Hab"
   ],
-  "summary": "Habakkuk.",
+  "summary": "An overview of Habakkuk.",
   "duration": 408
  },
  {
@@ -661,6 +678,7 @@
    "Mal"
   ],
   "summary": "The book of Malachi is a stark indictment of Israel’s rebellion, but it offers a surprising message of hope too. Even after years of rebellion and exile, God has not abandoned Israel.",
+  "summaryFrom": "bibleproject.com",
   "duration": 429
  },
  {
@@ -677,6 +695,7 @@
    "Hag"
   ],
   "summary": "Haggai challenges the returning exiles to remember their covenant, remain faithful to God, and build the temple before constructing their own homes.",
+  "summaryFrom": "bibleproject.com",
   "duration": 337
  },
  {
@@ -693,7 +712,7 @@
    "1Chr",
    "2Chr"
   ],
-  "summary": "1–2 Chronicles: Israel’s story retold after the exile.",
+  "summary": "An overview of 1 and 2 Chronicles.",
   "duration": 388
  },
  {
@@ -709,7 +728,7 @@
   "verses": [
    "Matt.14.1-28.20"
   ],
-  "summary": "Matthew 14–28: the road to Jerusalem, the cross and the commission.",
+  "summary": "An overview of Matthew 14–28.",
   "duration": 430
  },
  {
@@ -725,7 +744,7 @@
   "verses": [
    "Matt.1.1-13.58"
   ],
-  "summary": "Matthew 1–13: Jesus as the new Moses who brings God’s kingdom.",
+  "summary": "An overview of Matthew 1–13.",
   "duration": 497
  },
  {
@@ -768,6 +787,7 @@
    "Rev"
   ],
   "summary": "The New Testament is not a separate story. It’s a continuation of the story introduced in the Old Testament and a fulfillment of God’s covenant promises introduced in the first part of the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 497
  },
  {
@@ -783,7 +803,7 @@
   "books": [
    "Mark"
   ],
-  "summary": "Mark: the suffering servant-king.",
+  "summary": "An overview of Mark.",
   "duration": 572
  },
  {
@@ -799,7 +819,7 @@
   "verses": [
    "John.13.1-21.25"
   ],
-  "summary": "John 13–21.",
+  "summary": "An overview of John 13–21.",
   "duration": 512
  },
  {
@@ -815,7 +835,7 @@
   "verses": [
    "John.1.1-12.50"
   ],
-  "summary": "John 1–12.",
+  "summary": "An overview of John 1–12.",
   "duration": 526
  },
  {
@@ -831,7 +851,7 @@
   "verses": [
    "Luke.1.1-9.62"
   ],
-  "summary": "Luke 1–9.",
+  "summary": "An overview of Luke 1–9.",
   "duration": 496
  },
  {
@@ -847,7 +867,7 @@
   "verses": [
    "Acts.1.1-12.25"
   ],
-  "summary": "Acts 1–12.",
+  "summary": "An overview of Acts 1–12.",
   "duration": 496
  },
  {
@@ -863,7 +883,7 @@
   "verses": [
    "Rom.1.1-4.25"
   ],
-  "summary": "Romans 1–4.",
+  "summary": "An overview of Romans 1–4.",
   "duration": 467
  },
  {
@@ -879,7 +899,7 @@
   "verses": [
    "Luke.10.1-24.53"
   ],
-  "summary": "Luke 10–24.",
+  "summary": "An overview of Luke 10–24.",
   "duration": 468
  },
  {
@@ -895,7 +915,7 @@
   "verses": [
    "Acts.13.1-28.31"
   ],
-  "summary": "Acts 13–28.",
+  "summary": "An overview of Acts 13–28.",
   "duration": 484
  },
  {
@@ -912,6 +932,7 @@
    "Rom.5.1-16.27"
   ],
   "summary": "Watch our overview video on the book of Romans, which breaks down the literary design of the book and its flow of thought.",
+  "summaryFrom": "bibleproject.com",
   "duration": 550
  },
  {
@@ -928,6 +949,7 @@
    "1Cor"
   ],
   "summary": "Paul’s first letter to the Corinthians is a wake-up call: the resurrection gives us a reason for unity, motivation to maintain sexual purity, ability to love other people more than ourselves, and ultimate hope for victory over death.",
+  "summaryFrom": "bibleproject.com",
   "duration": 527
  },
  {
@@ -943,7 +965,7 @@
   "books": [
    "2Cor"
   ],
-  "summary": "2 Corinthians.",
+  "summary": "An overview of 2 Corinthians.",
   "duration": 517
  },
  {
@@ -960,6 +982,7 @@
    "Gal"
   ],
   "summary": "In the book of Galatians, followers of Jesus learn that they are justified by the Gospel of Jesus, not the laws of Torah. They are a part of a multi-ethnic family of God and equipped by the Spirit to love God and others.",
+  "summaryFrom": "bibleproject.com",
   "duration": 543
  },
  {
@@ -975,7 +998,7 @@
   "books": [
    "Eph"
   ],
-  "summary": "Ephesians.",
+  "summary": "An overview of Ephesians.",
   "duration": 537
  },
  {
@@ -992,6 +1015,7 @@
    "Col"
   ],
   "summary": "The book of Colossians addresses problems the church at Colossae faced, challenging followers of Jesus to examine their lives and be transformed through the resurrection and love of Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 556
  },
  {
@@ -1007,7 +1031,7 @@
   "books": [
    "Phil"
   ],
-  "summary": "Philippians.",
+  "summary": "An overview of Philippians.",
   "duration": 553
  },
  {
@@ -1024,6 +1048,7 @@
    "1Thess"
   ],
   "summary": "In 1 Thessalonians, Paul celebrates the Church’s holiness, love, and future hope as they remain faithful to Jesus. Despite persecution, the church has flourished in their faith.",
+  "summaryFrom": "bibleproject.com",
   "duration": 438
  },
  {
@@ -1040,6 +1065,7 @@
    "Titus"
   ],
   "summary": "In the book of Titus, Paul reminds Cretan believers that, despite their sinful culture, they can be transformed into a new humanity by the same grace that Jesus demonstrated when he died to redeem them.",
+  "summaryFrom": "bibleproject.com",
   "duration": 501
  },
  {
@@ -1056,6 +1082,7 @@
    "2Thess"
   ],
   "summary": "In his second letter to the Thessalonians, Paul encourages the church to   remain faithful, hopeful, confident, and fearless while waiting for Jesus’ return and deliverance from the evil ruler.",
+  "summaryFrom": "bibleproject.com",
   "duration": 430
  },
  {
@@ -1071,7 +1098,7 @@
   "books": [
    "1Tim"
   ],
-  "summary": "1 Timothy.",
+  "summary": "An overview of 1 Timothy.",
   "duration": 556
  },
  {
@@ -1088,6 +1115,7 @@
    "Phlm"
   ],
   "summary": "In this book, Paul asks Philemon to forgive his runaway slave, Onesimus. This is a revolutionary act, demonstrating the Gospel in action and showing that all people are equal partners in the new humanity.",
+  "summaryFrom": "bibleproject.com",
   "duration": 399
  },
  {
@@ -1103,7 +1131,7 @@
   "books": [
    "Heb"
   ],
-  "summary": "Hebrews.",
+  "summary": "An overview of Hebrews.",
   "duration": 496
  },
  {
@@ -1119,7 +1147,7 @@
   "books": [
    "2Tim"
   ],
-  "summary": "2 Timothy.",
+  "summary": "An overview of 2 Timothy.",
   "duration": 465
  },
  {
@@ -1136,6 +1164,7 @@
    "Jas"
   ],
   "summary": "The book of James is filled with short wisdom speeches that are full of metaphors and easily memorized one-liners. While James doesn’t teach new theology, this book does challenge believers on how they should live.",
+  "summaryFrom": "bibleproject.com",
   "duration": 482
  },
  {
@@ -1151,7 +1180,7 @@
   "books": [
    "1Pet"
   ],
-  "summary": "1 Peter.",
+  "summary": "An overview of 1 Peter.",
   "duration": 476
  },
  {
@@ -1169,7 +1198,7 @@
    "2John",
    "3John"
   ],
-  "summary": "1–3 John.",
+  "summary": "An overview of 1–3 John.",
   "duration": 576
  },
  {
@@ -1186,6 +1215,7 @@
    "2Pet"
   ],
   "summary": "In this letter, Peter issues two warnings against corrupt teachers, who are objecting to the reality of Jesus’ resurrection and leading the community astray.",
+  "summaryFrom": "bibleproject.com",
   "duration": 482
  },
  {
@@ -1202,6 +1232,7 @@
    "Jude"
   ],
   "summary": "The book of Jude references the Hebrew Bible and Jewish literature to illustrate God’s judgment on rebellion. Jude challenges the church to contend for the faith and stay faithful to God.",
+  "summaryFrom": "bibleproject.com",
   "duration": 465
  },
  {
@@ -1218,6 +1249,7 @@
    "Rev.1.1-11.19"
   ],
   "summary": "The book of Revelation is not a secret code for deciphering the timeline of Jesus’ return. It’s a work of apocalyptic literature that shows how every human kingdom eventually becomes Babylon and must be resisted.",
+  "summaryFrom": "bibleproject.com",
   "duration": 709
  },
  {
@@ -1234,6 +1266,7 @@
    "Rev.12.1-22.21"
   ],
   "summary": "The book of Revelation is not a secret code for deciphering the timeline of Jesus’ return. It’s a work of apocalyptic literature that shows how every human kingdom eventually becomes Babylon and must be resisted.",
+  "summaryFrom": "bibleproject.com",
   "duration": 711
  },
  {
@@ -1250,6 +1283,7 @@
    "Gen.1.1-11.32"
   ],
   "summary": "The story of the Bible opens with God creating beauty and order out of chaos and darkness. Will humans trust him to continue to provide?",
+  "summaryFrom": "bibleproject.com",
   "duration": 372
  },
  {
@@ -1266,6 +1300,7 @@
    "Gen.12.1-50.26"
   ],
   "summary": "When humans choose their own desires over trusting God's provision, God begins a rescue plan that starts with one man.",
+  "summaryFrom": "bibleproject.com",
   "duration": 307
  },
  {
@@ -1282,6 +1317,7 @@
    "Exod.1.1-18.27"
   ],
   "summary": "In an epic showdown, God confronts evil and injustice and rescues his people from slavery. How do the people respond to God's faithfulness?",
+  "summaryFrom": "bibleproject.com",
   "duration": 344
  },
  {
@@ -1298,6 +1334,7 @@
    "Num"
   ],
   "summary": "The people just keep rebelling—and God continually responds with  provision and protection! But the book of Numbers also reveals that God's justice accompanies his mercy.",
+  "summaryFrom": "bibleproject.com",
   "duration": 371
  },
  {
@@ -1314,6 +1351,7 @@
    "Deut"
   ],
   "summary": "How does Moses say goodbye? The fifth and final book of the Torah contains a collection of speeches from the first Israelite leader urging the next generation’s faithfulness to God.",
+  "summaryFrom": "bibleproject.com",
   "duration": 407
  },
  {
@@ -1330,6 +1368,7 @@
    "Exod.19.1-40.38"
   ],
   "summary": "What does it mean for a nation to belong to God? In the second part of Exodus, God establishes a covenant with his people, Israel, and invites them to access his presence through the tabernacle.",
+  "summaryFrom": "bibleproject.com",
   "duration": 317
  },
  {
@@ -1346,6 +1385,7 @@
    "Lev"
   ],
   "summary": "What happens when God moves into the neighborhood? Leviticus outlines the guidance God provides for Israel to experience his presence and reflect his goodness and justice to the world.",
+  "summaryFrom": "bibleproject.com",
   "duration": 442
  },
  {
@@ -1362,6 +1402,7 @@
    "Prov"
   ],
   "summary": "What guidance do generations of people offer on living a God-centered life? Explore this collection of sayings intended for re-reading and contemplation.",
+  "summaryFrom": "bibleproject.com",
   "duration": 330
  },
  {
@@ -1378,6 +1419,7 @@
    "Eccl"
   ],
   "summary": "Why do we often feel out of control in this life? Ecclesiastes addresses the wisdom we need to exist with life’s uncertainties and continually hope for God's rescue.",
+  "summaryFrom": "bibleproject.com",
   "duration": 402
  },
  {
@@ -1394,6 +1436,7 @@
    "Job"
   ],
   "summary": "Is God still just if good people suffer? Explore the surprising answer to this question and how Job and his friends try to make sense of God's role in suffering.",
+  "summaryFrom": "bibleproject.com",
   "duration": 435
  },
  {
@@ -1441,7 +1484,7 @@
   "verses": [
    "Luke.3.1-9.50"
   ],
-  "summary": "The baptism of Jesus and the start of his ministry (Luke 3–9).",
+  "summary": "The baptism of Jesus and the start of his ministry, Luke 3–9.",
   "duration": 323
  },
  {
@@ -1457,7 +1500,7 @@
   "verses": [
    "Luke.9.51-19.27"
   ],
-  "summary": "The journey to Jerusalem and the prodigal son (Luke 9–19).",
+  "summary": "The journey to Jerusalem and the parable of the prodigal son, Luke 9–19.",
   "duration": 288
  },
  {
@@ -1474,6 +1517,7 @@
    "Acts.1.1-7.60"
   ],
   "summary": "In this video, we'll explore how God's Spirit filled and empowered Jesus' followers, renewing them and preparing them to announce the good news to the nations.",
+  "summaryFrom": "bibleproject.com",
   "duration": 382
  },
  {
@@ -1490,6 +1534,7 @@
    "Luke.24.1-53"
   ],
   "summary": "This video concludes Luke's epic portrait of Jesus of Nazareth, setting the stage for his second volume, Acts. The tomb is empty and Jesus is alive, seated as the ruler of God’s Kingdom.",
+  "summaryFrom": "bibleproject.com",
   "duration": 316
  },
  {
@@ -1506,6 +1551,7 @@
    "Acts.8.1-12.25"
   ],
   "summary": "In this video, we meet the apostle Paul. See how God transformed Paul and grew a small collective of messianic Jews in Jerusalem into a multi-ethnic movement that quickly spread throughout the nations.",
+  "summaryFrom": "bibleproject.com",
   "duration": 360
  },
  {
@@ -1522,6 +1568,7 @@
    "Acts.13.1-20.38"
   ],
   "summary": "What was it like for Paul to travel around the Roman Empire announcing the good news about the risen Jesus? How did people respond to his message?",
+  "summaryFrom": "bibleproject.com",
   "duration": 283
  },
  {
@@ -1538,6 +1585,7 @@
    "Acts.21.1-28.31"
   ],
   "summary": "In the final video in our Acts series, we trace Paul’s final journey to Jerusalem and then into a Roman prison.",
+  "summaryFrom": "youtube",
   "duration": 290
  },
  {
@@ -1557,6 +1605,7 @@
    "G3107"
   ],
   "summary": "Jesus begins this collection of teachings with a section often referred to as the Beatitudes. Learn how these surprising statements describe the arrival of God's Kingdom.",
+  "summaryFrom": "bibleproject.com",
   "duration": 405
  },
  {
@@ -1574,6 +1623,7 @@
    "Matt.5.1-7.29"
   ],
   "summary": "Explore an introduction to the largest collection of Jesus' teachings in the first episode of Sermon on the Mount.",
+  "summaryFrom": "bibleproject.com",
   "duration": 325
  },
  {
@@ -1590,6 +1640,7 @@
    "Matt.5.17-20"
   ],
   "summary": "Jesus offers a bold vision of doing right that is grounded in God's wisdom. Learn how this vision fulfills the teachings of the Torah.",
+  "summaryFrom": "bibleproject.com",
   "duration": 370
  },
  {
@@ -1606,6 +1657,7 @@
    "Matt.5.21-32"
   ],
   "summary": "Learn how Jesus explains three biblical laws by confronting the desires that drive behavior.",
+  "summaryFrom": "bibleproject.com",
   "duration": 493
  },
  {
@@ -1623,6 +1675,7 @@
    "Luke.11.2-4"
   ],
   "summary": "In a short prayer, Jesus shows us how to align our desires with the purposes of God’s Kingdom.",
+  "summaryFrom": "bibleproject.com",
   "duration": 565
  },
  {
@@ -1639,6 +1692,7 @@
    "Matt.5"
   ],
   "summary": "Explore how Jesus reveals God’s wisdom underneath Old Testament laws about oaths, revenge, and enemies in the Sermon on the Mount in Matthew 5.",
+  "summaryFrom": "bibleproject.com",
   "duration": 485
  },
  {
@@ -1656,6 +1710,7 @@
    "Matt.6.16-18"
   ],
   "summary": "What does religious hypocrisy look like? Explore three examples from Jesus in Matthew 6:1-8 and his warnings about the temptation to become a hypocrite.",
+  "summaryFrom": "bibleproject.com",
   "duration": 403
  },
  {
@@ -1672,6 +1727,7 @@
    "Matt.6.19-34"
   ],
   "summary": "Watch an explainer video to discover what Jesus teaches in key Bible verses about wealth and possessions in the Sermon on the Mount.",
+  "summaryFrom": "bibleproject.com",
   "duration": 415
  },
  {
@@ -1689,6 +1745,7 @@
    "Matt.5.17"
   ],
   "summary": "Watch a short video that explains Jesus’ teachings in Matthew 7:1-12 about not judging others, throwing pearls to pigs, and dealing with the plank in your eye.",
+  "summaryFrom": "bibleproject.com",
   "duration": 324
  },
  {
@@ -1705,6 +1762,7 @@
    "Matt.7.13-29"
   ],
   "summary": "Watch as we explain the three images Jesus uses to illustrate the choice his followers face in responding to his call to follow him.",
+  "summaryFrom": "bibleproject.com",
   "duration": 422
  },
  {
@@ -1719,7 +1777,8 @@
   "verses": [
    "Matt.5.21-22"
   ],
-  "summary": "Watch a short animated video commentary explaining the wisdom Jesus reveals within the command \"Do not murder\" in Matthew 5:21-22."
+  "summary": "Watch a short animated video commentary explaining the wisdom Jesus reveals within the command \"Do not murder\" in Matthew 5:21-22.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-Bpk-sI4MY58",
@@ -1735,6 +1794,7 @@
    "Matt.5.17-20"
   ],
   "summary": "Watch a short video commentary on Matthew 5:17-20 that explains Jesus' perspective on the Torah and the Prophets in the Sermon on the Mount.",
+  "summaryFrom": "bibleproject.com",
   "duration": 388
  },
  {
@@ -1750,7 +1810,7 @@
   "verses": [
    "Matt.5.3-16"
   ],
-  "summary": "The Beatitudes: who Jesus says is living the good life.",
+  "summary": "On the Beatitudes, Matthew 5:3–16.",
   "duration": 623
  },
  {
@@ -1767,6 +1827,7 @@
    "Matt.5.1-7.29"
   ],
   "summary": "Watch a short animated video commentary that explains the meaning of Jesus' Sermon on the Mount teachings in the Gospel of Matthew.",
+  "summaryFrom": "bibleproject.com",
   "duration": 99
  },
  {
@@ -1781,7 +1842,8 @@
   "verses": [
    "Matt.5.27-28"
   ],
-  "summary": "Watch a short animated video commentary explaining the wisdom Jesus reveals within the command \"Do not commit adultery\" in Matthew 5:27-28."
+  "summary": "Watch a short animated video commentary explaining the wisdom Jesus reveals within the command \"Do not commit adultery\" in Matthew 5:27-28.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-529-30-eye-and-hand-mutilation",
@@ -1795,7 +1857,8 @@
   "verses": [
    "Matt.5.29-30"
   ],
-  "summary": "Watch a short animated video commentary explaining the meaning behind Jesus' demand to gouge out your eye and cut off your hand if they cause you to sin."
+  "summary": "Watch a short animated video commentary explaining the meaning behind Jesus' demand to gouge out your eye and cut off your hand if they cause you to sin.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-n_vEB11XKSE",
@@ -1811,6 +1874,7 @@
    "Matt.6.9-13"
   ],
   "summary": "Watch a short, animated video that explains the Lord's Prayer in the Bible and understand the meaning of Matthew 6:9-13.",
+  "summaryFrom": "bibleproject.com",
   "duration": 376
  },
  {
@@ -1825,7 +1889,8 @@
   "verses": [
    "Matt.5.33-37"
   ],
-  "summary": "Watch a short animated video commentary that explains what Jesus means in Matthew 5:33-37 when he says “let your yes be yes, and your no be no”."
+  "summary": "Watch a short animated video commentary that explains what Jesus means in Matthew 5:33-37 when he says “let your yes be yes, and your no be no”.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-6-1-4-generosity-and-true-reward",
@@ -1839,7 +1904,8 @@
   "verses": [
    "Matt.6.1-4"
   ],
-  "summary": "Watch a short video commentary on Matthew 6:1-4 that explains why Jesus warns his followers about doing the common religious practices of his day in public."
+  "summary": "Watch a short video commentary on Matthew 6:1-4 that explains why Jesus warns his followers about doing the common religious practices of his day in public.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-619-23-true-wealth-and-generosity",
@@ -1853,7 +1919,8 @@
   "verses": [
    "Matt.6.19-23"
   ],
-  "summary": "Watch a video that explores key Bible verses where Jesus talks about how our relationship to wealth and possessions affects our relationship with God."
+  "summary": "Watch a video that explores key Bible verses where Jesus talks about how our relationship to wealth and possessions affects our relationship with God.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-7-1-2-dont-judge",
@@ -1867,7 +1934,8 @@
   "verses": [
    "Matt.7.1-2"
   ],
-  "summary": "Watch a short animated video commentary that explains what Jesus means in Matthew 7:1-2 when he says “do not judge, so that you will not be judged.\""
+  "summary": "Watch a short animated video commentary that explains what Jesus means in Matthew 7:1-2 when he says “do not judge, so that you will not be judged.\"",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-7-6-pearls-pigs",
@@ -1881,7 +1949,8 @@
   "verses": [
    "Matt.7.6"
   ],
-  "summary": "Watch a short animated video commentary that explains what Jesus means in Matthew 7:6 when he says “don't throw your pearls in front of pigs.\""
+  "summary": "Watch a short animated video commentary that explains what Jesus means in Matthew 7:6 when he says “don't throw your pearls in front of pigs.\"",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-7-24-27-two-houses",
@@ -1895,7 +1964,8 @@
   "verses": [
    "Matt.7.24-27"
   ],
-  "summary": "Watch a short animated video commentary that explains the meaning of Jesus’ parable of the two houses built on rock and sand."
+  "summary": "Watch a short animated video commentary that explains the meaning of Jesus’ parable of the two houses built on rock and sand.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-matthew-7-12-golden-rule",
@@ -1909,7 +1979,8 @@
   "verses": [
    "Matt.7.12"
   ],
-  "summary": "Watch a short video commentary that explains what Jesus means in Matthew 7:12 when he says \"Do unto others as you would have them do unto you.\""
+  "summary": "Watch a short video commentary that explains what Jesus means in Matthew 7:12 when he says \"Do unto others as you would have them do unto you.\"",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-vXHDUs28rPM",
@@ -1926,6 +1997,7 @@
    "Deut.5.8-10"
   ],
   "summary": "In the ancient world, people created statues known as idols to represent deities and spiritual beings. But in the 2nd Commandment, Yahweh forbids the making of idols of himself or any other spiritual being.",
+  "summaryFrom": "bibleproject.com",
   "duration": 373
  },
  {
@@ -1945,6 +2017,7 @@
    "Ps.1"
   ],
   "summary": "The 10 Commandments are among the most well-known rules in the Bible and all of history. But what if they are more than just rules? What if they are a pathway to a universe of wisdom?",
+  "summaryFrom": "bibleproject.com",
   "duration": 305
  },
  {
@@ -1962,6 +2035,7 @@
    "Deut.5.11"
   ],
   "summary": "God forbids Israel to take his name in vain. The most literal translation of “take” is actually “carry.” What is God’s name, and what does it mean to carry it?",
+  "summaryFrom": "bibleproject.com",
   "duration": 233
  },
  {
@@ -1979,6 +2053,7 @@
    "Deut.5.6-7"
   ],
   "summary": "After Yahweh delivers the people of Israel from slavery in Egypt, he enters into a covenant agreement with them at Mount Sinai.",
+  "summaryFrom": "bibleproject.com",
   "duration": 355
  },
  {
@@ -1999,6 +2074,7 @@
    "H7676"
   ],
   "summary": "Yahweh commands Israel to stop their laboring and rest on the seventh day of every week. What is the point of this weekly practice, and how can it shape those who follow it?",
+  "summaryFrom": "bibleproject.com",
   "duration": 331
  },
  {
@@ -2017,6 +2093,7 @@
    "Deut.22.1-4"
   ],
   "summary": "God forbids Israel from stealing—simple enough. But what underlying beliefs cause someone to steal in the first place? And what is the deeper opportunity beyond simply not taking what belongs to our neighbor?",
+  "summaryFrom": "bibleproject.com",
   "duration": 260
  },
  {
@@ -2037,6 +2114,7 @@
    "H7523"
   ],
   "summary": "Most contemporary English translations of the 6th Commandment read, “You shall not murder.” But the Hebrew word used in the commandment refers to ending a life, unrelated to purpose or premeditation.",
+  "summaryFrom": "bibleproject.com",
   "duration": 243
  },
  {
@@ -2054,6 +2132,7 @@
    "Deut.5.20"
   ],
   "summary": "A common summary for the 9th Commandment is “Do not lie.” But it actually means “Do not bear false witness against your neighbor,” drawing attention to a specific kind of lying in a public, legal setting.",
+  "summaryFrom": "bibleproject.com",
   "duration": 328
  },
  {
@@ -2072,6 +2151,7 @@
    "Gen.1.27"
   ],
   "summary": "God tells Israel not to commit adultery, which involves having sex with someone who is in a marriage covenant. Why is protecting marriage so important to God, and what does marriage ultimately point to?",
+  "summaryFrom": "bibleproject.com",
   "duration": 307
  },
  {
@@ -2089,6 +2169,7 @@
    "Deut.5.16"
   ],
   "summary": "Yahweh commands Israel to honor their parents so that they may have long lives in the promised land. Why is there a connection between parents and life in the land, and what does it look like to honor them?",
+  "summaryFrom": "bibleproject.com",
   "duration": 337
  },
  {
@@ -2109,6 +2190,7 @@
    "H2530"
   ],
   "summary": "The 10th Commandment is often translated as “Do not covet,” but the Hebrew simply uses the common word for desire. Why do the 10 Commandments end this way, and how can we desire what is good?",
+  "summaryFrom": "bibleproject.com",
   "duration": 201
  },
  {
@@ -2126,6 +2208,7 @@
    "Deut.5.6-21"
   ],
   "summary": "In the 10 Commandments, we hear God’s voice and wisdom that can lead us to a deeper, richer life. And each of the commandments invites us to meditate on the story of the Bible in surprising ways.",
+  "summaryFrom": "bibleproject.com",
   "duration": 3256
  },
  {
@@ -2147,6 +2230,7 @@
    "Mark.6.30-44"
   ],
   "summary": "Why does God sometimes lead his people into harsh and isolated places? Trace the theme of the wilderness through the story of the Bible and discover how trusting God in the wilderness prepares us for life in the garden.",
+  "summaryFrom": "bibleproject.com",
   "duration": 362
  },
  {
@@ -2172,6 +2256,7 @@
    "H6299"
   ],
   "summary": "What if “redemption” means more than making something better? Discover how ancient biblical writers understood it as the cosmic work of rescue—where the creator reclaims his people to bring them home.",
+  "summaryFrom": "bibleproject.com",
   "duration": 369
  },
  {
@@ -2204,7 +2289,7 @@
    "H4886",
    "H4899"
   ],
-  "summary": "Why oil is poured on people and places: anointing, and what “Messiah” means.",
+  "summary": "On anointing, and the word “Messiah”.",
   "duration": 200
  },
  {
@@ -2228,6 +2313,7 @@
    "Matt.28.16-20"
   ],
   "summary": "Watch a short video that explains what mountains represent in the Bible. Learn the key role mountains play throughout the unified story that leads to Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 200
  },
  {
@@ -2249,6 +2335,7 @@
    "Matt.5.1-16"
   ],
   "summary": "Why does the Bible open with a garden as the ideal space but close with a heavenly city? Explore the surprising theme of the city in the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 421
  },
  {
@@ -2268,6 +2355,7 @@
    "Matt.3.13-4.11"
   ],
   "summary": "The story of Israel’s exodus from Egypt can be described as the way out of slavery, the way through the wilderness, and the way into the promised land.",
+  "summaryFrom": "bibleproject.com",
   "duration": 334
  },
  {
@@ -2296,6 +2384,7 @@
    "H3882"
   ],
   "summary": "In the ancient world, the sea dragon was a common symbol that represented death and chaos. But the story of the Bible begins with God demonstrating his power over all creatures.",
+  "summaryFrom": "bibleproject.com",
   "duration": 257
  },
  {
@@ -2320,6 +2409,7 @@
    "G166"
   ],
   "summary": "Jesus offered people eternal life. But what does that mean? Explore the meaning of a phrase that invites us into God’s life now and in the age to come.",
+  "summaryFrom": "youtube",
   "duration": 330
  },
  {
@@ -2347,6 +2437,7 @@
    "H6086"
   ],
   "summary": "In the opening pages of the Bible, God gives humanity a gift that they quickly forfeit: eternal life that comes by eating from the tree of life.",
+  "summaryFrom": "bibleproject.com",
   "duration": 291
  },
  {
@@ -2375,6 +2466,7 @@
    "H779"
   ],
   "summary": "“Blessing” is a religious-sounding word that we use a lot. We say, “Bless you!” after a sneeze, or that we’re “so blessed” when life is good. But what does blessing mean in the Bible?",
+  "summaryFrom": "bibleproject.com",
   "duration": 364
  },
  {
@@ -2408,6 +2500,7 @@
    "Heb.12"
   ],
   "summary": "In the New Testament, Jesus is called the “firstborn,” a title of authority. While firstborns traditionally received inheritance and power in the ancient world, Jesus redefines this power.",
+  "summaryFrom": "bibleproject.com",
   "duration": 331
  },
  {
@@ -2443,6 +2536,7 @@
    "H5254"
   ],
   "summary": "From the garden of Eden to the tempation of Jesus, the Bible shows a repeated theme of testing.",
+  "summaryFrom": "bibleproject.com",
   "duration": 377
  },
  {
@@ -2464,6 +2558,7 @@
    "Rev.22.1-2"
   ],
   "summary": "In the beginning of the Bible, God transforms a desolate wilderness into a garden through a stream that waters the ground and brings life wherever it goes.",
+  "summaryFrom": "youtube",
   "duration": 296
  },
  {
@@ -2494,6 +2589,7 @@
    "H7673"
   ],
   "summary": "The Bible opens with God creating an ordered world from chaos in six days before resting on the seventh day. This pattern of seven that ends with divine-human rest echoes throughout Scripture.",
+  "summaryFrom": "bibleproject.com",
   "duration": 327
  },
  {
@@ -2515,6 +2611,7 @@
    "1Tim.6.17-19"
   ],
   "summary": "In the story of the Bible, God is depicted as a generous host who provides for the needs of his guests. However, humans live from a mindset of scarcity and hoard God’s many gifts.",
+  "summaryFrom": "youtube",
   "duration": 312
  },
  {
@@ -2541,6 +2638,7 @@
    "John.14.16-23"
   ],
   "summary": "Exile is one of the core, yet often overlooked, themes underlying the entire biblical storyline. In this video, we'll see how Israel's exile to Babylon is a picture of all humanity's exile from Eden.",
+  "summaryFrom": "youtube",
   "duration": 310
  },
  {
@@ -2575,6 +2673,7 @@
    "1Pet.2.4-5"
   ],
   "summary": "The biblical authors describe Israel’s temple as the place where God’s space and human space overlap.",
+  "summaryFrom": "bibleproject.com",
   "duration": 280
  },
  {
@@ -2594,6 +2693,7 @@
    "Rev.18.4"
   ],
   "summary": "If followers of Jesus are to give their total allegiance to God’s Kingdom, how should they relate to the governments and power structures of their own day?",
+  "summaryFrom": "youtube",
   "duration": 320
  },
  {
@@ -2625,6 +2725,7 @@
    "H4941"
   ],
   "summary": "Justice is a felt need in our world today and a controversial topic. But what is justice exactly, and who gets to define it?",
+  "summaryFrom": "bibleproject.com",
   "duration": 378
  },
  {
@@ -2644,7 +2745,7 @@
    "Matt.26.63-64",
    "Mark.8.31"
   ],
-  "summary": "Why Jesus called himself the Son of Man.",
+  "summary": "On the title “Son of Man”.",
   "duration": 351
  },
  {
@@ -2666,6 +2767,7 @@
    "1Tim.4.13"
   ],
   "summary": "Reading the Bible aloud with a group of people is an ancient practice. In fact, the origins of the Bible are rooted in public readings among members of the community.",
+  "summaryFrom": "bibleproject.com",
   "duration": 210
  },
  {
@@ -2700,6 +2802,7 @@
    "G4151"
   ],
   "summary": "In this video, we explore the original meaning of the biblical concept of spirit (ruakh) and what it means that God’s Spirit is personally present in all of creation.",
+  "summaryFrom": "bibleproject.com",
   "duration": 250
  },
  {
@@ -2733,6 +2836,7 @@
    "G1504"
   ],
   "summary": "What does it mean for humans to be made in God’s image? In the opening pages of Genesis, we see God create humanity as his co-rulers of creation, but things quickly go wrong when humans rebel and forfeit their role.",
+  "summaryFrom": "bibleproject.com",
   "duration": 376
  },
  {
@@ -2756,6 +2860,7 @@
    "G932"
   ],
   "summary": "Gospel is a word that means “good news,” but it’s more than that. It’s a royal announcement, and its use in the New Testament points to the radical announcement of God’s Kingdom coming to Earth through Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 348
  },
  {
@@ -2791,6 +2896,7 @@
    "H8451"
   ],
   "summary": "What is the importance of the ancient laws in the Hebrew Bible? Are they even relevant for Jesus followers? Explore how much the laws can teach us about God’s character and the significance of Jesus’ ministry on Earth.",
+  "summaryFrom": "bibleproject.com",
   "duration": 360
  },
  {
@@ -2812,6 +2918,7 @@
    "2Pet.3.10-13"
   ],
   "summary": "Does God still care about the destruction humans have caused in his good world? The story of the Bible shows us how God confronts human evil, as well as the deeper spiritual evil that is at work on Earth.",
+  "summaryFrom": "bibleproject.com",
   "duration": 362
  },
  {
@@ -2845,6 +2952,7 @@
    "H3727"
   ],
   "summary": "God is on a mission to remove evil from his good world, along with all of its corrosive effects. However, he wants to do it in a way that doesn’t involve removing humans.",
+  "summaryFrom": "bibleproject.com",
   "duration": 411
  },
  {
@@ -2877,6 +2985,7 @@
    "G40"
   ],
   "summary": "God’s holiness presents a paradox to human beings. God is the unique and set-apart Creator of all reality and the author of all goodness. However, that goodness can become dangerous to humans who are morally corrupt.",
+  "summaryFrom": "bibleproject.com",
   "duration": 394
  },
  {
@@ -2909,6 +3018,7 @@
    "G1242"
   ],
   "summary": "Despite human rebellion, God continues to make covenant promises to restore humanity to the role they were created for: to be partners with God in ruling creation.",
+  "summaryFrom": "bibleproject.com",
   "duration": 336
  },
  {
@@ -2936,6 +3046,7 @@
    "G5547"
   ],
   "summary": "Explore the mysterious promise on page three of the Bible, that a promised deliverer would one day come to confront evil and rescue humanity.",
+  "summaryFrom": "youtube",
   "duration": 347
  },
  {
@@ -2968,6 +3079,7 @@
    "H776"
   ],
   "summary": "What does the Bible really teach about Heaven, and what is Heaven’s relationship to Earth?",
+  "summaryFrom": "youtube",
   "duration": 403
  },
  {
@@ -2995,6 +3107,7 @@
    "H571"
   ],
   "summary": "The list of God’s character traits found in Exodus 34:6-7 is the most repeated and re-quoted text in the Bible.",
+  "summaryFrom": "youtube",
   "duration": 366
  },
  {
@@ -3028,6 +3141,7 @@
    "H2587"
   ],
   "summary": "Grace is a word we hear a lot in Christian circles, but the deeper meaning of this rich Hebrew word, especially how it relates to God's character, can get lost. In this video we look at what means for God to be gracious.",
+  "summaryFrom": "bibleproject.com",
   "duration": 279
  },
  {
@@ -3054,6 +3168,7 @@
    "H2617"
   ],
   "summary": "The Hebrew word “khesed” is one of the most common descriptions of God in the Hebrew Bible, and it’s almost impossible to translate into any other language! This word combines the ideas of love, loyalty, and generosity.",
+  "summaryFrom": "bibleproject.com",
   "duration": 311
  },
  {
@@ -3087,6 +3202,7 @@
    "H7356"
   ],
   "summary": "In the Bible, “compassion” is a deeply emotional word used to convey the strong bond between a parent and their child. It’s also the first word God uses to describe himself in Exodus 34:6-7.",
+  "summaryFrom": "bibleproject.com",
   "duration": 306
  },
  {
@@ -3109,6 +3225,7 @@
    "H639"
   ],
   "summary": "In Exodus 34, God describes himself as being \"slow to anger,\" but what does this mean? The literal translation is a Hebrew idiom that has the potential to make this description even more confusing to modern readers.",
+  "summaryFrom": "bibleproject.com",
   "duration": 321
  },
  {
@@ -3141,6 +3258,7 @@
    "H539"
   ],
   "summary": "The word emet is a common word used to describe God in the Bible.",
+  "summaryFrom": "youtube",
   "duration": 312
  },
  {
@@ -3159,7 +3277,8 @@
   "strongs": [
    "H8085"
   ],
-  "summary": "The Shema prayer sums up God’s greatest command, “Hear, O Israel: The Lord our God, the Lord is one, and as for you, you shall love the Lord your God with all your heart, with all your soul, and with all your strength.” Begin your study of this ancient…",
+  "summary": "The Shema prayer sums up God’s greatest command, “Hear, O Israel: The Lord our God, the Lord is one, and as for you, you shall love the Lord your God with all your heart, with all your soul, and with all your strength.”",
+  "summaryFrom": "bibleproject.com",
   "duration": 206
  },
  {
@@ -3183,6 +3302,7 @@
    "H160"
   ],
   "summary": "Love can be a confusing word in the English language. It's used to refer to everything from your feelings to your mom to your feelings about pizza. But the biblical authors had more than one word for love.",
+  "summaryFrom": "bibleproject.com",
   "duration": 247
  },
  {
@@ -3205,6 +3325,7 @@
    "H136"
   ],
   "summary": "YHWH, Adonai, LORD, Jehovah–God seems to have a lot of names. So what exactly are we supposed to call him?",
+  "summaryFrom": "bibleproject.com",
   "duration": 240
  },
  {
@@ -3229,6 +3350,7 @@
    "H3824"
   ],
   "summary": "Different cultures have different conceptions of the human heart, what it is, and what it does.",
+  "summaryFrom": "bibleproject.com",
   "duration": 230
  },
  {
@@ -3250,6 +3372,7 @@
    "H3966"
   ],
   "summary": "What does it mean to love God with all of your strength? In this final installment of our Shema series, we explore the Hebrew word me'od, which we translate as \"strength\" in the Shema.",
+  "summaryFrom": "bibleproject.com",
   "duration": 282
  },
  {
@@ -3273,6 +3396,7 @@
    "H5315"
   ],
   "summary": "The English word “soul” usually refers to the non-material essence of a human that survives after death, but “nephesh” means something different.",
+  "summaryFrom": "bibleproject.com",
   "duration": 263
  },
  {
@@ -3302,6 +3426,7 @@
    "G1680"
   ],
   "summary": "Biblical hope is not optimism. In fact, the most hopeful people in the Bible often had very few reasons to believe that things would get better for them any time soon.",
+  "summaryFrom": "bibleproject.com",
   "duration": 273
  },
  {
@@ -3328,6 +3453,7 @@
    "G5463"
   ],
   "summary": "Explore the unique type of joy to which God’s people are called. It’s more than happy mood. It's a choice to trust that God will fulfill his promises, and it's a joy that is long-lasting and life-giving.",
+  "summaryFrom": "bibleproject.com",
   "duration": 272
  },
  {
@@ -3352,6 +3478,7 @@
    "G1515"
   ],
   "summary": "Peace is a very common word in English, and it means different things to different people.",
+  "summaryFrom": "bibleproject.com",
   "duration": 228
  },
  {
@@ -3379,6 +3506,7 @@
    "G25"
   ],
   "summary": "The word “love” is one of the sloppiest words in our language, as it primarily refers to a feeling that happens to a person.",
+  "summaryFrom": "youtube",
   "duration": 288
  },
  {
@@ -3403,6 +3531,7 @@
    "G266"
   ],
   "summary": "The word sin is one of the most common bad words in the Bible, but what does it really mean? In this video, we’ll explore the concept of moral failure that underlies this important biblical word.",
+  "summaryFrom": "bibleproject.com",
   "duration": 343
  },
  {
@@ -3427,6 +3556,7 @@
    "H6588"
   ],
   "summary": "Transgression is one of those bibilical words that seems clear until you have to explain it to somebody. In this video, we'll explore the fascinating and sophisticated meaning of this biblical bad word.",
+  "summaryFrom": "bibleproject.com",
   "duration": 345
  },
  {
@@ -3451,6 +3581,7 @@
    "H5753"
   ],
   "summary": "Iniquity is a biblical word that very few people use anymore, and even fewer people know what it means!",
+  "summaryFrom": "youtube",
   "duration": 300
  },
  {
@@ -3477,6 +3608,7 @@
    "H1319"
   ],
   "summary": "Gospel is one of the most common words in a Christian’s vocabulary. But what does it mean in the original languages of the Bible?",
+  "summaryFrom": "bibleproject.com",
   "duration": 271
  },
  {
@@ -3498,6 +3630,7 @@
    "H6453"
   ],
   "summary": "Watch a short video that explains the Hebrew meaning of the name for Passover and the story behind one of the Bible’s most important festivals.",
+  "summaryFrom": "bibleproject.com",
   "duration": 165
  },
  {
@@ -3521,6 +3654,7 @@
    "G3141"
   ],
   "summary": "In the Bible, “witness” refers to both people and actions—those who see events and those who share what they’ve seen. Similar to today, this word is used in both legal settings and to describe an experience with God.",
+  "summaryFrom": "bibleproject.com",
   "duration": 267
  },
  {
@@ -3542,7 +3676,8 @@
   "strongs": [
    "H5254"
   ],
-  "summary": "The Hebrew word nissah, usually translated as “test,” describes an opportunity to have the truth about yourself revealed."
+  "summary": "The Hebrew word nissah, usually translated as “test,” describes an opportunity to have the truth about yourself revealed.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-kavod-glory",
@@ -3563,7 +3698,8 @@
    "H3519",
    "H3513"
   ],
-  "summary": "The Hebrew word glory (\"kavod\") describes a physical heaviness or social weightiness."
+  "summary": "The Hebrew word glory (\"kavod\") describes a physical heaviness or social weightiness.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-mishkan-dwelling-place",
@@ -3583,7 +3719,8 @@
    "H4908",
    "G4637"
   ],
-  "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for “dwelling” in key Bible verses."
+  "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for “dwelling” in key Bible verses.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-wtp_zCElBaw",
@@ -3607,6 +3744,7 @@
    "G3083"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for \"ransom\" or \"redemption payment\" in the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 70
  },
  {
@@ -3627,6 +3765,7 @@
    "H4057"
   ],
   "summary": "The Hebrew word midbar describes a harsh wilderness that is resistant to life.",
+  "summaryFrom": "bibleproject.com",
   "duration": 58
  },
  {
@@ -3649,6 +3788,7 @@
    "H1350"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for \"to redeem\" in the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 63
  },
  {
@@ -3670,6 +3810,7 @@
    "H5647"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for “serve” or “worship” used in key Bible verses.",
+  "summaryFrom": "bibleproject.com",
   "duration": 54
  },
  {
@@ -3692,6 +3833,7 @@
    "H2142"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for “remember” used in key Bible verses.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3714,6 +3856,7 @@
    "H226"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Hebrew word for “sign” used in key Bible verses.",
+  "summaryFrom": "bibleproject.com",
   "duration": 48
  },
  {
@@ -3739,6 +3882,7 @@
    "H2199"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Hebrew words for “outcry” used in key Bible verses.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3753,7 +3897,8 @@
   "verses": [
    "Matt.7.3-5"
   ],
-  "summary": "Watch a video and learn what Jesus means in Matthew 7:3-5 when he says to take the plank out of your own eye before taking the speck out of another’s."
+  "summary": "Watch a video and learn what Jesus means in Matthew 7:3-5 when he says to take the plank out of your own eye before taking the speck out of another’s.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-nRTy2olkOOQ",
@@ -3774,6 +3919,7 @@
    "G932"
   ],
   "summary": "Watch a short animated video that defines the Greek word “basileia” in its biblical context and explains how it relates to God, humanity, and creation.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3788,7 +3934,8 @@
   "verses": [
    "Matt.7.15-20"
   ],
-  "summary": "Discover the meaning of the two metaphors Jesus uses to identify false prophets—the wolves in sheep’s clothing and the good tree versus bad tree."
+  "summary": "Discover the meaning of the two metaphors Jesus uses to identify false prophets—the wolves in sheep’s clothing and the good tree versus bad tree.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-jGKFWfpAfZY",
@@ -3807,6 +3954,7 @@
    "G3309"
   ],
   "summary": "Watch a short animated video that explains what Jesus means in Matthew 6:25-34 when he says not to worry, and discover the solution he offers.",
+  "summaryFrom": "bibleproject.com",
   "duration": 54
  },
  {
@@ -3827,6 +3975,7 @@
    "G3126"
   ],
   "summary": "\"You are not able to serve both God and mammon.\" Watch a short video that explains what Jesus meant by the word \"mammon\" in Matthew 6:24.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3847,6 +3996,7 @@
    "G3522"
   ],
   "summary": "Watch a short, animated video that explains the purpose of fasting and some examples of fasting in the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 96
  },
  {
@@ -3870,6 +4020,7 @@
    "G1067"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Greek word for hell (gehenna) in the story of the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3893,6 +4044,7 @@
    "H6666"
   ],
   "summary": "Watch a short, animated video that explains the meaning of the Greek word for righteousness in the story of the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3915,6 +4067,7 @@
    "H1818"
   ],
   "summary": "Discover the meaning of the Hebrew word “dām” in the Bible, which refers to blood, life, humanity, and the connection between human life and the ground.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3935,6 +4088,7 @@
    "G5046"
   ],
   "summary": "Watch a short, animated video that explains what the Greek word “teleios” means in Matthew 5:48 and throughout the biblical story.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3956,6 +4110,7 @@
    "H8451"
   ],
   "summary": "What does the Hebrew word “torah” mean in the Bible? Explore the many ways this word is used and how it connects to Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -3972,6 +4127,7 @@
    "Matt.5.38-42"
   ],
   "summary": "Watch a short, animated video that explains how Jesus dealt with injustice in the world and examples of how he invites his followers to do the same.",
+  "summaryFrom": "bibleproject.com",
   "duration": 41
  },
  {
@@ -3993,6 +4149,7 @@
    "H776"
   ],
   "summary": "“Erets,” the Hebrew word for land or earth, appears throughout the Bible as the realm that exists between the heavens above and the chaotic waters below.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4013,6 +4170,7 @@
    "John.1.19-34"
   ],
   "summary": "John the Baptist calls for repentance through a water baptism, preparing people for a new way of life and announcing Jesus’ arrival.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4037,6 +4195,7 @@
    "H8577"
   ],
   "summary": "Discover the meaning of “tannin” in Hebrew, a leviathan (serpent) who symbolizes death and disorder and is ultimately defeated by God’s power.",
+  "summaryFrom": "bibleproject.com",
   "duration": 59
  },
  {
@@ -4060,6 +4219,7 @@
    "H2896"
   ],
   "summary": "Discover the Hebrew meaning of “tov,” a word used to describe God’s beautiful, thriving harmony among plants, trees, and animals that reflects what is morally good in the world.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4082,6 +4242,7 @@
    "H6086"
   ],
   "summary": "Discover the Hebrew meaning of “ets,” a term used to describe large trees, firewood, bushes, or vines in the Bible, including the tree of life.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4101,6 +4262,7 @@
    "Mark.9.2-13"
   ],
   "summary": "Learn about Elijah, whose name means “my God is Yahweh,” and see how God empowers him to revive a widow’s son and guide Israel back to Yahweh.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4124,6 +4286,7 @@
    "H8064"
   ],
   "summary": "Discover the meaning of “shamayim,” the Hebrew term for heavens. In the biblical imagination, this is the realm above Earth where God’s throne exists.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4137,6 +4300,7 @@
   "series": "Insights",
   "kind": "insight",
   "summary": "Who was Jesus and what was his message of God’s Kingdom really about? In this Bible Basics video, we take a quick look at the person of Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 60
  },
  {
@@ -4150,6 +4314,7 @@
   "series": "Insights",
   "kind": "insight",
   "summary": "There are so many translations of the Bible, but which one is best? Check out our latest Bible Basics video to understand how to approach choosing a translation.",
+  "summaryFrom": "youtube",
   "duration": 58
  },
  {
@@ -4163,6 +4328,7 @@
   "series": "Insights",
   "kind": "insight",
   "summary": "Have you ever wondered about the earliest translations of the Bible? Get a quick introduction to the history of biblical translations with our latest Bible Basics video.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -4193,6 +4359,7 @@
    "G2316"
   ],
   "summary": "The God portrayed in the Bible isn’t easy to understand, but what if we could better understand what it is that we can’t understand?",
+  "summaryFrom": "youtube",
   "duration": 490
  },
  {
@@ -4216,6 +4383,7 @@
    "H430"
   ],
   "summary": "Did you know that the biblical word for God, elohim, is actually a title and not a name? And did you know that elohim can refer to other spiritual beings as well as to the creator God?",
+  "summaryFrom": "bibleproject.com",
   "duration": 188
  },
  {
@@ -4238,6 +4406,7 @@
    "Deut.32.8-9"
   ],
   "summary": "What is the divine council?",
+  "summaryFrom": "bibleproject.com",
   "duration": 380
  },
  {
@@ -4257,6 +4426,7 @@
    "Eph.6.12"
   ],
   "summary": "In the opening pages of the Bible, God creates two overlapping realms, the heavens and the earth. This is where the drama of the biblical storyline takes place. Many of us are familiar with the human drama.",
+  "summaryFrom": "bibleproject.com",
   "duration": 315
  },
  {
@@ -4285,6 +4455,7 @@
    "G1140"
   ],
   "summary": "The Bible describes a spiritual world full of creatures who are in rebellion against their Creator, just like humans.",
+  "summaryFrom": "bibleproject.com",
   "duration": 379
  },
  {
@@ -4307,6 +4478,7 @@
    "Rev.22.5"
   ],
   "summary": "In the opening pages of the Bible, God appoints humans to rule the world on his behalf. But when they rebel, the biblical story leads us on a search for a new humanity that will be God’s faithful partners forever.",
+  "summaryFrom": "bibleproject.com",
   "duration": 308
  },
  {
@@ -4330,6 +4502,7 @@
    "John.1.18"
   ],
   "summary": "The Angel of the Lord is one of the most fascinating spiritual beings in the Hebrew Scriptures. Every time this figure appears, he’s depicted as if he is God, but also an angel sent by God.",
+  "summaryFrom": "youtube",
   "duration": 254
  },
  {
@@ -4358,6 +4531,7 @@
    "G32"
   ],
   "summary": "Did you know that angels in the Bible don’t have wings? Or that cherubim are not cute, chubby babies?",
+  "summaryFrom": "youtube",
   "duration": 278
  },
  {
@@ -4378,6 +4552,7 @@
    "Heb.7"
   ],
   "summary": "Melchizedek is one of the most intriguing characters in the Bible, first introduced in the story of Abraham.",
+  "summaryFrom": "youtube",
   "duration": 319
  },
  {
@@ -4405,6 +4580,7 @@
    "Ezek.36.33-35"
   ],
   "summary": "Did you know that Israel’s tabernacle tent was a symbolic garden of Eden, where Adam and Eve served as proto-priests?",
+  "summaryFrom": "bibleproject.com",
   "duration": 364
  },
  {
@@ -4424,6 +4600,7 @@
    "Heb.7.1-8.13"
   ],
   "summary": "After humanity’s failure as royal priests in Eden, God promises a descendant who will restore what was lost. While many leaders arose throughout Israel’s history, all fell short.",
+  "summaryFrom": "bibleproject.com",
   "duration": 343
  },
  {
@@ -4448,7 +4625,8 @@
    "John.10.14-18",
    "1Pet.3.18"
   ],
-  "summary": "After Moses leads Israel out of slavery and to Mount Sinai, God invites them to become “a kingdom of priests.” But things do not go as planned for the Israelites, showing the need for an ultimate royal priest who would one day intercede for his people and…",
+  "summary": "After Moses leads Israel out of slavery and to Mount Sinai, God invites them to become “a kingdom of priests.”",
+  "summaryFrom": "bibleproject.com",
   "duration": 301
  },
  {
@@ -4468,6 +4646,7 @@
    "Ps.110.1-7"
   ],
   "summary": "By the time Israel becomes a nation, their priesthood is already totally corrupt. So the people ask for a king to lead them, and God anoints David.",
+  "summaryFrom": "bibleproject.com",
   "duration": 280
  },
  {
@@ -4488,6 +4667,7 @@
    "Rev.20.6"
   ],
   "summary": "After Jesus’ disciples receive the Holy Spirit, they become God’s temple and the physical embodiment of Jesus on Earth.",
+  "summaryFrom": "youtube",
   "duration": 304
  },
  {
@@ -4505,6 +4685,7 @@
    "Ps.8"
   ],
   "summary": "God created the world to rule it alongside his human images—or babbling babies? Learn how the ideas in Psalm 8 point forward to Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 385
  },
  {
@@ -4520,7 +4701,7 @@
   "verses": [
    "Gen.1.1-2.3"
   ],
-  "summary": "Is Genesis 1 about how the world was made?",
+  "summary": "On Genesis 1.",
   "duration": 462
  },
  {
@@ -4537,6 +4718,7 @@
    "Prov.8.1-36"
   ],
   "summary": "The first chapters of Proverbs contain a cast of symbolic characters who represent the many voices telling us how to be human. What guidance does Lady Wisdom offer us?",
+  "summaryFrom": "bibleproject.com",
   "duration": 437
  },
  {
@@ -4553,6 +4735,7 @@
    "Ps.148.1-14"
   ],
   "summary": "One of the final five Psalms, this poem summons the whole cosmos to praise God for bringing victory first to Israel, and then the entire world.",
+  "summaryFrom": "bibleproject.com",
   "duration": 407
  },
  {
@@ -4571,7 +4754,7 @@
   "strongs": [
    "G3056"
   ],
-  "summary": "What it means for Jesus to be the Word of God.",
+  "summary": "On John 1 and Jesus as the Word.",
   "duration": 402
  },
  {
@@ -4585,6 +4768,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "Unpack the history and origins of this extraordinary collection of writings to look closer at what you'll find in your Bible today.",
+  "summaryFrom": "bibleproject.com",
   "duration": 347
  },
  {
@@ -4598,6 +4782,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "The Bible is a collection of writings that tells one unified story about God's plan to partner with humanity to rule a united Heaven and Earth.",
+  "summaryFrom": "bibleproject.com",
   "duration": 337
  },
  {
@@ -4611,6 +4796,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "Reading the Bible wisely requires that we learn about the ancient literary styles used by the biblical authors. But why did these writers express their ideas and claims through a variety of different types of literature?",
+  "summaryFrom": "bibleproject.com",
   "duration": 328
  },
  {
@@ -4628,6 +4814,7 @@
    "Ps.2.1-12"
   ],
   "summary": "The Bible a multi-layered work, offering levels of insight as you re-read and meditate on the Bible.",
+  "summaryFrom": "bibleproject.com",
   "duration": 271
  },
  {
@@ -4641,6 +4828,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "An important part of reading biblical narratives is learning how to understand the nature of how stories are arranged into a pattern of conflict and resolution.",
+  "summaryFrom": "bibleproject.com",
   "duration": 313
  },
  {
@@ -4654,6 +4842,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "Every story takes place somewhere, and locations often have a special meaning evoked by past events in the same location.",
+  "summaryFrom": "bibleproject.com",
   "duration": 345
  },
  {
@@ -4667,6 +4856,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "Most of us think of characters in the Bible as either sinners or saints, good or bad. At least that’s how Bible stories are presented to children.",
+  "summaryFrom": "youtube",
   "duration": 327
  },
  {
@@ -4680,6 +4870,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "Design patterns are one of the key ways the biblical authors have unified the storyline of the Bible. Individual stories across the Old and New Testaments have been coordinated through repeated words and parallel themes.",
+  "summaryFrom": "youtube",
   "duration": 367
  },
  {
@@ -4696,6 +4887,7 @@
    "Ps"
   ],
   "summary": "The book of Psalms is the largest collection of poetry in the Bible. In this video, we’ll explore the design, shape, and main themes of this marvelous book, which was crafted to be read from beginning to end.",
+  "summaryFrom": "bibleproject.com",
   "duration": 330
  },
  {
@@ -4717,6 +4909,7 @@
    "Lam"
   ],
   "summary": "Did you know that a third of the Bible is ancient Israelite poetry? Poetry is a rich and artistic form of human communication, but it's also some of the most difficult to read.",
+  "summaryFrom": "bibleproject.com",
   "duration": 323
  },
  {
@@ -4738,6 +4931,7 @@
    "Lam"
   ],
   "summary": "Understanding how metaphors are used in the Bible is an essential tool for reading biblical poetry. Anytime someone describes one thing to give meaning to something else, they are using metaphorical thinking.",
+  "summaryFrom": "bibleproject.com",
   "duration": 312
  },
  {
@@ -4770,6 +4964,7 @@
    "Mal"
   ],
   "summary": "The books of the Old Testament prophets are packed with dense poetry and wild imagery. If you’ve tried to read them, odds are you were both intrigued and confused.",
+  "summaryFrom": "youtube",
   "duration": 318
  },
  {
@@ -4789,6 +4984,7 @@
    "Deut"
   ],
   "summary": "Why are there are so many ancient biblical laws in the first books of the Bible? What are modern readers supposed to do with them, and why are some of them so odd?",
+  "summaryFrom": "bibleproject.com",
   "duration": 379
  },
  {
@@ -4807,7 +5003,7 @@
    "Luke.8.4-18",
    "Luke.15.1-32"
   ],
-  "summary": "Why Jesus taught in parables.",
+  "summary": "On the parables of Jesus.",
   "duration": 342
  },
  {
@@ -4827,6 +5023,7 @@
    "John"
   ],
   "summary": "The New Testament contains four ancient biographies of Jesus of Nazareth, and altogether they are called “the Gospel.” Each one tells the story as an announcement of good news that the crucified and risen Jesus is the true ruler of the nations.",
+  "summaryFrom": "youtube",
   "duration": 347
  },
  {
@@ -4845,6 +5042,7 @@
    "Song"
   ],
   "summary": "The wisest king of Israel, King Solomon, is associated with three books of the Bible: Proverbs, Ecclesiastes, and the Song of Songs.",
+  "summaryFrom": "youtube",
   "duration": 327
  },
  {
@@ -4881,6 +5079,7 @@
    "Jude"
   ],
   "summary": "In the New Testament, there are 21 letters written by early Christian leaders to communities of Jesus' followers in the ancient Roman world.",
+  "summaryFrom": "bibleproject.com",
   "duration": 321
  },
  {
@@ -4917,6 +5116,7 @@
    "Jude"
   ],
   "summary": "The New Testament includes 21 letters from early Christian leaders to Jesus’ followers in the ancient Roman world.",
+  "summaryFrom": "bibleproject.com",
   "duration": 329
  },
  {
@@ -4934,6 +5134,7 @@
    "Rev"
   ],
   "summary": "The Bible is filled with dreams and visions about human history coming to a climax, and they’re usually packed with intense imagery and strange symbols.",
+  "summaryFrom": "youtube",
   "duration": 418
  },
  {
@@ -4956,7 +5157,8 @@
    "1Macc",
    "2Macc"
   ],
-  "summary": "What are the books known as the Deuterocanon or Apocrypha, and what can they teach us?"
+  "summary": "What are the books known as the Deuterocanon or Apocrypha, and what can they teach us?",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-judith",
@@ -4970,7 +5172,8 @@
   "books": [
    "Jdt"
   ],
-  "summary": "How does God’s Kingdom overturn the violent kingdoms of our world?"
+  "summary": "How does God’s Kingdom overturn the violent kingdoms of our world?",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-tobit",
@@ -4984,7 +5187,8 @@
   "books": [
    "Tob"
   ],
-  "summary": "How can one man’s suffering offer hope to future generations?"
+  "summary": "How can one man’s suffering offer hope to future generations?",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-1-maccabees",
@@ -4998,7 +5202,8 @@
   "books": [
    "1Macc"
   ],
-  "summary": "How can we distinguish God’s Kingdom from human kingdoms? 1 Maccabees chronicles the Israelite rebellion against the Greeks and Syrians, leading to the Hasmonean dynasty."
+  "summary": "How can we distinguish God’s Kingdom from human kingdoms? 1 Maccabees chronicles the Israelite rebellion against the Greeks and Syrians, leading to the Hasmonean dynasty.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-2-maccabees",
@@ -5012,7 +5217,8 @@
   "books": [
    "2Macc"
   ],
-  "summary": "Does God respond to the prayers of suffering people?"
+  "summary": "Does God respond to the prayers of suffering people?",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-esther-second-edition",
@@ -5027,7 +5233,8 @@
    "Esth",
    "EsthGr"
   ],
-  "summary": "Where is God in the midst of oppression? Both editions of Esther contain the same core message: God is always at work behind the scenes to fulfill his promises."
+  "summary": "Where is God in the midst of oppression? Both editions of Esther contain the same core message: God is always at work behind the scenes to fulfill his promises.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-wisdom-solomon",
@@ -5041,7 +5248,8 @@
   "books": [
    "Wis"
   ],
-  "summary": "Which path to wisdom will we choose? Written for Jewish people living in ancient Greek and Roman culture, this book promotes the path to life found in the wisdom of the Torah."
+  "summary": "Which path to wisdom will we choose? Written for Jewish people living in ancient Greek and Roman culture, this book promotes the path to life found in the wisdom of the Torah.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-wisdom-ben-sira",
@@ -5055,7 +5263,8 @@
   "books": [
    "Sir"
   ],
-  "summary": "What does it look like to be wise and fear the Lord? Ben Sira immersed himself in the Hebrew Scriptures in order to pass down God’s wisdom to future generations."
+  "summary": "What does it look like to be wise and fear the Lord? Ben Sira immersed himself in the Hebrew Scriptures in order to pass down God’s wisdom to future generations.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-daniel-second-edition",
@@ -5070,7 +5279,8 @@
    "Dan",
    "DanGr"
   ],
-  "summary": "Widely read by Jesus’ early followers and included in Catholic and Orthodox Bibles, the second edition of Daniel makes further connections to the major themes of the Hebrew Bible."
+  "summary": "Widely read by Jesus’ early followers and included in Catholic and Orthodox Bibles, the second edition of Daniel makes further connections to the major themes of the Hebrew Bible.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-baruch-and-letter-jeremiah",
@@ -5084,7 +5294,8 @@
   "books": [
    "Bar"
   ],
-  "summary": "How do we respond when God seems far away and slow to act? Written for Jewish people in exile, these poems issue a call to repentance and trust in God’s coming Kingdom."
+  "summary": "How do we respond when God seems far away and slow to act? Written for Jewish people in exile, these poems issue a call to repentance and trust in God’s coming Kingdom.",
+  "summaryFrom": "bibleproject.com"
  },
  {
   "id": "bp-RlQZAEw0m3k",
@@ -5102,6 +5313,7 @@
    "3John"
   ],
   "summary": "What are the books of 1, 2, and 3 John about in the Bible? Watch this video remixed by our friends at Streetlights and explore how knowing Jesus is to know the God of creative and self-giving love.",
+  "summaryFrom": "bibleproject.com",
   "duration": 610
  },
  {
@@ -5118,6 +5330,7 @@
    "1Thess"
   ],
   "summary": "What is the book of 1 Thessalonians about in the Bible? Watch this video remixed by our friends at Streetlights and explore Paul's challenge to the Church to keep growing as followers of Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 472
  },
  {
@@ -5134,6 +5347,7 @@
    "1Cor"
   ],
   "summary": "How does the resurrection change the lives of Jesus followers? Watch this video remixed by our friends at Streetlights, and explore Paul's reminder to the church in Corinth of their new reality.",
+  "summaryFrom": "bibleproject.com",
   "duration": 552
  },
  {
@@ -5150,6 +5364,7 @@
    "1Pet"
   ],
   "summary": "What is the book of 1 Peter about in the Bible? Watch this video remixed by our friends at Streetlights and explore the message that Jesus is our hope in the midst of suffering.",
+  "summaryFrom": "bibleproject.com",
   "duration": 509
  },
  {
@@ -5166,6 +5381,7 @@
    "1Tim"
   ],
   "summary": "What is the book of 1 Timothy about in the Bible? Watch this video remixed by our friends at Streetlights and explore Paul's message that what a Jesus community believes will shape how they live and behave.",
+  "summaryFrom": "bibleproject.com",
   "duration": 587
  },
  {
@@ -5182,6 +5398,7 @@
    "2Cor"
   ],
   "summary": "Explore how Paul challenges Jesus' followers to see life differently because of Jesus' death and resurrection.",
+  "summaryFrom": "bibleproject.com",
   "duration": 565
  },
  {
@@ -5198,6 +5415,7 @@
    "2Tim"
   ],
   "summary": "What is the book of 2 Timothy in the Bible about?",
+  "summaryFrom": "bibleproject.com",
   "duration": 490
  },
  {
@@ -5214,6 +5432,7 @@
    "2Pet"
   ],
   "summary": "What is the book of 2 Peter about in the Bible? Watch this video remixed by our friends at Streetlights and explore two warnings against corrupt teachers who reject the reality of Jesus' resurrection.",
+  "summaryFrom": "bibleproject.com",
   "duration": 517
  },
  {
@@ -5230,6 +5449,7 @@
    "Acts"
   ],
   "summary": "What is the book of Acts about in the Bible? Watch this video remixed by our friends at Streetlights and explore how God's Spirit empowers Jesus' followers to spread the good news of God's kingdom.",
+  "summaryFrom": "bibleproject.com",
   "duration": 945
  },
  {
@@ -5246,6 +5466,7 @@
    "2Thess"
   ],
   "summary": "What is the book of 2 Thessalonians about in the Bible? Watch this video remixed by our friends at Streetlights and explore Paul's message of hope to the Church in the midst of persecution.",
+  "summaryFrom": "bibleproject.com",
   "duration": 459
  },
  {
@@ -5262,6 +5483,7 @@
    "Col"
   ],
   "summary": "How did Jesus' first followers confront their problems with each other?",
+  "summaryFrom": "bibleproject.com",
   "duration": 585
  },
  {
@@ -5278,6 +5500,7 @@
    "Gal"
   ],
   "summary": "What is the book of Galatians about in the Bible? Watch this video remixed by our friends at Streetlights and explore how, because of Jesus' death and resurrection, all of his followers belong to God's family.",
+  "summaryFrom": "bibleproject.com",
   "duration": 573
  },
  {
@@ -5294,6 +5517,7 @@
    "Matt"
   ],
   "summary": "What is the book of Matthew in the Bible about? In this video remixed by our friends at Streetlights, explore the major themes of this gospel account and how it points to Jesus as the fulfillment of God's promises.",
+  "summaryFrom": "bibleproject.com",
   "duration": 926
  },
  {
@@ -5310,6 +5534,7 @@
    "Eph"
   ],
   "summary": "What is the book of Ephesians in the Bible about? Explore its major themes and how it calls us to live as a new humanity in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 579
  },
  {
@@ -5326,6 +5551,7 @@
    "Phlm"
   ],
   "summary": "What is the book of Philemon about in the Bible? Watch this video remixed by our friends at Streetlights and explore how acts of forgiveness show that humans can be equal partners sharing in God's mercy.",
+  "summaryFrom": "bibleproject.com",
   "duration": 427
  },
  {
@@ -5342,6 +5568,7 @@
    "Jas"
   ],
   "summary": "What is the book of James about in the Bible? In this video remixed by our friends at Streetlights, explore how this short letter challenges followers of Jesus to live lives of love and obedience.",
+  "summaryFrom": "bibleproject.com",
   "duration": 530
  },
  {
@@ -5358,6 +5585,7 @@
    "Jude"
   ],
   "summary": "What is the book of Jude about in the Bible? Watch this video remixed by our friends at Streetlights and explore the author's challenge that God's grade demands a whole-life response.",
+  "summaryFrom": "bibleproject.com",
   "duration": 500
  },
  {
@@ -5374,6 +5602,7 @@
    "Phil"
   ],
   "summary": "What is the book of Philippians about in the Bible? In this video remixed by our friends at Streetlights, we explore how followers of Jesus can see their lives as expressions of Jesus' life.",
+  "summaryFrom": "bibleproject.com",
   "duration": 585
  },
  {
@@ -5390,6 +5619,7 @@
    "Titus"
   ],
   "summary": "What is the book of Titus about in the Bible? Watch this video remixed by our friends at Streetlights and discover how faithfulness to Jesus' teachings transforms his followers into new kinds of people.",
+  "summaryFrom": "bibleproject.com",
   "duration": 533
  },
  {
@@ -5406,6 +5636,7 @@
    "Rev"
   ],
   "summary": "What is Revelation about in the Bible, and how does it fit into its larger story? Watch as we explore its major themes in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 1445
  },
  {
@@ -5422,6 +5653,7 @@
    "Rom"
   ],
   "summary": "What is Romans about in the Bible? Gain a deeper understanding of its major themes and its place in the biblical story in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 998
  },
  {
@@ -5438,6 +5670,7 @@
    "Heb"
   ],
   "summary": "Explore the major themes and message in the book of Hebrews in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 533
  },
  {
@@ -5454,6 +5687,7 @@
    "Luke"
   ],
   "summary": "What is the Gospel of Luke about in the Bible? Gain a deeper understanding of its place in the biblical story in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 988
  },
  {
@@ -5475,6 +5709,7 @@
    "1Tim.4.13"
   ],
   "summary": "The public reading of Scripture was an important practice in ancient times. Explore how it can still shape our understanding of the Bible in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 201
  },
  {
@@ -5491,6 +5726,7 @@
    "John"
   ],
   "summary": "What is the Gospel of John about in the Bible? Watch as we explore its major themes in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 1034
  },
  {
@@ -5507,6 +5743,7 @@
    "Mark"
   ],
   "summary": "Explore the message and themes of the Gospel of Mark in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 621
  },
  {
@@ -5532,6 +5769,7 @@
    "H8451"
   ],
   "summary": "Do the ancient laws in the Hebrew Bible have something to say to us today?",
+  "summaryFrom": "bibleproject.com",
   "duration": 355
  },
  {
@@ -5559,6 +5797,7 @@
    "G5547"
   ],
   "summary": "Trace the theme of a promised rescuer throughout the story of the Bible in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 340
  },
  {
@@ -5579,6 +5818,7 @@
    "Rev.21.1-22.5"
   ],
   "summary": "Explore the theme of the city throughout the story of the Bible in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 416
  },
  {
@@ -5605,6 +5845,7 @@
    "G2316"
   ],
   "summary": "Who is God, and what does it mean for humans to be made in his image? Trace this theme throughout the story of the Bible in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 488
  },
  {
@@ -5629,6 +5870,7 @@
    "Rev.21.22"
   ],
   "summary": "What is the importance of the temple in the story of the Bible?",
+  "summaryFrom": "bibleproject.com",
   "duration": 276
  },
  {
@@ -5656,6 +5898,7 @@
    "G4151"
   ],
   "summary": "What does the Bible mean when it talks about God's Spirit? Explore how God's Spirit shows up in all of creation in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 248
  },
  {
@@ -5682,6 +5925,7 @@
    "H4941"
   ],
   "summary": "Who gets to define justice? In this video remixed by our friends at Streetlights, we trace the theme of biblical Justice through the story of the Bible and discover how it points to Jesus.",
+  "summaryFrom": "bibleproject.com",
   "duration": 365
  },
  {
@@ -5706,6 +5950,7 @@
    "G166"
   ],
   "summary": "What did Jesus mean when he offered people eternal life? Watch this video remixed by our friends at Streetlights and explore this phrase that invites us to experience new life now.",
+  "summaryFrom": "bibleproject.com",
   "duration": 329
  },
  {
@@ -5729,6 +5974,7 @@
    "G932"
   ],
   "summary": "Discover the meaning of the word Gospel in the Bible and explore how the word points to the announcement of the arrival of God's kingdom  in this video remixed by our friends at Streetlights.",
+  "summaryFrom": "bibleproject.com",
   "duration": 310
  },
  {
@@ -5750,6 +5996,7 @@
    "Gen.25.23"
   ],
   "summary": "Trace the theme of the firstborn through the story of the Bible. Watch this video remixed by our friends at Streetlights and explore  the significance of Jesus' announcement that the last are first in God's kingdom.",
+  "summaryFrom": "bibleproject.com",
   "duration": 315
  },
  {
@@ -5767,6 +6014,7 @@
    "Gen.2"
   ],
   "summary": "Psalm 1 describes the path to a good life and the path to ruin. There are two ways of being human, and what we choose to meditate on makes all the difference.",
+  "summaryFrom": "bibleproject.com",
   "duration": 339
  },
  {
@@ -5788,6 +6036,7 @@
    "Rev.22.1-5"
   ],
   "summary": "What does a restored world look like? The words of Isaiah 61 describe a new creation filled with abundance and ordered by right relationships.",
+  "summaryFrom": "youtube",
   "duration": 438
  },
  {
@@ -5804,6 +6053,7 @@
    "Mark"
   ],
   "summary": "Mark’s gospel account shows Jesus as an unexpected Messiah who came not as a political ruler but as a servant.",
+  "summaryFrom": "bibleproject.com",
   "duration": 335
  },
  {
@@ -5818,7 +6068,7 @@
   "verses": [
    "Matt.4.17-5.2"
   ],
-  "summary": "A walk through the Sermon on the Mount as one designed speech.",
+  "summary": "On the Sermon on the Mount, Matthew 5–7.",
   "duration": 548
  },
  {
@@ -5834,6 +6084,7 @@
    "Matt.5.9-12"
   ],
   "summary": "Watch a short animated video commentary that explains the seventh through ninth Beatitudes in the Sermon on the Mount in the Gospel of Matthew.",
+  "summaryFrom": "youtube",
   "duration": 135
  },
  {
@@ -5854,6 +6105,7 @@
    "G3107"
   ],
   "summary": "What does Jesus mean when he calls a particular group of people “blessed” in the Sermon on the Mount? Dr.",
+  "summaryFrom": "youtube",
   "duration": 273
  },
  {
@@ -5869,6 +6121,7 @@
    "Ezek.1.1-28"
   ],
   "summary": "The first chapter of Ezekiel presents readers with a question: Why is the Temple Presence of Yahweh appearing to a guy by a river in Babylon?",
+  "summaryFrom": "youtube",
   "duration": 2068
  },
  {
@@ -5884,6 +6137,7 @@
    "Gen.6.9-9.17"
   ],
   "summary": "In this session, we take a closer look at the design of Noah’s ark. Tim walks us through the ways that the ark’s design calls to mind earlier images of the garden in Eden.",
+  "summaryFrom": "youtube",
   "duration": 1862
  },
  {
@@ -5902,6 +6156,7 @@
    "H776"
   ],
   "summary": "What did the biblical authors intend to communicate when they used the word \"earth?\" Genesis 1 is an ancient cosmology that uses specific words and images to describe the ordered world as understood by ancient people.",
+  "summaryFrom": "youtube",
   "duration": 1382
  },
  {
@@ -5920,7 +6175,8 @@
    "H2032",
    "H6093"
   ],
-  "summary": "The word often translated as \"childbirth\" or \"childbearing\" (Heb.",
+  "summary": "The word often translated as \"childbirth\" or \"childbearing\" (Heb. \"herayon\") in Genesis 3:16 is explicitly not the word for \"labor\" or \"childbirth.” How does this shift our understanding of the consequences of humanity's choice in the garden?",
+  "summaryFrom": "youtube",
   "duration": 1052
  },
  {
@@ -5932,7 +6188,8 @@
   "channel": "BibleProject",
   "series": "Classroom",
   "kind": "class",
-  "summary": "How can a repeated word help us understand what the biblical authors are saying? Repeated words often:",
+  "summary": "How can a repeated word help us understand what the biblical authors are saying?",
+  "summaryFrom": "youtube",
   "duration": 1653
  },
  {
@@ -5945,6 +6202,7 @@
   "series": "Classroom",
   "kind": "class",
   "summary": "How can we read the Old Testament and understand the meaning its ancient authors intended?",
+  "summaryFrom": "youtube",
   "duration": 1601
  },
  {
@@ -5957,6 +6215,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "The biblical story is connected by repeated words or ideas that we call links. In this video, we explain how links work and invite you to practice following them through biblical movements on the BibleProject app.",
+  "summaryFrom": "youtube",
   "duration": 186
  },
  {
@@ -5969,6 +6228,7 @@
   "series": "How to Read the Bible",
   "kind": "how-to-read",
   "summary": "Modern Bibles are divided into chapters and verses, but the biblical scrolls were written to be read aloud, meditated on, and memorized as one continuous work.",
+  "summaryFrom": "youtube",
   "duration": 204
  },
  {
@@ -5984,6 +6244,7 @@
    "Luke.19.28-22.38"
   ],
   "summary": "Step into Luke's Gospel in BibleProject's first VR Short. Follow Jesus as he enters Jerusalem, confronts money lenders in the temple courts, and shares the Passover meal with his followers.",
+  "summaryFrom": "youtube",
   "duration": 343
  },
  {
@@ -5999,6 +6260,7 @@
    "Gen.4.17"
   ],
   "summary": "The theme of the city in the Bible is a surprising one.",
+  "summaryFrom": "youtube",
   "duration": 4014
  },
  {
@@ -6014,6 +6276,7 @@
    "Gen.4.1-24"
   ],
   "summary": "In the story of the Bible, cities are a bad thing. They’re a symptom of humanity’s violence and attempts to protect themselves instead of trusting God.",
+  "summaryFrom": "youtube",
   "duration": 4489
  },
  {
@@ -6029,6 +6292,7 @@
    "Gen.4.17-6.8"
   ],
   "summary": "As the story of the Bible unfolds, humanity grows more and more violent. Cain is more violent than his parents, and his descendants are more violent than him.",
+  "summaryFrom": "youtube",
   "duration": 4478
  },
  {
@@ -6046,6 +6310,7 @@
    "Rev.17.1-18.24"
   ],
   "summary": "You may have heard that Babylon was the biggest, baddest city in the Bible, but where did that reputation come from? Who founded the city, and what made it so detestable to God?",
+  "summaryFrom": "youtube",
   "duration": 3568
  },
  {
@@ -6061,6 +6326,7 @@
    "H1060"
   ],
   "summary": "In ancient Near Eastern societies, firstborn sons were prized above all other children and inherited special privileges and authority simply because of their birth order.",
+  "summaryFrom": "youtube",
   "duration": 4188
  },
  {
@@ -6076,6 +6342,7 @@
    "Gen.1.26-3.24"
   ],
   "summary": "It’s not explicitly stated, but the theme of the firstborn first appears in the opening narratives of the Hebrew Bible. In Genesis 1 and 2, Yahweh elevates humans, the latecomers of creation, to rule the land.",
+  "summaryFrom": "youtube",
   "duration": 4076
  },
  {
@@ -6092,6 +6359,7 @@
    "Gen.9.20-27"
   ],
   "summary": "Only a few pages into the story of the Bible, the story starts to get really bleak. Cain kills his brother Abel, Cain’s descendants become famous murderers, and Noah’s youngest son violates his father and mother.",
+  "summaryFrom": "youtube",
   "duration": 4104
  },
  {
@@ -6109,6 +6377,7 @@
    "Gen.27.1-40"
   ],
   "summary": "Early in the story of the Bible, God chooses the family of Abraham, his son Isaac, and Isaac’s son Jacob as his chosen representatives to bless other peoples.",
+  "summaryFrom": "youtube",
   "duration": 4173
  },
  {
@@ -6128,6 +6397,7 @@
    "H1060"
   ],
   "summary": "How does the plague of the firstborn from Exodus fit into the biblical theme of the firstborn? And what does it mean when Yahweh calls Israel his firstborn son?",
+  "summaryFrom": "youtube",
   "duration": 4314
  },
  {
@@ -6143,6 +6413,7 @@
    "1Sam.1.1-2.10"
   ],
   "summary": "Hannah was an oppressed woman, scorned by her husband’s rival wife because of her barrenness.",
+  "summaryFrom": "youtube",
   "duration": 3843
  },
  {
@@ -6159,6 +6430,7 @@
    "1Sam.16.1-13"
   ],
   "summary": "In the scroll of Samuel, Israel demands a king in place of the judges that have been ruling over them. It sounds like a simple enough request, but Yahweh calls it idolatrous. Why?",
+  "summaryFrom": "youtube",
   "duration": 3764
  },
  {
@@ -6175,6 +6447,7 @@
    "Mark.1.11"
   ],
   "summary": "The authors of the gospel accounts in the Bible—Matthew, Mark, Luke, and John—regularly refer to Jesus as the Son of God, a title that’s connected to the theme of the firstborn.",
+  "summaryFrom": "youtube",
   "duration": 3289
  },
  {
@@ -6192,6 +6465,7 @@
    "Mark.10.42-45"
   ],
   "summary": "Under levitical law, touching anyone unclean would make you unclean too. But when Jesus touches people who are unclean, they get healed and become clean instead––it’s like his holiness is contagious.",
+  "summaryFrom": "youtube",
   "duration": 4398
  },
  {
@@ -6210,6 +6484,7 @@
    "G4416"
   ],
   "summary": "In our final episode of the Firstborn series, we look at the New Testament’s description of Jesus as the firstborn of creation.",
+  "summaryFrom": "youtube",
   "duration": 4123
  },
  {
@@ -6228,6 +6503,7 @@
    "H6754"
   ],
   "summary": "What does it mean that humans were created in \"the image of God.\" Jon and Tim discuss this biblical theme and its implications for Jesus followers.",
+  "summaryFrom": "youtube",
   "duration": 2700
  },
  {
@@ -6244,6 +6520,7 @@
    "Col.3.9-10"
   ],
   "summary": "Being remade into the Image of God is a different Christian narrative then we usually hear.",
+  "summaryFrom": "youtube",
   "duration": 2842
  },
  {
@@ -6259,6 +6536,7 @@
    "Gen.2.4-3.24"
   ],
   "summary": "In this episode, Tim and Jon wrap up their discussion on the image of God. Scripture tells us that humans are made in the image of God, but what does that actually mean for our lives?",
+  "summaryFrom": "youtube",
   "duration": 4038
  },
  {
@@ -6274,6 +6552,7 @@
    "H3519"
   ],
   "summary": "In this episode, Tim and Jon talk about the glory of God and what it means for humans to glorify him. Does glorifying God simply mean singing songs or acting a certain way? Why is God so interested in his glory?",
+  "summaryFrom": "youtube",
   "duration": 3161
  },
  {
@@ -6293,6 +6572,7 @@
    "G5547"
   ],
   "summary": "The title most often applied to Jesus is “the anointed one”—that’s what the Greek word “christ” means! But what is the practice of anointing? What does it signify, and who gets anointed?",
+  "summaryFrom": "youtube",
   "duration": 3442
  },
  {
@@ -6313,6 +6593,7 @@
    "H4886"
   ],
   "summary": "What’s so special about oil? Why does the Bible specify that oil—not water or wine—must be used to anoint a person or place?",
+  "summaryFrom": "youtube",
   "duration": 3352
  },
  {
@@ -6328,6 +6609,7 @@
    "1Sam.9.1-15.35"
   ],
   "summary": "Israel’s first anointed king, Saul, consistently makes choices that put him in conflict with God and the responsibilities God has entrusted to him.",
+  "summaryFrom": "youtube",
   "duration": 4101
  },
  {
@@ -6345,6 +6627,7 @@
    "Isa.61.1-3"
   ],
   "summary": "David was Israel’s greatest king, but even he failed to live as God’s anointed one.",
+  "summaryFrom": "youtube",
   "duration": 3976
  },
  {
@@ -6362,6 +6645,7 @@
    "1Sam.16.1-17.58"
   ],
   "summary": "David’s life gives us two parallel portrayals of what it means to be God’s anointed one: one is victorious—God’s anointed is the giant feller and the snake crusher.",
+  "summaryFrom": "youtube",
   "duration": 3568
  },
  {
@@ -6378,6 +6662,7 @@
    "Luke.4.16-21"
   ],
   "summary": "“Jesus the anointed one” is the literal translation of the Greek title “Christ,” frequently applied to Jesus.",
+  "summaryFrom": "youtube",
   "duration": 4132
  },
  {
@@ -6395,6 +6680,7 @@
    "Eccl"
   ],
   "summary": "In this episode, the guys give an overview of wisdom literature in the Bible. Proverbs, Job, and Ecclesiastes are considered wisdom literature.",
+  "summaryFrom": "youtube",
   "duration": 1912
  },
  {
@@ -6410,6 +6696,7 @@
    "Prov"
   ],
   "summary": "In this episode, Tim and Jon talk about the ancient wisdom found in the book of Proverbs.",
+  "summaryFrom": "youtube",
   "duration": 2938
  },
  {
@@ -6425,6 +6712,7 @@
    "Eccl"
   ],
   "summary": "In this episode, Tim and Jon begin their discussion on the book of Ecclesiastes. This is an interesting book in Scripture, and the author is relentlessly trying to get the reader to rethink their black and white mindset.",
+  "summaryFrom": "youtube",
   "duration": 3080
  },
  {
@@ -6440,6 +6728,7 @@
    "Eccl"
   ],
   "summary": "Hanging out with Ecclesiastes isn’t fun. The book goes on about the endless march of time that results in death for everyone. Everything dies––humans and animals.",
+  "summaryFrom": "youtube",
   "duration": 4033
  },
  {
@@ -6455,6 +6744,7 @@
    "Job"
   ],
   "summary": "In this episode, the guys take a bird’s eye view of the book of Job. Job is considered wisdom literature, and it aims to teach the reader about justice, suffering, and the role of God in the lives of humans.",
+  "summaryFrom": "youtube",
   "duration": 3076
  },
  {
@@ -6470,6 +6760,7 @@
    "Job"
   ],
   "summary": "In this episode, Tim and Jon continue their discussion on Job. How exactly does Job fit in with the other wisdom book of the Bible? It’s kind of a weird book.",
+  "summaryFrom": "youtube",
   "duration": 2500
  },
  {
@@ -6485,6 +6776,7 @@
    "Job.32.1-37.24"
   ],
   "summary": "In this episode, Tim and Jon try to tackle some of the glaring questions about the story of Job. They talk about the surprise friend, Elihu, who seems to show up out of nowhere towards the end of the story.",
+  "summaryFrom": "youtube",
   "duration": 3554
  },
  {
@@ -6500,6 +6792,7 @@
    "Gen.1.1-2.3"
   ],
   "summary": "How did the biblical authors think about Heaven and Earth? Join Tim and Jon as they begin their conversation on this key biblical theme, starting in Genesis 1.",
+  "summaryFrom": "youtube",
   "duration": 2455
  },
  {
@@ -6517,6 +6810,7 @@
    "1Kgs.8.10-11"
   ],
   "summary": "According to the Bible, God's space and human space were intended to be united. So where did God's space go? Why isn't it everywhere anymore?",
+  "summaryFrom": "youtube",
   "duration": 2216
  },
  {
@@ -6533,6 +6827,7 @@
    "1Cor.3.16"
   ],
   "summary": "Jesus claimed to replace God's temple, rebuilding it first in the form of his resurrected body and then in the community of his followers.",
+  "summaryFrom": "youtube",
   "duration": 2518
  },
  {
@@ -6551,6 +6846,7 @@
    "Rev.21.1-22.5"
   ],
   "summary": "The Bible doesn't use the phrase \"go to heaven\" to describe what happens after death. In fact, Jesus says some things about heaven that can seem confusing to us.",
+  "summaryFrom": "youtube",
   "duration": 3330
  },
  {
@@ -6563,6 +6859,7 @@
   "series": "Podcast: Heaven and Earth",
   "kind": "podcast",
   "summary": "Jon and Tim respond to questions about the theme of Heaven and Earth in the Bible.",
+  "summaryFrom": "youtube",
   "duration": 2681
  },
  {
@@ -6578,6 +6875,7 @@
    "Exod.19.1-24.18"
   ],
   "summary": "Why did God give laws to the ancient Israelites?",
+  "summaryFrom": "youtube",
   "duration": 2883
  },
  {
@@ -6595,6 +6893,7 @@
    "Rom.8.1-4"
   ],
   "summary": "How did the prophets, Jesus, and his followers deal with the law? Join Tim and Jon as they finish their discussion on the theme of the law throughout the biblical story.",
+  "summaryFrom": "youtube",
   "duration": 3005
  },
  {
@@ -6614,7 +6913,7 @@
   "strongs": [
    "G932"
   ],
-  "summary": "Why Jesus keeps talking about the kingdom of God.",
+  "summary": "On the kingdom of God in Jesus’ teaching.",
   "duration": 1759
  },
  {
@@ -6631,6 +6930,7 @@
    "Dan.7.1-27"
   ],
   "summary": "The Bible tells us that God’s Kingdom arrived on Earth through Jesus. But the full extent of that Kingdom has not yet come. What went wrong with the establishment of God’s Kingdom, and how does he plan to fix it?",
+  "summaryFrom": "youtube",
   "duration": 2617
  },
  {
@@ -6646,6 +6946,7 @@
    "Mark.1.14-15"
   ],
   "summary": "The good news of Jesus is that he came to bring God's Kingdom to Earth. Join Tim and Jon as they wrap up their discussion on the Kingdom of God.",
+  "summaryFrom": "youtube",
   "duration": 1369
  },
  {
@@ -6661,6 +6962,7 @@
    "Luke.1.1-2.52"
   ],
   "summary": "In this episode, the guys give an introduction to the gospel of Luke. What does it mean for Luke, and all of the gospels, to be historical accounts?",
+  "summaryFrom": "youtube",
   "duration": 2519
  },
  {
@@ -6676,6 +6978,7 @@
    "Luke"
   ],
   "summary": "Following up on part one of their discussion on the gospel of Luke, Tim and Jon continue to unpack the main themes of Luke’s unique account of Jesus’ life.",
+  "summaryFrom": "youtube",
   "duration": 1729
  },
  {
@@ -6691,6 +6994,7 @@
    "Luke.1.1-6.49"
   ],
   "summary": "In this episode, Tim and Jon discuss the first six chapters of the gospel of Luke. Luke stands out among the other gospels because it is all about Jesus’ message being first for the poor and outcasts.",
+  "summaryFrom": "youtube",
   "duration": 3371
  },
  {
@@ -6706,6 +7010,7 @@
    "Deut.12.1-26.19"
   ],
   "summary": "Learn how the law was intended to form Israel into people of wisdom, justice, and righteousness. Join Tim and Jon as they start discussing the theme of the law in the second movement of Deuteronomy.",
+  "summaryFrom": "youtube",
   "duration": 4402
  },
  {
@@ -6721,6 +7026,7 @@
    "Deut.12.1-26.19"
   ],
   "summary": "What wisdom can Christians gain from the law? Join Tim and Jon as they continue their discussion on the theme of the law in the second movement of Deuteronomy.",
+  "summaryFrom": "youtube",
   "duration": 3244
  },
  {
@@ -6737,6 +7043,7 @@
    "Matt.5.17-48"
   ],
   "summary": "Jesus used the laws in Deuteronomy as a starting point in teaching God's ideal way of life for humanity, but he didn't stop there.",
+  "summaryFrom": "youtube",
   "duration": 4209
  },
  {
@@ -6752,6 +7059,7 @@
    "Deut.27.1-30.20"
   ],
   "summary": "Why are there curses in God's covenant with Israel? Join Tim and Jon as they start exploring the themes of blessing and curse in the final movement of Deuteronomy.",
+  "summaryFrom": "youtube",
   "duration": 3495
  },
  {
@@ -6767,6 +7075,7 @@
    "Deut.27.1-30.20"
   ],
   "summary": "Moses expected Israel to fail. But God's plan to bless them would not be stopped. Join Tim and Jon as they continue exploring the themes of blessing and curse in the final movement of Deuteronomy.",
+  "summaryFrom": "youtube",
   "duration": 5166
  },
  {
@@ -6782,6 +7091,7 @@
    "Deut.31.1-34.12"
   ],
   "summary": "A pivotal point in the story of the Bible is when Moses says farewell to Israel before his death in the book of Deuteronomy.",
+  "summaryFrom": "youtube",
   "duration": 4788
  },
  {
@@ -6797,6 +7107,7 @@
    "Deut"
   ],
   "summary": "When a Jewish synagogue finishes reading through the Torah together, they celebrate Simkhat Torah. What is Simkhat Torah?",
+  "summaryFrom": "youtube",
   "duration": 4563
  },
  {
@@ -6812,6 +7123,7 @@
    "Deut"
   ],
   "summary": "Which ancient Israelite laws still apply today and which don’t? Should the law be divided into moral, civil, and ceremonial categories? And why did Jesus quote Deuteronomy when Satan tempted him?",
+  "summaryFrom": "youtube",
   "duration": 3495
  },
  {
@@ -6824,6 +7136,7 @@
   "series": "Podcast: Torah",
   "kind": "podcast",
   "summary": "We spent all of 2022 reading and discussing the Torah. Join Tim and Jon as they respond to audience questions from the past year about the Torah.",
+  "summaryFrom": "youtube",
   "duration": 3809
  },
  {
@@ -6840,7 +7153,8 @@
    "Gen.3.22-24",
    "Rev.22.2"
   ],
-  "summary": "Did you know we have a podcast? Find out more at: tbp.xyz/bibleprojectpodcast",
+  "summary": "Did you know we have a podcast?",
+  "summaryFrom": "youtube",
   "duration": 4563
  },
  {
@@ -6857,6 +7171,7 @@
    "Rev"
   ],
   "summary": "Are these the end times? Why does the Bible use language of fiery judgment? And what is the mark of the beast? In this episode, Tim and Jon answer your questions about how to read apocalyptic literature.",
+  "summaryFrom": "youtube",
   "duration": 4507
  },
  {
@@ -6869,6 +7184,7 @@
   "series": "Podcast: Holiness",
   "kind": "podcast",
   "summary": "Jon and Tim answer listener questions on the subject of Holiness.",
+  "summaryFrom": "youtube",
   "duration": 3028
  },
  {
@@ -6885,6 +7201,7 @@
    "Zech.3.1-2"
   ],
   "summary": "The topic of The Satan and Demons explores some of the strangest passages in the entire Bible. We gathered some of your questions after our video released and respond to them in a question and response video.",
+  "summaryFrom": "youtube",
   "duration": 2806
  },
  {
@@ -6900,6 +7217,7 @@
    "Gen.4.3-5"
   ],
   "summary": "Why did God favor Abel’s offering over Cain’s? Tim and Jon collected questions after finishing The Royal Priest series and respond in a brief video. Thanks for watching!",
+  "summaryFrom": "youtube",
   "duration": 754
  },
  {
@@ -6915,6 +7233,7 @@
    "Gen.14.17-24"
   ],
   "summary": "Why did Abraham own a slave? Tim and Jon respond to your questions from the The Royal Priest series in a Q+R video. Thanks for watching!",
+  "summaryFrom": "youtube",
   "duration": 737
  },
  {
@@ -6933,6 +7252,7 @@
    "2Cor.9.6-7"
   ],
   "summary": "In this episode of The Bible Project Podcast, Jon and Tim explore a story about two Harvard Business School Graduates who are confronted with a biblical view of money that changes their lives.",
+  "summaryFrom": "youtube",
   "duration": 3764
  },
  {
@@ -6949,6 +7269,7 @@
    "Num.11.4-9"
   ],
   "summary": "We are talking about things that didn't make it into our video on Numbers. Learn way more than you ever wanted to about Manna.",
+  "summaryFrom": "youtube",
   "duration": 536
  },
  {
@@ -6965,6 +7286,7 @@
    "Matt.22.34-40"
   ],
   "summary": "We are kicking off a new video on \"The Law\"!",
+  "summaryFrom": "youtube",
   "duration": 227
  },
  {
@@ -6980,6 +7302,7 @@
    "Matt.11.2-6"
   ],
   "summary": "Did John the Baptist doubt Jesus while in jail? How do we make these videos? Find out in this Behind the Scenes episode.",
+  "summaryFrom": "youtube",
   "duration": 560
  },
  {
@@ -6995,6 +7318,7 @@
    "H5771"
   ],
   "summary": "God responds to people and the twisted world we've created by making everything right.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7010,6 +7334,7 @@
    "H5771"
   ],
   "summary": "The word “iniquity” comes from the Hebrew word “avon,” which means bent or crooked. The Hebrew prophets use this image of crookedness as a powerful way of talking about people's behavior.",
+  "summaryFrom": "youtube",
   "duration": 56
  },
  {
@@ -7025,6 +7350,7 @@
    "H5771"
   ],
   "summary": "The word “iniquity” comes from the Hebrew word “avon,” which means bent or crooked. The Hebrew prophets use this image of crookedness as a powerful way of talking about people's behavior.",
+  "summaryFrom": "youtube",
   "duration": 52
  },
  {
@@ -7040,6 +7366,7 @@
    "H6588"
   ],
   "summary": "Acts of pesha violate the universal trust that exists between all humans made in the image of God.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7055,6 +7382,7 @@
    "H6588"
   ],
   "summary": "The Hebrew word \"pesha\" describes the betrayal of a relationship. Pesha is used repeatedly throughout the Bible as humans continually betray their covenant relationship with God and violate one another’s trust.",
+  "summaryFrom": "youtube",
   "duration": 56
  },
  {
@@ -7073,6 +7401,7 @@
    "H6588"
   ],
   "summary": "Instead of letting humanity destroy itself, God took responsibility for our betrayal. By taking our pesha on himself, God opened up a new future and new way to be human.",
+  "summaryFrom": "youtube",
   "duration": 58
  },
  {
@@ -7088,6 +7417,7 @@
    "H2398"
   ],
   "summary": "In the Bible, the word “sin” means failing to fulfill a goal. But what's the goal? The goal is to love God and people by treating them with the honor they deserve.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -7103,6 +7433,7 @@
    "H2398"
   ],
   "summary": "The word \"sin\" means missing the goal of loving God and people. Sin leads us to deceive ourselves. And in the Bible, when people are failing at loving God, they often think they are succeeding.",
+  "summaryFrom": "youtube",
   "duration": 58
  },
  {
@@ -7118,6 +7449,7 @@
    "H2398"
   ],
   "summary": "The word \"sin\" means missing the goal of loving God and people. And a sin against people is a sin against God because failing to love a human made in God's image is a failure to love God.",
+  "summaryFrom": "youtube",
   "duration": 43
  },
  {
@@ -7136,6 +7468,7 @@
    "H2142"
   ],
   "summary": "We're told that God hears the cries of his people and remembers them. But God didn’t forget his people—because the Hebrew word for \"remember\" means more.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7155,6 +7488,7 @@
    "H226"
   ],
   "summary": "The Hebrew word for \"sign,  'ot (אֹת), points to a greater reality while containing a reality within itself. 🤔 In the Exodus story, both Moses' serpent-staff and the blood on the door during Passover act as signs.",
+  "summaryFrom": "youtube",
   "duration": 48
  },
  {
@@ -7170,6 +7504,7 @@
    "H6960"
   ],
   "summary": "The Hebrew word \"qavah\" comes from the word that means to pull a rope tight. When we qavah, we’re waiting with tense expectation.",
+  "summaryFrom": "youtube",
   "duration": 49
  },
  {
@@ -7188,6 +7523,7 @@
    "H539"
   ],
   "summary": "Abraham trusted God to fulfill his promises and open a way forward.",
+  "summaryFrom": "youtube",
   "duration": 50
  },
  {
@@ -7206,6 +7542,7 @@
    "H7307"
   ],
   "summary": "Many Christian traditions celebrate the birth of the Church on Pentecost Sunday, when God's Spirit, or Ruakh, arrived with a rush of wind and \"tongues\" of fire.",
+  "summaryFrom": "youtube",
   "duration": 35
  },
  {
@@ -7222,6 +7559,7 @@
    "H4899"
   ],
   "summary": "\"Christ\" means “anointed one.” And Christians are people marked by God's Spirit—anointed ones who follow the anointed one.",
+  "summaryFrom": "youtube",
   "duration": 35
  },
  {
@@ -7240,6 +7578,7 @@
    "H7349"
   ],
   "summary": "In Exodus 34:6, the first word used to describe God is compassionate. To be compassionate, it's not enough to see someone's pain. True compassion is seeing the suffering of others AND taking action to stop it.",
+  "summaryFrom": "youtube",
   "duration": 50
  },
  {
@@ -7255,6 +7594,7 @@
    "G5479"
   ],
   "summary": "In the story of the Bible, joy is an attitude God’s people adopt because of their hope in his promises—even though they face many challenging situations.",
+  "summaryFrom": "youtube",
   "duration": 48
  },
  {
@@ -7273,6 +7613,7 @@
    "G1515"
   ],
   "summary": "Jesus came to offer peace to others.",
+  "summaryFrom": "youtube",
   "duration": 42
  },
  {
@@ -7291,6 +7632,7 @@
    "H1897"
   ],
   "summary": "In the Bible, meditating means slowly speaking or thinking about Scripture as a way to focus our attention until the words become part of us. Psalm 1 is a reflection on how what we meditate on shapes our path in life.",
+  "summaryFrom": "youtube",
   "duration": 48
  },
  {
@@ -7309,6 +7651,7 @@
    "G37"
   ],
   "summary": "In the Lord’s Prayer, Jesus asks for God’s name to be recognized as holy, meaning unique and honored.",
+  "summaryFrom": "youtube",
   "duration": 38
  },
  {
@@ -7327,6 +7670,7 @@
    "G4637"
   ],
   "summary": "When the Bible talks about Jesus as a \"dwelling place,” it is the same term used to refer to a tabernacle or temple. In Jesus, Heaven and Earth overlap just like in those sacred spaces.",
+  "summaryFrom": "youtube",
   "duration": 57
  },
  {
@@ -7342,6 +7686,7 @@
    "H1060"
   ],
   "summary": "In many cultures, inheritance and authority are passed down to the firstborn child.",
+  "summaryFrom": "youtube",
   "duration": 45
  },
  {
@@ -7357,6 +7702,7 @@
    "Gen.25.23"
   ],
   "summary": "In the story of the Bible, we consistently see God choosing the second-born or latecomer to receive his blessing.",
+  "summaryFrom": "youtube",
   "duration": 51
  },
  {
@@ -7372,6 +7718,7 @@
    "Gen.3.1-24"
   ],
   "summary": "The creature in Genesis 3 is in a state of rebellion against God. And when humans join with the creature, they are dragged back into disorder, chaos, and death.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7388,6 +7735,7 @@
    "Gen.4.7"
   ],
   "summary": "The Bible offers subtle clues that this creature continues working behind the scenes to drag creation back into darkness and disorder.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7403,6 +7751,7 @@
    "Gen.3.1-7"
   ],
   "summary": "The Bible tells the story of humans choosing to redefine good and evil by their own terms and act as if they are God. The result? Broken relationships and violence.",
+  "summaryFrom": "youtube",
   "duration": 58
  },
  {
@@ -7418,6 +7767,7 @@
    "Gen.3.14-19"
   ],
   "summary": "When humans choose to seize God's blessing on their own, the curse enters the world. Watch \"What is the Curse?\"",
+  "summaryFrom": "youtube",
   "duration": 41
  },
  {
@@ -7434,6 +7784,7 @@
    "Gen.2.16-17"
   ],
   "summary": "Two trees represent the decision between trusting God's blessing or seizing abundance on our own. Watch now.",
+  "summaryFrom": "youtube",
   "duration": 53
  },
  {
@@ -7450,6 +7801,7 @@
    "Gen.1.28"
   ],
   "summary": "The story of the Bible opens with God creating a beautiful world and appointing humans to care for it. Watch \"What Is the Bible's First Blessing?\"",
+  "summaryFrom": "youtube",
   "duration": 55
  },
  {
@@ -7465,6 +7817,7 @@
    "Gen.1.22-28"
   ],
   "summary": "When God blesses humans, he invites them to share his life-producing abilities and flourish. Watch \"What Is God's Blessing?\"",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -7480,6 +7833,7 @@
    "Gen.1.1-2.3"
   ],
   "summary": "Cosmology refers to the words or imagery used to describe the ordered world. When we read Genesis 1, we are introduced to the cosmology of the biblical authors.",
+  "summaryFrom": "youtube",
   "duration": 53
  },
  {
@@ -7495,6 +7849,7 @@
    "Gen.6.1-4"
   ],
   "summary": "The ancient Israelites believed that their neighboring kingdoms were founded by giant warrior kings who were part-god and part-human.The Bible explains that the reason these kings spread violence is because they were captive to spiritual evil.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -7511,6 +7866,7 @@
    "Gen.4.17"
   ],
   "summary": "Cain kills his brother out of jealousy, and then he builds the first city in the Bible to protect himself from increasing violence. God warns Cain that sin is a monster that wants to consume him, but he can rule it.",
+  "summaryFrom": "youtube",
   "duration": 56
  },
  {
@@ -7526,6 +7882,7 @@
    "Gen.4.17"
   ],
   "summary": "In the Bible, the city’s purpose is self-preservation. It’s a place where peace is enforced by the threat of death. But the culture of the garden is peace through generosity.",
+  "summaryFrom": "youtube",
   "duration": 35
  },
  {
@@ -7541,6 +7898,7 @@
    "Gen.12.1-3"
   ],
   "summary": "Beginning with Abraham and Sarah, God plans to restore his blessing through one family. Watch now.",
+  "summaryFrom": "youtube",
   "duration": 56
  },
  {
@@ -7557,6 +7915,7 @@
    "Gen.21.14-21"
   ],
   "summary": "Hagar’s story challenges Brittany on our Scholarship team to see how God helps people flourish even while spending a lifetime in the wilderness.",
+  "summaryFrom": "youtube",
   "duration": 68
  },
  {
@@ -7572,6 +7931,7 @@
    "Gen.28.18"
   ],
   "summary": "The practice of anointing with oil is an ancient ritual that marked people and places as bridges between Heaven and Earth.",
+  "summaryFrom": "youtube",
   "duration": 40
  },
  {
@@ -7587,6 +7947,7 @@
    "Exod.12.1-13"
   ],
   "summary": "The phrase “blood of the lamb” has an origin story. Do you know it?",
+  "summaryFrom": "youtube",
   "duration": 95
  },
  {
@@ -7602,6 +7963,7 @@
    "Exod.6.6"
   ],
   "summary": "God saving the ancient Israelites from Pharaoh’s oppression is an example of redemption.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -7617,6 +7979,7 @@
    "Exod.17.1-7"
   ],
   "summary": "Watch our Water of Life video to understand how God provides for his people in the wilderness—and then rescues them from it.",
+  "summaryFrom": "youtube",
   "duration": 106
  },
  {
@@ -7632,6 +7995,7 @@
    "Exod.20.18-21"
   ],
   "summary": "The middle section of the Sinai narrative contains the story's most disappointing moment—the people decide they don't want to go near God.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -7661,6 +8025,7 @@
    "Exod.20.2-3"
   ],
   "summary": "When we give our allegiance to any power other than God, it can destroy us.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7676,6 +8041,7 @@
    "Exod.20.4-6"
   ],
   "summary": "When we try to contain God or shape him into something familiar, we end up distorting the truth about God and ourselves.",
+  "summaryFrom": "youtube",
   "duration": 50
  },
  {
@@ -7691,6 +8057,7 @@
    "Exod.25.8-9"
   ],
   "summary": "God designed the tabernacle to move toward sin in order to redeem it and invite people to enter his presence.",
+  "summaryFrom": "youtube",
   "duration": 57
  },
  {
@@ -7706,6 +8073,7 @@
    "Exod.30.22-33"
   ],
   "summary": "Tim and Jon discuss the ancient recipe for anointing oil which includes spices and myrrh, a substance extracted from the gum of trees.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7721,6 +8089,7 @@
    "Exod.40.9-11"
   ],
   "summary": "The practice of anointing with oil is an ancient ritual that marked people and places as bridges between Heaven and Earth.",
+  "summaryFrom": "youtube",
   "duration": 30
  },
  {
@@ -7736,6 +8105,7 @@
    "Lev.25.8-55"
   ],
   "summary": "What are two examples of redemption? A bad day that has turned good and the Year of Jubilee.",
+  "summaryFrom": "youtube",
   "duration": 47
  },
  {
@@ -7751,6 +8121,7 @@
    "Ps.1.1-6"
   ],
   "summary": "Explore Psalm 1 in the Bible and reflect on three destructive ways of being human.",
+  "summaryFrom": "youtube",
   "duration": 56
  },
  {
@@ -7766,6 +8137,7 @@
    "Ps.1.1-6"
   ],
   "summary": "Psalm 1 tells us that every human has a choice between two paths. One path leads to life, while the other path leads to ruin.",
+  "summaryFrom": "youtube",
   "duration": 55
  },
  {
@@ -7781,6 +8153,7 @@
    "Isa.61.1-4"
   ],
   "summary": "Isaiah 61 talks about a group of people who will rebuild creation and bring restoration—they’re called the anointed ones.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -7796,6 +8169,7 @@
    "Isa.61.1-3"
   ],
   "summary": "Israel had been conquered and driven out of their land. And Isaiah’s words are meant to encourage the small group of Israelites who continue to trust in God's promises even as they mourn.",
+  "summaryFrom": "youtube",
   "duration": 50
  },
  {
@@ -7811,6 +8185,7 @@
    "Isa.61.4-11"
   ],
   "summary": "In Isaiah 61, the prophet shares a vision of a restored world. The land is filled with abundance and ordered by right relationships.",
+  "summaryFrom": "youtube",
   "duration": 53
  },
  {
@@ -7826,6 +8201,7 @@
    "Dan.7.1-14"
   ],
   "summary": "The four monstrous beasts in Daniel's dream represent four violent kingdoms. Daniel’s dream continues with the arrival of the Son of Man, who shows up to destroy the beasts.",
+  "summaryFrom": "youtube",
   "duration": 53
  },
  {
@@ -7843,6 +8219,7 @@
    "Rev.12.3-9"
   ],
   "summary": "Biblical authors used dragon imagery to represent chaos, darkness, and violent human rulers.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -7858,6 +8235,7 @@
    "Rev.12.1-17"
   ],
   "summary": "Jesus resists the dragon in a surprising way—he surrenders to it.",
+  "summaryFrom": "youtube",
   "duration": 57
  },
  {
@@ -7873,6 +8251,7 @@
    "Matt.3.13-4.11"
   ],
   "summary": "In Matthew’s gospel, Jesus walks the exodus way. His baptism marks the way out. His wilderness testing shows the way through. And finally, his transformative ministry of healing and teaching that reveals the way in.",
+  "summaryFrom": "youtube",
   "duration": 67
  },
  {
@@ -7888,6 +8267,7 @@
    "Mark.1.9-11"
   ],
   "summary": "Israel's priests and kings were anointed with oil to set them apart as leaders and God's representatives. But Jesus was anointed with water and Spirit because he is the ultimate Anointed One.",
+  "summaryFrom": "youtube",
   "duration": 37
  },
  {
@@ -7903,6 +8283,7 @@
    "Matt.4.23-5.3"
   ],
   "summary": "Many of the people living in the hills of Galilee had lost their land to Rome. They were poor, powerless, and struggling to get by.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -7917,7 +8298,8 @@
   "verses": [
    "Matt.5.1-3"
   ],
-  "summary": "Why does the Sermon on the Mount start the way it does? 🤔",
+  "summary": "Why does the Sermon on the Mount start the way it does?",
+  "summaryFrom": "youtube",
   "duration": 51
  },
  {
@@ -7933,6 +8315,7 @@
    "Matt.5.3-12"
   ],
   "summary": "Israel's prophets said that one day, God's heavenly Kingdom would break in, starting with a small group of Israelites. The people listening to Jesus' Sermon on the Mount are part of this legacy.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -7948,6 +8331,7 @@
    "Matt.5.3-12"
   ],
   "summary": "Jesus claims that Heaven is coming to Earth, starting with the crowd listening to him.",
+  "summaryFrom": "youtube",
   "duration": 45
  },
  {
@@ -7963,6 +8347,7 @@
    "Matt.5.3-12"
   ],
   "summary": "Jesus announces that God's blessing is arriving in a new way. Watch \"What Does Jesus Claim About God's Blessing?\"",
+  "summaryFrom": "youtube",
   "duration": 45
  },
  {
@@ -7978,6 +8363,7 @@
    "Matt.5.14"
   ],
   "summary": "Jerusalem was an image of God's garden city for a time. But when Jesus announces the arrival of God's Kingdom, he doesn't even go to Jerusalem.",
+  "summaryFrom": "youtube",
   "duration": 47
  },
  {
@@ -7993,6 +8379,7 @@
    "Matt.5.21-22"
   ],
   "summary": "Jesus is revealing the wisdom underneath the commands of the Torah. Anger, verbal abuse, and murder are all outward behaviors that reflect how much we value someone else’s existence.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -8008,6 +8395,7 @@
    "Matt.5.33-37"
   ],
   "summary": "Jesus teaches that peacemaking begins with a radical commitment to honesty and integrity. He tells his followers to honor others by keeping their word.",
+  "summaryFrom": "youtube",
   "duration": 35
  },
  {
@@ -8024,6 +8412,7 @@
    "Exod.21.23-25"
   ],
   "summary": "\"An eye for an eye and a tooth for a tooth\" is a famous line from ancient law, intended to protect people from disproportionate retaliation.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -8039,6 +8428,7 @@
    "Matt.6.1-4"
   ],
   "summary": "Jesus doesn’t describe one right way to give generously. Instead, he encourages his followers to cultivate a close relationship with God and do right for the right reasons.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -8054,6 +8444,7 @@
    "Matt.6.5-8"
   ],
   "summary": "Prayer is about spending time with God. And the Bible describes Jesus praying alone and with his followers. But Jesus instructs his followers to pray to God in secret if praying in front of others leads to hypocrisy.",
+  "summaryFrom": "youtube",
   "duration": 42
  },
  {
@@ -8069,6 +8460,7 @@
    "Matt.6.10"
   ],
   "summary": "Jesus prays for the reunion of Heaven and Earth. But he also teaches his followers how to enter God’s Kingdom now through loving God and neighbor.",
+  "summaryFrom": "youtube",
   "duration": 25
  },
  {
@@ -8084,6 +8476,7 @@
    "Matt.6.11"
   ],
   "summary": "Jesus’ first audience was filled with people who often didn’t have enough to eat.",
+  "summaryFrom": "youtube",
   "duration": 41
  },
  {
@@ -8099,6 +8492,7 @@
    "Matt.6.12"
   ],
   "summary": "In his prayer, Jesus teaches his followers that in order to receive forgiveness, we must offer forgiveness. What goes in, must go out.",
+  "summaryFrom": "youtube",
   "duration": 22
  },
  {
@@ -8114,6 +8508,7 @@
    "Matt.6.14-15"
   ],
   "summary": "We respond to this question and more in our fourth Question and Response episode in our Sermon on the Mount series. Tune in for some special bonus content from our listeners. (Hint: 🎵).",
+  "summaryFrom": "youtube",
   "duration": 25
  },
  {
@@ -8129,6 +8524,7 @@
    "Matt.4.17"
   ],
   "summary": "Our BibleProject translation uses the phrase  “kingdom of the skies” instead of kingdom of heaven.” Discover why in our newest Q+R podcast episode.",
+  "summaryFrom": "youtube",
   "duration": 27
  },
  {
@@ -8144,6 +8540,7 @@
    "Mark.6.30-44"
   ],
   "summary": "Jesus surprises the crowd with an abundance of food in an unexpected place.",
+  "summaryFrom": "youtube",
   "duration": 65
  },
  {
@@ -8159,6 +8556,7 @@
    "Mark.10.42-45"
   ],
   "summary": "Jesus claimed that God's power was arriving on Earth through him. But he redefined power as love and taught that if you want to be first, you need to become last.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -8175,6 +8573,7 @@
    "Mark.10.42-45"
   ],
   "summary": "Jesus says that if you want to be first, you must be last. Real authority belongs to those who serve others.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -8190,6 +8589,7 @@
    "Luke.10.17-20"
   ],
   "summary": "In Luke 10:17, Jesus describes how his followers can be victorious over spiritual rebels.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -8205,6 +8605,7 @@
    "Acts.2.1-21"
   ],
   "summary": "The story of the Bible points to a new world filled with God's life-giving Spirit.",
+  "summaryFrom": "youtube",
   "duration": 52
  },
  {
@@ -8220,6 +8621,7 @@
    "Acts.2.1-4"
   ],
   "summary": "Throughout the Hebrew Bible, fire and windstorms are connected to the arrival of God’s presence and the establishment of a new temple.",
+  "summaryFrom": "youtube",
   "duration": 15
  },
  {
@@ -8235,6 +8637,7 @@
    "Gal.3.13"
   ],
   "summary": "Jesus dies under the curse but God reverses death by raising him back to life. Watch \"How Does Jesus' Death Reverse the Curse?\"",
+  "summaryFrom": "youtube",
   "duration": 58
  },
  {
@@ -8250,6 +8653,7 @@
    "Col.1.15-20"
   ],
   "summary": "Jesus' earliest followers called him the firstborn of all creation–Jesus had enough power to bring the world into existence! But Jesus redefined how power could be used.",
+  "summaryFrom": "youtube",
   "duration": 55
  },
  {
@@ -8265,6 +8669,7 @@
    "1Tim.6.17-19"
   ],
   "summary": "BibleProject CEO Steve Atkinson encourages you to give generously to organizations that are making a difference so that you may \"take hold of the life that is truly life.\"",
+  "summaryFrom": "youtube",
   "duration": 44
  },
  {
@@ -8280,6 +8685,7 @@
    "1Pet.2.9"
   ],
   "summary": "Followers of Jesus embrace their calling as royal priests by sharing his love, serving those in need, and interceding in prayer.",
+  "summaryFrom": "youtube",
   "duration": 126
  },
  {
@@ -8295,6 +8701,7 @@
    "Rev.22.1-5"
   ],
   "summary": "The biblical story closes with all people sharing God's blessing and abundance. Watch now.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -8310,6 +8717,7 @@
    "Rev.21.1-3"
   ],
   "summary": "The biblical story focuses on reuniting Heaven and Earth so that God's space and human space overlap again.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -8322,6 +8730,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Biblical narratives have been misused to promote violent conquests throughout history. But when we read the Bible through the lens of Jesus' upside-down Kingdom, we discover a different story.",
+  "summaryFrom": "youtube",
   "duration": 60
  },
  {
@@ -8334,6 +8743,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Jesus shares his authority and power with his followers so that they can form a new kind of family. Instead of being filled with feuds and rivalries, this family is ordered by Jesus' redefinition of power as love.",
+  "summaryFrom": "youtube",
   "duration": 59
  },
  {
@@ -8346,6 +8756,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "In the Bible, Jesus challenges Israel's leaders for abusing their power.",
+  "summaryFrom": "youtube",
   "duration": 55
  },
  {
@@ -8358,6 +8769,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "In the Bible demons are dark spiritual forces that can drag God's good creation into chaos and darkness.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -8370,6 +8782,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Dr. Tim Mackie explains a helpful step for understanding the Old Testament.",
+  "summaryFrom": "youtube",
   "duration": 54
  },
  {
@@ -8382,6 +8795,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "People express hope throughout the Bible, and most often what they hope for is God himself.",
+  "summaryFrom": "youtube",
   "duration": 52
  },
  {
@@ -8405,6 +8819,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Christian hope is a choice to wait for God to bring about the future he has promised.",
+  "summaryFrom": "youtube",
   "duration": 40
  },
  {
@@ -8417,6 +8832,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "The Day of the Lord is the future and final day when God will overcome evil and make everything new.",
+  "summaryFrom": "youtube",
   "duration": 50
  },
  {
@@ -8428,7 +8844,8 @@
   "channel": "BibleProject",
   "series": "Shorts",
   "kind": "short",
-  "summary": "The Bible isn't a rule book. It tells the story of God making humans his partners, humans ruining it, and God restoring the world through Jesus. #shorts #BibleProject #biblevideo #bible",
+  "summary": "The Bible isn't a rule book. It tells the story of God making humans his partners, humans ruining it, and God restoring the world through Jesus.",
+  "summaryFrom": "youtube",
   "duration": 46
  },
  {
@@ -8441,6 +8858,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Today, we’re walking through the wilderness, where we learn to trust God and his promise to make everything new.",
+  "summaryFrom": "youtube",
   "duration": 45
  },
  {
@@ -8453,6 +8871,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "In the Bible, Heaven and Earth describe God's space and human space. In the story of the Bible, these two spaces have been torn apart—but Jesus has the power to reunite them.",
+  "summaryFrom": "youtube",
   "duration": 43
  },
  {
@@ -8465,6 +8884,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Jesus teaches that we can experience God's heavenly Kingdom now when we love God and love our neighbor.",
+  "summaryFrom": "youtube",
   "duration": 39
  },
  {
@@ -8477,6 +8897,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "The union of Heaven and Earth is at the center of the biblical story. They have been separated, but God is bringing them together.",
+  "summaryFrom": "youtube",
   "duration": 72
  },
  {
@@ -8489,6 +8910,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Jerusalem is the image of God's heavenly city for a time. This garden city represents God's plan for his people to live in peace through generosity, but the city is eventually conquered by Babylon.",
+  "summaryFrom": "youtube",
   "duration": 37
  },
  {
@@ -8501,6 +8923,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "The mindset of Cain's city is self-preservation and peace enforced by the threat of death. And the only way we overcome the fear of death is by trusting in the one who is stronger than death.",
+  "summaryFrom": "youtube",
   "duration": 31
  },
  {
@@ -8513,6 +8936,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "The prophets showed how Israel failed to live by God’s wisdom and follow his laws.",
+  "summaryFrom": "youtube",
   "duration": 34
  },
  {
@@ -8524,7 +8948,8 @@
   "channel": "BibleProject",
   "series": "Shorts",
   "kind": "short",
-  "summary": "Human suffering deeply moves Jesus. So much so that he gave his life to rescue us all. See the full video and more related resources here:",
+  "summary": "Human suffering deeply moves Jesus. So much so that he gave his life to rescue us all.",
+  "summaryFrom": "youtube",
   "duration": 35
  },
  {
@@ -8537,6 +8962,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "God’s generous love turns death into life and scarcity into abundance.",
+  "summaryFrom": "youtube",
   "duration": 30
  },
  {
@@ -8549,6 +8975,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Even with all the gifts we've been given, there are times when we feel they aren't enough. Just like the Israelites, we can forget the Promised Land God has gifted us and begin to live in fear.",
+  "summaryFrom": "youtube",
   "duration": 29
  },
  {
@@ -8572,6 +8999,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Follow the exodus way design pattern in the book of Genesis: the way out of slavery, the way through the wilderness, and the way into a new land.",
+  "summaryFrom": "youtube",
   "duration": 93
  },
  {
@@ -8584,6 +9012,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Follow the exodus way design pattern in the book of Isaiah: the way out of slavery, the way through the wilderness, and the way into the promised land.",
+  "summaryFrom": "youtube",
   "duration": 74
  },
  {
@@ -8596,6 +9025,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Why is the language of debt, purchasing, and redeeming part of how Christians talk about Jesus?",
+  "summaryFrom": "youtube",
   "duration": 91
  },
  {
@@ -8608,6 +9038,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Biblical authors use settings to draw out emotions and build expectations. When we read a story, we naturally connect each scene to similar stories we’ve encountered before.",
+  "summaryFrom": "youtube",
   "duration": 90
  },
  {
@@ -8620,6 +9051,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "Meditating on the Bible as wisdom literature shapes our decision-making—especially when there’s no list of instructions or rules for a particular situation.",
+  "summaryFrom": "youtube",
   "duration": 41
  },
  {
@@ -8632,6 +9064,7 @@
   "series": "Shorts",
   "kind": "short",
   "summary": "The Bible is wisdom literature, and understanding it as a rulebook limits how it can shape our lives.",
+  "summaryFrom": "youtube",
   "duration": 68
  },
  {

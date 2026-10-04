@@ -254,6 +254,12 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   verse's people as laid out, highlights them, outlines the chapter's, and frames as many of them (and their
   parents) as still read; moving verse only glides the view.
 
+- Video summaries (`content/videos.json`) are either BibleProject's own description, quoted word for word from
+  its YouTube description or bibleproject.com page and marked `summaryFrom` (the card shows it as theirs), or this
+  project's, which say only what the video covers, since its content is not something the project has read. Check a
+  quoted summary against its source and end it at a full sentence; a test fails the build on an unquoted summary in
+  the first person.
+
 - Itineraries and boundaries (`content/journeys.json`; `kind: 'border'` for a boundary, drawn
   a stretch per verse and filled when `closed`) take each station's position from OpenBible unless
   it has an `estimate` (an `at` point, or none to be spaced evenly between its neighbours);

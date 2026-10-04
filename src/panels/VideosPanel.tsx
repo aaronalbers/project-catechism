@@ -50,7 +50,12 @@ export function VideoCard({ v }: { v: Video }) {
         {verses.length > MAX_CHIPS && <span className="chip">+{verses.length - MAX_CHIPS} more</span>}
       </div>
       <VideoEmbed v={v} />
-      {v.summary && <p className="summary">{v.summary}</p>}
+      {v.summary && (v.summaryFrom
+        ? <figure className="quoted-summary">
+            <blockquote className="summary">{v.summary}</blockquote>
+            <figcaption>BibleProject's description, on {v.summaryFrom === 'youtube' ? 'YouTube' : 'bibleproject.com'}</figcaption>
+          </figure>
+        : <p className="summary">{v.summary}</p>)}
       <div className="sources"><ol><li>
         <span className="skind">Video</span>
         {v.provider === 'youtube'

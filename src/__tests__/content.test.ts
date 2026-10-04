@@ -806,6 +806,15 @@ describe('content integrity', () => {
     const ids = VIDEOS.flatMap((v) => (v.videoId ? [v.videoId] : []));
     expect(new Set(ids).size, 'a YouTube video is listed twice').toBe(ids.length);
   });
+  // The project has no voice of its own: a summary that speaks in the first person or argues
+  // is BibleProject's, quoted and marked as theirs (checked against its source when added).
+  it('video summaries are either quoted from BibleProject or only say what the video covers', () => {
+    for (const v of VIDEOS) {
+      if (!v.summary || v.summaryFrom) continue;
+      expect(v.summary, `${v.id}: first person in the project's voice`).not.toMatch(/\b(we|us|our|you|your)\b/i);
+      expect(v.summary.length, `${v.id}: an unquoted summary should only name what the video covers`).toBeLessThan(100);
+    }
+  });
   it('ranks a video about the passage above book overviews, and finds word studies by Strong\'s number', () => {
     const atPrayer = videosFor({ book: 'Matt', chapter: 6, verse: 9 });
     expect(atPrayer[0].verses?.some((r) => r.startsWith('Matt.6.9'))).toBe(true);
