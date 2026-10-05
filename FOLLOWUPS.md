@@ -457,3 +457,15 @@ valley of Shechem, and A. T. Richardson (1925) placed Shiloh at Beit Silo.
   268–270, Driver's Hastings article, and Finkelstein's *Shiloh* (1993), whose own reading of the site, including
   what he found of Iron Age II there, should answer Wijngaards's report of a gap from 1050 to 350 BC.
 - **Richardson not read.** His Beit Silo proposal is given only as Wijngaards reports it.
+
+## Megiddo at Tel Megiddo (`megiddo-tel-megiddo`), 2026-10-04
+
+Badged `consensus` on Eric Cline's statement that by 1903 "it was clear to all" that the mound was Megiddo. Conder's
+Mujedda is counted as a dissent answered and dropped, not a standing one: no one was found holding it after
+Schumacher's excavation. The same line was applied to Pul, where A. T. Jones held his view against the evidence
+the others cited, so it stands as a dissent.
+
+- **Cline read in the *Time* excerpt only**, not *Digging Up Armageddon* (2020) itself.
+- **Conder's own case not read.** It is given as Smith summarises it; Trelawney Saunders's answer (*PEFQS* 1880,
+  223–224) and the PEF *Memoirs* were not read.
+- **Robinson quoted through Cline**, not from *Biblical Researches*; the year he stood on the mound is not given.

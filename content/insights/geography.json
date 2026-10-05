@@ -133,7 +133,7 @@
    {"kind": "scripture", "ref": "Josh.11.10", "note": "'Hazor was formerly the head of all these kingdoms'"}
   ],
   "confidence": "consensus",
-  "related": ["tiglath-pileser-pekah-hoshea", "amos-earthquake"]
+  "related": ["tiglath-pileser-pekah-hoshea", "amos-earthquake", "megiddo-tel-megiddo"]
  },
  {
   "id": "shiloh-khirbet-seilun",
@@ -179,5 +179,27 @@
   "confidence": "interpretation",
   "traditions": ["Khirbet Seilun: E. Robinson (1841) and S. R. Driver (1902), as Wijngaards cites them; W. F. Albright, as Wijngaards quotes him; Amichay Schwartz and Abraham Ofir Shemesh (Religions, 2019)", "Taanath-shiloh in the valley of Shechem: John Wijngaards (2020)", "Beit Silo near Beitunia: A. T. Richardson (1925), as Wijngaards reports him"],
   "related": ["shiloh-khirbet-seilun"]
+ },
+ {
+  "id": "megiddo-tel-megiddo",
+  "title": "Megiddo, at Tel Megiddo",
+  "kind": "geography",
+  "verses": ["Josh.12.21", "Judg.5.19", "1Kgs.9.15", "2Kgs.9.27", "2Kgs.23.29-30", "1Chr.7.29", "2Chr.35.22"],
+  "summary": "The Megiddo of Joshua, Judges, Kings and Chronicles is the mound of Tel Megiddo (Tell el-Mutesellim) in the Jezreel Valley. Claude Conder once proposed Mujedda, near Beth-shean; by the time the mound was first excavated, in 1903, Eric Cline writes, 'it was clear to all' that it was Megiddo.",
+  "body": [
+   "The name Megiddo did not survive. George Adam Smith (1896) argued for Lejjun, the Roman Legio, on three points: it is close to Taanach, and Judges sets the battle 'at Taanach by the waters of Megiddo' (5:19); those waters, he holds, are practically the Kishon; and Lejjun gave its name to the plain as Megiddo did, for Jerome calls the Great Plain both the plains of Megiddo and the Campus Legionis. Eric Cline (2020) writes that Smith 'convincingly showed that Megiddo and Tell el-Mutesellim were one and the same', using biblical passages, geography and the Egyptian inscriptions that name Megiddo.",
+   "Edward Robinson, who first proposed Lejjun, stood on the mound itself and dismissed it, writing, as Cline quotes him, that 'there is no trace, of any kind, to show that a city ever stood there.' Claude Conder, surveying for the Palestine Exploration Fund, favoured Mujedda, 'a site with considerable ruins at the foot of Gilboa, above the Jordan and near Beisan', in Smith's words. Smith answers each of Conder's arguments: that 'Taanach by the waters of Megiddo' puts Mujedda out of the question; that 1 Chronicles 7:29 lists 'Beth-shean, Taanach, Megiddo, and Dor', in order from east to west if Lejjun is Megiddo; and that Ahaziah, fleeing Jehu from Jezreel and dying at Megiddo (2 Kings 9:27), would more likely flee west by the pass at Lejjun than back toward Beth-shean.",
+   "Gottlieb Schumacher began the first excavation of the mound in 1903. By then, Cline writes, 'it was clear to all that he was digging at Megiddo.' OpenBible.info's geocoding data gives Tel Megiddo as the only identification. Whether Revelation's Armageddon (16:16) is named for Megiddo is a reading of that verse, not taken up here."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Judg.5.19", "note": "'at Taanach by the waters of Megiddo'"},
+   {"kind": "scripture", "ref": "1Chr.7.29"},
+   {"kind": "scripture", "ref": "2Kgs.9.27"},
+   {"kind": "scholarship", "title": "The Historical Geography of the Holy Land", "author": "George Adam Smith", "year": 1896, "url": "https://archive.org/details/historicalgeogra00smit", "note": "pp. 386–388, with the note answering Conder's case for Mujedda"},
+   {"kind": "scholarship", "title": "'Where Was Armageddon? The Hunt for a Lost Biblical Site', Time, adapted from Digging Up Armageddon (Princeton, 2020)", "author": "Eric H. Cline", "year": 2020, "url": "https://time.com/5802129/armageddon-archaeology/", "note": "Robinson, Conder and Kitchener, Smith, and Schumacher's excavation from 1903"},
+   {"kind": "data", "title": "OpenBible.info Bible Geocoding Data, 'Megiddo'", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "note": "one identification, Tel Megiddo; CC BY 4.0"}
+  ],
+  "confidence": "consensus",
+  "related": ["hazor-tel-hazor"]
  }
 ]
