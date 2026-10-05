@@ -432,6 +432,13 @@ kings. The holders given are those read in the session, all from 1897–1915.
 - **No modern holder read.** Tadmor and Yamada's introduction to RINAP 1 (2011) and Cogan and Tadmor's *II Kings*
   (Anchor Bible, 1988) would give the identification as it stands now, and say whether anyone still disputes it.
 - **Sayce and Schrader second-hand.** Sayce is quoted from Jones, and Schrader is cited as the ISBE cites him.
+- **Still `interpretation`, for want of a current statement of agreement.** Jones's dissent is no bar now (no one
+  was found holding it), but no source read says the field agrees except Jehovah's Witnesses' *Insight* ("most
+  scholars now conclude"). New evidence since Jones: the Incirli stele (found 1993), whose Phoenician text, in
+  Stephen Kaufman's edition (*Maarav* 14.2, 2007, 7–26), is reported to name the king פאל, "Puʾ/wal". That was read
+  only in a 2009 blog summary (balshanut) and Bryan Windle's *Bible Archaeology Report* (2019). *Needed:* Kaufman's
+  article itself, and a current reference (Cogan and Tadmor, *II Kings*) on the identification; with them the card
+  can take `consensus`.
 - **The king list not read.** "Pulu" is given as the Jewish Encyclopedia reports it; Babylonian King List A (and the
   Synchronistic King List, which has Tiglath-pileser at that point) were not read in an edition.
 
@@ -484,8 +491,9 @@ Reviewed for a `consensus` badge and does not qualify: Margreet Steiner (2017) c
 
 ## The Septuagint's origin (`septuagint-aristeas`, `septuagint-pentateuch-origin`), 2026-10-04
 
-Reviewed for a `consensus` badge and does not qualify: Grätz dated the Greek Pentateuch to the 2nd century BC, and
-Kahle held it to be a revision of earlier versions; even the place is shared ground only for Egypt.
+Badged `consensus` as of 2017, on Jannes Smith's "most scholars today agree" (Bible Odyssey). Grätz's 2nd-century date
+and Kahle's plural origin are told as history with the answers given them; no one was found holding either now. No
+`since` is given: Swete's 1914 remark predates Kahle's challenge, and no source read dates the agreement after it.
 
 - **The Letter of Aristeas, Aristobulus and Philo are read in Swete's quotations**, not in an edition.
 - **Kahle and Grätz are second-hand**, through Ravasco and Swete; Kahle's *The Cairo Geniza* (1947) and Grätz's
