@@ -22,7 +22,7 @@
    {"kind": "scripture", "ref": "Josh.18.17", "note": "the boundary passes 'the ascent of Adummim'"}
   ],
   "confidence": "evidence",
-  "related": ["two-denarii-innkeeper"]
+  "related": ["two-denarii-innkeeper", "jericho-old-city"]
  },
  {
   "id": "galilee-squalls",
@@ -201,5 +201,45 @@
   ],
   "confidence": "consensus",
   "related": ["hazor-tel-hazor"]
+ },
+ {
+  "id": "jericho-old-city",
+  "title": "The old city by Jericho's spring",
+  "kind": "geography",
+  "verses": ["Josh.6.1-26", "2Kgs.2.18-22", "Deut.34.3"],
+  "summary": "Josephus places the city Joshua took beside the spring 'by Jericho' that Elisha healed. Tell es-Sultan, about five miles north-west of the Dead Sea, holds the ruins of a city first settled around 10,500 BC and, by Lorenzo Nigro's dating, destroyed around 1550 BC.",
+  "body": [
+   "In 2 Kings 2 the men of Jericho tell Elisha that 'the city's location is good … But the water is bad', and he casts salt into the spring (2:19-22). Josephus, describing the country round Roman Jericho, writes that 'there is a fountain by Jericho, that runs plentifully', which 'arises near the old city, which Joshua, the son of Naue … took the first of all the cities of the land of Canaan', and tells how Elisha made it wholesome.",
+   "Lorenzo Nigro, who directs excavations at Tell es-Sultan, describes a mound first settled around 10,500 BC, walled in the Neolithic, and rebuilt as a fortified Canaanite city in the Early and Middle Bronze Ages, whose burnt and collapsed mud-brick ruins lie at the surface. He dates its destruction to around 1550 BC, 'long before the time the Bible places Joshua's conquest', and reports a scarab of that period bearing 'an Egyptian title connected to the Canaanite name of the city: Ruha.' Margreet Steiner writes that the site 'was not occupied' around 1200 BC, the date at which the conquest is 'commonly dated'. Kenyon's and Wood's datings of the destruction are set out in Joshua's profile.",
+   "Whether this mound is the Jericho of Joshua is set out in its own card."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "2Kgs.2.19-22"},
+   {"kind": "primary", "title": "Josephus, Jewish War 4.8.3", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.gutenberg.org/ebooks/2850", "note": "Whiston: 'there is a fountain by Jericho … it arises near the old city, which Joshua, the son of Naue … took'"},
+   {"kind": "scholarship", "title": "'Jericho', Bible Odyssey (Society of Biblical Literature)", "author": "Lorenzo Nigro", "year": 2017, "url": "https://www.bibleodyssey.org/articles/jericho/", "note": "the mound's history, the destruction ≈1550 BC, and the scarab naming Ruha; Nigro directs excavations at Tell es-Sultan"},
+   {"kind": "scholarship", "title": "'Site Identification: The Case of Jericho', Bible Odyssey (Society of Biblical Literature)", "author": "Margreet L. Steiner", "year": 2017, "url": "https://www.bibleodyssey.org/articles/site-identification-the-case-of-jericho/"}
+  ],
+  "confidence": "evidence",
+  "related": ["jericho-which-mound", "jericho-jerusalem-ascent"]
+ },
+ {
+  "id": "jericho-which-mound",
+  "title": "Tell es-Sultan and the Jericho of Joshua",
+  "kind": "geography",
+  "verses": ["Josh.6.1-26", "Josh.2.1"],
+  "summary": "Lorenzo Nigro, who excavates Tell es-Sultan, calls it ancient Jericho and reads the conquest story as told of its ruins. Margreet Steiner calls the identification 'uncertain', because the mound's remains do not fit the date the conquest is commonly given.",
+  "body": [
+   "Nigro writes of 'the archaeological site of Tell es-Sultan (ancient Jericho)', and reports a scarab bearing a title connected, he writes, to the city's Canaanite name, Ruha. He holds that 'there is no evidence connecting the remains of this impressive city with the Jericho described in Joshua', and reads the story as told of ruins already standing: 'when the biblical author included Jericho in the conquest story, the site was already a heap of burnt and ruinously collapsed bricks. These ruins must have seemed to prove the story and were thus exploited by the biblical author.'",
+   "Steiner (2017) writes that 'the identification of Tell es-Sultan as biblical Jericho is uncertain, as the dating of the archaeological remains does not fit the supposed dating of the biblical conquest stories', though 'the description of Jericho in the biblical text also seems to fit the location of Tell es-Sultan.' She sets out three ways scholars have answered it: 'Some scholars have searched for other tells to identify with biblical Jericho—without much success'; others have redated the conquest to the Late Bronze Age or the end of the Middle Bronze Age; others question the dating of the excavated remains. 'Every solution brings forth its own problems, and Tell es-Sultan has not yielded its secret yet.'"
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "Josh.6.24"},
+   {"kind": "primary", "title": "Josephus, Jewish War 4.8.3", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.gutenberg.org/ebooks/2850", "note": "Whiston: 'there is a fountain by Jericho … it arises near the old city, which Joshua, the son of Naue … took'"},
+   {"kind": "scholarship", "title": "'Jericho', Bible Odyssey (Society of Biblical Literature)", "author": "Lorenzo Nigro", "year": 2017, "url": "https://www.bibleodyssey.org/articles/jericho/", "note": "director of excavations at Tell es-Sultan"},
+   {"kind": "scholarship", "title": "'Site Identification: The Case of Jericho', Bible Odyssey (Society of Biblical Literature)", "author": "Margreet L. Steiner", "year": 2017, "url": "https://www.bibleodyssey.org/articles/site-identification-the-case-of-jericho/"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["Tell es-Sultan is Jericho, its ruins older than the conquest story: Lorenzo Nigro (Bible Odyssey, 2017)", "The identification uncertain: Margreet L. Steiner (Bible Odyssey, 2017)"],
+  "related": ["jericho-old-city"]
  }
 ]

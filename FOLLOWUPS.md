@@ -469,3 +469,13 @@ the others cited, so it stands as a dissent.
 - **Conder's own case not read.** It is given as Smith summarises it; Trelawney Saunders's answer (*PEFQS* 1880,
   223–224) and the PEF *Memoirs* were not read.
 - **Robinson quoted through Cline**, not from *Biblical Researches*; the year he stood on the mound is not given.
+
+## Jericho at Tell es-Sultan (`jericho-old-city`, `jericho-which-mound`), 2026-10-04
+
+Reviewed for a `consensus` badge and does not qualify: Margreet Steiner (2017) calls the identification uncertain.
+
+- **Those who looked for other tells are unnamed.** Steiner says only that "some scholars" searched "without much
+  success". *Needed:* who, and which sites, so the card can name them.
+- **The identification's history not read.** Charles Warren's identification (1868), by the spring of Ein es-Sultan,
+  is not given, nor is the spring Josephus describes tied to Ein es-Sultan, for want of a source read.
+- **The Ruha scarab** is cited from Nigro's summary, not its publication.
