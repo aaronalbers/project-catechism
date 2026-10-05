@@ -9,6 +9,24 @@ complete as it can be: anything the text describes of it that it leaves out belo
 Ideas for new things (another model, another word study, another view) are not follow-ups: leaving one out
 does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 
+## Alphabet poems (`content/acrostics.json`), 2026-10-05
+
+- **Nahum 1 left out.** Its partial acrostic is disputed, both in whether it is one and in how far it runs, so it
+  would be an `interpretation` naming who finds it and who doubts it. No source on it was read: the BSB has no note
+  there, and the Jewish Encyclopedia's "Acrostics" does not mention it. *Needed:* Bickell's and Gunkel's proposals
+  and a critic of them, read and cited, before adding it.
+- **Psalms 9–10 shown by the verses alone.** The strip marks the verses that begin with the letters in order. Where
+  the missing letters' lines would have stood, and whether 9:19's koph or 10:4's resh belong to it, are
+  reconstructions; none was read. *Needed:* a commentary or survey that sets out the reconstructions and who holds
+  each, to add as readings.
+- **Ben Sira 51:13–30 left out.** The Jewish Encyclopedia reports Bickell's view that it held an alphabet, and that
+  the Cairo Hebrew fragment does not present a complete one. The project's Sirach is the WEB, translated from the
+  Greek, so the letters cannot be shown on its text. *Needed:* a Hebrew text of the chapter the reader could show
+  beside it.
+- **Psalm 145 in the Jewish Encyclopedia.** Its online text says the "ג line" is missing where the Hebrew lacks the
+  nun line, most likely a misread letter in the transcription. The card cites the BSB's footnote instead. *Needed:*
+  the printed page (vol. 1, p. 171) checked before citing the article for Psalm 145.
+
 ## Scrolls (`content/scrolls.json`, the Scrolls tab), 2026-09-29
 
 - **Chapters "≈1200s".** Langton made his chapters at Paris before becoming archbishop in 1207, but no sourced year was

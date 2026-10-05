@@ -1,5 +1,5 @@
 import type { PanelTab, Reveal } from '@/app/store';
-import { CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, SKY_NAMES, SKY_READINGS, TALLIES } from './content';
+import { ACROSTICS, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MODELS, PASSION, PRICES, PROFILE_INDEX, PROPHECIES, QUOTES, SCROLLS, SKY_NAMES, SKY_READINGS, TALLIES } from './content';
 import { daysLabel, KIND_LABEL, priceRefs } from './prices';
 import { HEBREW } from './scrolls';
 import { READING_ORDER, bookIndex, compareLoc, contains, formatRef, parseRef } from './refs';
@@ -10,7 +10,7 @@ import type { InsightKind, Ref } from './types';
  * and the rest are, so a reader can find them without already being on the right verse. Everything
  * here is derived from `content/`, so a new entry there appears in the index with no registration.
  */
-export type FeatureKind = 'model' | 'chiasm' | 'tally' | 'price' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'sky' | 'insight';
+export type FeatureKind = 'model' | 'chiasm' | 'acrostic' | 'tally' | 'price' | 'reign' | 'passion' | 'journey' | 'profile' | 'prophecy' | 'quote' | 'fragment' | 'scroll' | 'sky' | 'insight';
 
 /** A labelled row of references on an entry ("Built in", "Fulfilled"). */
 export interface CatalogLine { label?: string; refs: Ref[] }
@@ -67,6 +67,14 @@ export const CATALOG: CatalogSection[] = [
     entries: sorted(CHIASMS.map((c) => ({
       id: c.id, kind: 'chiasm', title: c.title, summary: c.summary,
       go: c.ref, lines: [{ label: c.levels.some((l) => l.quote) ? 'Phrase' : 'Passage', refs: [c.ref] }],
+    }))),
+  },
+  {
+    id: 'acrostics', kind: 'acrostic', title: 'Alphabet poems', tab: 'links', reveal: 'acrostic',
+    blurb: 'Poems whose verses, stanzas or lines begin with the letters of the Hebrew alphabet in turn, which the English cannot show: each letter marked beside its verse, with the letters missing, repeated or out of order.',
+    entries: sorted(ACROSTICS.map((a) => ({
+      id: a.id, kind: 'acrostic', title: a.title, summary: a.summary,
+      go: a.ref, lines: [{ label: a.by === 'line' ? 'A letter to a line' : a.by === 'stanza' ? 'A letter to a stanza' : 'A letter to a verse', refs: [a.ref] }],
     }))),
   },
   {

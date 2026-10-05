@@ -214,6 +214,27 @@ export interface Speaker { id: string; ref: Ref; speaker: string; person?: strin
 export interface ChiasmLevel { label: string; ref: Ref; text: string; quote?: string }
 export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 /**
+ * One letter of an alphabet poem, in the poem's order: the verse it falls in (`ref`) and the Hebrew word that
+ * carries it (`word`, in consonants), the `at`-th word of the verse in Hebrew order (0, the first, unless given).
+ * `after` names the words before it in its verse (the heading, "Hallelujah"); `and`, that the letter follows the
+ * conjunction waw. A letter no verse begins with is `missing` and has no verse; one the alphabet has already had
+ * (a second resh, a pe after the taw) is `extra`; one out of the alphabet's order (Lamentations' pe before ayin) is
+ * `swapped`.
+ */
+export interface AcrosticLetter {
+  letter: string; ref?: Ref; word?: string; at?: number; after?: string; and?: true;
+  missing?: true; extra?: true; swapped?: true; note?: string;
+}
+/**
+ * A poem whose verses (`by: 'verse'`), stanzas (`'stanza'`, from one letter's verse to the next) or lines
+ * (`'line'`, several to a verse) begin with the letters of the Hebrew alphabet in turn. `every` says each verse
+ * of a stanza begins with its letter (Psalm 119), not only the first.
+ */
+export interface Acrostic {
+  id: string; title: string; ref: Ref; by: 'verse' | 'stanza' | 'line'; every?: true; summary: string;
+  letters: AcrosticLetter[]; sources: Source[]; traditions?: string[]; confidence: Confidence;
+}
+/**
  * One group in a tally: `quote` is the BSB's own words for its count, in the one verse `ref` names.
  * `same` is the label of this group in the compared tally, when the two lists name it differently
  * (Nehemiah's Hariph, Ezra's Jorah).

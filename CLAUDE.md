@@ -344,6 +344,16 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   Only one passage-level chiasm may touch a chapter (the reader draws one rail), and an
   `interpretation` chiasm names who proposed it in `traditions`, as insights do.
 
+- Alphabet poems (`content/acrostics.json`) list each letter in the poem's order with the verse it falls in and the
+  Hebrew word that carries it (`word`, consonants; `at`, its place among the verse's words in Hebrew order, which
+  `hebrewOrder` in `src/lib/acrostic.ts` takes from the interlinear's word ids, since the words are listed in the
+  English order). A letter no verse begins with is `missing`, one the alphabet has had already `extra`, one out of
+  order `swapped`; `after` names the words before it in its verse (the heading). The reader draws a strip of the
+  letters where the poem opens in the chapter and each verse's letter under its number; the card is in the Links tab.
+  `src/__tests__/acrostics.test.ts` fails the build if a word is not where it is said to be or does not begin with
+  its letter, does not begin its verse (or, `by: 'line'`, its line, by the Hebrew accents), if a letter is missing
+  where a verse does begin with it, or if a quoted BSB footnote is not word for word.
+
 - Models (`content/models.json`) can build as the text is read. `builds` are passages whose `steps`
   each name the parts a verse adds; within a build only the parts reached so far are drawn, and
   elsewhere the model is whole. Parts are the named nodes of the model and nest: naming one shows

@@ -10,7 +10,7 @@ import { formatYear } from '@/lib/format';
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
 const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
-import { CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, SCROLLS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { ACROSTICS, CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, SCROLLS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS, BEYOND, READING_ORDER, THE_66 } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -30,7 +30,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings, SCROLLS, ...SCROLLS.hebrew, ...SCROLLS.overlaps, ...SCROLLS.numbering,
+  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...ACROSTICS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings, SCROLLS, ...SCROLLS.hebrew, ...SCROLLS.overlaps, ...SCROLLS.numbering,
     ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
@@ -60,6 +60,7 @@ describe('content integrity', () => {
       ...SPEAKERS.map((s) => s.ref),
       ...WRITERS.flatMap((w) => w.books.flatMap((b) => b.refs ?? [])),
       ...CHIASMS.flatMap((c) => [c.ref, ...c.levels.map((l) => l.ref)]),
+      ...ACROSTICS.flatMap((a) => [a.ref, ...a.letters.flatMap((l) => (l.ref ? [l.ref] : [])), ...a.sources.flatMap((x) => (x.ref ? [x.ref] : []))]),
       ...RULERS.flatMap((r) => r.refs),
       ...MODELS.flatMap((m) => [...m.verses, ...(m.builds ?? []).flatMap((b) => [b.ref, ...b.steps.map((st) => st.ref)]), ...(m.states ?? []).flatMap((st) => st.accounts.flatMap((a) => [a.ref, ...a.changes.map((c) => c.ref)])) ]),
       ...VIDEOS.flatMap((v) => v.verses ?? []),
@@ -75,7 +76,7 @@ describe('content integrity', () => {
     expect(bad(all)).toEqual([]);
   });
   it('ids are unique', () => {
-    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, VIDEOS, JOURNEYS, TALLIES, PROFILES]) {
+    for (const list of [INSIGHTS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, VIDEOS, JOURNEYS, TALLIES, PROFILES]) {
       const ids = list.map((x) => x.id);
       expect(new Set(ids).size, `duplicate id in ${ids.find((id, i) => ids.indexOf(id) !== i)}`).toBe(ids.length);
     }
@@ -101,7 +102,7 @@ describe('content integrity', () => {
         for (const [k, v] of Object.entries(o)) walk(v, `${here}.${k}`);
       }
     };
-    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
+    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
     expect(wrong, 'move the holders into the body, or badge the card an interpretation').toEqual([]);
   });
   // Consensus is the field as it stands now, so a consensus badge says how recent the evidence for it is: `asOf` is
@@ -125,7 +126,7 @@ describe('content integrity', () => {
         for (const [k, v] of Object.entries(o)) if (k !== 'consensus') walk(v, `${here}.${k}`);
       }
     };
-    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
+    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
     expect(wrong).toEqual([]);
   });
   // The reader marks a narrowed word wherever it occurs, so the card must say which word, and only one card may claim it.

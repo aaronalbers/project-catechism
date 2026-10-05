@@ -1,5 +1,6 @@
 import { lazy, memo, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { addPane, closePane, focusPane, getState, pickTab, setLayout, useStore, type PanelTab } from '@/app/store';
+import { acrosticsFor } from '@/lib/acrostic';
 import { insightsFor, modelsFor, skyInChapter, SKY_READINGS, skyEventsFor, skyNamesFor, peopleInChapter, videosFor, propheciesFor, quotesFor, fragmentsFor, chiasmsFor, talliesFor } from '@/lib/content';
 import { fitting, isCompact, isNarrow, PANE_MIN_PX, panelWidth, READER_MIN_PX, useViewportWidth, visible, type Pane } from '@/lib/panes';
 import { InsightsPanel } from '@/panels/InsightsPanel';
@@ -76,7 +77,7 @@ export function useTabs() {
     scrolls: scrollMarksInChapter(loc.book, loc.chapter),
     worth: pricesAt(loc).length,
     sky: SKY_READINGS.reduce((n, r) => n + skyEventsFor(loc, r).length, 0) + skyNamesFor(loc).length,
-    links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + talliesFor(loc).length,
+    links: propheciesFor(loc).length + quotesFor(loc).length + fragmentsFor(loc).length + chiasmsFor(loc).length + acrosticsFor(loc).length + talliesFor(loc).length,
   }), [loc, named]);
   const showing = (id: PanelTab) => panes.some((p) => p.tab === id);
   // The Reign tab is only for Kings and Chronicles, where the kings are charted; the Days tab only for chapters that date

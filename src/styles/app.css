@@ -575,6 +575,41 @@ dialog.peek::backdrop { background: rgb(0 0 0 / 0.4); }
 .rung.centre > span:last-child { font-weight: 600; }
 .rung.paired { background: color-mix(in oklab, var(--chiasm) 16%, transparent); }
 
+/* Alphabet poems: the poem's letters in a strip where it opens, filled as they are read, and each verse's letter
+   under its number. A letter no verse begins with is dashed, one repeated is raised, one out of order underlined,
+   so colour is never the only cue. */
+:root { --acrostic: #4a6a8a; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --acrostic: #8fb0d0; }
+.marker.acrostic { background: var(--acrostic); }
+.he, .acrostic-letter, .acrostic-strip ol button, .acrostic-letters .glyph, .acrostic-letters .word { font-family: var(--hebrew); }
+.acrostic-strip { margin: 20px 0 14px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); scroll-margin-top: 16px; }
+.acrostic-strip .chiasm-cap { margin: 0; }
+.acrostic-cap .kind::before { background: var(--acrostic); }
+.acrostic-strip ol { list-style: none; display: grid; gap: 2px; margin: 10px 0 0; padding: 0; }
+.acrostic-strip ol button { width: 100%; height: 28px; padding: 0; border-radius: 5px; font-size: 15px; line-height: 1; color: var(--muted); background: transparent; border: 1px solid color-mix(in oklab, var(--acrostic) 30%, var(--surface)); }
+.acrostic-strip ol button.reached { color: var(--text); background: color-mix(in oklab, var(--acrostic) 22%, var(--surface)); }
+.acrostic-strip ol button.here { outline: 2px solid var(--accent); outline-offset: 1px; }
+.acrostic-strip ol button.missing { border-style: dashed; background: transparent; opacity: 0.6; cursor: default; }
+.acrostic-strip ol button.extra { transform: translateY(-4px); }
+.acrostic-strip ol button.swapped, .acrostic-letters li.swapped .glyph { text-decoration: underline 2px var(--acrostic); text-underline-offset: 4px; }
+.acrostic-now { margin: 6px 0 0; font: 12px var(--sans); color: var(--muted); }
+.acrostic-now .he { font-size: 14px; color: var(--text); }
+.acrostic-letter { display: block; margin-top: 2px; font-size: 15px; line-height: 1.2; color: var(--acrostic); font-weight: 600; text-align: right; }
+.acrostic-letter.repeat { opacity: 0.45; font-weight: 400; }
+.acrostic-letters { list-style: none; margin: 8px 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 2px 10px; font-size: 13px; }
+.acrostic-letters li { display: grid; grid-template-columns: 20px 58px auto 1fr; align-items: center; gap: 4px; padding: 2px 4px; border-radius: 6px; }
+.acrostic-letters li[aria-current='true'] { background: var(--current); }
+.acrostic-letters li.missing { color: var(--muted); }
+.acrostic-letters .glyph { font-size: 16px; text-align: center; color: var(--acrostic); font-weight: 600; }
+.acrostic-letters li.missing .glyph { color: var(--muted); font-weight: 400; }
+.acrostic-letters .nm small { color: var(--muted); }
+.acrostic-letters .chip { white-space: nowrap; }
+.acrostic-letters .none { font-size: 11px; font-style: italic; }
+.acrostic-letters .word { font-size: 14px; color: var(--muted); text-align: right; }
+.acrostic-notes { margin: 6px 0 8px; padding-left: 0; list-style: none; font-size: 12.5px; color: var(--muted); }
+.acrostic-notes li { margin: 2px 0; }
+.acrostic-notes .he { color: var(--acrostic); font-size: 14px; }
+
 /* Counts on the text: a bar under each verse that gives one, on a scale shared by the whole list,
    empty until the verse is read; the verse with the total stacks them all. */
 :root { --tally: #5a5fb0; }

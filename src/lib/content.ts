@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, SkyEvent, SkyName, SkyReading, Speaker, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
+import type { Acrostic, ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, SkyEvent, SkyName, SkyReading, Speaker, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -12,6 +12,7 @@ import fragments from '@content/fragments.json';
 import writers from '@content/writers.json';
 import speakers from '@content/speakers.json';
 import chiasms from '@content/chiasms.json';
+import acrostics from '@content/acrostics.json';
 import rulers from '@content/rulers.json';
 import models from '@content/models.json';
 import videos from '@content/videos.json';
@@ -31,6 +32,8 @@ export const FRAGMENTS = fragments as unknown as Fragment[];
 export const WRITERS = writers as unknown as Writer[];
 export const SPEAKERS = speakers as unknown as Speaker[];
 export const CHIASMS = chiasms as unknown as Chiasm[];
+/** The alphabet poems, and which verse or line begins with each letter. */
+export const ACROSTICS = acrostics as unknown as Acrostic[];
 export const RULERS = rulers as unknown as Ruler[];
 export const MODELS = models as unknown as Model3D[];
 export const VIDEOS = videos as unknown as Video[];
@@ -227,6 +230,7 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
     ['prophecy fulfilled', here(PROPHECIES.flatMap((p) => p.fulfilled.flatMap(fulfilmentRefs)))],
     ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
     ['chiasm', here(CHIASMS.map((c) => c.ref))],
+    ['acrostic', here(ACROSTICS.map((a) => a.ref))],
     ['tally', here(TALLIES.map((t) => t.ref))],
     ['price', here(PRICES.flatMap((p) => [p.ref, ...(p.also ?? [])]))],
     ['passion', here([...PASSION.accounts.flatMap((a) => a.events.map((e) => e.ref)), ...PASSION.sayings.map((x) => x.ref)])],

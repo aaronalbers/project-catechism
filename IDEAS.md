@@ -78,30 +78,6 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
 - **The New Testament.** Luke–Acts as two volumes by one author (Acts 1:1), and the New Testament's chapter and verse
   history. The Scrolls tab shows only in the Old Testament at present.
 
-## Acrostics
-
-- **Alphabet poems.** Show where an acrostic stands in the Hebrew alphabet, which the English loses. Inline, a thin
-  strip of the 22 letters beside the poem, with the current verse's letter lit (and following the audio); in a tab,
-  each letter's name, the line's first Hebrew word, and the notes on gaps and swaps. Like the chiasms, it would be
-  checkable: a test could fail the build if a claimed letter is not the first letter of its line in the
-  interlinear.
-
-  Candidates (each to be checked against the Hebrew and a cited source before it is added):
-  - by verse: Pss 25, 34, 145, Prov 31:10–31, Lam 1, 2, 4;
-  - by stanza: Ps 119 (eight verses a letter), Lam 3 (three), Ps 37 (about two);
-  - by half-line: Pss 111, 112, which would need the Hebrew split within a verse;
-  - irregular: Ps 145 lacks a nun line in the Masoretic text, which 11QPs^a and the Septuagint have;
-    Lam 2–4 put pe before ayin, where Lam 1 does not;
-  - disputed, so `interpretation` with named holders: Pss 9–10 as one broken acrostic (one psalm in the
-    Septuagint), and how far Nahum 1's partial acrostic runs.
-
-  Lam 5 has 22 verses but is not an acrostic, and could say so. Sir 51:13–30 is an acrostic only in the Hebrew,
-  and the project's Ben Sira is the WEB from the Greek, so it could at most be noted.
-
-  Still to be decided: the data shape (a verse range per letter, sometimes part of a verse), and whether the
-  interlinear follows the Hebrew or the English verse numbers where a psalm's heading is verse 1 in Hebrew
-  (Ps 34). Which poems are undisputed is itself a claim needing a source.
-
 ## Reading aloud
 
 - **Recorded audio.** The BSB has free human recordings (narrators including Bob Souer, linked from openbible.com).

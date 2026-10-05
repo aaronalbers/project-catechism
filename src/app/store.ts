@@ -43,7 +43,7 @@ export interface State {
   /** Bumped when a link moves the text while a phone shows a panel, for the Reader tab to flash. */
   nudge: number;
 }
-export type Reveal = 'chiasm' | 'tally' | 'reign' | 'passion' | 'price';
+export type Reveal = 'chiasm' | 'acrostic' | 'tally' | 'reign' | 'passion' | 'price';
 
 /** Route hash for the index: #/index or #/index/models. */
 function indexFromHash(hash: string): string | null {

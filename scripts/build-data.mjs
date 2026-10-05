@@ -112,7 +112,9 @@ async function buildBeyond() {
 
 // ---------- 2. Interlinear (streamed from the xlsx) ----------
 function unescapeXml(s) {
-  return s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, '&');
+  return s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, '&')
+    // The cells' own HTML escapes letters the XML does not ("Am&#333;s", Psalm 119's "&#1488;").
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n));
 }
 function stripTags(s) { return unescapeXml(s).replace(/<[^>]+>/g, '').trim(); }
 
@@ -150,7 +152,8 @@ async function buildInterlinear() {
       verse = { v, w: [] };
       current.verses.push(verse);
     }
-    if (cells.N) verse.h = stripTags(cells.N);
+    // Psalm 119's letters (<p class=|acrostic|>) are left out of its headings: content/acrostics.json draws every alphabet poem's.
+    if (cells.N) verse.h = stripTags(cells.N.replace(/&lt;p class=\|acrostic\|&gt;.*$/s, '')) || undefined;
     if (cells.V) (verse.f ??= []).push(stripTags(cells.V));
     if (!cells.F) return; // padding row
     const lang = cells.E === 'Hebrew' || cells.E === 'Aramaic' ? 'H' : 'G';

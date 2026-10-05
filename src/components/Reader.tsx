@@ -21,6 +21,8 @@ import { PriceChart } from './Price';
 import { chartsAt } from '@/lib/prices';
 import { PassionChart } from './Passion';
 import { OverlapNote, SeamNote } from './Scrolls';
+import { AlphabetStrip, GutterLetters } from './Acrostic';
+import { acrosticsInChapter } from '@/lib/acrostic';
 import { overlapsInChapter, seamsInChapter } from '@/lib/scrolls';
 
 /**
@@ -138,6 +140,9 @@ export function Reader() {
   const phrase = useMemo(() => CHIASMS.filter((c) => isPhrase(c) && touchesChapter(c.ref, loc.book, loc.chapter)), [loc.book, loc.chapter]);
   const passage = useMemo(() => CHIASMS.find((c) => !isPhrase(c) && touchesChapter(c.ref, loc.book, loc.chapter)), [loc.book, loc.chapter]);
   const [structure, setStructure] = useStoredFlag('structure', true);
+  const acrostics = useMemo(() => acrosticsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
+  const [letters, setLetters] = useStoredFlag('alphabet', true);
+  const toggleLetters = () => setLetters();
   const toggleStructure = () => setStructure();
   const [pair, setPair] = useState<string | null>(null);
   const tallies = useMemo(() => talliesInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
@@ -155,8 +160,8 @@ export function Reader() {
   const reveal = useStore((s) => s.reveal);
   const seams = useMemo(() => seamsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const overlaps = useMemo(() => overlapsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
-  // Arriving from the index at a chiasm, a count, a price or a reign: show it even if the reader had hidden it.
-  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); if (reveal === 'price') setPriceCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Arriving from the index at a chiasm, an alphabet poem, a count, a price or a reign: show it even if the reader had hidden it.
+  useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'acrostic') setLetters(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); if (reveal === 'price') setPriceCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep the current verse in view, gently, when it changes (audio, links, hash).
   const lastScrolled = useRef<string>('');
@@ -216,6 +221,8 @@ export function Reader() {
         const li = structure && passage ? levelAt(passage, vloc) : -1;
         const at = (d: number) => chapter[k + d] && passage ? levelAt(passage, { ...vloc, verse: chapter[k + d].v }) : -1;
         const first = li >= 0 && at(-1) !== li, last = li >= 0 && at(1) !== li;
+        // An alphabet poem's strip stands above the first of its verses in this chapter.
+        const acrosticOpens = acrostics.filter((a) => { const r = parseRef(a.ref)!; return (r.start.chapter === loc.chapter ? r.start.verse : 1) === v.v; });
         const tallyOpens = tallies.find((t) => { const r = parseRef(t.ref); return r?.start.chapter === loc.chapter && r.start.verse === v.v; });
         const bars = charts ? tallies.flatMap((t) => rowsAt(t, vloc).map((row) => ({ t, row }))) : [];
         const subtotals = charts ? tallies.flatMap((t) => (t.groups ?? []).filter((g) => contains(g.ref, vloc)).map((g) => ({ t, g }))) : [];
@@ -228,12 +235,13 @@ export function Reader() {
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
             {(ilv?.h ?? v.h) && <div className="heading">{ilv?.h ?? v.h}</div>}
+            {acrosticOpens.map((a) => <AlphabetStrip key={a.id} a={a} loc={loc} show={letters} onToggle={toggleLetters} />)}
             {opens && <ChiasmCaption c={opens} show={structure} onToggle={toggleStructure} />}
             {tallyOpens && <TallyCaption t={tallyOpens} show={charts} onToggle={toggleCharts} />}
             <div id={`v-${v.v}`} className={`verse${current ? ' current' : ''}`} onClick={() => pick(vloc)} role="button" tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(vloc); } }} aria-current={current || undefined}>
               {m && <div className="markers" aria-hidden="true">{[...m].map((k) => <span key={k} className={`marker ${k}`} title={k} />)}</div>}
-              <span className="num">{v.l ?? v.v}</span>
+              <span className="num">{v.l ?? v.v}{letters && acrostics.map((a) => <GutterLetters key={a.id} a={a} loc={vloc} />)}</span>
               <div>
                 {!v.t && v.f ? <span className="text omitted">{v.f.join(' ')}</span>
                   : <VerseText text={v.t} verse={v.v} current={current} il={ilv} marks={wordMarks} ladder={pieces && pc ? { chiasm: pc, pieces, pair, onPair: setPair } : undefined} red={redLetters ? jesus?.get(`${loc.chapter}.${v.v}`) : undefined} />}

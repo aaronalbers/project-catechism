@@ -6,6 +6,8 @@ import { book, contains, formatRef, parseRef, type VerseLoc } from '@/lib/refs';
 import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import type { Fulfilment, Prophecy, Xrefs } from '@/lib/types';
 import { LinkCircle } from './LinkCircle';
+import { AcrosticCard } from '@/components/Acrostic';
+import { acrosticsFor } from '@/lib/acrostic';
 import { label } from '@/components/Chiasm';
 import { depth } from '@/lib/chiasm';
 import { cardId } from '@/lib/catalog';
@@ -81,6 +83,7 @@ export function LinksPanel() {
   const quotes = quotesFor(loc);
   const fragments = fragmentsFor(loc);
   const chiasms = chiasmsFor(loc);
+  const acrostics = acrosticsFor(loc);
   const tallies = talliesFor(loc);
   const rulers = rulersFor(loc);
   useFeatureInView();
@@ -124,6 +127,10 @@ export function LinksPanel() {
             <SourceList sources={c.sources} traditions={c.traditions} />
           </div>
         ))}
+      </>}
+      {acrostics.length > 0 && <>
+        <div className="panel-title">Alphabet poem</div>
+        {acrostics.map((a) => <AcrosticCard key={a.id} a={a} loc={loc} />)}
       </>}
       {tallies.length > 0 && <>
         <div className="panel-title">Counts</div>
