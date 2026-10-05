@@ -479,3 +479,14 @@ Reviewed for a `consensus` badge and does not qualify: Margreet Steiner (2017) c
 - **The identification's history not read.** Charles Warren's identification (1868), by the spring of Ein es-Sultan,
   is not given, nor is the spring Josephus describes tied to Ein es-Sultan, for want of a source read.
 - **The Ruha scarab** is cited from Nigro's summary, not its publication.
+
+## The Septuagint's origin (`septuagint-aristeas`, `septuagint-pentateuch-origin`), 2026-10-04
+
+Reviewed for a `consensus` badge and does not qualify: Grätz dated the Greek Pentateuch to the 2nd century BC, and
+Kahle held it to be a revision of earlier versions; even the place is shared ground only for Egypt.
+
+- **The Letter of Aristeas, Aristobulus and Philo are read in Swete's quotations**, not in an edition.
+- **Kahle and Grätz are second-hand**, through Ravasco and Swete; Kahle's *The Cairo Geniza* (1947) and Grätz's
+  article were not read, nor Tov's and Fernández Marcos's replies.
+- **No modern survey read.** Jobes and Silva's *Invitation to the Septuagint* (2nd ed., 2015) and Dines's *The
+  Septuagint* (2004) would say how the question stands now, and whether anyone still holds a plural origin.
