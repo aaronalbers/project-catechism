@@ -490,3 +490,13 @@ Kahle held it to be a revision of earlier versions; even the place is shared gro
   article were not read, nor Tov's and Fernández Marcos's replies.
 - **No modern survey read.** Jobes and Silva's *Invitation to the Septuagint* (2nd ed., 2015) and Dines's *The
   Septuagint* (2004) would say how the question stands now, and whether anyone still holds a plural origin.
+
+## Whether John wrote the Comma (`comma-johanneum-genuine`), 2026-10-04
+
+Reviewed for a `consensus` badge and does not qualify: Edward F. Hills defends the words as possibly genuine.
+
+- **Hills's edition and date not identified.** The chapter was read as published online; it cites Metzger (1964), so it
+  is a revised edition of the 1956 book. *Needed:* the edition and page.
+- **Hills's second explanation for the omission**, from the Sabellian controversy, was cut off in the copy read and is
+  not given.
+- **Cyprian and Facundus are quoted as Brooke and Hills give them**, not from an edition.

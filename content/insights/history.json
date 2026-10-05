@@ -300,7 +300,8 @@
    {"kind": "scholarship", "title": "A Textual Commentary on the Greek New Testament (2nd ed.)", "author": "Bruce M. Metzger", "year": 1994, "note": "on 1 John 5:7-8: the manuscript evidence and Erasmus's editions"},
    {"kind": "scripture", "ref": "1John.5.7-8"}
   ],
-  "confidence": "evidence"
+  "confidence": "evidence",
+  "related": ["comma-johanneum-genuine"]
  },
  {
   "id": "disputed-letters-eusebius",
@@ -688,5 +689,26 @@
   "confidence": "interpretation",
   "traditions": ["3rd century BC, in Alexandria, one translation: H. B. Swete (1914); the Society for Old Testament Study's guide", "Under Ptolemy VI Philometor, mid-2nd century BC: Grätz, as Swete reports him", "Several earlier Greek versions, revised into the Septuagint around the 1st century BC: Paul Kahle (1915, 1947), as Ravasco reports him; answered by Emanuel Tov and Natalio Fernández Marcos"],
   "related": ["septuagint-aristeas"]
+ },
+ {
+  "id": "comma-johanneum-genuine",
+  "title": "Whether John wrote the three witnesses in heaven",
+  "kind": "history",
+  "verses": ["1John.5.6-8"],
+  "summary": "A. E. Brooke reads 'the Father, the Word, and the Holy Ghost' as a Latin gloss on verse 8 that later entered the Greek text. Edward F. Hills holds the words 'at least possibly genuine', lost from the Greek and kept by the Latin church.",
+  "body": [
+   "Brooke, in the International Critical Commentary (1912), sets out the evidence against the words: they are not found 'in any Greek manuscript with the exception of two very late MSS, obviously modified by the text of the Latin Vulgate, and in the margin of a third'; not 'in any independent Greek writer'; not 'in any Latin writer earlier than Priscillian'; and not in the Old Latin text as Tertullian, Cyprian and Augustine read it, nor in Jerome's Vulgate as the Codices Amiatinus and Fuldensis give it. He takes Cyprian's 'and the three are one' for an interpretation of verse 8 as the Trinity, as the sixth-century bishop Facundus read him, and Augustine's own Trinitarian reading of verse 8 as showing the words were not in his text. Of the words themselves he writes that the 'heavenly witnesses' 'destroy the natural sequence of the passage', that the personal use of 'the Word' is 'wholly alien to the style of the Epistle', and that in their earliest Greek form 'the absence of articles and copulae … betrays at once their derivation from Latin.'",
+   "Hills, in The King James Version Defended, reads Cyprian (≈AD 250) as quoting the words, siding with Scrivener against Facundus, and counts Priscillian in the fourth century as the first undisputed witness, with Old Latin manuscripts after him. He argues from the passage itself: a Trinitarian gloss would have written 'Son', not 'Word'; without the words, 'there are three that bear witness' is said once where biblical usage leads one to expect it twice; and the masculine gender given to the neuter 'spirit, water, and blood' in verse 8 is explained by the masculine 'Father' and 'Word' before them. The words could have dropped out of the Greek by a scribe's eye skipping from one 'there are three that bear witness' to the next. He writes that 'on believing principles' the reading 'must be regarded as possibly genuine', and that 'back of this usage, we may well believe, was the guiding providence of God, and therefore the Johannine comma ought to be retained as at least possibly genuine.'",
+   "The manuscripts and printed editions both sides read are set out in the card on why 1 John 5:7 is shorter than in the King James."
+  ],
+  "sources": [
+   {"kind": "scripture", "ref": "1John.5.7-8"},
+   {"kind": "primary", "title": "Cyprian, On the Unity of the Catholic Church 6", "note": "'de Patre et Filio et Spiritu sancto scriptum est Et tres unum sunt', as Brooke and Hills quote it"},
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Johannine Epistles (International Critical Commentary)", "author": "A. E. Brooke", "year": 1912, "url": "https://archive.org/details/criticalexegetic43broouoft", "note": "pp. 154–156, on 1 John 5:7-8"},
+   {"kind": "scholarship", "title": "The King James Version Defended, 'The Johannine Comma'", "author": "Edward F. Hills", "url": "https://confessionalbibliology.com/edward-freer-hills-on-the-comma-johanneum/", "note": "the chapter as published online"}
+  ],
+  "confidence": "interpretation",
+  "traditions": ["A Latin gloss, not John's: A. E. Brooke (ICC, 1912)", "At least possibly genuine, kept by the Latin church: Edward F. Hills (The King James Version Defended)"],
+  "related": ["comma-johanneum"]
  }
 ]
