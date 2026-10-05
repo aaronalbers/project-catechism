@@ -444,6 +444,9 @@ works, one identification, none dissenting), and a search found no one placing t
   (EA 148, 227–228) were not read; Hazor 5 is cited from Horowitz's summary, not the edition in *Cuneiform in Canaan*.
 - **Who first identified the site.** Luca gives Garstang (1929); other accounts give J. L. Porter (1875) and Garstang
   (1926). Left out until a source is read.
+- **No `since` date.** No source read says when the agreement formed (Garstang's soundings of 1928 and the court
+  record found in 1962 are candidates, but choosing one would be the project's own judgment), so the badge gives
+  only `asOf`, the OpenBible data's 2021.
 - **No modern standard reference read** for the identification (the *New Encyclopedia of Archaeological Excavations*
   entry, Rainey and Notley's *Sacred Bridge*) to back the OpenBible survey.
 
@@ -461,9 +464,8 @@ valley of Shechem, and A. T. Richardson (1925) placed Shiloh at Beit Silo.
 ## Megiddo at Tel Megiddo (`megiddo-tel-megiddo`), 2026-10-04
 
 Badged `consensus` on Eric Cline's statement that by 1903 "it was clear to all" that the mound was Megiddo. Conder's
-Mujedda is counted as a dissent answered and dropped, not a standing one: no one was found holding it after
-Schumacher's excavation. The same line was applied to Pul, where A. T. Jones held his view against the evidence
-the others cited, so it stands as a dissent.
+Mujedda is a dissent later evidence answered and no one now holds, so it does not block the badge (CLAUDE.md:
+consensus is the field as it stands now).
 
 - **Cline read in the *Time* excerpt only**, not *Digging Up Armageddon* (2020) itself.
 - **Conder's own case not read.** It is given as Smith summarises it; Trelawney Saunders's answer (*PEFQS* 1880,

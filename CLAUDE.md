@@ -159,7 +159,12 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   readings: attribute them, or state only what the text says. So is a conclusion drawn from the evidence that those
   who read it otherwise dispute ("all three point to 4 BC", "the eclipse fits"): it is one side's, and says so.
 - **A badge is a claim too.** `consensus` means "broadly agreed among scholars", a majority claim like any other: it
-  needs a source that says so, and it never sits on a question with a recognised dissent, however small. Only an
+  needs a source that says so, and it never sits on a question with a recognised dissent, however small. Consensus
+  is the field as it stands now: a dissent that later evidence answered and that no one still holds (Conder's site for
+  Megiddo, before the 1903 excavation) does not block the badge, and the card can tell it as history. A consensus
+  card carries `consensus`: `asOf`, the year of the newest source it cites that says the field agrees, and `since`
+  (when a source dates it), the year the agreement formed with its `basis`; the badge reads "Consensus since …" and
+  a test fails the build if `asOf` is not a cited source's year. Only an
   `interpretation` lists `traditions` (a test fails the build otherwise); a fact-badged card that reports who reads it
   how does so in its body.
 - **A disputed question is laid out evenly.** Give each answer with its holders and the evidence each reads, in the same

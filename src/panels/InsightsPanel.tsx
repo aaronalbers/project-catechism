@@ -1,7 +1,7 @@
 import { follow, useFeatureInView, useStore } from '@/app/store';
 import { INSIGHT_BY_ID, insightsFor, insightsInChapter, videosForStrongs, wordStrongs } from '@/lib/content';
 import type { Insight, Video } from '@/lib/types';
-import { ConfidenceBadge, MediaList, RefChip, SourceList } from '@/components/SourceList';
+import { ConfidenceBadge, ConsensusNote, MediaList, RefChip, SourceList } from '@/components/SourceList';
 import { parseRef } from '@/lib/refs';
 import { cardId } from '@/lib/catalog';
 import { IndexLink } from '@/components/IndexView';
@@ -29,13 +29,14 @@ function WordVideos({ i }: { i: Insight }) {
 export function InsightCard({ i, compact = false, videos = true }: { i: Insight; compact?: boolean; videos?: boolean }) {
   return (
     <div className="card" id={cardId({ kind: 'insight', id: i.id })}>
-      <h3><span style={{ flex: 1 }}>{i.title}</span><ConfidenceBadge c={i.confidence} /></h3>
+      <h3><span style={{ flex: 1 }}>{i.title}</span><ConfidenceBadge c={i.confidence} consensus={i.consensus} /></h3>
       <div className="verses"><span className="badge kind">{KIND[i.kind]}</span>{i.verses.map((r) => <RefChip key={r} r={r} />)}</div>
       <p className="summary">{i.summary}</p>
       {!compact && <>
         <MediaList media={i.media} />
         <div className="body">{i.body.map((p, k) => <p key={k}>{p}</p>)}</div>
         <SourceList sources={i.sources} traditions={i.traditions} />
+        <ConsensusNote consensus={i.consensus} />
         {videos && <WordVideos i={i} />}
         {i.related?.length ? <div className="traditions"><strong>See also:</strong> {i.related.map((id) => {
           const rel = INSIGHT_BY_ID.get(id);

@@ -20,7 +20,7 @@ import { resolveRoute } from '@/lib/journey';
 import { isPhrase, ladder } from '@/lib/chiasm';
 import { quotedCount, tallySum } from '@/lib/tally';
 import { laneOf, statedBefore } from '@/lib/reign';
-import type { BibleBook, Model3D, Place, Profile, Source, StrongsEntry, Verdict } from '@/lib/types';
+import type { BibleBook, ConsensusDate, Model3D, Place, Profile, Source, StrongsEntry, Verdict } from '@/lib/types';
 
 /** A procedural model drawn as each of its readings (once, if it has none). */
 const drawings = (m: Model3D) => (m.readings?.map((r) => r.id) ?? [undefined]).map((reading) => ({ reading, model: buildProcedural(m.procedural!, reading), label: reading ? `${m.id} (${reading})` : m.id }));
@@ -103,6 +103,30 @@ describe('content integrity', () => {
     };
     walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
     expect(wrong, 'move the holders into the body, or badge the card an interpretation').toEqual([]);
+  });
+  // Consensus is the field as it stands now, so a consensus badge says how recent the evidence for it is: `asOf` is
+  // the year of a source it cites, and `since`, when given, says what the agreement rests on and comes no later.
+  it('a consensus badge is dated by its sources', () => {
+    const wrong: string[] = [];
+    const walk = (x: unknown, at: string): void => {
+      if (Array.isArray(x)) x.forEach((y, i) => walk(y, `${at}[${i}]`));
+      else if (x && typeof x === 'object') {
+        const o = x as { id?: string; confidence?: string; consensus?: ConsensusDate; sources?: { year?: string | number }[] };
+        const here = o.id ?? at;
+        if (o.confidence === 'consensus') {
+          const c = o.consensus;
+          const years = (o.sources ?? []).map((s) => parseInt(String(s.year ?? ''), 10)).filter((y) => !Number.isNaN(y));
+          if (!c) wrong.push(`${here}: no consensus date`);
+          else {
+            if (!years.includes(c.asOf)) wrong.push(`${here}: asOf ${c.asOf} is not the year of a source it cites`);
+            if (c.since && (!c.since.basis || c.since.year > c.asOf)) wrong.push(`${here}: since needs a basis and must not follow asOf`);
+          }
+        } else if (o.confidence && o.consensus) wrong.push(`${here}: a consensus date on a ${o.confidence} badge`);
+        for (const [k, v] of Object.entries(o)) if (k !== 'consensus') walk(v, `${here}.${k}`);
+      }
+    };
+    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
+    expect(wrong).toEqual([]);
   });
   // The reader marks a narrowed word wherever it occurs, so the card must say which word, and only one card may claim it.
   it('word cards that narrow a word name its Strong\'s numbers, and no number has two', () => {

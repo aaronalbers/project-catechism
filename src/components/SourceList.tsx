@@ -1,6 +1,6 @@
 import { follow } from '@/app/store';
 import { formatRef, parseRef } from '@/lib/refs';
-import type { Confidence, Media, Source } from '@/lib/types';
+import type { Confidence, ConsensusDate, Media, Source } from '@/lib/types';
 import { Icon } from './Icons';
 
 /** `here` outlines the chip that holds the verse being read. */
@@ -48,8 +48,24 @@ const CONF_TITLE: Record<Confidence, string> = {
   interpretation: 'One reading among several — see which traditions hold it',
   estimate: 'A guess or approximation — the card says what it is based on',
 };
-export function ConfidenceBadge({ c }: { c: Confidence }) {
-  return <span className={`badge ${c}`} title={CONF_TITLE[c]}>{CONF_LABEL[c]}</span>;
+const sinceYear = (s: NonNullable<ConsensusDate['since']>) => `${s.estimated ? '≈' : ''}${s.year}`;
+
+/** A consensus badge says since when the agreement has held, and its title how recent the evidence for it is. */
+export function ConfidenceBadge({ c, consensus }: { c: Confidence; consensus?: ConsensusDate }) {
+  const since = c === 'consensus' && consensus?.since ? ` since ${sinceYear(consensus.since)}` : '';
+  const asOf = c === 'consensus' && consensus ? `; the latest source saying so is from ${consensus.asOf}` : '';
+  return <span className={`badge ${c}`} title={CONF_TITLE[c] + asOf}>{CONF_LABEL[c]}{since}</span>;
+}
+
+/** Under a consensus card's sources: what the agreement's date rests on, and how recent the evidence for it is. */
+export function ConsensusNote({ consensus }: { consensus?: ConsensusDate }) {
+  if (!consensus) return null;
+  const { since, asOf } = consensus;
+  return (
+    <div className="traditions"><strong>Agreed:</strong>{' '}
+      {since ? <>since {sinceYear(since)} ({since.basis}); </> : null}latest source saying so, {asOf}
+    </div>
+  );
 }
 
 export function MediaList({ media }: { media?: Media[] }) {

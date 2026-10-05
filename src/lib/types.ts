@@ -80,6 +80,17 @@ export interface Source {
  */
 export type Confidence = 'evidence' | 'consensus' | 'interpretation' | 'estimate';
 
+/**
+ * When a `consensus` badge's agreement holds. Consensus is the field as it stands now, and it moves with the
+ * evidence, so `asOf` is the year of the newest cited source that says the field agrees. `since`, when a source
+ * dates it, is when the agreement formed: the year, what it rests on (the find or work that settled it), and
+ * `estimated` when the year is approximate.
+ */
+export interface ConsensusDate {
+  asOf: number;
+  since?: { year: number; basis: string; estimated?: boolean };
+}
+
 export interface Media {
   type: 'image' | 'video' | 'model';
   src: string; caption: string; credit?: string; creditUrl?: string; license?: string;
@@ -89,6 +100,8 @@ export type InsightKind = 'money' | 'culture' | 'archaeology' | 'history' | 'geo
 export interface Insight {
   id: string; title: string; kind: InsightKind; verses: Ref[]; summary: string; body: string[];
   sources: Source[]; traditions?: string[]; confidence: Confidence; media?: Media[]; related?: string[];
+  /** Required with a `consensus` badge, and only with one. */
+  consensus?: ConsensusDate;
   /** A word card's Strong's numbers, when it studies more than the one its id is named for (`word-h7307-…`). */
   strongs?: string[];
   /**

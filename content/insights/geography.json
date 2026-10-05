@@ -125,7 +125,7 @@
    "OpenBible.info's geocoding data records the identifications given in 35 reference works for this Hazor: every one places it at Tel Hazor, 21 of them as certain and 12 as likely, and none proposes another site. When the Late Bronze city was destroyed, and by whom, is a separate question, not taken up here. The Bible's other places named Hazor, in the Negev (Joshua 15:23, 25), in Benjamin (Nehemiah 11:33) and in Arabia (Jeremiah 49:28-33), are different towns."
   ],
   "sources": [
-   {"kind": "data", "title": "OpenBible.info Bible Geocoding Data, 'Hazor 1'", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "note": "one identification, Tel Hazor, from 35 sources: 21 'yes', 12 'likely'; CC BY 4.0"},
+   {"kind": "data", "title": "OpenBible.info Bible Geocoding Data, 'Hazor 1'", "year": 2021, "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "note": "one identification, Tel Hazor, from 35 sources: 21 'yes', 12 'likely'; CC BY 4.0"},
    {"kind": "primary", "title": "Josephus, Antiquities of the Jews 5.5.1", "author": "Flavius Josephus", "year": "c. AD 94", "url": "https://www.gutenberg.org/ebooks/2848", "note": "Whiston: 'Hazor, a city that was situate over the Semechonitis'"},
    {"kind": "primary", "title": "Josephus, Jewish War 3.10.7", "author": "Flavius Josephus", "year": "c. AD 75", "url": "https://www.gutenberg.org/ebooks/2850", "note": "Whiston: the Jordan 'divides the marshes and fens of the lake Semechonitis' before Gennesareth"},
    {"kind": "archaeology", "title": "Hazor 5, court record (surface find)", "url": "http://www.caeno.org/origins/papers/Horowitz_OBTabletsAtHazor.pdf", "note": "summarised in Wayne Horowitz, 'Old Babylonian Period Tablets at Hazor'; edited in Horowitz and Oshima, Cuneiform in Canaan (2006)"},
@@ -133,6 +133,7 @@
    {"kind": "scripture", "ref": "Josh.11.10", "note": "'Hazor was formerly the head of all these kingdoms'"}
   ],
   "confidence": "consensus",
+  "consensus": {"asOf": 2021},
   "related": ["tiglath-pileser-pekah-hoshea", "amos-earthquake", "megiddo-tel-megiddo"]
  },
  {
@@ -197,9 +198,10 @@
    {"kind": "scripture", "ref": "2Kgs.9.27"},
    {"kind": "scholarship", "title": "The Historical Geography of the Holy Land", "author": "George Adam Smith", "year": 1896, "url": "https://archive.org/details/historicalgeogra00smit", "note": "pp. 386–388, with the note answering Conder's case for Mujedda"},
    {"kind": "scholarship", "title": "'Where Was Armageddon? The Hunt for a Lost Biblical Site', Time, adapted from Digging Up Armageddon (Princeton, 2020)", "author": "Eric H. Cline", "year": 2020, "url": "https://time.com/5802129/armageddon-archaeology/", "note": "Robinson, Conder and Kitchener, Smith, and Schumacher's excavation from 1903"},
-   {"kind": "data", "title": "OpenBible.info Bible Geocoding Data, 'Megiddo'", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "note": "one identification, Tel Megiddo; CC BY 4.0"}
+   {"kind": "data", "title": "OpenBible.info Bible Geocoding Data, 'Megiddo'", "year": 2021, "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "note": "one identification, Tel Megiddo; CC BY 4.0"}
   ],
   "confidence": "consensus",
+  "consensus": {"asOf": 2020, "since": {"year": 1903, "basis": "Schumacher's excavation of the mound began, by when, Cline writes, 'it was clear to all'"}},
   "related": ["hazor-tel-hazor"]
  },
  {
