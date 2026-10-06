@@ -43,6 +43,8 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
   Barton (1908) reports them, without initials or dates, which he gives elsewhere. The glosses Barton finds within
   1:2–12:8 are not drawn on the strip, as their verse letters were garbled in the OCR copy read. *Needed:* a page
   image of Barton, pp. 44–46, to list them.
+- **Judges names no critics.** Moore (1895) and BibleProject were read; no later reading that keeps 1:1–2:5 and 17–21
+  with the book (or answers Moore) was. *Needed:* a later commentary's introduction.
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 

@@ -80,13 +80,12 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
 
 ## Book outlines
 
-The Shape tab charts Genesis, Leviticus, Ecclesiastes, Jonah, Matthew, Mark and Revelation. Other books, each with sources found in the 2026-10-06 survey:
+The Shape tab charts Genesis, Leviticus, Judges, Ecclesiastes, Jonah, Matthew, Mark and Revelation. Other books, each with sources found in the 2026-10-06 survey:
 
 - **Leviticus, more readings.** Mary Douglas's ring (*Leviticus as Literature*, 1999) and Moshe Kline's woven
   reading (chaver.com) differ from both Driver's and BibleProject's.
-- **Judges** ("no king
-  in Israel", 17:6, 18:1, 19:1, 21:25) and **Acts** (the word spreading, 6:7, 12:24, 19:20). Each needs a scholar's
-  reading beside BibleProject's, so no reading stands alone.
+- **Acts** (the word spreading, 6:7, 12:24, 19:20). Needs a scholar's reading beside BibleProject's, so no reading
+  stands alone.
 - **Book-scale chiasms on the strip.** The passage-level chiasms that span much of a book (Daniel 2–7) could show as a
   row on that book's strip.
 

@@ -224,6 +224,113 @@
   ]
  },
  {
+  "id": "judges",
+  "book": "Judg",
+  "title": "The shape of Judges",
+  "summary": "Judges repeats two sentences. Seven times “the Israelites did evil in the sight of the LORD” opens a round of oppression and deliverance (2:11 to 13:1), and four times in the last chapters “In those days there was no king in Israel” (17:6 to 21:25). Outlines of the book differ over where its opening ends and whether its first and last parts belong to the book they frame. Two outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on Judges (ICC)", "author": "George F. Moore", "year": 1895, "url": "https://archive.org/details/criticalexegetic00moor", "note": "Introduction, §§ 2–3, pp. xiv–xvi"},
+   {"kind": "scholarship", "title": "Guide to the Book of Judges", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-judges/"}
+  ],
+  "markers": [
+   {
+    "id": "evil",
+    "label": "“The Israelites did evil in the sight of the LORD”",
+    "summary": "Seven verses say that “the Israelites did evil in the sight of the LORD”: once in the overview of chapter 2 (2:11), then before Othniel (3:7), Ehud (3:12), Deborah (4:1), Gideon (6:1), Jephthah (10:6) and Samson (13:1), each followed by the LORD giving them into an enemy’s hand. The words hāraʿ bəʿênê YHWH (“the evil in the eyes of the LORD”) stand together in no other verse of the book.",
+    "words": ["H7451", "H5869", "H3068"],
+    "quotes": [
+     {"ref": "Judg.2.11", "quote": "the Israelites did evil in the sight of the LORD"},
+     {"ref": "Judg.3.7", "quote": "the Israelites did evil in the sight of the LORD"},
+     {"ref": "Judg.3.12", "quote": "the Israelites did evil in the sight of the LORD"},
+     {"ref": "Judg.4.1", "quote": "the Israelites again did evil in the sight of the LORD"},
+     {"ref": "Judg.6.1", "quote": "the Israelites did evil in the sight of the LORD"},
+     {"ref": "Judg.10.6", "quote": "the Israelites did evil in the sight of the LORD"},
+     {"ref": "Judg.13.1", "quote": "the Israelites did evil in the sight of the LORD"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Judg.2.11-19"},
+     {"kind": "scripture", "ref": "Judg.3.7-8"},
+     {"kind": "scripture", "ref": "Judg.13.1"},
+     {"kind": "data", "title": "BSB interlinear, Judges", "note": "the three words together in these seven verses and no others"}
+    ],
+    "confidence": "evidence"
+   },
+   {
+    "id": "noking",
+    "label": "“In those days there was no king in Israel”",
+    "summary": "Four verses of the last five chapters say that there was no king in Israel, two adding “everyone did what was right in his own eyes” (17:6, 21:25), which open and close the stretch. At 19:1 the Hebrew puts the words the other way round, “and king there was none”. No earlier verse of the book says it.",
+    "words": ["H369|H4428", "H4428|H369"],
+    "quotes": [
+     {"ref": "Judg.17.6", "quote": "In those days there was no king in Israel; everyone did what was right in his own eyes."},
+     {"ref": "Judg.18.1", "quote": "In those days there was no king in Israel"},
+     {"ref": "Judg.19.1", "quote": "Now in those days, when there was no king in Israel"},
+     {"ref": "Judg.21.25", "quote": "In those days there was no king in Israel; everyone did what was right in his own eyes."}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Judg.17.6"},
+     {"kind": "scripture", "ref": "Judg.21.25"},
+     {"kind": "data", "title": "BSB interlinear, Judges", "note": "’ên (none) and melek (king) side by side in these four verses and no others"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "moore",
+    "label": "The history of the judges, with an opening and stories added",
+    "holder": "Moore, 1895",
+    "summary": "Moore holds that “Chapters 2:6–16:31 constitute the body of the work, to which alone the title, Book of Judges, in strictness applies.” Its author opens with his own “extended introduction” (2:6–3:6), “the religious interpretation and judgement of the whole period as a recurring cycle of defection from Yahweh, subjugation, and deliverance”, and then tells the stories of the judges.",
+    "body": [
+     "The stories of chapters 17–21 show “no trace of the distinctive historical theories, or the strongly marked style” of that author, so Moore infers that they “were not appended to his book by himself, but by some later hand.” Chapter 1 is “a very good beginning for the book”, but 1:1–2:5 “cannot have been prefixed by the author” of 2:6 onward, whose introduction “by its connexion with Jos. formally excludes it”; it too came from “a compiler or editor later than the author”."
+    ],
+    "note": "The headings are Moore’s, shortened. He writes the verses of the body as 2:6–16:31.",
+    "markers": ["evil"],
+    "kinds": {"added": "Added by a later hand, on Moore’s reading", "body": "The book of Judges proper"},
+    "groups": [
+     {"ref": "Judg.2.6-16.31", "label": "The history of Israel in the days of the Judges"},
+     {"ref": "Judg.17.1-21.25", "label": "Two additional stories of the times of the Judges"}
+    ],
+    "sections": [
+     {"ref": "Judg.1.1-2.5", "label": "The conquests and settlements of the tribes", "kind": "added"},
+     {"ref": "Judg.2.6-3.6", "label": "Introduction: the period as a recurring cycle", "kind": "body"},
+     {"ref": "Judg.3.7-16.31", "label": "The stories of the Judges and their heroic deeds", "kind": "body"},
+     {"ref": "Judg.17.1-18.31", "label": "Micah’s idols; the migration of the Danites", "kind": "added"},
+     {"ref": "Judg.19.1-21.25", "label": "The outrage at Gibeah; the vengeance on Benjamin", "kind": "added"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on Judges (ICC)", "author": "George F. Moore", "year": 1895, "url": "https://archive.org/details/criticalexegetic00moor", "note": "Introduction, §§ 2–3, pp. xiv–xvi"},
+     {"kind": "scripture", "ref": "Judg.2.6-10"},
+     {"kind": "scripture", "ref": "Josh.24.28-31"}
+    ],
+    "traditions": ["G. F. Moore (1895)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "A downward spiral in three parts",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide reads the period as “a series of cycles moving in a downward spiral”, set out in chapter 2, where “the story stops, and for nearly a whole chapter the narrator gives us an overview”; the cycle “provides the literary design and flow of the next section of the book and is repeated for each of the six main judges”.",
+    "body": [
+     "Of the six judges, the stories of Othniel, Ehud and Deborah are “epic adventures”, and those of Gideon, Jephthah and Samson “focus on their character flaws, which only get progressively worse”. The two stories of chapters 17–21 “are structured by a key phrase that gets repeated four times”, that there was no king in Israel. Where Moore (1895) holds both ends of the book added later, the guide reads them as its opening and its last descent."
+    ],
+    "note": "The headings are those of the guide’s contents.",
+    "markers": ["evil", "noking"],
+    "sections": [
+     {"ref": "Judg.1-2", "label": "Israel’s Moral Compromise in the Promised Land"},
+     {"ref": "Judg.3-16", "label": "Israel’s Six Judges, Including Gideon and Samson"},
+     {"ref": "Judg.17-21", "label": "Israel Descends Into Self-Destruction"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Judges", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-judges/"},
+     {"kind": "scripture", "ref": "Judg.2.11-19"},
+     {"kind": "scripture", "ref": "Judg.17.6"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
+ },
+ {
   "id": "ecclesiastes",
   "book": "Eccl",
   "title": "The shape of Ecclesiastes",
