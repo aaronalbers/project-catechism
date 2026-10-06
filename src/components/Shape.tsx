@@ -4,8 +4,8 @@ import type { BookStructure, StructureMarker } from '@/lib/types';
 
 /** The element id of a marker's card in the Shape tab. */
 export const markerId = (s: BookStructure, id: string) => cardId({ kind: 'structure', id: `${s.id}-${id}` });
-export const ORDINAL = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
-export const NUMBER = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+export const ORDINAL = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth'];
+export const NUMBER = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
 
 /** Under a verse that holds words the book repeats where its outlines divide it: which of them, and a way to the outlines. */
 export function ShapeNote({ s, m, n }: { s: BookStructure; m: StructureMarker; n: number }) {

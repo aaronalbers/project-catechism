@@ -1,5 +1,127 @@
 [
  {
+  "id": "genesis",
+  "book": "Gen",
+  "title": "The shape of Genesis",
+  "summary": "Eleven times Genesis names the tôlədôt (“generations”, “account”) of the heavens and the earth or of a man. Readers of the book divide it at these verses, but differ over whether each opens the section after it or closes the one before, and some divide the book elsewhere. Three outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "‘The Toledot of the Book of Genesis and Their Redemptive-Historical Significance’", "author": "Marten H. Woudstra", "year": 1970, "url": "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_GenToledot_CTJ.htm", "note": "Calvin Theological Journal 5, pp. 184–189"}
+  ],
+  "markers": [
+   {
+    "id": "toledot",
+    "label": "“This is the account of …”",
+    "summary": "Eleven verses name the tôlədôt of the heavens and the earth or of a man: the Hebrew is ʾēlleh tôlədôt (“these are the generations of”), or at 5:1 zeh sēper tôlədôt (“this is the book of the generations of”). The BSB renders the phrase “This is the account of” in ten of them. The word comes twice more in Genesis, in a list (10:32, 25:13), not in this phrase. Esau has two, at 36:1 and 36:9; there is none of Abraham.",
+    "words": ["H428|H5612", "H8435"],
+    "quotes": [
+     {"ref": "Gen.2.4", "quote": "This is the account of the heavens and the earth"},
+     {"ref": "Gen.5.1", "quote": "This is the book of the generations of Adam"},
+     {"ref": "Gen.6.9", "quote": "This is the account of Noah"},
+     {"ref": "Gen.10.1", "quote": "This is the account of Noah’s sons Shem, Ham, and Japheth"},
+     {"ref": "Gen.11.10", "quote": "This is the account of Shem"},
+     {"ref": "Gen.11.27", "quote": "This is the account of Terah"},
+     {"ref": "Gen.25.12", "quote": "This is the account of Abraham’s son Ishmael"},
+     {"ref": "Gen.25.19", "quote": "This is the account of Abraham’s son Isaac"},
+     {"ref": "Gen.36.1", "quote": "This is the account of Esau (that is, Edom)"},
+     {"ref": "Gen.36.9", "quote": "This is the account of Esau, the father of the Edomites"},
+     {"ref": "Gen.37.2", "quote": "This is the account of Jacob"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Gen.2.4"},
+     {"kind": "scripture", "ref": "Gen.5.1"},
+     {"kind": "scripture", "ref": "Gen.37.2"},
+     {"kind": "data", "title": "BSB interlinear, Genesis", "note": "tôlədôt after ʾēlleh or sēper in these eleven verses and no others; in 10:32 and 25:13 it follows other words"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "wiseman",
+    "label": "Tablets closed by the formula",
+    "holder": "Wiseman, 1936",
+    "summary": "Wiseman reads the formula as a colophon, the line that closed an ancient tablet and named its writer or owner, so that each one ends the section before it: “It is the concluding sentence of each section, and therefore points backward to a narrative already recorded.” On this reading Moses compiled Genesis from the tablets of the men named.",
+    "body": [
+     "Wiseman argues from what follows the formula: “This is the book of the generations of Adam” tells nothing more of Adam but his age at death, what follows Isaac’s formula is about Jacob and Esau, and there is no formula of Abraham, who would have the best claim to one if it opened a man’s history. He finds that each section ends before the death of the man it names. The chapters after 37:2, mainly of Joseph in Egypt, have “no ending formula”.",
+     "He writes that commentators “of all schools of thought”, naming Skinner, Keil and others, “divide the Book into sections which begin with the phrase”, and quotes Driver’s Genesis for that view. Woudstra reports D. J. Wiseman developing the thesis in 1969, and quotes W. H. Gispen’s answer: “This hypothesis is very improbable and does not suffice as an explanation of the toledot formulas.”"
+    ],
+    "note": "Wiseman divides 6:9, 11:10, 11:27, 25:19 and 37:2 within the verse, the formula closing one tablet and the rest of the verse opening the next; each is drawn whole with the tablet it closes. He gives the tablets of Ishmael and Isaac, and of Esau and Jacob, as runs, not one by one.",
+    "markers": ["toledot"],
+    "kinds": {"T": "A tablet, closed by the formula", "J": "No closing formula"},
+    "sections": [
+     {"ref": "Gen.1.1-2.4", "label": "Tablet 1: the heavens and the earth", "kind": "T"},
+     {"ref": "Gen.2.5-5.2", "label": "Tablet 2: Adam", "kind": "T"},
+     {"ref": "Gen.5.3-6.9", "label": "Tablet 3: Noah", "kind": "T"},
+     {"ref": "Gen.6.10-10.1", "label": "Tablet 4: the sons of Noah", "kind": "T"},
+     {"ref": "Gen.10.2-11.10", "label": "Tablet 5: Shem", "kind": "T"},
+     {"ref": "Gen.11.11-27", "label": "Tablet 6: Terah", "kind": "T"},
+     {"ref": "Gen.11.28-25.19", "label": "Tablets 7 and 8: Ishmael and Isaac", "kind": "T"},
+     {"ref": "Gen.25.20-37.2", "label": "Tablets 9 to 11: Esau and Jacob", "kind": "T"},
+     {"ref": "Gen.37.3-50.26", "label": "Joseph in Egypt", "kind": "J"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "New Discoveries in Babylonia about Genesis", "author": "P. J. Wiseman", "year": 1936, "url": "https://gospelstudies.org.uk/biblicalarchaeology/pdf/wiseman_p-j/new-dicoveries-in-babylonia_wiseman.pdf", "note": "pp. 45–57 and 78; this copy is the fifth edition, 1949"},
+     {"kind": "scholarship", "title": "‘The Toledot of the Book of Genesis and Their Redemptive-Historical Significance’", "author": "Marten H. Woudstra", "year": 1970, "url": "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_GenToledot_CTJ.htm", "note": "Calvin Theological Journal 5, pp. 184 and 189: D. J. Wiseman, and Gispen’s answer"},
+     {"kind": "scripture", "ref": "Gen.5.1"},
+     {"kind": "scripture", "ref": "Gen.25.19"}
+    ],
+    "traditions": ["P. J. Wiseman (1936)", "D. J. Wiseman (1969), as Woudstra reports", "Answered by W. H. Gispen (1966), as Woudstra quotes him"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "holwerda",
+    "label": "Ten sections, each opened by the formula",
+    "holder": "Holwerda, 1946; Külling, 1964",
+    "summary": "Holwerda, in lectures at Kampen in 1946, and Külling after him read each formula as the heading of the section that follows, so that Genesis “consists of ten toledoth-sections, each appropriately introduced” by it (Woudstra’s summary). The two of Esau make one section.",
+    "body": [
+     "On Holwerda’s reading, as Woudstra reports it, tôlədôt means what came of someone, and the name after it marks a new starting point: Terah’s section has Abraham at its centre, Isaac’s has Jacob, and Jacob’s has Joseph, which he takes to answer why there is none of Abraham or of Joseph. Külling holds that the formulas are “the very fabric around which the whole of Genesis has been constructed”, not added later, against Wellhausen and Budde, who took them for the late scheme of a priestly source.",
+     "W. H. Gispen (1966) and Woudstra himself, who calls the approach “a fruitful one”, follow it. Wiseman (1936) reads the same formulas as closing their sections instead."
+    ],
+    "note": "Woudstra gives the sections’ verses from 5:1 on, except that Terah’s runs to Ishmael’s at 25:12; 1:1–2:3 stands before the first formula, and the first section runs to 5:1.",
+    "markers": ["toledot"],
+    "kinds": {"frame": "Before the first formula"},
+    "sections": [
+     {"ref": "Gen.1.1-2.3", "label": "The creation", "kind": "frame"},
+     {"ref": "Gen.2.4-4.26", "label": "The heavens and the earth"},
+     {"ref": "Gen.5.1-6.8", "label": "Adam"},
+     {"ref": "Gen.6.9-9.29", "label": "Noah"},
+     {"ref": "Gen.10.1-11.9", "label": "The sons of Noah"},
+     {"ref": "Gen.11.10-26", "label": "Shem"},
+     {"ref": "Gen.11.27-25.11", "label": "Terah"},
+     {"ref": "Gen.25.12-18", "label": "Ishmael"},
+     {"ref": "Gen.25.19-35.29", "label": "Isaac"},
+     {"ref": "Gen.36.1-37.1", "label": "Esau"},
+     {"ref": "Gen.37.2-50.26", "label": "Jacob"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "‘The Toledot of the Book of Genesis and Their Redemptive-Historical Significance’", "author": "Marten H. Woudstra", "year": 1970, "url": "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_GenToledot_CTJ.htm", "note": "Calvin Theological Journal 5, pp. 184–189, reporting B. Holwerda’s lectures (1946), S. R. Külling, Zur Datierung der “Genesis-P-Stücke” (1964), and W. H. Gispen, Schepping en Paradijs (1966)"},
+     {"kind": "scripture", "ref": "Gen.11.27"},
+     {"kind": "scripture", "ref": "Gen.37.2"}
+    ],
+    "traditions": ["B. Holwerda (1946), as Woudstra reports", "S. R. Külling (1964), as Woudstra reports", "W. H. Gispen (1966), as Woudstra reports", "M. H. Woudstra (1970)", "Answered by P. J. Wiseman (1936)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "Two parts and a hinge",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide divides Genesis “into two main parts, with chapters 1-11 telling the story of God and the whole world, and chapters 12-50 focusing in on the story of God, a man, and his family. These two parts are connected by a sort of “hinge” story in the beginning of chapter 12.”",
+    "note": "The guide’s contents give the hinge as 12:1-3, “God Blesses Abraham”.",
+    "sections": [
+     {"ref": "Gen.1.1-11.32", "label": "God and the whole world (chapters 1-11)"},
+     {"ref": "Gen.12.1-3", "label": "God Blesses Abraham", "hinge": true},
+     {"ref": "Gen.12.4-50.26", "label": "God, a man, and his family (chapters 12-50)"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Genesis", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-genesis/"},
+     {"kind": "scripture", "ref": "Gen.12.1-3"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
+ },
+ {
   "id": "matthew",
   "book": "Matt",
   "title": "The shape of Matthew",

@@ -108,7 +108,7 @@ describe('book structures', () => {
           const strongs = hebrewOrder(v.w).map((w) => w[4]);
           for (const m of s.markers) {
             if (!m.words) continue;
-            const run = strongs.some((_, i) => m.words!.every((n, k) => strongs[i + k] === n));
+            const run = strongs.some((_, i) => m.words!.every((n, k) => n.split('|').includes(strongs[i + k])));
             if (run) (found.get(m.id) ?? found.set(m.id, []).get(m.id)!).push(`${s.book}.${ch}.${v.v}`);
           }
         }

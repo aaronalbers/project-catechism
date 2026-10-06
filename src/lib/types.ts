@@ -216,7 +216,8 @@ export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLev
 /**
  * Words a book repeats at points its outlines are built on ("When Jesus had finished"): a fact, quoted in each
  * verse. `words` are Strong's numbers that stand together, in the original's order, in every quoted verse and in no
- * other verse of the book, so the list is complete.
+ * other verse of the book, so the list is complete; `|` separates words either of which may stand in a place
+ * ("H428|H5612", these or book of).
  */
 export interface StructureMarker {
   id: string; label: string; summary: string; words?: string[];

@@ -80,12 +80,8 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
 
 ## Book outlines
 
-The Shape tab charts Matthew. Other books, each with sources found in the 2026-10-06 survey:
+The Shape tab charts Genesis and Matthew. Other books, each with sources found in the 2026-10-06 survey:
 
-- **Genesis.** The *toledot* formula opening 2:4, 5:1, 6:9, 10:1, 11:10, 11:27, 25:12, 25:19, 36:1, 36:9 and 37:2
-  (checked in the interlinear) as the marker. Readings: as headings (Holwerda, Külling, Eichrodt, Eissfeldt) or as
-  closing lines (Wiseman), from Woudstra, *Calvin Theological Journal* 5 (1970); BibleProject's 1–11 and 12–50 with
-  12:1–3 as the hinge (its guide). Wiseman's 1936 book is not yet read.
 - **Leviticus.** BibleProject's guide states a symmetry (1–7 and 23–25, 8–10 and 21–22, 11–15 and 18–20, with 16–17 at
   the centre). For a second reading: the Holiness Code (17–26) set apart from 1–16, from Driver's *Introduction*
   (1891, public domain); Mary Douglas's ring (1999) and Moshe Kline's woven reading (chaver.com) differ again.

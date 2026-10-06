@@ -19,8 +19,14 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 - **Bacon's 1918 *Expositor* article** ("The Five Books of Matthew against the Jews") is not cited, as it was not read.
 - **Weren's own outline is left unanswered.** No response to it was read, so its card names no critic where the others
   do. *Needed:* a later survey of Matthew's structure that discusses it.
-- **The guide is undated.** BibleProject's guide to Matthew gives no date, so its reading stands last in the order of
-  proposal by assumption.
+- **Genesis's heading reading is read through Woudstra.** Holwerda's lectures (1946), Külling (1964) and Gispen (1966)
+  are cited as Woudstra (1970) reports them; D. J. Wiseman (1969) too. Wiseman (1936) was read. *Needed:* Külling's
+  *Zur Datierung der "Genesis-P-Stücke"* to check the ten sections' verses, which Woudstra gives only from 5:1 on.
+- **Driver and the other commentators Wiseman names** (Skinner, Keil and others, who divide Genesis at the formula)
+  are reported only as Wiseman quotes them. Driver's *Genesis* (1904) and Skinner's ICC *Genesis* (1910) are public
+  domain and could be read and cited as holders of the heading reading in their own right.
+- **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
+  of proposal by assumption.
 
 ## Alphabet poems (`content/acrostics.json`), 2026-10-05
 

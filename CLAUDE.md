@@ -339,7 +339,7 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
 - Book outlines (`content/structures.json`, the Shape tab) chart the shape of a whole book. `markers` are words the
   book repeats where outlines divide it ("When Jesus had finished"), `evidence` like any quotation: each `quotes` the
   BSB in its verse, and `words`, the Strong's numbers that stand together in the original, must be in those verses and
-  in no other verse of the book, so the list is complete. `readings` are outlines, each an `interpretation` naming who
+  in no other verse of the book, so the list is complete (`|` gives words either of which may stand in a place). `readings` are outlines, each an `interpretation` naming who
   proposes it and who answers it, listed in the order they were proposed so none comes first by choice. A reading's
   `sections` cover the book in order with no gap or overlap; `kind` (named in `kinds`; `frame` for a prologue or
   epilogue), `pair` (A and A', with a `centre`) and `hinge` say how it is drawn, and `groups` are larger units over
