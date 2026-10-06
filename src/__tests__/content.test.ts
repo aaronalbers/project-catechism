@@ -10,7 +10,7 @@ import { formatYear } from '@/lib/format';
 const PROFILE_FILES = import.meta.glob<Profile>('@content/profiles/*.json', { eager: true, import: 'default' });
 const PROFILES = Object.values(PROFILE_FILES);
 import { existsSync, readFileSync } from 'node:fs';
-import { ACROSTICS, CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, SCROLLS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
+import { ACROSTICS, STRUCTURES, CANONS, CANON_BY_ID, TEXT_BY_ID, CHIASMS, FRAGMENTS, INSIGHTS, JOURNEYS, KINGS, MONARCHY, PASSION, SCROLLS, MODELS, PEOPLE, PEOPLE_BY_ID, PROPHECIES, QUOTES, RULERS, SPEAKERS, TALLIES, VIDEOS, WRITERS, INSIGHT_BY_ID, DEFAULT_MODEL_VIEW, wordStrongs, modelBuildAt, modelHiddenIn, modelLeadAt, modelStateAt, modelViewAt, videosFor, videosForStrongs } from '@/lib/content';
 import { compareLoc, contains, parseRef, touchesChapter, BOOKS, BEYOND, READING_ORDER, THE_66 } from '@/lib/refs';
 import * as THREE from 'three';
 import { buildProcedural, isProceduralKind } from '@/lib/models';
@@ -31,6 +31,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
   [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...ACROSTICS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings, SCROLLS, ...SCROLLS.hebrew, ...SCROLLS.overlaps, ...SCROLLS.numbering,
+    ...STRUCTURES, ...STRUCTURES.flatMap((st) => [...st.markers, ...st.readings]),
     ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
 
@@ -102,7 +103,7 @@ describe('content integrity', () => {
         for (const [k, v] of Object.entries(o)) walk(v, `${here}.${k}`);
       }
     };
-    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
+    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES, STRUCTURES }, 'content');
     expect(wrong, 'move the holders into the body, or badge the card an interpretation').toEqual([]);
   });
   // Consensus is the field as it stands now, so a consensus badge says how recent the evidence for it is: `asOf` is
@@ -126,7 +127,7 @@ describe('content integrity', () => {
         for (const [k, v] of Object.entries(o)) if (k !== 'consensus') walk(v, `${here}.${k}`);
       }
     };
-    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES }, 'content');
+    walk({ INSIGHTS, CANONS, PEOPLE, PROPHECIES, QUOTES, FRAGMENTS, WRITERS, SPEAKERS, CHIASMS, ACROSTICS, RULERS, MODELS, JOURNEYS, TALLIES, MONARCHY, PASSION, SCROLLS, PROFILES, STRUCTURES }, 'content');
     expect(wrong).toEqual([]);
   });
   // The reader marks a narrowed word wherever it occurs, so the card must say which word, and only one card may claim it.

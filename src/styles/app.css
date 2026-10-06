@@ -914,3 +914,63 @@ dialog.peek::backdrop { background: rgb(0 0 0 / 0.4); }
 .price-block .price-grid .cell { height: 6px; border-radius: 1px; }
 .price-block .price-grid.years { grid-template-columns: repeat(var(--row), 10px); gap: 2px; }
 .price-block .price-grid.years .cell { height: 10px; }
+
+/* Shape: the outlines proposed for a book, one row each on the same verses, with the words they rest on ticked through all of them. */
+:root { --shape: #5a6aa8; --shape-tick-0: #b0502a; --shape-tick-1: #2f7d4f; }
+:root[data-theme='dark'], :root:not([data-theme='light']).dark-system { --shape: #9aa8de; --shape-tick-0: #e08a5f; --shape-tick-1: #6cc48f; }
+.marker.structure { background: var(--shape); }
+.shape-note-inline .kind::before { background: var(--shape); }
+.shape-strip { margin: 10px 0 8px; }
+.shape-bars { position: relative; padding-bottom: 14px; }
+.shape-reading { margin-bottom: 10px; }
+/* The rows sit over the ticks, which show in the gaps between them; the names and keys get a background so a tick does not cross their words. */
+.shape-reading > *, .shape-key.markers { position: relative; z-index: 1; }
+.shape-name, .shape-key > * { background: var(--surface-2); }
+.shape-name { display: flex; gap: 6px; align-items: baseline; max-width: 100%; padding: 0; margin-bottom: 3px; font: 12px/1.3 var(--sans); color: var(--text); text-align: left; }
+.shape-name span { color: var(--muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.shape-name:hover b { text-decoration: underline; }
+.shape-row { position: relative; height: 22px; }
+.shape-row.groups { height: 15px; margin-bottom: 2px; }
+.shape-sec, .shape-group { position: absolute; top: 0; bottom: 0; padding: 0 4px; min-width: 0; overflow: hidden; box-sizing: border-box; border-radius: 3px; text-align: left; color: var(--muted); }
+.shape-sec { font: 11px/22px var(--sans); background: var(--surface); box-shadow: inset 0 0 0 1px var(--border); }
+.shape-group { font: 600 10px/15px var(--sans); border-top: 2px solid color-mix(in oklab, var(--shape) 55%, var(--surface)); border-radius: 0; background: var(--surface-2); }
+.shape-sec > span, .shape-group > span { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.shape-sec.k0 { background: color-mix(in oklab, var(--shape) 10%, var(--surface)); }
+.shape-sec.k1 { background: color-mix(in oklab, var(--shape) 32%, var(--surface)); color: var(--text); }
+.shape-sec.frame { background: repeating-linear-gradient(135deg, var(--surface) 0 4px, color-mix(in oklab, var(--shape) 16%, var(--surface)) 4px 8px); }
+.shape-sec.pair { background: color-mix(in oklab, var(--chiasm) var(--tone), var(--surface)); color: var(--text); }
+.shape-sec.pair.centre { box-shadow: inset 0 0 0 1.5px var(--chiasm); font-weight: 600; }
+/* A hinge is a short passage: keep it in sight however few its verses. */
+.shape-sec.hinge { min-width: 5px; padding: 0; background: var(--shape); box-shadow: none; }
+.shape-sec.here, .shape-group.here { color: var(--text); }
+.shape-sec.here { box-shadow: inset 0 0 0 2px var(--text); }
+.shape-sec.hinge.here { outline: 2px solid var(--text); outline-offset: 1px; }
+.shape-group.here { border-top-color: var(--shape); }
+.shape-sec:hover { filter: brightness(0.95); }
+.shape-arcs { position: relative; display: block; width: 100%; height: 20px; margin-top: 1px; overflow: visible; }
+.shape-arcs path { fill: none; stroke: color-mix(in oklab, var(--chiasm) 70%, var(--surface)); stroke-width: 1.25; vector-effect: non-scaling-stroke; }
+.shape-key { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 3px; font: 11px/1.4 var(--sans); color: var(--muted); }
+.shape-key .swatch { display: inline-flex; align-items: center; gap: 5px; padding: 0; }
+.shape-key .swatch::before { content: ''; width: 12px; height: 9px; border-radius: 2px; box-shadow: inset 0 0 0 1px var(--border); background: var(--surface); }
+.shape-key .swatch.k0::before { background: color-mix(in oklab, var(--shape) 10%, var(--surface)); }
+.shape-key .swatch.k1::before { background: color-mix(in oklab, var(--shape) 32%, var(--surface)); }
+.shape-key .swatch.frame::before { background: repeating-linear-gradient(135deg, var(--surface) 0 2px, color-mix(in oklab, var(--shape) 30%, var(--surface)) 2px 4px); }
+.shape-key .swatch.hinge::before { width: 5px; background: var(--shape); box-shadow: none; }
+.shape-key.markers { margin-top: 2px; }
+.shape-key .swatch.tick { color: var(--text); }
+.shape-key .swatch.tick::before { width: 2px; height: 12px; box-shadow: none; }
+.shape-key .swatch.tick.m0::before { background: var(--shape-tick-0); }
+.shape-key .swatch.tick.m1::before { background: var(--shape-tick-1); }
+/* A repeated word's verse, ticked down through every reading. */
+.shape-tick { position: absolute; z-index: 0; top: 0; bottom: 12px; width: 7px; margin-left: -3.5px; padding: 0; background: none; }
+.shape-tick::before { content: ''; position: absolute; left: 2.5px; top: 0; bottom: 0; width: 2px; opacity: 0.55; }
+.shape-tick:hover::before { opacity: 1; }
+.shape-tick.m0::before { background: var(--shape-tick-0); }
+.shape-tick.m1::before { background: repeating-linear-gradient(var(--shape-tick-1) 0 4px, transparent 4px 7px); }
+.shape-axis { position: absolute; left: 0; right: 0; bottom: 0; height: 12px; font: 10px/12px var(--sans); color: var(--muted); pointer-events: none; }
+.shape-axis span { position: absolute; transform: translateX(-1px); }
+.shape-quotes { list-style: none; margin: 6px 0; padding: 0; font: 13px/1.5 var(--serif); }
+.shape-quotes li { margin: 3px 0; }
+.shape-quotes .chip { margin-right: 6px; font-family: var(--sans); }
+.shape-note { font-size: 12px; color: var(--muted); }
+.shape-bars > .scroll-cursor { z-index: 0; }

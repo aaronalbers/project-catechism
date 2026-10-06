@@ -1,0 +1,226 @@
+[
+ {
+  "id": "matthew",
+  "book": "Matt",
+  "title": "The shape of Matthew",
+  "summary": "Matthew repeats two sets of words at a few points: five times “When Jesus had finished” after a long speech of Jesus, and twice “From that time on Jesus began”. Outlines of the book are built on one or the other, and Weren (2006) opens his survey of them: “The results of studies of this issue vary considerably.”. Five outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/", "note": "Biblica 87, pp. 171–200; a survey of the proposals, p. 171"}
+  ],
+  "markers": [
+   {
+    "id": "finished",
+    "label": "“When Jesus had finished …”",
+    "summary": "Five verses open with the same Greek words, καὶ ἐγένετο ὅτε ἐτέλεσεν ὁ Ἰησοῦς (“and it came to pass when Jesus had finished”), and no other verse of Matthew does. Each follows a long speech of Jesus: the Sermon on the Mount, the sending of the twelve, the parables, the teaching on forgiveness among the disciples, and the woes and the end of the age.",
+    "words": ["G2532", "G1096", "G3753", "G5055"],
+    "quotes": [
+     {"ref": "Matt.7.28", "quote": "When Jesus had finished saying these things"},
+     {"ref": "Matt.11.1", "quote": "After Jesus had finished instructing His twelve disciples"},
+     {"ref": "Matt.13.53", "quote": "When Jesus had finished these parables"},
+     {"ref": "Matt.19.1", "quote": "When Jesus had finished saying these things"},
+     {"ref": "Matt.26.1", "quote": "When Jesus had finished saying all these things"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Matt.7.28"},
+     {"kind": "scripture", "ref": "Matt.11.1"},
+     {"kind": "scripture", "ref": "Matt.13.53"},
+     {"kind": "scripture", "ref": "Matt.19.1"},
+     {"kind": "scripture", "ref": "Matt.26.1"},
+     {"kind": "data", "title": "BSB interlinear, Matthew", "note": "the four words in this order open these five verses and no others"}
+    ],
+    "confidence": "evidence"
+   },
+   {
+    "id": "from-that-time",
+    "label": "“From that time on …”",
+    "summary": "Matthew 4:17 and 16:21 open with the same Greek words, ἀπὸ τότε ἤρξατο ὁ Ἰησοῦς (“from that time Jesus began”), the first followed by “to preach”, the second by “to show His disciples” that he must suffer. Weren notes that ἀπὸ τότε ἤρξατο occurs nowhere else in the New Testament or the Septuagint. ἀπὸ τότε alone stands once more, at 26:16, of Judas.",
+    "words": ["G575", "G5119"],
+    "quotes": [
+     {"ref": "Matt.4.17", "quote": "From that time on Jesus began to preach"},
+     {"ref": "Matt.16.21", "quote": "From that time on Jesus began to show His disciples"},
+     {"ref": "Matt.26.16", "quote": "So from then on Judas looked for an opportunity to betray Jesus"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Matt.4.17"},
+     {"kind": "scripture", "ref": "Matt.16.21"},
+     {"kind": "scripture", "ref": "Matt.26.16"},
+     {"kind": "data", "title": "BSB interlinear, Matthew", "note": "ἀπὸ τότε in these three verses and no others"},
+     {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/article-p179.html", "note": "Biblica 87, p. 179 n. 19"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "bacon",
+    "label": "Five books",
+    "holder": "Bacon, 1930",
+    "summary": "Bacon divides Matthew into a preamble, five “books” and an epilogue. Each book is a narrative followed by a discourse and closed by the formula “when Jesus had finished”, which he compares to the five books of Moses, “each body of law introduced by a narrative of considerable length”.",
+    "body": [
+     "Bacon reads the formula as the end of each book, and Matthew 1–2 and 26–28 as standing outside the five. He reports the five-fold division as “no recent discovery”, recognised by critics “a half-century ago”.",
+     "Weren reports that R. E. Brown largely follows Bacon, and that C. R. Smith (1997) argues for the five books from the alternation of narrative and discourse. Against Bacon, Weren cites Rolland, Barr and Luz, who read the formula as linking a discourse to what follows rather than closing it, and himself calls the placing of 26–28 outside the books “hardly convincing, since these chapters are indisputably the dramatic climax”."
+    ],
+    "note": "Bacon closes each book with its formula (7:28-29, 11:1, 13:53, 19:1a, 26:1), drawn here with the discourse it closes; 19:1b and 26:2, which the verse numbers join to it, go with it too. The verse boundaries are those Weren tabulates from Bacon; Bacon’s own contents give the same divisions by chapter.",
+    "markers": ["finished"],
+    "kinds": {"frame": "Preamble and epilogue", "N": "Narrative", "D": "Discourse"},
+    "groups": [
+     {"ref": "Matt.3.1-7.29", "label": "Book First: Discipleship"},
+     {"ref": "Matt.8.1-11.1", "label": "Book Second: Apostleship"},
+     {"ref": "Matt.11.2-13.53", "label": "Book Third: The Hiding of the Revelation"},
+     {"ref": "Matt.13.54-19.1", "label": "Book Fourth: Church Administration"},
+     {"ref": "Matt.19.2-26.2", "label": "Book Fifth: The Judgment"}
+    ],
+    "sections": [
+     {"ref": "Matt.1.1-2.23", "label": "The Preamble", "kind": "frame"},
+     {"ref": "Matt.3.1-4.25", "label": "Introductory Narrative", "kind": "N"},
+     {"ref": "Matt.5.1-7.29", "label": "The Discourse", "kind": "D"},
+     {"ref": "Matt.8.1-9.35", "label": "Introductory Narrative", "kind": "N"},
+     {"ref": "Matt.9.36-11.1", "label": "The Discourse", "kind": "D"},
+     {"ref": "Matt.11.2-12.50", "label": "Israel is Stumbled", "kind": "N"},
+     {"ref": "Matt.13.1-53", "label": "Teaching in Parables", "kind": "D"},
+     {"ref": "Matt.13.54-17.21", "label": "Jesus and the Brotherhood", "kind": "N"},
+     {"ref": "Matt.17.22-19.1", "label": "The Discourse", "kind": "D"},
+     {"ref": "Matt.19.2-22.46", "label": "Jesus in Judea", "kind": "N"},
+     {"ref": "Matt.23.1-26.2", "label": "Discourse on Judgment to Come", "kind": "D"},
+     {"ref": "Matt.26.3-28.20", "label": "Epilogue", "kind": "frame"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Studies in Matthew", "author": "Benjamin W. Bacon", "year": 1930, "url": "https://biblicalstudies.gospelstudies.org.uk/pdf/e-books/bacon_b-w/studies-in-matthew_bacon.pdf", "note": "Preface, pp. xiv–xvii; contents, pp. xxii–xxiii; pp. 81–82"},
+     {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/article-p172.html", "note": "Biblica 87, pp. 172–176: Bacon’s books in verses, those who follow him, and those who answer him"},
+     {"kind": "scripture", "ref": "Matt.7.28"},
+     {"kind": "scripture", "ref": "Matt.26.1"}
+    ],
+    "traditions": ["B. W. Bacon (1930)", "R. E. Brown (1997), largely, as Weren reports", "Answered by Ph. Rolland (1972), D. L. Barr (1976) and U. Luz (1985), as Weren reports, and by W. J. C. Weren (2006)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "lohr",
+    "label": "A mirror round the parables",
+    "holder": "Lohr, 1961",
+    "summary": "Lohr counts the whole book, beginning and end included, as six narratives and five sermons in turn, and pairs them from the outside in, so that the parables of chapter 13 stand at the centre.",
+    "body": [
+     "In Weren’s account, Lohr takes Matthew 23–25 as one discourse and treats 1–2 and 26–28 as narratives like the rest, so that the alternation runs through the whole book rather than only 3–25. H. J. B. Combrink proposes another concentric outline, also centred on chapter 13, whose segments differ from Lohr’s mainly in the three after the centre.",
+     "Weren answers the alternation readings as a group: the boundaries between narrative and discourse are not agreed (chapter 23 is a discourse to one author and a narrative to another), and the narrative sections contain long speeches of Jesus."
+    ],
+    "kinds": {"N": "Narrative", "D": "Sermon"},
+    "centre": "F",
+    "sections": [
+     {"ref": "Matt.1.1-4.25", "label": "Birth and beginnings", "kind": "N", "pair": "A"},
+     {"ref": "Matt.5.1-7.29", "label": "Blessings, entering kingdom", "kind": "D", "pair": "B"},
+     {"ref": "Matt.8.1-9.38", "label": "Authority and invitation", "kind": "N", "pair": "C"},
+     {"ref": "Matt.10.1-42", "label": "Mission Discourse", "kind": "D", "pair": "D"},
+     {"ref": "Matt.11.1-12.50", "label": "Rejection by this generation", "kind": "N", "pair": "E"},
+     {"ref": "Matt.13.1-58", "label": "Parables of the kingdom", "kind": "D", "pair": "F"},
+     {"ref": "Matt.14.1-17.27", "label": "Acknowledgment by disciples", "kind": "N", "pair": "E'"},
+     {"ref": "Matt.18.1-35", "label": "Community Discourse", "kind": "D", "pair": "D'"},
+     {"ref": "Matt.19.1-22.46", "label": "Authority and invitation", "kind": "N", "pair": "C'"},
+     {"ref": "Matt.23.1-25.46", "label": "Woes, Coming of the kingdom", "kind": "D", "pair": "B'"},
+     {"ref": "Matt.26.1-28.20", "label": "Death and rebirth", "kind": "N", "pair": "A'"}
+    ],
+    "note": "Weren gives Lohr’s outline by chapters only.",
+    "sources": [
+     {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/article-p173.html", "note": "Biblica 87, pp. 173–176, reporting C. H. Lohr, ‘Oral Techniques in the Gospel of Matthew’, CBQ 23 (1961), and Combrink’s outline (TynBul 34, 1983)"},
+     {"kind": "scripture", "ref": "Matt.13.1-52"}
+    ],
+    "traditions": ["C. H. Lohr (1961), as Weren reports", "H. J. B. Combrink (1983), with other segments, as Weren reports", "Answered by W. J. C. Weren (2006)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "kingsbury",
+    "label": "Three parts",
+    "holder": "Krentz, 1964; Kingsbury, 1973–88",
+    "summary": "Krentz, followed by Kingsbury and Bauer, divides Matthew in three at the two verses that open “From that time on Jesus began”: who Jesus is (1:1–4:16), his proclamation (4:17–16:20), and his journey to Jerusalem, suffering, death and resurrection (16:21–28:20).",
+    "body": [
+     "On this reading each part has a caption (1:1, 4:17, 16:21) whose content the part goes on to elaborate, and the formula after the five discourses links rather than divides. Kingsbury, in Matthew as Story, divides the second and third parts in two again, at 11:2 and 26:1. Weren reports Gnilka’s commentary dividing at the same verses.",
+     "F. Neirynck, as Weren reports him, grants the parallel between 4:17 and 16:21 but reads each ἀπὸ τότε as tied to what comes just before it, as at 26:16, where it closes Judas’s bargain. Weren adds that the summaries recapitulating 4:17 stop at 11:1, and that “It is astonishing that this division into three is still so popular”."
+    ],
+    "markers": ["from-that-time"],
+    "groups": [
+     {"ref": "Matt.1.1-4.16", "label": "I. The Presentation of Jesus"},
+     {"ref": "Matt.4.17-16.20", "label": "II. The Ministry of Jesus to Israel and Israel’s Repudiation of Jesus"},
+     {"ref": "Matt.16.21-28.20", "label": "III. The Journey of Jesus to Jerusalem and His Suffering, Death, and Resurrection"}
+    ],
+    "sections": [
+     {"ref": "Matt.1.1-4.16", "label": "The Presentation of Jesus"},
+     {"ref": "Matt.4.17-11.1", "label": "The Ministry of Jesus to Israel"},
+     {"ref": "Matt.11.2-16.20", "label": "Israel’s Repudiation of Jesus"},
+     {"ref": "Matt.16.21-25.46", "label": "The Journey of Jesus to Jerusalem and His Activity in the Temple"},
+     {"ref": "Matt.26.1-28.20", "label": "The Betrayal, Condemnation, Crucifixion, and Resurrection of Jesus"}
+    ],
+    "note": "The headings are Kingsbury’s in Matthew as Story (1988), as Weren quotes them.",
+    "sources": [
+     {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/article-p176.html", "note": "Biblica 87, pp. 176–180, reporting E. Krentz, JBL 83 (1964); J. D. Kingsbury, CBQ 35 (1973), Matthew: Structure, Christology, Kingdom (1975) and Matthew as Story (1988); D. R. Bauer (1988); and F. Neirynck, ETL 43 (1967) and 64 (1988)"},
+     {"kind": "scripture", "ref": "Matt.4.17"},
+     {"kind": "scripture", "ref": "Matt.16.21"}
+    ],
+    "traditions": ["E. Krentz (1964), as Weren reports", "J. D. Kingsbury (1973, 1975, 1988), as Weren reports", "D. R. Bauer (1988), as Weren reports", "Answered by F. Neirynck (1967, 1988), as Weren reports, and by W. J. C. Weren (2006)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "weren",
+    "label": "Hinges",
+    "holder": "Weren, 2006",
+    "summary": "Weren reads Matthew as a story that flows without deep breaks, held together by five “hinge texts” that each look back on the block before and open the one after: 4:12-17, 11:2-30, 16:13-28, 21:1-17 and 26:1-16.",
+    "body": [
+     "He builds the outline from the story’s settings in time and place. A refrain of Jesus withdrawing (ἀνεχώρησεν), first noted by F. Breukelman, carries him away from Jerusalem and Judea up to 16:12; from 16:21 the passion predictions carry him towards it. Following Neirynck, he takes the three passages with ἀπὸ τότε (4:17, 16:21, 26:16) as opening new phases, and the hinge texts as Matera’s and Carter’s “kernels”.",
+     "Weren argues that earlier outlines differ so much because “Too much attention has been paid to rigid caesuras”, where in Matthew “The various sections of the book partly overlap”."
+    ],
+    "markers": ["from-that-time"],
+    "kinds": {"frame": "Overture and finale"},
+    "groups": [
+     {"ref": "Matt.4.18-16.12", "label": "Move away from Jerusalem and Judea"},
+     {"ref": "Matt.17.1-25.46", "label": "Journey to Jerusalem and work there"}
+    ],
+    "sections": [
+     {"ref": "Matt.1.1-4.11", "label": "Overture: Jesus’ origin, identity, and mission", "kind": "frame"},
+     {"ref": "Matt.4.12-17", "label": "Jesus’ mission begins in Capernaum", "hinge": true},
+     {"ref": "Matt.4.18-11.1", "label": "Calling of the four fishermen; Messiah in word and deed; sending out of the twelve"},
+     {"ref": "Matt.11.2-30", "label": "Review of the work of John and Jesus", "hinge": true},
+     {"ref": "Matt.12.1-16.12", "label": "The kingdom, hidden and revealed"},
+     {"ref": "Matt.16.13-28", "label": "The Son of God is a suffering Messiah", "hinge": true},
+     {"ref": "Matt.17.1-20.34", "label": "Journey to Jerusalem to suffer and die there"},
+     {"ref": "Matt.21.1-17", "label": "Arrival in Jerusalem and first confrontations in the temple", "hinge": true},
+     {"ref": "Matt.21.18-25.46", "label": "Jesus is active in Jerusalem"},
+     {"ref": "Matt.26.1-16", "label": "Jesus is anointed and will be handed over", "hinge": true},
+     {"ref": "Matt.26.17-28.20", "label": "Finale: suffering, death, resurrection; start of the disciples’ mission to all nations", "kind": "frame"}
+    ],
+    "note": "The headings are Weren’s, from the overview at the end of his article.",
+    "sources": [
+     {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/article-p180.html", "note": "Biblica 87, pp. 180–200, and the overview on p. 200"},
+     {"kind": "scripture", "ref": "Matt.4.12-17"},
+     {"kind": "scripture", "ref": "Matt.16.13-28"}
+    ],
+    "traditions": ["W. J. C. Weren (2006), drawing on F. Neirynck, F. Breukelman, F. J. Matera and W. Carter"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "A frame round five sections",
+    "holder": "BibleProject",
+    "summary": "BibleProject describes Matthew as “designed with an introduction and a conclusion that act as a frame around five clear sections in the center. Each of those sections concludes with a long block of Jesus’ teaching.”",
+    "body": [
+     "Its guide says that Matthew “created a parallel to the five books of Moses, presenting Jesus as Israel’s new, authoritative teacher who will fulfill the storyline of the Torah.” Its sections run by whole chapters, the introduction taking in chapter 3 and the fourth section running to the end of chapter 20."
+    ],
+    "kinds": {"frame": "Introduction and conclusion"},
+    "sections": [
+     {"ref": "Matt.1-3", "label": "Jesus as the Messiah and Immanuel (God With Us)", "kind": "frame"},
+     {"ref": "Matt.4-7", "label": "Arrival of God’s Kingdom and the Sermon on the Mount"},
+     {"ref": "Matt.8-10", "label": "The Kingdom’s Power and Invitation to Discipleship"},
+     {"ref": "Matt.11-13", "label": "Different Reactions to Jesus"},
+     {"ref": "Matt.14-20", "label": "What It Means for Jesus to Be the Messiah"},
+     {"ref": "Matt.21-25", "label": "Jesus Confronts Israel’s Leaders"},
+     {"ref": "Matt.26-28", "label": "Jesus’ Trial, Crucifixion, and Resurrection", "kind": "frame"}
+    ],
+    "note": "The headings are those of BibleProject’s guide to Matthew.",
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Matthew", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-matthew/"},
+     {"kind": "scholarship", "title": "Matthew 1–13 overview poster", "author": "BibleProject", "url": "https://d1bsmz3sdihplr.cloudfront.net/media/Posters%20Download/42-Matthew-FNL-1.jpg"},
+     {"kind": "scripture", "ref": "Matt.5.1-7.29"},
+     {"kind": "scripture", "ref": "Matt.23.1-25.46"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
+ }
+]

@@ -214,6 +214,37 @@ export interface Speaker { id: string; ref: Ref; speaker: string; person?: strin
 export interface ChiasmLevel { label: string; ref: Ref; text: string; quote?: string }
 export interface Chiasm { id: string; title: string; ref: Ref; levels: ChiasmLevel[]; centre: string; summary: string; sources: Source[]; traditions?: string[]; confidence: Confidence }
 /**
+ * Words a book repeats at points its outlines are built on ("When Jesus had finished"): a fact, quoted in each
+ * verse. `words` are Strong's numbers that stand together, in the original's order, in every quoted verse and in no
+ * other verse of the book, so the list is complete.
+ */
+export interface StructureMarker {
+  id: string; label: string; summary: string; words?: string[];
+  quotes: { ref: Ref; quote: string }[]; sources: Source[]; confidence: Confidence;
+}
+/**
+ * One stretch of a book in a reading of its shape. `kind` names a kind of section the reading alternates (its
+ * `kinds` say what each is called), `pair` the letter of a mirrored section (A and A'), `hinge` a passage that
+ * the reading says looks both back and forward.
+ */
+export interface StructureSection { ref: Ref; label: string; kind?: string; pair?: string; hinge?: true }
+/**
+ * One outline of a book, proposed by someone named. `sections` cover the book in order without gaps or overlaps;
+ * `groups` are larger units over some of them (Bacon's five books). `markers` are the repeated words it rests on;
+ * `note` says where its sections' verse boundaries come from, when not from its holder.
+ */
+export interface StructureReading {
+  id: string; label: string; holder: string; summary: string; body?: string[]; note?: string;
+  markers?: string[]; kinds?: Record<string, string>; centre?: string;
+  groups?: { ref: Ref; label: string }[]; sections: StructureSection[];
+  sources: Source[]; traditions?: string[]; confidence: Confidence;
+}
+/** The shape of a book: the words it repeats, and the outlines read from it, in the order they were proposed. */
+export interface BookStructure {
+  id: string; book: string; title: string; summary: string; sources: Source[];
+  markers: StructureMarker[]; readings: StructureReading[];
+}
+/**
  * One letter of an alphabet poem, in the poem's order: the verse it falls in (`ref`) and the Hebrew word that
  * carries it (`word`, in consonants), the `at`-th word of the verse in Hebrew order (0, the first, unless given).
  * `after` names the words before it in its verse (the heading, "Hallelujah"); `and`, that the letter follows the

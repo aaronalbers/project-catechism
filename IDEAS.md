@@ -78,6 +78,24 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
 - **The New Testament.** Luke–Acts as two volumes by one author (Acts 1:1), and the New Testament's chapter and verse
   history. The Scrolls tab shows only in the Old Testament at present.
 
+## Book outlines
+
+The Shape tab charts Matthew. Other books, each with sources found in the 2026-10-06 survey:
+
+- **Genesis.** The *toledot* formula opening 2:4, 5:1, 6:9, 10:1, 11:10, 11:27, 25:12, 25:19, 36:1, 36:9 and 37:2
+  (checked in the interlinear) as the marker. Readings: as headings (Holwerda, Külling, Eichrodt, Eissfeldt) or as
+  closing lines (Wiseman), from Woudstra, *Calvin Theological Journal* 5 (1970); BibleProject's 1–11 and 12–50 with
+  12:1–3 as the hinge (its guide). Wiseman's 1936 book is not yet read.
+- **Leviticus.** BibleProject's guide states a symmetry (1–7 and 23–25, 8–10 and 21–22, 11–15 and 18–20, with 16–17 at
+  the centre). For a second reading: the Holiness Code (17–26) set apart from 1–16, from Driver's *Introduction*
+  (1891, public domain); Mary Douglas's ring (1999) and Moshe Kline's woven reading (chaver.com) differ again.
+- **Mark** (three acts turning at 8:27, BibleProject's guide), **Jonah** (chapters 1 and 3, 2 and 4, its guide),
+  **Revelation** (the nested sevens, its guide), **Ecclesiastes** (the frame at 1:2 and 12:8), **Judges** ("no king
+  in Israel", 17:6, 18:1, 19:1, 21:25) and **Acts** (the word spreading, 6:7, 12:24, 19:20). Each needs a scholar's
+  reading beside BibleProject's, so no reading stands alone.
+- **Book-scale chiasms on the strip.** The passage-level chiasms that span much of a book (Daniel 2–7) could show as a
+  row on that book's strip.
+
 ## Reading aloud
 
 - **Recorded audio.** The BSB has free human recordings (narrators including Bob Souer, linked from openbible.com).

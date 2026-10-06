@@ -9,6 +9,19 @@ complete as it can be: anything the text describes of it that it leaves out belo
 Ideas for new things (another model, another word study, another view) are not follow-ups: leaving one out
 does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 
+## Book outlines (`content/structures.json`, the Shape tab), 2026-10-06
+
+- **Most of Matthew's outlines read through Weren, not their authors.** Bacon (1930) and BibleProject's guide were
+  read. Lohr (CBQ 1961), Krentz (JBL 1964), Kingsbury (1973, 1975, 1988), Bauer (1988), Combrink (1983), Rolland
+  (1972), Barr (1976), Luz (1985), Neirynck (1967, 1988) and Brown (1997) are cited as Weren's *Biblica* survey (2006)
+  reports them, and the cards say "as Weren reports". *Needed:* a copy of each to check the divisions and the views
+  attributed to it, then drop the "as Weren reports".
+- **Bacon's 1918 *Expositor* article** ("The Five Books of Matthew against the Jews") is not cited, as it was not read.
+- **Weren's own outline is left unanswered.** No response to it was read, so its card names no critic where the others
+  do. *Needed:* a later survey of Matthew's structure that discusses it.
+- **The guide is undated.** BibleProject's guide to Matthew gives no date, so its reading stands last in the order of
+  proposal by assumption.
+
 ## Alphabet poems (`content/acrostics.json`), 2026-10-05
 
 - **Nahum 1 left out.** Its partial acrostic is disputed, both in whether it is one and in how far it runs, so it
@@ -116,7 +129,7 @@ The chiasms aim to include every known chiastic structure. These are left out fo
 their levels:
 - **The Tower of Babel (Gen 11:1–9)**: Wenham's palistrophe, centred on 11:5. His exact levels haven't been confirmed
   from any accessible source.
-- **Matthew 13, Jonah 1, Luke's travel narrative (Kenneth Bailey), and whole-book structures**: proposals whose
+- **Matthew 13, Jonah 1, Luke's travel narrative (Kenneth Bailey)**: proposals whose
   levels weren't verified. Each can go in once there's a source to check its levels against.
 
 ## Videos (`content/videos.json`), recorded 2026-09-29

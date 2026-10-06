@@ -1,5 +1,5 @@
 // Curated content lives in /content as JSON and is bundled at build time.
-import type { Acrostic, ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, SkyEvent, SkyName, SkyReading, Speaker, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
+import type { Acrostic, ChurchCanon, Chiasm, Fragment, Insight, Journey, Model3D, Monarchy, Passion, ModelBuild, ModelChange, ModelState, ModelStateAccount, ModelAngle, Person, ProfileIndex, Fulfilment, Prophecy, Quote, Ruler, Scrolls, SkyEvent, SkyName, SkyReading, Speaker, BookStructure, Tally, TextSource, Video, VideoKind, Worth, Writer } from './types';
 import { compareLoc, contains, LONGEST_CHAPTER, parseRef, touchesChapter, type VerseLoc } from './refs';
 
 const insightFiles = import.meta.glob<{ default: Insight[] }>('@content/insights/*.json', { eager: true });
@@ -24,6 +24,7 @@ import canons from '@content/canons.json';
 import scrolls from '@content/scrolls.json';
 import prices from '@content/prices.json';
 import skies from '@content/skies.json';
+import structures from '@content/structures.json';
 
 export const PEOPLE = people as unknown as Person[];
 export const PROPHECIES = prophecies as unknown as Prophecy[];
@@ -32,6 +33,9 @@ export const FRAGMENTS = fragments as unknown as Fragment[];
 export const WRITERS = writers as unknown as Writer[];
 export const SPEAKERS = speakers as unknown as Speaker[];
 export const CHIASMS = chiasms as unknown as Chiasm[];
+/** The shapes of whole books: the words each repeats, and the outlines read from them (the Shape tab). */
+export const STRUCTURES = structures as unknown as BookStructure[];
+export const structureOf = (book: string) => STRUCTURES.find((s) => s.book === book);
 /** The alphabet poems, and which verse or line begins with each letter. */
 export const ACROSTICS = acrostics as unknown as Acrostic[];
 export const RULERS = rulers as unknown as Ruler[];
@@ -231,6 +235,7 @@ export function markersForChapter(book: string, chapter: number): Map<number, Se
     ['quote', here(QUOTES.flatMap((q) => [q.quoting, q.quoted]))],
     ['chiasm', here(CHIASMS.map((c) => c.ref))],
     ['acrostic', here(ACROSTICS.map((a) => a.ref))],
+    ['structure', here(STRUCTURES.flatMap((st) => st.markers.flatMap((m) => m.quotes.map((q) => q.ref))))],
     ['tally', here(TALLIES.map((t) => t.ref))],
     ['price', here(PRICES.flatMap((p) => [p.ref, ...(p.also ?? [])]))],
     ['passion', here([...PASSION.accounts.flatMap((a) => a.events.map((e) => e.ref)), ...PASSION.sayings.map((x) => x.ref)])],

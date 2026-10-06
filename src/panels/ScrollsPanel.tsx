@@ -10,7 +10,7 @@ import { cardId } from '@/lib/catalog';
 import { NUMBER } from '@/components/Scrolls';
 
 /** Verses per chapter of each of the 66, from circle.json (which the Links circle loads too). */
-function useVerseCounts(): Map<string, number[]> | null {
+export function useVerseCounts(): Map<string, number[]> | null {
   const [counts, setCounts] = useState<Map<string, number[]> | null>(null);
   useEffect(() => { loadCircle().then((d) => setCounts(new Map(d.chapters)), () => setCounts(new Map())); }, []);
   return counts;

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { follow, getState, goTo, leave, openTab, useStore } from '@/app/store';
 import { loadBook, loadInterlinear, loadSpeakersForBook } from '@/lib/data';
 import { play } from '@/lib/reader';
-import { CANON_BY_ID, CHIASMS, NARROWED, TEXT_BY_ID, markersForChapter, talliesInChapter } from '@/lib/content';
+import { CANON_BY_ID, CHIASMS, NARROWED, TEXT_BY_ID, markersForChapter, structureOf, talliesInChapter } from '@/lib/content';
 import { isPhrase, ladder, levelAt, type Piece } from '@/lib/chiasm';
 import { rowsAt } from '@/lib/tally';
 import { reignsInChapter } from '@/lib/reign';
@@ -21,6 +21,8 @@ import { PriceChart } from './Price';
 import { chartsAt } from '@/lib/prices';
 import { PassionChart } from './Passion';
 import { OverlapNote, SeamNote } from './Scrolls';
+import { ShapeNote } from './Shape';
+import { markersAt } from '@/lib/structure';
 import { AlphabetStrip, GutterLetters } from './Acrostic';
 import { acrosticsInChapter } from '@/lib/acrostic';
 import { overlapsInChapter, seamsInChapter } from '@/lib/scrolls';
@@ -160,6 +162,7 @@ export function Reader() {
   const reveal = useStore((s) => s.reveal);
   const seams = useMemo(() => seamsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
   const overlaps = useMemo(() => overlapsInChapter(loc.book, loc.chapter), [loc.book, loc.chapter]);
+  const shape = structureOf(loc.book);
   // Arriving from the index at a chiasm, an alphabet poem, a count, a price or a reign: show it even if the reader had hidden it.
   useEffect(() => { if (reveal === 'chiasm') setStructure(true); if (reveal === 'acrostic') setLetters(true); if (reveal === 'tally') setCharts(true); if (reveal === 'reign') setReignCharts(true); if (reveal === 'passion') setDayCharts(true); if (reveal === 'price') setPriceCharts(true); }, [reveal, loc]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -231,6 +234,7 @@ export function Reader() {
         const days = passionAt(vloc);
         const priced = chartsAt(vloc);
         const repeated = overlaps.filter((e) => parseRef(e.here)!.start.verse === v.v);
+        const outlined = shape ? markersAt(shape, vloc) : [];
         return (
           <div key={v.v} className={`vblock${li >= 0 ? ` rail${first ? ' rail-start' : ''}${last ? ' rail-end' : ''}` : ''}`} style={li >= 0 ? levelStyle(passage!, li) : undefined}>
             {first && <LevelHeader c={passage!} i={li} />}
@@ -251,6 +255,7 @@ export function Reader() {
                 {priced.map((p) => <PriceChart key={p.id} p={p} show={priceCharts} onToggle={togglePrices} />)}
                 {(days.event || days.saying) && <PassionChart event={days.event} saying={days.saying} account={days.account} loc={loc} show={dayCharts} onToggle={toggleDays} />}
                 {repeated.map((e) => <OverlapNote key={e.o.id} end={e} />)}
+                {outlined.map(({ m, n }) => <ShapeNote key={m.id} s={shape!} m={m} n={n} />)}
                 {reign && <ReignChart k={reign.k} account={reign.account} loc={loc} show={reignCharts} onToggle={toggleReigns} />}
                 {current && !pieces && ilv?.f?.length ? <div className="fn">{ilv.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}
                 {current && v.t && v.f?.length ? <div className="fn">{v.f.map((f, i) => <div key={i}>† {f}</div>)}</div> : null}

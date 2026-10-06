@@ -336,6 +336,16 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   not verbatim in its verse, a synchronism names a king of the same kingdom, or the stated sums behind Jehu's
   note (98 and 95 years) change.
 
+- Book outlines (`content/structures.json`, the Shape tab) chart the shape of a whole book. `markers` are words the
+  book repeats where outlines divide it ("When Jesus had finished"), `evidence` like any quotation: each `quotes` the
+  BSB in its verse, and `words`, the Strong's numbers that stand together in the original, must be in those verses and
+  in no other verse of the book, so the list is complete. `readings` are outlines, each an `interpretation` naming who
+  proposes it and who answers it, listed in the order they were proposed so none comes first by choice. A reading's
+  `sections` cover the book in order with no gap or overlap; `kind` (named in `kinds`; `frame` for a prologue or
+  epilogue), `pair` (A and A', with a `centre`) and `hinge` say how it is drawn, and `groups` are larger units over
+  whole sections. Where a heading or boundary comes from someone other than the holder (a survey quoting them), the
+  reading's `note` says so. The tab draws every reading as a row on the book's verses, the markers ticked through all
+  of them; the reader adds only a line under a marker's verse. `src/__tests__/structures.test.ts` holds these rules.
 - Chiasms (`content/chiasms.json`) come in two shapes, and the reader draws each on the text. A
   **phrase-level** chiasm gives every level a `quote`: the exact BSB words it covers, one verse per
   level, in reading order. The reader lays those out as an indented ladder, and a test fails the
