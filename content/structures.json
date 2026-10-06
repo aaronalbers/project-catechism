@@ -652,5 +652,133 @@
     "confidence": "interpretation"
    }
   ]
+ },
+ {
+  "id": "revelation",
+  "book": "Rev",
+  "title": "The shape of Revelation",
+  "summary": "Revelation tells three series of seven: seals, trumpets and bowls, each ending with a seventh (8:1, 11:15, 16:17). Outlines of it differ over whether the series tell the same span of time again from new points of view, as Swete and BibleProject read them, or follow one another in order, as Charles holds once the text he thinks an editor disordered is restored. Three outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "The Apocalypse of St John: the Greek text with introduction, notes and indices", "author": "H. B. Swete", "year": 1906, "url": "https://archive.org/details/apocalypseofstj00swet", "note": "Introduction, ch. III, ‘Contents and Plan’, pp. xxxiv–xl"},
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Revelation of St. John, vol. 1 (ICC)", "author": "R. H. Charles", "year": 1920, "url": "https://archive.org/details/criticalexegetic0044char", "note": "Introduction, § 2, ‘Plan of the Book’, pp. xxiii–xxviii"},
+   {"kind": "scholarship", "title": "Guide to the Book of Revelation", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-revelation/"}
+  ],
+  "markers": [
+   {
+    "id": "seventh",
+    "label": "The seventh seal, trumpet and bowl",
+    "summary": "Each series of seven ends with a seventh: the Lamb opens the seventh seal and there is “silence in heaven for about half an hour” (8:1), and the seven trumpets follow (8:2, 8:6); the seventh angel sounds his trumpet and voices proclaim that “The kingdom of the world has become the kingdom of our Lord” (11:15); the seventh angel pours out his bowl and a voice says “It is done!” (16:17).",
+    "quotes": [
+     {"ref": "Rev.8.1", "quote": "When the Lamb opened the seventh seal"},
+     {"ref": "Rev.11.15", "quote": "Then the seventh angel sounded his trumpet"},
+     {"ref": "Rev.16.17", "quote": "Then the seventh angel poured out his bowl"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Rev.6.1"},
+     {"kind": "scripture", "ref": "Rev.8.1-6"},
+     {"kind": "scripture", "ref": "Rev.11.15"},
+     {"kind": "scripture", "ref": "Rev.16.1"},
+     {"kind": "scripture", "ref": "Rev.16.17"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "swete",
+    "label": "Two actions over the same ground",
+    "holder": "Swete, 1906",
+    "summary": "Swete finds “a great cleavage, which practically divides the Book into two nearly equal parts”: at 12:1 “the author makes a fresh beginning”, and “had all our MSS. broken off at xi. 19 ... it is conceivable that the loss might never have been suspected”. The two parts are “two great actions”, the Work of the Ascended Christ and the Destinies of the Christian Church, which, “while covering the same ground, … approach it from different points of view.”",
+    "body": [
+     "In the second part the seven bowls are “a series corresponding in this half of the book with the seven Seals and seven Trumpets of the first half”. The episodes between the sixth and seventh of a series (chapter 7, and 10:1–11:14) “seem to break the movement of the prophecy, but in fact assist in its development”.",
+     "Charles (1920) answers readings in which the series tell the same events again, “the theory of Recapitulation”, as “a failure”."
+    ],
+    "note": "The headings are those of Swete’s scheme “in its briefest form”.",
+    "markers": ["seventh"],
+    "kinds": {"frame": "Prologue and epilogue"},
+    "groups": [
+     {"ref": "Rev.1.9-11.19", "label": "Part I"},
+     {"ref": "Rev.12.1-22.5", "label": "Part II"}
+    ],
+    "sections": [
+     {"ref": "Rev.1.1-8", "label": "Prologue", "kind": "frame"},
+     {"ref": "Rev.1.9-3.22", "label": "Vision of Christ in the midst of the Churches"},
+     {"ref": "Rev.4.1-5.14", "label": "Vision of Christ in Heaven"},
+     {"ref": "Rev.6.1-11.19", "label": "Preparations for the End"},
+     {"ref": "Rev.12.1-13.18", "label": "Vision of the Mother of Christ and her enemies"},
+     {"ref": "Rev.14.1-20.15", "label": "Preparations for the End"},
+     {"ref": "Rev.21.1-22.5", "label": "Vision of the Bride of Christ, arrayed for her husband"},
+     {"ref": "Rev.22.6-21", "label": "Epilogue", "kind": "frame"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "The Apocalypse of St John: the Greek text with introduction, notes and indices", "author": "H. B. Swete", "year": 1906, "url": "https://archive.org/details/apocalypseofstj00swet", "note": "Introduction, ch. III, ‘Contents and Plan’, pp. xxxiv–xl"},
+     {"kind": "scripture", "ref": "Rev.12.1"}
+    ],
+    "traditions": ["H. B. Swete (1906)", "Answered by R. H. Charles (1920), on recapitulation"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "charles",
+    "label": "Seven parts in order, the ending disordered",
+    "holder": "Charles, 1920",
+    "summary": "Charles divides the book into a Prologue, seven parts, “a significant division”, and an Epilogue, and holds that “the events in these seven parts are described in visions in strict chronological order”, save for three “proleptic” visions set out of order to encourage the Church (7:9-17, 10:1–11:13, and 14) and chapter 12, which looks back to prepare for 13.",
+    "body": [
+     "He holds that John’s disciple and editor “intervened repeatedly, rearranging the text in some cases, adding to it in others”, above all in 20:4–22:21, and restores that stretch to another order: Part V, the Millennial Kingdom (21:9–22:2, 22:14-15, 17, then 20:4-10); Part VI, the final judgment (20:11-15); Part VII, the everlasting kingdom (21:5a, 4d, 5b, 1-4c, 22:3-5); and the Epilogue.",
+     "So he rejects “the theory of Recapitulation which from the time of Victorinus of Pettau (circa 270 A.D.) has dominated practically every school of interpretation”, that the seals, trumpets and bowls tell the same series of events: “the interpretation which is compelled to fall back on this device must be pronounced a failure.” Swete (1906) and BibleProject read the series as covering the same ground."
+    ],
+    "note": "Drawn in the BSB’s order, the verses Charles rearranges make one stretch, 20:4–22:21; his own order is given in the card. Within Part IV he also moves single verses (8:2 among them). The verse lists are as his p. xxiv gives them, and the names of the sections within Part IV are descriptive.",
+    "markers": ["seventh"],
+    "kinds": {"frame": "Prologue", "proleptic": "A proleptic vision, out of order", "disordered": "Parts V–VII and the Epilogue, in an order Charles holds an editor disturbed"},
+    "groups": [
+     {"ref": "Rev.6.1-20.3", "label": "IV. Judgments"}
+    ],
+    "sections": [
+     {"ref": "Rev.1.1-3", "label": "Prologue", "kind": "frame"},
+     {"ref": "Rev.1.4-20", "label": "I. John writes to the Seven Churches"},
+     {"ref": "Rev.2.1-3.22", "label": "II. Problem of the book set forth in the Letters"},
+     {"ref": "Rev.4.1-5.14", "label": "III. Vision of God and of Christ"},
+     {"ref": "Rev.6.1-7.8", "label": "The first six Seals; the sealing"},
+     {"ref": "Rev.7.9-17", "label": "The multitude before the throne", "kind": "proleptic"},
+     {"ref": "Rev.8.1-9.21", "label": "The seventh Seal; the first and second Woes"},
+     {"ref": "Rev.10.1-11.13", "label": "The open booklet; the two witnesses", "kind": "proleptic"},
+     {"ref": "Rev.11.14-13.18", "label": "The seventh Trumpet; the Dragon and the Beasts"},
+     {"ref": "Rev.14.1-20", "label": "The Lamb on Mount Zion", "kind": "proleptic"},
+     {"ref": "Rev.15.1-20.3", "label": "The Bowls; the fall of Rome; Satan bound"},
+     {"ref": "Rev.20.4-22.21", "label": "V–VII and the Epilogue, rearranged", "kind": "disordered"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Revelation of St. John, vol. 1 (ICC)", "author": "R. H. Charles", "year": 1920, "url": "https://archive.org/details/criticalexegetic0044char", "note": "Introduction, § 2, ‘Plan of the Book’, pp. xxiii–xxviii"},
+     {"kind": "scripture", "ref": "Rev.20.4-22.21"}
+    ],
+    "traditions": ["R. H. Charles (1920)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "Three cycles of seven, nested",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide reads the seals, trumpets and bowls as “three cycles of sevens” that John “wove … together”: “The seven bowls come out of the seventh trumpet and the seventh seal, and the seven trumpets emerge from the seventh seal. They’re like nesting dolls, each seventh containing the next seven.”",
+    "body": [
+     "“And each series culminates in the final judgment, all with matching conclusions. Because of this, it’s more likely that John is using each set of seven to depict three distinct perspectives of the same period of time after Jesus’ resurrection.” It notes that some read the series instead as “a literal, linear sequence of events”; Charles (1920) reads them as following one another in order."
+    ],
+    "note": "The headings are those of the guide’s contents; its “6-8a” ends with the seventh seal (8:1), and “8b-11” begins with the trumpets.",
+    "markers": ["seventh"],
+    "sections": [
+     {"ref": "Rev.1-3", "label": "Jesus’ Words to Seven Churches in Asia Minor"},
+     {"ref": "Rev.4-5", "label": "Vision of the Heavenly Throne Room and First Judgment"},
+     {"ref": "Rev.6.1-8.1", "label": "Vision of the Lord’s Slain Servants"},
+     {"ref": "Rev.8.2-11.19", "label": "Visions of Judgment, the Temple, and Two Witnesses"},
+     {"ref": "Rev.12-16", "label": "Visions of the Dragon, Beasts, 666, and More"},
+     {"ref": "Rev.17-20", "label": "The Final Battle of Armageddon"},
+     {"ref": "Rev.21-22", "label": "The New Heaven and Earth"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Revelation", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-revelation/"},
+     {"kind": "scripture", "ref": "Rev.8.1-2"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
  }
 ]

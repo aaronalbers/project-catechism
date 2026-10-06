@@ -35,6 +35,10 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 - **Jonah's outlines name no critics, and no recent reading.** Bewer (1912) and BibleProject were read. Later literary
   readings of the book's two halves (Trible's, for one) and answers to Bewer on the psalm were not. *Needed:* a later
   commentary on Jonah to add a reading that keeps the psalm, and who answers whom.
+- **Revelation: Charles's verse lists read from an OCR copy.** His order for 20:4–22:21 (vol. 1, p. xxiv) was read
+  from archive.org's text, whose verse letters are garbled in places; the card gives the order as the two listings
+  on pp. xxiii–xxv agree. *Needed:* a check against a page image. No reading after 1920 was read, so the card
+  names no answer to Charles's rearrangement.
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 
