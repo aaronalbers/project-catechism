@@ -224,6 +224,104 @@
   ]
  },
  {
+  "id": "ecclesiastes",
+  "book": "Eccl",
+  "title": "The shape of Ecclesiastes",
+  "summary": "Ecclesiastes opens and closes with the same words, “Futility of futilities” (1:2, 12:8), and three times “says the Teacher” breaks into the Teacher’s own first-person words. After 12:8 the book speaks of the Teacher in the third person. Outlines of it read these as the work of an author who frames the Teacher’s words, or of editors who added to them. Two outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Book of Ecclesiastes (ICC)", "author": "George A. Barton", "year": 1908, "url": "https://archive.org/details/criticalecclesia17bartuoft", "note": "Introduction, § 7, ‘The Integrity of Ecclesiastes’, pp. 43–46"},
+   {"kind": "scholarship", "title": "Guide to the Book of Ecclesiastes", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-ecclesiastes/"}
+  ],
+  "markers": [
+   {
+    "id": "futility",
+    "label": "“Futility of futilities”",
+    "summary": "Twice the book has hăbēl hăbālîm (“futility of futilities”, hebel being breath or vapour): at 1:2, where it is said twice, and at 12:8. No other verse has the noun twice running.",
+    "words": ["H1892", "H1892"],
+    "quotes": [
+     {"ref": "Eccl.1.2", "quote": "“Futility of futilities,” says the Teacher, “futility of futilities! Everything is futile!”"},
+     {"ref": "Eccl.12.8", "quote": "“Futility of futilities,” says the Teacher. “Everything is futile!”"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Eccl.1.2"},
+     {"kind": "scripture", "ref": "Eccl.12.8"},
+     {"kind": "data", "title": "BSB interlinear, Ecclesiastes", "note": "H1892 twice running in these two verses and no others"}
+    ],
+    "confidence": "evidence"
+   },
+   {
+    "id": "says",
+    "label": "“Says the Teacher”",
+    "summary": "Three verses have ʾāmar qōhelet, “says the Teacher” (at 7:27 with the verb in the feminine, ʾāmərâ), each speaking of the Teacher in the third person where the words around it are his own, in the first. Besides these, the Teacher is named in the third person in the title (1:1) and after 12:8 (12:9-10).",
+    "words": ["H559", "H6953"],
+    "quotes": [
+     {"ref": "Eccl.1.2", "quote": "says the Teacher"},
+     {"ref": "Eccl.7.27", "quote": "says the Teacher"},
+     {"ref": "Eccl.12.8", "quote": "says the Teacher"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Eccl.1.1"},
+     {"kind": "scripture", "ref": "Eccl.7.27"},
+     {"kind": "scripture", "ref": "Eccl.12.9-10"},
+     {"kind": "data", "title": "BSB interlinear, Ecclesiastes", "note": "the verb and qōhelet together in these three verses and no others"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "barton",
+    "label": "The Teacher’s words, edited and glossed",
+    "holder": "Barton, 1908",
+    "summary": "Barton holds that two hands added to Qoheleth’s book: an editor “deeply interested in the Wisdom Literature”, who wrote the title (1:1), the words “says Qoheleth” (1:2, 7:27, 12:8) and 12:9-12, and a later glossator “deeply imbued with the spirit of the Pharisees”, whose last gloss, “Fear God and keep His commandments” (12:13-14), closes the book.",
+    "body": [
+     "He reads “says Qoheleth” as editorial because the book’s writer “usually speaks of himself in the first person” and the words “interrupt the rhythm” at 1:2 and 12:8, while at 7:27 they “actually interrupt a discourse in the first person”. He gives the glossator other sayings that contradict their context, such as 2:26 on God rewarding the good, and perhaps the editor some proverbs; but “the material, added by these glossators … is, however, but a small part of the material in the book.”",
+     "Barton places his view between Cornill and Genung, “maintaining vigorously the entire unity of the work as it stands”, and Siegfried and Haupt, who “regard the book as the product of so many hands that its original features are entirely obscured”, and “somewhat nearer the former”. McNeile, as Barton reports him, finds an editor and two glossators."
+    ],
+    "note": "Barton gives 12:13a (“End of discourse, all has been heard”) to the editor and 12:13b-14 to the glossator; the verse is drawn whole with the glossator. The glosses he finds within 1:2–12:8 are not drawn. The section names are descriptive.",
+    "markers": ["says", "futility"],
+    "kinds": {"E": "The editor", "Q": "Qoheleth, with glosses", "C": "The orthodox glossator"},
+    "sections": [
+     {"ref": "Eccl.1.1", "label": "The title", "kind": "E"},
+     {"ref": "Eccl.1.2-12.8", "label": "The words of Qoheleth", "kind": "Q"},
+     {"ref": "Eccl.12.9-12", "label": "The editor on Qoheleth and the wise", "kind": "E"},
+     {"ref": "Eccl.12.13-14", "label": "“Fear God and keep His commandments”", "kind": "C"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Book of Ecclesiastes (ICC)", "author": "George A. Barton", "year": 1908, "url": "https://archive.org/details/criticalecclesia17bartuoft", "note": "Introduction, § 7, ‘The Integrity of Ecclesiastes’, pp. 43–46"},
+     {"kind": "scripture", "ref": "Eccl.7.27"},
+     {"kind": "scripture", "ref": "Eccl.12.9-14"}
+    ],
+    "traditions": ["G. A. Barton (1908)", "McNeile, with an editor and two glossators, as Barton reports", "Answered from either side by Cornill and Genung (the book a unity) and Siegfried and Haupt (many hands), as Barton reports them"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "The Teacher framed by the author",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide holds that “the teacher is a character in the book and is different from the author of the book, who remains anonymous”. The author “first introduces us to the teacher and … concludes the book by summarizing and evaluating all that the teacher has said”, and “summarizes the teacher’s basic message at the beginning (Ec. 1:2) and the end (Ec. 12:8)”.",
+    "body": [
+     "In 12:9-14, on the guide’s reading, “the author takes over”, warns “not to take the teacher’s words too far”, and “offers his own conclusion” in 12:13-14. Where Barton (1908) gives 12:13-14 to a later glossator, the guide reads it as the author’s own close."
+    ],
+    "note": "The guide’s contents run the Teacher’s words from 1:3 to 12:7 and the author’s conclusion from 12:9; 1:1-2 and 12:8, which it says the author uses to sum up the Teacher’s message, are drawn with the frame.",
+    "markers": ["futility"],
+    "kinds": {"frame": "The author"},
+    "sections": [
+     {"ref": "Eccl.1.1-2", "label": "The author introduces the Teacher", "kind": "frame"},
+     {"ref": "Eccl.1.3-12.7", "label": "Life Apart from God"},
+     {"ref": "Eccl.12.8-14", "label": "The Author’s Wise Conclusion", "kind": "frame"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Ecclesiastes", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-ecclesiastes/"},
+     {"kind": "scripture", "ref": "Eccl.1.2"},
+     {"kind": "scripture", "ref": "Eccl.12.8"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
+ },
+ {
   "id": "jonah",
   "book": "Jonah",
   "title": "The shape of Jonah",

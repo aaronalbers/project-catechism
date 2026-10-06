@@ -39,6 +39,10 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
   from archive.org's text, whose verse letters are garbled in places; the card gives the order as the two listings
   on pp. xxiii–xxv agree. *Needed:* a check against a page image. No reading after 1920 was read, so the card
   names no answer to Charles's rearrangement.
+- **Ecclesiastes: Barton's holders read only through him.** Cornill, Genung, Siegfried, Haupt and McNeile are cited as
+  Barton (1908) reports them, without initials or dates, which he gives elsewhere. The glosses Barton finds within
+  1:2–12:8 are not drawn on the strip, as their verse letters were garbled in the OCR copy read. *Needed:* a page
+  image of Barton, pp. 44–46, to list them.
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 
