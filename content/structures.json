@@ -446,5 +446,117 @@
     "confidence": "interpretation"
    }
   ]
+ },
+ {
+  "id": "mark",
+  "book": "Mark",
+  "title": "The shape of Mark",
+  "summary": "Mark moves from Galilee to Jerusalem, and outlines of it differ over where the turn comes: at Jesus’ question near Caesarea Philippi (8:27), or when Jesus leaves Galilee for Judea (10:1). Three times on the way Jesus tells his disciples that the Son of Man will be killed and rise after three days. Three outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "The Gospel according to St Mark: the Greek text with introduction, notes and indices", "author": "H. B. Swete", "year": 1898, "url": "https://archive.org/details/cu31924024250155", "note": "Introduction, pp. li–liv"},
+   {"kind": "scholarship", "title": "The Beginnings of Gospel Story", "author": "Benjamin W. Bacon", "year": 1909, "url": "https://archive.org/details/beginningsofgosp00baco", "note": "Introduction, ‘Logical Analysis of the Gospel’, pp. xi ff."}
+  ],
+  "markers": [
+   {
+    "id": "predictions",
+    "label": "“After three days He will rise”",
+    "summary": "Three times between Caesarea Philippi and Jerusalem Jesus tells his disciples that the Son of Man will be killed and “after three days” rise: at 8:31, 9:31 and 10:33-34. Each time the narrative goes on to the disciples’ response: Peter rebukes him (8:32), they do not understand and argue over who is greatest (9:32-34), and James and John ask for the places at his right and left (10:35-37).",
+    "quotes": [
+     {"ref": "Mark.8.31", "quote": "the Son of Man must suffer many things"},
+     {"ref": "Mark.9.31", "quote": "The Son of Man will be delivered into the hands of men"},
+     {"ref": "Mark.10.33", "quote": "the Son of Man will be delivered over to the chief priests and scribes"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Mark.8.31-33"},
+     {"kind": "scripture", "ref": "Mark.9.31-34"},
+     {"kind": "scripture", "ref": "Mark.10.32-37"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "swete",
+    "label": "Galilee and Jerusalem, with a bridge",
+    "holder": "Swete, 1898",
+    "summary": "Swete finds that “the book deals with two great themes, the Ministry in Galilee (i. 14—ix. 50), and the Last Week at Jerusalem (xi. 1—xvi. 8), and that these sections are connected by a comparatively brief survey of the period which intervened (x. 1—52).”",
+    "body": [
+     "“The first fourteen verses of the Gospel are evidently introductory; the last twelve have the character of an appendix, which links the Gospel history with the fortunes of the Church in the Apostolic age.” Within the Galilean ministry he traces a plan: the lakeside towns, the rest of Galilee during withdrawals from the lake, and the training of the Twelve.",
+     "On this outline the turn at Caesarea Philippi falls inside the Galilean ministry, which runs on to 9:50; Bacon (1909) divides there instead."
+    ],
+    "note": "Swete calls the first fourteen verses introductory but begins the ministry in Galilee at 1:14; 1:14 is drawn with the ministry.",
+    "kinds": {"frame": "Introduction and appendix"},
+    "sections": [
+     {"ref": "Mark.1.1-13", "label": "Introduction", "kind": "frame"},
+     {"ref": "Mark.1.14-9.50", "label": "The Ministry in Galilee"},
+     {"ref": "Mark.10.1-52", "label": "The period which intervened"},
+     {"ref": "Mark.11.1-16.8", "label": "The Last Week at Jerusalem"},
+     {"ref": "Mark.16.9-20", "label": "Appendix", "kind": "frame"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "The Gospel according to St Mark: the Greek text with introduction, notes and indices", "author": "H. B. Swete", "year": 1898, "url": "https://archive.org/details/cu31924024250155", "note": "Introduction, pp. li–liv"},
+     {"kind": "scripture", "ref": "Mark.10.1"}
+    ],
+    "traditions": ["H. B. Swete (1898)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bacon",
+    "label": "Two parts of three divisions",
+    "holder": "Bacon, 1909",
+    "summary": "Bacon finds that “the narrative falls into two parts of nearly equal extent”: the Galilean Ministry (1:1–8:26) and the Judaean Ministry (8:27–16:8), each in three divisions. “Like the book of Acts the Gospel of Mark thus falls into two Parts of three Divisions each.”",
+    "body": [
+     "He holds that the divisions’ limits “are so clearly defined by the subject matter that all interpreters are in substantial agreement as to their extent”, the one doubt being where the fourth ends: the healing of Bartimaeus (10:46-52) is “an epilogue forming a transition to the next Division, with which some excellent authorities have grouped it”. He follows Matthew in marking the transition at 11:1.",
+     "Swete (1898), before him, runs the Galilean ministry on to 9:50."
+    ],
+    "note": "The headings are Bacon’s. He ends the Gospel at 16:8 and calls 16:9-20 an epilogue, “Shorter and Longer Ending”.",
+    "markers": ["predictions"],
+    "kinds": {"frame": "Epilogue"},
+    "groups": [
+     {"ref": "Mark.1.1-8.26", "label": "Part I. The Galilean Ministry"},
+     {"ref": "Mark.8.27-16.8", "label": "Part II. The Judaean Ministry"}
+    ],
+    "sections": [
+     {"ref": "Mark.1.1-3.6", "label": "I. Beginning of Jesus’ Ministry"},
+     {"ref": "Mark.3.7-6.13", "label": "II. Mission of the Twelve"},
+     {"ref": "Mark.6.14-8.26", "label": "III. The Breaking of the Bread"},
+     {"ref": "Mark.8.27-10.52", "label": "IV. The Way of the Cross"},
+     {"ref": "Mark.11.1-13.37", "label": "V. The Appeal to Jerusalem"},
+     {"ref": "Mark.14.1-16.8", "label": "VI. Passion and Resurrection"},
+     {"ref": "Mark.16.9-20", "label": "Epilogue: the Resurrection Appearances", "kind": "frame"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "The Beginnings of Gospel Story", "author": "Benjamin W. Bacon", "year": 1909, "url": "https://archive.org/details/beginningsofgosp00baco", "note": "Introduction, ‘Logical Analysis of the Gospel’, pp. xi ff."},
+     {"kind": "scripture", "ref": "Mark.8.27"}
+    ],
+    "traditions": ["B. W. Bacon (1909)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "A drama in three acts",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide reads Mark as “a drama with three acts. The first act is set in Galilee, the second act is Jesus traveling, and the third takes place in Jerusalem.” In Act 1 “everyone is amazed and wondering who Jesus is”, in Act 2 “the disciples struggle to understand what it means for Jesus to be the Messiah”, and in Act 3 “we see the paradoxical way Jesus becomes the messianic King”.",
+    "body": [
+     "Its poster sets three conversations in Act 2 (8:27-38, 9:30-37, 10:32-45), and the guide ends the book at 16:8, “with Jesus’ disciples showing the same kind of fear and confusion that concluded the first two acts”. It describes 16:9-20 as a longer ending “only found in later, less reliable manuscripts”."
+    ],
+    "note": "The act boundaries are those of the guide’s contents (1:1-8:26, 8:27-10, 11-16, and 16:9-20).",
+    "markers": ["predictions"],
+    "kinds": {"frame": "The longer ending"},
+    "sections": [
+     {"ref": "Mark.1.1-8.26", "label": "Act 1: Mixed Reactions to God’s Kingdom Arriving in Jesus"},
+     {"ref": "Mark.8.27-10.52", "label": "Act 2: What It Means for Jesus to Be the Messiah"},
+     {"ref": "Mark.11.1-16.8", "label": "Act 3: Confrontation, Crucifixion, and Resurrection"},
+     {"ref": "Mark.16.9-20", "label": "The Longer Ending", "kind": "frame"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Mark", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-mark/"},
+     {"kind": "scholarship", "title": "Mark overview poster", "author": "BibleProject", "url": "https://d1bsmz3sdihplr.cloudfront.net/media/Posters%20Download/44-Mark-FNL.jpg"},
+     {"kind": "scripture", "ref": "Mark.16.8"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
  }
 ]

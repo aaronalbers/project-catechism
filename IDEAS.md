@@ -80,11 +80,11 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
 
 ## Book outlines
 
-The Shape tab charts Genesis, Leviticus and Matthew. Other books, each with sources found in the 2026-10-06 survey:
+The Shape tab charts Genesis, Leviticus, Matthew and Mark. Other books, each with sources found in the 2026-10-06 survey:
 
 - **Leviticus, more readings.** Mary Douglas's ring (*Leviticus as Literature*, 1999) and Moshe Kline's woven
   reading (chaver.com) differ from both Driver's and BibleProject's.
-- **Mark** (three acts turning at 8:27, BibleProject's guide), **Jonah** (chapters 1 and 3, 2 and 4, its guide),
+- **Jonah** (chapters 1 and 3, 2 and 4, its guide),
   **Revelation** (the nested sevens, its guide), **Ecclesiastes** (the frame at 1:2 and 12:8), **Judges** ("no king
   in Israel", 17:6, 18:1, 19:1, 21:25) and **Acts** (the word spreading, 6:7, 12:24, 19:20). Each needs a scholar's
   reading beside BibleProject's, so no reading stands alone.

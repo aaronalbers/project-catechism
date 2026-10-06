@@ -28,6 +28,10 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 - **Leviticus has no reading that answers either outline.** Driver (1891) and BibleProject were read; no response to
   either was, so neither card names a critic. Klostermann (1877) is cited as Driver reports him. *Needed:* a later
   treatment of the Holiness Code (Milgrom's or Knohl's) and of BibleProject's symmetry.
+- **Mark's outlines name no critics.** Swete (1898), Bacon (1909) and BibleProject were read, and the strip shows
+  where they differ, but no later discussion of Mark's structure was read to say who answers whom. Bacon's claim that
+  "all interpreters are in substantial agreement" on the divisions is quoted as his. *Needed:* a survey of Mark's
+  structure (Larsen, *Currents in Biblical Research* 2004, or a commentary's introduction).
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 
