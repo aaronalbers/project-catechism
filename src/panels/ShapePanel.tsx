@@ -105,7 +105,7 @@ function ShapeStrip({ s, counts, loc }: { s: BookStructure; counts: number[]; lo
           ))}
         </div>
         <div className="shape-axis" aria-hidden="true">
-          {chapters.map((c, i) => ((i + 1) % 5 === 0 || i === 0 ? <span key={i} style={{ left: pct(c.start, total) }}>{i + 1}</span> : null))}
+          {chapters.map((c, i) => ((i + 1) % (chapters.length > 12 ? 5 : 1) === 0 || i === 0 ? <span key={i} style={{ left: pct(c.start, total) }}>{i + 1}</span> : null))}
         </div>
         {ticks.map(({ m, i, q, x }) => (
           <button key={q.ref} className={`shape-tick m${i}`} style={{ left: pct(x, total) }} title={`${m.label} ${formatRef(q.ref)}`} aria-label={`${m.label} ${formatRef(q.ref)}`} onClick={() => goTo(q.ref)} />

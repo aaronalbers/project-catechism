@@ -32,6 +32,9 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
   where they differ, but no later discussion of Mark's structure was read to say who answers whom. Bacon's claim that
   "all interpreters are in substantial agreement" on the divisions is quoted as his. *Needed:* a survey of Mark's
   structure (Larsen, *Currents in Biblical Research* 2004, or a commentary's introduction).
+- **Jonah's outlines name no critics, and no recent reading.** Bewer (1912) and BibleProject were read. Later literary
+  readings of the book's two halves (Trible's, for one) and answers to Bewer on the psalm were not. *Needed:* a later
+  commentary on Jonah to add a reading that keeps the psalm, and who answers whom.
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 
