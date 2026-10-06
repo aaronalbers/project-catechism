@@ -859,6 +859,98 @@
   ]
  },
  {
+  "id": "acts",
+  "book": "Acts",
+  "title": "The shape of Acts",
+  "summary": "At 1:8 Jesus sends his disciples to be his witnesses “in Jerusalem, and in all Judea and Samaria, and to the ends of the earth”, and three times the narrative says that the word of God “continued to spread” (6:7, 12:24, 19:20). Outlines of Acts are built on the one or the other: on the places the witness reaches, or on the verses that sum up its growth. Two outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "‘Chronology of the New Testament’, in A Dictionary of the Bible, ed. James Hastings, vol. 1", "author": "C. H. Turner", "year": 1898, "url": "https://archive.org/details/dictionaryofbibl0001jame", "note": "p. 421"},
+   {"kind": "scholarship", "title": "Guide to the Book of Acts", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-acts/"}
+  ],
+  "markers": [
+   {
+    "id": "grew",
+    "label": "“The word of God continued to spread”",
+    "summary": "Three verses say that the word grew, with the same Greek verb, ēuxanen: “the word of God continued to spread” (6:7, 12:24) and “the word of the Lord powerfully continued to spread” (19:20). The first two add that it, or the disciples, multiplied (eplēthyneto). The verb comes once more in Acts, at 7:17, of the people in Egypt.",
+    "quotes": [
+     {"ref": "Acts.6.7", "quote": "So the word of God continued to spread"},
+     {"ref": "Acts.12.24", "quote": "But the word of God continued to spread and multiply"},
+     {"ref": "Acts.19.20", "quote": "So the word of the Lord powerfully continued to spread and prevail"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Acts.6.7"},
+     {"kind": "scripture", "ref": "Acts.12.24"},
+     {"kind": "scripture", "ref": "Acts.19.20"},
+     {"kind": "data", "title": "BSB interlinear, Acts", "note": "ēuxanen (G837) with ho logos in these three verses; the verb also at 7:17"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "turner",
+    "label": "Six panels, each closed by a summary",
+    "holder": "Turner, 1898",
+    "summary": "Turner finds Acts “cut up, as it were, into six panels, each labelled with a general summary of progress”: at 6:7, 9:31, 12:24, 16:5, 19:20 and 28:31. Each panel takes the Church further: Jerusalem, Palestine, Antioch, Asia Minor, Europe, Rome.",
+    "body": [
+     "“Of these six sections the protagonist in the first three is St. Peter, in the last three St. Paul; and the two halves into which the book thus naturally falls make almost equal divisions at the middle of the whole period covered.” Turner writes as a chronologer: with so careful an artist, he holds, the divisions “are, in the absence of more precise data, the natural starting-point of investigation” into the dates of the events."
+    ],
+    "note": "The headings are Turner’s, shortened. Three of his six summaries share the words of the marker; the others (9:31, 16:5, 28:31) speak of the churches’ peace and growth and of Paul’s preaching in Rome.",
+    "markers": ["grew"],
+    "groups": [
+     {"ref": "Acts.1.1-12.24", "label": "St. Peter"},
+     {"ref": "Acts.12.25-28.31", "label": "St. Paul"}
+    ],
+    "sections": [
+     {"ref": "Acts.1.1-6.7", "label": "I. The Church in Jerusalem, and the preaching of St. Peter"},
+     {"ref": "Acts.6.8-9.31", "label": "II. Extension of the Church through Palestine; the preaching of St. Stephen"},
+     {"ref": "Acts.9.32-12.24", "label": "III. Extension to Antioch; St. Peter’s conversion of Cornelius"},
+     {"ref": "Acts.12.25-16.5", "label": "IV. Extension to Asia Minor; preaching of St. Paul in ‘Galatia’"},
+     {"ref": "Acts.16.6-19.20", "label": "V. Extension to Europe; St. Paul’s work in the great centres"},
+     {"ref": "Acts.19.21-28.31", "label": "VI. Extension to Rome; St. Paul’s captivities"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "‘Chronology of the New Testament’, in A Dictionary of the Bible, ed. James Hastings, vol. 1", "author": "C. H. Turner", "year": 1898, "url": "https://archive.org/details/dictionaryofbibl0001jame", "note": "p. 421"},
+     {"kind": "scripture", "ref": "Acts.9.31"},
+     {"kind": "scripture", "ref": "Acts.16.5"},
+     {"kind": "scripture", "ref": "Acts.28.31"}
+    ],
+    "traditions": ["C. H. Turner (1898)"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "Jerusalem, Judea and Samaria, the ends of the earth",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide takes the book’s design from Jesus’ words at 1:8: “The main themes and design of the book flow right out of this opening chapter.” “The story will begin with that message spreading in Jerusalem (chs. 2-7), into the neighboring regions of Judea and Samaria full of non-Jewish people (chs. 8-12), and from there out to the nations and the ends of the earth (chs. 13-28).”",
+    "body": [
+     "Where Turner (1898) divides at the verses summing up the Church’s growth, the guide divides by whole chapters at the places the witness reaches, and splits the last stretch at Paul’s arrest in Jerusalem (21)."
+    ],
+    "note": "The headings are those of the guide’s contents; the larger units are the guide’s reading of 1:8.",
+    "markers": ["grew"],
+    "kinds": {"frame": "The opening"},
+    "groups": [
+     {"ref": "Acts.2-7", "label": "In Jerusalem"},
+     {"ref": "Acts.8-12", "label": "Judea and Samaria"},
+     {"ref": "Acts.13-28", "label": "The ends of the earth"}
+    ],
+    "sections": [
+     {"ref": "Acts.1", "label": "Jesus Commissions His Disciples and Ascends to Heaven", "kind": "frame"},
+     {"ref": "Acts.2-7", "label": "Pentecost in Jerusalem and the Birth of the Church"},
+     {"ref": "Acts.8-12", "label": "The Jesus Community Becomes an International Movement"},
+     {"ref": "Acts.13-20", "label": "Mission to Israel and Clashes with Roman Culture"},
+     {"ref": "Acts.21-28", "label": "Paul Arrested in Jerusalem and Imprisoned in Rome"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Acts", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-acts/"},
+     {"kind": "scripture", "ref": "Acts.1.8"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
+ },
+ {
   "id": "revelation",
   "book": "Rev",
   "title": "The shape of Revelation",

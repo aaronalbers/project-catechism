@@ -45,6 +45,8 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
   image of Barton, pp. 44–46, to list them.
 - **Judges names no critics.** Moore (1895) and BibleProject were read; no later reading that keeps 1:1–2:5 and 17–21
   with the book (or answers Moore) was. *Needed:* a later commentary's introduction.
+- **Acts names no critics.** Turner (1898) and BibleProject were read; no later discussion of Turner's panels was.
+  *Needed:* a commentary introduction on the structure of Acts.
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 
