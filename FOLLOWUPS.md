@@ -25,6 +25,9 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 - **Driver and the other commentators Wiseman names** (Skinner, Keil and others, who divide Genesis at the formula)
   are reported only as Wiseman quotes them. Driver's *Genesis* (1904) and Skinner's ICC *Genesis* (1910) are public
   domain and could be read and cited as holders of the heading reading in their own right.
+- **Leviticus has no reading that answers either outline.** Driver (1891) and BibleProject were read; no response to
+  either was, so neither card names a critic. Klostermann (1877) is cited as Driver reports him. *Needed:* a later
+  treatment of the Holiness Code (Milgrom's or Knohl's) and of BibleProject's symmetry.
 - **The guides are undated.** BibleProject's guides give no date, so their readings stand last in the order
   of proposal by assumption.
 

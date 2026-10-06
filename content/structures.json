@@ -122,6 +122,108 @@
   ]
  },
  {
+  "id": "leviticus",
+  "book": "Lev",
+  "title": "The shape of Leviticus",
+  "summary": "Outlines of Leviticus differ over what holds it together. Driver sets chapters 17–26 apart as an older code built into the book, which Klostermann named the Law of Holiness; BibleProject reads the whole book as a mirror round the Day of Atonement. The words “This is the law of …” head the laws of chapters 6–7 and close those of 11–15. Two outlines are drawn here on the same verses, in the order they were proposed.",
+  "sources": [
+   {"kind": "scholarship", "title": "An Introduction to the Literature of the Old Testament", "author": "S. R. Driver", "year": 1891, "url": "https://archive.org/details/introductiontolit00driv", "note": "pp. 39–55, on Leviticus"}
+  ],
+  "markers": [
+   {
+    "id": "law-of",
+    "label": "“This is the law of …”",
+    "summary": "Thirteen verses of Leviticus have zōʾt tôrat (“this is the law of”). In chapters 6–7 the words open the laws of five offerings and sum them up at 7:37; in chapters 11–15 they come at or near the end of the laws of clean animals, childbirth, mildew, skin disease and discharges. No other verse of the book has them; 14:2 has “This shall be the law of”, with a verb between the two words.",
+    "words": ["H2063", "H8451"],
+    "quotes": [
+     {"ref": "Lev.6.9", "quote": "this is the law of the burnt offering"},
+     {"ref": "Lev.6.14", "quote": "Now this is the law of the grain offering"},
+     {"ref": "Lev.6.25", "quote": "this is the law of the sin offering"},
+     {"ref": "Lev.7.1", "quote": "Now this is the law of the guilt offering"},
+     {"ref": "Lev.7.11", "quote": "Now this is the law of the peace offering"},
+     {"ref": "Lev.7.37", "quote": "This is the law of the burnt offering, the grain offering, the sin offering, the guilt offering, the ordination offering, and the peace offering"},
+     {"ref": "Lev.11.46", "quote": "This is the law regarding animals"},
+     {"ref": "Lev.12.7", "quote": "This is the law for a woman giving birth"},
+     {"ref": "Lev.13.59", "quote": "This is the law concerning a mildew contamination"},
+     {"ref": "Lev.14.32", "quote": "This is the law for someone who has a skin disease"},
+     {"ref": "Lev.14.54", "quote": "This is the law for any infectious skin disease"},
+     {"ref": "Lev.14.57", "quote": "This is the law regarding skin diseases and mildew"},
+     {"ref": "Lev.15.32", "quote": "This is the law of him who has a discharge"}
+    ],
+    "sources": [
+     {"kind": "scripture", "ref": "Lev.6.9"},
+     {"kind": "scripture", "ref": "Lev.7.37"},
+     {"kind": "scripture", "ref": "Lev.15.32"},
+     {"kind": "data", "title": "BSB interlinear, Leviticus", "note": "zōʾt tôrat in these thirteen verses and no others"},
+     {"kind": "scholarship", "title": "An Introduction to the Literature of the Old Testament", "author": "S. R. Driver", "year": 1891, "url": "https://archive.org/details/introductiontolit00driv", "note": "pp. 41 and 43, on the formula linking 6:8–7:38 and chapters 11–15"}
+    ],
+    "confidence": "evidence"
+   }
+  ],
+  "readings": [
+   {
+    "id": "driver",
+    "label": "Priestly laws with the Law of Holiness set in",
+    "holder": "Driver, 1891",
+    "summary": "Driver reads Leviticus as part of the Priests’ Code “throughout”, in which “c. 17—26 constitute a section marked by certain special features of its own, and standing apart from the rest of the book”: laws of sacrifice, purification and atonement (1–16), the Law of Holiness (17–26), and a chapter on vows and tithes (27).",
+    "body": [
+     "He holds that “an independent—and in all probability an older—body of priestly legislation lies at the basis of c. 17—26”, set apart by its phrasing, by holiness as “the leading motive of the entire section”, by laws repeated from elsewhere, and by opening with the place of sacrifice and closing with an exhortation, as the Book of the Covenant and Deuteronomy’s code do. The name “Das Heiligkeitsgesetz”, the Law of Holiness, he credits to Klostermann in 1877.",
+     "Within 1–16 he reads 6:8–7:38 as an “independent collection of laws linked together by the same formula”, “This is the law of …”, and chapters 11–15 as “linked together by the recurring colophon” of the same words."
+    ],
+    "note": "Driver numbers by the English verses, as the BSB does (6:1-7 are 5:20-26 in the Hebrew). The headings are his.",
+    "markers": ["law-of"],
+    "kinds": {"P": "The Priests’ Code", "H": "The Law of Holiness"},
+    "groups": [
+     {"ref": "Lev.1.1-16.34", "label": "I. Fundamental Laws of Sacrifice, Purification, and Atonement"}
+    ],
+    "sections": [
+     {"ref": "Lev.1.1-6.7", "label": "Law of the five principal types of sacrifice", "kind": "P"},
+     {"ref": "Lev.6.8-7.38", "label": "A manual of priestly directions under eight heads", "kind": "P"},
+     {"ref": "Lev.8.1-10.20", "label": "The consecration of the priests, and their solemn entry upon office", "kind": "P"},
+     {"ref": "Lev.11.1-16.34", "label": "Laws of Purification and Atonement", "kind": "P"},
+     {"ref": "Lev.17.1-26.46", "label": "II. The Law of Holiness", "kind": "H"},
+     {"ref": "Lev.27.1-34", "label": "III. On the commutation of vows and tithes", "kind": "P"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "An Introduction to the Literature of the Old Testament", "author": "S. R. Driver", "year": 1891, "url": "https://archive.org/details/introductiontolit00driv", "note": "pp. 39–55"},
+     {"kind": "scripture", "ref": "Lev.17.1-26.46"},
+     {"kind": "scripture", "ref": "Lev.19.2"}
+    ],
+    "traditions": ["S. R. Driver (1891)", "A. Klostermann (1877), who named the Law of Holiness, as Driver reports"],
+    "confidence": "interpretation"
+   },
+   {
+    "id": "bibleproject",
+    "label": "A mirror round the Day of Atonement",
+    "holder": "BibleProject",
+    "summary": "BibleProject’s guide describes “an amazing symmetrical literary design”: rituals in the outer sections (1–7 and 23–25), the priests in the next (8–10 and 21–22), purity in “two matching sections” (11–15 and 18–20), and “At the center of the book (Lev. 16-17) is a key ritual, the Day of Atonement, that brings all the themes of the book together.”",
+    "body": [
+     "“Finally, the book concludes with a section (Lev. 26-27) where Moses calls Israel to be faithful to the covenant.” The guide’s mirror runs across the boundary at 17:1 that Driver draws, setting 17 with 16 at the centre."
+    ],
+    "note": "The headings are those of BibleProject’s Leviticus poster.",
+    "kinds": {"end": "The conclusion"},
+    "centre": "D",
+    "sections": [
+     {"ref": "Lev.1-7", "label": "Ritual sacrifices", "pair": "A"},
+     {"ref": "Lev.8-10", "label": "Priests ordained", "pair": "B"},
+     {"ref": "Lev.11-15", "label": "Ritual purity", "pair": "C"},
+     {"ref": "Lev.16-17", "label": "Day of Atonement", "pair": "D"},
+     {"ref": "Lev.18-20", "label": "Moral purity", "pair": "C'"},
+     {"ref": "Lev.21-22", "label": "Qualifications for priests", "pair": "B'"},
+     {"ref": "Lev.23-25", "label": "Ritual feasts", "pair": "A'"},
+     {"ref": "Lev.26-27", "label": "Call to covenant faithfulness", "kind": "end"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Guide to the Book of Leviticus", "author": "BibleProject", "url": "https://bibleproject.com/guides/book-of-leviticus/"},
+     {"kind": "scholarship", "title": "Leviticus overview poster", "author": "BibleProject", "url": "https://d1bsmz3sdihplr.cloudfront.net/media/Posters%20Download/05-Leviticus-FNL-1.jpg"},
+     {"kind": "scripture", "ref": "Lev.16.1-34"}
+    ],
+    "traditions": ["BibleProject"],
+    "confidence": "interpretation"
+   }
+  ]
+ },
+ {
   "id": "matthew",
   "book": "Matt",
   "title": "The shape of Matthew",
