@@ -258,8 +258,6 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 - **The aedicula's dating comes from a secondary page.** The stamped tiles of 146–161 are from stpetersbasilica.info,
   which cites Guarducci and Toynbee and Ward-Perkins (1956). *Needed:* the page in the excavation report, and a Commons
   photograph credited from the Commons API.
-- **"Most historians accept" in `james-death-josephus`** (written before these rules) has no source for the majority.
-  *Needed:* a source that says so, or the holders named.
 - **Paul's tomb.** The 2002–06 excavation at St Paul Outside the Walls and the 2009 dating of its sarcophagus's contents
   are left out for want of a published report. *Needed:* the report, before adding it to `paul-death-rome`.
 
