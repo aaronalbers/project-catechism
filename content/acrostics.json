@@ -223,7 +223,8 @@
  ],"sources":[
   {"kind":"scripture","ref":"Ps.145.1","note":"BSB footnote: “This psalm is an acrostic poem, each verse beginning with the successive letters of the Hebrew alphabet.”"},
   {"kind":"scripture","ref":"Ps.145.13","note":"BSB footnote: “The final two lines are supplied by one MT manuscript, LXX, Syriac, and DSS.”"},
-  {"kind":"data","title":"Berean Standard Bible interlinear tables: the Hebrew text word by word, in its own order","url":"https://bereanbible.com/bsb_tables.xlsx","note":"the words whose first letters are marked here"}
+  {"kind":"data","title":"Berean Standard Bible interlinear tables: the Hebrew text word by word, in its own order","url":"https://bereanbible.com/bsb_tables.xlsx","note":"the words whose first letters are marked here"},
+  {"kind":"scholarship","title":"Acrostics","author":"Israel Abrahams","year":1901,"url":"https://archive.org/details/jewishencycloped01sing/page/171/","note":"The Jewish Encyclopedia, vol. 1, p. 171, as printed: “cxlv. (נ line missing, but supplied in the Septuagint)”. The website’s transcription reads ג for נ."}
  ]},
  {"id":"prov31","title":"Proverbs 31:10–31","ref":"Prov.31.10-31","by":"verse","summary":"The BSB notes that verses 10–31 are an acrostic, each verse beginning with the next letter of the Hebrew alphabet. The Jewish Encyclopedia notes that in the Septuagint the pe verse comes before the ayin.","confidence":"evidence","letters":[
   {"letter":"א","ref":"Prov.31.10","word":"אשת"},

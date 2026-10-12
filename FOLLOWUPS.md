@@ -68,9 +68,6 @@ decided, and what a person needs to do.
   the Cairo Hebrew fragment does not present a complete one. The project's Sirach is the WEB, translated from the
   Greek, so the letters cannot be shown on its text. *Needed:* a Hebrew text of the chapter the reader could show
   beside it.
-- **Psalm 145 in the Jewish Encyclopedia.** Its online text says the "ג line" is missing where the Hebrew lacks the
-  nun line, most likely a misread letter in the transcription. The card cites the BSB's footnote instead. *Needed:*
-  the printed page (vol. 1, p. 171) checked before citing the article for Psalm 145.
 
 ## Scrolls (`content/scrolls.json`, the Scrolls tab), 2026-09-29
 
