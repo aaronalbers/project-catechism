@@ -433,8 +433,6 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
   Rohl's *A Test of Time*, 1995, which takes Shishak for Ramesses II) was not read.
 - **Which Jeroboam the Megiddo seal names** (`jeroboam-ii`): the note now says only what the seal says. *Needed:* who
   dates it to Jeroboam II and who to Jeroboam I, each cited.
-- **Salem** (`melchizedek`): Jerome's Letter 73, which places Melchizedek's Salem elsewhere, is printed on New Advent
-  only as a summary. *Needed:* the letter's text, then a reading beside Josephus's.
 - **Belshazzar's "father"** (`belshazzar`): "traditional commentators" still holds the predecessor or mother's-line
   reading. Keil's Evil-merodach reading is now given from his commentary. *Needed:* a named holder for the
   predecessor reading.
