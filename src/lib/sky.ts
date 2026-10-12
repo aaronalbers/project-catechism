@@ -99,6 +99,27 @@ export function altAz(h: [number, number, number]) {
   return { alt: Math.asin(Math.max(-1, Math.min(1, h[2]))) / RAD, az: ((Math.atan2(-h[1], h[0]) / RAD) + 360) % 360 };
 }
 
+/**
+ * A horizon vector raised by refraction, by astronomy-engine's 'normal' model: Sæmundsson's formula from Meeus
+ * (Astronomical Algorithms, 1991, pp. 101–102), about half a degree at the horizon and nothing overhead, tapering
+ * to nothing toward the nadir.
+ */
+export function refracted(h: [number, number, number]): [number, number, number] {
+  const alt = Math.asin(Math.max(-1, Math.min(1, h[2]))) / RAD;
+  const to = (alt + A.Refraction('normal', alt)) * RAD, horiz = Math.hypot(h[0], h[1]) || 1;
+  return [(h[0] / horiz) * Math.cos(to), (h[1] / horiz) * Math.cos(to), Math.sin(to)];
+}
+/**
+ * How many magnitudes the air dims a star at apparent altitude `alt`, beyond what it loses overhead: k (X − 1),
+ * with Rozenberg's airmass X (1966) and k = 0.20, the defaults Stellarium uses (RefractionExtinction.cpp) for a very
+ * good lowland site. Nothing is drawn through the ground below −2°.
+ */
+export function extinction(alt: number, k = 0.2): number {
+  if (alt < -2) return 0;
+  const cosZ = Math.sin(alt * RAD);
+  return k * (1 / (cosZ + 0.025 * Math.exp(-11 * cosZ)) - 1);
+}
+
 export const separation = (a: [number, number, number], b: [number, number, number]) =>
   Math.acos(Math.max(-1, Math.min(1, a[0] * b[0] + a[1] * b[1] + a[2] * b[2]))) / RAD;
 

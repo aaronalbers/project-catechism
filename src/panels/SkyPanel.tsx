@@ -7,8 +7,8 @@ import { magiInChapter, SKY_READINGS, skyEventsFor, skyNamesFor, skyNamesInChapt
 import { loadPlaces, loadSky } from '@/lib/data';
 import { formatRef } from '@/lib/refs';
 import {
-  altAz, bearing, bodyEqj, closest, deltaTHours, elongationTime, eqjOf, eveningWhenHigh, figureCentre, formatUt, horizonRotation, magnitude, moonLit,
-  observer, occultation, PLANETS, starEqj, station, stellariumUrl, sunAltitude, toHorizon, utOf, whenOf,
+  altAz, bearing, bodyEqj, closest, deltaTHours, elongationTime, eqjOf, extinction, eveningWhenHigh, figureCentre, formatUt, horizonRotation, magnitude, moonLit,
+  observer, occultation, PLANETS, refracted, starEqj, station, stellariumUrl, sunAltitude, toHorizon, utOf, whenOf,
 } from '@/lib/sky';
 import type { Place, SkyData, SkyEvent, SkyFigure, SkyName, SkyNameReading, SkyReading } from '@/lib/types';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
@@ -254,9 +254,14 @@ function SkyView({ sky, event, place, toward, lit }: { sky: SkyData; event: SkyE
     /** Puts everything where it stands at the view's time. */
     function place_(v: ViewState) {
       const rot = horizonRotation(v.ut, obs);
-      const at = (e: [number, number, number], r = SKY_R) => scenePos(toHorizon(rot, e), r);
-      sky.stars.forEach((s, i) => { const p = at(starEqj(s, v.ut)); starPos[i * 3] = p.x; starPos[i * 3 + 1] = p.y; starPos[i * 3 + 2] = p.z; });
-      starGeo.attributes.position.needsUpdate = true;
+      // Everything is drawn where it is seen: raised by refraction, and stars and planets dimmed by the air near the horizon.
+      const at = (e: [number, number, number], r = SKY_R) => scenePos(refracted(toHorizon(rot, e)), r);
+      sky.stars.forEach((s, i) => {
+        const h = refracted(toHorizon(rot, starEqj(s, v.ut))), p = scenePos(h);
+        starPos[i * 3] = p.x; starPos[i * 3 + 1] = p.y; starPos[i * 3 + 2] = p.z;
+        mags[i] = s[2] + extinction(altAz(h).alt);
+      });
+      starGeo.attributes.position.needsUpdate = true; starGeo.attributes.mag.needsUpdate = true;
       for (const s of lineSets) {
         s.pairs.forEach(([a, b], k) => { s.pos.set(starPos.subarray(a * 3, a * 3 + 3), k * 6); s.pos.set(starPos.subarray(b * 3, b * 3 + 3), k * 6 + 3); });
         s.geo.attributes.position.needsUpdate = true;
@@ -276,8 +281,8 @@ function SkyView({ sky, event, place, toward, lit }: { sky: SkyData; event: SkyE
       for (const { i, l } of starLabels) l.at.set(starPos[i * 3], starPos[i * 3 + 1], starPos[i * 3 + 2]);
       for (const { v: e, l } of conLabels) l.at.copy(at(e));
       PLANETS.forEach((p, i) => {
-        const pos = at(bodyEqj(p, v.ut, obs)); planetPos.set([pos.x, pos.y, pos.z], i * 3);
-        const m = magnitude(p, v.ut); planetMag[i] = m; planetSize[i] = Math.max(3.5, Math.min(12, 5 + (1 - m) * 1.4));
+        const h = refracted(toHorizon(rot, bodyEqj(p, v.ut, obs))), pos = scenePos(h); planetPos.set([pos.x, pos.y, pos.z], i * 3);
+        const m = magnitude(p, v.ut) + extinction(altAz(h).alt); planetMag[i] = m; planetSize[i] = Math.max(3.5, Math.min(12, 5 + (1 - m) * 1.4));
         planetLabels[i].at.copy(pos); planetLabels[i].mag = m;
       });
       planetGeo.attributes.position.needsUpdate = true; planetGeo.attributes.size.needsUpdate = true; planetGeo.attributes.mag.needsUpdate = true;
@@ -451,7 +456,9 @@ function ReadingCard({ r, here, picked, onPick }: { r: SkyReading; here: SkyEven
 function SkyNote({ ut }: { ut: number }) {
   return (
     <p className="sky-note">
-      Positions are astronomy-engine’s, for the Julian-calendar date and local mean time shown, without refraction. The
+      Positions are astronomy-engine’s, for the Julian-calendar date and local mean time shown, drawn raised by refraction (Sæmundsson’s formula) and dimmed
+      near the horizon by the air (Rozenberg’s airmass, 0.2 magnitudes for each airmass beyond the first, Stellarium’s default); the
+      altitudes and times given in words are geometric. The
       Earth’s spin has slowed unevenly, and the correction for it (ΔT, ≈{deltaTHours(ut).toFixed(1)} hours here, from
       Espenak and Meeus’s model) is itself uncertain, so an hour or an altitude is ≈; the dates of conjunctions and
       stations do not depend on it. Stars from the Yale Bright Star Catalogue, moved by their proper motions; constellation

@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import * as A from 'astronomy-engine';
 import { SKY_NAMES, SKY_READINGS } from '@/lib/content';
 import { parseRef } from '@/lib/refs';
-import { altAz, bodyEqj, closest, elongationTime, eveningWhenHigh, figureCentre, figureStars, formatUt, horizonRotation, isSolar, observer, occultation, PLANETS, station, stellariumUrl, toHorizon, utOf, whenOf } from '@/lib/sky';
+import { altAz, bodyEqj, closest, elongationTime, eveningWhenHigh, figureCentre, figureStars, formatUt, horizonRotation, isSolar, observer, occultation, PLANETS, refracted, extinction, station, stellariumUrl, toHorizon, utOf, whenOf } from '@/lib/sky';
 import type { Place, SkyData } from '@/lib/types';
 
 const data = (p: string) => JSON.parse(readFileSync(new URL(`../../public/data/${p}`, import.meta.url), 'utf8'));
@@ -22,6 +22,15 @@ describe('sky maths', () => {
     expect(utOf('1999-12-19T12:00')).toBeCloseTo(0, 9);
     expect(formatUt(utOf('-0001-12-25T05:15', 35.23417), 35.23417)).toBe('25 Dec 2 BC, 05:15');
     expect(formatUt(utOf('0000-01-10'), 0, false)).toBe('10 Jan 1 BC');
+  });
+  it('raises what is near the horizon and dims it, and leaves the zenith alone', () => {
+    const alt = (deg: number) => altAz(refracted([Math.cos(deg * Math.PI / 180), 0, Math.sin(deg * Math.PI / 180)])).alt;
+    expect(alt(0)).toBeCloseTo(A.Refraction('normal', 0), 6);
+    expect(alt(0)).toBeGreaterThan(0.4);
+    expect(alt(90)).toBeCloseTo(90, 3);
+    expect(extinction(90)).toBeCloseTo(0, 2);
+    expect(extinction(10)).toBeGreaterThan(0.8);
+    expect(extinction(-5)).toBe(0);
   });
   it('hands Stellarium Web the same instant in the Gregorian calendar it reads', () => {
     const at = { lat: 31.77667, lon: 35.23417 }, look = { az: 90, alt: 20, fov: 60 };

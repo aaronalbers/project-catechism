@@ -416,8 +416,6 @@ Kepler; Origen, *Against Celsus* 1.58–59; Chrysostom, *Homily 6 on Matthew*.
 - **Larson gives 25 December 2 BC** for Jupiter's station; astronomy-engine puts the turn on the 28th in ecliptic
   longitude (29th in right ascension). The card shows both. Whether Larson used another program, ΔT or definition of
   the station is not known.
-- **Refraction and extinction** are not drawn: positions are geometric, so a body near the horizon stands about half
-  a degree lower than seen, and stars are not dimmed there.
 - **Star names: holders cited through others.** Stern, Nöldeke and Hoffmann (kimah as Sirius, ʿash as the Pleiades)
   are cited as BDB reports them, and Dhorme (mazzaroth as Corona Borealis) and the "others" who read the zodiac as
   Reyburn reports them; none of their works was read. Dillmann, whom BDB follows for the Great Bear, was not read.
