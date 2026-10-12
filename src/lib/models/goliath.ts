@@ -27,19 +27,20 @@ function blade(len: number, w: number, flat: number, mat: THREE.Material) {
 
 /**
  * Goliath armed as 1 Sam 17:4-7 describes him, in cubits, standing at the origin facing +z. He is
- * drawn at the Masoretic text's height, six cubits and a span, which the BSB follows; the Qumran
- * scroll, the Greek and Josephus have four cubits and a span (see models.json). His body is the size
+ * drawn at the Masoretic text's height, six cubits and a span, which the BSB follows, or, as the reading
+ * `qumran`, at the four cubits and a span of the Qumran scroll, the Greek and Josephus (see models.json).
+ * The pieces worn scale with him; the spear, shield and sword keep their own sizes. His body is the size
  * figure's (scale.ts), scaled to his height, so the figure the viewer draws beside him, standing
  * where his shield-bearer went before him (v. 7), compares like with like. The text gives the
  * materials, two weights and the spear's shaft; every shape and size is reconstructed, each basis
  * recorded in models.json.
  */
-export function goliath(): THREE.Group {
+export function goliath(reading?: string): THREE.Group {
   const g = new THREE.Group();
   const part = namedPart(g);
-  const h = 6.5, H = (f: number) => f * h;
+  const h = reading === 'qumran' ? 4.5 : 6.5, H = (f: number) => f * h;
 
-  // v. 4: "six cubits and a span in height", the span taken as half a cubit.
+  // v. 4: "six cubits and a span in height" (or four and a span), the span taken as half a cubit.
   part('goliath', figure(h));
 
   // v. 5: a bronze helmet, drawn as a rounded cap with a rolled rim.

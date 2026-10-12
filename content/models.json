@@ -764,11 +764,29 @@
   "id": "goliath",
   "title": "Goliath's armour — as 1 Samuel 17 describes it",
   "verses": ["1Sam.17.1-54", "1Sam.21.9", "1Sam.22.10", "2Sam.21.19", "1Chr.20.5"],
-  "summary": "Read or play 1 Samuel 17:4–7 and the Philistine champion is armed as the text lists it: his height, then the bronze helmet and the coat of scale armour, then the bronze greaves and the javelin between his shoulders, and last the spear and the shield-bearer who walked before him. Elsewhere he is shown whole, with the sword David later drew from its sheath (17:51). The text gives two weights. The coat weighs 5,000 shekels (≈57 kg) and the spear's iron point 600 shekels (≈6.8 kg), converted on a shekel of ≈11.4 g as in the BSB's notes; the model sizes the point to that weight. His height is where the witnesses differ. The Masoretic text, which the BSB follows, has 'six cubits and a span' (≈2.9 m on a common cubit of ≈44.5 cm); the Dead Sea scroll 4QSamᵃ (1st century BC), Codex Vaticanus and the Lucianic Greek, and Josephus have 'four cubits and a span' (≈2.0 m). He is drawn at the Masoretic height, with the ordinary figure's proportions, and the size figure (≈1.66 m) stands where his shield-bearer went before him. The shapes of the pieces, the length of the spear and javelin, the shield and the sword are reconstructed; each says what it rests on, both at the step that adds it and in the list under the model. The text does not say whose pattern the armour follows. Azzan Yadin (2004), after Kurt Galling, points out that it does not match the Philistines on the Egyptian reliefs of the 12th century BC, and reads it as the Greek panoply of helmet, scale corselet, greaves and a great shield with a bearer; it has also been read as Near Eastern scale armour, or as a mixture drawn from several.",
+  "summary": "Read or play 1 Samuel 17:4–7 and the Philistine champion is armed as the text lists it: his height, then the bronze helmet and the coat of scale armour, then the bronze greaves and the javelin between his shoulders, and last the spear and the shield-bearer who walked before him. Elsewhere he is shown whole, with the sword David later drew from its sheath (17:51). The text gives two weights. The coat weighs 5,000 shekels (≈57 kg) and the spear's iron point 600 shekels (≈6.8 kg), converted on a shekel of ≈11.4 g as in the BSB's notes; the model sizes the point to that weight. His height is where the witnesses differ. The Masoretic text, which the BSB follows, has 'six cubits and a span' (≈2.9 m on a common cubit of ≈44.5 cm); the Dead Sea scroll 4QSamᵃ (1st century BC), Codex Vaticanus and the Lucianic Greek, and Josephus have 'four cubits and a span' (≈2.0 m). He is drawn at the Masoretic height by default, and at the shorter as the other reading, with the ordinary figure's proportions, and the size figure (≈1.66 m) stands where his shield-bearer went before him. The shapes of the pieces, the length of the spear and javelin, the shield and the sword are reconstructed; each says what it rests on, both at the step that adds it and in the list under the model. The text does not say whose pattern the armour follows. Azzan Yadin (2004), after Kurt Galling, points out that it does not match the Philistines on the Egyptian reliefs of the 12th century BC, and reads it as the Greek panoply of helmet, scale corselet, greaves and a great shield with a bearer; it has also been read as Near Eastern scale armour, or as a mixture drawn from several.",
   "kind": "procedural",
   "procedural": "goliath",
   "dimensions": "6 cubits and a span · ≈ 2.9 m (MT); 4 cubits and a span · ≈ 2.0 m (4QSamᵃ, LXX, Josephus)",
   "scale": {"metres": 0.445, "unit": "cubit", "at": [-2.8, 0, 3.2]},
+  "readings": [
+   {
+    "id": "masoretic",
+    "label": "Six cubits and a span (MT)",
+    "basis": "the Masoretic text of 1 Sam 17:4, which the BSB follows: 'six cubits and a span', ≈ 2.9 m on the common cubit",
+    "traditions": ["the Masoretic text, followed by the BSB", "argued for by Clyde E. Billington (2007), in reply to Hays"]
+   },
+   {
+    "id": "qumran",
+    "label": "Four cubits and a span (4QSamᵃ)",
+    "basis": "4QSamᵃ, the Dead Sea scroll of Samuel (1st century BC), the Greek of Codex Vaticanus and the Lucianic recension, and Josephus (Ant. 6.9.1) read 'four cubits and a span', ≈ 2.0 m. He is drawn at that height with everything he wears; the spear, the shield and the sword keep their sizes",
+    "traditions": ["4QSamᵃ, the Septuagint's Codex Vaticanus and Lucianic recension, and Josephus", "argued for by J. Daniel Hays (2005)"],
+    "estimates": {
+     "goliath": "four cubits and a span, the reading of 4QSamᵃ, the Greek and Josephus; the span is taken as half a cubit, so ≈ 2.0 m on the common cubit. His build is the ordinary figure's, scaled to his height; the text says nothing of it",
+     "javelin": "kidon, 'of bronze… between his shoulders', drawn slung across the back as in the other reading, and so scaled with him to ≈ 3 cubits (≈ 1.3 m); its length is not given"
+    }
+   }
+  ],
   "builds": [
    {"ref": "1Sam.17.4-7", "omits": {"sword": "vv. 4-7 do not mention it; he comes with 'sword and spear and javelin' (v. 45), and David draws it from its sheath (v. 51)"}, "steps": [
     {"ref": "1Sam.17.4", "parts": ["goliath"]},

@@ -107,7 +107,6 @@ listed.
 - **Readings the text allows but the model does not draw.** CLAUDE.md asks a model the text allows more than one
   reading of to list `readings`. These models were built before readings existed and describe the other reading only
   in their summaries:
-  - `goliath`: 4 cubits and a span, as 4QSam-a, the Septuagint and Josephus give it (1 Sam 17:4);
   - `nebuchadnezzars-statue`: a stele carved with a figure only at the top;
   - `forest-of-lebanon`: Keil and Delitzsch's 45 side rooms in three storeys round a court.
 - **Framing of tall, narrow parts** is tight: at Exod 39:29 the sash's band sits at the top edge of the view. Fixing it
