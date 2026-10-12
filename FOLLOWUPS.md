@@ -223,12 +223,6 @@ The Muratorian Fragment, the Septuagint's opening of Lamentations, Jerome on Dan
 
 - **[Needs a person]** **The British Museum number of the Amenemope papyrus (EA 10474).** The museum's collection pages refuse scripted
   requests. *Needed:* the page opened in a browser, and its URL added.
-- **Which of the Tobit copies are Aramaic and which Hebrew** ("four Aramaic copies and one Hebrew"). The Leon Levy
-  pages are titled only "4Q Tobit". *Needed:* the edition (Fitzmyer, DJD XIX, 1995) or a catalogue that says.
-- **The Masada Ben Sira scroll (Mas1h)** has no page found in the Leon Levy library. *Needed:* its catalogue page.
-- **Enoch's and Jubilees' copies:** "the oldest copied ≈200 BC", "none of the Similitudes" and "over a dozen Hebrew
-  copies" of Jubilees are from memory. *Needed:* Milik (1976) and VanderKam's edition, or the catalogue's dates.
-
 
 ## Red letters (`src/lib/redletter.ts`, the reader), 2026-10-03
 
