@@ -93,8 +93,7 @@ listed.
 - **Solomon's Temple (`solomons-temple`)**: the lions, oxen and cherubim on the stands (7:29, 36); the smaller vessels
   (7:40, 45, 50). The wall carvings (6:18, 29, 32, 35) are drawn as relief from the panelling's step (6:15) on, not
   added at their own verses.
-- **Ezekiel's temple (`ezekiels-temple`)**: the carved cherubim and palms of the house (41:17–20, 25); the hooks of
-  40:43; the kitchens of 46:19–24, which lie outside the current build (40:1–43:17), so they need a build or a step
+- **Ezekiel's temple (`ezekiels-temple`)**: the palm trees on the portico's side walls (41:26); the hooks of 40:43; the kitchens of 46:19–24, which lie outside the current build (40:1–43:17), so they need a build or a step
   of their own.
 - **New Jerusalem (`new-jerusalem`)**: the names of the tribes on the gates (21:12) and of the apostles on the
   foundations (21:14). Two things stand in the way: the text does not say which name is on which gate or which twelve

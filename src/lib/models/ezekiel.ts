@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { box, boxGeo, cylGeo, furniture, instances, meshAt, namedPart, type V3 } from './kit';
+import { box, boxGeo, carve, cherub, cylGeo, furniture, instances, meshAt, namedPart, palm, relief as reliefMap, type V3 } from './kit';
 
 const ashlar = () => new THREE.MeshStandardMaterial({ color: 0xb3a582, roughness: 0.95 });
 const paving = () => new THREE.MeshStandardMaterial({ color: 0x857761, roughness: 1 });
@@ -7,6 +7,22 @@ const earth = () => new THREE.MeshStandardMaterial({ color: 0x9a8b6a, roughness:
 const timber = () => new THREE.MeshStandardMaterial({ color: 0x9a6a3e, roughness: 0.8 });
 const relief = () => new THREE.MeshStandardMaterial({ color: 0x8c7a55, roughness: 0.9, side: THREE.DoubleSide });
 const dark = () => new THREE.MeshStandardMaterial({ color: 0x1d1a16, roughness: 1 });
+
+/**
+ * The carvings of Ezek 41:18-20 and 25: cherubim and palm trees alternating, each cherub with a man's face toward
+ * the palm on one side and a young lion's toward the palm on the other. A tile six cubits square holds a palm with
+ * half a cherub at each edge; at the seam the man's face of one tile meets the lion's of the next. Their size and
+ * drawing are not given.
+ */
+const ezekielCarving = reliefMap('ezekiel', (x) => {
+  palm(x);
+  // At the right edge the man's face, turned left toward this tile's palm; at the left edge the lion's, turned right.
+  cherub(x, 512, [() => { x.beginPath(); x.arc(500, 170, 24, 0, Math.PI * 2); x.fill(); x.beginPath(); x.moveTo(478, 166); x.lineTo(466, 178); x.lineTo(480, 182); x.fill(); }]);
+  cherub(x, 0, [() => {
+    x.beginPath(); x.arc(14, 170, 22, 0, Math.PI * 2); x.fill();
+    x.lineWidth = 7; for (let i = 0; i < 9; i++) { const a = -Math.PI / 2 + (i * Math.PI) / 8; x.beginPath(); x.moveTo(14 + 22 * Math.cos(a), 170 + 22 * Math.sin(a)); x.lineTo(14 + 36 * Math.cos(a), 170 + 36 * Math.sin(a)); x.stroke(); }
+  }]);
+});
 
 /** One step's rise, the platform's 6 cubits (41:8) over the ten steps up to it (40:49). */
 const RISE = 0.6;
@@ -215,6 +231,8 @@ export function ezekielsTemple(): THREE.Group {
   const skin = 0.15, pnl = timber();
   house('panelling', ...sides((s) => hbox(N1 - B0, H, skin, (N1 + B0) / 2, H / 2, s * (HALF - skin / 2), pnl)), hbox(skin, H, 2 * HALF, B0 + skin / 2, H / 2, 0, pnl),
     ...sides((s) => hbox(skin, H, HALF - door.w / 2, N1 - skin / 2, H / 2, s * (HALF + door.w / 2) / 2, pnl)));
+  // Cherubim and palms carved on the walls (41:17-20) and the doors of the nave (41:25).
+  carve(g.getObjectByName('panelling')!, ezekielCarving(), 6, 0.12);
   // Beveled windows (41:16), high in the walls above the side rooms.
   const winAt: V3[] = [];
   for (let x = B0 + 3; x < N1; x += 6) for (const s of [-1, 1]) winAt.push([x, hy(24), s * (HALF + 2)]);
@@ -222,9 +240,10 @@ export function ezekielsTemple(): THREE.Group {
   // The altar of wood, 3 high and 2 square, 'the table that is before the LORD' (41:22), before the inner sanctuary.
   part('wooden-altar', hbox(2, 3, 2, S0 + 4, 1.5, 0, timber()));
   // Double doors of two leaves each, to the nave and to the inner sanctuary (41:23-24), drawn closed.
-  const dm = timber();
+  const dm = timber(), di = timber(); // the nave's doors are carved (41:25), the inner sanctuary's are not said to be
   part('doors', ...[-3.75, -1.25, 1.25, 3.75].map((z) => hbox(0.3, door.h, 2.45, (N1 + P1) / 2, door.h / 2, z, dm)),
-    ...[-2.25, -0.75, 0.75, 2.25].map((z) => hbox(0.3, dh, 1.45, (S0 + S1) / 2, dh / 2, z, dm)));
+    ...[-2.25, -0.75, 0.75, 2.25].map((z) => hbox(0.3, dh, 1.45, (S0 + S1) / 2, dh / 2, z, di)));
+  for (const leaf of g.getObjectByName('doors')!.children.slice(0, 4)) carve(leaf, ezekielCarving(), 6, 0.12);
   // A wooden canopy on the front of the portico (41:25).
   part('canopy', hbox(3, 0.5, 20, P0 + 1.5, 21, 0, timber()));
   // The roofs. Ezekiel never mentions the house's; the side rooms' 'canopies' (41:26) are the nearest.

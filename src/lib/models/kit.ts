@@ -82,3 +82,58 @@ export function furniture(p: string) {
   const unit = new THREE.Group(), loose = namedPart(unit), piece = namedPart(loose(p));
   return { unit, piece: (name: string, ...c: THREE.Object3D[]) => piece(`${p}-${name}`, ...c), loose: (name: string, ...c: THREE.Object3D[]) => loose(`${p}-${name}`, ...c) };
 }
+
+/** A relief pattern, drawn white on black into a 512px canvas, for `carve`. */
+export type Relief = (ctx: CanvasRenderingContext2D) => void;
+/**
+ * A bump map drawn once by `draw` and kept, repeating; null where there is no DOM to draw it (the tests build
+ * models in Node). `key` names it in the cache.
+ */
+const reliefs = new Map<string, THREE.CanvasTexture | null>();
+export const relief = (key: string, draw: Relief) => (): THREE.CanvasTexture | null => {
+  if (reliefs.has(key)) return reliefs.get(key)!;
+  if (typeof document === 'undefined') { reliefs.set(key, null); return null; }
+  const c = document.createElement('canvas'); c.width = c.height = 512;
+  const x = c.getContext('2d')!;
+  x.fillStyle = '#000'; x.fillRect(0, 0, 512, 512);
+  x.fillStyle = x.strokeStyle = '#fff'; x.lineCap = x.lineJoin = 'round';
+  draw(x);
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  reliefs.set(key, t);
+  return t;
+};
+/**
+ * Carves every box in `o` with `tex`: gives each its own copy of its geometry, its UVs scaled so one tile is
+ * `tile` units on every face, and its material the relief as a bump map.
+ */
+export function carve<T extends THREE.Object3D>(o: T, tex: THREE.Texture | null, tile: number, bump: number): T {
+  if (!tex) return o;
+  o.traverse((m) => {
+    const mesh = m as THREE.Mesh;
+    if (!mesh.isMesh || !(mesh.geometry instanceof THREE.BoxGeometry)) return;
+    const { width: w, height: h, depth: d } = mesh.geometry.parameters, geo = mesh.geometry.clone(), uv = geo.attributes.uv;
+    // Faces in BoxGeometry's order: ±x (u along depth), ±y (u along width, v along depth), ±z (u along width).
+    const sizes: [number, number][] = [[d, h], [d, h], [w, d], [w, d], [w, h], [w, h]];
+    for (let i = 0; i < uv.count; i++) { const [su, sv] = sizes[Math.floor(i / 4)]; uv.setXY(i, (uv.getX(i) * su) / tile, (uv.getY(i) * sv) / tile); }
+    mesh.geometry = geo;
+    const mat = mesh.material as THREE.MeshStandardMaterial; mat.bumpMap = tex; mat.bumpScale = bump;
+  });
+  return o;
+}
+/** A carved palm tree in the middle of a relief tile: a trunk and fronds. */
+export function palm(x: CanvasRenderingContext2D) {
+  x.lineWidth = 16; x.beginPath(); x.moveTo(256, 430); x.lineTo(256, 190); x.stroke();
+  x.lineWidth = 9;
+  for (const [dx, dy] of [[-90, 30], [-70, -20], [-30, -50], [30, -50], [70, -20], [90, 30]]) { x.beginPath(); x.moveTo(256, 190); x.quadraticCurveTo(256 + dx * 0.6, 190 + dy - 20, 256 + dx, 190 + dy + 30); x.stroke(); }
+}
+/**
+ * A carved cherub standing at the tile's edge `cx` (0 or 512), half on this tile and half on the next, its wings
+ * raised towards the palm; `heads` draws its head or heads.
+ */
+export function cherub(x: CanvasRenderingContext2D, cx: number, heads: (() => void)[]) {
+  const s = cx ? -1 : 1;
+  for (const h of heads) h();
+  x.beginPath(); x.moveTo(cx - 34, 205); x.lineTo(cx + 34, 205); x.lineTo(cx + 44, 420); x.lineTo(cx - 44, 420); x.closePath(); x.fill();
+  x.lineWidth = 12; x.beginPath(); x.moveTo(cx + s * 30, 225); x.quadraticCurveTo(cx + s * 110, 160, cx + s * 150, 100); x.stroke();
+  x.beginPath(); x.moveTo(cx + s * 30, 245); x.quadraticCurveTo(cx + s * 100, 220, cx + s * 140, 150); x.stroke();
+}
