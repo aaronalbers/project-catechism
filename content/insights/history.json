@@ -659,7 +659,7 @@
    "The earliest Hellenistic Jewish writer in Alexandria, the chronographer Demetrius, who carries his chronology to the reign of Ptolemy IV, quotes Genesis in the Septuagint's wording, as Swete shows phrase by phrase. The translator of Sirach, who came to Egypt 'in the thirty-eighth year of Energetes the king', writes that 'the law itself, and the prophecies, and the rest of the books, have no small difference, when they are spoken in their original language.'"
   ],
   "sources": [
-   {"kind": "primary", "title": "Letter of Aristeas", "note": "read in Swete's summary and quotations, §8"},
+   {"kind": "primary", "title": "Letter of Aristeas", "author": "tr. H. St. J. Thackeray", "year": 1904, "url": "https://archive.org/details/letteraristeas00englgoog", "note": "Swete's summary (§8) checked against the translation: Demetrius 'being keeper of the king's library' (§9), 'the law in gold in the Jewish characters' (§176), the translators 'arriving at an agreement on each point by comparing each others' work' (§302), 'the translation was accomplished in seventy-two days' (§307), and the curse on anyone who revises it (§311). Thackeray notes that Demetrius 'was never the royal librarian'"},
    {"kind": "primary", "title": "Aristobulus, in Eusebius, Preparation for the Gospel 13.12.2", "note": "quoted in Swete §9"},
    {"kind": "primary", "title": "Philo, Life of Moses 2.5–7", "note": "quoted in Swete §9"},
    {"kind": "primary", "title": "Sirach, the translator's prologue", "note": "World English Bible: 'having come into Egypt in the thirty-eighth year of Energetes the king'"},

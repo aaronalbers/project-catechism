@@ -532,7 +532,8 @@ Badged `consensus` as of 2017, on Jannes Smith's "most scholars today agree" (Bi
 and Kahle's plural origin are told as history with the answers given them; no one was found holding either now. No
 `since` is given: Swete's 1914 remark predates Kahle's challenge, and no source read dates the agreement after it.
 
-- **The Letter of Aristeas, Aristobulus and Philo are read in Swete's quotations**, not in an edition.
+- **Aristobulus and Philo are read in Swete's quotations**, not in an edition. (The Letter of Aristeas is now checked
+  against Thackeray's translation, 1904.)
 - **Kahle and Grätz are second-hand**, through Ravasco and Swete; Kahle's *The Cairo Geniza* (1947) and Grätz's
   article were not read, nor Tov's and Fernández Marcos's replies.
 - **No modern survey read.** Jobes and Silva's *Invitation to the Septuagint* (2nd ed., 2015) and Dines's *The
