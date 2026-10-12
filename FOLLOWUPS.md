@@ -22,7 +22,6 @@ decided, and what a person needs to do.
   (1972), Barr (1976), Luz (1985), Neirynck (1967, 1988) and Brown (1997) are cited as Weren's *Biblica* survey (2006)
   reports them, and the cards say "as Weren reports". *Needed:* a copy of each to check the divisions and the views
   attributed to it, then drop the "as Weren reports".
-- **Bacon's 1918 *Expositor* article** ("The Five Books of Matthew against the Jews") is not cited, as it was not read.
 - **Weren's own outline is left unanswered.** No response to it was read, so its card names no critic where the others
   do. *Needed:* a later survey of Matthew's structure that discusses it.
 - **Genesis's heading reading is read through Woudstra.** Holwerda's lectures (1946), Külling (1964) and Gispen (1966)

@@ -653,10 +653,11 @@
    {
     "id": "bacon",
     "label": "Five books",
-    "holder": "Bacon, 1930",
+    "holder": "Bacon, 1918 and 1930",
     "summary": "Bacon divides Matthew into a preamble, five “books” and an epilogue. Each book is a narrative followed by a discourse and closed by the formula “when Jesus had finished”, which he compares to the five books of Moses, “each body of law introduced by a narrative of considerable length”.",
     "body": [
-     "Bacon reads the formula as the end of each book, and Matthew 1–2 and 26–28 as standing outside the five. He reports the five-fold division as “no recent discovery”, recognised by critics “a half-century ago”.",
+     "Bacon first set out the plan in 1918, answering J. Rendel Harris’s case for a lost five-book Book of Testimonies by Matthew: the five books are the Gospel’s own, “a five-fold torah of Jesus, a double pentad of the sayings and doings of the ministry, preceded by a Prologue describing His Davidic birth and Infancy, and closed by an Epilogue relating the Passion and Resurrection.” There he writes that the formula “is not so much a rounding-off of the preceding discourse, as a link by which the narrative which follows is coupled on”, and that the fifth “closes the fifth book” and leads over to the epilogue.",
+     "In 1930 Bacon reads the formula as the end of each book, and Matthew 1–2 and 26–28 as standing outside the five. He reports the five-fold division as “no recent discovery”, recognised by critics “a half-century ago”.",
      "Weren reports that R. E. Brown largely follows Bacon, and that C. R. Smith (1997) argues for the five books from the alternation of narrative and discourse. Against Bacon, Weren cites Rolland, Barr and Luz, who read the formula as linking a discourse to what follows rather than closing it, and himself calls the placing of 26–28 outside the books “hardly convincing, since these chapters are indisputably the dramatic climax”."
     ],
     "note": "Bacon closes each book with its formula (7:28-29, 11:1, 13:53, 19:1a, 26:1), drawn here with the discourse it closes; 19:1b and 26:2, which the verse numbers join to it, go with it too. The verse boundaries are those Weren tabulates from Bacon; Bacon’s own contents give the same divisions by chapter.",
@@ -685,11 +686,12 @@
     ],
     "sources": [
      {"kind": "scholarship", "title": "Studies in Matthew", "author": "Benjamin W. Bacon", "year": 1930, "url": "https://biblicalstudies.gospelstudies.org.uk/pdf/e-books/bacon_b-w/studies-in-matthew_bacon.pdf", "note": "Preface, pp. xiv–xvii; contents, pp. xxii–xxiii; pp. 81–82"},
+     {"kind": "scholarship", "title": "‘The “Five Books” of Matthew against the Jews’", "author": "Benjamin W. Bacon", "year": 1918, "url": "https://archive.org/details/expositor-1875_1918_15", "note": "The Expositor, 8th series, vol. 15, pp. 56–66"},
      {"kind": "scholarship", "title": "‘The Macrostructure of Matthew’s Gospel: A New Proposal’", "author": "Wim J. C. Weren", "year": 2006, "url": "https://www.bsw.org/biblica/vol-87-2006/the-macrostructure-of-matthew-s-gospel-a-new-proposal/100/article-p172.html", "note": "Biblica 87, pp. 172–176: Bacon’s books in verses, those who follow him, and those who answer him"},
      {"kind": "scripture", "ref": "Matt.7.28"},
      {"kind": "scripture", "ref": "Matt.26.1"}
     ],
-    "traditions": ["B. W. Bacon (1930)", "R. E. Brown (1997), largely, as Weren reports", "Answered by Ph. Rolland (1972), D. L. Barr (1976) and U. Luz (1985), as Weren reports, and by W. J. C. Weren (2006)"],
+    "traditions": ["B. W. Bacon (1918, 1930)", "R. E. Brown (1997), largely, as Weren reports", "Answered by Ph. Rolland (1972), D. L. Barr (1976) and U. Luz (1985), as Weren reports, and by W. J. C. Weren (2006)"],
     "confidence": "interpretation"
    },
    {
