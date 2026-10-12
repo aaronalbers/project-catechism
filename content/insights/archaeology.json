@@ -861,18 +861,19 @@
   "summary": "The BSB's 'He will see the light of life' follows a word the standard Hebrew text lacks. The Great Isaiah Scroll from Qumran, copied ≈125 BC, has it, and so does the Greek Septuagint: the servant 'will see light'.",
   "body": [
    "The Masoretic text of Isaiah, the form copied in the medieval codices, reads 53:11 yirʾeh yisbaʿ — 'he shall see, he shall be satisfied' — with nothing for him to see. Translations made from it supply an object ('he shall see it', the JPS) or read 'see the fruit of'.",
-   "The Great Isaiah Scroll (1QIsaᵃ), found in Qumran Cave 1 in 1947, holds all 66 chapters of Isaiah in 54 columns on 7.34 metres of parchment. The Israel Museum dates it ≈125 BC, from its script — about a thousand years older than the oldest Hebrew Bibles known before. At 53:11 it reads yirʾeh ʾor, 'he will see light'.",
+   "The Great Isaiah Scroll (1QIsaᵃ), found in Qumran Cave 1 in 1947, holds all 66 chapters of Isaiah in 54 columns on 7.34 metres of parchment. The Israel Museum dates it ≈125 BC, from its script — about a thousand years older than the oldest Hebrew Bibles known before. At 53:11 it reads yirʾeh ʾor, 'he will see light': Fred P. Miller's notes on the scroll mark ʾor as an extra word in column XLIV, line 19, and the BSB's footnote gives the scroll as its source for 'the light of life'.",
    "The Septuagint, translated from a Hebrew text centuries before the medieval codices, has the same word: 'to shew him light' (Brenton's English). The BSB, like the NIV and NRSV, reads 'light'; others, such as the ESV, keep the Masoretic reading.",
-   "Elsewhere the scroll and the Masoretic text differ mostly in spelling."
+   "The Israel Museum describes the scroll's text as generally conforming to the Masoretic, with 'alternative spellings, scribal errors, corrections, and most fundamentally, many variant readings', which it counts at 'well over 2,600'."
   ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Isaiah_Scroll_Ch53.jpg/500px-Great_Isaiah_Scroll_Ch53.jpg", "caption": "Isaiah 53 in the Great Isaiah Scroll (1QIsaᵃ), Israel Museum, Jerusalem.", "credit": "Photograph by Ardon Bar-Hama, Wikimedia Commons", "creditUrl": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg", "license": "Public domain"}
   ],
   "sources": [
-   {"kind": "archaeology", "title": "The Great Isaiah Scroll (1QIsaᵃ), Israel Museum HU 95.57/27", "url": "http://dss.collections.imj.org.il/isaiah", "note": "'Dating from ca. 125 BCE … some one thousand years older than the oldest manuscripts of the Hebrew Bible known to us before'"},
+   {"kind": "archaeology", "title": "The Great Isaiah Scroll (1QIsaᵃ), Israel Museum HU 95.57/27", "url": "http://dss.collections.imj.org.il/isaiah", "note": "'Dating from ca. 125 BCE … some one thousand years older than the oldest manuscripts of the Hebrew Bible known to us before'; 'Strictly speaking, the number of textual variants is well over 2,600'"},
+   {"kind": "data", "title": "The Great Isaiah Scroll, column XLIV (Isaiah 52:13–54:4), notes", "author": "Fred P. Miller", "year": 1999, "url": "http://www.ao.net/~fmoeller/qum-44.htm", "note": "'Line 19 … 6th word: Q = an extra word \" 'or\" (light)'"},
    {"kind": "primary", "title": "Isaiah 53:11, Septuagint, tr. L. C. L. Brenton (1851)", "url": "https://ebible.org/eng-Brenton/ISA53.htm", "note": "'to take away from the travail of his soul, to shew him light'"},
    {"kind": "primary", "title": "Isaiah 53:11, Masoretic text", "url": "https://www.sefaria.org/Isaiah.53.11", "note": "מֵעֲמַל נַפְשׁוֹ יִרְאֶה יִשְׂבָּע, no object for 'see'"},
-   {"kind": "scripture", "ref": "Isa.53.11"}
+   {"kind": "scripture", "ref": "Isa.53.11", "note": "BSB footnote: 'DSS (see also LXX); MT does not include the light of life.'"}
   ],
   "confidence": "evidence",
   "related": ["pesher-habakkuk", "ketef-hinnom-scrolls"]

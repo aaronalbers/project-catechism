@@ -138,8 +138,6 @@ the card attributes to it.
   - From memory, not checked: Aretas IV's death ≈AD 40 and what dates it (`aretas-and-antipas`); Botta's start at
     Khorsabad in 1843 (`sargon-samaria`); Rawlinson's 1863 identification of Pul, which rests on the Jewish
     Encyclopedia, an article that also misdates Pul's Babylonian reign (`tiglath-pileser-menahem-pul`).
-  - The Great Isaiah Scroll's reading yirʾeh ʾor at 53:11 is stated from memory and not checked against a
-    transcription (`great-isaiah-scroll-light`). The Septuagint and Masoretic readings were checked.
   - Whiting's "Jerusalem's Locust Plague" (*National Geographic*, December 1915) is the written eyewitness account
     behind the photographs. archive.org has only its cover, so `joel-locusts-1915` cites the photographs alone.
 - **The three days** (`content/passion.json`): Rusk, "The Day He Died" (*Christianity Today*, 1974); Torrey (1907);
@@ -453,9 +451,8 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
   connects Simeon's fall in Numbers 26 with Peor (`num26-census`; Rashi on 26:13, checked, does not); John 19:14 read
   as counted from midnight or as a copyist's slip (`passion.json`); 𝔓66 "some argue 4th century" (`fragments.json`);
   "local Christian tradition" for Ananias's chapel; Jethro, Reuel and Hobab ("some commentators", "others").
-- **Uniqueness and majority claims without a source:** the Black Obelisk as "the only known ancient picture of an
-  Israelite king or his envoy" (`black-obelisk-jehu`); the Great Isaiah Scroll differing from the Masoretic text
-  "mostly in spelling" (`great-isaiah-scroll-light`, and `fragments.json`).
+- **A uniqueness claim without a source:** the Black Obelisk as "the only known ancient picture of an Israelite king
+  or his envoy" (`black-obelisk-jehu`).
 
 
 ## The eclipse in the year of Bur-Sagale (`bur-sagale-eclipse`, `bur-sagale-which-eclipse`), 2026-10-04
