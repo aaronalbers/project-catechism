@@ -101,8 +101,9 @@ listed.
   seated in `sealed-scroll`, are not drawn. That looks like a deliberate choice rather than a gap; it needs a decision
   either way.
 - **House of the Forest of Lebanon (`forest-of-lebanon`)**: the vessels (1 Kgs 10:21) and where the house stood.
-- **Widow's lepta (`widows-lepta`)**: the legend round the star (Aramaic or Paleo-Hebrew, "Yehonatan the King") is not
-  drawn. The coin type carries it, and the model's sources describe it.
+- **Widow's lepta (`widows-lepta`)**: the legend between the star's rays is drawn as schematic strokes, since the
+  sources read give it only in English ("Yehonatan the King"). *Needed:* a numismatic catalogue's Hebrew reading of
+  the legend (Hendin, Meshorer), to draw its letters.
 - **Readings the text allows but the model does not draw.** CLAUDE.md asks a model the text allows more than one
   reading of to list `readings`. These models were built before readings existed and describe the other reading only
   in their summaries:

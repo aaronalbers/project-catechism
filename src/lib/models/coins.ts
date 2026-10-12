@@ -23,6 +23,36 @@ const star: Device = (ctx) => {
   for (let i = 0; i < 40; i++) { const a = (i * Math.PI) / 20; ctx.beginPath(); ctx.arc(256 + 225 * Math.cos(a), 256 + 225 * Math.sin(a), 9, 0, Math.PI * 2); ctx.fill(); }
 };
 
+/**
+ * The star with its Paleo-Hebrew legend, "Yehonatan the King", between the rays (Harvard 2008.2.23). The letters
+ * are schematic strokes, ten of them in the eight spaces, not drawn letter by letter. The legend is drawn mirrored,
+ * since this face is seen from the back of its geometry.
+ */
+const starWithLegend: Device = (ctx) => {
+  star(ctx);
+  const glyphs: [number, number][][][] = [
+    [[[0.7, 0], [0.3, 0.3], [0.7, 0.55]], [[0.5, 0.42], [0.5, 1]]],
+    [[[0.75, 0], [0.75, 1]], [[0.2, 0], [0.75, 0]], [[0.2, 0.3], [0.75, 0.3]], [[0.2, 0.6], [0.75, 0.6]]],
+    [[[0.2, 0], [0.5, 0.35], [0.8, 0]], [[0.5, 0.35], [0.5, 1]]],
+    [[[0.35, 0], [0.65, 0.3], [0.4, 0.5], [0.6, 1]]],
+    [[[0.2, 0.15], [0.8, 0.85]], [[0.8, 0.15], [0.2, 0.85]]],
+  ];
+  ctx.save(); ctx.translate(512, 0); ctx.scale(-1, 1);
+  ctx.lineWidth = 9; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  const per = [2, 1, 1, 1, 1, 1, 1, 2];
+  let n = 0;
+  per.forEach((count, gap) => {
+    const mid = ((gap + 0.5) * Math.PI) / 4;
+    for (let k = 0; k < count; k++) {
+      const a = mid + (k - (count - 1) / 2) * 0.24, g = glyphs[n++ % glyphs.length];
+      ctx.save(); ctx.translate(256 + 140 * Math.cos(a), 256 + 140 * Math.sin(a)); ctx.rotate(a + Math.PI / 2); ctx.translate(-17, -24);
+      for (const line of g) { ctx.beginPath(); line.forEach(([x, y], i) => ctx[i ? 'lineTo' : 'moveTo'](x * 34, y * 48)); ctx.stroke(); }
+      ctx.restore();
+    }
+  });
+  ctx.restore();
+};
+
 /** The bump map for one face; none where there is no DOM to draw it (the tests build models in Node). */
 function relief(legend: string, device: Device): THREE.CanvasTexture | null {
   if (typeof document === 'undefined') return null;
@@ -79,14 +109,14 @@ function lepton(name: string, diameterMm: number, thicknessMm: number, seed: num
   const span = r * 2.3, off = [0.03 * Math.cos(seed), 0.03 * Math.sin(seed)];
   for (let i = 0; i < uv.count; i++) uv.setXY(i, pos.getX(i) / span + 0.5 + off[0], pos.getY(i) / span + 0.5 + off[1]);
   // The back face shows the same geometry's back side, so its outline matches the flan's; its design
-  // reads mirrored, which the star (symmetric, and drawn without its legend) does not show.
+  // reads mirrored, so the star's legend is drawn mirrored to read the right way round.
   const face = (z: number, text: string, device: Device) => {
     const m = new THREE.Mesh(faceGeo, new THREE.MeshStandardMaterial({ color, metalness: 0.35, roughness: 0.75, bumpMap: relief(text, device), bumpScale: 0.08, side: z < 0 ? THREE.BackSide : THREE.FrontSide }));
     m.position.z = z;
     g.add(m);
   };
   face(t / 2 + t * 0.25 + 0.0005, 'ΒΑΣΙΛΕΩΣ ΑΛΕΞΑΝΔΡΟΥ', anchor);
-  face(-t / 2 - t * 0.25 - 0.0005, '', star);
+  face(-t / 2 - t * 0.25 - 0.0005, '', starWithLegend);
   return g;
 }
 
