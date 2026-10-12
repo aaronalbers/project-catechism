@@ -86,8 +86,6 @@ decided, and what a person needs to do.
   is cited from Susan R. Garrett's and Frederick W. Danker's summaries on Fortress Press's page; the book was not read.
   Gregory's thesis (2003) was read only in his own *Tyndale Bulletin* summary (2002). *Needed:* both read, and with
   them Gregory and Rowe's *Rethinking the Unity and Reception of Luke and Acts* (2010), which may hold further readings.
-- **Luke–Acts: BibleProject's videos not checked.** Its reading is cited from its guides to Luke and Acts. What the
-  overview and Luke–Acts series videos say of it was not read, as YouTube's captions could not be fetched.
 - **Luke–Acts: the manuscripts are cited through Gregory.** That the two did not circulate together rests on Gregory's
   summary; the codices themselves were not checked (𝔓75 is remembered, not read, as holding Luke and John). *Needed:* the
   editions, and a source for whether Henry J. Cadbury coined the name "Luke–Acts" (1927), if the card is to say so.
@@ -183,8 +181,10 @@ The list aims to include every BibleProject video, wherever it applies.
   but bibleproject.com doesn't list them) and the separate BibleProject Podcast channel. *Needed:* confirm each is
   BibleProject's, then add them.
 - **Verse tags are partly judgement.** Where a video's page has study questions, its passages come from them.
-  Otherwise the passages were tagged from knowledge of the video, not checked against its content. *Needed:* check
-  the tags of each video without study questions against what it covers.
+  Otherwise the passages were tagged from knowledge of the video, not checked against its content, and the records do
+  not say which tags came from study questions. *Needed:* check the tags of each video against what it covers. The
+  captions can be read with the `youtube-transcript-api` Python package, though YouTube's own caption URLs refuse
+  scripted requests.
 
 ## Books beyond the 66, recorded 2026-09-29
 
@@ -482,7 +482,6 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
 - **Uniqueness and majority claims without a source:** the Black Obelisk as "the only known ancient picture of an
   Israelite king or his envoy" (`black-obelisk-jehu`); the Great Isaiah Scroll differing from the Masoretic text
   "mostly in spelling" (`great-isaiah-scroll-light`, and `fragments.json`).
-- **Four videos have no summary** (`videos.json`: bp-0RdKXK2Tm7w, bp-X9kuM-fL7Y4, bp-XqyQeI_VB5c, bp-V-jUmwxq5FE).
 
 
 ## The eclipse in the year of Bur-Sagale (`bur-sagale-eclipse`, `bur-sagale-which-eclipse`), 2026-10-04
