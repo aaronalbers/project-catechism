@@ -466,7 +466,11 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
 
 When a feature falls short of complete or correct (a source that could not be found or verified, a claim dropped
 or left vague for want of one, a citation not checked, a piece its neighbours have missing), record it in
-`FOLLOWUPS.md` with why and what is needed, and remove the entry once it is done. Once built, a feature should be
+`FOLLOWUPS.md` with why and what is needed, and remove the entry once it is done. Tag an entry **[Needs a person]** once it
+is established that only a person can close it: a question or decision for the author, or an attempt that failed for a
+reason no automated attempt can get round (a paywall, a site that refuses scripted requests, a work shown to be
+unavailable online). Not when one only might be needed, as after a search that found nothing yet. Say what was tried
+or what has to be decided. Once built, a feature should be
 as complete as it can be, so anything the text describes of it that it leaves undrawn is a follow-up. Ideas for new things (another
 model, another view) go in `IDEAS.md` instead, and one turned down moves to its Declined section with why.
 

@@ -9,6 +9,12 @@ complete as it can be: anything the text describes of it that it leaves out belo
 Ideas for new things (another model, another word study, another view) are not follow-ups: leaving one out
 does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 
+An entry starting **[Needs a person]** has been found to need a person: a question or decision for the project's
+author, or an attempt that failed for a reason no automated attempt can get round (a paywall, a site that refuses
+scripted requests, a work shown to be unavailable online). A gap that a person might be needed for, such as a search
+that found nothing yet or a copy that may exist elsewhere, is not tagged. It says what was tried, or what has to be
+decided, and what a person needs to do.
+
 ## Book outlines (`content/structures.json`, the Shape tab), 2026-10-06
 
 - **Most of Matthew's outlines read through Weren, not their authors.** Bacon (1930) and BibleProject's guide were
@@ -98,9 +104,10 @@ listed.
   40:43; the kitchens of 46:19–24, which lie outside the current build (40:1–43:17), so they need a build or a step
   of their own.
 - **New Jerusalem (`new-jerusalem`)**: the angels at the gates (Rev 21:12); the names of the tribes on the gates (21:12)
-  and of the apostles on the foundations (21:14); the twelve kinds of fruit (22:2). The glory of God and the throne
-  are also undrawn, as is the One seated in `sealed-scroll`. That looks like a deliberate choice rather than a gap;
-  it needs a decision either way.
+  and of the apostles on the foundations (21:14); the twelve kinds of fruit (22:2).
+- **[Needs a person]** **God and the throne undrawn.** The glory of God and the throne in `new-jerusalem`, and the One
+  seated in `sealed-scroll`, are not drawn. That looks like a deliberate choice rather than a gap; it needs a decision
+  either way.
 - **House of the Forest of Lebanon (`forest-of-lebanon`)**: the vessels (1 Kgs 10:21) and where the house stood.
 - **Widow's lepta (`widows-lepta`)**: the legend round the star (Aramaic or Paleo-Hebrew, "Yehonatan the King") is not
   drawn. The coin type carries it, and the model's sources describe it.
@@ -148,7 +155,7 @@ the card attributes to it.
 - **Reigns** (`content/monarchy.json`):
   - Kitchen's c. 925 BC for Shishak's campaign: the date was confirmed as the conventional one, but no page
     quoting Kitchen's book giving it was found.
-  - Galil's reading flags four synchronisms his dates miss (Ahaziah, Uzziah, Jotham, Hezekiah) without saying
+  - **[Needs a person]** Galil's reading flags four synchronisms his dates miss (Ahaziah, Uzziah, Jotham, Hezekiah) without saying
     why, because his arguments (1996) couldn't be read online. His dates come from a site transcribing his tables.
     *Needed:* his book, for his own explanation of each, as the Thiele and Young readings have.
 
@@ -164,7 +171,7 @@ the card attributes to it.
 
 The chiasms aim to include every known chiastic structure. These are left out for want of a checkable source for
 their levels:
-- **The Tower of Babel (Gen 11:1–9)**: Wenham's palistrophe, centred on 11:5. His exact levels haven't been confirmed
+- **[Needs a person]** **The Tower of Babel (Gen 11:1–9)**: Wenham's palistrophe, centred on 11:5. His exact levels haven't been confirmed
   from any accessible source.
 - **Matthew 13, Jonah 1, Luke's travel narrative (Kenneth Bailey)**: proposals whose
   levels weren't verified. Each can go in once there's a source to check its levels against.
@@ -184,7 +191,7 @@ The list aims to include every BibleProject video, wherever it applies.
 - **No interlinear, Strong's or word studies.** No open tagged Greek text of these books exists yet. STEPBible's TAGOT
   is announced as "coming soon". *Needed:* when it is released, build their interlinear from it. The panels say
   why they're empty until then.
-- **Verse numbering is noted by hand, not mapped.** Jubilees uses CrossWire's editor's verse numbers rather than
+- **[Needs a person]** **Verse numbering is noted by hand, not mapped.** Jubilees uses CrossWire's editor's verse numbers rather than
   Charles's (its `note` says where they drift), and the WEB deuterocanon's numbering is taken as given, so a
   reference can point at different words in another edition. The Copenhagen Alliance's versification working group
   publishes Paratext's standard schemes as JSON mappings (github.com/youversion/versification-specification, which
@@ -209,7 +216,7 @@ The list aims to include every BibleProject video, wherever it applies.
   to people; the links were reviewed by speaker (408 pairs) and the mistakes fixed or pinned in `people.test.ts`,
   but the casting itself (who speaks, and its alternative readings) is Glyssen's and has only been spot-checked.
   *Needed:* a review of the books with the most dialogue (Genesis, Samuel, the Gospels, Acts) against the text.
-- **Some speakers have no person link.** "'Some of those present' — John 12:4 names Judas Iscariot" (Mark 14:4–5),
+- **[Needs a person]** **Some speakers have no person link.** "'Some of those present' — John 12:4 names Judas Iscariot" (Mark 14:4–5),
   "The narrator (Matthew)", and from Glyssen the disciple whom Jesus loved in John and a speaker its matching
   cannot place (Jesus as "the Lord" in Acts 9:10, the voice like a trumpet in Revelation 1:10) are left unlinked. *Needed:* a
   decision on whether a row may link to someone a parallel passage or tradition names, and how it would say so.
@@ -220,7 +227,7 @@ The Muratorian Fragment, the Septuagint's opening of Lamentations, Jerome on Dan
 1 Esdras, Irenaeus, Eusebius on Papias, Tertullian on Hebrews, and the catalogue pages of 1QIsa-a, 1QpHab, 4Q196–200,
 4Q201, 4Q216, 7Q2 and 11Q5 were read and linked. Still unchecked:
 
-- **The British Museum number of the Amenemope papyrus (EA 10474).** The museum's collection pages refuse scripted
+- **[Needs a person]** **The British Museum number of the Amenemope papyrus (EA 10474).** The museum's collection pages refuse scripted
   requests. *Needed:* the page opened in a browser, and its URL added.
 - **Which of the Tobit copies are Aramaic and which Hebrew** ("four Aramaic copies and one Hebrew"). The Leon Levy
   pages are titled only "4Q Tobit". *Needed:* the edition (Fitzmyer, DJD XIX, 1995) or a catalogue that says.
@@ -268,7 +275,7 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 
 ## Medicine cards on the passion (`content/insights/medicine.json`), 2026-10-03
 
-- **Edwards, Gabel & Hosmer (JAMA 1986) quoted from a reprint.** The quotations ("serous pleural and pericardial
+- **[Needs a person]** **Edwards, Gabel & Hosmer (JAMA 1986) quoted from a reprint.** The quotations ("serous pleural and pericardial
   fluid", "exhaustion asphyxia", the closing sentence) were read from the catholicculture.org reprint. JAMA's page,
   opened in a browser, shows only the abstract, which agrees in substance (death "primarily from hypovolemic shock and
   exhaustion asphyxia"; "dead when taken down from the cross") but not word for word. *Needed:* a check of the
