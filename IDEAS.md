@@ -75,8 +75,11 @@ A card whose marks would get noisy can use `narrows.only` (commands, or before a
   It could be a second reading in the order diagram.
 - **A scroll ring on the Links circle.** An outer ring on `LinkCircle` grouping the books into their Hebrew books and
   scrolls.
-- **The New Testament.** Luke–Acts as two volumes by one author (Acts 1:1), and the New Testament's chapter and verse
-  history. The Scrolls tab shows only in the Old Testament at present.
+- **The New Testament's codices.** Its earliest copies are codices, not scrolls, and some held several books together
+  (the Gospels, Paul's letters). Which books each early codex holds, and in what order, would be the New Testament's
+  counterpart to the scrolls that held several books; each needs its edition or the library's catalogue.
+- **Letters read as several joined.** Some scholars read 2 Corinthians and Philippians as several letters joined into
+  one, the opposite of a split. Each partition is an `interpretation` that needs its holders and its critics read.
 
 ## Book outlines
 

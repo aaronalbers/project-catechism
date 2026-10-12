@@ -76,6 +76,15 @@ does not make anything here wrong or incomplete. They go in `IDEAS.md`.
 - **Two holders on the Cyrus-decree overlap not read.** Japhet (1968) and Williamson (1977) are now confirmed and
   linked, and both argue that Chronicles and Ezra–Nehemiah are by different hands; that they read the repeated lines
   as a link between the two was not checked in either work.
+- **Luke–Acts: Parsons and Pervo read only through their endorsers.** *Rethinking the Unity of Luke and Acts* (1993)
+  is cited from Susan R. Garrett's and Frederick W. Danker's summaries on Fortress Press's page; the book was not read.
+  Gregory's thesis (2003) was read only in his own *Tyndale Bulletin* summary (2002). *Needed:* both read, and with
+  them Gregory and Rowe's *Rethinking the Unity and Reception of Luke and Acts* (2010), which may hold further readings.
+- **Luke–Acts: BibleProject's videos not checked.** Its reading is cited from its guides to Luke and Acts. What the
+  overview and Luke–Acts series videos say of it was not read, as YouTube's captions could not be fetched.
+- **Luke–Acts: the manuscripts are cited through Gregory.** That the two did not circulate together rests on Gregory's
+  summary; the codices themselves were not checked (𝔓75 is remembered, not read, as holding Luke and John). *Needed:* the
+  editions, and a source for whether Henry J. Cadbury coined the name "Luke–Acts" (1927), if the card is to say so.
 
 ## Models (`content/models.json`), recorded 2026-09-29
 

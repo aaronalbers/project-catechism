@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { follow, useFeatureInView, useStore } from '@/app/store';
 import { SCROLLS } from '@/lib/content';
 import { loadCircle } from '@/lib/data';
-import { HEBREW, hebrewOf, overlapsOf, strip, type Span } from '@/lib/scrolls';
+import { HEBREW, hebrewOf, isHebrew, overlapsOf, strip, unitOf, type Span } from '@/lib/scrolls';
 import { THE_66, book, formatRef, type VerseLoc } from '@/lib/refs';
-import type { HebrewBook } from '@/lib/types';
+import type { HebrewBook, ScrollUnit } from '@/lib/types';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
 import { cardId } from '@/lib/catalog';
 import { NUMBER } from '@/components/Scrolls';
@@ -35,19 +35,21 @@ function Row({ spans, total, current, go }: { spans: Span[]; total: number; curr
 /**
  * The Hebrew book being read, with the same verses divided as the Greek, the English and the chapters divide them.
  * Where the Hebrew is one book (Samuel) its row has no break at all; where it is one scroll of several books (the
- * Twelve) the break is dotted, for the blank lines between them.
+ * Twelve) the break is dotted, for the blank lines between them. One work's volumes (Luke and Acts) are laid end to
+ * end, the break between volumes solid.
  */
-function ScrollStrip({ h, verses, loc }: { h: HebrewBook; verses: Map<string, number[]>; loc: VerseLoc }) {
+function ScrollStrip({ h, verses, loc }: { h: ScrollUnit; verses: Map<string, number[]>; loc: VerseLoc }) {
   const s = useMemo(() => strip(h, verses, loc), [h, verses, loc]);
   if (!s.total) return null;
   const go = (x: Span) => follow({ book: x.book, chapter: x.chapter ?? 1, verse: 1 });
   const cursor = s.at === null ? null : pct(s.at + 0.5, s.total);
-  // Where the Hebrew has blank lines between books, drawn as dotted breaks on its row.
-  const gaps = h.kind === 'scroll' ? s.english.slice(1).map((x) => x.start) : [];
+  // Where the Hebrew has blank lines between books, drawn as dotted breaks on its row; between volumes, a solid one.
+  const gaps = h.kind === 'scroll' || h.kind === 'volumes' ? s.english.slice(1).map((x) => x.start) : [];
+  const hebrew = isHebrew(h);
   return (
     <div className="scroll-strip">
       <div className="scroll-labels" aria-hidden="true">
-        <div>Hebrew</div>{s.greek && <div>Greek</div>}<div>English</div><div className="ch">Chapters</div>
+        <div>{hebrew ? 'Hebrew' : 'Work'}</div>{s.greek && <div>Greek</div>}<div>{hebrew ? 'English' : 'Books'}</div><div className="ch">Chapters</div>
       </div>
       <div className="scroll-bars">
         <Row spans={[s.hebrew]} total={s.total} current={() => true} go={go} />
@@ -60,7 +62,7 @@ function ScrollStrip({ h, verses, loc }: { h: HebrewBook; verses: Map<string, nu
           ))}
         </div>
         {/* A dotted break on the Hebrew row where the scroll leaves blank lines, and the verse being read, across every row. */}
-        {gaps.map((x) => <span key={x} className="scroll-gap" style={{ left: pct(x, s.total) }} aria-hidden="true" />)}
+        {gaps.map((x) => <span key={x} className={`scroll-gap${h.kind === 'volumes' ? ' volume' : ''}`} style={{ left: pct(x, s.total) }} aria-hidden="true" />)}
         {cursor && <span className="scroll-cursor" style={{ left: cursor }} aria-hidden="true" />}
       </div>
     </div>
@@ -133,33 +135,47 @@ function OrderDiagram({ verses, current }: { verses: Map<string, number[]>; curr
   );
 }
 
-const KIND_TEXT: Record<NonNullable<HebrewBook['kind']>, string> = { book: 'One book in Hebrew', scroll: 'One scroll in Hebrew' };
+const KIND_TEXT: Record<NonNullable<ScrollUnit['kind']>, string> = { book: 'One book in Hebrew', scroll: 'One scroll in Hebrew', volumes: 'Read as two volumes of one work' };
 
-/** Where the book being read sits in the Hebrew Bible: its scroll against the later divisions, and the order of all of them. */
+/** When chapters and verse numbers were added, which the New Testament shares with the Old. */
+function Numbering() {
+  return SCROLLS.numbering.map((n) => (
+    <div key={n.id} className="scroll-numbering">
+      <h4><span style={{ flex: 1 }}>{n.label}, {n.when}</span><ConfidenceBadge c={n.confidence} /></h4>
+      <p>{n.summary}</p>
+      <SourceList sources={n.sources} />
+    </div>
+  ));
+}
+
+/**
+ * Where the book being read sits in the Hebrew Bible: its scroll against the later divisions, and the order of all of
+ * them. In the New Testament, the work a book is a volume of.
+ */
 export function ScrollsPanel() {
   const loc = useStore((s) => s.loc);
   const verses = useVerseCounts();
-  const h = hebrewOf(loc.book);
+  const h = unitOf(loc.book);
   useFeatureInView();
   if (!h) {
     return <div className="panel-body"><div className="empty">
-      <p>The Hebrew Bible’s books and scrolls are the Old Testament’s.</p>
-      <small>Open an Old Testament book to see where it stands among them.</small>
+      <p>The Hebrew Bible’s books and scrolls are the Old Testament’s; in the New Testament, Luke and Acts, which some read as volumes of one work.</p>
+      <small>Open an Old Testament book, Luke or Acts, to see where it stands.</small>
     </div></div>;
   }
-  const overlaps = overlapsOf(h);
+  const overlaps = overlapsOf(h), hebrew = isHebrew(h);
   return (
     <div className="panel-body scroll-pane">
-      <div className="panel-title">In the Hebrew Bible</div>
+      <div className="panel-title">{hebrew ? 'In the Hebrew Bible' : 'In the New Testament'}</div>
       <div className="card" id={cardId({ kind: 'scroll', id: h.id })}>
-        <h3><span style={{ flex: 1 }}>{h.name}</span><ConfidenceBadge c={SCROLLS.confidence} /></h3>
+        <h3><span style={{ flex: 1 }}>{h.name}</span><ConfidenceBadge c={h.confidence ?? SCROLLS.confidence} /></h3>
         <div className="verses">
-          <span className="chip">{h.part}</span>
+          {hebrew && <span className="chip">{h.part}</span>}
           {h.kind && <span className="chip">{KIND_TEXT[h.kind]}{h.gap ? `, ${NUMBER[h.gap]} blank lines between books` : ''}</span>}
         </div>
         {verses ? <ScrollStrip h={h} verses={verses} loc={loc} /> : <div className="loading">Loading…</div>}
         <p className="summary">{h.summary ?? (h.books.length === 1 ? `${book(h.books[0])?.name} is one book in Hebrew and English alike; only its chapters and verse numbers are later.` : '')}</p>
-        <SourceList sources={h.sources ?? SCROLLS.sources.filter((s) => s.url?.includes('Bava_Batra.14b'))} />
+        <SourceList sources={h.sources ?? SCROLLS.sources.filter((s) => s.url?.includes('Bava_Batra.14b'))} traditions={h.traditions} />
       </div>
       {overlaps.map(({ o, here, there }) => (
         <div key={o.id} className="card" id={cardId({ kind: 'scroll', id: o.id })}>
@@ -169,19 +185,20 @@ export function ScrollsPanel() {
           <SourceList sources={o.sources} traditions={o.traditions} />
         </div>
       ))}
-      <div className="card" id={cardId({ kind: 'scroll', id: SCROLLS.id })}>
-        <h3><span style={{ flex: 1 }}>{SCROLLS.title}</span><ConfidenceBadge c={SCROLLS.confidence} /></h3>
-        {verses && <OrderDiagram verses={verses} current={h} />}
-        <p className="summary">{SCROLLS.summary}</p>
-        {SCROLLS.numbering.map((n) => (
-          <div key={n.id} className="scroll-numbering">
-            <h4><span style={{ flex: 1 }}>{n.label}, {n.when}</span><ConfidenceBadge c={n.confidence} /></h4>
-            <p>{n.summary}</p>
-            <SourceList sources={n.sources} />
-          </div>
-        ))}
-        <SourceList sources={SCROLLS.sources} />
-      </div>
+      {hebrew ? (
+        <div className="card" id={cardId({ kind: 'scroll', id: SCROLLS.id })}>
+          <h3><span style={{ flex: 1 }}>{SCROLLS.title}</span><ConfidenceBadge c={SCROLLS.confidence} /></h3>
+          {verses && <OrderDiagram verses={verses} current={h} />}
+          <p className="summary">{SCROLLS.summary}</p>
+          <Numbering />
+          <SourceList sources={SCROLLS.sources} />
+        </div>
+      ) : (
+        <div className="card">
+          <h3><span style={{ flex: 1 }}>Chapters and verses</span></h3>
+          <Numbering />
+        </div>
+      )}
     </div>
   );
 }

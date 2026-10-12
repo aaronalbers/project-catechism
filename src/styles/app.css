@@ -827,6 +827,7 @@ dialog.peek::backdrop { background: rgb(0 0 0 / 0.4); }
 .scroll-ch.here { background: var(--scroll); }
 .scroll-ch:hover { background: color-mix(in oklab, var(--scroll) 40%, transparent); }
 .scroll-gap { position: absolute; top: 3px; height: 16px; border-left: 2px dotted var(--muted); transform: translateX(-1px); pointer-events: none; }
+.scroll-gap.volume { top: 0; height: 22px; border-left-style: solid; }
 .scroll-cursor { position: absolute; top: -3px; bottom: -3px; width: 2px; transform: translateX(-1px); background: var(--text); border-radius: 1px; pointer-events: none; }
 
 .scroll-order { margin: 10px 0 4px; }

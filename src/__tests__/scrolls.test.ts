@@ -12,6 +12,11 @@ describe('scrolls', () => {
     expect(seamsInChapter('Ruth', 1)).toEqual({ before: null, after: null });
     expect(seamsInChapter('Matt', 1)).toEqual({ before: null, after: null });
     expect(seamsInChapter('Joel', 1).before?.h.kind).toBe('scroll');
+    // Acts is read as Luke's second volume, though John stands between them.
+    expect(seamsInChapter('Luke', 24).after).toMatchObject({ from: 'Luke', to: 'Acts', h: { kind: 'volumes' } });
+    expect(seamsInChapter('Acts', 1).before?.from).toBe('Luke');
+    expect(seamsInChapter('John', 21)).toEqual({ before: null, after: null });
+    expect(seamsInChapter('Acts', 28).after).toBeNull();
   });
   it('counts the seams and repeated words in a chapter', () => {
     expect(scrollMarksInChapter('Ezra', 1)).toBe(1);
@@ -19,6 +24,8 @@ describe('scrolls', () => {
     expect(scrollMarksInChapter('2Chr', 36)).toBe(1);
     expect(scrollMarksInChapter('Obad', 1)).toBe(2);
     expect(scrollMarksInChapter('Gen', 2)).toBe(0);
+    expect(scrollMarksInChapter('Luke', 24)).toBe(1);
+    expect(scrollMarksInChapter('Matt', 28)).toBe(0);
   });
   it('finds the repeated words from either end', () => {
     expect(overlapsAt({ book: '2Chr', chapter: 36, verse: 22 })[0]?.there).toBe('Ezra.1.1-3');

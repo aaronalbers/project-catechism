@@ -16,7 +16,7 @@ import { ShapePanel } from '@/panels/ShapePanel';
 import { markersAt } from '@/lib/structure';
 import { WorthPanel } from '@/panels/WorthPanel';
 import { pricesAt, pricesInChapter } from '@/lib/prices';
-import { hebrewOf, scrollMarksInChapter } from '@/lib/scrolls';
+import { scrollMarksInChapter, unitOf } from '@/lib/scrolls';
 import { namedInChapter, usePeopleInBook } from '@/lib/people';
 import { Grip } from './Grip';
 import { Icon } from './Icons';
@@ -90,7 +90,7 @@ export function useTabs() {
   // the three days; the Scrolls tab only for the Old Testament, whose books the Hebrew Bible divides otherwise; the Worth tab
   // only for chapters that name a sum of money; the Shape tab only for books whose outlines are charted; the Sky tab only for chapters a reading of the star of the Magi points to, or that name a star.
   const tabs = TABS.filter((t) => (t.id !== 'reigns' || accountAt(loc) || showing('reigns')) && (t.id !== 'days' || passionInChapter(loc.book, loc.chapter) || showing('days'))
-    && (t.id !== 'scrolls' || hebrewOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth'))
+    && (t.id !== 'scrolls' || unitOf(loc.book) || showing('scrolls')) && (t.id !== 'worth' || pricesInChapter(loc.book, loc.chapter).length || showing('worth'))
     && (t.id !== 'sky' || skyInChapter(loc.book, loc.chapter) || showing('sky')) && (t.id !== 'shape' || structureOf(loc.book) || showing('shape')));
   return { tabs, counts };
 }

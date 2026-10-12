@@ -9,19 +9,24 @@ export const NUMBER = ['no', 'one', 'two', 'three', 'four', 'five'];
 
 /**
  * A dashed rule where an English book begins or ends but the Hebrew runs on: one book the Greek split (Samuel), or
- * separate books on one scroll with blank lines between (the Twelve).
+ * separate books on one scroll with blank lines between (the Twelve). In the New Testament, where one book is read as
+ * the next volume of another (Acts after Luke), it says so and who reads it how.
  */
 export function SeamNote({ seam: { h, from, to }, side }: { seam: Seam; side: 'before' | 'after' }) {
-  const one = h.kind === 'book';
-  const text = side === 'before'
-    ? one ? <>No break here in the Hebrew: {name(from)} and {name(to)} are one book, {h.name}. The split came later, from Greek and Latin Bibles.</>
-      : <>Same scroll in the Hebrew: {name(from)} runs on into {name(to)} after {NUMBER[h.gap!]} blank lines.</>
-    : one ? <>The book runs on: in the Hebrew, {name(to)} carries straight on from here.</>
-      : <>The scroll runs on: in the Hebrew, {name(to)} follows after {NUMBER[h.gap!]} blank lines.</>;
+  const one = h.kind === 'book', volumes = h.kind === 'volumes';
+  const text = volumes
+    ? side === 'before'
+      ? <>{name(to)} opens by recalling “my first book”, {name(from)}, written to the same Theophilus. BibleProject reads them as one work in two volumes; Parsons and Pervo, as two narratives by one author.</>
+      : <>{name(to)}, written to the same Theophilus, opens by recalling this book and tells its last scene again. English Bibles put John between them.</>
+    : side === 'before'
+      ? one ? <>No break here in the Hebrew: {name(from)} and {name(to)} are one book, {h.name}. The split came later, from Greek and Latin Bibles.</>
+        : <>Same scroll in the Hebrew: {name(from)} runs on into {name(to)} after {NUMBER[h.gap!]} blank lines.</>
+      : one ? <>The book runs on: in the Hebrew, {name(to)} carries straight on from here.</>
+        : <>The scroll runs on: in the Hebrew, {name(to)} follows after {NUMBER[h.gap!]} blank lines.</>;
   return (
     <div className={`seam ${side}${one ? ' one' : ''}`}>
       <span className="kind">{h.name}</span>{' '}{text}{' '}
-      <button className="marks-toggle" onClick={() => openTab('scrolls', { feature: cardId({ kind: 'scroll', id: h.id }) })}>See the scroll</button>
+      <button className="marks-toggle" onClick={() => openTab('scrolls', { feature: cardId({ kind: 'scroll', id: h.id }) })}>{volumes ? 'See the volumes' : 'See the scroll'}</button>
     </div>
   );
 }

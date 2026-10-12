@@ -513,14 +513,19 @@ export interface Video {
 }
 
 /**
- * One of the Hebrew Bible's twenty-four books (content/scrolls.json), in the Talmud's order (Bava Batra 14b), and the
- * English books it covers. `kind` is set when it covers more than one: `book` for one book the Greek split (Samuel),
- * `scroll` for separate books copied on one scroll with `gap` blank lines between them (the Torah, the Twelve).
+ * English books that were one unit before the English divided them, and the kind of unit: `book` for one book the
+ * Greek split (Samuel), `scroll` for separate books copied on one scroll with `gap` blank lines between them (the
+ * Torah, the Twelve), `volumes` for one work its author wrote in volumes (Luke and Acts, as some read them), not
+ * necessarily next to each other in English Bibles. A unit that is a reading carries its own `confidence` and
+ * `traditions`.
  */
-export interface HebrewBook {
-  id: string; name: string; part: 'Torah' | 'Prophets' | 'Writings'; books: string[];
-  kind?: 'book' | 'scroll'; gap?: number; summary?: string; sources?: Source[];
+export interface ScrollUnit {
+  id: string; name: string; books: string[];
+  kind?: 'book' | 'scroll' | 'volumes'; gap?: number; summary?: string; sources?: Source[];
+  confidence?: Confidence; traditions?: string[];
 }
+/** One of the Hebrew Bible's twenty-four books (content/scrolls.json), in the Talmud's order (Bava Batra 14b). */
+export interface HebrewBook extends ScrollUnit { part: 'Torah' | 'Prophets' | 'Writings' }
 /** The same words at the end of one book and the start of another (Cyrus's decree), and what is made of it. */
 export interface ScrollOverlap { id: string; a: Ref; b: Ref; summary: string; confidence: Confidence; traditions?: string[]; sources: Source[] }
 /** When chapters and verse numbers were added. */
@@ -528,6 +533,8 @@ export interface Numbering { id: string; label: string; when: string; summary: s
 export interface Scrolls {
   id: string; title: string; summary: string; confidence: Confidence; sources: Source[];
   hebrew: HebrewBook[];
+  /** The New Testament's books that are read as parts of one unit; each one not listed stands alone. */
+  newTestament: ScrollUnit[];
   /** The Greek names of the books the Greek split, where they differ from the English. */
   greek: Record<string, string>;
   overlaps: ScrollOverlap[]; numbering: Numbering[];

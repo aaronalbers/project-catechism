@@ -1,26 +1,32 @@
 // Where the English books sit in the Hebrew Bible's twenty-four: which ones were one book (Samuel) or shared one
 // scroll (the Twelve), so the reader can mark a break the Hebrew does not have, and the Scrolls tab can lay the
-// Hebrew, Greek and English divisions over the same stretch of text.
+// Hebrew, Greek and English divisions over the same stretch of text. In the New Testament, the books read as volumes
+// of one work (Luke and Acts) are marked the same way.
 import { SCROLLS } from './content';
 import { book, contains, parseRef, type VerseLoc } from './refs';
-import type { HebrewBook, Ref, ScrollOverlap } from './types';
+import type { HebrewBook, Ref, ScrollOverlap, ScrollUnit } from './types';
 
 export const HEBREW = SCROLLS.hebrew;
 const byBook = new Map(HEBREW.flatMap((h) => h.books.map((b) => [b, h] as const)));
+const ntByBook = new Map(SCROLLS.newTestament.flatMap((u) => u.books.map((b) => [b, u] as const)));
 
 /** The Hebrew book (or scroll) an English book is part of; none for the New Testament and the books beyond the 66. */
 export const hebrewOf = (id: string): HebrewBook | undefined => byBook.get(id);
+/** The unit an English book is part of: its Hebrew book, or in the New Testament the work it is a volume of. */
+export const unitOf = (id: string): ScrollUnit | undefined => byBook.get(id) ?? ntByBook.get(id);
+/** Whether a unit is one of the Hebrew Bible's books. */
+export const isHebrew = (u: ScrollUnit): u is HebrewBook => 'part' in u;
 
-/** A break between two English books that fall in one Hebrew book or scroll. */
-export interface Seam { h: HebrewBook; from: string; to: string }
+/** A break between two English books that fall in one unit: a Hebrew book or scroll, or one work's volumes. */
+export interface Seam { h: ScrollUnit; from: string; to: string }
 /** The seam an English book opens with (2 Samuel, after 1 Samuel), if the Hebrew runs on into it. */
 export function seamBefore(id: string): Seam | null {
-  const h = hebrewOf(id), i = h?.books.indexOf(id) ?? -1;
+  const h = unitOf(id), i = h?.books.indexOf(id) ?? -1;
   return h && i > 0 ? { h, from: h.books[i - 1], to: id } : null;
 }
 /** The seam an English book closes on (1 Samuel, before 2 Samuel), if the Hebrew runs on past it. */
 export function seamAfter(id: string): Seam | null {
-  const h = hebrewOf(id), i = h?.books.indexOf(id) ?? -1;
+  const h = unitOf(id), i = h?.books.indexOf(id) ?? -1;
   return h && i >= 0 && i < h.books.length - 1 ? { h, from: id, to: h.books[i + 1] } : null;
 }
 /** The seams in a chapter: before its first verse (in chapter 1), after its last (in the book's last chapter). */
@@ -46,29 +52,29 @@ export function overlapsInChapter(id: string, chapter: number): OverlapEnd[] {
     return r?.start.book === id && r.start.chapter === chapter;
   });
 }
-/** The overlaps touching a Hebrew book, from its side. */
-export const overlapsOf = (h: HebrewBook): OverlapEnd[] =>
+/** The overlaps touching a unit, from its side. */
+export const overlapsOf = (h: ScrollUnit): OverlapEnd[] =>
   SCROLLS.overlaps.flatMap((o) => [{ o, here: o.a, there: o.b }, { o, here: o.b, there: o.a }]).filter((e) => h.books.includes(parseRef(e.here)!.start.book));
 
 /** The name the Greek gives a book, where it differs from the English one. */
 export const greekName = (id: string): string | undefined => SCROLLS.greek[id];
 
-/** A run of verses in a strip row: [start, end) in verses from the start of the Hebrew book. `books` are the English
+/** A run of verses in a strip row: [start, end) in verses from the start of the unit. `books` are the English
  *  books a Greek span covers when it covers more than one (Esdras B: Ezra and Nehemiah). */
 export interface Span { label: string; start: number; end: number; book: string; chapter?: number; books?: string[] }
 export interface Strip {
   total: number;
   hebrew: Span; greek: Span[] | null; english: Span[]; chapters: Span[];
-  /** Verses from the start of the Hebrew book to `loc`, or null when `loc` is outside it. */
+  /** Verses from the start of the unit to `loc`, or null when `loc` is outside it. */
   at: number | null;
 }
 
 /**
- * The strip for a Hebrew book: one span for the Hebrew, the English books, the Greek ones where the Greek
+ * The strip for a unit (a Hebrew book, or one work's volumes): one span for the whole, the English books, the Greek ones where the Greek
  * named them otherwise (Kingdoms, Paraleipomena; English books the Greek keeps as one share a span), and the
  * chapters, sized by `verses` (per chapter, by book).
  */
-export function strip(h: HebrewBook, verses: Map<string, number[]>, loc: VerseLoc): Strip {
+export function strip(h: ScrollUnit, verses: Map<string, number[]>, loc: VerseLoc): Strip {
   const english: Span[] = [], chapters: Span[] = [];
   let n = 0, at: number | null = null;
   for (const id of h.books) {

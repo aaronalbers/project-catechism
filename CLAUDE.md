@@ -287,9 +287,13 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   each with the English books it covers. One the Greek split (Samuel) is `kind: 'book'`; separate books copied on one
   scroll (the Torah, the Twelve) are `kind: 'scroll'` with the `gap` in blank lines. The reader draws a dashed seam
   where an English book begins or ends inside one, and a note under words repeated across a book's end (`overlaps`:
-  Cyrus's decree); the Scrolls tab (Old Testament only) lays the Hebrew, Greek, English and chapter divisions on one
-  strip and draws the two orders against each other. A test fails the build if the Hebrew books do not cover the Old
-  Testament once in runs of consecutive books, a join cites no primary source, or an overlap's first verses differ.
+  Cyrus's decree); the Scrolls tab lays the Hebrew, Greek, English and chapter divisions on one strip and draws the
+  two orders against each other. `newTestament` lists the New Testament's books read as one unit, each a `kind:
+  'volumes'` for one work its author wrote in volumes (Luke and Acts, with John between them in English Bibles); that
+  is a reading, so it is an `interpretation` naming who reads it so and who does not, and the tab shows only in its
+  books. A test fails the build if the Hebrew books do not cover the Old Testament once in runs of consecutive books,
+  a join cites no primary source, an overlap's first verses differ, or a New Testament unit is in two units, names a
+  book outside the New Testament or is badged other than `interpretation`.
 
 - Counts (`content/tallies.json`) are numbers the text lists group by group (a census). Each row quotes
   the BSB's own figure in its verse, and the reader draws a bar under that verse on one scale, filled

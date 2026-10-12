@@ -181,11 +181,11 @@ export const CATALOG: CatalogSection[] = [
   },
   {
     id: 'scrolls', kind: 'scroll', title: 'Scrolls', tab: 'scrolls',
-    blurb: 'Where the Hebrew Bible has no break between two English books, or copies several on one scroll, and where one book ends with the words the next begins with.',
+    blurb: 'Where the Hebrew Bible has no break between two English books, or copies several on one scroll, where one book ends with the words the next begins with, and the New Testament books read as volumes of one work.',
     entries: sorted([
-      ...HEBREW.filter((h) => h.kind).map((h) => ({
-        id: h.id, kind: 'scroll' as const, title: `${h.name}: ${h.kind === 'book' ? 'one book' : 'one scroll'}`, summary: h.summary ?? '',
-        go: `${h.books[1]}.1.1`, lines: [{ label: h.kind === 'book' ? 'Split at' : 'Books begin', refs: h.books.slice(1).map((id) => `${id}.1.1`) }],
+      ...[...HEBREW, ...SCROLLS.newTestament].filter((h) => h.kind).map((h) => ({
+        id: h.id, kind: 'scroll' as const, title: `${h.name}: ${h.kind === 'book' ? 'one book' : h.kind === 'volumes' ? 'read as two volumes' : 'one scroll'}`, summary: h.summary ?? '',
+        go: `${h.books[1]}.1.1`, lines: [{ label: h.kind === 'book' ? 'Split at' : h.kind === 'volumes' ? 'Volumes begin' : 'Books begin', refs: (h.kind === 'volumes' ? h.books : h.books.slice(1)).map((id) => `${id}.1.1`) }],
       })),
       ...SCROLLS.overlaps.map((o) => ({
         id: o.id, kind: 'scroll' as const, title: `${formatRef(o.a)} and ${formatRef(o.b)}`, summary: o.summary,

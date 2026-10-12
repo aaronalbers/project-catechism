@@ -30,7 +30,7 @@ const evidential = new Set(['scripture', 'archaeology', 'primary', 'lexicon', 'd
 
 /** Every curated record that carries a `sources` array, flattened to (id, source) pairs. */
 const citations = (): { id: string; s: Source }[] =>
-  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...ACROSTICS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings, SCROLLS, ...SCROLLS.hebrew, ...SCROLLS.overlaps, ...SCROLLS.numbering,
+  [...INSIGHTS, ...CANONS, ...PEOPLE, ...PROPHECIES, ...QUOTES, ...FRAGMENTS, ...WRITERS, ...SPEAKERS, ...CHIASMS, ...ACROSTICS, ...RULERS, ...MODELS, ...JOURNEYS, ...TALLIES, MONARCHY, ...MONARCHY.anchors, PASSION, ...PASSION.readings, SCROLLS, ...SCROLLS.hebrew, ...SCROLLS.newTestament, ...SCROLLS.overlaps, ...SCROLLS.numbering,
     ...STRUCTURES, ...STRUCTURES.flatMap((st) => [...st.markers, ...st.readings]),
     ...PROFILES, ...PROFILES.flatMap((p) => (p.later ?? []).map((n) => ({ id: p.id, sources: n.sources })))]
     .flatMap((x) => ((x as { id: string; sources?: Source[] }).sources ?? []).map((s) => ({ id: x.id, s })));
@@ -756,11 +756,27 @@ describe('content integrity', () => {
       }
     }
     for (const id of Object.keys(SCROLLS.greek)) expect(SCROLLS.hebrew.find((h) => h.books.includes(id))?.kind, `a Greek name for ${id}, which the Hebrew does not join to another book`).toBe('book');
-    for (const x of [SCROLLS, ...SCROLLS.overlaps, ...SCROLLS.numbering]) {
-      expect(x.sources.length, x.id).toBeGreaterThan(0);
+    for (const x of [SCROLLS, ...SCROLLS.newTestament, ...SCROLLS.overlaps, ...SCROLLS.numbering]) {
+      expect(x.sources?.length, x.id).toBeGreaterThan(0);
       if (x.confidence === 'interpretation') expect((x as { traditions?: string[] }).traditions?.length, x.id).toBeGreaterThan(0);
     }
     expect(SCROLLS.sources.some((s) => evidential.has(s.kind))).toBe(true);
+  });
+  it('a New Testament unit joins New Testament books, each in one unit, says what kind it is, and names who reads it so', () => {
+    const nt = THE_66.filter((b) => b.testament === 'NT').map((b) => b.id);
+    const covered = SCROLLS.newTestament.flatMap((u) => u.books);
+    expect(new Set(covered).size, 'a New Testament book is in two units').toBe(covered.length);
+    for (const u of SCROLLS.newTestament) {
+      expect(u.books.length, u.id).toBeGreaterThan(1);
+      for (const id of u.books) expect(nt, `${u.id}: ${id} is not a New Testament book`).toContain(id);
+      expect(u.books.map((id) => nt.indexOf(id)), `${u.id}'s books are not in the English order`).toEqual(u.books.map((id) => nt.indexOf(id)).sort((a, b) => a - b));
+      expect(u.kind, `${u.id} says what kind of unit it is`).toBeTruthy();
+      expect(u.summary, u.id).toBeTruthy();
+      expect(u.sources?.some((s) => evidential.has(s.kind)), `${u.id} cites no primary source`).toBe(true);
+      // That books were written as volumes of one work is a reading of them.
+      if (u.kind === 'volumes') expect(u.confidence, u.id).toBe('interpretation');
+      if (u.confidence === 'interpretation') expect(u.traditions?.length, u.id).toBeGreaterThan(0);
+    }
   });
   it('words repeated across a book\'s end are the same words in the BSB, and end one book and open another', () => {
     const first = (ref: string) => {
