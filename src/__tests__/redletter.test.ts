@@ -33,6 +33,10 @@ describe.skipIf(!existsSync(new URL('speakers/', data)))('red letters', () => {
     expect(red('Luke', 22, 67)).toEqual(['“If I tell you, you will not believe.']); // “If You are the Christ, tell us.” Jesus answered, …
     expect(red('Matt', 21, 16)).toEqual(['“Yes,”', '“Have you never read: ‘From the mouths of children and infants You have ordained praise’?”']);
   });
+  it('colours his words where another quotes them, as a red-letter edition does', () => {
+    expect(red('Acts', 20, 35)).toEqual(['It is more blessed to give than to receive.']); // Paul quoting the Lord Jesus
+    expect(red('Rev', 22, 14)).toEqual([]); // black in the red-letter edition too
+  });
   it('carries a speech across verses, and through the quotations inside it', () => {
     expect(red('Matt', 13, 51)).toEqual(['Have you understood all these things?”']);
     expect(red('Matt', 22, 45)).toEqual(['So if David calls Him ‘Lord,’ how can He be David’s son?”']); // after “ ‘ “ ” ’ in 22:44

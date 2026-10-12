@@ -3,6 +3,16 @@ import type { BibleBook, SpeakersInBook } from './types';
 /** TIPNR's id for Jesus, as Glyssen's speakers are linked to it. */
 export const JESUS = 'G2424G';
 
+/**
+ * Words of Jesus that someone else quotes, which Glyssen gives to the speaker quoting them: book → verse → the BSB's
+ * words, found in the verse and printed red. Each is red in a red-letter edition: The New Testament, Red Letter
+ * Edition (Cleveland: World Publishing Company), p. 130, prints Acts 20:35's saying in red. Its Revelation 22:14-15
+ * are black, as the BSB's quotation marks leave them.
+ */
+export const QUOTED_WORDS: Record<string, Record<string, string>> = {
+  Acts: { '20.35': 'It is more blessed to give than to receive.' },
+};
+
 /** A stretch of a verse's text, [from, to) in characters. */
 export type Span = [number, number];
 
@@ -32,7 +42,8 @@ function attributed(text: string, q: Quote, prevEnd: number, nextStart: number):
  * or, first in its verse, is his unless the next one that is attributed is his (they take turns: “If You are the
  * Christ, tell us.” Jesus answered, …). Quotations inside his speech (‘…’, and “…” inside those, as in his parables)
  * are part of it. Words the BSB does not put in quotation marks stay black even where Glyssen gives them to him
- * (Rev 22:14-15, after the BSB closes his words at 22:13).
+ * (Rev 22:14-15, after the BSB closes his words at 22:13). Words of his that another quotes are added from
+ * `QUOTED_WORDS`.
  */
 export function wordsOfJesus(bible: BibleBook, speakers: SpeakersInBook): Map<string, Span[]> {
   const out = new Map<string, Span[]>();
@@ -81,6 +92,8 @@ export function wordsOfJesus(bible: BibleBook, speakers: SpeakersInBook): Map<st
       open = stack.length > 0;
       openIsJesus = open && !!quotes.at(-1)!.jesus;
       const spans = quotes.filter((q) => q.jesus).map((q): Span => [q.from, q.to]);
+      const quoted = QUOTED_WORDS[bible.id]?.[key], at = quoted ? text.indexOf(quoted) : -1;
+      if (at >= 0) spans.push([at, at + quoted!.length]);
       if (spans.length) out.set(key, spans);
     }
   });

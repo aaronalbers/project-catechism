@@ -229,14 +229,6 @@ The Muratorian Fragment, the Septuagint's opening of Lamentations, Jerome on Dan
   requests, and their Cloudflare check stops the automated browser too (tried 2026-10-12). *Needed:* the page opened
   in a browser, and its URL added.
 
-## Red letters (`src/lib/redletter.ts`, the reader), 2026-10-03
-
-- **Words of Jesus that Glyssen gives to someone else, or that the BSB leaves unquoted.** Acts 20:35 (“It is more
-  blessed to give than to receive,” which Paul quotes as the Lord's) is Paul's in Glyssen, so it stays black.
-  Glyssen gives Rev 22:14-15 to Jesus, but the BSB closes his words at 22:13, so they stay black too. Red-letter
-  editions differ on both. *Needed:* a short curated list of passages to add or leave out, citing a red-letter
-  edition for each, read by `wordsOfJesus` alongside Glyssen.
-
 ## The apostles' deaths (`content/insights/history.json`), 2026-10-03
 
 The primary texts (1 Clement, Ignatius, Polycarp, Irenaeus, Tertullian, Clement of Alexandria and Eusebius on New
