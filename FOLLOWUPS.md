@@ -456,8 +456,8 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
 - **Salem** (`melchizedek`): Jerome's Letter 73, which places Melchizedek's Salem elsewhere, is printed on New Advent
   only as a summary. *Needed:* the letter's text, then a reading beside Josephus's.
 - **Belshazzar's "father"** (`belshazzar`): "traditional commentators" still holds the predecessor or mother's-line
-  reading. Keil and Delitzsch, checked, hold a third: that Belshazzar was Nebuchadnezzar's own son (Evil-merodach).
-  *Needed:* a named holder for the predecessor reading, and Keil and Delitzsch's reading added.
+  reading. Keil's Evil-merodach reading is now given from his commentary. *Needed:* a named holder for the
+  predecessor reading.
 - **Hoffmeier's Egyptian detail** (`joseph`): now an interpretation, with no critic named. *Needed:* a scholar who
   reads the same details otherwise (Donald Redford was not read).
 - **Isaiah 7:14 as near and fuller fulfilment** (`isa7-virgin`): the "some Christian scholars" entry was cut for want
