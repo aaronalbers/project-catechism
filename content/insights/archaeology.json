@@ -708,7 +708,8 @@
    {"kind": "archaeology", "title": "Great Display Inscription of Sargon II, Khorsabad (RINAP 2 Sargon II 7), lines 23b–25", "url": "https://oracc.museum.upenn.edu/rinap/Q006488/", "note": "'I surrounded (and) conquered the city Samaria. I carried off as booty 27,290 of its inhabitants'", "license": "The Oracc project, CC BY-SA 3.0"},
    {"kind": "archaeology", "title": "Nimrud Prism of Sargon II (RINAP 2 Sargon II 74), iv 25–41", "url": "https://oracc.museum.upenn.edu/rinap/Q006555/", "note": "line iv 31 reads [20?]+27 thousand 280; the restoration gives 47,280", "license": "The Oracc project, CC BY-SA 3.0"},
    {"kind": "scripture", "ref": "2Kgs.17.24"},
-   {"kind": "scripture", "ref": "Isa.20.1"}
+   {"kind": "scripture", "ref": "Isa.20.1"},
+   {"kind": "scholarship", "title": "Khorsabad, in the Encyclopædia Britannica, 11th edition, vol. 15", "author": "J. P. Peters", "year": 1911, "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Khorsabad", "note": "'Here, in 1843, P. E. Botta, then French consul at Mosul, discovered the remains of an Assyrian palace and town'; the ruins 'proved to be those of the town of Dur-Sharrukin, “Sargon’s Castle”'"}
   ],
   "confidence": "evidence",
   "related": ["tiglath-pileser-pekah-hoshea", "sennacherib-prism"]

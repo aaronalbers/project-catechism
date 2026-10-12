@@ -135,9 +135,10 @@ the card attributes to it.
   - Austin, Franz and Frost (2000): only summaries of the paper were read, for the six sites, ≈750 BC and magnitude
     ≈8 (`amos-earthquake`). The Hazor details come from Williams's earthquake catalogue, not Yadin's reports.
   - Torczyner, *Lachish I* (1938), cited as the first publication; the wording quoted is Noegel's (2006).
-  - From memory, not checked: Aretas IV's death ≈AD 40 and what dates it (`aretas-and-antipas`); Botta's start at
-    Khorsabad in 1843 (`sargon-samaria`); Rawlinson's 1863 identification of Pul, which rests on the Jewish
-    Encyclopedia, an article that also misdates Pul's Babylonian reign (`tiglath-pileser-menahem-pul`).
+  - Aretas IV's reign (9 BC–AD 40) now rests on the Britannica of 1911, which does not say what dates it
+    (`aretas-and-antipas`). *Needed:* a numismatic or epigraphic source for his last year.
+  - Rawlinson's 1863 identification of Pul rests on the Jewish Encyclopedia, an article that also misdates Pul's
+    Babylonian reign (`tiglath-pileser-menahem-pul`).
   - Whiting's "Jerusalem's Locust Plague" (*National Geographic*, December 1915) is the written eyewitness account
     behind the photographs. archive.org has only its cover, so `joel-locusts-1915` cites the photographs alone.
 - **The three days** (`content/passion.json`): Rusk, "The Day He Died" (*Christianity Today*, 1974); Torrey (1907);

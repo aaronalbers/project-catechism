@@ -129,13 +129,14 @@
   "body": [
    "Josephus: Antipas 'had married the daughter of Aretas', but fell in love with Herodias and agreed to divorce her. She learned of it, fled to her father, and 'Aretas made this the first occasion of his enmity between him and Herod'. In the war that followed, 'all Herod's army was destroyed'. Tiberius ordered Vitellius, the governor of Syria, to march on Aretas, but news of the emperor's death (AD 37) reached Vitellius on the way and he called the army home.",
    "2 Corinthians 11:32 says his ethnarch 'secured the city of the Damascenes in order to arrest me'; Acts 9 says the Jews watched the gates. Galatians 1:17 adds that Paul had gone 'into Arabia' before returning to Damascus.",
-   "Aretas IV's death is dated ≈AD 40, from his dated coins and inscriptions. If that date holds, Paul's escape, and with it his conversion three years earlier (Galatians 1:18), was no later. How a Nabataean official came to hold the gates of a Roman city is not known."
+   "The Encyclopædia Britannica of 1911 gives his reign as 9 BC to AD 40. If his reign ended then, Paul's escape, and with it his conversion three years earlier (Galatians 1:18), was no later. How a Nabataean official came to hold the gates of a Roman city is not known."
   ],
   "sources": [
    {"kind": "primary", "title": "Josephus, Antiquities 18.5.1 (18.109–115)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D5%3Awhiston+section%3D1", "note": "Aretas's daughter divorced; Antipas's army destroyed; Tiberius orders Vitellius to war"},
    {"kind": "primary", "title": "Josephus, Antiquities 18.5.3 (18.120–125)", "author": "Flavius Josephus", "year": "c. AD 93", "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston+chapter%3D5%3Awhiston+section%3D3", "note": "Vitellius hears of Tiberius's death and sends the army home"},
    {"kind": "scripture", "ref": "2Cor.11.32-33"},
-   {"kind": "scripture", "ref": "Gal.1.17-18"}
+   {"kind": "scripture", "ref": "Gal.1.17-18"},
+   {"kind": "scholarship", "title": "Nabataeans, in the Encyclopædia Britannica, 11th edition, vol. 19", "author": "William Robertson Smith and Stanley Arthur Cook", "year": 1911, "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Nabataeans", "note": "'The Nabataean Aretas or Aeneas there mentioned [2 Cor. xi. 32] reigned from 9 B.C. to A.D. 40.'"}
   ],
   "confidence": "evidence",
   "related": ["josephus-john-baptist"]
