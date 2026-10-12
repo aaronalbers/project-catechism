@@ -3,7 +3,7 @@
   "id": "genesis",
   "book": "Gen",
   "title": "The shape of Genesis",
-  "summary": "Eleven times Genesis names the tôlədôt (“generations”, “account”) of the heavens and the earth or of a man. Readers of the book divide it at these verses, but differ over whether each opens the section after it or closes the one before, and some divide the book elsewhere. Three outlines are drawn here on the same verses, in the order they were proposed.",
+  "summary": "Eleven times Genesis names the tôlədôt (“generations”, “account”) of the heavens and the earth or of a man. Readers of the book divide it at these verses, but differ over whether each opens the section after it or closes the one before, and some divide the book elsewhere. Four outlines are drawn here on the same verses, in the order they were proposed.",
   "sources": [
    {"kind": "scholarship", "title": "‘The Toledot of the Book of Genesis and Their Redemptive-Historical Significance’", "author": "Marten H. Woudstra", "year": 1970, "url": "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_GenToledot_CTJ.htm", "note": "Calvin Theological Journal 5, pp. 184–189"}
   ],
@@ -36,6 +36,41 @@
    }
   ],
   "readings": [
+   {
+    "id": "driver",
+    "label": "The formula heads each section, but closes chapter 1",
+    "holder": "Driver, 1904",
+    "summary": "Driver reads the formula as a heading: it implies that the man named “and his descendants will form the subject of the section which follows, until another name is reached prominent enough to form the commencement of a new section.” He counts it ten times, taking Esau’s two (36:1, 36:9) as one, and reads 2:4a otherwise, as “the subscription to the preceding narrative”.",
+    "body": [
+     "At 2:4a the formula, Driver writes, “clearly relates to the contents of ch. i., it is very possible that it stood originally before i. 1”, as “many critics” suppose, moved to its place by the compiler. In the other cases “it introduces each time a longer or shorter genealogical account of the person named and of his descendants, and is followed usually by a more detailed narrative about them.” He traces the book narrowing at each stage to Israel’s line: after the table of nations only Shem’s line remains, after 25:12–18 Ishmael disappears, and after chapter 36 Esau.",
+     "Driver also divides the book into two parts: chapters 1–11, the early history of mankind, and 12–50, the patriarchs Abraham (12:1–25:18), Isaac (25:19–36:43) and Jacob (37–50).",
+     "John Skinner (1910) answers the scheme. He writes that it is “commonly held by writers on Genesis” that the formula marks the headings of the book’s sections, and that moving 2:4a to the beginning and passing over 36:9, “both arbitrary proceedings”, gives the ten parts Franz Delitzsch divides his commentary into. But “the scheme is of no practical utility”, he writes, setting the short sections of Shem and Ishmael beside the long histories under Isaac and Jacob, and he points out that Noah’s and Isaac’s histories fall under their own formula while Abraham’s, Jacob’s and Joseph’s fall under their fathers’. He reads the formulas instead as the sections of a genealogical document the priestly writer drew on, and 2:4a as “a redactional imitation”."
+    ],
+    "note": "Driver gives the verses the formula stands in, not where each section ends; each is drawn to the next formula, and 2:4 whole with chapter 1. With 2:4a closing chapter 1, the story from 2:4b to 4:26 stands before any heading; Driver does not say where it falls in the scheme.",
+    "markers": ["toledot"],
+    "kinds": {"S": "Closed by the formula", "none": "No formula"},
+    "sections": [
+     {"ref": "Gen.1.1-2.4", "label": "The heavens and the earth", "kind": "S"},
+     {"ref": "Gen.2.5-4.26", "label": "Before Adam’s formula", "kind": "none"},
+     {"ref": "Gen.5.1-6.8", "label": "Adam"},
+     {"ref": "Gen.6.9-9.29", "label": "Noah"},
+     {"ref": "Gen.10.1-11.9", "label": "The sons of Noah"},
+     {"ref": "Gen.11.10-26", "label": "Shem"},
+     {"ref": "Gen.11.27-25.11", "label": "Terah"},
+     {"ref": "Gen.25.12-18", "label": "Ishmael"},
+     {"ref": "Gen.25.19-35.29", "label": "Isaac"},
+     {"ref": "Gen.36.1-37.1", "label": "Esau"},
+     {"ref": "Gen.37.2-50.26", "label": "Jacob"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "The Book of Genesis, with Introduction and Notes", "author": "S. R. Driver", "year": 1904, "url": "https://archive.org/details/bookofgenesiswit00drivuoft", "note": "pp. i–iii and 19; this copy is the tenth edition, 1916"},
+     {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on Genesis", "author": "John Skinner", "year": 1910, "url": "https://archive.org/details/criticalexegetic00skinuoft", "note": "p. xxxiv, and pp. 39–41 on 2:4a"},
+     {"kind": "scripture", "ref": "Gen.2.4"},
+     {"kind": "scripture", "ref": "Gen.36.9"}
+    ],
+    "traditions": ["S. R. Driver (1904)", "Franz Delitzsch, who divides his commentary so, as Skinner reports", "Answered by John Skinner (1910)"],
+    "confidence": "interpretation"
+   },
    {
     "id": "wiseman",
     "label": "Tablets closed by the formula",
