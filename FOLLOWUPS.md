@@ -418,8 +418,6 @@ Kepler; Origen, *Against Celsus* 1.58–59; Chrysostom, *Homily 6 on Matthew*.
   the station is not known.
 - **Refraction and extinction** are not drawn: positions are geometric, so a body near the horizon stands about half
   a degree lower than seen, and stars are not dimmed there.
-- **A link out to Stellarium Web** for each moment was planned but not added; whether its URL takes a BC date and a
-  place has not been checked.
 - **Star names: holders cited through others.** Stern, Nöldeke and Hoffmann (kimah as Sirius, ʿash as the Pleiades)
   are cited as BDB reports them, and Dhorme (mazzaroth as Corona Borealis) and the "others" who read the zodiac as
   Reyburn reports them; none of their works was read. Dillmann, whom BDB follows for the Great Bear, was not read.

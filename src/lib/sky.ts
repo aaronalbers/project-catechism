@@ -47,6 +47,16 @@ export function formatUt(ut: number, lon = 0, time = true): string {
 
 export const observer = (p: Pick<Place, 'lat' | 'lon'>) => new A.Observer(p.lat, p.lon, 0);
 
+/**
+ * The same moment and view in Stellarium Web, which reads `date` as a UTC instant in the proleptic Gregorian
+ * calendar (Moment into a JS Date, six-digit years for BC), so here, and only here, the instant goes through one.
+ */
+export function stellariumUrl(ut: number, place: Pick<Place, 'lat' | 'lon'>, look: { az: number; alt: number; fov: number }): string {
+  const date = new Date((ut + 2451545.0 - 2440587.5) * 86400000).toISOString().replace(/\.\d{3}Z$/, 'Z');
+  const q = [`date=${date}`, `lat=${place.lat.toFixed(4)}`, `lng=${place.lon.toFixed(4)}`, `az=${look.az.toFixed(1)}`, `alt=${look.alt.toFixed(1)}`, `fov=${look.fov.toFixed(0)}`];
+  return `https://stellarium-web.org/?${q.join('&')}`;
+}
+
 /** Where a body is, as a J2000 equatorial unit vector seen from `obs` (the Moon's parallax is near a degree). */
 export function bodyEqj(body: SkyBody, ut: number, obs: A.Observer): [number, number, number] {
   const v = A.Equator(body as A.Body, ut, obs, false, true).vec;

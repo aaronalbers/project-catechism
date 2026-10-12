@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import * as A from 'astronomy-engine';
 import { SKY_NAMES, SKY_READINGS } from '@/lib/content';
 import { parseRef } from '@/lib/refs';
-import { altAz, bodyEqj, closest, elongationTime, eveningWhenHigh, figureCentre, figureStars, formatUt, horizonRotation, isSolar, observer, occultation, PLANETS, station, toHorizon, utOf, whenOf } from '@/lib/sky';
+import { altAz, bodyEqj, closest, elongationTime, eveningWhenHigh, figureCentre, figureStars, formatUt, horizonRotation, isSolar, observer, occultation, PLANETS, station, stellariumUrl, toHorizon, utOf, whenOf } from '@/lib/sky';
 import type { Place, SkyData } from '@/lib/types';
 
 const data = (p: string) => JSON.parse(readFileSync(new URL(`../../public/data/${p}`, import.meta.url), 'utf8'));
@@ -22,6 +22,13 @@ describe('sky maths', () => {
     expect(utOf('1999-12-19T12:00')).toBeCloseTo(0, 9);
     expect(formatUt(utOf('-0001-12-25T05:15', 35.23417), 35.23417)).toBe('25 Dec 2 BC, 05:15');
     expect(formatUt(utOf('0000-01-10'), 0, false)).toBe('10 Jan 1 BC');
+  });
+  it('hands Stellarium Web the same instant in the Gregorian calendar it reads', () => {
+    const at = { lat: 31.77667, lon: 35.23417 }, look = { az: 90, alt: 20, fov: 60 };
+    expect(stellariumUrl(utOf('1999-12-19T12:00'), at, look)).toContain('date=2000-01-01T12:00:00Z');
+    // In 2 BC the Gregorian calendar runs two days behind the Julian.
+    expect(stellariumUrl(utOf('-0001-12-25T00:00'), at, look)).toContain('date=-000001-12-23T00:00:00Z');
+    expect(stellariumUrl(0, at, look)).toContain('lat=31.7767&lng=35.2342&az=90.0&alt=20.0&fov=60');
   });
   it('puts a body where astronomy-engine’s horizon routine does', () => {
     const obs = observer({ lat: 31.77667, lon: 35.23417 });

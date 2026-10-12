@@ -8,7 +8,7 @@ import { loadPlaces, loadSky } from '@/lib/data';
 import { formatRef } from '@/lib/refs';
 import {
   altAz, bearing, bodyEqj, closest, deltaTHours, elongationTime, eqjOf, eveningWhenHigh, figureCentre, formatUt, horizonRotation, magnitude, moonLit,
-  observer, occultation, PLANETS, starEqj, station, sunAltitude, toHorizon, utOf, whenOf,
+  observer, occultation, PLANETS, starEqj, station, stellariumUrl, sunAltitude, toHorizon, utOf, whenOf,
 } from '@/lib/sky';
 import type { Place, SkyData, SkyEvent, SkyFigure, SkyName, SkyNameReading, SkyReading } from '@/lib/types';
 import { ConfidenceBadge, RefChip, SourceList } from '@/components/SourceList';
@@ -397,7 +397,7 @@ function SkyView({ sky, event, place, toward, lit }: { sky: SkyData; event: SkyE
       </div>
       <div className="sky-readout">
         <span>{formatUt(view.ut, place.lon)} local mean time, {place.name} · Sun {sunAlt.toFixed(0)}°, {dark(sunAlt)}</span>
-        <span className="hint">Drag to look round · scroll to zoom</span>
+        <span className="hint">Drag to look round · scroll to zoom · <a href={stellariumUrl(view.ut, place, view)} target="_blank" rel="noreferrer" title="This moment, place and view in Stellarium Web">Stellarium Web ↗</a></span>
       </div>
     </div>
   );
