@@ -107,7 +107,13 @@ listed.
 - **Readings the text allows but the model does not draw.** CLAUDE.md asks a model the text allows more than one
   reading of to list `readings`. These models were built before readings existed and describe the other reading only
   in their summaries:
-  - `forest-of-lebanon`: Keil and Delitzsch's 45 side rooms in three storeys round a court.
+  - **[Needs a person]** `forest-of-lebanon`: Keil's 45 side rooms in three storeys round a court. His commentary (tr.
+    1872, pp. 89–92, archive.org `booksofkings00keil`) was read: the rooms stand on four rows of pillars round a court,
+    the wings "not more than ten cubits deep", leaving thirty for the court; pillars ≈ 8 cubits high, and storeys of
+    seven, six and five cubits; in a note he leans to two rows of pillars on each long side. But he writes that the
+    uncertainty makes it "quite impossible to draw any plan of the building that could in the slightest degree answer
+    to the reality", and that he gave up drawing it. *Decision needed:* whether the model should draw a reading its
+    holder declined to draw, and if so how to lay out fifteen rooms a storey, which he does not place.
 - **Framing of tall, narrow parts** is tight: at Exod 39:29 the sash's band sits at the top edge of the view. Fixing it
   means changing the step framing of every model, so check the visibility test afterwards.
 - **The common cubit, ≈44.5 cm**, used by most models, is cited to R. B. Y. Scott, "Weights and Measures of the
