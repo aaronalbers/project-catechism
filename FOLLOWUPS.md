@@ -500,9 +500,9 @@ works, one identification, none dissenting), and a search found no one placing t
 Reviewed for a `consensus` badge and does not qualify: John Wijngaards (2020) argues that the sanctuary stood in the
 valley of Shechem, and A. T. Richardson (1925) placed Shiloh at Beit Silo.
 
-- **The Seilun side is largely second-hand.** Robinson, Driver and Albright are cited as Wijngaards quotes them, and
-  Eusebius as Schwartz and Shemesh quote Notley and Safrai. *Needed:* Robinson's *Biblical Researches* (1841) II
-  268–270, Driver's Hastings article, and Finkelstein's *Shiloh* (1993), whose own reading of the site, including
+- **The Seilun side is partly second-hand.** Robinson is now quoted from *Biblical Researches* (1841, vol. 3,
+  pp. 85–89); Driver and Albright are cited as Wijngaards quotes them, and Eusebius as Schwartz and Shemesh quote
+  Notley and Safrai. *Needed:* Driver's Hastings article, and Finkelstein's *Shiloh* (1993), whose own reading of the site, including
   what he found of Iron Age II there, should answer Wijngaards's report of a gap from 1050 to 350 BC.
 - **Richardson not read.** His Beit Silo proposal is given only as Wijngaards reports it.
 
@@ -515,7 +515,6 @@ consensus is the field as it stands now).
 - **Cline read in the *Time* excerpt only**, not *Digging Up Armageddon* (2020) itself.
 - **Conder's own case not read.** It is given as Smith summarises it; Trelawney Saunders's answer (*PEFQS* 1880,
   223–224) and the PEF *Memoirs* were not read.
-- **Robinson quoted through Cline**, not from *Biblical Researches*; the year he stood on the mound is not given.
 
 ## Jericho at Tell es-Sultan (`jericho-old-city`, `jericho-which-mound`), 2026-10-04
 
