@@ -95,8 +95,10 @@ listed.
 - **Ezekiel's temple (`ezekiels-temple`)**: the carved cherubim and palms of the house (41:17–20, 25); the hooks of
   40:43; the kitchens of 46:19–24, which lie outside the current build (40:1–43:17), so they need a build or a step
   of their own.
-- **New Jerusalem (`new-jerusalem`)**: the angels at the gates (Rev 21:12); the names of the tribes on the gates (21:12)
-  and of the apostles on the foundations (21:14); the twelve kinds of fruit (22:2).
+- **New Jerusalem (`new-jerusalem`)**: the names of the tribes on the gates (21:12) and of the apostles on the
+  foundations (21:14). Two things stand in the way: the text does not say which name is on which gate or which twelve
+  apostles are meant, and at the model's true scale (≈ 2,220 km) an inscription laid on a face a few centimetres
+  proud of it flickers, so it needs relief cut into the gate or course, or a step that frames it closely enough.
 - **[Needs a person]** **God and the throne undrawn.** The glory of God and the throne in `new-jerusalem`, and the One
   seated in `sealed-scroll`, are not drawn. That looks like a deliberate choice rather than a gap; it needs a decision
   either way.

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { box, cylGeo, instances, meshAt, namedPart, type V3 } from './kit';
-import { CUBIT_M } from './scale';
+import { CUBIT_M, figure } from './scale';
 
 /** The stadion the BSB's note converts 12,000 stadia with (≈ 2,220 km); an Attic stadion of 600 feet. */
 export const STADION_M = 185;
@@ -158,6 +158,19 @@ export function newJerusalem(reading = 'face'): THREE.Group {
     ? (() => { const m = glassJasper(); return [...band(D, F, gateH, T, gateW, m), ...band(D, F + gateH, H - gateH, T, 0, m)]; })()
     : band(D, 0, H, T, gateW, jasper())));
 
+  // The twelve angels at the gates (21:12): one standing in each gateway, just inside its outer mouth and
+  // to one side, at a man's height, since the angel measures 'by the human measure' (21:17), in white
+  // linen as the angels of 15:6 are. The text does not describe them.
+  const linen = new THREE.MeshStandardMaterial({ color: 0xf2efe6, roughness: 0.8 });
+  const mouth = (face ? S / 2 : S / 2 + T) - 3, aside = gateW / 2 - 2;
+  const angels = part('angels');
+  for (const [, sx, sz] of [['east', 1, 0], ['west', -1, 0], ['south', 0, 1], ['north', 0, -1]] as const) gatesAt.forEach((along) => {
+    const a = figure(1.66); a.traverse((o) => { if ((o as THREE.Mesh).isMesh) (o as THREE.Mesh).material = linen; });
+    if (sx) a.position.set(sx * mouth, F, along + aside); else a.position.set(along + aside, F, sz * mouth);
+    a.rotation.y = Math.atan2(sx, sz); // facing out of the city
+    angels.add(a);
+  });
+
   // The golden measuring rod (21:15), drawn at Ezekiel's six long cubits, standing outside the east gate.
   const rod = part('rod', meshAt(cylGeo(0.03, 6 * 0.519, 12), new THREE.MeshStandardMaterial({ color: 0xd4a640, metalness: 1, roughness: 0.28 }), outer + 8, 3 * 0.519, 4));
   rod.userData.focus = true;
@@ -198,6 +211,26 @@ export function newJerusalem(reading = 'face'): THREE.Group {
   if (face) { row(-90, -700); row(700, 90); }
   const trees = part('trees', instances(cylGeo(0.35, 6, 8), bark(), at.map(([x, z]): V3 => [x, F + 3, z])), instances(new THREE.SphereGeometry(4, 12, 8), leaf(), at.map(([x, z]): V3 => [x, F + 8, z])));
   if (face) trees.add(treeOfLife(F));
+
+  // The twelve kinds of fruit (22:2): twelve colours, only to tell the kinds apart, as the text names none.
+  // In `face` they hang on the one tree of life, in `foot` on each tree of the rows; both are drawn far
+  // larger than fruit, which would not show at this size.
+  const fruitColours = [0xc0392b, 0xe67e22, 0xf1c40f, 0x8e44ad, 0x2e86c1, 0x27ae60, 0xd35400, 0xa93226, 0x7d3c98, 0xf5b041, 0x52be80, 0xcb4335];
+  const fruitAt: V3[][] = fruitColours.map(() => []), rnd = seeded(22);
+  if (face) {
+    // Over the tree of life's crown, on its upper half.
+    for (let i = 0; i < 240; i++) {
+      const a = rnd() * Math.PI * 2, t = rnd() * 0.9, r = 55 * Math.sqrt(1 - t * t);
+      fruitAt[i % 12].push([Math.cos(a) * r, F + 78 + 55 * 0.55 * t + 1, Math.sin(a) * r]);
+    }
+  } else at.forEach(([x, z], k) => {
+    for (let i = 0; i < 6; i++) {
+      const a = rnd() * Math.PI * 2, t = rnd() * 0.8, r = 4 * Math.sqrt(1 - t * t);
+      fruitAt[(k + i) % 12].push([x + Math.cos(a) * r, F + 8 + 4 * t + 0.1, z + Math.sin(a) * r]);
+    }
+  });
+  const fruitGeo = new THREE.SphereGeometry(face ? 1.6 : 0.35, 10, 8);
+  part('fruit', ...fruitColours.map((col, i) => instances(fruitGeo, new THREE.MeshStandardMaterial({ color: col, roughness: 0.6 }), fruitAt[i])));
 
   return g;
 }
