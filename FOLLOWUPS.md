@@ -252,8 +252,6 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 - **No sceptical voice on the martyrdom traditions themselves.** The argument card gives Ehrman, who accepts the
   witnesses' sincerity. A writer who questions the persecution accounts (Candida Moss, *The Myth of Persecution*, 2013)
   was not read. *Needed:* that position in its own words, if it bears on the apostles, as a third tradition.
-- **Heracleon's negative not checked in the Greek.** The Twelve card gives both the New Advent translation and Salmon's
-  reading. *Needed:* the Greek (Stählin's GCS edition), and the card reduced to one reading if the Greek settles it.
 - **Tertullian's dates are standard ones, not checked.** *Prescription* ≈200 and *Scorpiace* ≈210 are given with ≈
   but without saying what they rest on. (Dionysius's ≈170 now rests on Eusebius's Soter, Irenaeus's ≈180 on his own
   Eleutherius, and Heracleon's on Salmon.) *Needed:* a source for each of Tertullian's.
