@@ -128,5 +128,42 @@ export function galileeBoat(): THREE.Group {
   const cushion = new THREE.Mesh(new THREE.CapsuleGeometry(0.16, 0.45, 4, 12), new THREE.MeshStandardMaterial({ color: 0x8c7a5c, roughness: 1 }));
   cushion.rotation.x = Math.PI / 2; cushion.scale.set(1.3, 1, 0.55); cushion.position.set(x(0.13), keelY(0.13) + 0.22, 0);
   part('cushion', cushion);
+
+  // The storm (Mark 4:37): drawn only in that state. The hull's half-breadth at height y, where it is that deep.
+  const halfAt = (u: number, y: number) => {
+    const y0 = keelY(u), y1 = sheerY(u);
+    if (y <= y0) return 0;
+    const c = 1 - Math.min(1, (y - y0) / (y1 - y0));
+    return half(u) * Math.sqrt(1 - c * c);
+  };
+  // The lake round the boat, rough, the waves highest along the port side where they break over the wale.
+  const sea = 0.5, S = 110, T = 60, W = 11, H = 6;
+  const seaPos: number[] = [], seaIdx: number[] = [];
+  const wave = (px: number, pz: number) => {
+    const swell = 0.3 * Math.sin(px * 1.3 + pz * 0.6) + 0.15 * Math.sin(px * 2.9 - pz * 1.7) + 0.07 * Math.sin(pz * 4.1);
+    const port = Math.max(0, 1 - Math.hypot(px + 0.6, Math.max(0, pz - B / 2)) / 2.2);
+    return sea + swell * (1 - 0.5 * port) + 0.7 * port ** 1.5;
+  };
+  for (let i = 0; i <= S; i++) for (let j = 0; j <= T; j++) {
+    const px = -W / 2 + (W * i) / S, pz = -H / 2 + (H * j) / T;
+    seaPos.push(px, wave(px, pz), pz);
+  }
+  const inside = (px: number, pz: number) => { const u = (px + L / 2) / L; return u > 0 && u < 1 && Math.abs(pz) < halfAt(u, sea) + 0.05; };
+  for (let i = 0; i < S; i++) for (let j = 0; j < T; j++) {
+    const a = i * (T + 1) + j, b = a + T + 1;
+    const cx = -W / 2 + (W * (i + 0.5)) / S, cz = -H / 2 + (H * (j + 0.5)) / T;
+    if (!inside(cx, cz)) seaIdx.push(a, a + 1, b, b, a + 1, b + 1);
+  }
+  const seaGeo = new THREE.BufferGeometry();
+  seaGeo.setAttribute('position', new THREE.Float32BufferAttribute(seaPos, 3));
+  seaGeo.setIndex(seaIdx); seaGeo.computeVertexNormals();
+  part('storm-waves', new THREE.Mesh(seaGeo, new THREE.MeshStandardMaterial({ color: 0x2f5866, roughness: 0.35, metalness: 0.1, side: THREE.DoubleSide })));
+  // The water shipped as the boat 'was being swamped' (Mark 4:37; Luke 8:23): a level across the hull, well up the frames.
+  const level = 0.62, us = Array.from({ length: 41 }, (_, i) => 0.03 + (0.94 * i) / 40).filter((u) => halfAt(u, level) > 0.02);
+  const water = new THREE.Shape(us.map((u) => new THREE.Vector2(x(u), halfAt(u, level) - 0.01)));
+  for (const u of [...us].reverse()) water.lineTo(x(u), -(halfAt(u, level) - 0.01));
+  const shipped = new THREE.Mesh(new THREE.ShapeGeometry(water), new THREE.MeshStandardMaterial({ color: 0x3d6b73, roughness: 0.3, transparent: true, opacity: 0.8, side: THREE.DoubleSide }));
+  shipped.rotation.x = Math.PI / 2; shipped.position.y = level;
+  part('shipped-water', shipped);
   return g;
 }

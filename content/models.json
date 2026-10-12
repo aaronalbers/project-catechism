@@ -719,8 +719,32 @@
    "sail": "a single square sail, drawn brailed up to the yard (furled) as it would be under oars or in a storm. The hull shows only that it had a mast; the sail's shape and size are the reconstruction's",
    "oars": "four, two a side, for Josephus's four sailors; the Migdal mosaic, of a boat of this period, shows three a side, the sternmost a steering oar. Their length (≈4 m) is not known",
    "steering-oars": "one on each quarter, as in the museum's reconstruction; the Migdal mosaic shows its sternmost oar widening into a steering oar. Their size is not known",
-   "cushion": "Mark 4:38's proskephalaion, 'the cushion', with the article, as if it belonged to the boat. Wachsmann suggests a sandbag of the kind kept as ballast, stowed under the stern deck, and it is drawn there. Its size and shape are not known"
+   "cushion": "Mark 4:38's proskephalaion, 'the cushion', with the article, as if it belonged to the boat. Wachsmann suggests a sandbag of the kind kept as ballast, stowed under the stern deck, and it is drawn there. Its size and shape are not known",
+   "storm-waves": "the text says only that the waves broke over the boat and that the storm was 'violent'; the waves' height and shape are drawn to reach the wale on one side, and the boat is set about half a metre deep in the water, which is not known",
+   "shipped-water": "the boat 'was being swamped' (Mark 4:37; Luke 8:23); how much water it had shipped is not said. It is drawn about 0.6 m up the hull"
   },
+  "states": [
+   {
+    "id": "storm",
+    "label": "The storm (Mark 4:37)",
+    "basis": "Mark: 'the waves were breaking over the boat, so that it was being swamped' (4:37); Matthew: 'the boat was engulfed by the waves' (8:24); Luke: 'the boat was being swamped, and they were in great danger' (8:23). Mark puts Jesus asleep in the stern on the cushion (4:38)",
+    "accounts": [
+     {"ref": "Mark.4.35-38", "changes": [{"ref": "Mark.4.37", "shows": ["storm-waves", "shipped-water"]}]},
+     {"ref": "Matt.8.23-25", "changes": [{"ref": "Matt.8.24", "shows": ["storm-waves", "shipped-water"]}]},
+     {"ref": "Luke.8.22-23", "changes": [{"ref": "Luke.8.23", "shows": ["storm-waves", "shipped-water"]}]}
+    ]
+   },
+   {
+    "id": "calm",
+    "label": "The calm (Mark 4:39)",
+    "basis": "Mark: 'the wind died down, and it was perfectly calm' (4:39); Matthew: 'it was perfectly calm' (8:26); Luke: the raging waters 'subsided, and all was calm' (8:24). No account says the water was bailed, so what the boat shipped is left in it",
+    "accounts": [
+     {"ref": "Mark.4.39-41", "changes": [{"ref": "Mark.4.39", "hides": ["storm-waves"]}]},
+     {"ref": "Matt.8.26-27", "changes": [{"ref": "Matt.8.26", "hides": ["storm-waves"]}]},
+     {"ref": "Luke.8.24-25", "changes": [{"ref": "Luke.8.24", "hides": ["storm-waves"]}]}
+    ]
+   }
+  ],
   "media": [
    {"type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/JesusBoat.jpg/500px-JesusBoat.jpg", "caption": "The Ginosar boat on its frame in the Yigal Allon Museum, Kibbutz Ginosar, with a drawing of the reconstruction behind it", "credit": "Travellers & Tinkers", "creditUrl": "https://commons.wikimedia.org/wiki/File:JesusBoat.jpg", "license": "CC BY-SA 4.0"}
   ],

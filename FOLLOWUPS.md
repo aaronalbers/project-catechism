@@ -109,8 +109,6 @@ listed.
   - `goliath`: 4 cubits and a span, as 4QSam-a, the Septuagint and Josephus give it (1 Sam 17:4);
   - `nebuchadnezzars-statue`: a stele carved with a figure only at the top;
   - `forest-of-lebanon`: Keil and Delitzsch's 45 side rooms in three storeys round a court.
-- **Galilee boat (`galilee-boat`)**: the model is the boat of Mark 4:38, but it is not shown being swamped as 4:37
-  tells it. A `state` would draw that.
 - **Framing of tall, narrow parts** is tight: at Exod 39:29 the sash's band sits at the top edge of the view. Fixing it
   means changing the step framing of every model, so check the visibility test afterwards.
 - **The common cubit, ≈44.5 cm**, used by most models, is cited to R. B. Y. Scott, "Weights and Measures of the
