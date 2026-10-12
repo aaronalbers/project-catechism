@@ -439,9 +439,6 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
   of the custom, but Brown was not read in the session. Mishnah Pesahim 8:6 (a lamb slaughtered for one promised
   release from prison) has been read as a trace of it. *Needed:* Brown's *Death of the Messiah* on the privilegium
   paschale, and whoever reads Pesahim 8:6 so.
-- **The Comma's defenders** (`comma-johanneum`): the card gives the manuscript evidence and Metzger, not those who hold
-  the words original (Edward F. Hills, *The King James Version Defended*, is one, not read). *Needed:* that view in
-  its own words, as a reading beside the card's facts.
 - **Chrestus as Christ** (`claudius-expulsion-chrestus`): only Orosius holds that reading on the card; Slingerland
   and Gruen argue the other. *Needed:* a modern holder of the Christ reading, read and cited.
 - **Shishak as Shoshenq I** (`rehoboam`, `forest-of-lebanon`): now Kitchen's identification. The dissent (David
@@ -562,8 +559,4 @@ and Kahle's plural origin are told as history with the answers given them; no on
 
 Reviewed for a `consensus` badge and does not qualify: Edward F. Hills defends the words as possibly genuine.
 
-- **Hills's edition and date not identified.** The chapter was read as published online; it cites Metzger (1964), so it
-  is a revised edition of the 1956 book. *Needed:* the edition and page.
-- **Hills's second explanation for the omission**, from the Sabellian controversy, was cut off in the copy read and is
-  not given.
 - **Cyprian and Facundus are quoted as Brooke and Hills give them**, not from an edition.
