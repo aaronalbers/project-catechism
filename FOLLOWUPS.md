@@ -90,8 +90,9 @@ Each model's summary already says what it leaves undrawn. Those parts are listed
 Parts a build leaves out because that account does not mention them (`omits`) are correct as they are and are not
 listed.
 
-- **Solomon's Temple (`solomons-temple`)**: the carvings of gourds, flowers, palms and cherubim (1 Kgs 6:18, 29,
-  32, 35); the lions, oxen and cherubim on the stands (7:29, 36); the smaller vessels (7:40, 45, 50).
+- **Solomon's Temple (`solomons-temple`)**: the lions, oxen and cherubim on the stands (7:29, 36); the smaller vessels
+  (7:40, 45, 50). The wall carvings (6:18, 29, 32, 35) are drawn as relief from the panelling's step (6:15) on, not
+  added at their own verses.
 - **Ezekiel's temple (`ezekiels-temple`)**: the carved cherubim and palms of the house (41:17–20, 25); the hooks of
   40:43; the kitchens of 46:19–24, which lie outside the current build (40:1–43:17), so they need a build or a step
   of their own.

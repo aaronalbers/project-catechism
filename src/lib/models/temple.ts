@@ -8,6 +8,65 @@ const cypress = () => new THREE.MeshStandardMaterial({ color: 0xc09366, roughnes
 const olive = () => new THREE.MeshStandardMaterial({ color: 0xb3a176, roughness: 0.8, side: THREE.DoubleSide });
 const dark = () => new THREE.MeshStandardMaterial({ color: 0x1d1a16, roughness: 1 });
 
+/**
+ * The carvings of 1 Kgs 6:18 and 29: cherubim, palm trees and open flowers on the walls, and gourds and open
+ * flowers on the cedar, drawn white on black into a bump map for one tile `CARVING` cubits square. The text
+ * gives the motifs, not their arrangement: here a palm between two cherubim, which tile into cherub, palm,
+ * cherub along a wall (as Ezekiel's walls alternate them, Ezek 41:18), under a row of open flowers, over a
+ * band of gourds and flowers. None where there is no DOM to draw it (the tests build models in Node).
+ */
+const CARVING = 6;
+let carvingTex: THREE.CanvasTexture | null | undefined;
+function carving(): THREE.CanvasTexture | null {
+  if (carvingTex !== undefined) return carvingTex;
+  if (typeof document === 'undefined') return (carvingTex = null);
+  const c = document.createElement('canvas'); c.width = c.height = 512;
+  const x = c.getContext('2d')!;
+  x.fillStyle = '#000'; x.fillRect(0, 0, 512, 512);
+  x.fillStyle = x.strokeStyle = '#fff'; x.lineCap = x.lineJoin = 'round';
+  const flower = (cx: number, cy: number, r: number) => {
+    for (let i = 0; i < 8; i++) { const a = (i * Math.PI) / 4; x.beginPath(); x.ellipse(cx + Math.cos(a) * r * 0.55, cy + Math.sin(a) * r * 0.55, r * 0.45, r * 0.2, a, 0, Math.PI * 2); x.fill(); }
+    x.beginPath(); x.arc(cx, cy, r * 0.22, 0, Math.PI * 2); x.fill();
+  };
+  // A row of open flowers along the top, and gourds alternating with flowers along the foot.
+  for (let i = 0; i < 4; i++) flower(64 + i * 128, 36, 26);
+  for (let i = 0; i < 8; i++) { const cx = 32 + i * 64; if (i % 2) flower(cx, 476, 20); else { x.beginPath(); x.ellipse(cx, 476, 12, 20, 0, 0, Math.PI * 2); x.fill(); } }
+  // The palm: a trunk and fronds.
+  x.lineWidth = 16; x.beginPath(); x.moveTo(256, 430); x.lineTo(256, 190); x.stroke();
+  x.lineWidth = 9;
+  for (const [dx, dy] of [[-90, 30], [-70, -20], [-30, -50], [30, -50], [70, -20], [90, 30]]) { x.beginPath(); x.moveTo(256, 190); x.quadraticCurveTo(256 + dx * 0.6, 190 + dy - 20, 256 + dx, 190 + dy + 30); x.stroke(); }
+  // A cherub at each edge, half on this tile and half on the next: a standing figure, its wings raised towards the palm.
+  for (const cx of [0, 512]) {
+    const s = cx ? -1 : 1;
+    x.beginPath(); x.arc(cx, 170, 26, 0, Math.PI * 2); x.fill();
+    x.beginPath(); x.moveTo(cx - 34, 205); x.lineTo(cx + 34, 205); x.lineTo(cx + 44, 420); x.lineTo(cx - 44, 420); x.closePath(); x.fill();
+    x.lineWidth = 12; x.beginPath(); x.moveTo(cx + s * 30, 225); x.quadraticCurveTo(cx + s * 110, 160, cx + s * 150, 100); x.stroke();
+    x.beginPath(); x.moveTo(cx + s * 30, 245); x.quadraticCurveTo(cx + s * 100, 220, cx + s * 140, 150); x.stroke();
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  return (carvingTex = t);
+}
+/**
+ * Carves every box in `o`: gives each its own copy of its geometry, its UVs scaled so one tile of the carving is
+ * `CARVING` cubits on every face, and its material the carving as a bump map.
+ */
+function carved<T extends THREE.Object3D>(o: T, bump = 0.06): T {
+  const tex = carving();
+  if (!tex) return o;
+  o.traverse((m) => {
+    const mesh = m as THREE.Mesh;
+    if (!mesh.isMesh || !(mesh.geometry instanceof THREE.BoxGeometry)) return;
+    const geo = mesh.geometry.clone(), { width: w, height: h, depth: d } = (mesh.geometry as THREE.BoxGeometry).parameters, uv = geo.attributes.uv;
+    // Faces in BoxGeometry's order: ±x (u along depth), ±y (u along width, v along depth), ±z (u along width).
+    const sizes: [number, number][] = [[d, h], [d, h], [w, d], [w, d], [w, h], [w, h]];
+    for (let i = 0; i < uv.count; i++) { const [su, sv] = sizes[Math.floor(i / 4)]; uv.setXY(i, (uv.getX(i) * su) / CARVING, (uv.getY(i) * sv) / CARVING); }
+    mesh.geometry = geo;
+    const mat = mesh.material as THREE.MeshStandardMaterial; mat.bumpMap = tex; mat.bumpScale = bump;
+  });
+  return o;
+}
+
 /** Radius of a lathe profile at height y, read off its points (which must rise in y). */
 const radiusAt = (profile: [number, number][], y: number) => {
   for (let i = 1; i < profile.length; i++) {
@@ -94,10 +153,10 @@ export function temple(): THREE.Group {
   // Cedar panelling from floor to ceiling (6:15) on every inner face; a cypress floor, laid just
   // below y = 0 so the furniture stands on it.
   const panel = 0.15, inner = HALF - panel, lm = cedar();
-  building('panelling', ...[-1, 1].map((sz) => box(X1 - X0, H, panel, (X0 + X1) / 2, H / 2, sz * (inner + panel / 2), lm)),
+  carved(building('panelling', ...[-1, 1].map((sz) => box(X1 - X0, H, panel, (X0 + X1) / 2, H / 2, sz * (inner + panel / 2), lm)),
     box(panel, H, 2 * HALF, X0 + panel / 2, H / 2, 0, lm),
     ...[-1, 1].map((sz) => box(panel, H, HALF - door.w / 2, X1 - panel / 2, H / 2, sz * (HALF + door.w / 2) / 2, lm)),
-    box(panel, H - door.h, door.w, X1 - panel / 2, (H + door.h) / 2, 0, lm));
+    box(panel, H - door.h, door.w, X1 - panel / 2, (H + door.h) / 2, 0, lm)));
   part('floor', box(X1 - X0, 0.2, 2 * HALF, (X0 + X1) / 2, -0.15, 0, cypress()));
 
   // The partition of cedar boards 20 cubits from the back (6:16), floor to ceiling, with a doorway
@@ -164,6 +223,9 @@ export function temple(): THREE.Group {
   part('door-gold', ...leaves.map((z) => box(0.3, door.h - 1, 2, 3, door.h / 2, z, dg)));
   // The veil of blue, purple and crimson (2 Chr 3:14), hung across the doorway inside the sanctuary.
   part('veil', sheet(dw + 0.4, dh + 0.2, DEBIR - pt / 2 - 0.3, (dh + 0.2) / 2, 0, 'x', cloth(0xffffff, weave(4))));
+  // The gold over the walls and doors is laid on the carvings, as the doors' 'gold hammered evenly over the
+  // carvings' (6:35), so it shows them too; the doors are carved like the walls (6:32, 35).
+  for (const name of ['sanctuary-gold', 'hall-gold', 'inner-doors', 'doors', 'door-gold']) carved(g.getObjectByName(name)!, 0.07);
 
   // The inner court (6:36): three courses of dressed stone and one of cedar beams, round the house,
   // with a gateway to the east. Its size is not given.
