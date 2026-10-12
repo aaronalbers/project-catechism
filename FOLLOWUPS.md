@@ -304,8 +304,6 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 - **Books beyond the 66.** Only Tobit's wage and deposit are priced. The sums in 1–2 Maccabees, Judith and Sirach are
   not, and the coverage test checks only the 66. *Needed:* entries checked against the WEB wording, and a coverage
   check for those books with an English pattern only, since they have no interlinear.
-- **The mina before the exile** is taken as 50 shekels. Ezekiel 45:12 makes it 60, and 1 Kgs 10:17 with 2 Chr 9:16
-  implies 100. The unit's basis says so, but nothing shows how far the three readings move each sum.
 
 ## Holders named from memory, and views still without one, recorded 2026-10-04
 

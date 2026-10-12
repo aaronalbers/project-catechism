@@ -30,7 +30,7 @@
      "name": "mina",
      "plural": "minas",
      "value": 50,
-     "basis": "Fifty shekels, a sixtieth of the 3,000-shekel talent. Ezekiel’s mina is sixty (Ezek 45:12), and Kings and Chronicles together imply a hundred (1 Kgs 10:17; 2 Chr 9:16).",
+     "basis": "Fifty shekels, a sixtieth of the 3,000-shekel talent. Ezekiel’s mina is sixty (Ezek 45:12), and Kings and Chronicles together imply a hundred (1 Kgs 10:17; 2 Chr 9:16). The choice moves one sum, the only one before the exile counted in minas: each of Solomon’s small gold shields (1 Kgs 10:17) is ≈195 years’ wages at fifty shekels to the mina, ≈234 at sixty and ≈390 at a hundred (derived on this table’s day and gold ratio).",
      "estimated": true
     },
     {"id": "talent", "name": "talent", "plural": "talents", "value": 3000, "basis": "3,000 shekels: Exodus counts 603,550 half-shekels as 100 talents and 1,775 shekels (Exod 38:25-26)."},
