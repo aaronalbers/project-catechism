@@ -500,9 +500,9 @@ works, one identification, none dissenting), and a search found no one placing t
 Reviewed for a `consensus` badge and does not qualify: John Wijngaards (2020) argues that the sanctuary stood in the
 valley of Shechem, and A. T. Richardson (1925) placed Shiloh at Beit Silo.
 
-- **The Seilun side is partly second-hand.** Robinson is now quoted from *Biblical Researches* (1841, vol. 3,
-  pp. 85–89); Driver and Albright are cited as Wijngaards quotes them, and Eusebius as Schwartz and Shemesh quote
-  Notley and Safrai. *Needed:* Driver's Hastings article, and Finkelstein's *Shiloh* (1993), whose own reading of the site, including
+- **The Seilun side is partly second-hand.** Robinson (1841, vol. 3, pp. 85–89) and Driver's Hastings
+  article (1902) are now read; Albright is cited as Wijngaards quotes him, and Eusebius as Schwartz and Shemesh quote
+  Notley and Safrai. *Needed:* Finkelstein's *Shiloh* (1993), whose own reading of the site, including
   what he found of Iron Age II there, should answer Wijngaards's report of a gap from 1050 to 350 BC.
 - **Richardson not read.** His Beit Silo proposal is given only as Wijngaards reports it.
 
