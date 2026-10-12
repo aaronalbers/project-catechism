@@ -337,8 +337,6 @@ the Heidelberg database state it, not as Kent's). Still from memory:
 - **Other files:** Leopold Zunz (1832) for one Chronicler (`scrolls.json`); Robert Gundry reading Hosea 11:1 in
   Matthew as typology (`prophecies.json`); Kenneth Kitchen's ≈925 BC for Shishak (`models.json`, already listed above
   under Reigns).
-- **Jerome on Thaddaeus is read in translation only**, through Catrin Williams's article. *Needed:* the Latin (CCSL 77)
-  or Scheck's translation, for the passage's full wording.
 
 ### Views still held by an unnamed group
 
