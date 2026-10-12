@@ -27,11 +27,30 @@ function bricks(wide: number, high: number): THREE.DataTexture {
  * ten times as tall as it is wide, where a human figure is five or six (Montgomery 1927), so it is drawn
  * as a robed figure 30 cubits high on a brick pedestal of 30, the two together 60 and neither wider
  * than 6. The split, the pedestal and the figure's form are reconstructed; each basis is in models.json.
+ * As the reading `stele` it is a gold-plated stele the full sixty by six, carved with a figure only at
+ * the top, as at Nerab (Montgomery 1927); its shaft is the part named `pedestal`, the carving `statue`.
  */
-export function statue(): THREE.Group {
+export function statue(reading?: string): THREE.Group {
   const g = new THREE.Group();
   const part = namedPart(g);
   const W = 6, P = 30;
+
+  if (reading === 'stele') {
+    // The stele: a slab with a rounded top, 60 high and 6 wide, 1.5 thick; its thickness is not given.
+    const T = 1.5, shape = new THREE.Shape();
+    shape.moveTo(-W / 2, 0); shape.lineTo(W / 2, 0); shape.lineTo(W / 2, 60 - W / 2); shape.absarc(0, 60 - W / 2, W / 2, 0, Math.PI, false); shape.lineTo(-W / 2, 0);
+    const slab = new THREE.Mesh(new THREE.ExtrudeGeometry(shape, { depth: T, bevelEnabled: false, curveSegments: 32 }), gold());
+    slab.position.z = -T / 2;
+    part('pedestal', slab);
+    // At the top, the bust of a figure in low relief on the face, as on the Nerab stele.
+    const gm = gold(), relief = (geo: THREE.BufferGeometry, x: number, y: number, depth: number) => { const m = meshAt(geo, gm, x, y, T / 2); m.scale.z = depth; return m; };
+    const head = relief(new THREE.SphereGeometry(1.25, 32, 16), 0, 54.2, 0.35);
+    const beard = box(1.5, 1.8, 0.45, 0, 52.4, T / 2 + 0.2, gm);
+    const shoulders = relief(new THREE.SphereGeometry(2.4, 32, 16), 0, 50.2, 0.22); shoulders.scale.y = 0.6;
+    const crown = meshAt(new THREE.CylinderGeometry(1.1, 1, 2, 32), gm, 0, 56.2, T / 2); crown.scale.z = 0.35;
+    part('statue', shoulders, head, beard, crown);
+    return g;
+  }
 
   // The pedestal: a plinth and cornice the full six cubits across, and a shaft between them a little narrower.
   const brick = (w: number, h: number) => new THREE.MeshStandardMaterial({ color: 0xb48a5c, map: bricks(w, h), roughness: 0.95 });
