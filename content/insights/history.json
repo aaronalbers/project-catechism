@@ -706,7 +706,7 @@
   ],
   "sources": [
    {"kind": "scripture", "ref": "1John.5.7-8"},
-   {"kind": "primary", "title": "Cyprian, On the Unity of the Catholic Church 6", "note": "'de Patre et Filio et Spiritu sancto scriptum est Et tres unum sunt', as Brooke and Hills quote it"},
+   {"kind": "primary", "title": "Cyprian, On the Unity of the Catholic Church 6", "author": "ed. W. Hartel, CSEL 3.1", "year": 1868, "url": "https://archive.org/details/corpusscriptoru04wiengoog", "note": "p. 215: 'dicit Dominus: ego et pater unum sumus. et iterum de Patre et Filio et Spiritu sancto scriptum est: et tres unum sunt'"},
    {"kind": "scholarship", "title": "A Critical and Exegetical Commentary on the Johannine Epistles (International Critical Commentary)", "author": "A. E. Brooke", "year": 1912, "url": "https://archive.org/details/criticalexegetic43broouoft", "note": "pp. 154–156, on 1 John 5:7-8"},
    {"kind": "scholarship", "title": "The King James Version Defended, 'The Johannine Comma'", "author": "Edward F. Hills", "year": 1956, "url": "https://archive.org/details/TheKingJamesVersionDefended", "note": "read in the fourth edition, with Theodore P. Letis's foreword dated Reformation Day 1983, which places the passage at p. 209; its wording is the same as the chapter published online at confessionalbibliology.com"}
   ],

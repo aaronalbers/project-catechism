@@ -542,4 +542,5 @@ and Kahle's plural origin are told as history with the answers given them; no on
 
 Reviewed for a `consensus` badge and does not qualify: Edward F. Hills defends the words as possibly genuine.
 
-- **Cyprian and Facundus are quoted as Brooke and Hills give them**, not from an edition.
+- **Facundus is quoted as Brooke and Hills give him**, not from an edition (Cyprian is now read in Hartel's CSEL 3.1,
+  p. 215).
