@@ -220,7 +220,8 @@ The Muratorian Fragment, the Septuagint's opening of Lamentations, Jerome on Dan
 4Q201, 4Q216, 7Q2 and 11Q5 were read and linked. Still unchecked:
 
 - **[Needs a person]** **The British Museum number of the Amenemope papyrus (EA 10474).** The museum's collection pages refuse scripted
-  requests. *Needed:* the page opened in a browser, and its URL added.
+  requests, and their Cloudflare check stops the automated browser too (tried 2026-10-12). *Needed:* the page opened
+  in a browser, and its URL added.
 
 ## Red letters (`src/lib/redletter.ts`, the reader), 2026-10-03
 
@@ -451,8 +452,9 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
   connects Simeon's fall in Numbers 26 with Peor (`num26-census`; Rashi on 26:13, checked, does not); John 19:14 read
   as counted from midnight or as a copyist's slip (`passion.json`); 𝔓66 "some argue 4th century" (`fragments.json`);
   "local Christian tradition" for Ananias's chapel; Jethro, Reuel and Hobab ("some commentators", "others").
-- **A uniqueness claim without a source:** the Black Obelisk as "the only known ancient picture of an Israelite king
-  or his envoy" (`black-obelisk-jehu`).
+- **[Needs a person]** **The Black Obelisk as the only picture of an Israelite king**, dropped from `black-obelisk-jehu`
+  for want of a source. The British Museum's page (W_1848-1104-1) refuses scripted requests, and its Cloudflare check
+  stops the automated browser as well. *Needed:* the page opened in a browser, and the claim restored only if it says so.
 
 
 ## The eclipse in the year of Bur-Sagale (`bur-sagale-eclipse`, `bur-sagale-which-eclipse`), 2026-10-04
