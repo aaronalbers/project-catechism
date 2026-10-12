@@ -46,9 +46,8 @@ decided, and what a person needs to do.
   on pp. xxiii–xxv agree. *Needed:* a check against a page image. No reading after 1920 was read, so the card
   names no answer to Charles's rearrangement.
 - **Ecclesiastes: Barton's holders read only through him.** Cornill, Genung, Siegfried, Haupt and McNeile are cited as
-  Barton (1908) reports them, without initials or dates, which he gives elsewhere. The glosses Barton finds within
-  1:2–12:8 are not drawn on the strip, as their verse letters were garbled in the OCR copy read. *Needed:* a page
-  image of Barton, pp. 44–46, to list them.
+  Barton (1908) reports them. Barton gives no date for Cornill's *Einleitung*. *Needed:* their own works, to check
+  what Barton attributes to each.
 - **Judges names no critics.** Moore (1895) and BibleProject were read; no later reading that keeps 1:1–2:5 and 17–21
   with the book (or answers Moore) was. *Needed:* a later commentary's introduction.
 - **Acts names no critics.** Turner (1898) and BibleProject were read; no later discussion of Turner's panels was.
