@@ -101,6 +101,30 @@ The Shape tab charts Genesis, Leviticus, Judges, Ecclesiastes, Jonah, Matthew, M
   first clause plays sooner. Piper would be a lighter neural option beside Kokoro. Its speed and size are the
   project's own claims, not measured here.
 
+## Letters on the road
+
+How letters were read beyond the church they were sent to, drawn on the Places map. What the text states and what
+scholars reconstruct stay apart: the first in fact-badged entries, the second as `interpretation`s with their
+holders and critics. The holders named here are recalled, not yet read; each needs checking against its own text.
+
+- **Revelation's seven churches as a circuit (Rev 1:11, 2–3).** The text names seven cities in order. A journey
+  drawn a stretch per letter as Revelation 2–3 is read, closing at Laodicea. That the order is a courier's road loop
+  (Ephesus north to Pergamum, south-east to Laodicea) is Ramsay's reading (*The Letters to the Seven Churches*, 1904),
+  an `interpretation`. The cities' positions come from OpenBible; the roads between them would be estimates with a
+  `basis`. The first to build, as the only case with an ordered list of real cities.
+- **Letters the text says were passed on.** Col 4:16 (Colossae's letter read at Laodicea, and "the letter from
+  Laodicea" read at Colossae) as arrows between the cities, the unknown letter dashed. 1 Thess 5:27 ("read to all
+  the brothers") beside it.
+- **1 Peter's provinces as a route (1 Pet 1:1).** Pontus, Galatia, Cappadocia, Asia and Bithynia lit in the order
+  named. That the order traces a messenger's path from a Black Sea port is Hort's reading, an `interpretation`;
+  the provinces need boundaries from a cited source.
+- **Who each letter is addressed to.** A compact strip in the Links tab: one church, a region (Gal 1:2, 2 Cor 1:1),
+  several provinces (1 Pet 1:1), everyone (Jas 1:1), with any onward reading the text asks for. Ephesians' missing
+  "in Ephesus" (P46, Sinaiticus, Vaticanus) and the reading of it as a circular letter, or as Col 4:16's letter from
+  Laodicea (Marcion's title, as reported), would be `interpretation`s naming their holders.
+- **The letters gathered.** 2 Pet 3:15–16 already speaks of Paul's letters as a group; Polycarp (*Philippians* 13)
+  gathers Ignatius's. Belongs with **The New Testament's codices** under Scrolls, as the later stage of the same story.
+
 ## Models and cities
 
 - **Ezekiel's city (Ezek 48:30–35)** as its own model at its true 4,500 cubits a side, to set beside the New
