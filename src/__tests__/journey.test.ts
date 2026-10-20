@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { journeyAt } from '@/lib/content';
 import { partialPath, resolveRoute, stopAt } from '@/lib/journey';
 import type { Journey, Place } from '@/lib/types';
 
@@ -42,5 +43,17 @@ describe('partialPath', () => {
   it('cuts a polyline by length', () => {
     expect(partialPath([[0, 0], [0, 1], [0, 3]], 0.5)).toEqual([[0, 0], [0, 1], [0, 1.5]]);
     expect(partialPath([[0, 0], [0, 2]], 1)).toEqual([[0, 0], [0, 2]]);
+  });
+});
+
+describe('journeyAt', () => {
+  const at = (chapter: number, verse: number) => journeyAt({ book: 'Acts', chapter, verse })?.id;
+  it('draws the journey begun by the verse, or the next one in the chapter', () => {
+    expect(at(18, 5)).toBe('acts15-antioch-macedonia-achaia');
+    expect(at(18, 23)).toBe('acts18-antioch-ephesus-jerusalem');
+    expect(at(15, 32)).toBe('acts15-antioch-jerusalem');
+    expect(at(15, 36)).toBe('acts15-antioch-macedonia-achaia');
+    expect(at(23, 1)).toBe('acts23-jerusalem-caesarea');
+    expect(at(24, 1)).toBeUndefined();
   });
 });

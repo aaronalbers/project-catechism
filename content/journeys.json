@@ -91,5 +91,234 @@
    { "verse": "Num.34.12", "name": "Salt Sea, at the Jordan's mouth", "place": "abed304", "estimate": { "at": [31.7582, 35.5585], "basis": "Where the Jordan enters the Salt Sea: the end of OpenBible's geometry for the Jordan, which is traced from OpenStreetMap." }, "via": { "points": [[32.7, 35.625], [32.7108, 35.5793], [32.6752, 35.5566], [32.5522, 35.5774], [32.5148, 35.5526], [32.4876, 35.5802], [32.4224, 35.5519], [32.401, 35.5607], [32.4007, 35.5465], [32.3839, 35.5634], [32.3219, 35.5531], [32.2113, 35.5739], [32.107, 35.5325], [32.0823, 35.5461], [32.0475, 35.5192], [31.9689, 35.5483], [31.9077, 35.5243], [31.8727, 35.5499], [31.8162, 35.5389]], "basis": "Follows the Jordan from the Sea of Galilee down to the Salt Sea, using OpenBible's geometry for the Jordan, which is traced from OpenStreetMap." } },
    { "verse": "Num.34.12", "name": "End of the Salt Sea", "place": "abed304", "estimate": { "at": [31.0864, 35.4763], "basis": "The Salt Sea itself is the boundary from the Jordan back to its southern tip, where the southern border began, so the line closes down the length of the lake." } }
   ]
+ },
+ {
+  "id": "acts9-saul-damascus-tarsus",
+  "title": "Saul from Jerusalem to Damascus and Tarsus",
+  "ref": "Acts.9.1-30",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Saul sets out from Jerusalem with letters to the synagogues of Damascus, is blinded on the road and led into the city, escapes over the wall, returns to Jerusalem and is sent off from Caesarea to Tarsus. Sites follow OpenBible.info's top-ranked identification. Acts does not say whether he went from Caesarea to Tarsus by sea, and the line is drawn straight. Paul's own account adds a stay in Arabia before he returned to Damascus (Gal 1:17), which Acts does not mention.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.9.1-30", "note": "The journey itself." },
+   { "kind": "scripture", "ref": "Gal.1.15-18", "note": "Paul's own account: 'I went into Arabia and later returned to Damascus. Only after three years did I go up to Jerusalem.'" },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." }
+  ],
+  "stations": [
+   { "verse": "Acts.9.2", "name": "Jerusalem", "place": "a15257a" },
+   { "verse": "Acts.9.8", "name": "Damascus", "place": "a69c1d4" },
+   { "verse": "Acts.9.26", "name": "Jerusalem", "place": "a15257a", "note": "Acts says only that 'many days had passed' in Damascus (9:23). Paul writes that he went into Arabia, returned to Damascus, and 'only after three years' went up to Jerusalem (Gal 1:17-18)." },
+   { "verse": "Acts.9.30", "name": "Caesarea", "place": "a58735e" },
+   { "verse": "Acts.9.30", "name": "Tarsus", "place": "a666ea0", "via": { "points": [], "basis": "The brothers 'took him down to Caesarea and sent him off to Tarsus'. Caesarea was a port, but Acts does not say he sailed, so the line is drawn straight." } }
+  ]
+ },
+ {
+  "id": "acts11-barnabas-saul-antioch",
+  "title": "Barnabas and Saul to Antioch and Jerusalem",
+  "ref": "Acts.11.25-30",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Barnabas fetches Saul from Tarsus to Antioch, where they teach for a year; the church there then sends relief for the brothers in Judea with them. Sites follow OpenBible.info's top-ranked identification; the roads between them are estimates.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.11.25-30", "note": "The journey itself." },
+   { "kind": "scripture", "ref": "Acts.12.25", "note": "Calls it 'their mission to Jerusalem'." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.11.25", "name": "Tarsus", "place": "a666ea0" },
+   { "verse": "Acts.11.26", "name": "Antioch", "place": "ae41ab4", "via": { "go": ["land", [36.49, 36.2], "land"], "points": [[36.93, 36.09], [36.81, 36.21], [36.49, 36.2]], "basis": "Acts names no road. The line goes round the head of the Gulf of Issus and through the Syrian Gates (the Belen pass)." } },
+   { "verse": "Acts.11.30", "name": "Jerusalem", "place": "a15257a", "note": "Verse 30 names the elders, not the city; 12:25 calls it 'their mission to Jerusalem'.", "via": { "go": ["land"], "points": [[34.56, 36]], "basis": "Acts names no road. The line keeps inland of the coast." } }
+  ]
+ },
+ {
+  "id": "acts12-return-to-antioch",
+  "title": "Barnabas and Saul return, with John Mark",
+  "ref": "Acts.12.25",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Their mission done, Barnabas and Saul return, bringing John Mark. The verse does not name where they returned to; they are next at Antioch (13:1). Sites follow OpenBible.info's top-ranked identification.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.12.25", "note": "The return. The BSB's footnote: 'Or had fulfilled their mission, they returned to Jerusalem; NE and TR had fulfilled their mission, they returned from Jerusalem'." },
+   { "kind": "scripture", "ref": "Acts.13.1", "note": "Barnabas and Saul among the prophets and teachers at Antioch." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.12.25", "name": "Jerusalem", "place": "a15257a" },
+   { "verse": "Acts.12.25", "name": "Antioch", "place": "ae41ab4", "note": "The verse does not name it: Barnabas and Saul are next at Antioch (13:1). The BSB's footnote gives another rendering, 'they returned to Jerusalem', and the reading of NE and TR, 'they returned from Jerusalem'.", "via": { "go": ["land"], "points": [[34.56, 36]], "basis": "Acts names no road. The line keeps inland of the coast." } }
+  ]
+ },
+ {
+  "id": "acts13-antioch-cyprus-lycaonia",
+  "title": "From Antioch through Cyprus to Lycaonia",
+  "ref": "Acts.13.1-14.28",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Barnabas and Saul, sent out by the church at Antioch, sail from Seleucia to Cyprus, cross the island to Paphos, sail to Perga and go inland to Pisidian Antioch, Iconium and the Lycaonian cities of Lystra and Derbe, then go back the way they came and sail home from Attalia. Lightfoot (1890), who numbers the journeys of 15:40 and 18:23 second and third, makes this the first. Sites follow OpenBible.info's top-ranked identification. Legs are straight between the places named, except where a leg at sea is kept off the land.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.13.1-14.28", "note": "The journey itself." },
+   { "kind": "scholarship", "title": "Saint Paul's Epistle to the Galatians", "author": "J. B. Lightfoot", "year": 1890, "url": "https://archive.org/details/saintpaulsepistl00lighuoft", "note": "10th ed., pp. 20–22: 'the Phrygian and Galatian country' of Acts 16:6 is 'not Lycaonia and Pisidia, but some region which might be said to belong either to Phrygia or Galatia'; he conjectures the churches were at Ancyra, Pessinus and Tavium. He calls the journeys of Acts 15:40 and 18:23 Paul's 'second missionary journey' and 'third missionary journey'." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.13.1", "name": "Antioch", "place": "ae41ab4" },
+   { "verse": "Acts.13.4", "name": "Seleucia", "place": "a6d306d" },
+   { "verse": "Acts.13.5", "name": "Salamis", "place": "afa863b", "via": { "go": ["sea"], "points": [[36.09, 35.88], [35.22, 33.96]], "basis": "Acts names no course; the line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.13.6", "name": "Paphos", "place": "a314765" },
+   { "verse": "Acts.13.13", "name": "Perga", "place": "aff04b8", "via": { "go": ["sea"], "points": [[36.84, 30.9]], "basis": "Acts names no course; the line is the shortest course that keeps off the land, then inland to Perga." } },
+   { "verse": "Acts.13.14", "name": "Pisidian Antioch", "place": "a6c704a" },
+   { "verse": "Acts.13.51", "name": "Iconium", "place": "ae425aa" },
+   { "verse": "Acts.14.6", "name": "Lystra", "place": "af0719d" },
+   { "verse": "Acts.14.20", "name": "Derbe", "place": "aa401a9" },
+   { "verse": "Acts.14.21", "name": "Lystra", "place": "af0719d" },
+   { "verse": "Acts.14.21", "name": "Iconium", "place": "ae425aa" },
+   { "verse": "Acts.14.21", "name": "Pisidian Antioch", "place": "a6c704a" },
+   { "verse": "Acts.14.25", "name": "Perga", "place": "aff04b8" },
+   { "verse": "Acts.14.25", "name": "Attalia", "place": "ac744c1" },
+   { "verse": "Acts.14.26", "name": "Antioch", "place": "ae41ab4", "via": { "go": ["sea", [36.124, 35.922], "land"], "points": [[36.84, 30.75], [36.06, 32.58], [36, 32.79], [36.12, 35.85], [36.124, 35.922]], "basis": "Acts says only that they sailed to Antioch, which lies inland up the Orontes. The line is the shortest course that keeps off the land to Seleucia, Antioch's port on the way out (13:4), and inland from there." } }
+  ]
+ },
+ {
+  "id": "acts15-antioch-jerusalem",
+  "title": "Paul and Barnabas to the council at Jerusalem",
+  "ref": "Acts.15.1-30",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Sent by the church at Antioch over the question of circumcision, Paul and Barnabas go up to Jerusalem through Phoenicia and Samaria, and come back to Antioch with the apostles' letter. Acts names the regions on the way, not towns; each is marked ≈ at OpenBible.info's point for it.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.15.1-30", "note": "The journey itself." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.15.1", "name": "Antioch", "place": "ae41ab4", "note": "The verse does not name it: Paul and Barnabas had come back to Antioch and 'spent a long time there' (14:26-28)." },
+   { "verse": "Acts.15.3", "name": "Phoenicia", "place": "a33d53e", "estimate": { "at": [33.27083, 35.19611], "basis": "Acts names only the region. The point is OpenBible's for Phoenicia, at Tyre." }, "via": { "go": ["land"], "points": [[34.56, 36], [33.33, 35.25], [33.3, 35.22]], "basis": "Acts names no road. The line keeps inland of the coast." } },
+   { "verse": "Acts.15.3", "name": "Samaria", "place": "a282dce", "estimate": { "at": [32.27611, 35.195], "basis": "Acts names only the region. The point is OpenBible's for it, at the city of Samaria." } },
+   { "verse": "Acts.15.4", "name": "Jerusalem", "place": "a15257a" },
+   { "verse": "Acts.15.30", "name": "Antioch", "place": "ae41ab4", "via": { "go": ["land"], "points": [[34.56, 36]], "basis": "Acts names no road. The line keeps inland of the coast." } }
+  ]
+ },
+ {
+  "id": "acts15-antioch-macedonia-achaia",
+  "title": "From Antioch to Macedonia and Achaia",
+  "ref": "Acts.15.35-18.22",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Paul and Silas go back through Syria and Cilicia to the churches of Lycaonia, where Timothy joins them, are kept out of Asia and Bithynia, and cross from Troas to Macedonia: Philippi, Thessalonica and Berea, then Athens and a year and a half at Corinth. Paul sails home by Ephesus and Caesarea. Lightfoot (1890) calls it Paul's 'second missionary journey'. Sites follow OpenBible.info's top-ranked identification. Where Acts names a region and not a town the point is marked ≈, and the region of Phrygia and Galatia (16:6), which readers place differently, is drawn on neither reading. Paths between the places named are estimates.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.15.35-18.22", "note": "The journey itself." },
+   { "kind": "scholarship", "title": "Saint Paul's Epistle to the Galatians", "author": "J. B. Lightfoot", "year": 1890, "url": "https://archive.org/details/saintpaulsepistl00lighuoft", "note": "10th ed., pp. 20–22: 'the Phrygian and Galatian country' of Acts 16:6 is 'not Lycaonia and Pisidia, but some region which might be said to belong either to Phrygia or Galatia'; he conjectures the churches were at Ancyra, Pessinus and Tavium. He calls the journeys of Acts 15:40 and 18:23 Paul's 'second missionary journey' and 'third missionary journey'." },
+   { "kind": "scholarship", "title": "St. Paul the Traveller and the Roman Citizen", "author": "W. M. Ramsay", "year": 1896, "url": "https://archive.org/details/stpaultravellerr00rams", "note": "p. 104: Pisidian Antioch 'was the centre of the Region called Phrygia in inscriptions enumerating the parts of the province, and \"the Phrygian Region of (the province) Galatia\" in Acts XVI 6'; pp. 111–112: 'the Galatic Region' of 18:23 is the Roman part of Lycaonia, Derbe and Lystra; p. 211 calls those who read it otherwise 'the North-Galatian theorists'." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.15.35", "name": "Antioch", "place": "ae41ab4" },
+   { "verse": "Acts.15.41", "name": "Syria and Cilicia", "place": "ad63819", "estimate": { "at": [36.91303, 34.89206], "basis": "Acts names only the provinces. Cilicia is marked at OpenBible's point for it, Tarsus, Paul's own city (21:39); Acts does not say he went there." }, "via": { "go": ["land", [36.49, 36.2], "land"], "points": [[36.49, 36.2], [36.81, 36.21], [36.93, 36.06]], "basis": "Acts names no road. The line goes through the Syrian Gates (the Belen pass) and round the head of the Gulf of Issus." } },
+   { "verse": "Acts.16.1", "name": "Derbe", "place": "aa401a9", "via": { "points": [[37.28, 34.78]], "basis": "Acts names no road. The line crosses the Taurus by the Cilician Gates, the pass from Cilicia into Lycaonia." } },
+   { "verse": "Acts.16.1", "name": "Lystra", "place": "af0719d" },
+   { "verse": "Acts.16.6", "name": "Region of Phrygia and Galatia", "estimate": { "basis": "Acts names a region, not a town, and readers place it differently. Ramsay (1896) reads it as 'the Phrygian Region of (the province) Galatia', the district round Pisidian Antioch in the south of the province, where the churches of 13:14–14:23 were. Lightfoot (1890) reads it as 'some region which might be said to belong either to Phrygia or Galatia', not Lycaonia and Pisidia, and conjectures churches at Ancyra, Pessinus and Tavium, in the north. The map follows neither: the point is spaced evenly between Lystra and Troas." } },
+   { "verse": "Acts.16.7", "name": "Border of Mysia", "place": "a2d9bc8", "estimate": { "basis": "Acts names the border of a region, not a town. The point is spaced evenly between Lystra and Troas." } },
+   { "verse": "Acts.16.8", "name": "Troas", "place": "a91c509", "via": { "go": ["land"], "points": [[39.75, 26.43]], "basis": "Acts names no road. The line goes round the Gulf of Adramyttium." } },
+   { "verse": "Acts.16.11", "name": "Samothrace", "place": "a68750d", "via": { "go": ["sea"], "points": [[39.78, 26.1], [40.11, 25.68], [40.14, 25.65], [40.38, 25.59]], "basis": "'We sailed from Troas straight to Samothrace.' The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.16.11", "name": "Neapolis", "place": "a6a7150", "via": { "go": ["sea"], "points": [[40.44, 25.5], [40.92, 24.48]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.16.12", "name": "Philippi", "place": "a49e1d0" },
+   { "verse": "Acts.17.1", "name": "Amphipolis", "place": "a4bdea7" },
+   { "verse": "Acts.17.1", "name": "Apollonia", "place": "ab20df9" },
+   { "verse": "Acts.17.1", "name": "Thessalonica", "place": "afa9d8e" },
+   { "verse": "Acts.17.10", "name": "Berea", "place": "a62fe31" },
+   { "verse": "Acts.17.15", "name": "Athens", "place": "a1fe6e7", "via": { "points": [], "basis": "The brothers 'sent Paul to the coast' (17:14) and his escort 'brought him to Athens'. Acts does not say whether they went on by sea or by land, so the line is drawn straight." } },
+   { "verse": "Acts.18.1", "name": "Corinth", "place": "a6f437a", "via": { "go": ["land"], "points": [[38.04, 23.55], [38.04, 23.52], [38.04, 23.49]], "basis": "Acts names no road. The line goes by land round the Saronic Gulf." } },
+   { "verse": "Acts.18.18", "name": "Cenchrea", "place": "aa31dd3" },
+   { "verse": "Acts.18.19", "name": "Ephesus", "place": "a5feb15", "via": { "go": ["sea"], "points": [[37.86, 23.13], [37.65, 24.03], [37.71, 24.48], [37.68, 24.96], [37.89, 26.19], [37.89, 27.24]], "basis": "Acts names no port between; the line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.18.22", "name": "Caesarea", "place": "a58735e", "via": { "go": ["sea"], "points": [[37.86, 27.24], [37.71, 27.09], [37.68, 27.06], [37.65, 27.06], [36.99, 27.24], [36.96, 27.27], [36.84, 27.42], [36.72, 27.42], [36.69, 27.45], [36.66, 27.63], [36.66, 27.96], [36.6, 28.05], [32.52, 34.86]], "basis": "Acts names no port between; the line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.18.22", "name": "Jerusalem", "place": "a15257a", "note": "The Greek names no city. The BSB's footnote: 'Literally he went up and greeted the church'." },
+   { "verse": "Acts.18.22", "name": "Antioch", "place": "ae41ab4", "via": { "go": ["land"], "points": [[34.56, 36]], "basis": "Acts names no road. The line keeps inland of the coast." } }
+  ]
+ },
+ {
+  "id": "acts18-antioch-ephesus-jerusalem",
+  "title": "From Antioch to Ephesus, Greece and Jerusalem",
+  "ref": "Acts.18.23-21.17",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Paul goes through the region of Galatia and Phrygia to Ephesus and stays there; then through Macedonia to Greece for three months, back through Macedonia, and by ship from Troas down the coast of Asia, meeting the Ephesian elders at Miletus, and on by Tyre and Caesarea to Jerusalem. Lightfoot (1890) calls it Paul's 'third missionary journey'. Sites follow OpenBible.info's top-ranked identification. Where Acts names a region and not a town the point is marked ≈, and the region of Galatia and Phrygia (18:23), which readers place differently, is drawn on neither reading. Paths between the places named are estimates.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.18.23-21.17", "note": "The journey itself." },
+   { "kind": "scripture", "ref": "2Cor.2.12-13", "note": "Paul goes to Troas and then on to Macedonia; Acts does not tie this to 20:1." },
+   { "kind": "scholarship", "title": "Saint Paul's Epistle to the Galatians", "author": "J. B. Lightfoot", "year": 1890, "url": "https://archive.org/details/saintpaulsepistl00lighuoft", "note": "10th ed., pp. 20–22: 'the Phrygian and Galatian country' of Acts 16:6 is 'not Lycaonia and Pisidia, but some region which might be said to belong either to Phrygia or Galatia'; he conjectures the churches were at Ancyra, Pessinus and Tavium. He calls the journeys of Acts 15:40 and 18:23 Paul's 'second missionary journey' and 'third missionary journey'." },
+   { "kind": "scholarship", "title": "St. Paul the Traveller and the Roman Citizen", "author": "W. M. Ramsay", "year": 1896, "url": "https://archive.org/details/stpaultravellerr00rams", "note": "p. 104: Pisidian Antioch 'was the centre of the Region called Phrygia in inscriptions enumerating the parts of the province, and \"the Phrygian Region of (the province) Galatia\" in Acts XVI 6'; pp. 111–112: 'the Galatic Region' of 18:23 is the Roman part of Lycaonia, Derbe and Lystra; p. 211 calls those who read it otherwise 'the North-Galatian theorists'." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.18.23", "name": "Antioch", "place": "ae41ab4" },
+   { "verse": "Acts.18.23", "name": "Region of Galatia and Phrygia", "estimate": { "basis": "Acts names regions, not towns, and readers place them differently. Ramsay (1896) reads 'the Galatic Region' as the Roman part of Lycaonia (Derbe and Lystra) and Phrygia as the district round Pisidian Antioch, where the churches of the first journey were. Lightfoot (1890) takes it as the same Phrygian and Galatian country as 16:6, which he places in the north round Ancyra and Pessinus. The map follows neither: the point is spaced evenly between Antioch and Ephesus." }, "via": { "go": ["land", [36.49, 36.2], "land", [36.913, 34.892], "land", [37.28, 34.78], "land"], "points": [[36.49, 36.2], [36.81, 36.21], [36.93, 36.06], [36.913, 34.892], [37.28, 34.78]], "basis": "Acts names no road. The line takes the way of the second journey (15:41-16:1): through the Syrian Gates, round the Gulf of Issus to Tarsus and over the Taurus by the Cilician Gates." } },
+   { "verse": "Acts.19.1", "name": "Ephesus", "place": "a5feb15", "via": { "points": [], "basis": "Paul 'passed through the interior'; Acts names no town on the way." } },
+   { "verse": "Acts.20.1", "name": "Macedonia", "place": "a69e1b8", "estimate": { "at": [41.01207, 24.28458], "basis": "Acts names only the province. The point is put at Philippi, the first city of Macedonia in Acts (16:12) and the one he sails from on the way back (20:6)." }, "via": { "go": ["land", [39.752, 26.159], "sea", [40.935, 24.415], "land"], "points": [[39.51, 26.94], [39.54, 26.91], [39.57, 26.88], [39.752, 26.159], [39.78, 26.1], [40.92, 24.57], [40.92, 24.48], [40.935, 24.415]], "basis": "Acts does not say how he went. The line goes by land to Troas and across to Neapolis, the crossing of 16:11. Paul writes of going on from Troas to Macedonia (2 Cor 2:12-13), which Acts does not tie to this journey." } },
+   { "verse": "Acts.20.2", "name": "Greece", "place": "a4492a0", "estimate": { "at": [37.90579, 22.87874], "basis": "Acts names no city in Greece. The point is put at Corinth, where he had stayed a year and a half (18:11)." }, "via": { "go": ["land", [40.82, 23.847], "land", [40.638, 22.946], "land"], "points": [[40.82, 23.847], [40.638, 22.946], [40.53, 22.62], [40.14, 22.56], [40.11, 22.56], [38.88, 22.56], [38.85, 22.56], [38.13, 23.22], [38.04, 23.1]], "basis": "'After traveling through that area' (Macedonia). Acts names no town, and the line goes by land by Amphipolis and Thessalonica." } },
+   { "verse": "Acts.20.6", "name": "Philippi", "place": "a49e1d0", "via": { "go": ["land", [40.638, 22.946], "land", [40.82, 23.847], "land"], "points": [[38.1, 23.19], [38.19, 23.22], [38.85, 22.56], [38.88, 22.56], [40.11, 22.56], [40.14, 22.56], [40.53, 22.62], [40.638, 22.946], [40.82, 23.847]], "basis": "He went 'back through Macedonia' rather than sail (20:3). Acts names no town before Philippi, and the line goes by land by Thessalonica and Amphipolis." } },
+   { "verse": "Acts.20.6", "name": "Troas", "place": "a91c509", "via": { "go": ["land", [40.935, 24.415], "sea"], "points": [[40.935, 24.415], [40.92, 24.48], [40.53, 25.26], [40.11, 25.68], [39.78, 26.1]], "basis": "'We sailed from Philippi', by its port Neapolis. The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.20.13", "name": "Assos", "place": "a0a2ca7", "note": "Paul went on foot; the others sailed and took him aboard here.", "via": { "go": ["land"], "points": [], "basis": "Paul's own way, on foot." } },
+   { "verse": "Acts.20.14", "name": "Mitylene", "place": "a33910d", "via": { "go": ["sea"], "points": [[39.45, 26.37], [39.15, 26.55]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.20.15", "name": "Opposite Chios", "place": "a4c2c75", "estimate": { "at": [38.36, 26.21], "basis": "They 'arrived the next day opposite Chios', so the point is in the strait between the island and the mainland." }, "via": { "go": ["sea"], "points": [[39.06, 26.52], [39, 26.58]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.20.15", "name": "Samos", "place": "acf6ec0", "via": { "go": ["sea"], "points": [[38.25, 26.28], [37.83, 26.79]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.20.15", "name": "Miletus", "place": "a55027d", "via": { "go": ["sea"], "points": [[37.8, 26.91], [37.8, 27.03], [37.74, 27.09], [37.68, 27.06], [37.65, 27.06], [37.56, 27.15]], "basis": "The line is the shortest course that keeps off the land. Miletus's harbour has since silted up, so the site now lies inland." } },
+   { "verse": "Acts.21.1", "name": "Cos", "place": "a398e5d", "via": { "go": ["sea"], "points": [[37.47, 27.18], [36.87, 27.12]], "basis": "'We sailed directly to Cos.' The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.21.1", "name": "Rhodes", "place": "a4218ee", "via": { "go": ["sea"], "points": [[36.78, 27.18], [36.66, 27.57], [36.66, 27.96]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.21.1", "name": "Patara", "place": "ade301b", "via": { "go": ["sea"], "points": [], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.21.3", "name": "Tyre", "place": "a160272", "via": { "go": ["sea", [34.45, 33], "sea"], "points": [[34.68, 32.52], [34.45, 33]], "basis": "'After sighting Cyprus and passing south of it' (21:3). The line is the shortest course that keeps off the land, south of the island." } },
+   { "verse": "Acts.21.7", "name": "Ptolemais", "place": "abc2af0", "via": { "go": ["sea"], "points": [[33, 35.04], [32.97, 35.04]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.21.8", "name": "Caesarea", "place": "a58735e" },
+   { "verse": "Acts.21.17", "name": "Jerusalem", "place": "a15257a" }
+  ]
+ },
+ {
+  "id": "acts23-jerusalem-caesarea",
+  "title": "Paul taken under guard to Caesarea",
+  "ref": "Acts.23.23-33",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Told of a plot, the commander sends Paul by night from Jerusalem to Governor Felix at Caesarea, with soldiers as far as Antipatris and horsemen from there. Sites follow OpenBible.info's top-ranked identification, which for Antipatris is the site of Aphek.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.23.23-33", "note": "The journey itself." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." }
+  ],
+  "stations": [
+   { "verse": "Acts.23.23", "name": "Jerusalem", "place": "a15257a", "note": "The verse does not name it: Paul was held in the barracks at Jerusalem (23:10, 16)." },
+   { "verse": "Acts.23.31", "name": "Antipatris", "place": "a7b2e63" },
+   { "verse": "Acts.23.33", "name": "Caesarea", "place": "a58735e" }
+  ]
+ },
+ {
+  "id": "acts27-voyage-to-rome",
+  "title": "The voyage to Rome",
+  "ref": "Acts.27.1-28.16",
+  "confidence": "estimate",
+  "stop": "stop",
+  "summary": "Paul, a prisoner, sails for Italy: along the coast to Sidon and Myra, on an Alexandrian ship to Crete, then fourteen nights before a storm to Malta, where they winter; on to Syracuse, Rhegium and Puteoli, and by road to Rome. Sites follow OpenBible.info's top-ranked identification. Where the text gives the ship's course (the lee of Cyprus, the coast of Crete) the line follows it; across the storm it is drawn straight, since Acts gives no course.",
+  "sources": [
+   { "kind": "scripture", "ref": "Acts.27.1-28.16", "note": "The voyage itself." },
+   { "kind": "data", "title": "OpenBible.info Bible Geocoding Data", "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data", "license": "CC-BY 4.0", "note": "Proposed sites and their ranking, weighed across 70+ atlases and commentaries." },
+   { "kind": "data", "title": "Natural Earth 1:10m coastline", "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/", "license": "public domain", "note": "Legs at sea, and roads round a gulf, are drawn to keep about a kilometre off this coastline." }
+  ],
+  "stations": [
+   { "verse": "Acts.27.1", "name": "Caesarea", "place": "a58735e", "note": "Acts 27 does not name the port. Paul was 'being held in Caesarea' (25:4) when Festus told him, 'To Caesar you will go!' (25:12)." },
+   { "verse": "Acts.27.3", "name": "Sidon", "place": "a98e4d7", "via": { "go": ["sea"], "points": [], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.27.5", "name": "Myra", "place": "aa4b3e2", "via": { "go": ["sea", [35.75, 34.75], "sea", [36, 33.5], "sea"], "points": [[33.6, 35.34], [35.75, 34.75], [36, 33.5], [36.03, 32.7], [36.24, 30.06]], "basis": "'We sailed to the lee of Cyprus because the winds were against us' and 'across the open sea off the coast of Cilicia and Pamphylia' (27:4-5). The line passes east and north of Cyprus, between the island and the mainland, and is otherwise the shortest course that keeps off the land." } },
+   { "verse": "Acts.27.7", "name": "Off Cnidus", "place": "ab793ce", "via": { "go": ["sea"], "points": [[36.21, 29.97], [36.15, 29.76], [36.15, 29.7], [36.15, 29.67], [36.66, 27.84], [36.66, 27.54]], "basis": "'Sailing slowly for many days' (27:7). The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.27.7", "name": "Off Salmone", "place": "a1c44ea", "via": { "go": ["sea"], "points": [], "basis": "'We sailed to the lee of Crete, opposite Salmone.' The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.27.8", "name": "Fair Havens", "place": "aae626a", "via": { "go": ["sea"], "points": [[35.28, 26.31], [35.04, 26.28], [35.01, 26.19], [34.92, 24.84]], "basis": "'We moved along the coast with difficulty' (27:8). The line is the shortest course that keeps off the land, along the south coast of Crete." } },
+   { "verse": "Acts.27.16", "name": "Cauda", "place": "aca2b0a", "via": { "go": ["sea"], "points": [], "basis": "They sailed along the coast of Crete until the Northeaster drove them off (27:13-15). The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.28.1", "name": "Malta", "place": "a57835d", "via": { "points": [], "basis": "Driven before the storm for fourteen nights 'across the Adriatic Sea' (27:27). Acts gives no course, so the line is drawn straight." } },
+   { "verse": "Acts.28.12", "name": "Syracuse", "place": "a1e3697", "via": { "go": ["sea"], "points": [[35.97, 14.43], [36.69, 15.15], [37.02, 15.33]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.28.13", "name": "Rhegium", "place": "a63bb26", "via": { "go": ["sea"], "points": [[37.11, 15.3]], "basis": "The line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.28.13", "name": "Puteoli", "place": "a4488e9", "via": { "go": ["sea"], "points": [[38.25, 15.63], [38.28, 15.66], [40.77, 14.13]], "basis": "Acts names no port between; the line is the shortest course that keeps off the land." } },
+   { "verse": "Acts.28.15", "name": "Forum of Appius", "place": "a121d5e", "via": { "go": ["land", [41.08, 14.25], "land", [41.24, 13.77], "land", [41.36, 13.43], "land", [41.29, 13.25], "land"], "points": [[41.08, 14.25], [41.24, 13.77], [41.36, 13.43], [41.29, 13.25]], "basis": "Acts names no road. The line follows the Via Appia, on which the Forum of Appius stands, from Capua by Minturnae, Fundi and Tarracina." } },
+   { "verse": "Acts.28.15", "name": "Three Taverns", "place": "afef438" },
+   { "verse": "Acts.28.16", "name": "Rome", "place": "afc8e7a" }
+  ]
  }
 ]

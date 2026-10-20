@@ -15,6 +15,25 @@ scripted requests, a work shown to be unavailable online). A gap that a person m
 that found nothing yet or a copy that may exist elsewhere, is not tagged. It says what was tried, or what has to be
 decided, and what a person needs to do.
 
+## Paul's journeys (`content/journeys.json`), 2026-10-20
+
+- **The Galatian region is drawn on neither reading.** Acts 16:6 and 18:23 name "the region of Phrygia and Galatia"
+  and "of Galatia and Phrygia", which Ramsay (1896) places round Pisidian Antioch and Lycaonia and Lightfoot (1890)
+  in the north round Ancyra and Pessinus. Each is given in the station's basis, but the map spaces the point evenly
+  between its neighbours, and a straight line from Lystra to Troas runs near Ramsay's district anyway. Drawing each
+  reading needs journeys to take `readings` as models do (a button per reading, each moving those stations), and a
+  more recent holder on each side than these two, read in a copy.
+- **No modern scholarship on the routes.** The roads and courses between the places Acts names are geometry (the
+  shortest way that keeps off the coast, `npm run journeys`), not any atlas's reconstruction of Roman roads or
+  sailing routes. The Via Appia, the Syrian and Cilician Gates are the only roads named. A reconstruction such as
+  the Barrington Atlas's road network would give the land legs a source.
+- **Unmapped travel in Acts.** Paul's travels told only in his letters (Arabia, Gal 1:17; Illyricum, Rom 15:19;
+  Crete, Titus 1:5; Nicopolis, Titus 3:12) are not drawn; nor are the journeys of others in Acts (Philip, 8:26-40;
+  Peter, 9:32-10:24; Apollos, 18:24-19:1).
+- **Berea to Athens is drawn straight.** Acts says Paul was sent "to the coast" (17:14) and brought to Athens, but not
+  whether by sea or land, so the line crosses the Malian and Euboean gulfs. A source on how the leg is read would let
+  it be drawn one way or the other, each attributed.
+
 ## Book outlines (`content/structures.json`, the Shape tab), 2026-10-06
 
 - **Most of Matthew's outlines read through Weren, not their authors.** Bacon (1930) and BibleProject's guide were

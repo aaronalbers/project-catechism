@@ -262,7 +262,9 @@ describe('content integrity', () => {
       for (const st of j.stations) {
         expect(st.place || st.estimate, `${j.id}: ${st.name} has neither a place nor an estimate`).toBeTruthy();
         if (st.estimate) expect(st.estimate.basis.length, `${j.id}: ${st.name}`).toBeGreaterThan(20);
-        if (st.via) expect(st.via.basis.length && st.via.points.length, `${j.id}: ${st.name} via`).toBeTruthy();
+        // A via without points is a leg drawn straight that needs a word on why (Acts does not say he sailed).
+        if (st.via) expect(st.via.basis.length, `${j.id}: ${st.name} via`).toBeGreaterThan(20);
+        if (st.note) expect(st.note.length, `${j.id}: ${st.name} note`).toBeGreaterThan(20);
       }
     }
   });

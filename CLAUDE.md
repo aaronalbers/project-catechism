@@ -282,6 +282,12 @@ Never put his opinion in the project's plain voice, and never extend it beyond w
   it has an `estimate` (an `at` point, or none to be spaced evenly between its neighbours);
   estimates and `via` waypoints need a `basis` saying what they rest on, and the map marks
   them ≈. The build flags OpenBible's "within 50 km of X" placeholders as `approx`.
+  A `via` with a `go` recipe (`["sea"]`, or modes alternating with waypoints: `["land", [36.49, 36.2], "land"]`)
+  is routed by `npm run journeys` (`scripts/journeys.mjs`), which keeps the leg about a kilometre off the Natural
+  Earth coastline, rewrites its `points` and lists every leg that crosses the coast (`-- check`; `-- path a b sea`
+  for one leg). A `via` with no points is a leg drawn straight that says why. A station's `note` says what is not
+  about its position (a verse that does not name it); `stop` names a route's stations ("camp" by default). When a
+  chapter holds two itineraries (Acts 18), the map draws the one begun by the verse (`journeyAt`).
 
 - Scrolls (`content/scrolls.json`) lists the Hebrew Bible's twenty-four books in the Talmud's order (Bava Batra 14b),
   each with the English books it covers. One the Greek split (Samuel) is `kind: 'book'`; separate books copied on one

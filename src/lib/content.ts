@@ -108,6 +108,14 @@ export function rulersFor(loc: VerseLoc) { return RULERS.filter((r) => anyContai
 export function talliesFor(loc: VerseLoc) { return TALLIES.filter((t) => contains(t.ref, loc)); }
 export function talliesInChapter(book: string, chapter: number) { return TALLIES.filter((t) => touchesChapter(t.ref, book, chapter)); }
 export function journeysInChapter(book: string, chapter: number) { return JOURNEYS.filter((j) => touchesChapter(j.ref, book, chapter)); }
+/**
+ * The itinerary the map draws at `loc`: of those in its chapter (Acts 18 ends one of Paul's journeys and starts the
+ * next), the last to have begun by `loc`, or the first still to come.
+ */
+export function journeyAt(loc: VerseLoc) {
+  const here = journeysInChapter(loc.book, loc.chapter).sort((a, b) => compareLoc(parseRef(a.ref)!.start, parseRef(b.ref)!.start));
+  return here.filter((j) => compareLoc(parseRef(j.ref)!.start, loc) <= 0).pop() ?? here[0];
+}
 export function modelsFor(loc: VerseLoc) { return MODELS.filter((m) => anyContains(m.verses, loc)); }
 export function modelsInChapter(book: string, chapter: number) { return MODELS.filter((m) => m.verses.some((r) => touchesChapter(r, book, chapter))); }
 /**

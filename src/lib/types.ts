@@ -421,13 +421,20 @@ export interface Station {
   segment?: string;
   /** Our own position: `at` when given, otherwise spaced evenly between the fixed stations either side. */
   estimate?: { at?: [number, number]; basis: string };
-  /** Waypoints on the leg from the previous station, where geography rather than evidence decides the path. */
-  via?: { points: [number, number][]; basis: string };
+  /**
+   * Waypoints on the leg from the previous station, where geography rather than evidence decides the path. `go` is
+   * the recipe `npm run journeys` computes the points from: modes ('sea' / 'land') alternating with waypoints.
+   */
+  via?: { points: [number, number][]; basis: string; go?: ('sea' | 'land' | [number, number])[] };
+  /** What the reader should know about this stop that is not about its position: a verse that does not name it. */
+  note?: string;
 }
 /** An ordered set of points drawn as the text names them: a journey's camps, or a boundary (`kind: 'border'`, `closed` once complete). */
 export interface Journey {
   id: string; title: string; ref: Ref; summary: string; stations: Station[]; sources: Source[]; confidence: Confidence;
   kind?: 'route' | 'border'; closed?: boolean;
+  /** What a route calls its stations ("camp" unless given). */
+  stop?: string;
 }
 /**
  * Where the camera looks from while a build or a later state is being read: [azimuth, elevation] in

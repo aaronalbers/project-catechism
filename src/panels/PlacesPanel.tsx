@@ -3,7 +3,7 @@ import L from 'leaflet';
 import { follow, useStore } from '@/app/store';
 import { SourceList } from '@/components/SourceList';
 import { IndexLink } from '@/components/IndexView';
-import { journeysInChapter } from '@/lib/content';
+import { journeyAt } from '@/lib/content';
 import { book, sameLoc } from '@/lib/refs';
 import { loadPlaces, loadPlacesForBook } from '@/lib/data';
 import { partialPath, resolveRoute, stopAt, type LatLon, type RouteStop } from '@/lib/journey';
@@ -81,7 +81,7 @@ export function PlacesPanel() {
   const placesById = useMemo(() => new Map(all.map((p) => [p.id, p])), [all]);
 
   // An itinerary in this chapter replaces the per-verse markers with a route drawn as it is read.
-  const journey = useMemo(() => journeysInChapter(loc.book, loc.chapter)[0], [loc.book, loc.chapter]);
+  const journey = journeyAt(loc);
   const stops = useMemo(() => (journey && placesById.size ? resolveRoute(journey, placesById) : []), [journey, placesById]);
   const cur = stops.length ? stopAt(stops, loc) : -1;
   const stationIds = useMemo(() => new Set(stops.flatMap((s) => (s.station.place ? [s.station.place] : []))), [stops]);
@@ -221,6 +221,7 @@ export function PlacesPanel() {
 
   const current = cur >= 0 ? stops[cur] : undefined;
   const border = journey?.kind === 'border';
+  const noun = journey?.stop ?? 'camp';
   const first = current ? stops.findIndex((s) => sameLoc(s.loc, current.loc)) : -1;
   const passed = current ? stops.slice(first, cur).map((s) => s.station.name) : [];
   return (
@@ -230,11 +231,11 @@ export function PlacesPanel() {
         {journey && stops.length > 0 && (
           <div className="map-stage" aria-live="polite" ref={stageCard}>
             {current ? <>
-              <small>{border ? current.segment : cur === 0 ? 'Setting out' : `Camp ${cur} of ${stops.length - 1}`}</small>
+              <small>{border ? current.segment : cur === 0 ? 'Setting out' : `${noun[0].toUpperCase()}${noun.slice(1)} ${cur} of ${stops.length - 1}`}</small>
               <strong>{stopName(current)}</strong>
               {first > 0 && <small className="from">from {stops[first - 1].station.name}{passed.length > 0 && <> via {passed.join(', ')}</>}</small>}
               {current.estimate && <small className="est">estimated position</small>}
-            </> : <><small>{journey.title}</small><strong>{border ? `${stops.length} points` : `${stops.length - 1} camps`}</strong></>}
+            </> : <><small>{journey.title}</small><strong>{border ? `${stops.length} points` : `${stops.length - 1} ${noun}s`}</strong></>}
           </div>
         )}
       </div>
@@ -250,8 +251,9 @@ export function PlacesPanel() {
                   <span className="nm">{s.station.name}{s.estimate && <span className="approx" title={s.estimate}> ≈</span>}</span>
                   <span className="v">{s.loc.chapter}:{s.loc.verse}</span>
                 </button>
-                {i === cur && (s.estimate || s.station.via || s.place) && (
+                {i === cur && (s.estimate || s.station.via || s.station.note || s.place) && (
                   <div className="stage-note">
+                    {s.station.note && <p>{s.station.note}</p>}
                     {s.estimate && <p><strong>≈ Estimated position.</strong> {s.estimate}</p>}
                     {s.station.via && <p><strong>≈ Path of this leg.</strong> {s.station.via.basis}</p>}
                     {s.place && !s.station.estimate && <p>{s.place.description} · {confidenceLabel(s.place)}</p>}
