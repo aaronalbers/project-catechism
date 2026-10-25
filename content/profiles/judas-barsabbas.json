@@ -17,7 +17,7 @@
   {"ref": "Acts.15.33", "text": "Sent back in peace"}
  ],
  "later": [
-  {"text": "His surname is the same as that of Joseph Barsabbas, who stood with Matthias for Judas Iscariot's place, and some take the two to be brothers.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Acts.1.23"}], "traditions": ["some commentators"]}
+  {"text": "His surname is the same as that of Joseph Barsabbas, who stood with Matthias for Judas Iscariot's place. Grotius and Wolf take the two to be brothers, as Heinrich Meyer reports them; David Brown answers that it cannot be shown he was Joseph's brother.", "confidence": "interpretation", "sources": [{"kind": "scripture", "ref": "Acts.1.23"}, {"kind": "scholarship", "title": "Critical and Exegetical Hand-Book to the Acts of the Apostles", "author": "H. A. W. Meyer", "url": "https://biblehub.com/commentaries/meyer/acts/15.htm", "note": "on 15:22: 'Nothing further is known of Judas Barsabas (whom Grotius and Wolf consider as a brother of Joseph Barsabas, Acts 1:23)'"}, {"kind": "scholarship", "title": "Commentary Critical and Explanatory on the Whole Bible", "author": "David Brown (Jamieson, Fausset and Brown)", "url": "https://biblehub.com/commentaries/jfb/acts/15.htm", "note": "on 15:22: 'nor can it be shown that he was a brother of \"Joseph called Barsabas\" (Ac 1:23)'"}], "traditions": ["Joseph's brother: Grotius and Wolf, as Meyer reports them", "not shown: David Brown"]}
  ],
  "confidence": "evidence",
  "sources": [
