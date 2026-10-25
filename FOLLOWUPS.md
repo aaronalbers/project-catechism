@@ -365,8 +365,8 @@ the Heidelberg database state it, not as Kent's). Still from memory:
   cited for what it says, or named scholars for each book.
 - **Profiles** whose traditions still read "some commentators", "other readers" or "traditional readers": `adam`,
   `james-brother-of-jesus` (a later writer of James), `joseph-husband-of-mary` (Luke's line as Mary's),
-  `simon-of-cyrene` (the Kidron ossuary, "some scholars; doubted by others"), `vashti`, `elihu` (the speeches as
-  integral), `herod-the-great` (the Herodium tomb doubted).
+  `simon-of-cyrene` (the Kidron ossuary, "some scholars; doubted by others"), `elihu` (the speeches as integral),
+  `herod-the-great` (the Herodium tomb doubted).
 - **Williamson on Sheshbazzar** (`zerubbabel`): his *Ezra, Nehemiah* (1985) was cited on the question without saying
   what he holds, and was not read; the card now gives Ibn Ezra, Rashi and Keil instead. *Needed:* his position, read
   in the commentary, to add as a modern holder.
