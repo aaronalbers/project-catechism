@@ -366,8 +366,8 @@ the Heidelberg database state it, not as Kent's). Still from memory:
 - **Profiles** whose traditions still read "some commentators", "other readers" or "traditional readers": `adam`,
   `cleopas`, `james-brother-of-jesus` (a later writer of James), `joseph-husband-of-mary` (Luke's line as Mary's),
   `nathanael`, `nicodemus`, `simon-of-cyrene` (the Kidron ossuary, "some scholars; doubted by others"), `vashti`,
-  `zechariah-prophet`, `zephaniah-prophet`, `zerubbabel`, `elihu` (the speeches as integral), `herod-the-great` (the
-  Herodium tomb doubted).
+  `zechariah-prophet`, `zerubbabel`, `elihu` (the speeches as integral), `herod-the-great` (the Herodium tomb
+  doubted).
 - **Insight cards:** the one-beating and two-beating readings of Jesus' flogging (`flogged-and-crucified`); who first
   claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads Ketef Hinnom in the Persian
   period (dropped from `ketef-hinnom-scrolls`); who reads Joel's locusts as four species or as stages
