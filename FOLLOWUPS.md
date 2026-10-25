@@ -450,9 +450,6 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
   Rohl's *A Test of Time*, 1995, which takes Shishak for Ramesses II) was not read.
 - **Which Jeroboam the Megiddo seal names** (`jeroboam-ii`): the note now says only what the seal says. *Needed:* who
   dates it to Jeroboam II and who to Jeroboam I, each cited.
-- **Belshazzar's "father"** (`belshazzar`): "traditional commentators" still holds the predecessor or mother's-line
-  reading. Keil's Evil-merodach reading is now given from his commentary. *Needed:* a named holder for the
-  predecessor reading.
 - **Hoffmeier's Egyptian detail** (`joseph`): now an interpretation, with no critic named. *Needed:* a scholar who
   reads the same details otherwise (Donald Redford was not read).
 - **Isaiah 7:14 as near and fuller fulfilment** (`isa7-virgin`): the "some Christian scholars" entry was cut for want
