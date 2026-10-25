@@ -363,9 +363,10 @@ the Heidelberg database state it, not as Kent's). Still from memory:
   its majority words ("most", "near-universal", "virtually everyone") were cut. *Needed:* a survey that reports the
   field (Raymond Brown's *Introduction to the New Testament*; John J. Collins's *Introduction to the Hebrew Bible*),
   cited for what it says, or named scholars for each book.
-- **Profiles** whose traditions still read "some commentators", "other readers" or "traditional readers": `adam`,
-  `james-brother-of-jesus` (a later writer of James), `simon-of-cyrene` (the Kidron ossuary, "some scholars; doubted
-  by others"), `elihu` (the speeches as integral), `herod-the-great` (the Herodium tomb doubted).
+- **Profiles** whose traditions still read "some commentators", "other readers" or "traditional readers": `adam` (a
+  representative figure), `simon-of-cyrene` (the Kidron ossuary, "some scholars; doubted by others"), `elihu` (the
+  speeches as integral: Delitzsch, read on Job 32–37, holds them another poet's and names no defender),
+  `herod-the-great` (the Herodium tomb doubted).
 - **Williamson on Sheshbazzar** (`zerubbabel`): his *Ezra, Nehemiah* (1985) was cited on the question without saying
   what he holds, and was not read; the card now gives Ibn Ezra, Rashi and Keil instead. *Needed:* his position, read
   in the commentary, to add as a modern holder.
