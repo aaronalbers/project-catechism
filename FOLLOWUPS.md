@@ -372,8 +372,7 @@ the Heidelberg database state it, not as Kent's). Still from memory:
   in the commentary, to add as a modern holder.
 - **Insight cards:** the one-beating and two-beating readings of Jesus' flogging (`flogged-and-crucified`); who first
   claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads Ketef Hinnom in the Persian
-  period (dropped from `ketef-hinnom-scrolls`); who reads the Song of Ascents heading as pilgrims' songs or as
-  step-parallelism (`going-up-to-jerusalem`).
+  period (dropped from `ketef-hinnom-scrolls`).
 
 ## Disputed questions under a fact's badge, recorded 2026-10-04
 
