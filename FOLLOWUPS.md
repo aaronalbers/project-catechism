@@ -456,10 +456,10 @@ on chapters, Alpert et al. 1982 and Pachpor et al. 2026 on the lake's winds). Wh
 - **Isaiah 7:14 as near and fuller fulfilment** (`isa7-virgin`): the "some Christian scholars" entry was cut for want
   of a holder. *Needed:* a named holder, cited.
 - **Unnamed sides still in cards:** the critics of Chronicles' account of Manasseh's captivity (`esarhaddon-manasseh`,
-  Ellicott does not name them); other reconstructions of Samaria's fall than Tadmor's (`sargon-samaria`); who
-  connects Simeon's fall in Numbers 26 with Peor (`num26-census`; Rashi on 26:13, checked, does not); John 19:14 read
-  as counted from midnight or as a copyist's slip (`passion.json`); 𝔓66 "some argue 4th century" (`fragments.json`);
-  "local Christian tradition" for Ananias's chapel; Jethro, Reuel and Hobab ("some commentators", "others").
+  Ellicott does not name them); other reconstructions of Samaria's fall than Tadmor's (`sargon-samaria`); who connects
+  Simeon's fall in Numbers 26 with Peor (`num26-census`; Rashi on 26:13, checked, does not); John 19:14 read as
+  counted from midnight or as a copyist's slip (`passion.json`); 𝔓66 "some argue 4th century" (`fragments.json`);
+  "local Christian tradition" for Ananias's chapel.
 - **[Needs a person]** **The Black Obelisk as the only picture of an Israelite king**, dropped from `black-obelisk-jehu`
   for want of a source. The British Museum's page (W_1848-1104-1) refuses scripted requests, and its Cloudflare check
   stops the automated browser as well. *Needed:* the page opened in a browser, and the claim restored only if it says so.
