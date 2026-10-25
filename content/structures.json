@@ -3,7 +3,7 @@
   "id": "genesis",
   "book": "Gen",
   "title": "The shape of Genesis",
-  "summary": "Eleven times Genesis names the tôlədôt (“generations”, “account”) of the heavens and the earth or of a man. Readers of the book divide it at these verses, but differ over whether each opens the section after it or closes the one before, and some divide the book elsewhere. Four outlines are drawn here on the same verses, in the order they were proposed.",
+  "summary": "Eleven times Genesis names the tôlədôt (“generations”, “account”) of the heavens and the earth or of a man. Readers of the book divide it at these verses, but differ over whether each opens the section after it or closes the one before, and some divide the book elsewhere. Five outlines are drawn here on the same verses, in the order they were proposed.",
   "sources": [
    {"kind": "scholarship", "title": "‘The Toledot of the Book of Genesis and Their Redemptive-Historical Significance’", "author": "Marten H. Woudstra", "year": 1970, "url": "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_GenToledot_CTJ.htm", "note": "Calvin Theological Journal 5, pp. 184–189"}
   ],
@@ -37,6 +37,49 @@
   ],
   "readings": [
    {
+    "id": "keil",
+    "label": "Ten groups under the formula, on the creation as their base",
+    "holder": "Keil, tr. 1866",
+    "summary": "Keil reads the formula as the “uniform heading” of ten groups into which the book’s history falls, “the account of the creation forming the substratum of the whole”. Five groups make the first period, from the creation and fall to the nations’ dispersion (2:4–11:26), and five the second, the patriarchs from Abraham’s call to Joseph’s death (11:27–50:26); “the number ten stamps upon the entire book … the character of completeness.”",
+    "body": [
+     "Keil counts Esau’s two formulas as one group, chapter 36, and lets Jacob’s run from 37:1. He takes the arrangement to have “flowed quite naturally from the contents and purport of the book”, the two periods being “upon a par” in their importance to it though they differ in scope.",
+     "Franz Delitzsch, Keil’s colleague, counts the same ten Toledoth in the same two fives, “five belonging to primitive and five to patriarchal history”, and takes ten as “the number of completeness”; but he heads his commentary on 1:1–4:26 “The Toledoth of the Heaven and the Earth”, with the creation (1:1–2:4) as its opening, “the foundation of its history”.",
+     "P. J. Wiseman (1936) names Keil among the commentators who “divide the Book into sections which begin with the phrase”, and answers them by reading the formula as closing each section."
+    ],
+    "note": "Keil gives each group’s verses; 1:1–2:3, the creation, stands before them. Delitzsch’s first Toledoth would take it in.",
+    "markers": ["toledot"],
+    "kinds": {"frame": "The creation, the substratum of the whole"},
+    "groups": [
+     {"ref": "Gen.2.4-11.26", "label": "The first period: the human race to its dispersion"},
+     {"ref": "Gen.11.27-50.26", "label": "The second period: the patriarchs"}
+    ],
+    "sections": [
+     {"ref": "Gen.1.1-2.3", "label": "The creation", "kind": "frame"},
+     {"ref": "Gen.2.4-4.26", "label": "The heavens and the earth"},
+     {"ref": "Gen.5.1-6.8", "label": "Adam"},
+     {"ref": "Gen.6.9-9.29", "label": "Noah"},
+     {"ref": "Gen.10.1-11.9", "label": "Noah’s sons"},
+     {"ref": "Gen.11.10-26", "label": "Shem"},
+     {"ref": "Gen.11.27-25.11", "label": "Terah"},
+     {"ref": "Gen.25.12-18", "label": "Ishmael"},
+     {"ref": "Gen.25.19-35.29", "label": "Isaac"},
+     {"ref": "Gen.36.1-43", "label": "Esau"},
+     {"ref": "Gen.37.1-50.26", "label": "Jacob"}
+    ],
+    "sources": [
+     {"kind": "scholarship", "title": "Biblical Commentary on the Old Testament, vol. 1: The Pentateuch", "author": "C. F. Keil, tr. James Martin", "year": 1866, "url": "https://archive.org/details/pentateuch01keil", "note": "pp. 34–36, Introduction to Genesis: 'the historical contents are divided into ten groups, with the uniform heading, \"These are the generations\" … the account of the creation forming the substratum of the whole'"},
+     {"kind": "scholarship", "title": "A New Commentary on Genesis, vol. 1", "author": "Franz Delitzsch, tr. Sophia Taylor", "year": 1888, "url": "https://archive.org/details/anewcommentgenes00deliuoft", "note": "pp. 15–16 and 59: 'There are in all ten Toledoth, five belonging to primitive and five to patriarchal history'; the first, 'The Toledoth of the Heaven and the Earth, i. 1–iv. 26'"},
+     {"kind": "scripture", "ref": "Gen.2.4"},
+     {"kind": "scripture", "ref": "Gen.36.1"}
+    ],
+    "traditions": [
+     "C. F. Keil (tr. 1866)",
+     "Franz Delitzsch (tr. 1888), with the creation in the first section",
+     "Answered by P. J. Wiseman (1936), who names Keil"
+    ],
+    "confidence": "interpretation"
+   },
+   {
     "id": "driver",
     "label": "The formula heads each section, but closes chapter 1",
     "holder": "Driver, 1904",
@@ -68,7 +111,7 @@
      {"kind": "scripture", "ref": "Gen.2.4"},
      {"kind": "scripture", "ref": "Gen.36.9"}
     ],
-    "traditions": ["S. R. Driver (1904)", "Franz Delitzsch, who divides his commentary so, as Skinner reports", "Answered by John Skinner (1910)"],
+    "traditions": ["S. R. Driver (1904)", "Answered by John Skinner (1910)"],
     "confidence": "interpretation"
    },
    {

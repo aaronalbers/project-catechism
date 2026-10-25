@@ -46,9 +46,6 @@ decided, and what a person needs to do.
 - **Genesis's heading reading is read through Woudstra.** Holwerda's lectures (1946), Külling (1964) and Gispen (1966)
   are cited as Woudstra (1970) reports them; D. J. Wiseman (1969) too. Wiseman (1936) was read. *Needed:* Külling's
   *Zur Datierung der "Genesis-P-Stücke"* to check the ten sections' verses, which Woudstra gives only from 5:1 on.
-- **Keil and Delitzsch on Genesis's formula** are reported only as Wiseman and Skinner name them. Driver (1904) and
-  Skinner (1910) were read: Driver's reading is drawn, and Skinner answers it. *Needed:* Keil's and Franz Delitzsch's
-  commentaries (both public domain in translation) read for their own divisions.
 - **Leviticus has no reading that answers either outline.** Driver (1891) and BibleProject were read; no response to
   either was, so neither card names a critic. Klostermann (1877) is cited as Driver reports him. *Needed:* a later
   treatment of the Holiness Code (Milgrom's or Knohl's) and of BibleProject's symmetry.
