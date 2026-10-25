@@ -366,8 +366,9 @@ the Heidelberg database state it, not as Kent's). Still from memory:
 - **Williamson on Sheshbazzar** (`zerubbabel`): his *Ezra, Nehemiah* (1985) was cited on the question without saying
   what he holds, and was not read; the card now gives Ibn Ezra, Rashi and Keil instead. *Needed:* his position, read
   in the commentary, to add as a modern holder.
-- **Insight cards:** who first claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads
-  Ketef Hinnom in the Persian period (dropped from `ketef-hinnom-scrolls`).
+- **Insight cards:** who first made the suggestion that a council at Jamnia closed the canon
+  (`canon-books-beyond-the-66`; Ryle, 1892, now cited for it, takes it up from someone he does not name in the text);
+  who reads Ketef Hinnom in the Persian period (dropped from `ketef-hinnom-scrolls`).
 
 ## Disputed questions under a fact's badge, recorded 2026-10-04
 
