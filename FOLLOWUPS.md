@@ -374,7 +374,7 @@ the Heidelberg database state it, not as Kent's). Still from memory:
   claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads Ketef Hinnom in the Persian
   period (dropped from `ketef-hinnom-scrolls`); who reads Joel's locusts as four species or as stages
   (`joel-locusts-1915`); who reads the Song of Ascents heading as pilgrims' songs or as step-parallelism
-  (`going-up-to-jerusalem`); who holds 586 BC for Obadiah besides Hirsch and Barton.
+  (`going-up-to-jerusalem`).
 
 ## Disputed questions under a fact's badge, recorded 2026-10-04
 
