@@ -96,7 +96,7 @@
   "verses": ["Joel.1.4-7", "Joel.1.12", "Joel.2.2-10", "Joel.2.25"],
   "summary": "In spring 1915 a locust plague stripped Palestine. Photographers of Jerusalem's American Colony recorded it stage by stage: the swarms, the crawling young, and the trees left bare.",
   "body": [
-   "Joel names four kinds of locust (1:4, 2:25). They have been read as four species and as stages of one insect's growth. In a plague, adults lay eggs, and the young that hatch, wingless and crawling, eat what the swarm left before they can fly; the 1915 photographers called the crawling stage 'most destructive'.",
+   "Joel names four kinds of locust (1:4, 2:25). Rashi takes them for four species. Credner, and Gesenius after a fashion, read them as four stages of one insect's growth, as S. R. Driver reports; Driver answers that an ordinary observer can tell no more than three stages and that 2:25 lists them in another order, and takes the names as partly synonyms, partly species and partly stages. C. F. Keil takes them for neither four species nor four generations: gnawer, licker and devourer are to him poetical epithets for the common locust, the ʾarbeh. In a plague, adults lay eggs, and the young that hatch, wingless and crawling, eat what the swarm left before they can fly; the 1915 photographers called the crawling stage 'most destructive'.",
    "The American Colony photographers titled their series 'The terrible plague of locusts in Palestine, March–June 1915'. It shows masses of locusts on an olive tree, locusts devouring palm leaves, storks in pursuit of the swarm, and the Garden of Gethsemane before and after.",
    "Joel 1:7 says the swarm 'has stripped off the bark … the branches have turned white', and 2:7-9 that the locusts 'scale the walls', 'run along the wall' and 'climb into houses, entering through windows like thieves'. The photographs show trees stripped bare. Joel 2:10 says the sun and moon grow dark; whether that describes a swarm thick enough to block the light, or more, the verse does not say."
   ],
@@ -108,6 +108,9 @@
    {"kind": "primary", "title": "The terrible plague of locusts in Palestine, March–June 1915 (photographs)", "author": "American Colony (Jerusalem) Photo Department", "year": 1915, "url": "https://www.loc.gov/item/2019701781/", "note": "Library of Congress, Matson Collection; 'The crawling locust, most destructive stage of life'"},
    {"kind": "primary", "title": "Masses of locusts attacking an olive tree", "author": "American Colony (Jerusalem) Photo Department", "year": 1915, "url": "https://www.loc.gov/item/2019695591/"},
    {"kind": "scripture", "ref": "Joel.1.4"},
+   {"kind": "primary", "title": "Rashi on Joel 1:4", "url": "https://www.sefaria.org/Rashi_on_Joel.1.4", "note": "tr. A. J. Rosenberg: 'Gazam, arbeh, yelek, hasil are species of locusts'"},
+   {"kind": "scholarship", "title": "The Books of Joel and Amos (Cambridge Bible for Schools and Colleges)", "author": "S. R. Driver", "year": 1897, "url": "https://archive.org/details/booksofjoelamosw00drivuoft", "note": "on 1:4: 'The four names cannot, as Credner and (somewhat differently) Gesenius thought, denote, as they stand, locusts in four successive stages of their development'"},
+   {"kind": "scholarship", "title": "Biblical Commentary on the Old Testament: The Twelve Minor Prophets, on Joel 1:4", "author": "C. F. Keil (Keil and Delitzsch)", "year": 1868, "url": "https://biblehub.com/commentaries/kad/joel/1.htm", "note": "'are not the names applied in natural history to four distinct species, or four different generations of locusts'"},
    {"kind": "scripture", "ref": "Joel.1.7"}
   ],
   "confidence": "evidence"
