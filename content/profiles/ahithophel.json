@@ -8,7 +8,7 @@
  "summary": "A Gilonite whose advice was regarded like the word of God, counsellor to David and then to Absalom. He told Absalom to go in to his father's concubines, and urged an immediate attack with twelve thousand men to kill David alone. When Absalom took Hushai's advice instead, Ahithophel saddled his donkey, went home, put his affairs in order and hanged himself.",
  "body": [
   "When David hears he has joined the conspiracy, he prays, “O LORD, please turn the counsel of Ahithophel into foolishness!”, and sends Hushai back to defeat it. Absalom prefers Hushai's advice, for “the LORD had purposed to thwart the good counsel of Ahithophel.”",
-  "He is the father of Eliam, one of David's mighty men, and some take him to be Bathsheba's grandfather, since she is Eliam's daughter."
+  "He is the father of Eliam, one of David's mighty men. Bathsheba is “the daughter of Eliam.”"
  ],
  "moments": [
   {"ref": "2Sam.15.12", "text": "Joins Absalom"},
@@ -20,9 +20,13 @@
   {"ref": "2Sam.17.23", "text": "Hangs himself"},
   {"ref": "2Sam.23.34", "text": "Father of Eliam"}
  ],
+ "later": [
+  {"text": "The Talmud takes the two Eliams as one man, making Ahithophel Bathsheba's grandfather, and reckons from it that he was thirty-three when he died.", "confidence": "interpretation", "sources": [{"kind": "primary", "title": "Babylonian Talmud, Sanhedrin 69b", "url": "https://www.sefaria.org/Sanhedrin.69b", "note": "'“And Eliam, son of Ahithophel the Gilonite” (II Samuel 23:34), which teaches that Bathsheba was the granddaughter of Ahithophel'"}, {"kind": "scripture", "ref": "2Sam.11.3"}, {"kind": "scripture", "ref": "2Sam.23.34"}], "traditions": ["the Babylonian Talmud"]}
+ ],
  "confidence": "evidence",
  "sources": [
   {"kind": "scripture", "ref": "2Sam.15.12-17.23"},
+  {"kind": "scripture", "ref": "2Sam.11.3"},
   {"kind": "scripture", "ref": "2Sam.23.34"}
  ]
 }
