@@ -283,11 +283,10 @@ Zwierlein and the Ehrman interview were read for every quotation. These were not
 - **Luke 22:43–44's manuscripts from memory.** P75 and Vaticanus omitting, Sinaiticus' first hand and Bezae including,
   are standard but were not read off Metzger's *Textual Commentary* (no link given). *Needed:* the entry's page and
   wording, or an NA28 apparatus, to confirm the list.
-- **Who reads Jesus' beating as one, and who as two, is unnamed** (`flogged-and-crucified` in `history.json`). The card
-  gives both readings without naming who holds them, because no commentator's position was checked. It stays
-  `consensus` for the Roman practice, which three primary texts attest. *Needed:* named holders (Raymond Brown's
-  *Death of the Messiah* on John 19:1; an evangelical commentary on John that reads it as two beatings), then a line
-  naming each.
+- **No holder of two beatings** (`flogged-and-crucified` in `history.json`). Plummer (Cambridge Bible, 1891) is now
+  named for one beating and Gill for leaving it open; Plummer's "the supposition of a second scourging" implies
+  someone held two, but no one was found who does. *Needed:* a commentator who reads two beatings, cited (Raymond
+  Brown's *Death of the Messiah* on John 19:1 would also say how the question stands now).
 - **Sherwin-White's three grades cited without a page.** The scale is widely credited to *Roman Society and Roman Law
   in the New Testament* (1963), and the Digest passage behind it was checked, but his wording was not. *Needed:* the
   page and his own terms.
@@ -370,9 +369,8 @@ the Heidelberg database state it, not as Kent's). Still from memory:
 - **Williamson on Sheshbazzar** (`zerubbabel`): his *Ezra, Nehemiah* (1985) was cited on the question without saying
   what he holds, and was not read; the card now gives Ibn Ezra, Rashi and Keil instead. *Needed:* his position, read
   in the commentary, to add as a modern holder.
-- **Insight cards:** the one-beating and two-beating readings of Jesus' flogging (`flogged-and-crucified`); who first
-  claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads Ketef Hinnom in the Persian
-  period (dropped from `ketef-hinnom-scrolls`).
+- **Insight cards:** who first claimed a council at Jamnia closed the canon (`canon-books-beyond-the-66`); who reads
+  Ketef Hinnom in the Persian period (dropped from `ketef-hinnom-scrolls`).
 
 ## Disputed questions under a fact's badge, recorded 2026-10-04
 
